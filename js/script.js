@@ -569,21 +569,25 @@ function renderEvents(container, featuredOnly = false) {
                     <div class="absolute top-4 left-4 flex flex-col gap-2">
                         <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-pink-600 rounded-full shadow-sm">${typeLabel}</span>
                         ${categoryLabel ? `<span class="px-3 py-1 bg-gray-900/80 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-white rounded-full shadow-sm">${categoryLabel}</span>` : ''}
+                        ${event.type === 'retreat' && event.category === 'abroad' && event.country ? `<span class="px-3 py-1 bg-pink-500/80 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-white rounded-full shadow-sm">${event.country[lang] || event.country['en']}</span>` : ''}
                     </div>
+                    <button onclick="shareEvent('${event.id}', '${data.title}')" class="absolute top-4 right-4 p-2.5 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-pink-600 transition-all shadow-sm group/share">
+                        <i data-lucide="share-2" class="h-4 w-4"></i>
+                    </button>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="flex items-center text-sm text-pink-500 mb-2 font-semibold">
                         <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
                         <span>${data.date}</span>
                     </div>
-                    <h3 class="text-xl font-medium mb-2 group-hover:text-pink-600 transition-colors">${data.title}</h3>
+                    <h3 class="text-xl font-medium mb-2 group-hover:text-pink-600 transition-colors line-clamp-1">${data.title}</h3>
                     <p class="text-sm text-gray-500 mb-4 italic">${data.organizer}</p>
                     <p class="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed">${data.description}</p>
                     <div class="mt-auto flex gap-3">
                         <a href="${event.registerLink}" class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
                             ${translationsData[lang]['events.register_button']}
                         </a>
-                        <a href="events.html#${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
+                        <a href="event.html?id=${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
                             ${translationsData[lang]['events.learn_more_button']}
                         </a>
                     </div>
@@ -595,5 +599,30 @@ function renderEvents(container, featuredOnly = false) {
     // Re-initialize Lucide icons
     if (window.lucide) {
         window.lucide.createIcons();
+    }
+}
+
+async function shareEvent(id, title) {
+    const url = `${window.location.origin}${window.location.pathname.replace(/\/[^\/]*$/, '')}/event.html?id=${id}`;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: title,
+                text: `Join me at ${title} - GoYoga Tallinn`,
+                url: url
+            });
+        } catch (err) {
+            console.log('Share cancelled or failed:', err);
+        }
+    } else {
+        // Fallback: Copy to clipboard
+        try {
+            await navigator.clipboard.writeText(url);
+            // Optional: Simple toast or UI feedback could go here
+            alert('Link copied to clipboard!');
+        } catch (err) {
+            console.error('Could not copy text: ', err);
+        }
     }
 }
