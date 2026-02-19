@@ -15,7 +15,7 @@ const translationsData = {
         "teachers.edith-tiitsaar.title": "Qigong | Energy Work", "teachers.edith-tiitsaar.description": "Working with meridians and the Radiant Lotus Qigong tradition.",
         "teachers.marit-tuisk.title": "Meditations | Cacao Ceremonies", "teachers.marit-tuisk.description": "Opening hearts through sacred rituals and deep presence.",
         "teachers.david-lepp.title": "Sound Baths | Yoga Nidra", "teachers.david-lepp.description": "Mastering the gong to clear blockages and restore harmony.",
-        "teachers.discover": "Discover Journey",
+        "teachers.discover": "Get to Know",
         "events.tagline": "Deepen Your Practice", "events.title": "Upcoming Events & Retreats", "events.description": "Join us for special workshops and immersive retreats.", "events.event1.title": "Autumn Rejuvenation Retreat", "events.event1.description": "A 4-day immersive retreat in the Estonian countryside.", "events.event2.title": "Mastering Inversions Workshop", "events.event2.description": "Join Mia Johnson to build the strength and confidence to master inversions.", "events.register_button": "Register Now", "events.learn_more_button": "Learn More",
         "community.tagline": "Community", "community.title": "Words from Our Community", "community.description": "Hear what our students have to say.", "community.leave_review_button": "Leave a Review",
         "instagram.tagline": "Community", "instagram.title": "Follow Our Journey", "instagram.description": "See snapshots of our daily practice. Follow us on Instagram <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
@@ -39,7 +39,7 @@ const translationsData = {
         "teachers.edith-tiitsaar.title": "Qigong | Energiatöö", "teachers.edith-tiitsaar.description": "Töö meridiaanide ja Särava Lootose Qigong traditsiooniga.",
         "teachers.marit-tuisk.title": "Meditatsioonid | Kakaotseremooniad", "teachers.marit-tuisk.description": "Avab südameid läbi pühade rituaalide ja sügava kohalolu.",
         "teachers.david-lepp.title": "Helirännakud | Yoga Nidra", "teachers.david-lepp.description": "Gongi valdaja, et puhastada blokeeringud ja taastada harmoonia.",
-        "teachers.discover": "Avasta teekond",
+        "teachers.discover": "Tutvu õpetajaga",
         "events.tagline": "Süvenda oma praktikat", "events.title": "Tulevased sündmused", "events.description": "Liitu meiega töötubadel.", "events.event1.title": "Sügise värskendusretriit", "events.event1.description": "4-päevane põhjalik retriit Eesti maal.", "events.event2.title": "Pöördasendite meisterdamise töötuba", "events.event2.description": "Liitu Mia Johnsoniga.", "events.register_button": "Registreeri kohe", "events.learn_more_button": "Loe lähemalt",
         "community.tagline": "Kogukond", "community.title": "Sõnad meie kogukonnast", "community.description": "Kuula, mida meie õpilased räägivad.", "community.leave_review_button": "Jäta Tagasisidet",
         "instagram.tagline": "Kogukond", "instagram.title": "Jälgi meie teekonda", "instagram.description": "Jälgi meid Instagramis <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
@@ -66,7 +66,7 @@ const translationsData = {
         "teachers.edith-tiitsaar.title": "Qigong | Energiatyö", "teachers.edith-tiitsaar.description": "Työskentely meridiaanien ja Radiant Lotus Qigong -perinteen parissa.",
         "teachers.marit-tuisk.title": "Meditaatiot | Kaakaoseremoniat", "teachers.marit-tuisk.description": "Sydänten avaaminen pyhien rituaalien ja syvän läsnäolon kautta.",
         "teachers.david-lepp.title": "Äänimaljakylvyt | Yoga Nidra", "teachers.david-lepp.description": "Gongin mestari poistamaan tukoksia ja palauttamaan harmonian.",
-        "teachers.discover": "Löydä tarina",
+        "teachers.discover": "Tutustu opettajaan",
         "events.tagline": "Syvennä harjoitustasi", "events.title": "Tulevased sündmused", "events.description": "Liitu meiega töötubadel.", "events.event1.title": "Sügise värskendusretriit", "events.event1.description": "4-päevane põhjalik retriit Eesti maal.", "events.event2.title": "Pöördasendite meisterdamise töötuba", "events.event2.description": "Liitu Mia Johnsoniga.", "events.register_button": "Registreeri kohe", "events.learn_more_button": "Loe lähemalt",
         "community.tagline": "Yhteisö", "community.title": "Sanoja yhteisöltämme", "community.description": "Kuule, mitä oppilaamme sanovat.", "community.leave_review_button": "Jätä Arvostelu",
         "instagram.tagline": "Yhteisö", "instagram.title": "Seuraa matkaamme", "instagram.description": "Seuraa meitä Instagramissa <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
@@ -92,10 +92,10 @@ const teachersData = {
     "raili-maripuu": { "name": "Raili Maripuu", "title": "Founder & Ashtanga Yoga Teacher", "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b", "socials": { "instagram": "https://www.instagram.com/raili.yoga/", "website": "https://railimaripuu.com", "email": "me@railimaripuu.com" } },
     "victoria-palusaar": { "name": "Victoria Palusaar", "title": "Ashtanga | Nutritional Therapist", "image": "https://images.unsplash.com/photo-1599447421416-3414500d18a5", "socials": { "instagram": "https://www.instagram.com/vicky_pa/", "facebook": "https://www.facebook.com/victoria.palusaar" } },
     "triin-parro": { "name": "Triin Parro", "title": "Strength & Holistic Health", "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b", "socials": { "instagram": "https://www.instagram.com/triin.p/", "facebook": "https://www.facebook.com/fitmindoy/" } },
-    "kaia-karjatse": { "name": "Kaia Karjatse", "title": "60+ Yoga | Sound Therapy", "image": "assets/images/kaia.png", "socials": { "instagram": "#", "facebook": "#" } },
+    "kaia-karjatse": { "name": "Kaia Karjatse", "title": "60+ Yoga | Sound Therapy", "image": "assets/images/kaia.png", "socials": { "instagram": "https://www.instagram.com/kaiakarjatse/", "facebook": "#" } },
     "edith-tiitsaar": { "name": "Edith Tiitsaar", "title": "Qigong | Energy Work", "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597", "socials": { "instagram": "#", "facebook": "#" } },
-    "marit-tuisk": { "name": "Marit Tuisk", "title": "Meditations | Cacao Ceremonies", "image": "assets/images/marit.png", "socials": { "instagram": "https://www.instagram.com/casa_rituals/", "facebook": "https://www.facebook.com/casarituals" } },
-    "david-lepp": { "name": "David Lepp", "title": "Sound Baths | Yoga Nidra", "image": "https://images.unsplash.com/photo-1514533212735-5df27d970db0", "socials": { "instagram": "https://www.instagram.com/casa_rituals/", "facebook": "https://www.facebook.com/casarituals" } }
+    "marit-tuisk": { "name": "Marit Tuisk", "title": "Meditations | Cacao Ceremonies", "image": "assets/images/marit.png", "socials": { "instagram": "https://www.instagram.com/mar.tuisk/", "facebook": "https://www.facebook.com/casarituals" } },
+    "david-lepp": { "name": "David Lepp", "title": "Sound Baths | Yoga Nidra", "image": "https://images.unsplash.com/photo-1514533212735-5df27d970db0", "socials": { "instagram": "https://www.instagram.com/david.lepp/", "facebook": "https://www.facebook.com/casarituals" } }
 };
 window.teachersData = teachersData;
 
@@ -493,9 +493,21 @@ const classesData = {
 window.classesData = classesData;
 
 const pricingData = {
-    single: { "title": "Single Session", "options": [{ "name": "1 session", "price": "18 €" }] },
-    passes: { "title": "Multi-Visit Passes", "options": [{ "name": "5-class pass", "price": "50 €" }, { "name": "12-class pass", "price": "108 €" }, { "name": "20-class pass", "price": "199 €" }] },
-    memberships: { "title": "Membership", "options": [{ "name": "1 month unlimited", "price": "70 €" }, { "name": "6 month membership", "price": "65 €/month" }, { "name": "Annual membership", "price": "60 €/month" }] }
+    en: {
+        single: { "title": "Single Sessions", "options": [{ "name": "1x Session", "price": "18€" }, { "name": "Student", "price": "15€" }, { "name": "Senior", "price": "10€" }] },
+        memberships: { "title": "Memberships | Monthly Payments", "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }] },
+        passes: { "title": "Multi-Visit Passes", "options": [{ "name": "5-Visit Pass | 20 Days", "price": "50€" }, { "name": "12-Visit Pass | 60 Days", "price": "115€" }, { "name": "20-Visit Pass | 6 Months", "price": "199€" }] }
+    },
+    et: {
+        single: { "title": "Ühekordsed külastused", "options": [{ "name": "1x Tund", "price": "18€" }, { "name": "Õpilane", "price": "15€" }, { "name": "Pensionär", "price": "10€" }] },
+        memberships: { "title": "Liikmepaketid | Kuumaksed", "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }] },
+        passes: { "title": "Korrakaardid", "options": [{ "name": "5-korra kaart | 20 päeva", "price": "50€" }, { "name": "12-korra kaart | 60 päeva", "price": "115€" }, { "name": "20-korra kaart | 6 kuud", "price": "199€" }] }
+    },
+    fi: {
+        single: { "title": "Kertakäynnit", "options": [{ "name": "1x Tunti", "price": "18€" }, { "name": "Opiskelija", "price": "15€" }, { "name": "Eläkeläinen", "price": "10€" }] },
+        memberships: { "title": "Jäsenyydet | Kuukausimaksut", "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }] },
+        passes: { "title": "Sarjakortit", "options": [{ "name": "5-kerran kortti | 20 päivää", "price": "50€" }, { "name": "12-kerran kortti | 60 päivää", "price": "115€" }, { "name": "20-kerran kortti | 6 kuukautta", "price": "199€" }] }
+    }
 };
 
 const instagramData = [

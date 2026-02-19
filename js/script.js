@@ -145,27 +145,14 @@ function initModals() {
     document.body.appendChild(modalContainer);
 
     // Dynamic Modal Handlers
-    // Teachers
+    // Teachers - Removed modal handler, focusing on direct links to profile pages
     const teacherModal = document.getElementById('teacher-modal');
-    document.querySelectorAll('.teacher-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const data = teachersData[card.dataset.teacherId];
-            if (data) {
-                document.getElementById('teacher-modal-img').src = data.image;
-                document.getElementById('teacher-modal-name').textContent = data.name;
-                document.getElementById('teacher-modal-title').textContent = data.title;
-                document.getElementById('teacher-modal-bio').textContent = data.bio;
-                // Socials...
-                toggleModal('teacher-modal', true);
-            }
-        });
-    });
     document.getElementById('teacher-modal-close')?.addEventListener('click', () => toggleModal('teacher-modal', false));
 
     // Pricing
     document.querySelectorAll('.pricing-button').forEach(btn => {
         btn.addEventListener('click', () => {
-            const data = pricingData[btn.dataset.pricingGroup];
+            const data = pricingData[currentLanguage][btn.dataset.pricingGroup];
             if (data) {
                 document.getElementById('pricing-modal-title').textContent = data.title;
                 const body = document.getElementById('pricing-modal-body');
