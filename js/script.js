@@ -250,6 +250,15 @@ function initModals() {
 function toggleModal(id, show) {
     const el = document.getElementById(id);
     const content = el.querySelector('.modal-content');
+
+    // Add background click listener once
+    if (!el.dataset.listenerAdded) {
+        el.addEventListener('click', (e) => {
+            if (e.target === el) toggleModal(id, false);
+        });
+        el.dataset.listenerAdded = 'true';
+    }
+
     if (show) {
         el.classList.remove('opacity-0', 'pointer-events-none');
         content.classList.remove('scale-95', 'opacity-0');
@@ -432,9 +441,14 @@ function initMobileMenu() {
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 }
