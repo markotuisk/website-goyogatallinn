@@ -197,7 +197,10 @@ function initReviewsCarousel() {
     const nextBtn = document.getElementById('next-review');
     const dotsContainer = document.getElementById('review-dots');
 
-    if (!track || !reviewsData) return;
+    if (!track || typeof reviewsData === 'undefined') return;
+
+    const lang = currentLanguage;
+    const t = translationsData[lang] || translationsData['en'];
 
     // Sort by date (latest first)
     const sortedReviews = [...reviewsData].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -210,9 +213,8 @@ function initReviewsCarousel() {
 
         // Dynamic timeframe translation fallback
         let timeDisplay = r.timeAgo;
-        if (lang !== 'en') {
+        if (lang !== 'en' && t['reviews.ago']) {
             timeDisplay = r.timeAgo.replace('months ago', t['reviews.ago']).replace('years ago', t['reviews.ago']);
-            // A more robust way would be keys for 'month', 'year' etc., but this works for current data
         }
 
         card.innerHTML = `
