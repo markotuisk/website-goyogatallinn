@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFadeIn();
     initCountdown();
     initLikeButtons();
+    initEvents();
     initSEO(); // Aggressive SEO Init
 
     // Initialize Lucide Icons
@@ -37,8 +38,8 @@ function initLanguage() {
 function setLanguage(lang) {
     if (!['en', 'et', 'fi'].includes(lang)) return;
     currentLanguage = lang;
-    updateUI(lang);
     localStorage.setItem('preferredLanguage', lang);
+    updateUI(lang);
 }
 
 function updateUI(lang) {
@@ -83,8 +84,9 @@ function updateUI(lang) {
     // Notify other scripts that language has changed
     document.dispatchEvent(new CustomEvent('languageChanged', { detail: lang }));
 
-    // Refresh reviews to apply translations
+    // Refresh reviews and events to apply translations
     initReviewsCarousel();
+    initEvents();
 }
 
 // Logic for Language Switcher Buttons
@@ -519,4 +521,79 @@ function updateSEO(lang) {
 
     const twDesc = document.getElementById('twitter-description');
     if (twDesc) twDesc.setAttribute('content', data.ogDescription || data.description);
+}
+
+// Events Logic
+function initEvents() {
+    const container = document.getElementById('events-container');
+    if (!container) return;
+    renderEvents(container, true); // true = homepage (featured only)
+}
+
+function renderEvents(container, featuredOnly = false) {
+    const lang = localStorage.getItem('preferredLanguage') || 'en';
+    const now = new Date();
+
+    // Filter and sort events
+    let events = eventsData.filter(event => {
+        const isExpired = event.expiryDate && new Date(event.expiryDate) < now;
+        const isFeaturedMatch = !featuredOnly || event.featured;
+        return event.active && !isExpired && isFeaturedMatch;
+    });
+
+    // Limit to 3 if on homepage
+    if (featuredOnly) {
+        events = events.slice(0, 3);
+    }
+
+    if (events.length === 0) {
+        container.innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">${translationsData[lang]['faq.no_results'] || 'No upcoming events.'}</p>`;
+        return;
+    }
+
+    container.innerHTML = events.map(event => {
+        const data = event[lang] || event['en'];
+        const typeLabel = event.type === 'retreat'
+            ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
+            : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
+        const categoryLabel = event.category === 'abroad'
+            ? (lang === 'et' ? 'Välismaal' : lang === 'fi' ? 'Ulkomailla' : 'Abroad')
+            : event.category === 'estonia'
+                ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
+                : '';
+
+        return `
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="${event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 flex flex-col gap-2">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-pink-600 rounded-full shadow-sm">${typeLabel}</span>
+                        ${categoryLabel ? `<span class="px-3 py-1 bg-gray-900/80 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-white rounded-full shadow-sm">${categoryLabel}</span>` : ''}
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center text-sm text-pink-500 mb-2 font-semibold">
+                        <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
+                        <span>${data.date}</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2 group-hover:text-pink-600 transition-colors">${data.title}</h3>
+                    <p class="text-sm text-gray-500 mb-4 italic">${data.organizer}</p>
+                    <p class="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed">${data.description}</p>
+                    <div class="mt-auto flex gap-3">
+                        <a href="${event.registerLink}" class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
+                            ${translationsData[lang]['events.register_button']}
+                        </a>
+                        <a href="events.html#${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
+                            ${translationsData[lang]['events.learn_more_button']}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Re-initialize Lucide icons
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
 }

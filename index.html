@@ -760,65 +760,16 @@
                     <p class="text-lg text-gray-500" data-i18n="events.description">Join us for special workshops and
                         immersive retreats designed to expand your knowledge and rejuvenate your spirit.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Event 1 -->
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://bookretreats.com/cdn-cgi/image/width=1200,quality=65,f=auto,sharpen=1,fit=cover,gravity=auto/assets/photo/retreat/0m/29k/29132/p_1142181/1000_1692081290.jpg"
-                                alt="Yoga Retreat"
-                                class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105">
-                            <button
-                                class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
-                                <i data-lucide="heart" class="h-5 w-5"></i>
-                            </button>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-sm text-pink-500 mb-2 font-medium">October 15-18, 2025</p>
-                            <h3 class="text-xl font-medium mb-3" data-i18n="events.event1.title">Autumn Rejuvenation
-                                Retreat</h3>
-                            <p class="text-gray-700 mb-5 flex-grow" data-i18n="events.event1.description">A 4-day
-                                immersive retreat in the Estonian countryside. Deepen your practice with daily yoga,
-                                meditation, and healthy vegetarian meals.</p>
-                            <div class="mt-auto flex flex-col sm:flex-row items-center gap-3">
-                                <a href="#contact"
-                                    class="w-full text-center px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors"
-                                    data-i18n="events.register_button">Register Now</a>
-                                <button
-                                    class="event-details-button w-full text-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-200 transition-colors"
-                                    data-i18n="events.learn_more_button">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Event 2 -->
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://www.playpausebe.com/wp-content/uploads/2022/10/Mastering-Inversion-Yoga-Poses-A-Guide-to-Headstand.webp"
-                                alt="Inversion Workshop"
-                                class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105">
-                            <button
-                                class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
-                                <i data-lucide="heart" class="h-5 w-5"></i>
-                            </button>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <p class="text-sm text-pink-500 mb-2 font-medium">November 5, 2025</p>
-                            <h3 class="text-xl font-medium mb-3" data-i18n="events.event2.title">Mastering Inversions
-                                Workshop</h3>
-                            <p class="text-gray-700 mb-5 flex-grow" data-i18n="events.event2.description">Join Mia
-                                Johnson to build the strength and confidence to master headstands, handstands, and other
-                                inversions safely.</p>
-                            <div class="mt-auto flex flex-col sm:flex-row items-center gap-3">
-                                <a href="#contact"
-                                    class="w-full text-center px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors"
-                                    data-i18n="events.register_button">Register Now</a>
-                                <button
-                                    class="event-details-button w-full text-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-200 transition-colors"
-                                    data-i18n="events.learn_more_button">Learn More</button>
-                            </div>
-                        </div>
-                    </div>
+                <div id="events-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Dynamic Events Inserted Here -->
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="events.html"
+                        class="inline-flex items-center px-8 py-4 bg-white border border-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-50 transition-all shadow-sm hover:shadow-md group">
+                        <span data-i18n="events.view_all">View All Events & Retreats</span>
+                        <i data-lucide="arrow-right"
+                            class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1101,6 +1052,7 @@
 
     <!-- Main JavaScript Logic -->
     <script src="js/data.js"></script>
+    <script src="js/events.js"></script>
     <script src="js/script.js"></script>
 
 </body>
