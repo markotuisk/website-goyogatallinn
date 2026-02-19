@@ -58,7 +58,13 @@ const translationsData = {
         "reviews.facebook": "Facebook Reviews",
         "reviews.verified": "Verified Google Review",
         "reviews.local_guide": "Local Guide",
-        "faq.search_placeholder": "Search questions...", "faq.no_results": "No questions match your search."
+        "faq.search_placeholder": "Search questions...", "faq.no_results": "No questions match your search.",
+        "contact.info.walking": "Walking", "contact.info.gallery": "Gallery",
+        "contact.modal.title.parking": "Parking Options", "contact.modal.content.parking": "Narva mnt 7D has a paid parking area (EP56). Nearby parking options include Foorum, Viru Keskus, and Rotermanni parking houses. Prices starting from 3€/h in Kesklinn and 4.80€/h in Südalinn zones.",
+        "contact.modal.title.transport": "Public Transport", "contact.modal.content.transport": "The studio is perfectly accessible by public transport. The nearest stop is <strong>Hobujaama</strong>, serving Tram lines 1, 2, 3, 4 and numerous bus lines (1, 5, 8, 40, 48, etc.).",
+        "contact.modal.title.walking": "Walking Times", "contact.modal.content.walking": "Approximate walking times from nearby landmarks:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Viru Keskus: 4 mins</li><li>Foorum: 1 min</li><li>Rotermanni Kvartal: 2 mins</li><li>Tallinna Kaubamaja: 5 mins</li><li>Coca-Cola Plaza: 2 mins</li></ul>",
+        "contact.modal.title.gallery": "Building Gallery",
+        "contact.modal.gallery.entrance": "Building Entrance", "contact.modal.gallery.door": "Main Door", "contact.modal.gallery.hallway": "3rd Floor Hallway", "contact.modal.gallery.studio": "Studio Entrance", "contact.modal.gallery.note": "Photos showing the shortcut to our shala. Look for the GoYoga signs on the 3rd floor."
     },
     et: {
         "nav.home": "Kodu", "nav.about": "Meist", "nav.studio": "Stuudio", "nav.schedule": "Tunniplaan", "nav.pricing": "Hinnad", "nav.teachers": "Õpetajad", "nav.events": "Sündmused", "nav.community": "Kogukond", "nav.contact": "Kontakt", "nav.language": "Keel",
@@ -118,7 +124,13 @@ const translationsData = {
         "reviews.facebook": "Facebooki arvustused",
         "reviews.verified": "Kinnitatud Google arvustus",
         "reviews.local_guide": "Kohalik giid",
-        "faq.search_placeholder": "Otsi vastuseid...", "faq.no_results": "Sinu otsingule vastavaid küsimusi ei leitud."
+        "faq.search_placeholder": "Otsi vastuseid...", "faq.no_results": "Sinu otsingule vastavaid küsimusi ei leitud.",
+        "contact.info.walking": "Jalutuskäik", "contact.info.gallery": "Galerii",
+        "contact.modal.title.parking": "Parkimisvõimalused", "contact.modal.content.parking": "Narva mnt 7D juures on tasuline parkla (EP56). Lähedal asuvad Foorumi, Viru Keskuse ja Rotermanni parkimismajad. Parkimine on tasuline vastavalt Kesklinna või Südalinna tsoonile.",
+        "contact.modal.title.transport": "Ühistransport", "contact.modal.content.transport": "Stuudio on suurepäraselt ligipääsetav ühistranspordiga. Lähim peatus on <strong>Hobujaama</strong>, kus peatuvad trammid 1, 2, 3, 4 ning paljud bussiliinid (1, 5, 8, 40, 48 jne).",
+        "contact.modal.title.walking": "Jalutuskäigu kestus", "contact.modal.content.walking": "Ligikaudne jalutuskäigu aeg lähedalasuvatest punktidest:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Viru Keskus: 4 min</li><li>Foorum: 1 min</li><li>Rotermanni Kvartal: 2 min</li><li>Tallinna Kaubamaja: 5 min</li><li>Coca-Cola Plaza: 2 min</li></ul>",
+        "contact.modal.title.gallery": "Hoone galerii",
+        "contact.modal.gallery.entrance": "Hoone sissepääs", "contact.modal.gallery.door": "Peauks", "contact.modal.gallery.hallway": "3. korruse koridor", "contact.modal.gallery.studio": "Stuudio sissepääs", "contact.modal.gallery.note": "Fotod, mis näitavad teed meie shalasse. Otsi GoYoga silte 3. korrusel."
     },
     fi: {
         // ... (For brevity, using a simpler fallback or previously extracted FI data would go here, 
@@ -181,7 +193,13 @@ const translationsData = {
         "reviews.facebook": "Facebook-arvostelut",
         "reviews.verified": "Vahvistettu Google-arvostelu",
         "reviews.local_guide": "Paikallinen opas",
-        "faq.search_placeholder": "Etsi vastauksia...", "faq.no_results": "Hakusi ei tuottanut tuloksia."
+        "faq.search_placeholder": "Etsi vastauksia...", "faq.no_results": "Hakusi ei tuottanut tuloksia.",
+        "contact.info.walking": "Kävelymatka", "contact.info.gallery": "Galleria",
+        "contact.modal.title.parking": "Pysäköintivaihtoehdot", "contact.modal.content.parking": "Narva mnt 7D:ssä on maksullinen pysäköintialue (EP56). Lähistöllä ovat Foorumin, Viru Keskuksen ja Rotermannin parkkihallit. Pysäköinti on maksullista keskusta-alueen hintojen mukaisesti.",
+        "contact.modal.title.transport": "Julkinen liikenne", "contact.modal.content.transport": "Studiolle on erinomaiset julkiset liikenneyhteydet. Lähin pysäkki on <strong>Hobujaama</strong>, jonne saapuvat ratikat 1, 2, 3, 4 sekä useat bussilinjat (1, 5, 8, 40, 48 jne).",
+        "contact.modal.title.walking": "Kävelyaika", "contact.modal.content.walking": "Arvioitu kävelyaika tärkeimmistä maamerkeistä:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Viru Keskus: 4 min</li><li>Foorum: 1 min</li><li>Rotermannin kortteli: 2 min</li><li>Tallinnan Kaubamaja: 5 min</li><li>Coca-Cola Plaza: 2 min</li></ul>",
+        "contact.modal.title.gallery": "Rakennuksen galleria",
+        "contact.modal.gallery.entrance": "Rakennuksen sisäänkäynti", "contact.modal.gallery.door": "Pääovi", "contact.modal.gallery.hallway": "3. kerroksen käytävä", "contact.modal.gallery.studio": "Studion sisäänkäynti", "contact.modal.gallery.note": "Kuvat näyttävät reitin shalallemme. Etsi GoYoga-kylttejä 3. kerroksesta."
     }
 };
 

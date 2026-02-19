@@ -137,11 +137,16 @@ function initModals() {
                 <div class="p-6 md:p-8"><div class="flex justify-between items-center mb-6"><h2 id="pricing-modal-title" class="text-3xl font-serif text-gray-800"></h2><button id="pricing-modal-close" class="text-gray-500 hover:text-gray-800"><i data-lucide="x" class="h-6 w-6"></i></button></div><div id="pricing-modal-body" class="space-y-4 max-h-[60vh] overflow-y-auto"></div></div>
             </div>
         </div>
-        <!-- Event/Other Modals -->
-         <div id="event-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+         <!-- Info Modal -->
+         <div id="info-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
              <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-lg mx-auto transform scale-95 opacity-0 overflow-hidden">
-                <div class="relative"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Retreat" class="w-full h-48 object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div><h2 class="absolute bottom-4 left-6 text-3xl font-serif text-white">Autumn Retreat</h2></div>
-                <div class="p-6 "><p>Details about the event...</p><button id="modal-understand" class="mt-4 px-6 py-2 bg-gray-800 text-white rounded">Close</button></div>
+                <div class="p-6 md:p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 id="info-modal-title" class="text-3xl font-serif text-gray-800"></h2>
+                        <button id="info-modal-close" class="text-gray-500 hover:text-gray-800"><i data-lucide="x" class="h-6 w-6"></i></button>
+                    </div>
+                    <div id="info-modal-body" class="space-y-4 text-gray-700 leading-relaxed"></div>
+                </div>
              </div>
          </div>
     `;
@@ -172,6 +177,74 @@ function initModals() {
     // Event
     document.querySelectorAll('.event-details-button').forEach(btn => btn.addEventListener('click', () => toggleModal('event-modal', true)));
     document.getElementById('modal-understand')?.addEventListener('click', () => toggleModal('event-modal', false));
+
+    // Contact Info Modals
+    const infoModal = document.getElementById('info-modal');
+    const infoClose = document.getElementById('info-modal-close');
+    const infoTitle = document.getElementById('info-modal-title');
+    const infoBody = document.getElementById('info-modal-body');
+
+    infoClose?.addEventListener('click', () => toggleModal('info-modal', false));
+
+    const showInfo = (type) => {
+        const t = translationsData[currentLanguage] || translationsData['en'];
+        infoTitle.textContent = t[`contact.modal.title.${type}`] || t[`contact.info.${type}`];
+
+        if (type === 'gallery') {
+            infoBody.innerHTML = `
+                <div class="grid grid-cols-2 gap-4 mt-2">
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Building Entrance">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.entrance']}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1514533212735-5df27d970db0" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Main Door">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.door']}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1552072805-2a9039d00e57" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Floor Map">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.hallway']}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Studio Entrance">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.studio']}</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 mt-4 italic">${t['contact.modal.gallery.note']}</p>
+            `;
+        } else {
+            infoBody.innerHTML = `<p>${t[`contact.modal.content.${type}`] || 'Coming soon...'}</p>`;
+        }
+
+        toggleModal('info-modal', true);
+        if (window.lucide) window.lucide.createIcons();
+    };
+
+    // Deep Linking Handling
+    const handleHash = () => {
+        const hash = window.location.hash.replace('#', '');
+        const validHashes = ['parking', 'transport', 'walking', 'gallery'];
+        if (validHashes.includes(hash)) {
+            showInfo(hash);
+        }
+    };
+
+    // Listen for hash changes and initial load
+    window.addEventListener('hashchange', handleHash);
+    handleHash();
+
+    // Prevent default anchor behavior while maintaining hash for deep links
+    document.querySelectorAll('#parking-button, #transport-button, #walking-button, #gallery-button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const type = btn.getAttribute('href').replace('#', '');
+            if (window.location.hash !== btn.getAttribute('href')) {
+                // Let browser handle hash update if it's different
+            } else {
+                // If hash is same, manually trigger showing info
+                showInfo(type);
+            }
+        });
+    });
 }
 
 function toggleModal(id, show) {
@@ -183,7 +256,13 @@ function toggleModal(id, show) {
     } else {
         el.classList.add('opacity-0');
         content.classList.add('scale-95', 'opacity-0');
-        setTimeout(() => el.classList.add('pointer-events-none'), 300);
+        setTimeout(() => {
+            el.classList.add('pointer-events-none');
+            // Clear hash on close to allow re-triggering and clean URL
+            if (id === 'info-modal' && ['#parking', '#transport', '#walking', '#gallery'].includes(window.location.hash)) {
+                history.replaceState(null, null, ' ');
+            }
+        }, 300);
     }
 }
 
