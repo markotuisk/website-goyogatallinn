@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initLikeButtons();
     initEvents();
+    initTeacherLanguages();
     initSEO(); // Aggressive SEO Init
 
     // Initialize Lucide Icons
@@ -413,6 +414,36 @@ function initInstagramCarousel() {
     });
 }
 
+// --- Teachers ---
+function initTeacherLanguages() {
+    const flagUrls = {
+        'en': 'https://flagcdn.com/w20/gb.png',
+        'et': 'https://flagcdn.com/w20/ee.png',
+        'fi': 'https://flagcdn.com/w20/fi.png'
+    };
+
+    document.querySelectorAll('.teacher-card').forEach(card => {
+        const id = card.getAttribute('data-teacher-id');
+        const teacher = window.teachersData?.[id];
+        if (teacher && teacher.languages && teacher.languages.length > 0) {
+            const roleEl = card.querySelector('.teacher-role');
+            if (roleEl && !card.querySelector('.teacher-languages')) {
+                const langDiv = document.createElement('div');
+                langDiv.className = 'teacher-languages flex gap-2 mb-4 mt-[-8px]';
+                teacher.languages.forEach(lang => {
+                    const img = document.createElement('img');
+                    img.src = flagUrls[lang] || \`https://flagcdn.com/w20/\${lang}.png\`;
+                    img.alt = lang.toUpperCase();
+                    img.title = lang.toUpperCase();
+                    img.className = 'h-3.5 rounded-sm shadow-sm opacity-80 transition-opacity hover:opacity-100';
+                    langDiv.appendChild(img);
+                });
+                roleEl.insertAdjacentElement('afterend', langDiv);
+            }
+        }
+    });
+}
+
 // --- Other Utils ---
 function initForms() {
     const cForm = document.getElementById('contact-form');
@@ -547,7 +578,7 @@ function renderEvents(container, featuredOnly = false) {
     }
 
     if (events.length === 0) {
-        container.innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">${translationsData[lang]['faq.no_results'] || 'No upcoming events.'}</p>`;
+        container.innerHTML = `< p class="col-span-full text-center text-gray-500 py-12" > ${ translationsData[lang]['faq.no_results'] || 'No upcoming events.' }</p > `;
         return;
     }
 
@@ -563,7 +594,7 @@ function renderEvents(container, featuredOnly = false) {
                 : '';
 
         return `
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group">
+                        < div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group" >
                 <div class="relative h-64 overflow-hidden">
                     <img src="${event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-4 left-4 flex flex-col gap-2">
@@ -592,8 +623,8 @@ function renderEvents(container, featuredOnly = false) {
                         </a>
                     </div>
                 </div>
-            </div>
-        `;
+            </div >
+                        `;
     }).join('');
 
     // Re-initialize Lucide icons
@@ -603,26 +634,26 @@ function renderEvents(container, featuredOnly = false) {
 }
 
 async function shareEvent(id, title) {
-    const url = `${window.location.origin}${window.location.pathname.replace(/\/[^\/]*$/, '')}/event.html?id=${id}`;
+    const url = `${ window.location.origin }${ window.location.pathname.replace(/\/[^\/]*$/, '') }/event.html?id=${id}`;
 
-    if (navigator.share) {
-        try {
-            await navigator.share({
-                title: title,
-                text: `Join me at ${title} - GoYoga Tallinn`,
-                url: url
-            });
-        } catch (err) {
-            console.log('Share cancelled or failed:', err);
-        }
-    } else {
-        // Fallback: Copy to clipboard
-        try {
-            await navigator.clipboard.writeText(url);
-            // Optional: Simple toast or UI feedback could go here
-            alert('Link copied to clipboard!');
-        } catch (err) {
-            console.error('Could not copy text: ', err);
-        }
-    }
-}
+                    if (navigator.share) {
+                        try {
+                            await navigator.share({
+                                title: title,
+                                text: `Join me at ${title} - GoYoga Tallinn`,
+                                url: url
+                            });
+                        } catch (err) {
+                            console.log('Share cancelled or failed:', err);
+                        }
+                    } else {
+                        // Fallback: Copy to clipboard
+                        try {
+                            await navigator.clipboard.writeText(url);
+                            // Optional: Simple toast or UI feedback could go here
+                            alert('Link copied to clipboard!');
+                        } catch (err) {
+                            console.error('Could not copy text: ', err);
+                        }
+                    }
+                }

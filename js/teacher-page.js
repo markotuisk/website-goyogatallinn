@@ -55,12 +55,21 @@ function renderTeacherData(id, lang) {
     const image = basic?.image || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b';
     const socials = basic?.socials || {};
 
-    // Update DOM
     const nameEl = document.getElementById('teacher-name');
     if (nameEl) nameEl.textContent = name;
 
     const roleEl = document.getElementById('teacher-role');
-    if (roleEl) roleEl.textContent = role;
+    if (roleEl) {
+        roleEl.textContent = role;
+
+        // Add Languages
+        const languages = basic?.languages || [];
+        if (languages.length > 0) {
+            const flagUrls = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
+            const langHTML = languages.map(lang => `<img src="${flagUrls[lang] || \`https://flagcdn.com/w20/\${lang}.png\`}" class="h-4 rounded-sm shadow-sm inline-block ml-3 mb-1 opacity-90 transition-opacity hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`).join('');
+            roleEl.innerHTML += langHTML;
+        }
+    }
 
     const quoteEl = document.getElementById('teacher-quote');
     if (quoteEl) quoteEl.textContent = quote ? `"${quote}"` : '';
