@@ -95,8 +95,25 @@ function renderTeacherData(id, lang) {
     const instagramEl = document.getElementById('social-instagram');
     if (instagramEl && socials.instagram && socials.instagram !== '#') {
         instagramEl.href = socials.instagram;
+        instagramEl.style.display = '';
     } else if (instagramEl) {
         instagramEl.style.display = 'none';
+    }
+
+    const instagram2El = document.getElementById('social-instagram2');
+    if (instagram2El && socials.instagram2 && socials.instagram2 !== '#') {
+        instagram2El.href = socials.instagram2;
+        instagram2El.classList.remove('hidden');
+    } else if (instagram2El) {
+        instagram2El.classList.add('hidden');
+    }
+
+    const tiktokEl = document.getElementById('social-tiktok');
+    if (tiktokEl && socials.tiktok && socials.tiktok !== '#') {
+        tiktokEl.href = socials.tiktok;
+        tiktokEl.classList.remove('hidden');
+    } else if (tiktokEl) {
+        tiktokEl.classList.add('hidden');
     }
 
     const websiteEl = document.getElementById('social-website');
