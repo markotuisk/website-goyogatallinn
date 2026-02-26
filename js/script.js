@@ -578,7 +578,7 @@ function renderEvents(container, featuredOnly = false) {
     }
 
     if (events.length === 0) {
-        container.innerHTML = `< p class="col-span-full text-center text-gray-500 py-12" > ${translationsData[lang]['faq.no_results'] || 'No upcoming events.'}</p > `;
+        container.innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">${translationsData[lang]['faq.no_results'] || 'No upcoming events.'}</p>`;
         return;
     }
 
@@ -594,7 +594,7 @@ function renderEvents(container, featuredOnly = false) {
                 : '';
 
         return `
-                        < div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group" >
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group">
                 <div class="relative h-64 overflow-hidden">
                     <img src="${event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-4 left-4 flex flex-col gap-2">
