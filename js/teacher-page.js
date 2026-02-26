@@ -139,6 +139,20 @@ function renderTeacherData(id, lang) {
             testimonialsSection.classList.add('hidden');
         }
     }
+
+    // Custom Backgrounds for Specific Teachers
+    const heroSection = document.getElementById('teacher-hero-section');
+    if (heroSection) {
+        // Reset classes first
+        heroSection.className = 'relative py-20 overflow-hidden transition-all duration-700';
+
+        if (id === 'dian-jarvenkyla-aikani') {
+            // Unique vibrant, warm background for Dian
+            heroSection.classList.add('bg-gradient-to-br', 'from-amber-50', 'via-rose-50', 'to-teal-50');
+        } else {
+            // Default logic if any
+        }
+    }
 }
 
 function updateTeacherSEO(id, lang) {
