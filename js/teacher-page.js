@@ -66,7 +66,7 @@ function renderTeacherData(id, lang) {
         const languages = basic?.languages || [];
         if (languages.length > 0) {
             const flagUrls = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
-            const langHTML = languages.map(lang => `<img src="${flagUrls[lang] || \`https://flagcdn.com/w20/\${lang}.png\`}" class="h-4 rounded-sm shadow-sm inline-block ml-3 mb-1 opacity-90 transition-opacity hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`).join('');
+            const langHTML = languages.map(lang => `<img src="${flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`}" class="h-4 rounded-sm shadow-sm inline-block ml-3 mb-1 opacity-90 transition-opacity hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`).join('');
             roleEl.innerHTML += langHTML;
         }
     }

@@ -432,7 +432,7 @@ function initTeacherLanguages() {
                 langDiv.className = 'teacher-languages flex gap-2 mb-4 mt-[-8px]';
                 teacher.languages.forEach(lang => {
                     const img = document.createElement('img');
-                    img.src = flagUrls[lang] || \`https://flagcdn.com/w20/\${lang}.png\`;
+                    img.src = flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`;
                     img.alt = lang.toUpperCase();
                     img.title = lang.toUpperCase();
                     img.className = 'h-3.5 rounded-sm shadow-sm opacity-80 transition-opacity hover:opacity-100';
@@ -578,7 +578,7 @@ function renderEvents(container, featuredOnly = false) {
     }
 
     if (events.length === 0) {
-        container.innerHTML = `< p class="col-span-full text-center text-gray-500 py-12" > ${ translationsData[lang]['faq.no_results'] || 'No upcoming events.' }</p > `;
+        container.innerHTML = `< p class="col-span-full text-center text-gray-500 py-12" > ${translationsData[lang]['faq.no_results'] || 'No upcoming events.'}</p > `;
         return;
     }
 
@@ -634,26 +634,26 @@ function renderEvents(container, featuredOnly = false) {
 }
 
 async function shareEvent(id, title) {
-    const url = `${ window.location.origin }${ window.location.pathname.replace(/\/[^\/]*$/, '') }/event.html?id=${id}`;
+    const url = `${window.location.origin}${window.location.pathname.replace(/\/[^\/]*$/, '')}/event.html?id=${id}`;
 
-                    if (navigator.share) {
-                        try {
-                            await navigator.share({
-                                title: title,
-                                text: `Join me at ${title} - GoYoga Tallinn`,
-                                url: url
-                            });
-                        } catch (err) {
-                            console.log('Share cancelled or failed:', err);
-                        }
-                    } else {
-                        // Fallback: Copy to clipboard
-                        try {
-                            await navigator.clipboard.writeText(url);
-                            // Optional: Simple toast or UI feedback could go here
-                            alert('Link copied to clipboard!');
-                        } catch (err) {
-                            console.error('Could not copy text: ', err);
-                        }
-                    }
-                }
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: title,
+                text: `Join me at ${title} - GoYoga Tallinn`,
+                url: url
+            });
+        } catch (err) {
+            console.log('Share cancelled or failed:', err);
+        }
+    } else {
+        // Fallback: Copy to clipboard
+        try {
+            await navigator.clipboard.writeText(url);
+            // Optional: Simple toast or UI feedback could go here
+            alert('Link copied to clipboard!');
+        } catch (err) {
+            console.error('Could not copy text: ', err);
+        }
+    }
+}
