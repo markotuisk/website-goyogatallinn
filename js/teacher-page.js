@@ -70,9 +70,10 @@ function renderTeacherData(id, lang) {
 
     if (languages.length > 0 && langContainer && langFlags) {
         const flagUrls = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
-        langFlags.innerHTML = languages.map(lang =>
-            `<img src="${flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`}" class="w-6 h-6 rounded-full object-cover shadow-sm opacity-90 transition-transform hover:scale-110 hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`
-        ).join('');
+        langFlags.innerHTML = languages.map(lang => {
+            const url = flagUrls[lang] || ('https://flagcdn.com/w20/' + lang + '.png');
+            return `<img src="${url}" class="w-6 h-6 rounded-full object-cover shadow-sm opacity-90 transition-transform hover:scale-110 hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`;
+        }).join('');
         langContainer.classList.remove('hidden');
     } else if (langContainer) {
         langContainer.classList.add('hidden');
