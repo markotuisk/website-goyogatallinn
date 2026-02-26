@@ -61,14 +61,21 @@ function renderTeacherData(id, lang) {
     const roleEl = document.getElementById('teacher-role');
     if (roleEl) {
         roleEl.textContent = role;
+    }
 
-        // Add Languages
-        const languages = basic?.languages || [];
-        if (languages.length > 0) {
-            const flagUrls = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
-            const langHTML = languages.map(lang => `<img src="${flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`}" class="h-4 rounded-sm shadow-sm inline-block ml-3 mb-1 opacity-90 transition-opacity hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`).join('');
-            roleEl.innerHTML += langHTML;
-        }
+    // Add Languages
+    const languages = basic?.languages || [];
+    const langContainer = document.getElementById('teacher-languages-container');
+    const langFlags = document.getElementById('teacher-languages-flags');
+
+    if (languages.length > 0 && langContainer && langFlags) {
+        const flagUrls = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
+        langFlags.innerHTML = languages.map(lang =>
+            `<img src="${flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`}" class="w-6 h-6 rounded-full object-cover shadow-sm opacity-90 transition-transform hover:scale-110 hover:opacity-100" title="${lang.toUpperCase()}" alt="${lang.toUpperCase()}">`
+        ).join('');
+        langContainer.classList.remove('hidden');
+    } else if (langContainer) {
+        langContainer.classList.add('hidden');
     }
 
     const quoteEl = document.getElementById('teacher-quote');

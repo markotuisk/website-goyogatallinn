@@ -435,7 +435,7 @@ function initTeacherLanguages() {
                     img.src = flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`;
                     img.alt = lang.toUpperCase();
                     img.title = lang.toUpperCase();
-                    img.className = 'h-3.5 rounded-sm shadow-sm opacity-80 transition-opacity hover:opacity-100';
+                    img.className = 'w-5 h-5 rounded-full object-cover shadow-sm opacity-80 transition-transform hover:scale-110 hover:opacity-100';
                     langDiv.appendChild(img);
                 });
                 roleEl.insertAdjacentElement('afterend', langDiv);
