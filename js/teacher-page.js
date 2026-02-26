@@ -116,6 +116,14 @@ function renderTeacherData(id, lang) {
         tiktokEl.classList.add('hidden');
     }
 
+    const yogaAllianceEl = document.getElementById('social-yogaalliance');
+    if (yogaAllianceEl && socials.yogaalliance && socials.yogaalliance !== '#') {
+        yogaAllianceEl.href = socials.yogaalliance;
+        yogaAllianceEl.classList.remove('hidden');
+    } else if (yogaAllianceEl) {
+        yogaAllianceEl.classList.add('hidden');
+    }
+
     const websiteEl = document.getElementById('social-website');
     if (websiteEl && socials.website && socials.website !== '#') {
         websiteEl.href = socials.website;
