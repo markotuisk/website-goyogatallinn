@@ -122,7 +122,7 @@ const eventsData = [
     {
         id: 'inversions-workshop-2026',
         type: 'studio',
-        category: 'local',
+        category: 'studio',
         active: true,
         featured: true,
         expiryDate: '2026-05-10',

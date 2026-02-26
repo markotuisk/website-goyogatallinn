@@ -591,7 +591,9 @@ function renderEvents(container, featuredOnly = false) {
             ? (lang === 'et' ? 'Välismaal' : lang === 'fi' ? 'Ulkomailla' : 'Abroad')
             : event.category === 'estonia'
                 ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
-                : '';
+                : event.category === 'studio'
+                    ? (lang === 'et' ? 'Stuudios' : lang === 'fi' ? 'Studiolla' : 'Studio')
+                    : '';
 
         return `
             <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group">
