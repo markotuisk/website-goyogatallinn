@@ -55,6 +55,12 @@ const translationsData = {
         "classes.qigong.tagline": "Cultivating energy through gentle flow.",
         "classes.soundbath.title": "Sound Baths",
         "classes.soundbath.tagline": "Deep relaxation through healing vibrations.",
+        "classes.yin.title": "Yin Yoga",
+        "classes.yin.tagline": "Deep release through sustained, mindful stillness.",
+        "classes.vinyasa.title": "Vinyasa Flow",
+        "classes.vinyasa.tagline": "Dynamic movement synchronized with the breath.",
+        "classes.hatha.title": "Hatha Yoga",
+        "classes.hatha.tagline": "Foundational postures focusing on alignment and strength.",
         "reviews.ago": "ago",
         "reviews.google": "Google Reviews",
         "reviews.facebook": "Facebook Reviews",
@@ -123,6 +129,12 @@ const translationsData = {
         "classes.qigong.tagline": "Energia kasvatamine läbi õrna voo.",
         "classes.soundbath.title": "Helirännakud",
         "classes.soundbath.tagline": "Sügav lõõgastus läbi tervendavate vibratsioonide.",
+        "classes.yin.title": "Yin Jooga",
+        "classes.yin.tagline": "Sügav lõdvestus läbi hoitud asendite ja teadliku vaikuse.",
+        "classes.vinyasa.title": "Vinyasa Flow",
+        "classes.vinyasa.tagline": "Dünaamiline liikumine sünkroonis hingamisega.",
+        "classes.hatha.title": "Hatha Jooga",
+        "classes.hatha.tagline": "Põhiasendid, mis keskenduvad joondusele ja jõule.",
         "reviews.ago": "tagasi",
         "reviews.google": "Google arvustused",
         "reviews.facebook": "Facebooki arvustused",
@@ -194,6 +206,12 @@ const translationsData = {
         "classes.qigong.tagline": "Energian viljelyä.",
         "classes.soundbath.title": "Äänimaljakylvyt",
         "classes.soundbath.tagline": "Syvä rentoutuminen.",
+        "classes.yin.title": "Yin Jooga",
+        "classes.yin.tagline": "Syvä rentoutuminen pitkäkestoisten asentojen ja tietoisen hiljaisuuden kautta.",
+        "classes.vinyasa.title": "Vinyasa Flow",
+        "classes.vinyasa.tagline": "Dynaaminen liike synkronoituna hengityksen kanssa.",
+        "classes.hatha.title": "Hatha Jooga",
+        "classes.hatha.tagline": "Perusasennot, jotka keskittyvät linjaukseen ja voimaan.",
         "reviews.ago": "sitten",
         "reviews.google": "Google-arvostelut",
         "reviews.facebook": "Facebook-arvostelut",
@@ -619,6 +637,264 @@ const classesData = {
                 ],
                 faqs: [
                     { question: "Teemmekö asanoita?", answer: "Ei, yleensä makaat mukavasti lattialla." }
+                ]
+            }
+        }
+    },
+    "yin-yoga": {
+        icon: "moon",
+        image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+        teacherIds: ["katlin-epner"],
+        translations: {
+            en: {
+                title: "Yin Yoga",
+                tagline: "Deep release through sustained, mindful stillness.",
+                description: "Yin Yoga is a slow-paced, therapeutic style of yoga where terrestrial postures are held for an extended period, typically three to five minutes. This approach targets the deep connective tissues of the body, such as ligaments, joints, and fascia, rather than the muscles. By maintaining stillness, the practice calms the central nervous system, creating profound physical and mental clarity.",
+                audience: "Highly beneficial for individuals looking to increase joint mobility, reduce stress, or counterbalance a fast-paced lifestyle or dynamic workout routines. Suitable for all levels, including complete beginners.",
+                benefits: [
+                    { title: "Joint Mobility", description: "Gently stretches and hydrates the deep connective tissues." },
+                    { title: "Nervous System Regulation", description: "Activates the parasympathetic nervous system, reducing stress and anxiety." },
+                    { title: "Mental Endurance", description: "Teaches the mind to remain calm and observing during physical stillness." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> The Practice Itself</h3>
+                            <p>Postures are mostly seated or lying down. We make heavy use of props—bolsters, blocks, and blankets—to support your body in each pose so your muscles can fully relax and surrender to gravity. The room is kept at a comfortable, normal temperature to aid in relaxation.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Finding Stillness</h3>
+                            <p>You will be guided to find your edge in a posture, become still, and hold the pose for several minutes. The focus is on deep, natural breathing and cultivating inner observation, allowing physical tensions and mental clutter to slowly dissolve.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Is Yin Yoga the same as Restorative Yoga?", answer: "While both are slow and use props, Yin focuses on gently stretching the deep connective tissues, whereas Restorative focuses entirely on passive release without any active stretching." },
+                    { question: "Can I do Yin if I am not flexible?", answer: "Yes, Yin is excellent for improving flexibility. Props are used to bring the floor to you, ensuring you are supported at your current level of mobility." }
+                ]
+            },
+            et: {
+                title: "Yin Jooga",
+                tagline: "Sügav lõdvestus läbi hoitud asendite ja teadliku vaikuse.",
+                description: "Yin jooga on aeglases tempos terapeutiline joogastiil, kus maas tehtavaid asendeid hoitakse pikema aja jooksul, tavaliselt kolm kuni viis minutit. See lähenemine on suunatud pigem keha sügavatele sidekudedele (ligamendid, liigesed ja fastsia) kui lihastele. Paigalseisu hoidmisega rahustab praktika kesknärvisüsteemi, luues sügava füüsilise ja vaimse selguse.",
+                audience: "Väga kasulik inimestele, kes soovivad suurendada liigeste liikuvust, vähendada stressi või tasakaalustada kiiret elutempot ja dünaamilisi treeningrutiine. Sobib kõikidele tasemetele, sealhulgas täiesti algajatele.",
+                benefits: [
+                    { title: "Liigeste liikuvus", description: "Venitab õrnalt ja niisutab sügavaid sidekudesid." },
+                    { title: "Närvisüsteemi reguleerimine", description: "Aktiveerib parasümpaatilise närvisüsteemi, vähendades stressi ja ärevust." },
+                    { title: "Vaimne vastupidavus", description: "Õpetab meelt jääma füüsilise paigalseisu ajal rahulikuks ja vaatlevaks." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Praktika Olemus</h3>
+                            <p>Asendid on peamiselt istuvad või lamavad. Me kasutame ohtralt abivahendeid (polstreid, plokke ja tekke) et toetada sinu keha igas asendis, nii et lihased saaksid täielikult lõdvestuda ja raskusjõule alistuda. Ruum on hoitud mugaval normaaltemperatuuril.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Paigalseisu Leidmine</h3>
+                            <p>Sind juhendatakse leidma oma piir, jääma paigale ja hoidma asendit mitu minutit. Fookus on sügaval loomulikul hingamisel ja sisemisel vaatlusel, võimaldades füüsilistel pingetel ja vaimsel müral aeglaselt hajuda.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Kas Yin jooga on sama mis taastav (Restorative) jooga?", answer: "Kuigi mõlemad on aeglased ja kasutavad abivahendeid, keskendub Yin sügavate sidekudede õrnale venitamisele, samas kui taastav jooga keskendub täielikult passiivsele lõdvestusele ilma aktiivse venituseta." },
+                    { question: "Kas ma saan Yin joogat teha, kui ma ei ole painduv?", answer: "Jah, Yin on suurepärane painduvuse parandamiseks. Abivahendeid kasutatakse selleks, et toetada sind vastavalt sinu praegusele liikuvusele." }
+                ]
+            },
+            fi: {
+                title: "Yin Jooga",
+                tagline: "Syvä rentoutuminen pitkäkestoisten asentojen ja tietoisen hiljaisuuden kautta.",
+                description: "Yin-jooga on hidastempoinen, terapeuttinen joogatyyli, jossa asennot tehdään lattialla ja niitä pidetään pidempään, yleensä kolmesta viiteen minuuttia. Tämä lähestymistapa kohdistuu pikemminkin kehon syviin sidekudoksiin (nivelsiteisiin, niveliin ja faskioihin) kuin lihaksiin. Pysymällä paikallaan harjoitus rauhoittaa keskushermostoa ja luo syvän fyysisen ja henkisen selkeyden.",
+                audience: "Erittäin hyödyllinen henkilöille, jotka haluavat lisätä nivelten liikkuvuutta, vähentää stressiä tai tasapainottaa nopeatempoista elämäntyyliä. Sopii kaikille tasoille, myös täysin aloittelijoille.",
+                benefits: [
+                    { title: "Nivelten liikkuvuus", description: "Venyttää hellästi ja kosteuttaa syviä sidekudoksia." },
+                    { title: "Hermoston säätely", description: "Aktivoi parasympaattista hermostoa, vähentäen stressiä ja ahdistusta." },
+                    { title: "Henkinen kestävyys", description: "Opettaa mielen pysymään rauhallisena ja tarkkailevana fyysisen paikallaanolon aikana." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Itse Harjoitus</h3>
+                            <p>Asennot ovat enimmäkseen istuvia tai makaavia. Käytämme paljon apuvälineitä (tyynyjä, tiiliä ja vilttejä) tukemaan kehoasi jokaisessa asennossa, jotta lihaksesi voivat täysin rentoutua ja antautua painovoimalle.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Hiljaisuuden Löytäminen</h3>
+                            <p>Sinua ohjataan löytämään rajasi, pysymään paikallasi ja pitämään asento useita minuutteja. Keskitytään syvään, luonnolliseen hengitykseen ja sisäisen havainnoinnin kehittämiseen.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Onko Yin-jooga sama asia kuin restoratiivinen jooga?", answer: "Vaikka molemmat ovat hitaita ja käyttävät apuvälineitä, Yin keskittyy syvien sidekudosten hellävaraiseen venyttämiseen, kun taas restoratiivinen jooga keskittyy täysin passiiviseen vapautumiseen." },
+                    { question: "Voinko tehdä Yin-joogaa, jos en ole taipuisa?", answer: "Kyllä, Yin on erinomainen tapa parantaa joustavuutta. Apuvälineillä luodaan tuki nykyisellä liikkuvuustasollasi." }
+                ]
+            }
+        }
+    },
+    "vinyasa-flow": {
+        icon: "waves",
+        image: "https://images.unsplash.com/photo-1593810450967-f9c427ce8732",
+        teacherIds: ["dian-jarvenkyla"],
+        translations: {
+            en: {
+                title: "Vinyasa Flow",
+                tagline: "Dynamic movement synchronized with the breath.",
+                description: "Vinyasa Flow is a dynamic practice that fluidly links movement with breath in a continuous sequence. It builds internal heat and cardiovascular endurance as practitioners transition smoothly between asanas. The sequences vary from class to class, offering physical variety and encouraging mental present-moment awareness.",
+                audience: "Recommended for students who enjoy vigorous physical movement and want to build overall body strength, stamina, and agility. Familiarity with basic yoga postures is helpful but not strictly required.",
+                benefits: [
+                    { title: "Cardiovascular Health", description: "Continuous movement elevates the heart rate and improves circulation." },
+                    { title: "Core Strength", description: "Transitions and balancing postures rely heavily on core stability." },
+                    { title: "Functional Mobility", description: "Enhances a broad range of motion across the entire body." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Continuous Movement</h3>
+                            <p>Expect a flowing sequence that moves energetically from one posture to the next. You will likely build a sweat as the pace increases.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Breath Synchronization</h3>
+                            <p>The core of Vinyasa is synchronising the rhythm of the breath with the rhythm of the body, creating a moving meditation effect.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Do I need prior yoga experience?", answer: "While beginners are welcome, some familiarity with basic postures like Downward Dog and Sun Salutations is beneficial due to the continuous pace of the class." }
+                ]
+            },
+            et: {
+                title: "Vinyasa Flow",
+                tagline: "Dünaamiline liikumine sünkroonis hingamisega.",
+                description: "Vinyasa Flow on dünaamiline praktika, mis seob liikumise voolavalt hingamisega. Asendite vahel sujuvalt liikudes kasvatatakse sisemist kuumust ja kardiovaskulaarset vastupidavust. Järjestused on igas tunnis erinevad, pakkudes füüsilist vaheldust ja toetades hetkes viibimist.",
+                audience: "Soovitatav neile, kes naudivad aktiivset liikumist ning soovivad kasvatada keha üldist jõudu, vastupidavust ja agiilsust. Baasasendite tundmine on kasulik, kuid mitte rangelt nõutud.",
+                benefits: [
+                    { title: "Südame tervis", description: "Pidev liikumine tõstab pulssi ja parandab vereringet." },
+                    { title: "Kerelihaste tugevus", description: "Üleminekud ja tasakaaluasendid nõuavad head kerestabiilsust." },
+                    { title: "Funktsionaalne liikuvus", description: "Parandab liigeste ulatust kogu kehas." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Pidev Liikumine</h3>
+                            <p>Oota voolavat järjestust, mis liigub energiliselt ühest asendist teise. Tõenäoliselt hakkad tempokamal liikudes higistama.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Hingamise Sünkroniseerimine</h3>
+                            <p>Vinyasa tuum on hingamisrütmi sünkroniseerimine keha rütmiga, luues liikuva meditatsiooni efekti.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Kas mul on vaja eelnevat joogakogemust?", answer: "Algajad on teretulnud, kuid baasasendite (nagu Allavaatav Koer) tundmine tuleb pideva liikumise tõttu kasuks." }
+                ]
+            },
+            fi: {
+                title: "Vinyasa Flow",
+                tagline: "Dynaaminen liike synkronoituna hengityksen kanssa.",
+                description: "Vinyasa Flow on dynaaminen harjoitus, joka yhdistää liikkeen nestemäisesti hengitykseen. Se rakentaa sisäistä lämpöä ja sydän- ja verisuonikestävyyttä, kun harjoittajat siirtyvät sujuvasti asanasta toiseen. Sarjat vaihtelevat tunneittain, tarjoten fyysistä vaihtelua ja kannustaen tietoiseen läsnäoloon.",
+                audience: "Suositellaan niille, jotka nauttivat aktiivisesta fyysisestä liikkeestä ja haluavat lisätä kehon kokonaisvoimaa, kestävyyttä ja ketteryyttä. Perusjooga-asentojen tuntemuksesta on hyötyä.",
+                benefits: [
+                    { title: "Sydämen terveys", description: "Jatkuva liike nostaa sykettä ja parantaa verenkiertoa." },
+                    { title: "Keskivartalon voima", description: "Siirtymät ja tasapainoasennot tukeutuvat vahvasti keskivartalon vakauteen." },
+                    { title: "Toiminnallinen liikkuvuus", description: "Parantaa liikkuvuutta koko kehossa." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Jatkuva Liike</h3>
+                            <p>Odota virtaavaa sarjaa, joka etenee energisesti asennosta toiseen. Tulet todennäköisesti hikoilemaan tahdin kiihtyessä.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Hengityksen Synkronointi</h3>
+                            <p>Vinyasan ydin on hengityksen ja kehon rytmin yhdistäminen, mikä luo liikkuvan meditaation tunteen.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Tarvitsenko aiempaa joogakokemusta?", answer: "Aloittelijat ovat tervetulleita, mutta perusasanoiden (kuten alaspäin katsovan koiran) tuntemuksesta on jatkuvan liikkeen vuoksi hyötyä." }
+                ]
+            }
+        }
+    },
+    "hatha-yoga": {
+        icon: "sun",
+        image: "https://images.unsplash.com/photo-1508704019882-f9cf40e4f24c",
+        teacherIds: ["dian-jarvenkyla"],
+        translations: {
+            en: {
+                title: "Hatha Yoga",
+                tagline: "Foundational postures focusing on alignment and strength.",
+                description: "Hatha Yoga is a foundational practice focusing on mastering physical postures and breathing techniques. Classes are paced methodically, holding individual poses longer than in Vinyasa to ensure correct anatomical alignment. This deliberate pace allows for a deeper understanding of the body's mechanics and a steady build of isometric strength.",
+                audience: "Ideal for beginners learning the fundamentals of alignment, as well as experienced practitioners seeking to refine their technique and build structural stability.",
+                benefits: [
+                    { title: "Structural Alignment", description: "Promotes correct posture and bodily mechanics." },
+                    { title: "Isometric Strength", description: "Holding postures builds deep muscular endurance and bone density." },
+                    { title: "Breath Control", description: "Provides ample time to integrate specific pranayama techniques within postures." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Methodical Pacing</h3>
+                            <p>Expect a structured sequence with pauses between poses rather than continuous flow. We aim for slower transitions allowing time to adjust and find stability.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Detail Orientation</h3>
+                            <p>You will receive detailed verbal cues regarding placement and alignment, ensuring a safe and technically correct practice.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Is Hatha gentle?", answer: "It can be gentle or challenging depending on the pose, but because you hold postures longer, it generally feels less cardiovascular but more muscularly engaging than Vinyasa." }
+                ]
+            },
+            et: {
+                title: "Hatha Jooga",
+                tagline: "Põhiasendid, mis keskenduvad joondusele ja jõule.",
+                description: "Hatha Jooga on fundamentaalne praktika, mis keskendub füüsiliste asendite ja hingamistehnikate omandamisele. Tunnid on metoodilises tempos, hoides asendeid kauem kui Vinyasa stiilis, et tagada anatoomiliselt õige joondus. Selline teadlik tempo võimaldab paremini mõista keha mehaanikat ja kasvatada püsivat isomeetrilist jõudu.",
+                audience: "Ideaalne algajatele joonduse aluste õppimiseks, aga ka kogenud harrastajatele tehnika viimistlemiseks ja stabiilsuse loomiseks.",
+                benefits: [
+                    { title: "Struktuurne joondus", description: "Toetab õiget rühti ja mehaanikat." },
+                    { title: "Isomeetriline jõud", description: "Asendite hoidmine kasvatab lihasvastupidavust." },
+                    { title: "Hingamise kontroll", description: "Annab aega integreerida hingamistehnikaid igasse asendisse." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Metoodiline Tempo</h3>
+                            <p>Oodata on struktureeritud järjestust pausidega asendite vahel, mitte pidevat voolamist. Aeglasemad üleminekud annavad aega kohaneda ja stabiilsust leida.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Täpsus</h3>
+                            <p>Saad detailseid suulisi juhiseid asendite paigutuse ja joonduse kohta, tagades turvalise praktika.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Kas Hatha on leebem?", answer: "Hatha tempo on aeglasem ja seetõttu vähem kardiovaskulaarne, kuid asendite pikem hoidmine võib olla lihastele väga väljakutsuv." }
+                ]
+            },
+            fi: {
+                title: "Hatha Jooga",
+                tagline: "Perusasennot, jotka keskittyvät linjaukseen ja voimaan.",
+                description: "Hatha Jooga on perusharjoitus, joka keskittyy fyysisten asentojen ja hengitystekniikoiden hallintaan. Tunnit etenevät rauhallisesti ja asennoissa pysytään pidempään kuin Vinyasassa, jotta anatominen linjaus on varmasti oikein. Tämä harkittu tahti mahdollistaa kehon mekaniikan syvemmän ymmärtämisen ja isometrisen voiman kasvattamisen.",
+                audience: "Ihanteellinen aloittelijoille linjauksen perusteiden oppimiseen, mutta yhtä lailla kokeneille harjoittelijoille tekniikan hiomiseen.",
+                benefits: [
+                    { title: "Rakenteellinen linjaus", description: "Tukee oikeaa ryhtiä ja kehon mekaniikkaa." },
+                    { title: "Isometrinen voima", description: "Asentojen pitäminen rakentaa syvää lihaskestävyyttä." },
+                    { title: "Hengityksen hallinta", description: "Antaa aikaa omaksua hengitystekniikat asennoissa." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Rauhallinen Tahti</h3>
+                            <p>Odota jäsenneltyä sarjaa, jossa on taukoja asentojen välillä jatkuvan virtauksen sijaan. Hitaammat siirtymät antavat aikaa asettua ja löytää vakaus.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Tarkkuus</h3>
+                            <p>Saat yksityiskohtaisia ohjeita asentojen linjauksesta, mikä varmistaa turvallisen ja teknisesti oikean harjoituksen.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Onko Hatha lempeää?", answer: "Se voi olla lempeää tai haastavaa riippuen asennosta, mutta koska asennoissa viivytään pidempään, se tuntuu tyypillisesti lihaksissa Vinyasaa enemmän." }
                 ]
             }
         }
