@@ -61,6 +61,8 @@ const translationsData = {
         "classes.vinyasa.tagline": "Dynamic movement synchronized with the breath.",
         "classes.hatha.title": "Hatha Yoga",
         "classes.hatha.tagline": "Foundational postures focusing on alignment and strength.",
+        "classes.cacao.title": "Cacao Ceremonies",
+        "classes.cacao.tagline": "Heart-opening rituals to foster deep inner connection.",
         "reviews.ago": "ago",
         "reviews.google": "Google Reviews",
         "reviews.facebook": "Facebook Reviews",
@@ -135,6 +137,8 @@ const translationsData = {
         "classes.vinyasa.tagline": "Dünaamiline liikumine sünkroonis hingamisega.",
         "classes.hatha.title": "Hatha Jooga",
         "classes.hatha.tagline": "Põhiasendid, mis keskenduvad joondusele ja jõule.",
+        "classes.cacao.title": "Kakaotseremooniad",
+        "classes.cacao.tagline": "Südant avavad rituaalid sügava sisemise ühenduse loomiseks.",
         "reviews.ago": "tagasi",
         "reviews.google": "Google arvustused",
         "reviews.facebook": "Facebooki arvustused",
@@ -212,6 +216,8 @@ const translationsData = {
         "classes.vinyasa.tagline": "Dynaaminen liike synkronoituna hengityksen kanssa.",
         "classes.hatha.title": "Hatha Jooga",
         "classes.hatha.tagline": "Perusasennot, jotka keskittyvät linjaukseen ja voimaan.",
+        "classes.cacao.title": "Kaakaoseremoniat",
+        "classes.cacao.tagline": "Sydäntä avaavat rituaalit syvän sisäisen yhteyden luomiseksi.",
         "reviews.ago": "sitten",
         "reviews.google": "Google-arvostelut",
         "reviews.facebook": "Facebook-arvostelut",
@@ -731,7 +737,7 @@ const classesData = {
     },
     "vinyasa-flow": {
         icon: "waves",
-        image: "https://images.unsplash.com/photo-1593810450967-f9c427ce8732",
+        image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5",
         teacherIds: ["dian-jarvenkyla"],
         translations: {
             en: {
@@ -816,7 +822,7 @@ const classesData = {
     },
     "hatha-yoga": {
         icon: "sun",
-        image: "https://images.unsplash.com/photo-1508704019882-f9cf40e4f24c",
+        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
         teacherIds: ["dian-jarvenkyla"],
         translations: {
             en: {
@@ -895,6 +901,94 @@ const classesData = {
                 `,
                 faqs: [
                     { question: "Onko Hatha lempeää?", answer: "Se voi olla lempeää tai haastavaa riippuen asennosta, mutta koska asennoissa viivytään pidempään, se tuntuu tyypillisesti lihaksissa Vinyasaa enemmän." }
+                ]
+            }
+        }
+    },
+    "cacao-ceremonies": {
+        icon: "heart",
+        image: "https://images.unsplash.com/photo-1611162618479-ee3d24aaef0b",
+        teacherIds: ["marit-tuisk"],
+        translations: {
+            en: {
+                title: "Cacao Ceremonies",
+                tagline: "Heart-opening rituals to foster deep inner connection.",
+                description: "Cacao Ceremonies are intentional gatherings that utilize ceremonial-grade cacao as a gentle plant medicine to open the heart and facilitate emotional connection. Rather than a physical workout, this practice is a restorative, introspective journey. It often combines the drinking of warm, nutrient-rich cacao with guided meditation, breathwork, sound healing, and sometimes gentle mindful movement.",
+                audience: "Perfect for anyone feeling disconnected, stressed, or seeking a safe space for emotional processing and quiet contemplation. No prior experience with yoga or ceremonies is required.",
+                benefits: [
+                    { title: "Emotional Release", description: "Provides a supportive environment to safely process and release stored emotions." },
+                    { title: "Mental Clarity", description: "The natural compounds in cacao increase blood flow to the brain, enhancing focus and insight." },
+                    { title: "Deep Relaxation", description: "Shifts the nervous system into a state of profound rest and receptivity." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> The Preparation</h3>
+                            <p>You will settle into a comfortable seated or lying position using bolsters and blankets. The ceremony begins with the serving of warm, ceremonial cacao, prepared with intention and care. We take time to set personal intentions for the session before drinking.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> The Journey</h3>
+                            <p>As the cacao takes effect—usually inducing a subtle, warming sensation rather than any psychoactive effects—the facilitator guides the room through meditations, breathing exercises, or sound baths. You are simply invited to close your eyes, listen, and observe whatever arises within.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Is cacao psychedelic?", answer: "No. Ceremonial cacao is a non-psychoactive plant medicine. It contains theobromine, which gently stimulates the cardiovascular system and induces a warm, heart-opening sensation without altering your perception of reality." },
+                    { question: "How should I prepare?", answer: "It is recommended to eat lightly a few hours before the ceremony and avoid dairy or heavy caffeine, as they can inhibit the body's absorption of the cacao's nutrients." }
+                ]
+            },
+            et: {
+                title: "Kakaotseremooniad",
+                tagline: "Südant avavad rituaalid sügava sisemise ühenduse loomiseks.",
+                description: "Kakaotseremooniad on taotlusega koosviibimised, kus tseremoniaalset kakaod kasutatakse leebelt südant avava ja emotsionaalset ühendust loova abilisena. Füüsilise treeningu asemel on see taastav ja sissepoole vaatav rännak. See ühendab endas sooja, toitainerikka kakao joomise juhitud meditatsiooni, hingamispraktikate, heliteraapia ja kohati ka leebe teadliku liikumisega.",
+                audience: "Ideaalne igaühele, kes tunneb end ühenduse kaotanuna, stressis, või otsib turvalist ruumi emotsioonide töötlemiseks ja vaikseks mõtiskluseks. Eelnev kogemus jooga või tseremooniatega ei ole vajalik.",
+                benefits: [
+                    { title: "Emotsionaalne vabanemine", description: "Tseremoonia pakub toetavat keskkonda allasurutud emotsioonide turvaliseks lahtilaskmiseks." },
+                    { title: "Vaimne selgus", description: "Kakao looduslikud ühendid suurendavad verevoolu ajju, soodustades fookust ja taipamisi." },
+                    { title: "Sügav lõdvestus", description: "Lülitab närvisüsteemi sügava puhkuse ja vastuvõtlikkuse seisundisse." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Ettevalmistus</h3>
+                            <p>Sead end istudes või lamades abivahenditega (polstrid, tekid) mugavalt sisse. Tseremoonia algab taotluse ja hoolega valmistatud sooja tseremoniaalse kakao serveerimisega. Enne joomist võtame aega isiklike taotluste seadmiseks.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Rännak</h3>
+                            <p>Kui kakao hakkab mõjuma – luues pigem õrna soojendava tunde kui muutes teadvust –, juhendab läbiviija ruumi läbi meditatsioonide, hingamisharjutuste või helirännakute. Sind kutsutakse lihtsalt silmi sulgema, kuulama ja vaatlema seda, mis sinu sees esile kerkib.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Kas kakao on psühhedeelne?", answer: "Ei. Tseremoniaalne kakao ei ole psühhoaktiivne. See sisaldab teobromiini, mis stimuleerib õrnalt südame-veresoonkonda ja loob sooja, südant avava tunde, muutmata sinu reaalsustaju." },
+                    { question: "Kuidas peaksin valmistuma?", answer: "Soovitatav on süüa kergelt paar tundi enne tseremooniat ning vältida piimatooteid ja tugevat kofeiini, kuna need võivad pärssida kakao toitainete imendumist." }
+                ]
+            },
+            fi: {
+                title: "Kaakaoseremoniat",
+                tagline: "Sydäntä avaavat rituaalit syvän sisäisen yhteyden luomiseksi.",
+                description: "Kaakaoseremoniat ovat tarkoituksellisia kokoontumisia, joissa seremonialaatuista kaakaota käytetään lempeänä kasvilääkkeenä sydämen avaamiseen ja emotionaalisten yhteyksien fasilitointiin. Fyysisen harjoituksen sijaan tämä on palauttava, introspektiivinen matka. Se yhdistää lämpimän ja ravinteikkaan kaakaon juomisen ohjattuihin meditaatioihin, hengitysharjoituksiin, ääniterapiaan ja joskus lempeään tietoiseen liikkeeseen.",
+                audience: "Täydellinen kaikille, jotka tuntevat itsensä irrallisiksi tai stressaantuneiksi, tai jotka etsivät turvallista tilaa tunteiden käsittelyyn ja hiljentymiseen. Aiempaa kokemusta ei tarvita.",
+                benefits: [
+                    { title: "Emotionaalinen vapautuminen", description: "Tarjoaa tukevan ympäristön tunteiden turvalliseen käsittelyyn ja vapauttamiseen." },
+                    { title: "Henkinen selkeys", description: "Kaakaon luonnolliset yhdisteet lisäävät verenkiertoa aivoihin, parantaen keskittymistä ja oivalluksia." },
+                    { title: "Syvä rentoutuminen", description: "Siirtää hermoston syvän levon ja vastaanottavaisuuden tilaan." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Valmistautuminen</h3>
+                            <p>Asetut mukavaan istuma- tai makuuasentoon apuvälineiden, kuten tyynyjen ja peittojen, tuella. Seremonia alkaa lämpimän, tarkoituksella valmistetun seremoniallisen kaakaon tarjoilulla. Otamme aikaa henkilökohtaisten intentioiden asettamiseen ennen juomista.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Matka</h3>
+                            <p>Kun kaakao alkaa vaikuttaa – aiheuttaen yleensä hienovaraisen, lämmittävän tunteen – ohjaaja johdattaa tilan meditaatioiden, hengitysharjoitusten tai äänikylpyjen läpi. Sinua pyydetään vain sulkemaan silmäsi ja havainnoimaan sisältäsi nousevia asioita.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Onko kaakao psykedeelistä?", answer: "Ei. Seremoniallinen kaakao on ei-psykoaktiivinen kasvilääke. Se sisältää teobromiinia, joka stimuloi hellävaraisesti sydän- ja verisuonijärjestelmää ja luo lämpimän, sydäntä avaavan tunteen muuttamatta todellisuudentajuasi." },
+                    { question: "Miten minun pitäisi valmistautua?", answer: "On suositeltavaa syödä kevyesti muutama tunti ennen seremoniaa ja välttää maitotuotteita tai vahvaa kofeiinia, koska ne voivat estää kehoa imeyttämästä kaakaon ravinteita." }
                 ]
             }
         }
