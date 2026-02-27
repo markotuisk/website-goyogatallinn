@@ -907,7 +907,7 @@ const classesData = {
     },
     "cacao-ceremonies": {
         icon: "heart",
-        image: "https://images.unsplash.com/photo-1611162618479-ee3d24aaef0b",
+        image: "https://images.unsplash.com/photo-1512568400610-62da28bc8a13",
         teacherIds: ["marit-tuisk"],
         translations: {
             en: {
