@@ -87,7 +87,7 @@
         <section class="relative h-[50vh] flex items-center justify-center overflow-hidden bg-stone-900 text-stone-100">
             <div class="absolute inset-0 opacity-40">
                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Aura"
-                    class="w-full h-full object-cover grayscale">
+                    class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-stone-900/60"></div>
             </div>
             <div class="container-custom relative z-10 text-center animate-fade-in-slow">
@@ -158,32 +158,75 @@
 
                 // Render Grid
                 const grid = document.createElement('div');
-                grid.className = "grid grid-cols-1 md:grid-cols-2 gap-8";
+                grid.className = "flex justify-center";
 
                 data.current.items.forEach(item => {
                     const card = document.createElement('div');
-                    card.className = "bg-white p-8 rounded-2xl border border-stone-100 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1";
+                    card.className = "bg-white p-8 md:p-10 rounded-3xl shadow-xl relative overflow-hidden flex flex-col w-full max-w-2xl ring-1 ring-pink-100 transition-all hover:shadow-2xl";
+
+                    let benefitsHtml = '';
+                    if (item.benefits && item.benefits.length > 0) {
+                        benefitsHtml = `
+                            <div class="mb-8 p-6 bg-pink-50/50 rounded-2xl border border-pink-100/50">
+                                <h4 class="text-sm font-bold text-stone-900 mb-4 uppercase tracking-wider flex items-center">
+                                    <i data-lucide="sparkles" class="h-4 w-4 mr-2 text-pink-500"></i>
+                                    ${item.benefitsTitle}
+                                </h4>
+                                <ul class="space-y-3">
+                                    ${item.benefits.map(b => `
+                                        <li class="flex items-start">
+                                            <i data-lucide="check-circle-2" class="h-5 w-5 mr-3 text-pink-500 flex-shrink-0 mt-0.5"></i>
+                                            <span class="text-stone-700 text-[15px] leading-relaxed">${b}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+
+                    // Render card content
                     card.innerHTML = `
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-stone-900">${item.name}</h3>
-                            <span class="bg-pink-50 text-pink-600 px-3 py-1 rounded-full text-sm font-bold">${item.price}</span>
-                        </div>
-                        <p class="text-stone-600 mb-6 italic leading-relaxed">"${item.desc}"</p>
-                        
-                        <div class="mb-6 p-4 bg-stone-50 rounded-lg border border-stone-100 flex items-center justify-between">
-                            <div class="flex items-center text-xs text-stone-500 uppercase tracking-widest">
-                                <i data-lucide="clock" class="h-4 w-4 mr-2"></i>
-                                <span>Expires: ${item.expires}</span>
-                            </div>
-                            <div class="flex space-x-3 text-stone-800 font-mono font-bold text-lg" id="offers-countdown">
-                                <div><span id="off-days">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Days</span></div>
-                                <div><span id="off-hours">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Hrs</span></div>
-                                <div><span id="off-mins">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Mins</span></div>
-                                <div><span id="off-secs">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Secs</span></div>
-                            </div>
+                        <!-- Savings Badge -->
+                        <div class="absolute top-0 right-0 bg-pink-500 text-white px-5 py-2 rounded-bl-2xl font-bold text-sm shadow-md tracking-wide">
+                            ${item.savings}
                         </div>
                         
-                        <a href="index.html#contact" class="block w-full py-3 text-center bg-stone-900 text-stone-100 rounded-lg font-medium hover:bg-stone-800 transition-colors">Claim Offer</a>
+                        <!-- Header -->
+                        <div class="flex flex-col mb-6 pt-2">
+                            <h3 class="text-3xl font-serif font-bold text-stone-900 mb-4">${item.name}</h3>
+                            <div class="flex flex-col mb-4">
+                                <div class="flex items-baseline space-x-3">
+                                    <span class="text-5xl font-bold text-stone-900">${item.price}</span>
+                                    <span class="text-xl line-through text-stone-400 font-medium">${item.originalPrice}</span>
+                                </div>
+                            </div>
+                            <p class="text-stone-600 italic leading-relaxed text-lg">"${item.desc}"</p>
+                        </div>
+                        
+                        ${benefitsHtml}
+                        
+                        <!-- Footer Section -->
+                        <div class="mt-auto pt-2">
+                            <div class="mb-8 p-5 bg-rose-50 rounded-2xl border border-rose-100 flex flex-col md:flex-row items-center justify-between gap-4">
+                                <div class="flex items-center w-full md:w-auto text-xs text-stone-500 uppercase tracking-widest font-medium">
+                                    <i data-lucide="clock" class="h-4 w-4 mr-2 text-rose-400"></i>
+                                    <span>Expires: ${item.expires}</span>
+                                </div>
+                                <div class="flex space-x-3 text-rose-900 font-mono font-bold text-xl leading-none" id="offers-countdown">
+                                    <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-days">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Days</span></div>
+                                    <div class="flex items-center text-rose-300 -mx-1">:</div>
+                                    <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-hours">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Hrs</span></div>
+                                    <div class="flex items-center text-rose-300 -mx-1">:</div>
+                                    <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-mins">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Mins</span></div>
+                                    <div class="flex items-center text-rose-300 -mx-1">:</div>
+                                    <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-secs">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Secs</span></div>
+                                </div>
+                            </div>
+                            
+                            <a href="index.html#contact" class="block w-full py-4 text-center bg-gradient-to-r from-pink-600 to-rose-500 text-white rounded-xl font-bold text-lg hover:shadow-[0_8px_30px_rgb(225,29,72,0.3)] transition-all transform hover:-translate-y-1">
+                                ${item.claimBtn}
+                            </a>
+                        </div>
                     `;
                     grid.appendChild(card);
                 });

@@ -14,9 +14,18 @@ const offersData = {
             items: [
                 {
                     name: "Studio Explorer Pass",
-                    desc: "Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days from purchase. Offer available for 7 days.",
+                    desc: "Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days from purchase.",
                     price: "29€",
-                    expires: "March 8, 2026"
+                    originalPrice: "54€",
+                    savings: "Save 25€",
+                    benefitsTitle: "Smart Investment:",
+                    benefits: [
+                        "Only 9.60€ per class (regularly 18€/class)",
+                        "Low-risk way to try 3 different teachers or practices",
+                        "Generous 30-day validity to help you find your rhythm"
+                    ],
+                    expires: "March 8, 2026",
+                    claimBtn: "Claim Offer"
                 }
             ]
         },
@@ -39,9 +48,18 @@ const offersData = {
             items: [
                 {
                     name: "Studio Explorer Pass",
-                    desc: "Osale 3 jooga- ja heaolutunnis omal valikul. Kehtib 30 päeva alates ostu sooritamise päevast. Pakkumine kehtib 7 päeva.",
+                    desc: "Osale 3 jooga- ja heaolutunnis omal valikul. Kehtib 30 päeva alates ostu sooritamise päevast.",
                     price: "29€",
-                    expires: "8. märts 2026"
+                    originalPrice: "54€",
+                    savings: "Säästad 25€",
+                    benefitsTitle: "Miks see on nutikas valik:",
+                    benefits: [
+                        "Vaid 9.60€ ühe tunni kohta (tavahind 18€)",
+                        "Riskivaba võimalus proovida 3 erinevat stiili või õpetajat",
+                        "Kehtib tervelt 30 päeva – piisavalt aega regulaarse rütmi leidmiseks"
+                    ],
+                    expires: "8. märts 2026",
+                    claimBtn: "Osta Kohe"
                 }
             ]
         },
@@ -64,9 +82,18 @@ const offersData = {
             items: [
                 {
                     name: "Studio Explorer Pass",
-                    desc: "Osallistu jopa 3 valitsemallasi jooga- tai hyvinvointitunnilla. Voimassa 30 päivää ostopäivästä. Tarjous on voimassa 7 päivää.",
+                    desc: "Osallistu jopa 3 valitsemallasi jooga- tai hyvinvointitunnilla. Voimassa 30 päivää ostopäivästä.",
                     price: "29€",
-                    expires: "8. maaliskuuta 2026"
+                    originalPrice: "54€",
+                    savings: "Säästä 25€",
+                    benefitsTitle: "Miksi tämä on fiksu valinta:",
+                    benefits: [
+                        "Vain 9.60€ per tunti (normaalisti 18€)",
+                        "Riskitön tapa kokeilla 3 eri opettajaa tai harjoitusta",
+                        "Reilu 30 päivän voimassaoloaika auttaa rutiinin löytämisessä"
+                    ],
+                    expires: "8. maaliskuuta 2026",
+                    claimBtn: "Osta Nyt"
                 }
             ]
         },
