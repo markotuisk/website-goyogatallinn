@@ -216,10 +216,6 @@
                                     <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-days">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Days</span></div>
                                     <div class="flex items-center text-rose-300 -mx-1">:</div>
                                     <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-hours">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Hrs</span></div>
-                                    <div class="flex items-center text-rose-300 -mx-1">:</div>
-                                    <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-mins">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Mins</span></div>
-                                    <div class="flex items-center text-rose-300 -mx-1">:</div>
-                                    <div class="flex flex-col items-center bg-white px-3 py-2 rounded-lg shadow-sm w-16"><span id="off-secs">00</span><span class="text-[9px] uppercase font-sans font-medium text-rose-500 mt-1">Secs</span></div>
                                 </div>
                             </div>
                             
@@ -254,8 +250,6 @@
                     if (distance < 0) return;
                     document.getElementById('off-days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
                     document.getElementById('off-hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-                    document.getElementById('off-mins').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-                    document.getElementById('off-secs').innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
                 }, 1000);
             }
         }
