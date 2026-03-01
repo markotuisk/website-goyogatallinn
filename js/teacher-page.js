@@ -90,8 +90,11 @@ function renderTeacherData(id, lang) {
 
     const bioEl = document.getElementById('teacher-bio');
     if (bioEl) {
-        // Split bio by newlines if it's a string with line breaks, otherwise wrap in p
-        bioEl.innerHTML = bio.split('\n').map(p => `<p>${p}</p>`).join('');
+        if (Array.isArray(bio)) {
+            bioEl.innerHTML = bio.map(p => `<p>${p}</p>`).join('');
+        } else {
+            bioEl.innerHTML = bio.split('\n').map(p => `<p>${p}</p>`).join('');
+        }
     }
 
     const philosophyEl = document.getElementById('teacher-philosophy');
@@ -112,9 +115,17 @@ function renderTeacherData(id, lang) {
     const instagramEl = document.getElementById('social-instagram');
     if (instagramEl && socials.instagram && socials.instagram !== '#') {
         instagramEl.href = socials.instagram;
-        instagramEl.style.display = '';
+        instagramEl.classList.remove('hidden');
     } else if (instagramEl) {
-        instagramEl.style.display = 'none';
+        instagramEl.classList.add('hidden');
+    }
+
+    const facebookEl = document.getElementById('social-facebook');
+    if (facebookEl && socials.facebook && socials.facebook !== '#') {
+        facebookEl.href = socials.facebook;
+        facebookEl.classList.remove('hidden');
+    } else if (facebookEl) {
+        facebookEl.classList.add('hidden');
     }
 
     const instagram2El = document.getElementById('social-instagram2');
@@ -144,17 +155,17 @@ function renderTeacherData(id, lang) {
     const websiteEl = document.getElementById('social-website');
     if (websiteEl && socials.website && socials.website !== '#') {
         websiteEl.href = socials.website;
-    } else if (websiteEl && socials.facebook && socials.facebook !== '#') {
-        websiteEl.href = socials.facebook;
+        websiteEl.classList.remove('hidden');
     } else if (websiteEl) {
-        websiteEl.style.display = 'none';
+        websiteEl.classList.add('hidden');
     }
 
     const emailEl = document.getElementById('social-email');
-    if (emailEl && socials.email) {
-        emailEl.href = 'mailto:' + socials.email;
+    if (emailEl && socials.email && socials.email !== '#') {
+        emailEl.href = `mailto:${socials.email}`;
+        emailEl.classList.remove('hidden');
     } else if (emailEl) {
-        emailEl.style.display = 'none';
+        emailEl.classList.add('hidden');
     }
 
     // Testimonials Section
