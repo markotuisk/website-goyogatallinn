@@ -17,6 +17,7 @@ const translationsData = {
         "teachers.david-lepp.title": "Sound Baths | Yoga Nidra", "teachers.david-lepp.description": "Mastering the gong to clear blockages and restore harmony.",
         "teachers.dian-jarvenkyla.title": "Vinyasa & Hatha Yoga", "teachers.dian-jarvenkyla.description": "Guiding mindfulness, strength, and body awareness through flowing movement.",
         "teachers.katlin-epner.title": "Yin Yoga", "teachers.katlin-epner.description": "Focused on creating space to slow down, breathe, and find clarity.",
+        "teachers.keiu-grossberg.title": "Ashtanga Yoga", "teachers.keiu-grossberg.description": "Helping students study their limits and fears.",
         "teachers.join-us.name": "This Could Be You", "teachers.join-us.title": "Join Our Community", "teachers.join-us.description": "Whether you are a new teacher full of ideas or an established practitioner seeking a permanent home.", "teachers.join-us.cta": "Get In Touch",
         "teachers.discover": "Get to Know", "teachers.teaching_languages": "Teaching Languages",
         "events.tagline": "Deepen Your Practice", "events.title": "Upcoming Events & Retreats", "events.description": "Join us for special workshops and immersive retreats.", "events.event1.title": "Autumn Rejuvenation Retreat", "events.event1.description": "A 4-day immersive retreat in the Estonian countryside.", "events.event2.title": "Mastering Inversions Workshop", "events.event2.description": "Join Mia Johnson to build the strength and confidence to master inversions.", "events.register_button": "Register Now", "events.learn_more_button": "Learn More", "events.view_all": "View All Events & Retreats",
@@ -94,6 +95,7 @@ const translationsData = {
         "teachers.david-lepp.title": "Helirännakud | Yoga Nidra", "teachers.david-lepp.description": "Gongi valdaja, et puhastada blokeeringud ja taastada harmoonia.",
         "teachers.dian-jarvenkyla.title": "Vinyasa ja Hatha jooga", "teachers.dian-jarvenkyla.description": "Juhendab teadvelolekut, jõudu ja kehateadlikkust läbi voolava liikumise.",
         "teachers.katlin-epner.title": "Yin Jooga", "teachers.katlin-epner.description": "Keskendunud teadlikule liikumisele, hingamisele ja kohalolule.",
+        "teachers.keiu-grossberg.title": "Ashtanga Jooga", "teachers.keiu-grossberg.description": "Aitab õpilastel uurida oma piire ja hirme.",
         "teachers.join-us.name": "See Võid Olla Sina", "teachers.join-us.title": "Liitu Meie Kogukonnaga", "teachers.join-us.description": "Oled sa ideedest pakatav uus õpetaja või juba kogenud praktik, kes otsib püsivat kodu.", "teachers.join-us.cta": "Võta Ühendust",
         "teachers.discover": "Tutvu õpetajaga", "teachers.teaching_languages": "Õpetamiskeeled",
         "events.tagline": "Süvenda oma praktikat", "events.title": "Tulevased sündmused", "events.description": "Liitu meiega töötubadel.", "events.event1.title": "Sügise värskendusretriit", "events.event1.description": "4-päevane põhjalik retriit Eesti maal.", "events.event2.title": "Pöördasendite meisterdamise töötuba", "events.event2.description": "Liitu Mia Johnsoniga.", "events.register_button": "Registreeri kohe", "events.learn_more_button": "Loe lähemalt", "events.view_all": "Vaata kõiki sündmusi ja retriite",
@@ -174,6 +176,7 @@ const translationsData = {
         "teachers.david-lepp.title": "Äänimaljakylvyt | Yoga Nidra", "teachers.david-lepp.description": "Gongin mestari poistamaan tukoksia ja palauttamaan harmonian.",
         "teachers.dian-jarvenkyla.title": "Vinyasa & Hatha Jooga", "teachers.dian-jarvenkyla.description": "Ohjaa tietoisuutta, voimaa ja kehotietoisuutta virtaavan liikkeen kautta.",
         "teachers.katlin-epner.title": "Yin Jooga", "teachers.katlin-epner.description": "Keskittyy tietoiseen liikkumiseen, hengitykseen ja läsnäoloon.",
+        "teachers.keiu-grossberg.title": "Ashtanga-jooga", "teachers.keiu-grossberg.description": "Auttaa oppilaita tutkimaan rajojaan ja pelkojaan.",
         "teachers.join-us.name": "Tämä Voisit Olla Sinä", "teachers.join-us.title": "Liity Yhteisöömme", "teachers.join-us.description": "Olitpa sitten uusi opettaja täynnä ideoita tai kokenut ammattilainen etsimässä pysyvää kotia.", "teachers.join-us.cta": "Ota Yhteyttä",
         "teachers.discover": "Tutustu opettajaan", "teachers.teaching_languages": "Opetuskielet",
         "events.tagline": "Syvennä harjoitustasi", "events.title": "Tulevat tapahtumat", "events.description": "Liity mukaan työpajoihin ja syventäviin kursseihin.", "events.event1.title": "Syksyn virkistysretriitti", "events.event1.description": "4 päivän syventävä retriitti Viron maaseudulla.", "events.event2.title": "Inversioiden hallinta -työpaja", "events.event2.description": "Liity mukaan ja opi hallitsemaan päälläseisonta ja muut inversiot turvallisesti.", "events.register_button": "Rekisteröidy nyt", "events.learn_more_button": "Lue lisää", "events.view_all": "Katso kaikki tapahtumat",
@@ -256,7 +259,8 @@ const teachersData = {
     "marit-tuisk": { "name": "Marit Tuisk", "title": "Meditations | Cacao Ceremonies", "image": "assets/images/marit.png", "languages": ["et", "en"], "socials": { "instagram": "https://www.instagram.com/mar.tuisk/", "facebook": "https://www.facebook.com/casarituals" } },
     "david-lepp": { "name": "David Lepp", "title": "Sound Baths | Yoga Nidra", "image": "https://images.unsplash.com/photo-1514533212735-5df27d970db0", "languages": ["en", "et"], "socials": { "instagram": "https://www.instagram.com/david.lepp/", "facebook": "https://www.facebook.com/casarituals" } },
     "dian-jarvenkyla": { "name": "Dian Jarvenkyla-Aikani", "title": "Vinyasa & Hatha Yoga", "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b", "languages": ["en", "id"], "socials": { "instagram": "https://www.instagram.com/aikani_yoga/", "instagram2": "https://www.instagram.com/aikaniclass", "tiktok": "https://www.tiktok.com/@aikaniyoga", "yogaalliance": "https://app.yogaalliance.org/teacherpublicprofile/0033g00001b1NZeAAM/dian-jarvenkyla" } },
-    "katlin-epner": { "name": "Kätlin Epner", "title": "Yin Yoga", "image": "assets/images/katlin.png", "languages": ["et", "en"], "socials": { "instagram": "https://www.instagram.com/tasa.flow" } }
+    "katlin-epner": { "name": "Kätlin Epner", "title": "Yin Yoga", "image": "assets/images/katlin.png", "languages": ["et", "en"], "socials": { "instagram": "https://www.instagram.com/tasa.flow" } },
+    "keiu-grossberg": { "name": "Keiu Grossberg", "title": "Ashtanga Yoga", "image": "assets/images/keiu.png", "languages": ["et", "en"], "socials": { "facebook": "https://www.facebook.com/keiu.grossberg" } }
 };
 window.teachersData = teachersData;
 
