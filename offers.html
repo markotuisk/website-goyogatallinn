@@ -169,10 +169,21 @@
                             <span class="bg-pink-50 text-pink-600 px-3 py-1 rounded-full text-sm font-bold">${item.price}</span>
                         </div>
                         <p class="text-stone-600 mb-6 italic leading-relaxed">"${item.desc}"</p>
-                        <div class="flex items-center text-xs text-stone-400 uppercase tracking-widest">
-                            <i data-lucide="clock" class="h-3.5 w-3.5 mr-2"></i>
-                            <span>Expires: ${item.expires}</span>
+                        
+                        <div class="mb-6 p-4 bg-stone-50 rounded-lg border border-stone-100 flex items-center justify-between">
+                            <div class="flex items-center text-xs text-stone-500 uppercase tracking-widest">
+                                <i data-lucide="clock" class="h-4 w-4 mr-2"></i>
+                                <span>Expires: ${item.expires}</span>
+                            </div>
+                            <div class="flex space-x-3 text-stone-800 font-mono font-bold text-lg" id="offers-countdown">
+                                <div><span id="off-days">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Days</span></div>
+                                <div><span id="off-hours">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Hrs</span></div>
+                                <div><span id="off-mins">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Mins</span></div>
+                                <div><span id="off-secs">00</span><span class="block text-[10px] uppercase font-sans font-normal text-stone-400">Secs</span></div>
+                            </div>
                         </div>
+                        
+                        <a href="index.html#contact" class="block w-full py-3 text-center bg-stone-900 text-stone-100 rounded-lg font-medium hover:bg-stone-800 transition-colors">Claim Offer</a>
                     `;
                     grid.appendChild(card);
                 });
@@ -189,6 +200,21 @@
             }
 
             if (window.lucide) window.lucide.createIcons();
+
+            // Add countdown timer
+            if (document.getElementById('offers-countdown')) {
+                if (window.offersInterval) clearInterval(window.offersInterval);
+                const targetDate = new Date("March 8, 2026 23:59:59").getTime();
+                window.offersInterval = setInterval(() => {
+                    const now = new Date().getTime();
+                    const distance = targetDate - now;
+                    if (distance < 0) return;
+                    document.getElementById('off-days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                    document.getElementById('off-hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                    document.getElementById('off-mins').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                    document.getElementById('off-secs').innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+                }, 1000);
+            }
         }
     </script>
 </body>

@@ -13,10 +13,10 @@ const offersData = {
             title: "Current Offerings",
             items: [
                 {
-                    name: "Autumn Rejuvenation Pass",
-                    desc: "Perfect for the transition. A limited 5-class pass for the price of 4. Only available this week.",
-                    price: "40€",
-                    expires: "October 31, 2025"
+                    name: "Studio Explorer Pass",
+                    desc: "Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days from purchase. Offer available for 7 days.",
+                    price: "29€",
+                    expires: "March 8, 2026"
                 }
             ]
         },
@@ -38,10 +38,10 @@ const offersData = {
             title: "Praegused pakkumised",
             items: [
                 {
-                    name: "Sügisene värskenduskaart",
-                    desc: "Ideaalne üleminekuks. Piiratud 5-korra kaart nelja korra hinnaga. Saadaval vaid sel nädalal.",
-                    price: "40€",
-                    expires: "31. oktoober 2025"
+                    name: "Studio Explorer Pass",
+                    desc: "Osale 3 jooga- ja heaolutunnis omal valikul. Kehtib 30 päeva alates ostu sooritamise päevast. Pakkumine kehtib 7 päeva.",
+                    price: "29€",
+                    expires: "8. märts 2026"
                 }
             ]
         },
@@ -63,10 +63,10 @@ const offersData = {
             title: "Nykyiset tarjoukset",
             items: [
                 {
-                    name: "Syksyn virkistyspassi",
-                    desc: "Täydellinen siirtymävaiheeseen. Rajoitettu 5 kerran kortti neljän hinnalla. Saatavilla vain tällä viikolla.",
-                    price: "40€",
-                    expires: "31. lokakuuta 2025"
+                    name: "Studio Explorer Pass",
+                    desc: "Osallistu jopa 3 valitsemallasi jooga- tai hyvinvointitunnilla. Voimassa 30 päivää ostopäivästä. Tarjous on voimassa 7 päivää.",
+                    price: "29€",
+                    expires: "8. maaliskuuta 2026"
                 }
             ]
         },
