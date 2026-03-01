@@ -12,6 +12,7 @@ const eventsData = [
         expiryDate: '2026-03-05',
         image: 'https://images.unsplash.com/photo-1542452331-50e82c57fa4c?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
+        teachers: ['marit-tuisk', 'david-lepp'],
         registerLink: '#contact',
         en: {
             title: 'Full Moon Ritual: Cacao & Gong Journey',
@@ -50,6 +51,7 @@ const eventsData = [
         expiryDate: '2026-03-09',
         image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
+        teachers: ['marit-tuisk'],
         registerLink: '#contact',
         en: {
             title: 'Women\'s Day Cacao Ritual with the Inner Woman',
@@ -88,6 +90,7 @@ const eventsData = [
         expiryDate: '2026-03-14',
         image: 'https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
+        teachers: ['david-lepp'],
         registerLink: '#contact',
         en: {
             title: 'Reiki Infused Gong Journey & Yoga Nidra',
@@ -126,6 +129,7 @@ const eventsData = [
         expiryDate: '2026-03-21',
         image: 'https://images.unsplash.com/photo-1552691021-7043334e0b51?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
+        teachers: ['marit-tuisk', 'david-lepp'],
         registerLink: '#contact',
         en: {
             title: 'Equinox Quantum Activation with Cacao & Gong',
@@ -164,6 +168,7 @@ const eventsData = [
         expiryDate: '2026-04-01',
         image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
+        teachers: ['marit-tuisk', 'david-lepp'],
         registerLink: '#contact',
         en: {
             title: 'Spring Full Moon Restart: Cacao & Gong',
@@ -207,6 +212,7 @@ const eventsData = [
             'https://images.unsplash.com/photo-1506126613408-eca07ce68773',
             'https://images.unsplash.com/photo-1552691021-7043334e0b51'
         ],
+        teachers: ['raili-maripuu'],
         registerLink: '#contact',
         en: {
             title: 'Spring Rejuvenation Retreat',
@@ -265,6 +271,7 @@ const eventsData = [
             'https://images.unsplash.com/photo-1537944434965-cf4679d1a598',
             'https://images.unsplash.com/photo-1518709268805-4e9042af9f23'
         ],
+        teachers: ['raili-maripuu'],
         registerLink: '#contact',
         en: {
             title: 'Bali Spirit & Soul Retreat',
