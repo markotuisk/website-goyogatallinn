@@ -492,7 +492,40 @@ function initFadeIn() {
         el.style.opacity = 1; // Double force
     });
 }
-function initCountdown() { /* Placeholder */ }
+function initCountdown() {
+    const countdownEl = document.getElementById('countdown');
+    if (!countdownEl) return;
+
+    // Set the date we're counting down to: March 10, current year 23:59:59
+    const currentYear = new Date().getFullYear();
+    const targetDate = new Date(`March 10, ${currentYear} 23:59:59`).getTime();
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            document.getElementById('days').innerText = "00";
+            document.getElementById('hours').innerText = "00";
+            document.getElementById('minutes').innerText = "00";
+            document.getElementById('seconds').innerText = "00";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = days.toString().padStart(2, '0');
+        document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+}
 function initLikeButtons() { /* Placeholder */ }
 
 // --- Aggressive SEO Logic ---
