@@ -390,6 +390,93 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
                 }
             ]
         }
+    },
+
+    "keiu-grossberg": {
+        en: {
+            role: "Ashtanga Yoga Teacher",
+            quote: "I was searching for something that would keep me hooked for the rest of my life. Ashtanga demands the mind and the body, all while teaching how to relax into the difficult.",
+            bio: [
+                "I’ve tried many sports but I didn’t really connect with any of them. I was searching for something that would keep me hooked for the rest of my life, and for me it had to have a deeper meaning.",
+                "In 2020, I discovered the Ashtanga yoga practice at the Tartu Ashtanga Yoga School, and it’s been an important part of my life ever since. It demands the mind and the body, all while teaching how to relax into the difficult. It made me really curious about myself—to study my limits and fears. These learnings have helped me in all aspects of my life."
+            ],
+            philosophy: "For me, the Ashtanga yoga practice is a method to balance out my life. It looks like a practice for the body, but it’s actually a great practice for the mind. It will meet you in whatever state you’re in. Always with tenderness.",
+            highlights: [
+                "Teaches Ashtanga Mysore & Led classes",
+                "Assists teacher training with Raili Maripuu",
+                "Attended various workshops with Lino Miele in Italy and India",
+                "Studied under Ülle Põldmaa, Evelyn Tuul, Ricardo Martinez, and Raili Maripuu"
+            ],
+            fun_fact: "Off the mat, I’m an artist & art director. My Siamese cat, Samuel, never misses a home practice!",
+            socialText: "Follow Keiu on Facebook",
+            classesList: [
+                { id: "ashtanga-yoga", title: "Ashtanga Mysore & Led", description: "Traditional dynamic practice taught individually in a group setting." }
+            ],
+            credentials: {
+                title: "Credentials & Lineage",
+                items: [
+                    "Approached by Lino Miele in India to share teachings (Jan 2026)",
+                    "Raili Maripuu’s assistant teacher training",
+                    "Extensive study under Lino Miele's students"
+                ]
+            }
+        },
+        et: {
+            role: "Ashtanga jooga õpetaja",
+            quote: "Otsisin midagi, mis mind terveks eluks köidaks. Ashtanga nõuab nii meelt kui ka keha, õpetades samal ajal, kuidas raskuste keskel lõdvestuda.",
+            bio: [
+                "Olin proovinud paljusid spordialasid, kuid ei leidnud nendega tõeliselt sidet. Otsisin midagi sügavama tähendusega, mis hoiaaks mind pühendununa kogu ülejäänud elu.",
+                "2020. aastal avastasin Tartu Ashtanga Jooga Koolis Ashtanga praktika ja sellest ajast alates on see olnud oluline osa minu elust. See paneb proovile nii keha kui meele, õpetades samal ajal lõdvestumist läbi raskuste. See tekitas minus tõelise uudishimu iseenda vastu – soovi uurida oma piire ja hirme. Need õppetunnid on mind aidanud igas eluvaldkonnas."
+            ],
+            philosophy: "Minu jaoks on Ashtanga meetod viis oma elu tasakaalustamiseks. See tundub füüsilise praktikana, kuid tegelikult on see suurepärane treening meelele. Praktika võtab sind vastu täpselt sellises seisundis, nagu sa parajasti oled. Alati hellusega.",
+            highlights: [
+                "Õpetab Ashtanga Mysore'i ja juhendatud tunde",
+                "Assisteerinud Raili Maripuu õpetajate koolitustel",
+                "Osalenud mitmetes Lino Miele töötubades Itaalias ja Indias",
+                "Õppinud Ülle Põldmaa, Evelyn Tuuli, Ricardo Martinezi ja Raili Maripuu käe all"
+            ],
+            fun_fact: "Mati kõrval olen kunstnik ja kunstiline juht. Minu Siiami kass Samuel ei puudu üheltki koduselt praktikalt!",
+            socialText: "Jälgi Keiut Facebookis",
+            classesList: [
+                { id: "ashtanga-yoga", title: "Ashtanga Mysore ja Led", description: "Traditsiooniline dünaamiline praktika, mida õpetatakse grupis individuaalselt." }
+            ],
+            credentials: {
+                title: "Kvalifikatsioon ja õpetusliin",
+                items: [
+                    "Lino Miele soovitas mul Indiast õpetamisteekonda alustada (jaanuar 2026)",
+                    "Läbinud Raili Maripuu assistendi koolituse",
+                    "Põhjalikud õpingud Lino Miele õpilaste käe all"
+                ]
+            }
+        },
+        fi: {
+            role: "Ashtanga Joogaopettaja",
+            quote: "Etsin jotain, mikä kiehtoisi minua koko loppuelämäni ajan. Ashtanga vaatii sekä kehon että mielen läsnäoloa, opettaen samalla rentoutumaan vaikeuksien keskellä.",
+            bio: [
+                "Olin kokeillut monia urheilulajeja, mutta en tuntenut syvää yhteyttä mihinkään niistä. Etsin jotain merkityksellisempää, joka pitäisi minut koukussa loppuelämäni ajan.",
+                "Vuonna 2020 löysin astangan Tarton Astangajoogakoulusta, ja siitä lähtien se on ollut tärkeä osa elämääni. Se on harjoitus, joka haastaa sekä kehon että mielen ja opettaa samalla rentoutumaan vaikeuksien edessä. Jooga herätti minussa uteliaisuuden omaa itseäni kohtaan – halun tutkia omia rajojani ja pelkojani. Nämä opit ovat auttaneet minua kaikilla elämän osa-alueilla."
+            ],
+            philosophy: "Minulle astangajooga on tapa tasapainottaa elämääni. Vaikka se näyttää fyysiseltä harjoitukselta, se on itse asiassa loistavaa harjoitusta mielelle. Harjoitus ottaa sinut vastaan juuri sellaisena kuin olet. Aina lempeydellä.",
+            highlights: [
+                "Ohjaa Ashtanga Mysore- ja led-tunteja",
+                "Avustanut Raili Maripuun opettajakoulutuksissa",
+                "Osallistunut useisiin Lino Mielen työpajoihin Italiassa ja Intiassa",
+                "Opiskellut Ülle Põldmaan, Evelyn Tuulin, Ricardo Martinezin ja Raili Maripuun alaisuudessa"
+            ],
+            fun_fact: "Maton ulkopuolella toimin taiteilijana ja taiteellisena johtajana. Siamilaiskissani Samuel ei koskaan jätä väliin kotiharjoituksiani!",
+            socialText: "Seuraa Keiua Facebookissa",
+            classesList: [
+                { id: "ashtanga-yoga", title: "Ashtanga Mysore & Alkeet", description: "Perinteinen dynaaminen harjoitus, jota ohjataan yksilöllisesti ryhmässä." }
+            ],
+            credentials: {
+                title: "Pätevyydet ja Perinne",
+                items: [
+                    "Lino Miele rohkaisi jakamaan opetuksia (Intia, Tammikuu 2026)",
+                    "Avustanut Raili Maripuun opettajakoulutuksissa",
+                    "Laajat opinnot Lino Mielen oppilaiden ohjauksessa"
+                ]
+            }
+        }
     }
 };
 
