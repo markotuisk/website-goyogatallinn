@@ -434,27 +434,27 @@ function initGoogleReviewsCarousel() {
             timeDisplay = r.timeAgo.replace('months ago', t['reviews.ago']).replace('years ago', t['reviews.ago']);
         }
 
-        card.innerHTML = \`
+        card.innerHTML = `
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <h4 class="font-bold text-gray-900">\${r.name}</h4>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest">\${timeDisplay}</p>
+                        <h4 class="font-bold text-gray-900">${r.name}</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest">${timeDisplay}</p>
                     </div>
                     <div class="flex text-yellow-400">
-                        \${Array(r.stars || 5).fill('<i data-lucide="star" class="h-3 w-3 fill-current"></i>').join('')}
+                        ${Array(r.stars || 5).fill('<i data-lucide="star" class="h-3 w-3 fill-current"></i>').join('')}
                     </div>
                 </div>
                 <div class="flex-grow">
-                    <p class="text-gray-600 text-sm leading-relaxed italic">"\${r.text || '...'}"</p>
+                    <p class="text-gray-600 text-sm leading-relaxed italic">"${r.text || '...'}"</p>
                 </div>
                 <div class="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between">
                     <span class="text-[10px] font-medium text-gray-400 uppercase tracking-tighter flex items-center">
-                        <i data-lucide="info" class="h-3 w-3 mr-1"></i> \${t['reviews.verified'] || 'Verified Google Review'}
+                        <i data-lucide="info" class="h-3 w-3 mr-1"></i> ${t['reviews.verified'] || 'Verified Google Review'}
                     </span>
-                    \${r.badge ? \`<span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-semibold">\${t['reviews.local_guide'] || r.badge.text}</span>\` : ''}
+                    ${r.badge ? `<span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-semibold">${t['reviews.local_guide'] || r.badge.text}</span>` : ''}
                 </div>
-            </div>\`;
+            </div>`;
         track.appendChild(card);
     });
 
@@ -477,7 +477,7 @@ function initGoogleReviewsCarousel() {
         if (currentGoogleReviewIndex > maxIndex) currentGoogleReviewIndex = maxIndex;
 
         const offset = -(currentGoogleReviewIndex * (100 / visible));
-        track.style.transform = \`translateX(\${offset}%)\`;
+        track.style.transform = `translateX(${offset}%)`;
 
         // Update Buttons
         if (prevBtn) prevBtn.style.opacity = currentGoogleReviewIndex === 0 ? "0.5" : "1";
@@ -497,7 +497,7 @@ function initGoogleReviewsCarousel() {
         const dotCount = Math.ceil(totalCards / getVisibleCount());
         for (let i = 0; i < dotCount; i++) {
             const dot = document.createElement('button');
-            dot.className = \`dot h-2 w-2 rounded-full transition-colors \${i === 0 ? 'bg-pink-600' : 'bg-gray-200'}\`;
+            dot.className = `dot h-2 w-2 rounded-full transition-colors ${i === 0 ? 'bg-pink-600' : 'bg-gray-200'}`;
             dot.addEventListener('click', () => {
                 currentGoogleReviewIndex = i * getVisibleCount();
                 updateCarousel();
@@ -560,13 +560,13 @@ function initTeacherLanguages() {
                 teacher.languages.forEach(lang => {
                     const img = document.createElement('img');
                     img.src = flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`;
-        img.alt = lang.toUpperCase();
-        img.title = lang.toUpperCase();
-        img.className = 'w-5 h-5 rounded-full object-cover shadow-sm opacity-80 transition-transform hover:scale-110 hover:opacity-100';
-        langDiv.appendChild(img);
-    });
-    roleEl.insertAdjacentElement('afterend', langDiv);
-}
+                    img.alt = lang.toUpperCase();
+                    img.title = lang.toUpperCase();
+                    img.className = 'w-5 h-5 rounded-full object-cover shadow-sm opacity-80 transition-transform hover:scale-110 hover:opacity-100';
+                    langDiv.appendChild(img);
+                });
+                roleEl.insertAdjacentElement('afterend', langDiv);
+            }
         }
     });
 }
