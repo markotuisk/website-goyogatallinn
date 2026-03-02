@@ -288,45 +288,47 @@ function initReviewsCarousel() {
     const nextBtn = document.getElementById('next-review');
     const dotsContainer = document.getElementById('review-dots');
 
-    if (!track || typeof reviewsData === 'undefined') return;
+    if (!track || typeof storiesData === 'undefined') return;
 
     const lang = currentLanguage;
     const t = translationsData[lang] || translationsData['en'];
 
-    // Sort by date (latest first)
-    const sortedReviews = [...reviewsData].sort((a, b) => new Date(b.date) - new Date(a.date));
-
     // Render Track
     track.innerHTML = '';
-    sortedReviews.forEach(r => {
+    storiesData.forEach(story => {
         const card = document.createElement('div');
         card.className = "review-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 flex";
 
-        // Dynamic timeframe translation fallback
-        let timeDisplay = r.timeAgo;
-        if (lang !== 'en' && t['reviews.ago']) {
-            timeDisplay = r.timeAgo.replace('months ago', t['reviews.ago']).replace('years ago', t['reviews.ago']);
-        }
+        const storyText = story.text[lang] || story.text['en'];
 
         card.innerHTML = `
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h4 class="font-bold text-gray-900">${r.name}</h4>
-                        <p class="text-xs text-gray-400 uppercase tracking-widest">${timeDisplay}</p>
-                    </div>
-                    <div class="flex text-yellow-400">
-                        ${Array(r.stars || 5).fill('<i data-lucide="star" class="h-3 w-3 fill-current"></i>').join('')}
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col w-full h-full overflow-hidden transition-all duration-300 hover:shadow-md group">
+                <!-- Image Header -->
+                <div class="h-48 w-full relative overflow-hidden">
+                    <img src="${story.image}" alt="Community Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                        <img src="${story.avatar}" alt="${story.author}" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                        <div>
+                            <h4 class="font-bold text-white text-sm leading-tight">${story.author}</h4>
+                            <p class="text-[10px] text-gray-200 uppercase tracking-widest">${story.role}</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex-grow">
-                    <p class="text-gray-600 text-sm leading-relaxed italic">"${r.text || '...'}"</p>
-                </div>
-                <div class="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between">
-                    <span class="text-[10px] font-medium text-gray-400 uppercase tracking-tighter flex items-center">
-                        <i data-lucide="info" class="h-3 w-3 mr-1"></i> ${t['reviews.verified'] || 'Verified Google Review'}
-                    </span>
-                    ${r.badge ? `<span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-semibold">${t['reviews.local_guide'] || r.badge.text}</span>` : ''}
+                <!-- Content -->
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex-grow mb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed italic line-clamp-4">"${storyText}"</p>
+                    </div>
+                    <!-- Footer -->
+                    <div class="pt-4 border-t border-gray-50 flex items-center justify-between mt-auto">
+                        <span class="text-[10px] font-medium text-gray-400 uppercase tracking-widest flex items-center">
+                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i> ${story.date}
+                        </span>
+                        <a href="${story.link}" target="_blank" class="text-[10px] bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-semibold hover:bg-pink-100 transition-colors flex items-center gap-1">
+                            ${story.source} <i data-lucide="external-link" class="h-3 w-3"></i>
+                        </a>
+                    </div>
                 </div>
             </div>`;
         track.appendChild(card);
