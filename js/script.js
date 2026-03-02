@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
     initModals();
     initReviewsCarousel();
+    initGoogleReviewsCarousel();
     initInstagramCarousel();
     initForms();
     initNavbar();
@@ -87,6 +88,7 @@ function updateUI(lang) {
 
     // Refresh reviews and events to apply translations
     initReviewsCarousel();
+    initGoogleReviewsCarousel();
     initEvents();
 }
 
@@ -405,6 +407,129 @@ function initReviewsCarousel() {
     updateCarousel();
 }
 
+// --- Google Reviews ---
+function initGoogleReviewsCarousel() {
+    const track = document.getElementById('google-reviews-track');
+    const prevBtn = document.getElementById('google-prev-review');
+    const nextBtn = document.getElementById('google-next-review');
+    const dotsContainer = document.getElementById('google-review-dots');
+
+    if (!track || typeof reviewsData === 'undefined') return;
+
+    const lang = currentLanguage;
+    const t = translationsData[lang] || translationsData['en'];
+
+    // Sort by date (latest first)
+    const sortedReviews = [...reviewsData].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Render Track
+    track.innerHTML = '';
+    sortedReviews.forEach(r => {
+        const card = document.createElement('div');
+        card.className = "review-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4 flex";
+
+        // Dynamic timeframe translation fallback
+        let timeDisplay = r.timeAgo;
+        if (lang !== 'en' && t['reviews.ago']) {
+            timeDisplay = r.timeAgo.replace('months ago', t['reviews.ago']).replace('years ago', t['reviews.ago']);
+        }
+
+        card.innerHTML = \`
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h4 class="font-bold text-gray-900">\${r.name}</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest">\${timeDisplay}</p>
+                    </div>
+                    <div class="flex text-yellow-400">
+                        \${Array(r.stars || 5).fill('<i data-lucide="star" class="h-3 w-3 fill-current"></i>').join('')}
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <p class="text-gray-600 text-sm leading-relaxed italic">"\${r.text || '...'}"</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between">
+                    <span class="text-[10px] font-medium text-gray-400 uppercase tracking-tighter flex items-center">
+                        <i data-lucide="info" class="h-3 w-3 mr-1"></i> \${t['reviews.verified'] || 'Verified Google Review'}
+                    </span>
+                    \${r.badge ? \`<span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-semibold">\${t['reviews.local_guide'] || r.badge.text}</span>\` : ''}
+                </div>
+            </div>\`;
+        track.appendChild(card);
+    });
+
+    if (window.lucide) window.lucide.createIcons();
+
+    // Carousel State
+    const cards = track.querySelectorAll('.review-card');
+    const totalCards = cards.length;
+    let currentGoogleReviewIndex = 0;
+
+    function getVisibleCount() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+    }
+
+    function updateCarousel() {
+        const visible = getVisibleCount();
+        const maxIndex = Math.max(0, totalCards - visible);
+        if (currentGoogleReviewIndex > maxIndex) currentGoogleReviewIndex = maxIndex;
+
+        const offset = -(currentGoogleReviewIndex * (100 / visible));
+        track.style.transform = \`translateX(\${offset}%)\`;
+
+        // Update Buttons
+        if (prevBtn) prevBtn.style.opacity = currentGoogleReviewIndex === 0 ? "0.5" : "1";
+        if (nextBtn) nextBtn.style.opacity = currentGoogleReviewIndex >= maxIndex ? "0.5" : "1";
+
+        // Update Dots
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('bg-pink-600', idx === Math.floor(currentGoogleReviewIndex / visible));
+            dot.classList.toggle('bg-gray-200', idx !== Math.floor(currentGoogleReviewIndex / visible));
+        });
+    }
+
+    // Init Dots
+    if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        const dotCount = Math.ceil(totalCards / getVisibleCount());
+        for (let i = 0; i < dotCount; i++) {
+            const dot = document.createElement('button');
+            dot.className = \`dot h-2 w-2 rounded-full transition-colors \${i === 0 ? 'bg-pink-600' : 'bg-gray-200'}\`;
+            dot.addEventListener('click', () => {
+                currentGoogleReviewIndex = i * getVisibleCount();
+                updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // Event Listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const visible = getVisibleCount();
+            if (currentGoogleReviewIndex < totalCards - visible) {
+                currentGoogleReviewIndex++;
+                updateCarousel();
+            }
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentGoogleReviewIndex > 0) {
+                currentGoogleReviewIndex--;
+                updateCarousel();
+            }
+        });
+    }
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+}
+
 // --- Instagram ---
 function initInstagramCarousel() {
     const track = document.querySelector('.slider-track');
@@ -412,7 +537,7 @@ function initInstagramCarousel() {
     track.innerHTML = '';
     const all = [...instagramData, ...instagramData];
     all.forEach(p => {
-        track.innerHTML += `<a href="${p.link}" target="_blank" class="w-[250px] aspect-square mx-2 flex-shrink-0"><img src="${p.img}" class="w-full h-full object-cover rounded-lg"></a>`;
+        track.innerHTML += `< a href = "${p.link}" target = "_blank" class="w-[250px] aspect-square mx-2 flex-shrink-0" > <img src="${p.img}" class="w-full h-full object-cover rounded-lg"></a>`;
     });
 }
 
@@ -435,13 +560,13 @@ function initTeacherLanguages() {
                 teacher.languages.forEach(lang => {
                     const img = document.createElement('img');
                     img.src = flagUrls[lang] || `https://flagcdn.com/w20/${lang}.png`;
-                    img.alt = lang.toUpperCase();
-                    img.title = lang.toUpperCase();
-                    img.className = 'w-5 h-5 rounded-full object-cover shadow-sm opacity-80 transition-transform hover:scale-110 hover:opacity-100';
-                    langDiv.appendChild(img);
-                });
-                roleEl.insertAdjacentElement('afterend', langDiv);
-            }
+        img.alt = lang.toUpperCase();
+        img.title = lang.toUpperCase();
+        img.className = 'w-5 h-5 rounded-full object-cover shadow-sm opacity-80 transition-transform hover:scale-110 hover:opacity-100';
+        langDiv.appendChild(img);
+    });
+    roleEl.insertAdjacentElement('afterend', langDiv);
+}
         }
     });
 }

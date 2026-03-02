@@ -1038,24 +1038,67 @@
             </div>
         </section>
 
-        <!-- Instagram Section -->
-        <section id="community" class="section-padding bg-gray-50 fade-in-section">
+        <!-- Google Reviews Section -->
+        <section id="reviews" class="section-padding bg-gray-50 fade-in-section">
             <div class="container-custom">
-                <div class="max-w-3xl mx-auto text-center mb-12">
+                <div class="max-w-3xl mx-auto text-center mb-16">
                     <span
                         class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-white rounded-full mb-4"
-                        data-i18n="instagram.tagline">Community</span>
-                    <h2 class="text-3xl md:text-4xl font-medium mb-4" data-i18n="instagram.title">Follow Our Journey
-                    </h2>
-                    <p class="text-lg text-gray-500 mb-6" data-i18n="instagram.description">See snapshots of our daily
-                        practice, community events, and moments of peace. Follow us on Instagram <a href="#"
-                            class="text-pink-600 font-semibold hover:underline">@goyoga.ee</a>.</p>
+                        data-i18n="reviews.section_tagline">Testimonials</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="reviews.section_title">What Our
+                        Students Say</h2>
+
+                    <!-- Overall Rating -->
+                    <div class="mt-8 flex flex-col items-center">
+                        <div class="flex items-center justify-center mb-2">
+                            <!-- Star Ratings -->
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                            </div>
+                            <span class="ml-3 text-3xl font-bold text-gray-800">5.0</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">GoYoga Ashtanga Yoga Shala • Narva mnt 7D, 10117 Tallinn
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-blue-600">
+                                <i data-lucide="star" class="h-4 w-4 mr-1 text-blue-500 fill-blue-500"></i>
+                                <span data-i18n="reviews.google">Google Reviews</span>
+                            </a>
+                            <a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-blue-600">
+                                <i data-lucide="star" class="h-4 w-4 mr-1 text-blue-500 fill-blue-500"></i>
+                                <span data-i18n="reviews.facebook">Facebook Reviews</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div
-                class="slider-container relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-                <div class="slider-track flex w-max">
-                    <!-- Posts injected by JS -->
+
+                <!-- Reviews Carousel -->
+                <div class="relative max-w-6xl mx-auto">
+                    <!-- Carousel Container -->
+                    <div class="reviews-carousel overflow-hidden">
+                        <div id="google-reviews-track" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Reviews will be injected here by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <button id="google-prev-review"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-10">
+                        <i data-lucide="chevron-left" class="h-6 w-6 text-gray-700"></i>
+                    </button>
+                    <button id="google-next-review"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-10">
+                        <i data-lucide="chevron-right" class="h-6 w-6 text-gray-700"></i>
+                    </button>
+
+                    <!-- Dots Indicator -->
+                    <div id="google-review-dots" class="flex justify-center mt-8 space-x-2">
+                        <!-- Dots will be injected here by JavaScript -->
+                    </div>
                 </div>
             </div>
         </section>
