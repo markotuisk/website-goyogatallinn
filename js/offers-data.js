@@ -25,6 +25,23 @@ const offersData = {
                         "Generous 30-day validity to help you find your rhythm"
                     ],
                     expires: "March 8, 2026",
+                    targetDate: "March 8, 2026 23:59:59",
+                    claimBtn: "Claim Offer"
+                },
+                {
+                    name: "Annual Memberships",
+                    desc: "Throughout March, enjoy a 20% discount on our annual membership cards. Use the promo code LAUNCH when purchasing online.",
+                    price: "-20%",
+                    originalPrice: "",
+                    savings: "DISCOUNT CAMPAIGN",
+                    benefitsTitle: "Campaign Details:",
+                    benefits: [
+                        "Promo code: LAUNCH",
+                        "Valid throughout the entire month of March",
+                        "An investment in your well-being for the whole year"
+                    ],
+                    expires: "March 31, 2026",
+                    targetDate: "March 31, 2026 23:59:59",
                     claimBtn: "Claim Offer"
                 }
             ]
@@ -59,6 +76,23 @@ const offersData = {
                         "Kehtib tervelt 30 päeva – piisavalt aega regulaarse rütmi leidmiseks"
                     ],
                     expires: "8. märts 2026",
+                    targetDate: "March 8, 2026 23:59:59",
+                    claimBtn: "Osta Kohe"
+                },
+                {
+                    name: "Aastased Liikmekaardid",
+                    desc: "Kogu märtsikuu jooksul kehtib meie aastalistele liikmekaartidele 20% soodustus. Kaardi ostmisel veebis kasuta sooduskoodi LAUNCH.",
+                    price: "-20%",
+                    originalPrice: "",
+                    savings: "SOODUSKAMPAANIA",
+                    benefitsTitle: "Kampaania detailid:",
+                    benefits: [
+                        "Sooduskood: LAUNCH",
+                        "Kehtib kogu märtsikuu vältel",
+                        "Investeering sinu heaolusse terveks aastaks"
+                    ],
+                    expires: "31. märts 2026",
+                    targetDate: "March 31, 2026 23:59:59",
                     claimBtn: "Osta Kohe"
                 }
             ]
@@ -93,6 +127,23 @@ const offersData = {
                         "Reilu 30 päivän voimassaoloaika auttaa rutiinin löytämisessä"
                     ],
                     expires: "8. maaliskuuta 2026",
+                    targetDate: "March 8, 2026 23:59:59",
+                    claimBtn: "Osta Nyt"
+                },
+                {
+                    name: "Vuosijäsenyydet",
+                    desc: "Koko maaliskuun ajan saat 20 % alennuksen vuosijäsenyyksistämme. Käytä alennuskoodia LAUNCH ostaessasi verkossa.",
+                    price: "-20%",
+                    originalPrice: "",
+                    savings: "ALENNUSKAMPANJA",
+                    benefitsTitle: "Kampanjan tiedot:",
+                    benefits: [
+                        "Alennuskoodi: LAUNCH",
+                        "Voimassa koko maaliskuun ajan",
+                        "Sijoitus hyvinvointiisi koko vuodeksi"
+                    ],
+                    expires: "31. maaliskuuta 2026",
+                    targetDate: "March 31, 2026 23:59:59",
                     claimBtn: "Osta Nyt"
                 }
             ]
