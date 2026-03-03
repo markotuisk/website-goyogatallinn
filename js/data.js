@@ -1006,17 +1006,17 @@ window.classesData = classesData;
 const pricingData = {
     en: {
         single: { "title": "Single Sessions", "options": [{ "name": "1x Session", "price": "18€" }, { "name": "Student", "price": "15€" }, { "name": "Senior", "price": "10€" }] },
-        memberships: { "title": "Memberships | Monthly Payments", "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }] },
+        memberships: { "title": "Memberships | Monthly Payments", "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }] },
         passes: { "title": "Multi-Visit Passes", "options": [{ "name": "5-Visit Pass | 20 Days", "price": "50€" }, { "name": "12-Visit Pass | 60 Days", "price": "115€" }, { "name": "20-Visit Pass | 6 Months", "price": "199€" }] }
     },
     et: {
         single: { "title": "Ühekordsed külastused", "options": [{ "name": "1x Tund", "price": "18€" }, { "name": "Õpilane", "price": "15€" }, { "name": "Pensionär", "price": "10€" }] },
-        memberships: { "title": "Liikmepaketid | Kuumaksed", "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }] },
+        memberships: { "title": "Liikmepaketid | Kuumaksed", "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }] },
         passes: { "title": "Korrakaardid", "options": [{ "name": "5-korra kaart | 20 päeva", "price": "50€" }, { "name": "12-korra kaart | 60 päeva", "price": "115€" }, { "name": "20-korra kaart | 6 kuud", "price": "199€" }] }
     },
     fi: {
         single: { "title": "Kertakäynnit", "options": [{ "name": "1x Tunti", "price": "18€" }, { "name": "Opiskelija", "price": "15€" }, { "name": "Eläkeläinen", "price": "10€" }] },
-        memberships: { "title": "Jäsenyydet | Kuukausimaksut", "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }] },
+        memberships: { "title": "Jäsenyydet | Kuukausimaksut", "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }] },
         passes: { "title": "Sarjakortit", "options": [{ "name": "5-kerran kortti | 20 päivää", "price": "50€" }, { "name": "12-kerran kortti | 60 päivää", "price": "115€" }, { "name": "20-kerran kortti | 6 kuukautta", "price": "199€" }] }
     }
 };

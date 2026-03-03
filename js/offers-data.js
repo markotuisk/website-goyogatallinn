@@ -31,7 +31,7 @@ const offersData = {
                 },
                 {
                     name: "Annual Memberships",
-                    desc: "Throughout March, enjoy a 20% discount on our annual membership cards. Use the promo code LAUNCH when purchasing online. Note: This discount applies exclusively to our Annual Memberships.",
+                    desc: "Throughout March, enjoy a 20% discount on our membership cards. Use the promo code LAUNCH when purchasing online. Note: This discount applies to all membership cards, except the Studio Explorer pass.",
                     price: "-20%",
                     originalPrice: "",
                     savings: "DISCOUNT CAMPAIGN",
@@ -83,7 +83,7 @@ const offersData = {
                 },
                 {
                     name: "Aastased Liikmekaardid",
-                    desc: "Kogu märtsikuu jooksul kehtib meie aastalistele liikmekaartidele 20% soodustus. Kaardi ostmisel veebis kasuta sooduskoodi LAUNCH. NB: See soodustus laieneb vaid aastastele liikmekaartidele.",
+                    desc: "Kogu märtsikuu jooksul kehtib meie liikmekaartidele 20% soodustus. Kaardi ostmisel veebis kasuta sooduskoodi LAUNCH. NB: See soodustus kehtib kõigile liikmekaartidele, välja arvatud Studio Explorer passile.",
                     price: "-20%",
                     originalPrice: "",
                     savings: "SOODUSKAMPAANIA",
@@ -135,7 +135,7 @@ const offersData = {
                 },
                 {
                     name: "Vuosijäsenyydet",
-                    desc: "Koko maaliskuun ajan saat 20 % alennuksen vuosijäsenyyksistämme. Käytä alennuskoodia LAUNCH ostaessasi verkossa. Huomio: Tämä alennus koskee yksinomaan vuosijäsenyyksiä.",
+                    desc: "Koko maaliskuun ajan saat 20 % alennuksen jäsenyyksistämme. Käytä alennuskoodia LAUNCH ostaessasi verkossa. Huomio: Tämä alennus koskee kaikkia jäsenyyksiä, paitsi Studio Explorer pass -korttia.",
                     price: "-20%",
                     originalPrice: "",
                     savings: "ALENNUSKAMPANJA",
