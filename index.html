@@ -1118,6 +1118,7 @@
                     <div>
                         <h3 class="text-2xl font-medium mb-6" data-i18n="contact.form.title">Send Us a Message</h3>
                         <form id="contact-form" class="space-y-5">
+                            <input type="hidden" name="formType" value="contact">
                             <div>
                                 <label for="name" class="block text-sm font-medium mb-2"
                                     data-i18n="contact.form.name">Your Name</label>
@@ -1268,11 +1269,15 @@
                     <h4 class="text-xl font-medium mb-5" data-i18n="footer.newsletter">Newsletter</h4>
                     <p class="text-gray-300 mb-4" data-i18n="footer.newsletter_description">Join our newsletter to
                         receive updates about workshops and events.</p>
-                    <form><input type="email" placeholder="Your email"
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="hidden" name="formType" value="newsletter">
+                        <input type="email" name="email" placeholder="Your email"
                             class="w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
-                            data-i18n-placeholder="footer.email_placeholder"><button type="submit"
+                            data-i18n-placeholder="footer.email_placeholder" required>
+                        <button type="submit"
                             class="w-full mt-2 px-4 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700"
-                            data-i18n="footer.subscribe_button">Subscribe</button></form>
+                            data-i18n="footer.subscribe_button">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">

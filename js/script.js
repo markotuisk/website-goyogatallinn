@@ -689,8 +689,10 @@ function initForms() {
     const forms = [
         document.getElementById('contact-form'),
         document.getElementById('rent-form'),
+        ...document.querySelectorAll('.newsletter-form'),
+        // Fallback for any forms still using the old ID
         document.getElementById('newsletter-form')
-    ];
+    ].filter(Boolean); // Remove nulls
 
     forms.forEach(form => {
         if (!form) return;
@@ -713,7 +715,7 @@ function initForms() {
                 const formData = new FormData(form);
 
                 // For newsletter form without explicit formType field (fallback)
-                if (form.id === 'newsletter-form' && !formData.has('formType')) {
+                if ((form.id === 'newsletter-form' || form.classList.contains('newsletter-form')) && !formData.has('formType')) {
                     formData.append('formType', 'newsletter');
                 }
 
