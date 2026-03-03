@@ -171,11 +171,40 @@ function initModals() {
                 const body = document.getElementById('pricing-modal-body');
                 body.innerHTML = '';
                 data.options.forEach(opt => {
+                    let displayPrice = `<span class="font-bold text-pink-600">${opt.price}</span>`;
+
+                    // Seasonal Offer Logic: 20% off for non-Explorer memberships until Mar 31, 2026
+                    const targetDate = new Date("March 31, 2026 23:59:59").getTime();
+                    const now = new Date().getTime();
+                    const isSeasonalOfferActive = btn.dataset.pricingGroup === 'memberships' &&
+                        !opt.name.includes("Explorer") &&
+                        now <= targetDate;
+
+                    if (isSeasonalOfferActive) {
+                        // Extract number from price string (e.g. "59€/mo", "79€", "69€/kk")
+                        const priceMatch = opt.price.match(/(\d+)/);
+                        if (priceMatch) {
+                            const originalPriceNum = parseInt(priceMatch[1], 10);
+                            const discountedPriceNum = Math.round(originalPriceNum * 0.8); // 20% off
+                            const discountedPriceStr = opt.price.replace(priceMatch[1], discountedPriceNum);
+
+                            displayPrice = `
+                                <div class="flex flex-col items-end">
+                                    <span class="text-xs text-gray-400 line-through mb-0.5">${opt.price}</span>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[10px] font-bold bg-pink-100 text-pink-700 px-1.5 py-0.5 rounded-full uppercase tracking-wider">-20%</span>
+                                        <span class="font-bold text-pink-600">${discountedPriceStr}</span>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    }
+
                     body.innerHTML += `
                         <div class="p-4 border rounded flex flex-col justify-center">
-                            <div class="flex justify-between items-center w-full">
-                                <span class="font-medium">${opt.name}</span>
-                                <span class="font-bold text-pink-600">${opt.price}</span>
+                            <div class="flex justify-between items-center w-full group">
+                                <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
+                                ${displayPrice}
                             </div>
                             ${opt.desc ? `<p class="text-xs text-gray-500 mt-2 leading-relaxed">${opt.desc}</p>` : ''}
                         </div>
