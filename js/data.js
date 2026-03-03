@@ -1012,17 +1012,16 @@ const pricingData = {
             "benefitsTitle": "Membership Benefits",
             "benefits": [
                 "Unlimited access to relevant classes",
-                "Discounts on special events and workshops",
-                "10% discount on all shop items",
-                "Bring a friend for free once a month",
-                "A dedicated locker for your mat (subject to availability)"
+                "Up to 20% discount on shop products (excluding annual passes)",
+                "Up to 15% discount on events",
+                "Up to 10% discount on retreats",
+                "Bring a friend for free once a month"
             ],
             "conditionsTitle": "Terms & Conditions",
             "conditions": [
                 "No signup fee applies.",
                 "30-day notice required for cancellation.",
-                "Memberships can be placed on hold for up to 30 days free of charge.",
-                "Subsequent 15-day holds cost 8€.",
+                "Memberships can be placed on hold, a 15-day hold costs 8€.",
                 "When cancelling or placing on hold, all overdue payments must be settled."
             ]
         },
@@ -1036,17 +1035,16 @@ const pricingData = {
             "benefitsTitle": "Liikmepaketi Hüved",
             "benefits": [
                 "Piiramatu ligipääs vastavatele tundidele",
-                "Soodustused töötubadelt ja erisündmustelt",
-                "10% soodustus kõikidele poe toodetele",
-                "Kord kuus võta sõber tasuta tundi kaasa",
-                "Isiklik kapp joogamatile (vabade kohtade olemasolul)"
+                "Kuni 20% soodustus poe toodetele (v.a. aastakaardid)",
+                "Kuni 15% soodustus sündmustele",
+                "Kuni 10% soodustus retriitidele",
+                "Kord kuus võta sõber tasuta tundi kaasa"
             ],
             "conditionsTitle": "Tingimused",
             "conditions": [
                 "Liitumistasu puudub.",
                 "Lõpetamisel kehtib 30-päevane etteteatamisaeg.",
-                "Liikmekaardi saab peatada kuni 30 päevaks tasuta.",
-                "Järgnev 15-päevane peatus maksab 8€.",
+                "Liikmekaardi peatamine kuni 15 päevaks maksab 8€.",
                 "Kaardi lõpetamisel või peatamisel peavad kõik võlgnevused olema tasutud."
             ]
         },
@@ -1060,17 +1058,16 @@ const pricingData = {
             "benefitsTitle": "Jäsenyysedut",
             "benefits": [
                 "Rajaton pääsy soveltuville tunneille",
-                "Alennukset erikoistapahtumista ja työpajoista",
-                "10 % alennus kaikista myymälän tuotteista",
-                "Tuo ystävä ilmaiseksi kerran kuukaudessa",
-                "Oma kaappi matollesi (saatavuuden mukaan)"
+                "Jopa 20 % alennus myymälä tuotteista (pois lukien vuosikortit)",
+                "Jopa 15 % alennus tapahtumista",
+                "Jopa 10 % alennus retriiteistä",
+                "Tuo ystävä ilmaiseksi kerran kuukaudessa"
             ],
             "conditionsTitle": "Käyttöehdot",
             "conditions": [
                 "Ei liittymismaksua.",
                 "Irtisanomisaika on 30 päivää.",
-                "Jäsenyys voidaan keskeyttää enintään 30 päiväksi veloituksetta.",
-                "Tätä seuraava 15 päivän tauko maksaa 8€.",
+                "Jäsenyyden keskeyttäminen enintään 15 päiväksi maksaa 8€.",
                 "Korttia peruutettaessa tai keskeytettäessä kaikki erääntyneet maksut on maksettava."
             ]
         },
