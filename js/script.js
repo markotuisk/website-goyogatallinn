@@ -206,12 +206,13 @@ function initModals() {
                 // Render Conditions
                 if (data.conditions && data.conditions.length > 0) {
                     body.innerHTML += `
-                        <div class="mt-6 pt-4 border-t border-gray-100">
-                            <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
+                        <details class="mt-6 pt-4 border-t border-gray-100 group">
+                            <summary class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center cursor-pointer select-none outline-none">
                                 <i data-lucide="info" class="h-4 w-4 mr-2 text-gray-400"></i>
                                 ${data.conditionsTitle || 'Terms & Conditions'}
-                            </h4>
-                            <ul class="space-y-2">
+                                <i data-lucide="chevron-down" class="h-4 w-4 ml-auto text-gray-400 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <ul class="space-y-2 mt-3">
                                 ${data.conditions.map(c => `
                                     <li class="flex items-start">
                                         <i data-lucide="minus" class="h-3 w-3 mr-2 text-gray-300 flex-shrink-0 mt-1"></i>
@@ -219,7 +220,7 @@ function initModals() {
                                     </li>
                                 `).join('')}
                             </ul>
-                        </div>
+                        </details>
                     `;
                 }
 
@@ -244,11 +245,11 @@ function initModals() {
 
     const showInfo = (type) => {
         const t = translationsData[currentLanguage] || translationsData['en'];
-        infoTitle.textContent = t[`contact.modal.title.${type}`] || t[`contact.info.${type}`];
+        infoTitle.textContent = t[`contact.modal.title.${type} `] || t[`contact.info.${type} `];
 
         if (type === 'gallery') {
             infoBody.innerHTML = `
-                <div class="grid grid-cols-2 gap-4 mt-2">
+                        < div class="grid grid-cols-2 gap-4 mt-2" >
                     <div class="space-y-2">
                         <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Building Entrance">
                         <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.entrance']}</p>
@@ -265,11 +266,11 @@ function initModals() {
                         <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Studio Entrance">
                         <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.studio']}</p>
                     </div>
-                </div>
-                <p class="text-sm text-gray-500 mt-4 italic">${t['contact.modal.gallery.note']}</p>
-            `;
+                </div >
+                        <p class="text-sm text-gray-500 mt-4 italic">${t['contact.modal.gallery.note']}</p>
+                    `;
         } else {
-            infoBody.innerHTML = `<p>${t[`contact.modal.content.${type}`] || 'Coming soon...'}</p>`;
+            infoBody.innerHTML = `< p > ${t[`contact.modal.content.${type}`] || 'Coming soon...'}</p > `;
         }
 
         toggleModal('info-modal', true);
@@ -355,8 +356,8 @@ function initReviewsCarousel() {
         const storyText = story.text[lang] || story.text['en'];
 
         card.innerHTML = `
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col w-full h-full overflow-hidden transition-all duration-300 hover:shadow-md group">
-                <!-- Image Header -->
+                        < div class="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col w-full h-full overflow-hidden transition-all duration-300 hover:shadow-md group" >
+                < !--Image Header-- >
                 <div class="h-48 w-full relative overflow-hidden">
                     <img src="${story.image}" alt="Community Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -368,22 +369,22 @@ function initReviewsCarousel() {
                         </div>
                     </div>
                 </div>
-                <!-- Content -->
-                <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex-grow mb-4">
-                        <p class="text-gray-600 text-sm leading-relaxed italic line-clamp-4">"${storyText}"</p>
-                    </div>
-                    <!-- Footer -->
-                    <div class="pt-4 border-t border-gray-50 flex items-center justify-between mt-auto">
-                        <span class="text-[10px] font-medium text-gray-400 uppercase tracking-widest flex items-center">
-                            <i data-lucide="calendar" class="h-3 w-3 mr-1"></i> ${story.date}
-                        </span>
-                        <a href="${story.link}" target="_blank" class="text-[10px] bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-semibold hover:bg-pink-100 transition-colors flex items-center gap-1">
-                            ${story.source} <i data-lucide="external-link" class="h-3 w-3"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>`;
+                <!--Content -->
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex-grow mb-4">
+                                <p class="text-gray-600 text-sm leading-relaxed italic line-clamp-4">"${storyText}"</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="pt-4 border-t border-gray-50 flex items-center justify-between mt-auto">
+                                <span class="text-[10px] font-medium text-gray-400 uppercase tracking-widest flex items-center">
+                                    <i data-lucide="calendar" class="h-3 w-3 mr-1"></i> ${story.date}
+                                </span>
+                                <a href="${story.link}" target="_blank" class="text-[10px] bg-pink-50 text-pink-600 px-3 py-1 rounded-full font-semibold hover:bg-pink-100 transition-colors flex items-center gap-1">
+                                    ${story.source} <i data-lucide="external-link" class="h-3 w-3"></i>
+                                </a>
+                            </div>
+                        </div>
+            </div > `;
         track.appendChild(card);
     });
 
@@ -405,7 +406,7 @@ function initReviewsCarousel() {
         if (currentReviewIndex > maxIndex) currentReviewIndex = maxIndex;
 
         const offset = -(currentReviewIndex * (100 / visible));
-        track.style.transform = `translateX(${offset}%)`;
+        track.style.transform = `translateX(${offset} %)`;
 
         // Update Buttons
         if (prevBtn) prevBtn.style.opacity = currentReviewIndex === 0 ? "0.5" : "1";
@@ -425,7 +426,7 @@ function initReviewsCarousel() {
         const dotCount = Math.ceil(totalCards / getVisibleCount());
         for (let i = 0; i < dotCount; i++) {
             const dot = document.createElement('button');
-            dot.className = `dot h-2 w-2 rounded-full transition-colors ${i === 0 ? 'bg-pink-600' : 'bg-gray-200'}`;
+            dot.className = `dot h - 2 w - 2 rounded - full transition - colors ${i === 0 ? 'bg-pink-600' : 'bg-gray-200'} `;
             dot.addEventListener('click', () => {
                 currentReviewIndex = i * getVisibleCount();
                 updateCarousel();
@@ -486,7 +487,7 @@ function initGoogleReviewsCarousel() {
         }
 
         card.innerHTML = `
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md">
+                        < div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md" >
                 <div class="flex justify-between items-start mb-4">
                     <div>
                         <h4 class="font-bold text-gray-900">${r.name}</h4>
@@ -505,7 +506,7 @@ function initGoogleReviewsCarousel() {
                     </span>
                     ${r.badge ? `<span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-semibold">${t['reviews.local_guide'] || r.badge.text}</span>` : ''}
                 </div>
-            </div>`;
+            </div > `;
         track.appendChild(card);
     });
 
@@ -528,7 +529,7 @@ function initGoogleReviewsCarousel() {
         if (currentGoogleReviewIndex > maxIndex) currentGoogleReviewIndex = maxIndex;
 
         const offset = -(currentGoogleReviewIndex * (100 / visible));
-        track.style.transform = `translateX(${offset}%)`;
+        track.style.transform = `translateX(${offset} %)`;
 
         // Update Buttons
         if (prevBtn) prevBtn.style.opacity = currentGoogleReviewIndex === 0 ? "0.5" : "1";
@@ -548,7 +549,7 @@ function initGoogleReviewsCarousel() {
         const dotCount = Math.ceil(totalCards / getVisibleCount());
         for (let i = 0; i < dotCount; i++) {
             const dot = document.createElement('button');
-            dot.className = `dot h-2 w-2 rounded-full transition-colors ${i === 0 ? 'bg-pink-600' : 'bg-gray-200'}`;
+            dot.className = `dot h - 2 w - 2 rounded - full transition - colors ${i === 0 ? 'bg-pink-600' : 'bg-gray-200'} `;
             dot.addEventListener('click', () => {
                 currentGoogleReviewIndex = i * getVisibleCount();
                 updateCarousel();

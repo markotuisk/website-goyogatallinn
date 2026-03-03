@@ -1012,7 +1012,7 @@ const pricingData = {
                 { "name": "1-Month Pass", "price": "79€", "desc": "Unlimited access to all scheduled classes for 30 days. No long-term commitment." },
                 { "name": "Full Pass | 1st Year", "price": "69€/mo", "desc": "Unlimited access to all scheduled yoga and wellness classes. Annual commitment paid monthly. Save 120€ a year compared to the 1-Month Pass." },
                 { "name": "Ashtanga Pass | 1st Year", "price": "59€/mo", "desc": "Unlimited access to all Ashtanga classes. Annual commitment paid monthly. Save 240€ a year compared to the 1-Month Pass." },
-                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days. One-time purchase." }
+                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days. One-time purchase. Only 9.66€ per class (regular price 18€). Save 25€ compared to single tickets." }
             ],
             "benefitsTitle": "Membership Benefits",
             "benefits": [
@@ -1040,7 +1040,7 @@ const pricingData = {
                 { "name": "1-kuu pakett", "price": "79€", "desc": "Piiramatu ligipääs kõikidele tundidele 30 päevaks. Ilma pikaajalise siduvuseta." },
                 { "name": "Täispakett | 1. aasta", "price": "69€", "desc": "Piiramatu ligipääs kõikidele tunniplaanis olevatele jooga- ja heaolutundidele. Aastase siduvusega, tasumine igakuiselt. Säästa 120€ aastas võrreldes 1-kuu paketiga." },
                 { "name": "Ashtanga pakett | 1. aasta", "price": "59€", "desc": "Piiramatu ligipääs kõikidele Ashtanga tundidele. Aastase siduvusega, tasumine igakuiselt. Säästa 240€ aastas võrreldes 1-kuu paketiga." },
-                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Osale vabal valikul 3 tunnis. Kehtib 30 päeva. Ühekordne ost." }
+                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Osale vabal valikul 3 tunnis. Kehtib 30 päeva. Ühekordne ost. Vaid 9.66€ ühe tunni kohta (tavahind 18€). Säästad 25€ võrreldes üksikpiletitega." }
             ],
             "benefitsTitle": "Liikmepaketi Hüved",
             "benefits": [
@@ -1068,7 +1068,7 @@ const pricingData = {
                 { "name": "1 kuukauden paketti", "price": "79€", "desc": "Rajaton pääsy kaikille tunneille 30 päivän ajan. Ei pitkäaikaista sitoutumista." },
                 { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk", "desc": "Rajaton pääsy kaikille lukujärjestyksen jooga- ja hyvinvointitunneille. Vuosijäsenyys kuukausilaskutuksella. Säästä 120€ vuodessa verrattuna 1 kuukauden pakettiin." },
                 { "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk", "desc": "Rajaton pääsy kaikille ashtangatunneille. Vuosijäsenyys kuukausilaskutuksella. Säästä 240€ vuodessa verrattuna 1 kuukauden pakettiin." },
-                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Kokeile 3 valitsemaasi tuntia. Voimassa 30 päivää ostopäivästä. Kertaostos." }
+                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Kokeile 3 valitsemaasi tuntia. Voimassa 30 päivää ostopäivästä. Kertaostos. Vain 9.66€ per tunti (normaalihinta 18€). Säästä 25€ verrattuna kertalippuihin." }
             ],
             "benefitsTitle": "Jäsenyysedut",
             "benefits": [
