@@ -1009,6 +1009,14 @@ const pricingData = {
         memberships: {
             "title": "Memberships | Monthly Payments",
             "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "benefitsTitle": "Membership Benefits",
+            "benefits": [
+                "Unlimited access to relevant classes",
+                "Discounts on special events and workshops",
+                "10% discount on all shop items",
+                "Bring a friend for free once a month",
+                "A dedicated locker for your mat (subject to availability)"
+            ],
             "conditionsTitle": "Terms & Conditions",
             "conditions": [
                 "No signup fee applies.",
@@ -1025,6 +1033,14 @@ const pricingData = {
         memberships: {
             "title": "Liikmepaketid | Kuumaksed",
             "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "benefitsTitle": "Liikmepaketi Hüved",
+            "benefits": [
+                "Piiramatu ligipääs vastavatele tundidele",
+                "Soodustused töötubadelt ja erisündmustelt",
+                "10% soodustus kõikidele poe toodetele",
+                "Kord kuus võta sõber tasuta tundi kaasa",
+                "Isiklik kapp joogamatile (vabade kohtade olemasolul)"
+            ],
             "conditionsTitle": "Tingimused",
             "conditions": [
                 "Liitumistasu puudub.",
@@ -1041,6 +1057,14 @@ const pricingData = {
         memberships: {
             "title": "Jäsenyydet | Kuukausimaksut",
             "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "benefitsTitle": "Jäsenyysedut",
+            "benefits": [
+                "Rajaton pääsy soveltuville tunneille",
+                "Alennukset erikoistapahtumista ja työpajoista",
+                "10 % alennus kaikista myymälän tuotteista",
+                "Tuo ystävä ilmaiseksi kerran kuukaudessa",
+                "Oma kaappi matollesi (saatavuuden mukaan)"
+            ],
             "conditionsTitle": "Käyttöehdot",
             "conditions": [
                 "Ei liittymismaksua.",

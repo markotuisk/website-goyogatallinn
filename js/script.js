@@ -174,18 +174,40 @@ function initModals() {
                     body.innerHTML += `<div class="p-4 border rounded flex justify-between"><span class="font-medium">${opt.name}</span><span class="font-bold text-pink-600">${opt.price}</span></div>`;
                 });
 
+
+                // Render Benefits
+                if (data.benefits && data.benefits.length > 0) {
+                    body.innerHTML += `
+                        <div class="mt-6">
+                            <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
+                                <i data-lucide="sparkles" class="h-4 w-4 mr-2 text-pink-500"></i>
+                                ${data.benefitsTitle || 'Benefits'}
+                            </h4>
+                            <ul class="space-y-2">
+                                ${data.benefits.map(b => `
+                                    <li class="flex items-start">
+                                        <i data-lucide="check-circle-2" class="h-4 w-4 mr-2 text-pink-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-xs font-medium text-gray-700 leading-relaxed">${b}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+
+                // Render Conditions
                 if (data.conditions && data.conditions.length > 0) {
                     body.innerHTML += `
                         <div class="mt-6 pt-4 border-t border-gray-100">
                             <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
-                                <i data-lucide="info" class="h-4 w-4 mr-2 text-pink-500"></i>
+                                <i data-lucide="info" class="h-4 w-4 mr-2 text-gray-400"></i>
                                 ${data.conditionsTitle || 'Terms & Conditions'}
                             </h4>
                             <ul class="space-y-2">
                                 ${data.conditions.map(c => `
                                     <li class="flex items-start">
-                                        <i data-lucide="check" class="h-4 w-4 mr-2 text-pink-400 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-xs text-gray-600 leading-relaxed">${c}</span>
+                                        <i data-lucide="minus" class="h-3 w-3 mr-2 text-gray-300 flex-shrink-0 mt-1"></i>
+                                        <span class="text-[11px] text-gray-500 leading-relaxed">${c}</span>
                                     </li>
                                 `).join('')}
                             </ul>
