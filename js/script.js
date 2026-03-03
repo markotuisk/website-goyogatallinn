@@ -684,10 +684,111 @@ function initTeacherLanguages() {
     });
 }
 
-// --- Other Utils ---
+// --- Form Handling ---
 function initForms() {
-    const cForm = document.getElementById('contact-form');
-    if (cForm) cForm.addEventListener('submit', (e) => { e.preventDefault(); alert("Message sent!"); });
+    const forms = [
+        document.getElementById('contact-form'),
+        document.getElementById('rent-form'),
+        document.getElementById('newsletter-form')
+    ];
+
+    forms.forEach(form => {
+        if (!form) return;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn.innerHTML;
+            const lang = currentLanguage || 'en';
+            const t = translationsData && translationsData[lang] ? translationsData[lang] : {};
+
+            try {
+                // Set Loading State
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i data-lucide="loader-2" class="h-5 w-5 animate-spin mx-auto"></i>';
+                if (window.lucide) window.lucide.createIcons();
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+                const formData = new FormData(form);
+
+                // For newsletter form without explicit formType field (fallback)
+                if (form.id === 'newsletter-form' && !formData.has('formType')) {
+                    formData.append('formType', 'newsletter');
+                }
+
+                const response = await fetch('/api/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Success UI
+                    const formType = formData.get('formType');
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'mt-4 p-4 rounded-md text-sm bg-green-50 text-green-700 border border-green-200 flex items-center';
+
+                    let msgText = 'Message sent successfully!';
+                    if (formType === 'newsletter') msgText = t['footer.subscribe_success'] || 'Subscribed successfully!';
+                    if (formType === 'rental') msgText = 'Inquiry sent successfully!';
+
+                    successMessage.innerHTML = `<i data-lucide="check-circle" class="h-4 w-4 mr-2"></i> ${msgText}`;
+
+                    // Clear previous messages
+                    const existingMsg = form.nextElementSibling;
+                    if (existingMsg && existingMsg.classList.contains('bg-green-50')) {
+                        existingMsg.remove();
+                    }
+
+                    form.parentNode.insertBefore(successMessage, form.nextSibling);
+                    form.reset();
+                    if (window.lucide) window.lucide.createIcons();
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.style.opacity = '0';
+                        successMessage.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => successMessage.remove(), 500);
+                    }, 5000);
+                } else {
+                    throw new Error(result.error || 'Failed to send message');
+                }
+
+            } catch (error) {
+                console.error("Form submission error:", error);
+
+                // Error UI
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'mt-4 p-4 rounded-md text-sm bg-red-50 text-red-700 border border-red-200 flex items-center';
+                errorMessage.innerHTML = `<i data-lucide="alert-circle" class="h-4 w-4 mr-2"></i> Failed to send. Please try again.`;
+
+                // Clear previous messages
+                const existingMsg = form.nextElementSibling;
+                if (existingMsg && existingMsg.classList.contains('bg-red-50')) {
+                    existingMsg.remove();
+                }
+
+                form.parentNode.insertBefore(errorMessage, form.nextSibling);
+                if (window.lucide) window.lucide.createIcons();
+
+                // Hide error message after 5 seconds
+                setTimeout(() => {
+                    errorMessage.style.opacity = '0';
+                    errorMessage.style.transition = 'opacity 0.5s ease';
+                    setTimeout(() => errorMessage.remove(), 500);
+                }, 5000);
+
+            } finally {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                if (window.lucide) window.lucide.createIcons();
+            }
+        });
+    });
 }
 function initNavbar() {
     const navbar = document.getElementById('navbar');
