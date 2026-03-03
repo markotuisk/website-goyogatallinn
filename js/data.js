@@ -1008,7 +1008,7 @@ const pricingData = {
         single: {
             "title": "Single Sessions",
             "options": [
-                { "name": "1x Session", "price": "18€", "desc": "Valid for any scheduled class. Great for drop-ins and evaluating our studio." },
+                { "name": "1x Session", "price": "18€", "desc": "Valid for any scheduled class. Great for drop-ins. First time visiting? The Studio Explorer Pass (under Memberships) is cheaper per class and valid for 3 visits!" },
                 { "name": "Student", "price": "15€", "desc": "Discounted drop-in rate for students. Valid student ID required." },
                 { "name": "Senior", "price": "10€", "desc": "Discounted drop-in rate for seniors. Valid ID required." }
             ],
@@ -1073,7 +1073,7 @@ const pricingData = {
         single: {
             "title": "Ühekordsed külastused",
             "options": [
-                { "name": "1x Tund", "price": "18€", "desc": "Kehtib ühele vabalt valitud tunnile. Ideaalne proovimiseks või harvaks külastamiseks." },
+                { "name": "1x Tund", "price": "18€", "desc": "Kehtib ühele vabalt valitud tunnile. Oled esimest korda? Vaata Liikmepakettide alt Studio Explorer Passi – see on soodsam ja annab võimaluse proovida 3 erinevat tundi!" },
                 { "name": "Õpilane", "price": "15€", "desc": "Soodushind õpilastele ja tudengitele. Vajalik kehtiv soodustust tõendav dokument." },
                 { "name": "Pensionär", "price": "10€", "desc": "Soodushind pensionäridele. Vajalik kehtiv dokument." }
             ],
@@ -1138,7 +1138,7 @@ const pricingData = {
         single: {
             "title": "Kertakäynnit",
             "options": [
-                { "name": "1x Tunti", "price": "18€", "desc": "Voimassa yhteen vapaavalintaiseen tuntiin. Sopii hyvin satunnaisiin käynteihin." },
+                { "name": "1x Tunti", "price": "18€", "desc": "Voimassa yhteen vapaavalintaiseen tuntiin. Ensimmäistä kertaa studiolla? Katso Studio Explorer Pass Jäsenyydet-osiosta – se on edullisempi ja sisältää 3 käyntikertaa!" },
                 { "name": "Opiskelija", "price": "15€", "desc": "Alennettu hinta edellyttää voimassa olevaa opiskelijakorttia." },
                 { "name": "Eläkeläinen", "price": "10€", "desc": "Alennettu hinta edellyttää voimassa olevaa todistusta." }
             ],
