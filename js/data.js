@@ -1005,7 +1005,25 @@ window.classesData = classesData;
 
 const pricingData = {
     en: {
-        single: { "title": "Single Sessions", "options": [{ "name": "1x Session", "price": "18€" }, { "name": "Student", "price": "15€" }, { "name": "Senior", "price": "10€" }] },
+        single: {
+            "title": "Single Sessions",
+            "options": [
+                { "name": "1x Session", "price": "18€", "desc": "Valid for any scheduled class. Great for drop-ins and evaluating our studio." },
+                { "name": "Student", "price": "15€", "desc": "Discounted drop-in rate for students. Valid student ID required." },
+                { "name": "Senior", "price": "10€", "desc": "Discounted drop-in rate for seniors. Valid ID required." }
+            ],
+            "benefitsTitle": "Benefits",
+            "benefits": [
+                "Access to one yoga or wellness class",
+                "Use of studio equipment (mats, props)"
+            ],
+            "conditionsTitle": "Terms & Conditions",
+            "conditions": [
+                "Valid for 30 days from purchase.",
+                "Requires pre-booking via our schedule.",
+                "Cancellations must be made at least 12 hours before class."
+            ]
+        },
         memberships: {
             "title": "Memberships | Monthly Payments",
             "options": [
@@ -1030,10 +1048,47 @@ const pricingData = {
                 "When cancelling or placing on hold, all overdue payments must be settled."
             ]
         },
-        passes: { "title": "Multi-Visit Passes", "options": [{ "name": "5-Visit Pass | 20 Days", "price": "50€" }, { "name": "12-Visit Pass | 60 Days", "price": "115€" }, { "name": "20-Visit Pass | 6 Months", "price": "199€" }] }
+        passes: {
+            "title": "Multi-Visit Passes",
+            "options": [
+                { "name": "5-Visit Pass | 20 Days", "price": "50€", "desc": "Valid for 5 classes within 20 days. Only 10€ per class. Save 40€ compared to single tickets." },
+                { "name": "12-Visit Pass | 60 Days", "price": "115€", "desc": "Valid for 12 classes within 60 days. Only 9.58€ per class. Save 101€ compared to single tickets." },
+                { "name": "20-Visit Pass | 6 Months", "price": "199€", "desc": "Valid for 20 classes within 6 months. Only 9.95€ per class. Save 161€ compared to single tickets." }
+            ],
+            "benefitsTitle": "Benefits",
+            "benefits": [
+                "Flexibility to attend any scheduled classes",
+                "Cost-effective compared to single sessions",
+                "Use of studio equipment (mats, props)"
+            ],
+            "conditionsTitle": "Terms & Conditions",
+            "conditions": [
+                "Validity period starts from the date of the first booked class.",
+                "Passes cannot be extended or frozen.",
+                "Cancellations must be made at least 12 hours before class."
+            ]
+        }
     },
     et: {
-        single: { "title": "Ühekordsed külastused", "options": [{ "name": "1x Tund", "price": "18€" }, { "name": "Õpilane", "price": "15€" }, { "name": "Pensionär", "price": "10€" }] },
+        single: {
+            "title": "Ühekordsed külastused",
+            "options": [
+                { "name": "1x Tund", "price": "18€", "desc": "Kehtib ühele vabalt valitud tunnile. Ideaalne proovimiseks või harvaks külastamiseks." },
+                { "name": "Õpilane", "price": "15€", "desc": "Soodushind õpilastele ja tudengitele. Vajalik kehtiv soodustust tõendav dokument." },
+                { "name": "Pensionär", "price": "10€", "desc": "Soodushind pensionäridele. Vajalik kehtiv dokument." }
+            ],
+            "benefitsTitle": "Hüved",
+            "benefits": [
+                "Pääse ühte jooga- või heaolutundi",
+                "Stuudio varustuse (matid, plokid jne) tasuta kasutus"
+            ],
+            "conditionsTitle": "Tingimused",
+            "conditions": [
+                "Kehtib 30 päeva alates ostmisest.",
+                "Vajalik eelnev broneerimine tunniplaanis.",
+                "Tühistamine peab toimuma vähemalt 12 tundi enne tunni algust."
+            ]
+        },
         memberships: {
             "title": "Liikmepaketid | Kuumaksed",
             "options": [
@@ -1058,10 +1113,47 @@ const pricingData = {
                 "Kaardi lõpetamisel või peatamisel peavad kõik võlgnevused olema tasutud."
             ]
         },
-        passes: { "title": "Korrakaardid", "options": [{ "name": "5-korra kaart | 20 päeva", "price": "50€" }, { "name": "12-korra kaart | 60 päeva", "price": "115€" }, { "name": "20-korra kaart | 6 kuud", "price": "199€" }] }
+        passes: {
+            "title": "Korrakaardid",
+            "options": [
+                { "name": "5-korra kaart | 20 päeva", "price": "50€", "desc": "Kehtib 5 tunnile 20 päeva jooksul. Vaid 10€ ühe tunni kohta. Säästad 40€ võrreldes üksikpiletitega." },
+                { "name": "12-korra kaart | 60 päeva", "price": "115€", "desc": "Kehtib 12 tunnile 60 päeva jooksul. Vaid 9.58€ ühe tunni kohta. Säästad 101€ võrreldes üksikpiletitega." },
+                { "name": "20-korra kaart | 6 kuud", "price": "199€", "desc": "Kehtib 20 tunnile 6 kuu jooksul. Vaid 9.95€ ühe tunni kohta. Säästad 161€ võrreldes üksikpiletitega." }
+            ],
+            "benefitsTitle": "Hüved",
+            "benefits": [
+                "Paindlik võimalus osaleda erinevates tundides",
+                "Soodsam kui ühekordsed piletid",
+                "Stuudio varustuse tasuta kasutus"
+            ],
+            "conditionsTitle": "Tingimused",
+            "conditions": [
+                "Kehtivusaeg algab esimese broneeritud tunni toimumisest.",
+                "Korrakaarte ei saa pikendada ega peatada.",
+                "Tühistamine peab toimuma vähemalt 12 tundi enne tunni algust."
+            ]
+        }
     },
     fi: {
-        single: { "title": "Kertakäynnit", "options": [{ "name": "1x Tunti", "price": "18€" }, { "name": "Opiskelija", "price": "15€" }, { "name": "Eläkeläinen", "price": "10€" }] },
+        single: {
+            "title": "Kertakäynnit",
+            "options": [
+                { "name": "1x Tunti", "price": "18€", "desc": "Voimassa yhteen vapaavalintaiseen tuntiin. Sopii hyvin satunnaisiin käynteihin." },
+                { "name": "Opiskelija", "price": "15€", "desc": "Alennettu hinta edellyttää voimassa olevaa opiskelijakorttia." },
+                { "name": "Eläkeläinen", "price": "10€", "desc": "Alennettu hinta edellyttää voimassa olevaa todistusta." }
+            ],
+            "benefitsTitle": "Edut",
+            "benefits": [
+                "Pääsy yhdelle jooga- tai hyvinvointitunnille",
+                "Studion varusteiden (matot, apuvälineet) vapaa käyttö"
+            ],
+            "conditionsTitle": "Käyttöehdot",
+            "conditions": [
+                "Voimassa 30 päivää ostopäivästä.",
+                "Edellyttää ennakkovarausta lukujärjestyksen kautta.",
+                "Peruutukset on tehtävä vähintään 12 tuntia ennen tunnin alkua."
+            ]
+        },
         memberships: {
             "title": "Jäsenyydet | Kuukausimaksut",
             "options": [
@@ -1086,7 +1178,26 @@ const pricingData = {
                 "Korttia peruutettaessa tai keskeytettäessä kaikki erääntyneet maksut on maksettava."
             ]
         },
-        passes: { "title": "Sarjakortit", "options": [{ "name": "5-kerran kortti | 20 päivää", "price": "50€" }, { "name": "12-kerran kortti | 60 päivää", "price": "115€" }, { "name": "20-kerran kortti | 6 kuukautta", "price": "199€" }] }
+        passes: {
+            "title": "Sarjakortit",
+            "options": [
+                { "name": "5-kerran kortti | 20 päivää", "price": "50€", "desc": "Voimassa 5 tuntiin 20 päivän ajan. Vain 10€ per tunti. Säästä 40€ verrattuna kertalippuihin." },
+                { "name": "12-kerran kortti | 60 päivää", "price": "115€", "desc": "Voimassa 12 tuntiin 60 päivän ajan. Vain 9.58€ per tunti. Säästä 101€ verrattuna kertalippuihin." },
+                { "name": "20-kerran kortti | 6 kuukautta", "price": "199€", "desc": "Voimassa 20 tuntiin 6 kuukauden ajan. Vain 9.95€ per tunti. Säästä 161€ verrattuna kertalippuihin." }
+            ],
+            "benefitsTitle": "Edut",
+            "benefits": [
+                "Joustava osallistuminen mihin tahansa tuntiin",
+                "Edullisempi kuin kertakäynnit",
+                "Studion varusteiden vapaa käyttö"
+            ],
+            "conditionsTitle": "Käyttöehdot",
+            "conditions": [
+                "Voimassaoloaika alkaa ensimmäisestä varatusta tunnista.",
+                "Kortteja ei voi pidentää tai jäädyttää.",
+                "Peruutukset on tehtävä vähintään 12 tuntia ennen tunnin alkua."
+            ]
+        }
     }
 };
 
