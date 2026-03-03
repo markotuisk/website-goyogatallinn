@@ -1006,17 +1006,50 @@ window.classesData = classesData;
 const pricingData = {
     en: {
         single: { "title": "Single Sessions", "options": [{ "name": "1x Session", "price": "18€" }, { "name": "Student", "price": "15€" }, { "name": "Senior", "price": "10€" }] },
-        memberships: { "title": "Memberships | Monthly Payments", "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }] },
+        memberships: {
+            "title": "Memberships | Monthly Payments",
+            "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "conditionsTitle": "Terms & Conditions",
+            "conditions": [
+                "No signup fee applies.",
+                "30-day notice required for cancellation.",
+                "Memberships can be placed on hold for up to 30 days free of charge.",
+                "Subsequent 15-day holds cost 8€.",
+                "When cancelling or placing on hold, all overdue payments must be settled."
+            ]
+        },
         passes: { "title": "Multi-Visit Passes", "options": [{ "name": "5-Visit Pass | 20 Days", "price": "50€" }, { "name": "12-Visit Pass | 60 Days", "price": "115€" }, { "name": "20-Visit Pass | 6 Months", "price": "199€" }] }
     },
     et: {
         single: { "title": "Ühekordsed külastused", "options": [{ "name": "1x Tund", "price": "18€" }, { "name": "Õpilane", "price": "15€" }, { "name": "Pensionär", "price": "10€" }] },
-        memberships: { "title": "Liikmepaketid | Kuumaksed", "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }] },
+        memberships: {
+            "title": "Liikmepaketid | Kuumaksed",
+            "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "conditionsTitle": "Tingimused",
+            "conditions": [
+                "Liitumistasu puudub.",
+                "Lõpetamisel kehtib 30-päevane etteteatamisaeg.",
+                "Liikmekaardi saab peatada kuni 30 päevaks tasuta.",
+                "Järgnev 15-päevane peatus maksab 8€.",
+                "Kaardi lõpetamisel või peatamisel peavad kõik võlgnevused olema tasutud."
+            ]
+        },
         passes: { "title": "Korrakaardid", "options": [{ "name": "5-korra kaart | 20 päeva", "price": "50€" }, { "name": "12-korra kaart | 60 päeva", "price": "115€" }, { "name": "20-korra kaart | 6 kuud", "price": "199€" }] }
     },
     fi: {
         single: { "title": "Kertakäynnit", "options": [{ "name": "1x Tunti", "price": "18€" }, { "name": "Opiskelija", "price": "15€" }, { "name": "Eläkeläinen", "price": "10€" }] },
-        memberships: { "title": "Jäsenyydet | Kuukausimaksut", "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }] },
+        memberships: {
+            "title": "Jäsenyydet | Kuukausimaksut",
+            "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "conditionsTitle": "Käyttöehdot",
+            "conditions": [
+                "Ei liittymismaksua.",
+                "Irtisanomisaika on 30 päivää.",
+                "Jäsenyys voidaan keskeyttää enintään 30 päiväksi veloituksetta.",
+                "Tätä seuraava 15 päivän tauko maksaa 8€.",
+                "Korttia peruutettaessa tai keskeytettäessä kaikki erääntyneet maksut on maksettava."
+            ]
+        },
         passes: { "title": "Sarjakortit", "options": [{ "name": "5-kerran kortti | 20 päivää", "price": "50€" }, { "name": "12-kerran kortti | 60 päivää", "price": "115€" }, { "name": "20-kerran kortti | 6 kuukautta", "price": "199€" }] }
     }
 };
