@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initModals();
     initReviewsCarousel();
     initGoogleReviewsCarousel();
+    initLeaveReviewButton();
     initInstagramCarousel();
     initForms();
     initNavbar();
@@ -641,6 +642,16 @@ function initGoogleReviewsCarousel() {
 
     window.addEventListener('resize', updateCarousel);
     updateCarousel();
+}
+
+// --- Leave Review Button ---
+function initLeaveReviewButton() {
+    const leaveReviewButton = document.getElementById('leave-review-button');
+    if (leaveReviewButton) {
+        leaveReviewButton.addEventListener('click', () => {
+            window.open('https://g.page/r/CYHeaA4O-cjREB0/review', '_blank');
+        });
+    }
 }
 
 // --- Instagram ---
