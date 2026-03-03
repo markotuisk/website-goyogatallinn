@@ -170,10 +170,12 @@ function initModals() {
                 document.getElementById('pricing-modal-title').textContent = data.title;
                 const body = document.getElementById('pricing-modal-body');
                 body.innerHTML = '';
+                let hasSeasonalOffer = false;
+                let modalContentHTML = '';
+
                 data.options.forEach(opt => {
                     let displayPrice = `<span class="font-bold text-pink-600">${opt.price}</span>`;
 
-                    // Seasonal Offer Logic: 20% off for non-Explorer memberships until Mar 31, 2026
                     const targetDate = new Date("March 31, 2026 23:59:59").getTime();
                     const now = new Date().getTime();
                     const isSeasonalOfferActive = btn.dataset.pricingGroup === 'memberships' &&
@@ -181,6 +183,7 @@ function initModals() {
                         now <= targetDate;
 
                     if (isSeasonalOfferActive) {
+                        hasSeasonalOffer = true;
                         // Extract number from price string (e.g. "59€/mo", "79€", "69€/kk")
                         const priceMatch = opt.price.match(/(\d+)/);
                         if (priceMatch) {
@@ -200,7 +203,7 @@ function initModals() {
                         }
                     }
 
-                    body.innerHTML += `
+                    modalContentHTML += `
                         <div class="p-4 border rounded flex flex-col justify-center">
                             <div class="flex justify-between items-center w-full group">
                                 <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
@@ -211,6 +214,35 @@ function initModals() {
                     `;
                 });
 
+                // Top Banner for Seasonal Offer
+                if (hasSeasonalOffer) {
+                    const langData = translationsData[currentLanguage] || translationsData['en'];
+                    body.innerHTML += `
+                        <div class="mb-6 bg-pink-50 border border-pink-100 rounded-xl p-4 flex flex-col items-center justify-center text-center">
+                            <span class="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2">${langData['pricing.offer.ends_in'] || 'Offer Ends In:'}</span>
+                            <div class="flex gap-3 justify-center text-pink-900 w-full max-w-[280px]">
+                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="days">00</span>
+                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.days'] || 'Days'}</span>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="hours">00</span>
+                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.hours'] || 'Hours'}</span>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="minutes">00</span>
+                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.minutes'] || 'Mins'}</span>
+                                </div>
+                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="seconds">00</span>
+                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.seconds'] || 'Secs'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                body.innerHTML += modalContentHTML;
 
                 // Render Benefits
                 if (data.benefits && data.benefits.length > 0) {
@@ -701,34 +733,49 @@ function initFadeIn() {
     });
 }
 function initCountdown() {
+    // Determine header countdown existence safely
     const countdownEl = document.getElementById('countdown');
-    if (!countdownEl) return;
 
-    // Set the date we're counting down to: March 10, current year 23:59:59
+    // Set the date we're counting down to: March 10, current year 23:59:59 (for header)
     const currentYear = new Date().getFullYear();
     const targetDate = new Date(`March 10, ${currentYear} 23:59:59`).getTime();
 
     function updateTimer() {
         const now = new Date().getTime();
-        const distance = targetDate - now;
 
-        if (distance < 0) {
-            document.getElementById('days').innerText = "00";
-            document.getElementById('hours').innerText = "00";
-            document.getElementById('minutes').innerText = "00";
-            document.getElementById('seconds').innerText = "00";
-            return;
+        // --- 1. Main Header Countdown ---
+        const mainDistance = targetDate - now;
+        if (countdownEl && mainDistance >= 0) {
+            const days = Math.floor(mainDistance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((mainDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((mainDistance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((mainDistance % (1000 * 60)) / 1000);
+
+            let dEl = document.getElementById('days'); if (dEl) dEl.innerText = days.toString().padStart(2, '0');
+            let hEl = document.getElementById('hours'); if (hEl) hEl.innerText = hours.toString().padStart(2, '0');
+            let mEl = document.getElementById('minutes'); if (mEl) mEl.innerText = minutes.toString().padStart(2, '0');
+            let sEl = document.getElementById('seconds'); if (sEl) sEl.innerText = seconds.toString().padStart(2, '0');
         }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // --- 2. Pricing Modal Countdown ---
+        const modalTargetDate = new Date("March 31, 2026 23:59:59").getTime();
+        const modalDistance = modalTargetDate - now;
+        const modalCountdownEls = document.querySelectorAll('#pricing-modal .countdown-val');
 
-        document.getElementById('days').innerText = days.toString().padStart(2, '0');
-        document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
-        document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
-        document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        if (modalCountdownEls.length > 0 && modalDistance >= 0) {
+            const days = Math.floor(modalDistance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((modalDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((modalDistance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((modalDistance % (1000 * 60)) / 1000);
+
+            modalCountdownEls.forEach(el => {
+                const unit = el.getAttribute('data-unit');
+                if (unit === 'days') el.innerText = days.toString().padStart(2, '0');
+                if (unit === 'hours') el.innerText = hours.toString().padStart(2, '0');
+                if (unit === 'minutes') el.innerText = minutes.toString().padStart(2, '0');
+                if (unit === 'seconds') el.innerText = seconds.toString().padStart(2, '0');
+            });
+        }
     }
 
     updateTimer();
