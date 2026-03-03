@@ -1008,7 +1008,12 @@ const pricingData = {
         single: { "title": "Single Sessions", "options": [{ "name": "1x Session", "price": "18€" }, { "name": "Student", "price": "15€" }, { "name": "Senior", "price": "10€" }] },
         memberships: {
             "title": "Memberships | Monthly Payments",
-            "options": [{ "name": "Ashtanga Pass | 1st Year", "price": "59€/mo" }, { "name": "Full Pass | 1st Year", "price": "69€/mo" }, { "name": "1-Month Pass", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "options": [
+                { "name": "Ashtanga Pass | 1st Year", "price": "59€/mo", "desc": "Unlimited access to all Ashtanga classes. Annual commitment paid monthly." },
+                { "name": "Full Pass | 1st Year", "price": "69€/mo", "desc": "Unlimited access to all scheduled yoga and wellness classes. Annual commitment paid monthly." },
+                { "name": "1-Month Pass", "price": "79€", "desc": "Unlimited access to all scheduled classes for 30 days. No long-term commitment." },
+                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days. One-time purchase." }
+            ],
             "benefitsTitle": "Membership Benefits",
             "benefits": [
                 "Unlimited access to relevant classes",
@@ -1031,7 +1036,12 @@ const pricingData = {
         single: { "title": "Ühekordsed külastused", "options": [{ "name": "1x Tund", "price": "18€" }, { "name": "Õpilane", "price": "15€" }, { "name": "Pensionär", "price": "10€" }] },
         memberships: {
             "title": "Liikmepaketid | Kuumaksed",
-            "options": [{ "name": "Ashtanga pakett | 1. aasta", "price": "59€" }, { "name": "Täispakett | 1. aasta", "price": "69€" }, { "name": "1-kuu pakett", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "options": [
+                { "name": "Ashtanga pakett | 1. aasta", "price": "59€", "desc": "Piiramatu ligipääs kõikidele Ashtanga tundidele. Aastase siduvusega, tasumine igakuiselt." },
+                { "name": "Täispakett | 1. aasta", "price": "69€", "desc": "Piiramatu ligipääs kõikidele tunniplaanis olevatele jooga- ja heaolutundidele. Aastase siduvusega, tasumine igakuiselt." },
+                { "name": "1-kuu pakett", "price": "79€", "desc": "Piiramatu ligipääs kõikidele tundidele 30 päevaks. Ilma pikaajalise siduvuseta." },
+                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Osale vabal valikul 3 tunnis. Kehtib 30 päeva. Ühekordne ost." }
+            ],
             "benefitsTitle": "Liikmepaketi Hüved",
             "benefits": [
                 "Piiramatu ligipääs vastavatele tundidele",
@@ -1054,7 +1064,12 @@ const pricingData = {
         single: { "title": "Kertakäynnit", "options": [{ "name": "1x Tunti", "price": "18€" }, { "name": "Opiskelija", "price": "15€" }, { "name": "Eläkeläinen", "price": "10€" }] },
         memberships: {
             "title": "Jäsenyydet | Kuukausimaksut",
-            "options": [{ "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk" }, { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk" }, { "name": "1 kuukauden paketti", "price": "79€" }, { "name": "Studio Explorer Pass", "price": "29€" }],
+            "options": [
+                { "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk", "desc": "Rajaton pääsy kaikille ashtangatunneille. Vuosijäsenyys kuukausilaskutuksella." },
+                { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk", "desc": "Rajaton pääsy kaikille lukujärjestyksen jooga- ja hyvinvointitunneille. Vuosijäsenyys kuukausilaskutuksella." },
+                { "name": "1 kuukauden paketti", "price": "79€", "desc": "Rajaton pääsy kaikille tunneille 30 päivän ajan. Ei pitkäaikaista sitoutumista." },
+                { "name": "Studio Explorer Pass", "price": "29€", "desc": "Kokeile 3 valitsemaasi tuntia. Voimassa 30 päivää ostopäivästä. Kertaostos." }
+            ],
             "benefitsTitle": "Jäsenyysedut",
             "benefits": [
                 "Rajaton pääsy soveltuville tunneille",

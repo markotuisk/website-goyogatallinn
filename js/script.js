@@ -171,7 +171,15 @@ function initModals() {
                 const body = document.getElementById('pricing-modal-body');
                 body.innerHTML = '';
                 data.options.forEach(opt => {
-                    body.innerHTML += `<div class="p-4 border rounded flex justify-between"><span class="font-medium">${opt.name}</span><span class="font-bold text-pink-600">${opt.price}</span></div>`;
+                    body.innerHTML += `
+                        <div class="p-4 border rounded flex flex-col justify-center">
+                            <div class="flex justify-between items-center w-full">
+                                <span class="font-medium">${opt.name}</span>
+                                <span class="font-bold text-pink-600">${opt.price}</span>
+                            </div>
+                            ${opt.desc ? `<p class="text-xs text-gray-500 mt-2 leading-relaxed">${opt.desc}</p>` : ''}
+                        </div>
+                    `;
                 });
 
 
