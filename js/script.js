@@ -548,7 +548,7 @@ function initGoogleReviewsCarousel() {
         }
 
         card.innerHTML = `
-                        < div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md" >
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col w-full transition-all duration-300 hover:shadow-md">
                 <div class="flex justify-between items-start mb-4">
                     <div>
                         <h4 class="font-bold text-gray-900">${r.name}</h4>
@@ -567,7 +567,7 @@ function initGoogleReviewsCarousel() {
                     </span>
                     ${r.badge ? `<span class="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-semibold">${t['reviews.local_guide'] || r.badge.text}</span>` : ''}
                 </div>
-            </div > `;
+            </div>`;
         track.appendChild(card);
     });
 
@@ -650,7 +650,7 @@ function initInstagramCarousel() {
     track.innerHTML = '';
     const all = [...instagramData, ...instagramData];
     all.forEach(p => {
-        track.innerHTML += `< a href = "${p.link}" target = "_blank" class="w-[250px] aspect-square mx-2 flex-shrink-0" > <img src="${p.img}" class="w-full h-full object-cover rounded-lg"></a>`;
+        track.innerHTML += `<a href="${p.link}" target="_blank" class="w-[250px] aspect-square mx-2 flex-shrink-0"><img src="${p.img}" class="w-full h-full object-cover rounded-lg"></a>`;
     });
 }
 
