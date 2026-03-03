@@ -22,7 +22,8 @@ const offersData = {
                     benefits: [
                         "Only 9.60€ per class (regularly 18€/class)",
                         "Low-risk way to try 3 different teachers or practices",
-                        "Generous 30-day validity to help you find your rhythm"
+                        "Generous 30-day validity to help you find your rhythm",
+                        "Valid only as a one-time standalone purchase"
                     ],
                     expires: "March 8, 2026",
                     targetDate: "March 8, 2026 23:59:59",
@@ -30,7 +31,7 @@ const offersData = {
                 },
                 {
                     name: "Annual Memberships",
-                    desc: "Throughout March, enjoy a 20% discount on our annual membership cards. Use the promo code LAUNCH when purchasing online.",
+                    desc: "Throughout March, enjoy a 20% discount on our annual membership cards. Use the promo code LAUNCH when purchasing online. Note: This discount applies exclusively to our Annual Memberships.",
                     price: "-20%",
                     originalPrice: "",
                     savings: "DISCOUNT CAMPAIGN",
@@ -73,7 +74,8 @@ const offersData = {
                     benefits: [
                         "Vaid 9.60€ ühe tunni kohta (tavahind 18€)",
                         "Riskivaba võimalus proovida 3 erinevat stiili või õpetajat",
-                        "Kehtib tervelt 30 päeva – piisavalt aega regulaarse rütmi leidmiseks"
+                        "Kehtib tervelt 30 päeva – piisavalt aega regulaarse rütmi leidmiseks",
+                        "Kehtib vaid iseseisva ühekordse ostuna"
                     ],
                     expires: "8. märts 2026",
                     targetDate: "March 8, 2026 23:59:59",
@@ -81,7 +83,7 @@ const offersData = {
                 },
                 {
                     name: "Aastased Liikmekaardid",
-                    desc: "Kogu märtsikuu jooksul kehtib meie aastalistele liikmekaartidele 20% soodustus. Kaardi ostmisel veebis kasuta sooduskoodi LAUNCH.",
+                    desc: "Kogu märtsikuu jooksul kehtib meie aastalistele liikmekaartidele 20% soodustus. Kaardi ostmisel veebis kasuta sooduskoodi LAUNCH. NB: See soodustus laieneb vaid aastastele liikmekaartidele.",
                     price: "-20%",
                     originalPrice: "",
                     savings: "SOODUSKAMPAANIA",
@@ -124,7 +126,8 @@ const offersData = {
                     benefits: [
                         "Vain 9.60€ per tunti (normaalisti 18€)",
                         "Riskitön tapa kokeilla 3 eri opettajaa tai harjoitusta",
-                        "Reilu 30 päivän voimassaoloaika auttaa rutiinin löytämisessä"
+                        "Reilu 30 päivän voimassaoloaika auttaa rutiinin löytämisessä",
+                        "Voimassa vain itsenäisenä kertaostoksena"
                     ],
                     expires: "8. maaliskuuta 2026",
                     targetDate: "March 8, 2026 23:59:59",
@@ -132,7 +135,7 @@ const offersData = {
                 },
                 {
                     name: "Vuosijäsenyydet",
-                    desc: "Koko maaliskuun ajan saat 20 % alennuksen vuosijäsenyyksistämme. Käytä alennuskoodia LAUNCH ostaessasi verkossa.",
+                    desc: "Koko maaliskuun ajan saat 20 % alennuksen vuosijäsenyyksistämme. Käytä alennuskoodia LAUNCH ostaessasi verkossa. Huomio: Tämä alennus koskee yksinomaan vuosijäsenyyksiä.",
                     price: "-20%",
                     originalPrice: "",
                     savings: "ALENNUSKAMPANJA",
