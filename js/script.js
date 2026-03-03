@@ -417,8 +417,8 @@ function initReviewsCarousel() {
         const storyText = story.text[lang] || story.text['en'];
 
         card.innerHTML = `
-                        < div class="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col w-full h-full overflow-hidden transition-all duration-300 hover:shadow-md group" >
-                < !--Image Header-- >
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col w-full h-full overflow-hidden transition-all duration-300 hover:shadow-md group">
+                <!--Image Header-->
                 <div class="h-48 w-full relative overflow-hidden">
                     <img src="${story.image}" alt="Community Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -445,7 +445,7 @@ function initReviewsCarousel() {
                                 </a>
                             </div>
                         </div>
-            </div > `;
+            </div>`;
         track.appendChild(card);
     });
 
