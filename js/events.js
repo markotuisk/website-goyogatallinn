@@ -634,7 +634,7 @@ const eventsData = [
         country: { en: 'India', et: 'India', fi: 'Intia' },
         active: true,
         featured: true,
-        expiryDate: '2026-02-28',
+        expiryDate: '2027-02-28',
         image: 'https://images.unsplash.com/photo-1596711425164-90fd727a89e9', // Kovalam/Kerala vibe
         gallery: [
             'https://images.unsplash.com/photo-1602216056096-3b40cc0f5310', // Kerala Backwaters
