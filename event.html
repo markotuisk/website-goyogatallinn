@@ -111,6 +111,33 @@
             }
 
             const data = event[lang] || event['en'];
+            const now = new Date();
+            const todayStr = now.toDateString();
+
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            const tomorrowStr = tomorrow.toDateString();
+
+            const yesterday = new Date(now);
+            yesterday.setDate(now.getDate() - 1);
+            const yesterdayStr = yesterday.toDateString();
+
+            // Calculate Status Tag
+            const expiryDate = new Date(event.expiryDate);
+            const eventDate = new Date(expiryDate.getTime() - 24 * 60 * 60 * 1000);
+            const eventDateStr = eventDate.toDateString();
+
+            let statusTag = '';
+            const t = translationsData[lang];
+
+            if (eventDateStr === todayStr) {
+                statusTag = `<span class="px-3 py-1 bg-green-500 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md animate-pulse">${t['events.status.today']}</span>`;
+            } else if (eventDateStr === tomorrowStr) {
+                statusTag = `<span class="px-3 py-1 bg-blue-500 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md">${t['events.status.tomorrow']}</span>`;
+            } else if (eventDateStr === yesterdayStr) {
+                statusTag = `<span class="px-3 py-1 bg-gray-500 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md">${t['events.status.passed']}</span>`;
+            }
+
             const typeLabel = event.type === 'retreat'
                 ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
                 : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
@@ -189,6 +216,7 @@
                         <div class="container-custom">
                             <div class="flex flex-col gap-4 max-w-4xl">
                                 <div class="flex flex-wrap gap-2">
+                                    ${statusTag}
                                     <span class="px-3 py-1 bg-pink-600 text-white text-xs font-bold uppercase tracking-widest rounded-full">${typeLabel}</span>
                                     ${countryLabel ? `<span class="px-3 py-1 bg-white/20 backdrop-blur-md text-white border border-white/30 text-xs font-bold uppercase tracking-widest rounded-full">${countryLabel}</span>` : ''}
                                 </div>

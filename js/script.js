@@ -966,12 +966,25 @@ function initEvents() {
 function renderEvents(container, featuredOnly = false) {
     const lang = localStorage.getItem('preferredLanguage') || 'en';
     const now = new Date();
+    const todayStr = now.toDateString();
+
+    const tomorrow = new Date(now);
+    tomorrow.setDate(now.getDate() + 1);
+    const tomorrowStr = tomorrow.toDateString();
+
+    const yesterday = new Date(now);
+    yesterday.setDate(now.getDate() - 1);
+    const yesterdayStr = yesterday.toDateString();
 
     // Filter and sort events
     let events = eventsData.filter(event => {
-        const isExpired = event.expiryDate && new Date(event.expiryDate) < now;
+        // expiryDate is typically the day after the event at 00:00:00
+        const expiryDate = new Date(event.expiryDate);
+        // Persist for an additional 24 hours after expiry (48h after event start)
+        const disappearAt = new Date(expiryDate.getTime() + 24 * 60 * 60 * 1000);
+        const isHidden = now > disappearAt;
         const isFeaturedMatch = !featuredOnly || event.featured;
-        return event.active && !isExpired && isFeaturedMatch;
+        return event.active && !isHidden && isFeaturedMatch;
     });
 
     // Limit to 3 if on homepage
@@ -997,11 +1010,29 @@ function renderEvents(container, featuredOnly = false) {
                     ? (lang === 'et' ? 'Stuudios' : lang === 'fi' ? 'Studiolla' : 'Studio')
                     : '';
 
+        // Calculate Status Tag
+        const expiryDate = new Date(event.expiryDate);
+        // Event date is assumed to be 1 day before expiryDate
+        const eventDate = new Date(expiryDate.getTime() - 24 * 60 * 60 * 1000);
+        const eventDateStr = eventDate.toDateString();
+
+        let statusTag = '';
+        const t = translationsData[lang];
+
+        if (eventDateStr === todayStr) {
+            statusTag = `<span class="px-3 py-1 bg-green-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-sm animate-pulse">${t['events.status.today']}</span>`;
+        } else if (eventDateStr === tomorrowStr) {
+            statusTag = `<span class="px-3 py-1 bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-sm">${t['events.status.tomorrow']}</span>`;
+        } else if (eventDateStr === yesterdayStr) {
+            statusTag = `<span class="px-3 py-1 bg-gray-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-sm">${t['events.status.passed']}</span>`;
+        }
+
         return `
             <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group">
                 <div class="relative h-64 overflow-hidden">
-                <img src="${event.cardImage || event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <img src="${event.cardImage || event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-4 left-4 flex flex-col gap-2">
+                        ${statusTag}
                         <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-pink-600 rounded-full shadow-sm">${typeLabel}</span>
                         ${categoryLabel ? `<span class="px-3 py-1 bg-gray-900/80 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-white rounded-full shadow-sm">${categoryLabel}</span>` : ''}
                         ${event.type === 'retreat' && event.category === 'abroad' && event.country ? `<span class="px-3 py-1 bg-pink-500/80 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-white rounded-full shadow-sm">${event.country[lang] || event.country['en']}</span>` : ''}

@@ -158,11 +158,23 @@
             function updateEventsListing(category = 'all') {
                 const lang = localStorage.getItem('preferredLanguage') || 'en';
                 const now = new Date();
+                const todayStr = now.toDateString();
+
+                const tomorrow = new Date(now);
+                tomorrow.setDate(now.getDate() + 1);
+                const tomorrowStr = tomorrow.toDateString();
+
+                const yesterday = new Date(now);
+                yesterday.setDate(now.getDate() - 1);
+                const yesterdayStr = yesterday.toDateString();
 
                 let events = eventsData.filter(event => {
-                    const isExpired = event.expiryDate && new Date(event.expiryDate) < now;
+                    const expiryDate = new Date(event.expiryDate);
+                    // Persist for an additional 24 hours after expiry (48h after event start)
+                    const disappearAt = new Date(expiryDate.getTime() + 24 * 60 * 60 * 1000);
+                    const isHidden = now > disappearAt;
                     const matchesCategory = category === 'all' || event.type === category;
-                    return event.active && !isExpired && matchesCategory;
+                    return event.active && !isHidden && matchesCategory;
                 });
 
                 if (events.length === 0) {
@@ -184,11 +196,28 @@
                         ? event.country[lang] || event.country['en']
                         : '';
 
+                    // Calculate Status Tag
+                    const expiryDate = new Date(event.expiryDate);
+                    const eventDate = new Date(expiryDate.getTime() - 24 * 60 * 60 * 1000);
+                    const eventDateStr = eventDate.toDateString();
+
+                    let statusTag = '';
+                    const t = translationsData[lang];
+
+                    if (eventDateStr === todayStr) {
+                        statusTag = `<span class="px-4 py-1.5 bg-green-500 shadow-lg text-[10px] font-bold uppercase tracking-widest text-white rounded-full animate-pulse">${t['events.status.today']}</span>`;
+                    } else if (eventDateStr === tomorrowStr) {
+                        statusTag = `<span class="px-4 py-1.5 bg-blue-500 shadow-lg text-[10px] font-bold uppercase tracking-widest text-white rounded-full">${t['events.status.tomorrow']}</span>`;
+                    } else if (eventDateStr === yesterdayStr) {
+                        statusTag = `<span class="px-4 py-1.5 bg-gray-500 shadow-lg text-[10px] font-bold uppercase tracking-widest text-white rounded-full">${t['events.status.passed']}</span>`;
+                    }
+
                     return `
                         <div id="${event.id}" class="bg-white rounded-[2rem] overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full border border-gray-100 group">
                             <div class="relative h-72 overflow-hidden">
                                 <img src="${event.cardImage || event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                                 <div class="absolute top-6 left-6 flex flex-col gap-2">
+                                    ${statusTag}
                                     <span class="px-4 py-1.5 bg-white shadow-lg text-[10px] font-bold uppercase tracking-widest text-pink-600 rounded-full">${typeLabel}</span>
                                     ${categoryLabel ? `<span class="px-4 py-1.5 bg-gray-900 shadow-lg text-[10px] font-bold uppercase tracking-widest text-white rounded-full">${categoryLabel}</span>` : ''}
                                     ${countryLabel ? `<span class="px-4 py-1.5 bg-pink-500 shadow-lg text-[10px] font-bold uppercase tracking-widest text-white rounded-full">${countryLabel}</span>` : ''}
