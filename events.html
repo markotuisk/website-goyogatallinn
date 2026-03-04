@@ -187,11 +187,9 @@
                     const typeLabel = event.type === 'retreat'
                         ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
                         : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
-                    const categoryLabel = event.category === 'abroad'
-                        ? (lang === 'et' ? 'Välismaal' : lang === 'fi' ? 'Ulkomailla' : 'Abroad')
-                        : event.category === 'estonia'
-                            ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
-                            : '';
+                    const categoryLabel = event.category === 'estonia'
+                        ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
+                        : '';
                     const countryLabel = (event.type === 'retreat' && event.category === 'abroad' && event.country)
                         ? event.country[lang] || event.country['en']
                         : '';

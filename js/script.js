@@ -1006,13 +1006,11 @@ function renderEvents(container, featuredOnly = false) {
         const typeLabel = event.type === 'retreat'
             ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
             : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
-        const categoryLabel = event.category === 'abroad'
-            ? (lang === 'et' ? 'Välismaal' : lang === 'fi' ? 'Ulkomailla' : 'Abroad')
-            : event.category === 'estonia'
-                ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
-                : event.category === 'studio'
-                    ? (lang === 'et' ? 'Stuudios' : lang === 'fi' ? 'Studiolla' : 'Studio')
-                    : '';
+        const categoryLabel = event.category === 'estonia'
+            ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
+            : event.category === 'studio'
+                ? (lang === 'et' ? 'Stuudios' : lang === 'fi' ? 'Studiolla' : 'Studio')
+                : '';
 
         // Calculate Status Tag
         const expiryDate = new Date(event.expiryDate);
