@@ -381,45 +381,4 @@ const eventsData = [
             highlights: ['Perinteinen harjoitus', 'Kulttuurikokemukset', 'Henkiset kohteet']
         }
     },
-    {
-        id: 'inversions-workshop-2026',
-        type: 'studio',
-        category: 'studio',
-        active: true,
-        featured: true,
-        expiryDate: '2026-05-10',
-        image: 'https://www.playpausebe.com/wp-content/uploads/2022/10/Mastering-Inversion-Yoga-Poses-A-Guide-to-Headstand.webp',
-        gallery: [
-            'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b',
-            'https://images.unsplash.com/photo-1599447421416-3414500d18a5'
-        ],
-        registerLink: '#contact',
-        en: {
-            title: 'Mastering Inversions Workshop',
-            date: 'May 5, 2026',
-            location: 'Goyoga Tallinn Studio',
-            organizer: 'Organized by Goyoga Tallinn',
-            description: 'Join us to build the strength and confidence to master headstands, handstands, and other inversions safely with traditional methods.',
-            fullDescription: 'Ready to flip your perspective? This 3-hour intensive workshop focuses on the mechanics and mindset of being upside down. We will break down headstands, forearm balances, and handstands into manageable steps.',
-            highlights: ['Shoulder & Core stability drills', 'Safe falling techniques', 'Wall & Partner work', 'Personalized alignment tips']
-        },
-        et: {
-            title: 'Pöördasendite meisterdamise töötuba',
-            date: '5. mai 2026',
-            location: 'Goyoga Tallinn Stuudio',
-            organizer: 'Korraldaja: Goyoga Tallinn',
-            description: 'Tule ja arenda jõudu ning enesekindlust, et vallutada pea- ja kätelseisud ning teised pöördasendid turvaliselt.',
-            fullDescription: 'Valmis perspektiivi muutma? See 3-tunnine intensiivne töötuba keskendub pöördasendite mehaanikale ja mõttemaailmale.',
-            highlights: ['Õlad ja kere stabiilsus', 'Turvaline kukkumine', 'Seina ja partneriga töö', 'Personaalne tagasiside']
-        },
-        fi: {
-            title: 'Päälläseisonta- ja inversiotyöpaja',
-            date: '5. toukokuuta 2026',
-            location: 'Goyoga Tallinn Studio',
-            organizer: 'Järjestäjä: Goyoga Tallinn',
-            description: 'Tule rakentamaan voimaa ja itseluottamusta päälläseisonnan ja muiden inversioiden hallitsemiseen turvallisesti.',
-            fullDescription: 'Valmis kääntämään maailmasi ylösalaisin? Tämä 3 tunnin työpaja keskittyy inversioiden tekniikkaan ja hallintaan.',
-            highlights: ['Voima ja vakaus', 'Turvallinen laskeutuminen', 'Seinä- ja pariharjoitukset', 'Henkilökohtainen ohjaus']
-        }
-    }
 ];
