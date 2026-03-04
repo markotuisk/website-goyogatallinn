@@ -634,33 +634,98 @@ const eventsData = [
         country: { en: 'India', et: 'India', fi: 'Intia' },
         active: true,
         featured: true,
-        expiryDate: '2026-12-20',
-        image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
+        expiryDate: '2026-02-28',
+        image: 'https://images.unsplash.com/photo-1596711425164-90fd727a89e9', // Kovalam/Kerala vibe
+        gallery: [
+            'https://images.unsplash.com/photo-1602216056096-3b40cc0f5310', // Kerala Backwaters
+            'https://images.unsplash.com/photo-1544735716-392fe2489ffa', // Yoga silhouette
+            'https://images.unsplash.com/photo-1510425463958-dcced28da480' // Indian culture
+        ],
         teachers: ['raili-maripuu'],
         registerLink: 'mailto:events@goyoga.ee',
         en: {
-            title: 'Sacred India Journey',
-            date: 'December 2026',
-            location: 'Mysuru, India',
-            organizer: 'Goyoga Tallinn',
-            description: 'A traditional journey to the source of Ashtanga Yoga. Details coming soon.',
-            highlights: ['Traditional practice', 'Cultural immersion', 'Spiritual sites']
+            title: 'Ashtanga Intensive with Lino Miele',
+            date: 'January - February 2026',
+            location: 'Kovalam Beach, Kerala, India',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Travel to the heart of Kerala to join the traditional Ashtanga Yoga intensive workshop led by world-renowned teacher Lino Miele.',
+            fullDescription: `
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🇮🇳</span> The Motherland of Yoga</h3>
+                <p class="mb-4">Raili Maripuu, a dedicated Ashtanga Yoga teacher for Ashtanga Estonia and based in Reading, UK, has been a devoted student of <a href="http://www.linomiele.com/kovalam.html" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Lino Miele</a> since 2010.</p>
+                <p class="mb-4">She regularly travels to Kovalam, Kerala, to participate in Miele's annual intensive workshops. These legendary retreats are renowned for being his longest-running programs, lasting up to two months each year.</p>
+                <p class="mb-4">We are actively gathering a group of dedicated practitioners to join Raili on this profound journey to southern India.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Kovalam Beach, Kerala</h3>
+                <p class="mb-4">The training takes place at the vibrant and beautiful <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalam Beach</a> in Kerala. This location draws over 500 students and teachers from around the globe every year, creating an incredible, buzzing international Ashtanga community.</p>
+                <p class="mb-4">Between practices, Kerala (often referred to as "God's Own Country") offers stunning beaches, traditional Ayurvedic treatments, incredible South Indian cuisine, and the famous tranquil backwaters to explore.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> The Practice</h3>
+                <p class="mb-4">These sessions focus purely on the traditional Ashtanga Yoga method. The training includes:</p>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li>Daily Mysore style practice and LED classes in the Vinyasa system.</li>
+                    <li>Traditional hands-on adjustments directly from Lino Miele and his senior assistants.</li>
+                    <li>In-depth study of the Primary and Advanced series.</li>
+                    <li>Afternoon philosophy, Pranayama, and Q&A sessions.</li>
+                </ul>
+                <p class="mb-4 italic text-gray-500">Note: This is an intensive traditional study trip requiring dedication to the morning practice schedule.</p>
+            `,
+            highlights: ['Practice with Lino Miele in India', 'Traditional Mysore & LED classes', 'Experience Kovalam, Kerala', 'Ayurvedic treatments & culture', 'Join a global Ashtanga community']
         },
         et: {
-            title: 'Püha India rännak',
-            date: 'Detsember 2026',
-            location: 'Mysuru, India',
-            organizer: 'Goyoga Tallinn',
-            description: 'Traditsiooniline rännak Ashtanga jooga algallikateni. Detailid peagi tulekul.',
-            highlights: ['Traditsiooniline praktika', 'Kultuurilised elamused', 'Pühapaigad']
+            title: 'Ashtanga intensiiv Lino Mielega',
+            date: 'Jaanuar - Veebruar 2026',
+            location: 'Kovalam, Kerala, India',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Reisi Kerala südamesse ja liitu traditsioonilise Ashtanga jooga intensiivlaagriga, mida juhendab maailmakuulus õpetaja Lino Miele.',
+            fullDescription: `
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🇮🇳</span> Jooga emamaa</h3>
+                <p class="mb-4">Ashtanga Estonia pühendunud õpetaja Raili Maripuu on olnud maailmakuulsa õpetaja <a href="http://www.linomiele.com/kovalam.html" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Lino Miele</a> õpilane alates 2010. aastast.</p>
+                <p class="mb-4">Ta reisib regulaarselt Indiasse, Keralasse, Kovalemi, et osaleda Miele iga-aastastes intensiivsetes töötubades. Need on legendaarsed laagrid, olles tema kõige pikemalt toimuvad programmid, kestes iga kord kuni kaks kuud.</p>
+                <p class="mb-4">Kogume gruppi pühendunud praktiseerijatest, et ühineda Railiga sellel sügaval joogareisil Lõuna-Indiasse.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Kovalemi rand, Kerala</h3>
+                <p class="mb-4">Treeningud toimuvad elavas ja kaunis <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalemi rannas</a> Keralas. See asukoht tõmbab igal aastal ligi üle 500 õpilase ja õpetaja kogu maailmast, luues uskumatu ja sumiseva rahvusvahelise Ashtanga kogukonna.</p>
+                <p class="mb-4">Praktikate vahel pakub Kerala (mida sageli nimetatakse "Jumala omaks maaks") vapustavaid randu, traditsioonilisi Ayurveda hooldusi, uskumatut Lõuna-India kööki ning kuulsaid rahulikke backwater'eid avastamiseks.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Praktika</h3>
+                <p class="mb-4">Need sessioonid keskenduvad puhtalt traditsioonilisele Ashtanga jooga meetodile. Programm hõlmab:</p>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li>Igapäevane Mysore stiilis praktika ja LED-tunnid vinyasa süsteemis.</li>
+                    <li>Traditsioonilised käelised parandused (adjustments) otse Lino Mielelt ja tema vanem-assistentidelt.</li>
+                    <li>Esimese ja edasijõudnute (Advanced) seeriate süvaõpe.</li>
+                    <li>Pärastlõunased filosoofia, Pranayama ja Q&A sessioonid.</li>
+                </ul>
+                <p class="mb-4 italic text-gray-500">Märkus: See on intensiivne traditsiooniline õppereis, mis nõuab pühendumist hommikuse praktika graafikule.</p>
+            `,
+            highlights: ['Praktika Lino Mielega Indias', 'Traditsioonilised Mysore ja LED tunnid', 'Kovalemi kogemine, Kerala', 'Ayurveda hoolitsused ja kultuur', 'Kuulumine globaalsesse Ashtanga kogukonda']
         },
         fi: {
-            title: 'Pyhä Intian matka',
-            date: 'Joulukuu 2026',
-            location: 'Mysuru, Intia',
-            organizer: 'Goyoga Tallinn',
-            description: 'Perinteinen matka Ashtanga-joogan lähteille. Tiedot tulossa pian.',
-            highlights: ['Perinteinen harjoitus', 'Kulttuurikokemukset', 'Henkiset kohteet']
+            title: 'Ashtanga-intensiivi Lino Mielen kanssa',
+            date: 'Tammikuu - Helmikuu 2026',
+            location: 'Kovalam, Kerala, Intia',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Matkusta Keralan sydämeen ja liity perinteiselle Ashtanga-joogan intensiivileirille, jota vetää maailmankuulu opettaja Lino Miele.',
+            fullDescription: `
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🇮🇳</span> Joogan äitimaa</h3>
+                <p class="mb-4">Ashtanga Estonian opettaja Raili Maripuu on ollut maailmankuulun opettajan <a href="http://www.linomiele.com/kovalam.html" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Lino Mielen</a> omistautunut oppilas vuodesta 2010 alkaen.</p>
+                <p class="mb-4">Hän matkustaa säännöllisesti Kovalamiin, Keralaan osallistuakseen Mielen vuosittaisiin intensiivileireihin. Nämä legendaariset retriitit ovat hänen pisimpään käynnissä olleita ohjelmiaan, kestäen jopa kaksi kuukautta joka vuosi.</p>
+                <p class="mb-4">Kokoamme omistautuneiden harjoittelijoiden ryhmää liittymään Railin mukaan tälle syvälliselle matkalle Etelä-Intiaan.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Kovalam Beach, Kerala</h3>
+                <p class="mb-4">Harjoittelu tapahtuu eloisalla ja kauniilla <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalamin rannalla</a> Keralassa. Tämä sijainti vetää puoleensa yli 500 opiskelijaa ja opettajaa ympäri maailmaa joka vuosi, luoden uskomattoman kansainvälisen Ashtanga-yhteisön.</p>
+                <p class="mb-4">Harjoitusten välissä Kerala tarjoaa upeita rantoja, perinteisiä Ayurveda-hoitoja, uskomatonta eteläintialaista ruokaa ja kuuluisia rauhallisia suvantovesiä tutkittavaksi.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Harjoitus</h3>
+                <p class="mb-4">Nämä istunnot keskittyvät puhtaasti perinteiseen Ashtanga-joogamenetelmään. Koulutus sisältää:</p>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li>Päivittäinen Mysore-tyylinen harjoitus ja ohjatut tunnit Vinyasa-järjestelmässä.</li>
+                    <li>Perinteiset fyysiset avustukset suoraan Lino Mieleltä ja hänen vanhemmilta apulaisiltaan.</li>
+                    <li>Ensimmäisen ja edistyneen sarjan syväluotaava opiskelu.</li>
+                    <li>Iltapäivän filosofiaa, Pranayamaa ja kysymys-vastaus -istuntoja.</li>
+                </ul>
+                <p class="mb-4 italic text-gray-500">Huomio: Tämä on intensiivinen perinteinen opintomatka, joka vaatii sitoutumista aamuharjoituksen aikatauluun.</p>
+            `,
+            highlights: ['Harjoitus Lino Mielen kanssa Intiassa', 'Perinteiset Mysore- ja ohjatut tunnit', 'Kovalam, Kerala', 'Ayurveda ja kulttuuri', 'Liity globaaliin yhteisöön']
         }
     },
 ];
