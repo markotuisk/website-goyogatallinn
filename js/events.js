@@ -400,32 +400,121 @@ const eventsData = [
         active: true,
         featured: true,
         expiryDate: '2026-06-20',
-        image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216',
+        image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216', // Typical Tuscan/Lazio landscape representation
+        gallery: [
+            'https://images.unsplash.com/photo-1549488344-c27773295da9',
+            'https://images.unsplash.com/photo-1516483638261-f40af5aa11ce',
+            'https://images.unsplash.com/photo-1525016762309-803bba8080f5'
+        ],
         teachers: ['raili-maripuu'],
         registerLink: 'mailto:events@goyoga.ee',
         en: {
-            title: 'Summer Retreat in Italy',
-            date: 'June 2026',
-            location: 'Tuscany, Italy',
-            organizer: 'Goyoga Tallinn',
-            description: 'A soulful yoga journey in the heart of Tuscany. Details coming soon.',
-            highlights: ['Tuscan villa stay', 'Daily Ashtanga', 'Italian culinary experiences']
+            title: 'Ashtanga Yoga Retreat with Lino Miele',
+            date: 'June 2026 (6 Days)',
+            location: 'Casa La Martana, Italy',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Join a small, exclusive group to practice with world-renowned Ashtanga teacher Lino Miele at his home shala in the serene Italian countryside.',
+            fullDescription: `
+                <p class="mb-4">Every year, one of the world's most renowned Ashtanga yoga teachers, Lino Miele, opens the doors of his home shala for four weeks to his students and Ashtanga enthusiasts.</p>
+                <p class="mb-4">Lino's student and Ashtanga Estonia teacher, Raili Maripuu, visits annually to practice and has decided to offer an exclusive opportunity to join her in a small, intimate group of up to 10 people. Lino's home shala is located in a beautiful, secluded village in the Lazio region, about a 20-minute drive from the town of Tuscania. Going as a group makes logistics and accommodation seamless.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Casa La Martana</h3>
+                <p class="mb-4">Our base camp is purely magical—<strong>Casa La Martana</strong>. This is where we will live, eat, and hang out together throughout the retreat, and where our afternoon activities will take place. This small B&B is near Tuscania and Lake Bolsena, about a 20-minute drive from Lino's shala.</p>
+                <p class="mb-4">The former farmhouse has been completely renovated by a renowned Italian architect, incorporating old and natural building materials alongside modern comforts. Set on a 2-hectare property shaded by oaks, eucalyptus, bamboo, and olive trees, the estate features a swimming pool, jacuzzi, infrared room, private walking paths, and its own vegetable and herb garden. As of this year, the property also features its own dedicated yoga shala.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Program & Activities</h3>
+                <p class="italic text-gray-500 mb-4">All timings are approximate.</p>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li><strong>06:30 – 09:00:</strong> Mysore practice with Lino Miele</li>
+                    <li><strong>10:00 – 11:30:</strong> Nourishing Brunch</li>
+                    <li><strong>12:00 – 14:00:</strong> Self-time & Relaxation at the B&B</li>
+                    <li><strong>15:00 – 18:00:</strong> Organized Afternoon Activities
+                        <ul class="list-circle pl-5 mt-2 text-sm text-gray-600">
+                            <li>Asana LAB</li>
+                            <li>Gita/Sutras discussions</li>
+                            <li>Pranayama</li>
+                            <li>Q&A with Lino Miele</li>
+                            <li class="mt-2 font-medium">Excursion examples:</li>
+                            <li>Boating on Lake Bolsena or visiting lakeside towns</li>
+                            <li>Public thermal baths in Tuscany</li>
+                            <li>Monte Argentario peninsula</li>
+                        </ul>
+                    </li>
+                    <li><strong>19:00 – 20:30:</strong> Dinner</li>
+                    <li><strong>21:00 – 21:30:</strong> Evening Meditation</li>
+                </ul>
+
+                <p class="mb-4 font-medium text-pink-600">Spaces are strictly limited to 10 participants to ensure an intimate and profound experience.</p>
+            `,
+            highlights: ['Practice with Lino Miele', 'Intimate group (Max 10)', 'Stay at Casa La Martana', 'Excursions to Lake Bolsena', 'Afternoon Asana LAB & Philosophy']
         },
         et: {
-            title: 'Suvine joogaretriit Itaalias',
-            date: 'Juuni 2026',
-            location: 'Toscana, Itaalia',
-            organizer: 'Goyoga Tallinn',
-            description: 'Hingestatud joogarännak Toscana südames. Detailid peagi tulekul.',
-            highlights: ['Majutus Toscanavillas', 'Igapäevane Ashtanga', 'Itaalia köögi maitsed']
+            title: 'Ashtanga jooga retriit Lino Mielega',
+            date: 'Juuni 2026 (6 päeva)',
+            location: 'Casa La Martana, Itaalia',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Liitu väikese ja eksklusiivse grupiga, et praktiseerida maailmakuulsa Ashtanga õpetaja Lino Mielega tema kodushalas rahulikus Itaalia maapiirkonnas.',
+            fullDescription: `
+                <p class="mb-4">Igal aastal avab maailmas üks tuntumaid ashtanga jooga õpetajaid Lino Miele neljaks nädalaks oma kodushala uksed kõikidele oma õpilastele ja ashtanga jooga huvilistele.</p>
+                <p class="mb-4">Lino õpilane ja Ashtanga Estonia õpetaja Raili Maripuu käib seal iga-aastaselt praktiseerimas ja otsustas sel aastal pakkuda meie shala õpilastele ja teistele Eestis praktiseerivatele ashtangidele välja võimaluse minna Lino juurde väikese kuni 10-pealise grupina. See mõte on eelkõige ajendatud sellest, et Lino kodushala Casale Lazio maakonnas (umbes 20min Tuscania linnast) ei asu nn käidavas kohas ja ilma oma transpordita on logistilised võimalused piiratud.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Casa La Martana</h3>
+                <p class="mb-4">Meie laagri pidepunktiks on <strong>Casa la Martana</strong>, kus elame, sööme ja hängime koos kogu laagri vältel. Samuti toimuvad seal meie laagri pärastlõunased tegevused. Casa la Martana on väike B&B Tuscania linna ja Bolsena järve lähedal, Lino shalast ca 20min autosõidu kaugusel.</p>
+                <p class="mb-4">Kunagine talumaja on täielikult renoveeritud ühe tuntud Itaalia arhitekti poolt, kasutades vanu ja looduslikke ehitusmaterjale koos kõikide kaasaegsete mugavustega. Lisaks majutusele on 2ha looduskaunil kinnistul (tammed, eukalüptid, bambus, oliivipuud) väike bassein, jacuzzi ja infrapuna ruum ning oma väikesed jooksu- ja kõnnirajad. Alates sellest aastast on majas olemas ka eraldi jooga shala.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Programm ja tegevused</h3>
+                <p class="italic text-gray-500 mb-4">Kõik kellaajad on ligikaudsed.</p>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li><strong>06:30 – 09:00:</strong> Mysore Lino Mielega</li>
+                    <li><strong>10:00 – 11:30:</strong> Brunch</li>
+                    <li><strong>12:00 – 14:00:</strong> Vaba aeg</li>
+                    <li><strong>15:00 – 18:00:</strong> Organiseeritud pärastlõunane tegevus
+                        <ul class="list-circle pl-5 mt-2 text-sm text-gray-600">
+                            <li>Asana LAB</li>
+                            <li>Gita/Sutras discussion</li>
+                            <li>Pranayama</li>
+                            <li>Q&A Lino Mielega</li>
+                            <li class="mt-2 font-medium">Väljasõitude näited:</li>
+                            <li>Lago di Bolsena järv, paadisõit või järveäärsete linnade külastus</li>
+                            <li>Toskaanas asuvad avalikud termid</li>
+                            <li>Monte Argentario poolsaar, Toskaana</li>
+                        </ul>
+                    </li>
+                    <li><strong>19:00 – 20:30:</strong> Õhtusöök</li>
+                    <li><strong>21:00 – 21:30:</strong> Õhtune meditatsioon</li>
+                </ul>
+
+                <p class="mb-4 font-medium text-pink-600">Kohtade arv on rangelt piiratud (max 10 osalejat), et tagada personaalne ja sügav kogemus.</p>
+            `,
+            highlights: ['Praktika Lino Mielega', 'Väike grupp (Max 10)', 'Majutus Casa La Martanas', 'Väljasõidud ja ekskursioonid', 'Pärastlõunased töötoad ja Asana LAB']
         },
         fi: {
-            title: 'Kesäretriitti Italiassa',
-            date: 'Kesäkuu 2026',
-            location: 'Toscana, Italia',
-            organizer: 'Goyoga Tallinn',
-            description: 'Sielukas joogamatka Toscanan sydämessä. Tiedot tulossa pian.',
-            highlights: ['Majoitus Toscanan maaseudulla', 'Päivittäinen Ashtanga', 'Italialaisia makuelämyksiä']
+            title: 'Ashtanga-joogaretriitti Lino Mielen kanssa',
+            date: 'Kesäkuu 2026 (6 päivää)',
+            location: 'Casa La Martana, Italia',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Liity pieneen ja eksklusiiviseen ryhmään harjoittelemaan maailmankuulun Ashtanga-opettajan Lino Mielen kanssa hänen kotishalassaan Italian maaseudulla.',
+            fullDescription: `
+                <p class="mb-4">Joka vuosi yksi maailman tunnetuimmista Ashtanga-joogan opettajista, Lino Miele, avaa kotishalansa ovet neljäksi viikoksi oppilailleen ja Ashtangan harrastajille.</p>
+                <p class="mb-4">Linon oppilas ja Ashtanga Estonian opettaja Raili Maripuu vierailee siellä vuosittain ja tarjoaa nyt ainutlaatuisen mahdollisuuden liittyä hänen mukaansa pieneen, enintään 10 hengen ryhmään. Linon shala sijaitsee rauhallisessa Lazion alueen kylässä, jonne meneminen ryhmässä tekee logistiikasta ja majoituksesta vaivatonta.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Casa La Martana</h3>
+                <p class="mb-4">Tukikohtamme on taianomainen <strong>Casa La Martana</strong> – pieni B&B lähellä Tuscaniaa ja Bolsenajärveä. Täällä asumme, syömme ja vietämme aikaa yhdessä. Entinen maalaistalo on täysin remontoitu yhdistäen vanhat luonnonmateriaalit nykyaikaisiin mukavuuksiin.</p>
+                <p class="mb-4">Kaksiehtarisella tontilla on uima-allas, poreallas, infrapunasauna ja omat kävelyreitit, sekä oma uusi joogashala.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Ohjelma ja aktiviteetit</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li><strong>06:30 – 09:00:</strong> Mysore-harjoitus Lino Mielen kanssa</li>
+                    <li><strong>10:00 – 11:30:</strong> Brunssi</li>
+                    <li><strong>12:00 – 14:00:</strong> Vapaa-aika</li>
+                    <li><strong>15:00 – 18:00:</strong> Iltapäivän aktiviteetit (Asana LAB, filosofia, hengitysharjoitukset, sekä retkiä mm. Bolsenajärvelle ja Toscanan kuumille lähteille)</li>
+                    <li><strong>19:00 – 20:30:</strong> Illallinen</li>
+                    <li><strong>21:00 – 21:30:</strong> Iltameditaatio</li>
+                </ul>
+
+                <p class="mb-4 font-medium text-pink-600">Paikkoja on rajoitetusti (max 10), jotta voimme taata henkilökohtaisen ja syvällisen kokemuksen.</p>
+            `,
+            highlights: ['Harjoitus Lino Mielen kanssa', 'Intiimi ryhmä (Max 10)', 'Majoitus Casa La Martanassa', 'Retkiä ja yhdessäoloa', 'Iltapäivän työpajat']
         }
     },
     {
