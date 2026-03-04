@@ -420,6 +420,11 @@ const eventsData = [
 
                 <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Casa La Martana</h3>
                 <p class="mb-4">Our base camp is purely magical—<strong>Casa La Martana</strong>. This is where we will live, eat, and hang out together throughout the retreat, and where our afternoon activities will take place. This small B&B is near Tuscania and Lake Bolsena, about a 20-minute drive from Lino's shala.</p>
+                <div class="mb-4 text-sm bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-2">
+                    <a href="https://www.casalamartana.com" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="globe" class="h-4 w-4 mr-2"></i> casalamartana.com</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=42.465822,11.902689" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="map-pin" class="h-4 w-4 mr-2"></i> View on Google Maps (42.465822, 11.902689)</a>
+                    <a href="https://www.google.com/travel/search?q=Casa%20La%20Martana%0D%0A42.465822%2C%2011.902689&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C121529350&hl=en-GB&gl=uk&ssta=1&ts=CAEaRwopEicyJTB4MTMyOGQxOTFmNjNmYTU3NToweDhhZTMyODkyMDZlM2EwZmMSGhIUCgcI6g8QAxgJEgcI6g8QAxgKGAEyAhAA&qs=CAEyFENnc0lfTUdPdDZDU3l2R0tBUkFCOAJCCQn8oOMGkijjikIJCfyg4waSKOOK&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiIpsuOtIeTAxUAAAAAHQAAAAAQDg" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="star" class="h-4 w-4 mr-2"></i> Read Google Reviews</a>
+                </div>
                 <p class="mb-4">The former farmhouse has been completely renovated by a renowned Italian architect, incorporating old and natural building materials alongside modern comforts. Set on a 2-hectare property shaded by oaks, eucalyptus, bamboo, and olive trees, the estate features a swimming pool, jacuzzi, infrared room, private walking paths, and its own vegetable and herb garden. As of this year, the property also features its own dedicated yoga shala.</p>
                 
                 <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Program & Activities</h3>
@@ -460,6 +465,11 @@ const eventsData = [
 
                 <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Casa La Martana</h3>
                 <p class="mb-4">Meie laagri pidepunktiks on <strong>Casa la Martana</strong>, kus elame, sööme ja hängime koos kogu laagri vältel. Samuti toimuvad seal meie laagri pärastlõunased tegevused. Casa la Martana on väike B&B Tuscania linna ja Bolsena järve lähedal, Lino shalast ca 20min autosõidu kaugusel.</p>
+                <div class="mb-4 text-sm bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-2">
+                    <a href="https://www.casalamartana.com" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="globe" class="h-4 w-4 mr-2"></i> casalamartana.com</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=42.465822,11.902689" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="map-pin" class="h-4 w-4 mr-2"></i> Vaata Google Mapsis (42.465822, 11.902689)</a>
+                    <a href="https://www.google.com/travel/search?q=Casa%20La%20Martana%0D%0A42.465822%2C%2011.902689&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C121529350&hl=en-GB&gl=uk&ssta=1&ts=CAEaRwopEicyJTB4MTMyOGQxOTFmNjNmYTU3NToweDhhZTMyODkyMDZlM2EwZmMSGhIUCgcI6g8QAxgJEgcI6g8QAxgKGAEyAhAA&qs=CAEyFENnc0lfTUdPdDZDU3l2R0tBUkFCOAJCCQn8oOMGkijjikIJCfyg4waSKOOK&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiIpsuOtIeTAxUAAAAAHQAAAAAQDg" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="star" class="h-4 w-4 mr-2"></i> Loe Google'i arvustusi</a>
+                </div>
                 <p class="mb-4">Kunagine talumaja on täielikult renoveeritud ühe tuntud Itaalia arhitekti poolt, kasutades vanu ja looduslikke ehitusmaterjale koos kõikide kaasaegsete mugavustega. Lisaks majutusele on 2ha looduskaunil kinnistul (tammed, eukalüptid, bambus, oliivipuud) väike bassein, jacuzzi ja infrapuna ruum ning oma väikesed jooksu- ja kõnnirajad. Alates sellest aastast on majas olemas ka eraldi jooga shala.</p>
                 
                 <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Programm ja tegevused</h3>
@@ -500,6 +510,11 @@ const eventsData = [
 
                 <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Casa La Martana</h3>
                 <p class="mb-4">Tukikohtamme on taianomainen <strong>Casa La Martana</strong> – pieni B&B lähellä Tuscaniaa ja Bolsenajärveä. Täällä asumme, syömme ja vietämme aikaa yhdessä. Entinen maalaistalo on täysin remontoitu yhdistäen vanhat luonnonmateriaalit nykyaikaisiin mukavuuksiin.</p>
+                <div class="mb-4 text-sm bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col gap-2">
+                    <a href="https://www.casalamartana.com" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="globe" class="h-4 w-4 mr-2"></i> casalamartana.com</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=42.465822,11.902689" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="map-pin" class="h-4 w-4 mr-2"></i> Katso Google Mapsissa (42.465822, 11.902689)</a>
+                    <a href="https://www.google.com/travel/search?q=Casa%20La%20Martana%0D%0A42.465822%2C%2011.902689&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C72958624%2C73059275%2C73064764%2C121529350&hl=en-GB&gl=uk&ssta=1&ts=CAEaRwopEicyJTB4MTMyOGQxOTFmNjNmYTU3NToweDhhZTMyODkyMDZlM2EwZmMSGhIUCgcI6g8QAxgJEgcI6g8QAxgKGAEyAhAA&qs=CAEyFENnc0lfTUdPdDZDU3l2R0tBUkFCOAJCCQn8oOMGkijjikIJCfyg4waSKOOK&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiIpsuOtIeTAxUAAAAAHQAAAAAQDg" target="_blank" class="flex items-center text-pink-600 hover:text-pink-800 transition-colors"><i data-lucide="star" class="h-4 w-4 mr-2"></i> Lue Google-arvostelut</a>
+                </div>
                 <p class="mb-4">Kaksiehtarisella tontilla on uima-allas, poreallas, infrapunasauna ja omat kävelyreitit, sekä oma uusi joogashala.</p>
                 
                 <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Ohjelma ja aktiviteetit</h3>
