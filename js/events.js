@@ -224,14 +224,59 @@ const eventsData = [
             location: 'Essaouira, Morocco',
             organizer: 'Raili Maripuu & Lorena Rodrigo',
             description: 'A serene Moroccan paradise with sun, sea, and nourishing yoga blended with the exotic flavours of North Africa at the 5-star Baberrih Resort.',
-            fullDescription: 'Join experienced teachers Raili Maripuu and Lorena Rodrigo for a 5-day Spring Wellness Retreat designed to help you rest, reconnect, and rejuvenate. Located on Tissa Beach, Baberrih Resort offers the perfect harmony between modern comfort, nature, and soulful living. Open to all levels.',
+            fullDescription: `
+                <p class="mb-4">Join experienced teachers Raili Maripuu and Lorena Rodrigo for a 5-day Spring Wellness Retreat designed to help you rest, reconnect, and rejuvenate. Open to all levels, the retreat includes daily accessible yoga, breathwork, and sound meditations in a beautiful private setting.</p>
+                <p class="mb-4">Mornings begin with energising practice by the ocean, afternoons invite deep rest with nourishing sound journeys, and evenings close with meditation under the stars. Nourish your body with delicious plant-based meals and immerse yourself in the warmth of Moroccan culture.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> About Baberrih Resort</h3>
+                <p class="mb-4"><a href="https://baberrih.com/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Baberrih Essaouira</a> is a 5-star oasis of peace on the Atlantic coast. A UNESCO World Heritage site, Essaouira is often described as Morocco’s best-kept treasure. Located on Tissa Beach, the resort offers the perfect harmony between modern comfort, nature, and soulful living.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Retreat Packages</h3>
+                <p class="mb-4 italic">All prices are per person and include accommodation, meals, all yoga and meditation sessions, as well as airport transfers.</p>
+                <ul class="list-none space-y-2 mb-4 pl-0">
+                    <li class="font-medium"><strong>Standard Package (Shared villa | Garden view):</strong> £875 / 995€</li>
+                    <li class="font-medium"><strong>Premium Package (Single villa | Garden view):</strong> £1,150 / 1,300€</li>
+                </ul>
+                <p class="mb-2 font-medium">Upgrades and add-ons:</p>
+                <ul class="list-disc pl-5 space-y-1 mb-4">
+                    <li>Sea view villas +25%</li>
+                    <li>Companion (no classes) –20%</li>
+                    <li>Private Reiki or Thai massage sessions from 75€ per hour</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> How to Get There</h3>
+                <p class="mb-4">The fastest and most convenient flights to Essaouira operate through <strong>Marrakech</strong> and <strong>Agadir</strong> airports (both approx. 2.5 hours from Essaouira). Direct flights from the UK to Marrakech and Agadir are frequent and affordable, with return fares typically between £100–£200.</p>
+                <p class="mb-4 font-medium">All airport transfers on retreat dates are included in your package.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Booking and Payment</h3>
+                <p class="mb-4">To book your place or for more details, please email: <a href="mailto:events@goyoga.ee" class="text-pink-600 font-semibold hover:underline">events@goyoga.ee</a></p>
+                <p class="mb-4">A <strong>non-refundable deposit of €/£200</strong> is required to secure your space. Full payment is due before the retreat and can be paid in instalments.</p>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4 text-sm font-mono text-gray-700">
+                    <strong>GOYOGA ESTONIA</strong><br>
+                    Bank: Wise<br>
+                    Sort Code: 23-14-70<br>
+                    Account: 60011952<br>
+                    IBAN: GB17 TRWI 2314 7060 0119 52
+                </div>
+                
+                <h4 class="font-semibold text-gray-800 mt-4 mb-2">Cancellation Policy:</h4>
+                <ul class="list-disc pl-5 space-y-1 mb-4 text-sm">
+                    <li>Less than 60 days: no refund</li>
+                    <li>61–90 days: 50% refund (excluding deposit)</li>
+                    <li>More than 91 days: 100% refund (excluding deposit)</li>
+                </ul>
+                <p class="italic text-sm text-gray-500 mb-8">Cancellations due to illness or major life events will be considered on a case-by-case basis.</p>
+                
+                <p class="font-medium text-lg text-center mb-2">We look forward to hosting you,</p>
+                <p class="font-serif italic text-2xl text-center text-pink-600">Raili & Lorena xoxo</p>
+            `,
             highlights: ['Luxury accommodation at Baberrih Resort', 'Daily Yoga, Breathwork & Sound Meditation', 'Locally sourced plant-based meals', 'Airport transfers included', 'Essaouira cultural experiences'],
             itinerary: [
-                { day: '06:30 – 08:30', activity: 'Dynamic Morning Yoga Practice' },
+                { day: '06:30 – 08:30', activity: 'Dynamic Morning Yoga Practice (incl Ashtanga self-practise)' },
                 { day: '09:30 – 11:00', activity: 'Nourishing Brunch' },
                 { day: '11:00 – 14:00', activity: 'Free time | Optional Group Activity' },
                 { day: '16:00 – 17:00', activity: 'Gentle Afternoon Yoga' },
-                { day: '17:00 – 18:00', activity: 'Sound Meditation | Breathwork' },
+                { day: '17:00 – 18:00', activity: 'Sound Meditation | Breathwork | Personal Dev.' },
                 { day: '18:30 – 20:00', activity: 'Dinner' },
                 { day: '20:30 – 21:00', activity: 'Evening Meditation' }
             ]
@@ -242,14 +287,59 @@ const eventsData = [
             location: 'Essaouira, Maroko',
             organizer: 'Raili Maripuu & Lorena Rodrigo',
             description: 'Rahulik Maroko paradiis päikese, mere ja elustava joogaga 5-tärni Baberrih Resortis Essaouiras.',
-            fullDescription: 'Liitu kogenud õpetajate Raili Maripuu ja Lorena Rodrigoga 5-päevasel kevadisel heaolu retriidil, mis on loodud puhkamiseks ja uue energia kogumiseks. Baberrih Resort asub Tissa rannas, pakkudes täiuslikku harmooniat kaasaegse mugavuse, looduse ja hingestatud elu vahel.',
+            fullDescription: `
+                <p class="mb-4">Liitu kogenud õpetajate Raili Maripuu ja Lorena Rodrigoga 5-päevasel kevadisel heaolu retriidil, mis on loodud puhkamiseks ja uue energia kogumiseks. Avatud kõigile tasemetele, retriit sisaldab igapäevast ligipääsetavat joogat, hingamistööd ja helimeditatsioone kaunis privaatses keskkonnas.</p>
+                <p class="mb-4">Hommikud algavad energiat andva praktikaga ookeani ääres, pärastlõunad kutsuvad sügavale puhkusele toitvate helirännakutega ning õhtud lõppevad meditatsiooniga tähtede all. Toida oma keha maitsvate taimsete toitudega ja sukeldu Maroko kultuuri soojusesse.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Baberrih Resortist</h3>
+                <p class="mb-4"><a href="https://baberrih.com/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Baberrih Essaouira</a> on 5-tärni rahuoaas Atlandi ookeani rannikul. UNESCO maailmapärandi nimistusse kuuluvat Essaouirat kirjeldatakse sageli kui Maroko kõige paremini hoitud aaret. Tissa rannas asuv kuurort pakub täiuslikku harmooniat kaasaegse mugavuse, looduse ja hingestatud elu vahel.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Retriidi paketid</h3>
+                <p class="mb-4 italic">Kõik hinnad on inimese kohta ja sisaldavad majutust, toitlustust, kõiki jooga- ja meditatsiooniseansse ning lennujaama transfeere.</p>
+                <ul class="list-none space-y-2 mb-4 pl-0">
+                    <li class="font-medium"><strong>Standard pakett (Jagatud villa | Aiavaade):</strong> 995€ / £875</li>
+                    <li class="font-medium"><strong>Premium pakett (Privaatne villa | Aiavaade):</strong> 1300€ / £1,150</li>
+                </ul>
+                <p class="mb-2 font-medium">Lisasiid ja täiendused:</p>
+                <ul class="list-disc pl-5 space-y-1 mb-4">
+                    <li>Merevaatega villad +25%</li>
+                    <li>Kaaslane (ilma tundideta) –20%</li>
+                    <li>Privaatsed Reiki või Tai massaaži seansid alates 75€/tund</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Kuidas kohale jõuda</h3>
+                <p class="mb-4">Kõige kiirem ja mugavam viis Essaouirasse jõudmiseks on lennata <strong>Marrakechi</strong> või <strong>Agadiri</strong> lennujaama (mõlemad asuvad u 2,5 tunni kaugusel Essaouirast). Otselennud Ühendkuningriigist on sagedased ja taskukohased.</p>
+                <p class="mb-4 font-medium">Kõik lennujaama transfeerid retriidi kuupäevadel on paketi hinnas.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Broneerimine ja tasumine</h3>
+                <p class="mb-4">Koha broneerimiseks või lisainfo saamiseks saada e-kiri: <a href="mailto:events@goyoga.ee" class="text-pink-600 font-semibold hover:underline">events@goyoga.ee</a></p>
+                <p class="mb-4">Oma koha kindlustamiseks on nõutav <strong>tagastamatu ettemaks 200€/£</strong>. Kogu summa tuleb tasuda enne retriiti ja seda on võimalik maksta osamaksetena.</p>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4 text-sm font-mono text-gray-700">
+                    <strong>GOYOGA ESTONIA</strong><br>
+                    Pank: Wise<br>
+                    Kontokood (Sort Code): 23-14-70<br>
+                    Konto nr: 60011952<br>
+                    IBAN: GB17 TRWI 2314 7060 0119 52
+                </div>
+                
+                <h4 class="font-semibold text-gray-800 mt-4 mb-2">Tühistamispoliitika:</h4>
+                <ul class="list-disc pl-5 space-y-1 mb-4 text-sm">
+                    <li>Vähem kui 60 päeva: raha ei tagastata</li>
+                    <li>61–90 päeva: 50% tagastus (aluseks summast arvestatakse maha ettemaks)</li>
+                    <li>Rohkem kui 91 päeva: 100% tagastus (välja arvatud ettemaks)</li>
+                </ul>
+                <p class="italic text-sm text-gray-500 mb-8">Haiguse või suurte elusündmuste tõttu tekkinud tühistamisi käsitletakse juhtumipõhiselt.</p>
+                
+                <p class="font-medium text-lg text-center mb-2">Ootame teid lennukalt võõrustama,</p>
+                <p class="font-serif italic text-2xl text-center text-pink-600">Raili & Lorena xoxo</p>
+            `,
             highlights: ['Luksuslik majutus Baberrih Resortis', 'Igapäevane jooga, hingamistöö ja helid', 'Taimne toit kohalikust toorainest', 'Lennujaama transfeerid hinnas', 'Essaouira kultuurikogemused'],
             itinerary: [
-                { day: '06:30 – 08:30', activity: 'Dünaamiline hommikupraktika' },
+                { day: '06:30 – 08:30', activity: 'Dünaamiline hommikupraktika (sh Mysore)' },
                 { day: '09:30 – 11:00', activity: 'Toitev hommikusöök' },
                 { day: '11:00 – 14:00', activity: 'Vaba aeg | Ühised tegevused' },
                 { day: '16:00 – 17:00', activity: 'Õhtupoolne leebe jooga' },
-                { day: '17:00 – 18:00', activity: 'Helirännak | Hingamistöö' },
+                { day: '17:00 – 18:00', activity: 'Helirännak | Hingamistöö | Eneseareng' },
                 { day: '18:30 – 20:00', activity: 'Õhtusöök' },
                 { day: '20:30 – 21:00', activity: 'Õhtune meditatsioon' }
             ]
@@ -260,10 +350,30 @@ const eventsData = [
             location: 'Essaouira, Marokko',
             organizer: 'Raili Maripuu & Lorena Rodrigo',
             description: 'Seesteinen Marokon paratiisi auringon, meren ja ravitsevan joogan äärellä 5 tähden Baberrih Resortissa.',
-            fullDescription: 'Tule mukaan kokeneiden opettajien Raili Maripuun ja Lorena Rodrigon 5 päivän kevätretriitille, joka on suunniteltu rentoutumiseen ja uusiutumiseen. Baberrih Resort tarjoaa täydellisen tasapainon mukavuuden ja luonnon välillä.',
+            fullDescription: `
+                <p class="mb-4">Tule mukaan kokeneiden opettajien Raili Maripuun ja Lorena Rodrigon 5 päivän kevätretriitille, joka on suunniteltu rentoutumiseen ja uusiutumiseen. Retriitti sopii kaikille tasoille ja sisältää päivittäistä joogaa, hengitystyöskentelyä ja äänimeditaatioita kauniissa yksityisessä ympäristössä.</p>
+                <p class="mb-4">Aamut alkavat energisoivalla harjoituksella valtameren rannalla, iltapäivät kutsuvat syvään lepoon ravitsevien äänimatkojen avulla, ja illat päättyvät meditaatioon tähtien alla. Ravitse kehoasi herkullisilla kasvipohjaisilla aterioilla.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Tietoa Baberrih Resortista</h3>
+                <p class="mb-4"><a href="https://baberrih.com/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Baberrih Essaouira</a> on 5 tähden rauhan keidas Atlantin rannikolla. Se sijaitsee Tissa-rannalla ja tarjoaa täydellisen tasapainon modernin mukavuuden, luonnon ja sielukkaan elämän välillä.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Retriittipaketit</h3>
+                <p class="mb-4 italic">Kaikki hinnat ovat per henkilö ja sisältävät majoituksen, ateriat, kaikki jooga- ja meditaatiosessiot sekä lentokenttäkuljetukset.</p>
+                <ul class="list-none space-y-2 mb-4 pl-0">
+                    <li class="font-medium"><strong>Standard-paketti (Jaettu villa | Puutarhanäkymä):</strong> 995€ / £875</li>
+                    <li class="font-medium"><strong>Premium-paketti (Yksityinen villa | Puutarhanäkymä):</strong> 1300€ / £1,150</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌿</span> Varaukset ja lisätiedot</h3>
+                <p class="mb-4">Varaa paikkasi tai pyydä lisätietoja sähköpostitse: <a href="mailto:events@goyoga.ee" class="text-pink-600 font-semibold hover:underline">events@goyoga.ee</a></p>
+                <p class="mb-8"><strong>200€ ei-palautettava varausmaksu</strong> vaaditaan paikan vahvistamiseksi.</p>
+
+                <p class="font-medium text-lg text-center mb-2">Odotamme innolla tapaamistasi,</p>
+                <p class="font-serif italic text-2xl text-center text-pink-600">Raili & Lorena xoxo</p>
+            `,
             highlights: ['Ylellinen majoitus Baberrih Resortissa', 'Päivittäinen jooga ja äänimeditaatio', 'Paikallinen kasvisruoka', 'Lentokenttäkuljetukset sisältyvät', 'Essaouiran kulttuurikokemukset'],
             itinerary: [
-                { day: '06:30 – 08:30', activity: 'Dynaaminen aamujooga' },
+                { day: '06:30 – 08:30', activity: 'Dynaaminen aamujooga (ml. Mysore)' },
                 { day: '09:30 – 11:00', activity: 'Ravitseva brunssi' },
                 { day: '11:00 – 14:00', activity: 'Vapaa-aika | Retket' },
                 { day: '16:00 – 17:00', activity: 'Lempeä iltapäiväjooga' },
