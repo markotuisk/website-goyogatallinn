@@ -203,121 +203,182 @@ const eventsData = [
         }
     },
     {
-        id: 'spring-rejuvenation-2026',
+        id: 'morocco-spring-2026',
         type: 'retreat',
-        category: 'estonia',
-        country: { en: 'Estonia', et: 'Eesti', fi: 'Viro' },
+        category: 'abroad',
+        country: { en: 'Morocco', et: 'Maroko', fi: 'Marokko' },
         active: true,
         featured: true,
-        expiryDate: '2026-04-20',
-        image: 'https://bookretreats.com/cdn-cgi/image/width=1200,quality=65,f=auto,sharpen=1,fit=cover,gravity=auto/assets/photo/retreat/0m/29k/29132/p_1142181/1000_1692081290.jpg',
+        expiryDate: '2026-03-20',
+        image: 'https://images.unsplash.com/photo-1533669952565-df096f42a033', // Beautiful Moroccan riad/coast
         gallery: [
-            'https://images.unsplash.com/photo-1545205597-3d9d02c29597',
-            'https://images.unsplash.com/photo-1506126613408-eca07ce68773',
-            'https://images.unsplash.com/photo-1552691021-7043334e0b51'
+            'https://images.unsplash.com/photo-1548013146-72479768bbaa',
+            'https://images.unsplash.com/photo-1550100136-e092101726f4',
+            'https://images.unsplash.com/photo-1539650116574-8efeb43e2750'
         ],
-        teachers: ['raili-maripuu'],
-        registerLink: '#contact',
+        teachers: ['raili-maripuu', 'lorena-rodrigo'],
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
-            title: 'Spring Rejuvenation Retreat',
-            date: 'April 15-18, 2026',
-            location: 'Lahemaa National Park',
-            organizer: 'Organized by Goyoga Tallinn',
-            description: 'A 4-day immersive retreat in the Estonian countryside. Deepen your practice with daily yoga, meditation, and healthy vegetarian meals.',
-            fullDescription: 'Join us for a transformative spring journey in the heart of Lahemaa. This retreat is designed to shed the winter layers and invite new energy through traditional Ashtanga practice, forest walks, and guided meditations. You will be staying in a beautiful eco-lodge, nourished by local organic food.',
-            highlights: ['Daily Mysore & Led classes', 'Guided forest bathing', 'Sauna rituals', 'Organic vegetarian meals'],
+            title: 'A Spring Wellness Retreat in Morocco',
+            date: 'March 14-18, 2026',
+            location: 'Essaouira, Morocco',
+            organizer: 'Raili Maripuu & Lorena Rodrigo',
+            description: 'A serene Moroccan paradise with sun, sea, and nourishing yoga blended with the exotic flavours of North Africa at the 5-star Baberrih Resort.',
+            fullDescription: 'Join experienced teachers Raili Maripuu and Lorena Rodrigo for a 5-day Spring Wellness Retreat designed to help you rest, reconnect, and rejuvenate. Located on Tissa Beach, Baberrih Resort offers the perfect harmony between modern comfort, nature, and soulful living. Open to all levels.',
+            highlights: ['Luxury accommodation at Baberrih Resort', 'Daily Yoga, Breathwork & Sound Meditation', 'Locally sourced plant-based meals', 'Airport transfers included', 'Essaouira cultural experiences'],
             itinerary: [
-                { day: 'Day 1', activity: 'Arrival, Opening Circle & Evening Gentleness' },
-                { day: 'Day 2-3', activity: 'Early Morning Practice, Workshop, Free Time & Meditation' },
-                { day: 'Day 4', activity: 'Morning Practice & Closing Ritual' }
+                { day: '06:30 – 08:30', activity: 'Dynamic Morning Yoga Practice' },
+                { day: '09:30 – 11:00', activity: 'Nourishing Brunch' },
+                { day: '11:00 – 14:00', activity: 'Free time | Optional Group Activity' },
+                { day: '16:00 – 17:00', activity: 'Gentle Afternoon Yoga' },
+                { day: '17:00 – 18:00', activity: 'Sound Meditation | Breathwork' },
+                { day: '18:30 – 20:00', activity: 'Dinner' },
+                { day: '20:30 – 21:00', activity: 'Evening Meditation' }
             ]
         },
         et: {
-            title: 'Kevadine värskendusretriit',
-            date: '15.-18. aprill 2026',
-            location: 'Lahemaa rahvuspark',
-            organizer: 'Korraldaja: Goyoga Tallinn',
-            description: '4-päevane süvenenud retriit Eesti looduses. Süvenda oma praktikat igapäevase jooga, meditatsiooni ja tervisliku taimetoiduga.',
-            fullDescription: 'Liitu meiega transformatiivsel kevadisel rännakul Lahemaa südames. See retriit on loodud talvekihtide maharaputamiseks ja uue energia kutsumiseks läbi traditsioonilise Ashtanga praktika, metsapaisutuste ja juhitud meditatsioonide.',
-            highlights: ['Igapäevane Mysore ja Led tund', 'Metsasuplus', 'Saunarituaalid', 'Kohalik mahetoit'],
+            title: 'Kevadine heaolu retriit Marokos',
+            date: '14.–18. märts 2026',
+            location: 'Essaouira, Maroko',
+            organizer: 'Raili Maripuu & Lorena Rodrigo',
+            description: 'Rahulik Maroko paradiis päikese, mere ja elustava joogaga 5-tärni Baberrih Resortis Essaouiras.',
+            fullDescription: 'Liitu kogenud õpetajate Raili Maripuu ja Lorena Rodrigoga 5-päevasel kevadisel heaolu retriidil, mis on loodud puhkamiseks ja uue energia kogumiseks. Baberrih Resort asub Tissa rannas, pakkudes täiuslikku harmooniat kaasaegse mugavuse, looduse ja hingestatud elu vahel.',
+            highlights: ['Luksuslik majutus Baberrih Resortis', 'Igapäevane jooga, hingamistöö ja helid', 'Taimne toit kohalikust toorainest', 'Lennujaama transfeerid hinnas', 'Essaouira kultuurikogemused'],
             itinerary: [
-                { day: '1. päev', activity: 'Saabumine, avaring ja õhtune jooga' },
-                { day: '2.-3. päev', activity: 'Varahommikune praktika, töötuba, vaba aeg ja meditatsioon' },
-                { day: '4. päev', activity: 'Hommikune praktika ja lõpuring' }
+                { day: '06:30 – 08:30', activity: 'Dünaamiline hommikupraktika' },
+                { day: '09:30 – 11:00', activity: 'Toitev hommikusöök' },
+                { day: '11:00 – 14:00', activity: 'Vaba aeg | Ühised tegevused' },
+                { day: '16:00 – 17:00', activity: 'Õhtupoolne leebe jooga' },
+                { day: '17:00 – 18:00', activity: 'Helirännak | Hingamistöö' },
+                { day: '18:30 – 20:00', activity: 'Õhtusöök' },
+                { day: '20:30 – 21:00', activity: 'Õhtune meditatsioon' }
             ]
         },
         fi: {
-            title: 'Kevään uudistumisretriitti',
-            date: '15.-18. huhtikuuta 2026',
-            location: 'Lahemaan kansallispuisto',
-            organizer: 'Järjestäjä: Goyoga Tallinn',
-            description: '4 päivän syventävä retriitti Viron maaseudulla. Syvennä harjoitustasi päivittäisellä joogalla, meditaatiolla ja terveellisellä kasvisruoalla.',
-            fullDescription: 'Tule mukaan uudistavalle kevätmatkalle Lahemaan sydämeen. Retriitti on suunniteltu karistamaan talven pölyt ja kutsumaan uutta energiaa perinteisen Ashtangan ja luonnon avulla.',
-            highlights: ['Päivittäiset Mysore-tunnit', 'Metsäkylpy', 'Saunarituaalit', 'Luomuruokaa'],
+            title: 'Kevään hyvinvointiretriitti Marokossa',
+            date: '14.–18. maaliskuuta 2026',
+            location: 'Essaouira, Marokko',
+            organizer: 'Raili Maripuu & Lorena Rodrigo',
+            description: 'Seesteinen Marokon paratiisi auringon, meren ja ravitsevan joogan äärellä 5 tähden Baberrih Resortissa.',
+            fullDescription: 'Tule mukaan kokeneiden opettajien Raili Maripuun ja Lorena Rodrigon 5 päivän kevätretriitille, joka on suunniteltu rentoutumiseen ja uusiutumiseen. Baberrih Resort tarjoaa täydellisen tasapainon mukavuuden ja luonnon välillä.',
+            highlights: ['Ylellinen majoitus Baberrih Resortissa', 'Päivittäinen jooga ja äänimeditaatio', 'Paikallinen kasvisruoka', 'Lentokenttäkuljetukset sisältyvät', 'Essaouiran kulttuurikokemukset'],
             itinerary: [
-                { day: 'Päivä 1', activity: 'Saapuminen, avauspiiri ja iltajooga' },
-                { day: 'Päivä 2-3', activity: 'Aamuharjoitus, työpaja, vapaa-aika ja meditaatio' },
-                { day: 'Päivä 4', activity: 'Aamuharjoitus ja päätösrituaali' }
+                { day: '06:30 – 08:30', activity: 'Dynaaminen aamujooga' },
+                { day: '09:30 – 11:00', activity: 'Ravitseva brunssi' },
+                { day: '11:00 – 14:00', activity: 'Vapaa-aika | Retket' },
+                { day: '16:00 – 17:00', activity: 'Lempeä iltapäiväjooga' },
+                { day: '17:00 – 18:00', activity: 'Äänimeditaatio | Hengitysharjoitus' },
+                { day: '18:30 – 20:00', activity: 'Illallinen' },
+                { day: '20:30 – 21:00', activity: 'Iltameditaatio' }
             ]
         }
     },
     {
-        id: 'bali-spirit-2026',
+        id: 'italy-retreat-2026',
         type: 'retreat',
         category: 'abroad',
-        country: { en: 'Indonesia', et: 'Indoneesia', fi: 'Indonesia' },
+        country: { en: 'Italy', et: 'Itaalia', fi: 'Italia' },
         active: true,
         featured: true,
-        expiryDate: '2026-11-20',
-        image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4',
-        gallery: [
-            'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4',
-            'https://images.unsplash.com/photo-1537944434965-cf4679d1a598',
-            'https://images.unsplash.com/photo-1518709268805-4e9042af9f23'
-        ],
+        expiryDate: '2026-06-20',
+        image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216',
         teachers: ['raili-maripuu'],
-        registerLink: '#contact',
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
-            title: 'Bali Spirit & Soul Retreat',
-            date: 'November 10-20, 2026',
-            location: 'Ubud, Bali',
-            organizer: 'Organized by Goyoga Tallinn',
-            description: 'A transformative 10-day journey in the heart of Bali. Experience daily Ashtanga, cultural immersions, and lush tropical serenity.',
-            fullDescription: 'Ubud is the spiritual beating heart of Bali. Join Raili Maripuu for 10 days of deep practice amidst rice paddies and tropical jungles. This retreat is for those looking to disconnect from the noise and reconnect with their essence.',
-            highlights: ['Daily Mysore style practice', 'Traditional Balinese blessing', 'Rice paddy trekking', 'Holistic spa treatments'],
-            itinerary: [
-                { day: 'Day 1', activity: 'Welcome Dinner & Ubud Introduction' },
-                { day: 'Day 2-9', activity: 'Early Practice, Breakfast, Excursions/Spa, Evening Yin' },
-                { day: 'Day 10', activity: 'Farewell Practice & Transit' }
-            ]
+            title: 'Summer Retreat in Italy',
+            date: 'June 2026',
+            location: 'Tuscany, Italy',
+            organizer: 'Goyoga Tallinn',
+            description: 'A soulful yoga journey in the heart of Tuscany. Details coming soon.',
+            highlights: ['Tuscan villa stay', 'Daily Ashtanga', 'Italian culinary experiences']
         },
         et: {
-            title: 'Bali vaimu ja hinge retriit',
-            date: '10.-20. november 2026',
-            location: 'Ubud, Bali',
-            organizer: 'Korraldaja: Goyoga Tallinn',
-            description: 'Transformatiivne 10-päevane rännak Bali südames. Igapäevane Ashtanga, kultuurilised elamused ja troopiline vaikus.',
-            fullDescription: 'Ubud on Bali vaimne süda. Liitu Raili Maripuuga 10-päevaseks süvapraktikaks riisipõldude ja troopiliste džunglite vahel.',
-            highlights: ['Igapäevane Mysore praktika', 'Traditsiooniline Bali õnnistus', 'Rännakud riisipõldudel', 'Holistilised spaahoolitsused'],
-            itinerary: [
-                { day: '1. päev', activity: 'Tervitusõhtusöök ja sissejuhatus' },
-                { day: '2.-9. päev', activity: 'Varajane praktika, hommikusöök, ekskursioonid, õhtune Yin' },
-                { day: '10. päev', activity: 'Hüvastijätupraktika ja kojusõit' }
-            ]
+            title: 'Suvine joogaretriit Itaalias',
+            date: 'Juuni 2026',
+            location: 'Toscana, Itaalia',
+            organizer: 'Goyoga Tallinn',
+            description: 'Hingestatud joogarännak Toscana südames. Detailid peagi tulekul.',
+            highlights: ['Majutus Toscanavillas', 'Igapäevane Ashtanga', 'Itaalia köögi maitsed']
         },
         fi: {
-            title: 'Balin henki ja sielu -retriitti',
-            date: '10.-20. marraskuuta 2026',
-            location: 'Ubud, Bali',
-            organizer: 'Järjestäjä: Goyoga Tallinn',
-            description: 'Muuttava 10 päivän matka Balin sydämessä. Koe päivittäinen Ashtanga, kulttuurikokemukset ja trooppinen tyyni.',
-            fullDescription: 'Ubud on Balin henkinen keskus. Tule Raili Maripuun mukaan 10 päivän syventävään harjoitukseen riisipeltojen ja viidakon katveessa.',
-            highlights: ['Päivittäinen Mysore-harjoitus', 'Perinteinen balilainen siunaus', 'Vaellukset riisipelloilla', 'Kokonaisvaltaiset hoidot'],
-            itinerary: [
-                { day: 'Päivä 1', activity: 'Tervetuliaisillallinen ja opastus' },
-                { day: 'Päivä 2-9', activity: 'Aamuharjoitus, aamiainen, retket, ilta-Yin' },
-                { day: 'Päivä 10', activity: 'Päätösharjoitus ja kuljetus' }
-            ]
+            title: 'Kesäretriitti Italiassa',
+            date: 'Kesäkuu 2026',
+            location: 'Toscana, Italia',
+            organizer: 'Goyoga Tallinn',
+            description: 'Sielukas joogamatka Toscanan sydämessä. Tiedot tulossa pian.',
+            highlights: ['Majoitus Toscanan maaseudulla', 'Päivittäinen Ashtanga', 'Italialaisia makuelämyksiä']
+        }
+    },
+    {
+        id: 'uk-retreat-2026',
+        type: 'retreat',
+        category: 'abroad',
+        country: { en: 'United Kingdom', et: 'Inglismaa', fi: 'Iso-Britannia' },
+        active: true,
+        featured: true,
+        expiryDate: '2026-09-20',
+        image: 'https://images.unsplash.com/photo-1510051644265-934cb991865e',
+        teachers: ['raili-maripuu'],
+        registerLink: 'mailto:events@goyoga.ee',
+        en: {
+            title: 'Autumn Retreat in the UK',
+            date: 'September 2026',
+            location: 'English Countryside',
+            organizer: 'Goyoga Tallinn',
+            description: 'Reconnect with nature in the serene English countryside. Details coming soon.',
+            highlights: ['Luxury lodge stay', 'Mindful practice', 'Nature walks']
+        },
+        et: {
+            title: 'Sügisene retriit Inglismaal',
+            date: 'September 2026',
+            location: 'Inglise maapiirkond',
+            organizer: 'Goyoga Tallinn',
+            description: 'Loo taas ühendus loodusega Inglise maapiirkonna vaikuses. Detailid peagi tulekul.',
+            highlights: ['Luksuslik majutus', 'Teadlik praktika', 'Loodusmatkad']
+        },
+        fi: {
+            title: 'Syysretriitti Englannissa',
+            date: 'Syyskuu 2026',
+            location: 'Englannin maaseutu',
+            organizer: 'Goyoga Tallinn',
+            description: 'Palaa luonnon ääreen Englannin maaseudun rauhassa. Tiedot tulossa pian.',
+            highlights: ['Ylellinen lodgemajoitus', 'Tietoinen harjoitus', 'Luontoretket']
+        }
+    },
+    {
+        id: 'india-retreat-2026',
+        type: 'retreat',
+        category: 'abroad',
+        country: { en: 'India', et: 'India', fi: 'Intia' },
+        active: true,
+        featured: true,
+        expiryDate: '2026-12-20',
+        image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
+        teachers: ['raili-maripuu'],
+        registerLink: 'mailto:events@goyoga.ee',
+        en: {
+            title: 'Sacred India Journey',
+            date: 'December 2026',
+            location: 'Mysuru, India',
+            organizer: 'Goyoga Tallinn',
+            description: 'A traditional journey to the source of Ashtanga Yoga. Details coming soon.',
+            highlights: ['Traditional practice', 'Cultural immersion', 'Spiritual sites']
+        },
+        et: {
+            title: 'Püha India rännak',
+            date: 'Detsember 2026',
+            location: 'Mysuru, India',
+            organizer: 'Goyoga Tallinn',
+            description: 'Traditsiooniline rännak Ashtanga jooga algallikateni. Detailid peagi tulekul.',
+            highlights: ['Traditsiooniline praktika', 'Kultuurilised elamused', 'Pühapaigad']
+        },
+        fi: {
+            title: 'Pyhä Intian matka',
+            date: 'Joulukuu 2026',
+            location: 'Mysuru, Intia',
+            organizer: 'Goyoga Tallinn',
+            description: 'Perinteinen matka Ashtanga-joogan lähteille. Tiedot tulossa pian.',
+            highlights: ['Perinteinen harjoitus', 'Kulttuurikokemukset', 'Henkiset kohteet']
         }
     },
     {
