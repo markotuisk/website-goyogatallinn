@@ -87,9 +87,9 @@ function renderTeacherData(id, lang) {
         imageEl.src = image;
         imageEl.alt = name;
 
-        // Custom Image Positioning for specific framing
-        if (id === 'dian-jarvenkyla') {
-            imageEl.style.objectPosition = 'center top'; // Adjust to keep hands/head in frame
+        // Custom Image Positioning from data.js
+        if (basic && basic.profilePosition) {
+            imageEl.style.objectPosition = basic.profilePosition;
         } else {
             imageEl.style.objectPosition = 'center center'; // Default
         }
