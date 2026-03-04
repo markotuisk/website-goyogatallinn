@@ -210,11 +210,20 @@ const eventsData = [
         active: true,
         featured: true,
         expiryDate: '2026-03-20',
-        image: 'https://images.unsplash.com/photo-1533669952565-df096f42a033', // Beautiful Moroccan riad/coast
+        cardImage: 'assets/retreats/1-LandingPageCard-morocco-2026-goyoga-photo-baberrih-hotel-hospitality-palaces-resorts-essaouira-39-1024w.webp',
+        headerImage: 'assets/retreats/2-EventPageHeader-morocco-2026-goyoga-photo-baberrih-hotel-hospitality-palaces-resorts-essaouira-39-1024w.webp',
+        image: 'assets/retreats/1-LandingPageCard-morocco-2026-goyoga-photo-baberrih-hotel-hospitality-palaces-resorts-essaouira-39-1024w.webp',
         gallery: [
-            'https://images.unsplash.com/photo-1548013146-72479768bbaa',
-            'https://images.unsplash.com/photo-1550100136-e092101726f4',
-            'https://images.unsplash.com/photo-1539650116574-8efeb43e2750'
+            'assets/retreats/3-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-17-600w.webp',
+            'assets/retreats/4-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-19-600w.webp',
+            'assets/retreats/5-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-20-600w.webp',
+            'assets/retreats/6-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-29-600w.webp',
+            'assets/retreats/7-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-30-600w.webp',
+            'assets/retreats/8-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-36-600w.webp',
+            'assets/retreats/9-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-41-600w.webp',
+            'assets/retreats/10-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-61-600w.webp',
+            'assets/retreats/11-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-72-600w.webp',
+            'assets/retreats/12-photo-morocco-2026-goyoga-tallinn-baberrih-hotel-hospitality-palaces-resorts-essaouira-74-600w.webp'
         ],
         teachers: ['raili-maripuu', 'lorena-rodrigo'],
         registerLink: 'mailto:events@goyoga.ee',
