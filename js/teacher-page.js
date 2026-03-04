@@ -86,6 +86,13 @@ function renderTeacherData(id, lang) {
     if (imageEl) {
         imageEl.src = image;
         imageEl.alt = name;
+
+        // Custom Image Positioning for specific framing
+        if (id === 'dian-jarvenkyla') {
+            imageEl.style.objectPosition = 'center top'; // Adjust to keep hands/head in frame
+        } else {
+            imageEl.style.objectPosition = 'center center'; // Default
+        }
     }
 
     const bioEl = document.getElementById('teacher-bio');
