@@ -977,7 +977,7 @@ function renderEvents(container, featuredOnly = false) {
     const yesterdayStr = yesterday.toDateString();
 
     // Filter and sort events
-    let events = eventsData.filter(event => {
+    let activeEvents = eventsData.filter(event => {
         // expiryDate is typically the day after the event at 00:00:00
         const expiryDate = new Date(event.expiryDate);
         // Persist for an additional 24 hours after expiry (48h after event start)
@@ -987,17 +987,21 @@ function renderEvents(container, featuredOnly = false) {
         return event.active && !isHidden && isFeaturedMatch;
     });
 
-    // Limit to 3 if on homepage
+    let displayEvents = activeEvents;
+
+    // Show 3 events and 3 retreats if on homepage
     if (featuredOnly) {
-        events = events.slice(0, 3);
+        const studioEvents = activeEvents.filter(e => e.type !== 'retreat').slice(0, 3);
+        const retreats = activeEvents.filter(e => e.type === 'retreat').slice(0, 3);
+        displayEvents = [...studioEvents, ...retreats];
     }
 
-    if (events.length === 0) {
+    if (displayEvents.length === 0) {
         container.innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">${translationsData[lang]['faq.no_results'] || 'No upcoming events.'}</p>`;
         return;
     }
 
-    container.innerHTML = events.map(event => {
+    container.innerHTML = displayEvents.map(event => {
         const data = event[lang] || event['en'];
         const typeLabel = event.type === 'retreat'
             ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
