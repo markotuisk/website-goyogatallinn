@@ -539,33 +539,92 @@ const eventsData = [
         country: { en: 'United Kingdom', et: 'Inglismaa', fi: 'Iso-Britannia' },
         active: true,
         featured: true,
-        expiryDate: '2026-09-20',
-        image: 'https://images.unsplash.com/photo-1510051644265-934cb991865e',
+        expiryDate: '2026-08-30',
+        image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad', // London/UK vibe
+        gallery: [
+            'https://images.unsplash.com/photo-1505205296326-2178af1b4fb4', // UK Countryside/Oxford
+            'https://images.unsplash.com/photo-1488747279002-c8523379faaa', // London
+            'https://images.unsplash.com/photo-1621252179027-94459d278660' // Reading/UK town
+        ],
         teachers: ['raili-maripuu'],
         registerLink: 'mailto:events@goyoga.ee',
         en: {
-            title: 'Autumn Retreat in the UK',
-            date: 'September 2026',
-            location: 'English Countryside',
-            organizer: 'Goyoga Tallinn',
-            description: 'Reconnect with nature in the serene English countryside. Details coming soon.',
-            highlights: ['Luxury lodge stay', 'Mindful practice', 'Nature walks']
+            title: 'Know Your Teacher: UK Summer Camp',
+            date: 'August 2026 (7 Days)',
+            location: 'Reading | London | Oxford | Windsor',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Experience the Parampara tradition. Spend a week practicing in teacher Raili\'s home shala in Reading, combined with cultural trips across the UK.',
+            fullDescription: `
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🇬🇧</span> Know Your Teacher</h3>
+                <p class="mb-4">In yoga philosophy, it is said that you only truly get to know your teacher by being in their environment, spending time with their family, sharing meals, and simply being with them.</p>
+                <p class="mb-4">In Ashtanga yoga, the <em>Parampara</em> tradition is essential. This means the teachings are passed down practically one-on-one or in a very small circle to ensure the authenticity of the practice remains close to the original source.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Practice & Tradition</h3>
+                <p class="mb-4">In addition to running and teaching at the Ashtanga Estonia shala, teacher Raili also teaches in her hometown in England—both in her own home shala and at the <a href="https://yogareading.co.uk/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Yoga Reading</a> studio.</p>
+                <p class="mb-4">We started the tradition of the England camp in 2022, and it unexpectedly became an immediate hit! Therefore, we are thrilled to announce our Summer Yoga Camp in England for 2026.</p>
+                <p class="mb-4">This retreat includes a proper, traditional, and intensive week of Ashtanga yoga from Monday to Saturday. Expect 6 days filled with non-stop yoga, pranayama, meditation, technique, and philosophy.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🗺️</span> The Itinerary</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li><strong>3 Days</strong> of practice in teacher Raili's home shala in <strong>Reading</strong>.</li>
+                    <li><strong>2 Days</strong> of Mysore practice at <a href="https://ashtangayogalondon.com/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Ashtanga Yoga London</a>.</li>
+                    <li>Participation in a special workshop in Reading (e.g., with Hamish Hendry), offering a super opportunity to practice alongside the UK Ashtanga community.</li>
+                    <li><strong>Cultural Experiences:</strong> We will hang out and explore the sights of London, the historic university city of <a href="https://oxford.org/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Oxford</a>, and the royal town of <a href="https://www.windsor.gov.uk/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Windsor</a>.</li>
+                </ul>
+            `,
+            highlights: ['Parampara tradition experience', 'Practice in Raili\'s home shala', 'Practice at Ashtanga Yoga London', 'Cultural trips to Oxford & Windsor', 'Connect with the UK Ashtanga community']
         },
         et: {
-            title: 'Sügisene retriit Inglismaal',
-            date: 'September 2026',
-            location: 'Inglise maapiirkond',
-            organizer: 'Goyoga Tallinn',
-            description: 'Loo taas ühendus loodusega Inglise maapiirkonna vaikuses. Detailid peagi tulekul.',
-            highlights: ['Luksuslik majutus', 'Teadlik praktika', 'Loodusmatkad']
+            title: 'Tunne Oma Õpetajat: Inglismaa laager',
+            date: 'August 2026 (7 päeva)',
+            location: 'Reading | London | Oxford | Windsor',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Koge Parampara traditsiooni. Veeda nädal praktiseerides õpetaja Raili kodushalas Readingus, kombineerituna kultuurireisidega üle Inglismaa.',
+            fullDescription: `
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🇬🇧</span> Tunne oma õpetajat</h3>
+                <p class="mb-4">Jooga filosoofias öeldakse, et oma õpetajat saad Sa tõeliselt tundma ainult viibides tema enda keskkonnas, olles tema perega, jagades toidukordi ja temaga aega viites.</p>
+                <p class="mb-4">Ashtanga joogas on oluline <em>parampara</em> traditsioon. See tähendab, et õpetus antakse edasi praktiliselt üks-ühele või väga väikeses ringis, et tagada õpetuse autentsus ja ligilähedus originaalile. Eestlaste mõttemaailmas on see väga sarnane folkloorile.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Praktika ja traditsioon</h3>
+                <p class="mb-4">Lisaks Ashtanga Estonia shala pidamisele ja õpetamisele annab õpetaja Raili tunde ka oma elukohas Inglismaal – nii enda kodushalas kui ka <a href="https://yogareading.co.uk/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Yoga Reading'u</a> stuudios.</p>
+                <p class="mb-4">Inglismaa laagri traditsiooniga tegime algust 2022. aastal ja sellest sai ootamatult kohe suur hitt! Seetõttu on meil ülihea meel välja hõigata Suvine joogalaager Inglismaal.</p>
+                <p class="mb-4">See sisaldab ühte korralikku traditsioonilist ja intensiivset Ashtanga jooga nädalat esmaspäevast laupäevani. See on 6 joogat täis päeva – non-stop joogat, pranayamat, meditatsiooni, tehnikat ja filosoofiat.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🗺️</span> Laagri kava</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li><strong>3 päeva</strong> praktiseerime õpetaja Raili kodushalas <strong>Reading'us</strong>.</li>
+                    <li><strong>2 päeva</strong> teeme Mysore praktikat <a href="https://ashtangayogalondon.com/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Ashtanga Yoga Londonis</a>.</li>
+                    <li>Osaleme workshopil Reading'us (nt. Hamish Hendryga) – super võimalus joogatada koos UK ashtanga kogukonnaga.</li>
+                    <li><strong>Kultuurielamused:</strong> Hängime ja naudime kultuurielamusi Londonis, <a href="https://oxford.org/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Oxfordis</a> ja <a href="https://www.windsor.gov.uk/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Windsoris</a>.</li>
+                </ul>
+            `,
+            highlights: ['Parampara traditsiooni kogemus', 'Praktika Raili kodushalas', 'Praktika Ashtanga Yoga Londonis', 'Kultuurireisid Oxfordi ja Windsori', 'Tutvumine UK Ashtanga kogukonnaga']
         },
         fi: {
-            title: 'Syysretriitti Englannissa',
-            date: 'Syyskuu 2026',
-            location: 'Englannin maaseutu',
-            organizer: 'Goyoga Tallinn',
-            description: 'Palaa luonnon ääreen Englannin maaseudun rauhassa. Tiedot tulossa pian.',
-            highlights: ['Ylellinen lodgemajoitus', 'Tietoinen harjoitus', 'Luontoretket']
+            title: 'Tunne Opettajasi: Englannin leiri',
+            date: 'Elokuu 2026 (7 päivää)',
+            location: 'Reading | Lontoo | Oxford | Windsor',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Koe Parampara-perinne. Vietä viikko harjoitellen opettaja Railin kotishalassa Readingissa yhdistettynä kulttuuriretkiin ympäri Englantia.',
+            fullDescription: `
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🇬🇧</span> Tunne opettajasi</h3>
+                <p class="mb-4">Joogafilosofiassa sanotaan, että opit tuntemaan opettajasi todella vain olemalla hänen ympäristössään, viettämällä aikaa hänen perheensä kanssa ja jakamalla aterioita.</p>
+                <p class="mb-4">Ashtanga-joogassa <em>Parampara</em>-perinne on elintärkeä. Tämä tarkoittaa, että opetukset siirretään käytännössä yksi kerrallaan tai hyvin pienessä piirissä, jotta harjoituksen aitous säilyy lähellä alkuperäistä lähdettä.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Harjoitus ja perinne</h3>
+                <p class="mb-4">Ashtanga Estonia -shalan johtamisen lisäksi opettaja Raili opettaa kotikaupungissaan Englannissa – sekä omassa kotishalassaan että <a href="https://yogareading.co.uk/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Yoga Reading</a> -studiolla.</p>
+                <p class="mb-4">Aloitimme Englannin leirin perinteen vuonna 2022, ja siitä tuli odottamattoman suuri hitti! Siksi olemme innoissamme voidessamme julkistaa vuoden 2026 Kesäjoogaleirin Englannissa.</p>
+                <p class="mb-4">Leiri sisältää intensiivisen, perinteisen Ashtanga-joogaviikon maanantaista lauantaihin. Odotettavissa on 6 päivää täynnä tauotonta joogaa, pranayamaa, meditaatiota, tekniikkaa ja filosofiaa.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🗺️</span> Leirin ohjelma</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li><strong>3 päivää</strong> harjoittelemme opettaja Railin kotishalassa <strong>Readingissa</strong>.</li>
+                    <li><strong>2 päivää</strong> teemme Mysore-harjoitusta <a href="https://ashtangayogalondon.com/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Ashtanga Yoga Londonissa</a>.</li>
+                    <li>Osallistuminen workshopiin Readingissa, mikä on upea mahdollisuus harjoitella yhdessä Britannian Ashtanga-yhteisön kanssa.</li>
+                    <li><strong>Kulttuurielämykset:</strong> Vietämme aikaa ja nautimme nähtävyyksistä Lontoossa, <a href="https://oxford.org/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Oxfordissa</a> ja kuninkaallisessa <a href="https://www.windsor.gov.uk/" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Windsorissa</a>.</li>
+                </ul>
+            `,
+            highlights: ['Parampara-perinteen kokeminen', 'Harjoitus Railin kotishalassa', 'Harjoitus Ashtanga Yoga Londonissa', 'Kulttuuriretket Oxfordiin ja Windsoriin', 'Tutustuminen Britannian Ashtanga-yhteisöön']
         }
     },
     {
