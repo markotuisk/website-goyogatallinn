@@ -1,42 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events & Retreats | GoYoga Tallinn</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/branding/logo-goyoga-tallinn-estonia.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logo-goyoga-tallinn-estonia-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/logo-goyoga-tallinn-estonia-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fcfbf9; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .filter-btn.active { background-color: #111827; color: white; border-color: #111827; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbf9;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .filter-btn.active {
+            background-color: #111827;
+            color: white;
+            border-color: #111827;
+        }
     </style>
 </head>
+
 <body class="text-gray-900 pt-20">
 
     <!-- Navbar (Aligned with index.html) -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm">
         <div class="container-custom py-4 md:py-5">
             <div class="flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-serif font-medium tracking-wide">GoYoga</a>
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="GoYoga Tallinn" class="h-10 w-auto">
+                </a>
                 <nav class="hidden md:block">
                     <ul class="flex items-center space-x-8">
-                        <li><a href="index.html#home" class="text-sm font-medium link-underline" data-i18n="nav.home">Home</a></li>
-                        <li><a href="index.html#about" class="text-sm font-medium link-underline" data-i18n="nav.about">About</a></li>
-                        <li><a href="index.html#schedule" class="text-sm font-medium link-underline" data-i18n="nav.schedule">Schedule</a></li>
-                        <li><a href="index.html#pricing" class="text-sm font-medium link-underline" data-i18n="nav.pricing">Pricing</a></li>
-                        <li><a href="index.html#teachers" class="text-sm font-medium link-underline" data-i18n="nav.teachers">Teachers</a></li>
-                        <li><a href="index.html#studio" class="text-sm font-medium link-underline" data-i18n="nav.studio">Studio</a></li>
-                        <li><a href="events.html" class="text-sm font-medium link-underline text-pink-600" data-i18n="nav.events">Events</a></li>
-                        <li><a href="index.html#contact" class="text-sm font-medium link-underline" data-i18n="nav.contact">Contact</a></li>
-                        
+                        <li><a href="index.html#home" class="text-sm font-medium link-underline"
+                                data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#about" class="text-sm font-medium link-underline"
+                                data-i18n="nav.about">About</a></li>
+                        <li><a href="index.html#schedule" class="text-sm font-medium link-underline"
+                                data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="index.html#pricing" class="text-sm font-medium link-underline"
+                                data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="index.html#teachers" class="text-sm font-medium link-underline"
+                                data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="index.html#studio" class="text-sm font-medium link-underline"
+                                data-i18n="nav.studio">Studio</a></li>
+                        <li><a href="events.html" class="text-sm font-medium link-underline text-pink-600"
+                                data-i18n="nav.events">Events</a></li>
+                        <li><a href="index.html#contact" class="text-sm font-medium link-underline"
+                                data-i18n="nav.contact">Contact</a></li>
+
                         <!-- Language Switcher -->
                         <li class="language-switcher ml-4">
                             <button id="language-toggle" class="flex items-center gap-2 text-sm font-medium">
                                 <span class="language-flag-container">
-                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag" id="current-flag">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag"
+                                        id="current-flag">
                                 </span>
                                 <span id="current-language">EN</span>
                                 <i data-lucide="chevron-down" class="h-4 w-4"></i>
@@ -66,9 +100,13 @@
     <section class="py-24 md:py-32 bg-white border-b border-gray-50">
         <div class="container-custom">
             <div class="max-w-3xl">
-                <span class="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase text-pink-600 bg-pink-50 rounded-full mb-6" data-i18n="events.tagline">Süvenda oma praktikat</span>
-                <h1 class="text-5xl md:text-7xl font-medium mb-8 leading-tight" data-i18n="events.title">Upcoming Events & Retreats</h1>
-                <p class="text-xl text-gray-500 leading-relaxed" data-i18n="events.description">Join us for special workshops and immersive retreats designed to expand your knowledge and rejuvenate your spirit.</p>
+                <span
+                    class="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase text-pink-600 bg-pink-50 rounded-full mb-6"
+                    data-i18n="events.tagline">Süvenda oma praktikat</span>
+                <h1 class="text-5xl md:text-7xl font-medium mb-8 leading-tight" data-i18n="events.title">Upcoming Events
+                    & Retreats</h1>
+                <p class="text-xl text-gray-500 leading-relaxed" data-i18n="events.description">Join us for special
+                    workshops and immersive retreats designed to expand your knowledge and rejuvenate your spirit.</p>
             </div>
         </div>
     </section>
@@ -78,9 +116,15 @@
         <div class="container-custom">
             <!-- Filter Bar -->
             <div class="flex flex-wrap items-center gap-4 mb-16">
-                <button class="filter-btn active px-8 py-3 rounded-xl border border-gray-200 bg-white text-sm font-bold uppercase tracking-widest transition-all hover:border-gray-900 shadow-sm" data-category="all">All Happenings</button>
-                <button class="filter-btn px-8 py-3 rounded-xl border border-gray-200 bg-white text-sm font-bold uppercase tracking-widest transition-all hover:border-gray-900 shadow-sm" data-category="studio">Studio Events</button>
-                <button class="filter-btn px-8 py-3 rounded-xl border border-gray-200 bg-white text-sm font-bold uppercase tracking-widest transition-all hover:border-gray-900 shadow-sm" data-category="retreat">Retreats</button>
+                <button
+                    class="filter-btn active px-8 py-3 rounded-xl border border-gray-200 bg-white text-sm font-bold uppercase tracking-widest transition-all hover:border-gray-900 shadow-sm"
+                    data-category="all">All Happenings</button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-xl border border-gray-200 bg-white text-sm font-bold uppercase tracking-widest transition-all hover:border-gray-900 shadow-sm"
+                    data-category="studio">Studio Events</button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-xl border border-gray-200 bg-white text-sm font-bold uppercase tracking-widest transition-all hover:border-gray-900 shadow-sm"
+                    data-category="retreat">Retreats</button>
             </div>
 
             <!-- Events Grid -->
@@ -93,7 +137,12 @@
     <!-- Footer (Simplified) -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container-custom text-center">
-            <p class="text-gray-500 text-sm tracking-widest uppercase" data-i18n="footer.copyright">© 2025 GoYoga.ee. All rights reserved.</p>
+            <div class="mb-6 flex justify-center">
+                <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="GoYoga Tallinn"
+                    class="h-10 w-auto brightness-0 invert">
+            </div>
+            <p class="text-gray-500 text-sm tracking-widest uppercase" data-i18n="footer.copyright">© 2025 GoYoga.ee.
+                All rights reserved.</p>
         </div>
     </footer>
 
@@ -105,11 +154,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('all-events-container');
             const btns = document.querySelectorAll('.filter-btn');
-            
+
             function updateEventsListing(category = 'all') {
                 const lang = localStorage.getItem('preferredLanguage') || 'en';
                 const now = new Date();
-                
+
                 let events = eventsData.filter(event => {
                     const isExpired = event.expiryDate && new Date(event.expiryDate) < now;
                     const matchesCategory = category === 'all' || event.type === category;
@@ -123,12 +172,12 @@
 
                 container.innerHTML = events.map(event => {
                     const data = event[lang] || event['en'];
-                    const typeLabel = event.type === 'retreat' 
+                    const typeLabel = event.type === 'retreat'
                         ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
                         : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
-                    const categoryLabel = event.category === 'abroad' 
+                    const categoryLabel = event.category === 'abroad'
                         ? (lang === 'et' ? 'Välismaal' : lang === 'fi' ? 'Ulkomailla' : 'Abroad')
-                        : event.category === 'estonia' 
+                        : event.category === 'estonia'
                             ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
                             : '';
                     const countryLabel = (event.type === 'retreat' && event.category === 'abroad' && event.country)
@@ -168,7 +217,7 @@
                         </div>
                     `;
                 }).join('');
-                
+
                 if (window.lucide) window.lucide.createIcons();
             }
 
@@ -190,4 +239,5 @@
         });
     </script>
 </body>
+
 </html>

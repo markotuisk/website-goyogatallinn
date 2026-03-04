@@ -1,0 +1,19 @@
+{
+    "name": "GoYoga Tallinn",
+    "short_name": "GoYoga",
+    "icons": [
+        {
+            "src": "assets/branding/logo-goyoga-tallinn-estonia-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/branding/logo-goyoga-tallinn-estonia-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
