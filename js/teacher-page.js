@@ -193,6 +193,25 @@ function renderTeacherData(id, lang) {
         }
     }
 
+    // Gallery Section
+    const gallerySection = document.getElementById('teacher-gallery-section');
+    const galleryGrid = document.getElementById('teacher-gallery-grid');
+    const gallery = basic?.gallery || [];
+
+    if (gallerySection && galleryGrid) {
+        if (gallery.length > 0) {
+            galleryGrid.innerHTML = gallery.map(imgUrl => `
+                <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="${imgUrl}" alt="Gallery Moment"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy">
+                </div>
+            `).join('');
+            gallerySection.classList.remove('hidden');
+        } else {
+            gallerySection.classList.add('hidden');
+        }
+    }
+
     // Custom Backgrounds for Specific Teachers
     const heroSection = document.getElementById('teacher-hero-section');
     if (heroSection) {
