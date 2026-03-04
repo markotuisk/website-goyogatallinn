@@ -1,7 +1,7 @@
 # Website Content Documentation (English)
 
 > [!NOTE]
-> This document contains all text and image references for the GoYoga website.
+> This document contains all text and image references for the Goyoga Tallinn website.
 > **For the Content Approver:**
 > - Please review all headings (H1, H2, etc.) and paragraph text.
 > - Image placeholders are indicated with `![Alt Text](URL)`.
@@ -12,10 +12,10 @@
 
 ## 1. Global Metadata (SEO)
 
-**Default Title:** GoYoga Tallinn | Yoga & Wellness Sanctuary | Tallinn City Center
-**Default Description:** Home of traditional yoga and wellness practises in Tallinn. Join GoYoga.ee for daily classes: Ashtanga, Vinyasa, Yin, Pilates, and wellness events like Sound Baths.
+**Default Title:** Goyoga Tallinn Tallinn | Yoga & Wellness Sanctuary | Tallinn City Center
+**Default Description:** Home of traditional yoga and wellness practises in Tallinn. Join goyoga.ee for daily classes: Ashtanga, Vinyasa, Yin, Pilates, and wellness events like Sound Baths.
 **Keywords:** Yoga Tallinn, Wellness Tallinn, Ashtanga, Vinyasa, Yin Yoga, Sound Bath Tallinn, Cacao Ceremony Estonia, Pilates Tallinn, Qigong, Yoga Nidra
-**OG Title:** Yoga & Wellness Sanctuary in Tallinn | GoYoga.ee
+**OG Title:** Yoga & Wellness Sanctuary in Tallinn | goyoga.ee
 **OG Description:** Discover an authentic space for yoga and wellness in the heart of Tallinn. Classes for all levels and ages.
 
 ---
@@ -60,7 +60,7 @@
 - **H4:** Wellness
 - **Text:** Meditations, Sound Baths, Cacao Ceremonies, Yoga Nidra.
 
-**Image:** `![Student practicing traditional Ashtanga Yoga at GoYoga Tallinn studio](https://images.unsplash.com/photo-1518495973542-4542c06a5843)`
+**Image:** `![Student practicing traditional Ashtanga Yoga at Goyoga Tallinn Tallinn studio](https://images.unsplash.com/photo-1518495973542-4542c06a5843)`
 
 ### Studio Section
 **Tagline:** Our Space
@@ -71,7 +71,7 @@
 
 **Images:**
 - `![Spacious and bright yoga shala interior at Narva mnt 7D Tallinn](https://media.gettyimages.com/id/1495479126/photo/interior-of-an-empty-yoga-center.jpg?s=612x612&w=0&k=20&c=B9KM7aHD_YgZGTYSdjVc78ymYy8mayZMEX61YBy6NDs=)`
-- `![Yoga practitioners in lotus position at GoYoga Tallinn](https://st3.depositphotos.com/10439530/13566/i/380/depositphotos_135665562-stock-photo-couple-sitting-in-lotus-position.jpg)`
+- `![Yoga practitioners in lotus position at Goyoga Tallinn Tallinn](https://st3.depositphotos.com/10439530/13566/i/380/depositphotos_135665562-stock-photo-couple-sitting-in-lotus-position.jpg)`
 - `![Meditation and mindfulness session at our Tallinn studio](https://images.unsplash.com/photo-1545389336-cf090694435e)`
 - `![Professional yoga props including mats and blocks for Ashtanga practice](https://media.istockphoto.com/id/869915476/photo/yoga-equipment.jpg?s=612x612&w=0&k=20&c=HKmrau7egtTYtw4KUgoLd9U1qZ07rnJNh7sq7JXCvr8=)`
 
@@ -213,8 +213,8 @@
 
 ## 3. FAQ Page
 
-**SEO Title:** FAQ | Frequently Asked Questions | GoYoga Tallinn
-**SEO Description:** Find answers to common questions about practicing Ashtanga yoga at GoYoga Tallinn. New students, pricing, etiquette, and more.
+**SEO Title:** FAQ | Frequently Asked Questions | Goyoga Tallinn Tallinn
+**SEO Description:** Find answers to common questions about practicing Ashtanga yoga at Goyoga Tallinn Tallinn. New students, pricing, etiquette, and more.
 
 ### Content (Grouped by Category)
 
@@ -258,7 +258,7 @@
 - **Q:** What is Ashtanga Yoga?
 - **A:** Ashtanga Yoga is a traditional system of yoga that synchronizes breath with a progressive series of postures. This process produces intense internal heat and a profuse, purifying sweat that detoxifies muscles and organs. The result is improved circulation, a light and strong body, and a calm mind.
 - **Q:** Who are the most famous Ashtanga Yoga teachers and gurus?
-- **A:** The most prominent figure is Sri K. Pattabhi Jois, who founded the modern Ashtanga Vinyasa system. Renowned global teachers include Lino Miele, Sharath Jois, and Richard Freeman. In Estonia, Ricardo Martinez (a student of Lino Miele) is a key figure leading traditional retreats at GoYoga.
+- **A:** The most prominent figure is Sri K. Pattabhi Jois, who founded the modern Ashtanga Vinyasa system. Renowned global teachers include Lino Miele, Sharath Jois, and Richard Freeman. In Estonia, Ricardo Martinez (a student of Lino Miele) is a key figure leading traditional retreats at Goyoga Tallinn.
 - **Q:** What is the difference between Ashtanga and Vinyasa Yoga?
 - **A:** Ashtanga follows a fixed sequence of postures in the same order every time, emphasizing internal heat and discipline. Vinyasa is more creative and fluid; teachers create new flows for every class. Ashtanga is like a structured path, while Vinyasa is a creative journey.
 - **Q:** Which celebrities practice Ashtanga Yoga?
@@ -268,8 +268,8 @@
 
 ## 4. Seasonal Offers Page
 
-**SEO Title:** Seasonal Offers | Exclusive Whispers | GoYoga Tallinn
-**SEO Description:** Discover limited-time offerings, workshops, and exclusive seasonal deals at GoYoga.ee. Traditional Ashtanga yoga in Tallinn city center.
+**SEO Title:** Seasonal Offers | Exclusive Whispers | Goyoga Tallinn Tallinn
+**SEO Description:** Discover limited-time offerings, workshops, and exclusive seasonal deals at goyoga.ee. Traditional Ashtanga yoga in Tallinn city center.
 
 ### Hero Section
 **Tagline:** Exclusive & Timely
@@ -291,7 +291,7 @@
 
 ## 5. Studio Rental Page
 
-**SEO Title:** Studio Rental | Light-filled Space in Tallinn Centre | GoYoga
+**SEO Title:** Studio Rental | Light-filled Space in Tallinn Centre | Goyoga Tallinn
 **SEO Description:** Rent our beautiful yoga studio for your next workshop, seminar or event. Natural wood floors, premium amenities, and a tranquil atmosphere in the heart of Tallinn.
 
 ### Hero Section
@@ -301,8 +301,8 @@
 
 ### About Section
 **H2:** More than just a room
-**Description:** GoYoga is more than a yoga studio; it's a sanctuary. Every detail—from the warmth of the materials to the play of natural light—has been curated to help you and your guests find a sense of calm and focus. We sell a feeling of peace that stays with you long after your event is over.
-**Image Alt:** Sunlight filtering through the windows of the GoYoga shala
+**Description:** Goyoga Tallinn is more than a yoga studio; it's a sanctuary. Every detail—from the warmth of the materials to the play of natural light—has been curated to help you and your guests find a sense of calm and focus. We sell a feeling of peace that stays with you long after your event is over.
+**Image Alt:** Sunlight filtering through the windows of the Goyoga Tallinn shala
 
 ### Facilities & Amenities
 **H2:** Amenities & Atmosphere
@@ -332,7 +332,7 @@
 ### Raili Maripuu
 **Role:** Founder & Ashtanga Teacher
 **Quote:** "Yoga is a mirror to the soul, a daily practice that reveals our true nature through the breath."
-**Bio:** Raili is the visionary behind GoYoga Tallinn. With over two decades of dedicated practice and teaching, she brings the authentic Ashtanga Vinyasa method to life. Her journey began in the traditional shalas of Mysore, India, and she has since dedicated her life to sharing the transformative power of the Eight Limbs.
+**Bio:** Raili is the visionary behind Goyoga Tallinn Tallinn. With over two decades of dedicated practice and teaching, she brings the authentic Ashtanga Vinyasa method to life. Her journey began in the traditional shalas of Mysore, India, and she has since dedicated her life to sharing the transformative power of the Eight Limbs.
 **Philosophy:** I believe that consistency is the key to transformation. The practice isn't about the perfect pose, but about the presence you bring to each moment on the mat.
 **Highlights:**
 - Mysore-Authorized Practice
@@ -392,7 +392,7 @@
 ### Kaia Karjatse
 **Role:** 60+ Yoga | Sound Therapy
 **Quote:** "Vibration is the original language of the heart."
-**Bio:** Kaia is a sound and dance therapist who brings a unique healing dimension to GoYoga. Her 60+ yoga classes combined with gong baths offer a gentle yet powerful path to vitality.
+**Bio:** Kaia is a sound and dance therapist who brings a unique healing dimension to Goyoga Tallinn. Her 60+ yoga classes combined with gong baths offer a gentle yet powerful path to vitality.
 **Philosophy:** I believe in the power of sound to harmonize the body's energy. My practice is about creating a resonant field where healing can happen naturally.
 **Highlights:**
 - Gong & Crystal Bowl Master

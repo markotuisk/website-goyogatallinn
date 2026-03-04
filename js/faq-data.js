@@ -71,7 +71,7 @@ const faqData = {
             },
             {
                 q: "Who are the most famous Ashtanga Yoga teachers and gurus?",
-                a: "The most prominent figure is Sri K. Pattabhi Jois, who founded the modern Ashtanga Vinyasa system. Renowned global teachers include Lino Miele, Sharath Jois, and Richard Freeman. In Estonia, Ricardo Martinez (a student of Lino Miele) is a key figure leading traditional retreats at GoYoga."
+                a: "The most prominent figure is Sri K. Pattabhi Jois, who founded the modern Ashtanga Vinyasa system. Renowned global teachers include Lino Miele, Sharath Jois, and Richard Freeman. In Estonia, Ricardo Martinez (a student of Lino Miele) is a key figure leading traditional retreats at Goyoga Tallinn."
             },
             {
                 q: "What is the difference between Ashtanga and Vinyasa Yoga?",
@@ -155,7 +155,7 @@ const faqData = {
             },
             {
                 q: "Kes on tuntumad Ashtanga jooga õpetajad ja gurud?",
-                a: "Kõige olulisem kuju on Sri K. Pattabhi Jois, kes pani aluse kaasaegsele Ashtanga Vinyasa süsteemile. Tuntud globaalsed õpetajad on Lino Miele, Sharath Jois ja Richard Freeman. Eestis on kesksel kohal Ricardo Martinez (Lino Miele õpilane), kes juhendab traditsioonilisi retriite GoYogas."
+                a: "Kõige olulisem kuju on Sri K. Pattabhi Jois, kes pani aluse kaasaegsele Ashtanga Vinyasa süsteemile. Tuntud globaalsed õpetajad on Lino Miele, Sharath Jois ja Richard Freeman. Eestis on kesksel kohal Ricardo Martinez (Lino Miele õpilane), kes juhendab traditsioonilisi retriite Goyoga Tallinns."
             },
             {
                 q: "Mis vahe on Ashtanga ja Vinyasa joogal?",
@@ -239,7 +239,7 @@ const faqData = {
             },
             {
                 q: "Ketkä ovat kuuluisimpia Ashtanga-joogaopettajia ja guruja?",
-                a: "Merkittävin hahmo on Sri K. Pattabhi Jois, joka perusti nykyaikaisen Ashtanga Vinyasa -järjestelmän. Tunnettuja maailmanlaajuisia opettajia ovat Lino Miele, Sharath Jois ja Richard Freeman. Virossa Ricardo Martinez (Lino Mielen oppilas) on keskeinen hahmo, joka johtaa perinteisiä retriittejä GoYogassa."
+                a: "Merkittävin hahmo on Sri K. Pattabhi Jois, joka perusti nykyaikaisen Ashtanga Vinyasa -järjestelmän. Tunnettuja maailmanlaajuisia opettajia ovat Lino Miele, Sharath Jois ja Richard Freeman. Virossa Ricardo Martinez (Lino Mielen oppilas) on keskeinen hahmo, joka johtaa perinteisiä retriittejä Goyoga Tallinnssa."
             },
             {
                 q: "Mitä eroa on Ashtangalla ja Vinyasa-joogalla?",

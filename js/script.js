@@ -1044,7 +1044,7 @@ async function shareEvent(id, title) {
         try {
             await navigator.share({
                 title: title,
-                text: `Join me at ${title} - GoYoga Tallinn`,
+                text: `Join me at ${title} - Goyoga Tallinn`,
                 url: url
             });
         } catch (err) {

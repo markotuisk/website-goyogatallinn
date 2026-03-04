@@ -1,5 +1,5 @@
 /**
- * GoYoga Community Stories Data
+ * Goyoga Tallinn Community Stories Data
  * Curated social media posts and insights from teachers and students.
  */
 

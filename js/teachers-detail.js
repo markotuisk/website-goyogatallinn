@@ -186,7 +186,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             name: "Kaia Karjatse",
             role: "60+ Yoga | Sound Therapy",
             quote: "Vibration is the original language of the heart.",
-            bio: "Kaia is a sound and dance therapist who brings a unique healing dimension to GoYoga. Her 60+ yoga classes combined with gong baths offer a gentle yet powerful path to vitality.",
+            bio: "Kaia is a sound and dance therapist who brings a unique healing dimension to Goyoga Tallinn. Her 60+ yoga classes combined with gong baths offer a gentle yet powerful path to vitality.",
             philosophy: "I believe in the power of sound to harmonize the body's energy. My practice is about creating a resonant field where healing can happen naturally.",
             highlights: ["Gong & Crystal Bowl Master", "Dance & Movement Therapy", "Seniors Wellness Advocate"]
         },
@@ -194,7 +194,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             name: "Kaia Karjatse",
             role: "60+ jooga | Heliteraapia",
             quote: "Vibratsioon on südame algne keel.",
-            bio: "Kaia on heli- ja tantsuterapeut, kes toob GoYogasse ainulaadse tervendava dimensiooni. Tema 60+ joogatunnid kombineerituna gongi-mänguga pakuvad õrna, kuid jõulist teed elujõuni.",
+            bio: "Kaia on heli- ja tantsuterapeut, kes toob Goyoga Tallinnsse ainulaadse tervendava dimensiooni. Tema 60+ joogatunnid kombineerituna gongi-mänguga pakuvad õrna, kuid jõulist teed elujõuni.",
             philosophy: "Ma usun heli jõusse harmoniseerida keha energiat. Minu praktika seisneb resonantsvälja loomises, kus tervenemine saab toimuda loomulikult.",
             highlights: ["Gongi- ja kristallkausside meister", "Tantsu- ja liikumisteraapia", "Eakate heaolu edendaja"]
         },
@@ -202,7 +202,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             name: "Kaia Karjatse",
             role: "60+ jooga | Ääniterapia",
             quote: "Värähtely on sydämen alkuperäinen kieli.",
-            bio: "Kaia on ääni- ja tanssiterapeutti, joka tuo GoYogaan ainutlaatuisen parantavan ulottuvuuden. Hänen 60+ joogatuntinsa yhdistettynä gong-kylpyihin tarjoavat lempeän mutta tehokkaan tien elinvoimaan.",
+            bio: "Kaia on ääni- ja tanssiterapeutti, joka tuo Goyoga Tallinnan ainutlaatuisen parantavan ulottuvuuden. Hänen 60+ joogatuntinsa yhdistettynä gong-kylpyihin tarjoavat lempeän mutta tehokkaan tien elinvoimaan.",
             philosophy: "Uskon äänen voimaan harmonisoida kehon energiaa. Harjoitukseni tarkoituksena on luoda resonanssikenttä, jossa parantuminen voi tapahtua luonnollisesti.",
             highlights: ["Gong- ja kristallimaljamestari", "Tanssi- ja liiketerapeuti", "Ikääntyneiden hyvinvoinnin edistäjä"]
         }

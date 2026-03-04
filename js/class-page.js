@@ -41,7 +41,7 @@ function renderClassDetails(id, lang) {
     document.getElementById('class-title').textContent = t('title');
     document.getElementById('class-tagline').textContent = t('tagline');
     document.getElementById('class-image').src = data.image; // Universal image
-    document.getElementById('seo-title').textContent = `${t('title')} | GoYoga Tallinn`;
+    document.getElementById('seo-title').textContent = `${t('title')} | Goyoga Tallinn`;
     document.getElementById('seo-description').setAttribute('content', t('description').substring(0, 150) + "...");
 
     // Icon

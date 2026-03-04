@@ -1,4 +1,4 @@
-# Project Timeline - GoYoga Website
+# Project Timeline - Goyoga Tallinn Website
 
 A chronological log of key activities, updates, and milestones.
 

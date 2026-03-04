@@ -1,9 +1,9 @@
-# Long-term Memory - GoYoga Website
+# Long-term Memory - Goyoga Tallinn Website
 
 Foundational context, architectural decisions, and design philosophy.
 
 ## Project Vision
-GoYoga Tallinn is a premium yoga and wellness sanctuary. The website must feel organic, trustworthy, and visually stunning, reflecting the authentic practice of Ashtanga and holistic wellbeing.
+Goyoga Tallinn is a premium yoga and wellness sanctuary. The website must feel organic, trustworthy, and visually stunning, reflecting the authentic practice of Ashtanga and holistic wellbeing.
 
 ## Technical Architecture
 - **Stack**: Vanilla HTML/JavaScript/CSS (No complex JS frameworks for maximum speed and simplicity).

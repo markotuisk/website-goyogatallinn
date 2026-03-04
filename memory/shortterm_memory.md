@@ -1,4 +1,4 @@
-# Short-term Memory - GoYoga Website
+# Short-term Memory - Goyoga Tallinn Website
 
 Recent insights, discovered behaviors, and pending notes from the last sessions.
 

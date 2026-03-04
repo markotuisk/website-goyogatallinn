@@ -7,8 +7,8 @@ const rentData = {
         },
         about: {
             title: "More than just a room",
-            description: "GoYoga is more than a yoga studio; it's a sanctuary. Every detail—from the warmth of the materials to the play of natural light—has been curated to help you and your guests find a sense of calm and focus. We sell a feeling of peace that stays with you long after your event is over.",
-            image_alt: "Sunlight filtering through the windows of the GoYoga shala"
+            description: "Goyoga Tallinn is more than a yoga studio; it's a sanctuary. Every detail—from the warmth of the materials to the play of natural light—has been curated to help you and your guests find a sense of calm and focus. We sell a feeling of peace that stays with you long after your event is over.",
+            image_alt: "Sunlight filtering through the windows of the Goyoga Tallinn shala"
         },
         facilities: {
             title: "Amenities & Atmosphere",
@@ -41,8 +41,8 @@ const rentData = {
         },
         about: {
             title: "Rohkem kui lihtsalt tuba",
-            description: "GoYoga on midagi enamat kui joogastuudio; see on varjupaik. Iga detail – alates materjalide soojusest kuni loomuliku valguse mänguni – on kureeritud, et aidata teil ja teie külalistel leida rahu ja keskendumisvõime. Müüme rahutunnet, mis jääb teiega ka pärast sündmuse lõppu.",
-            image_alt: "Päikesevalgus paistmas läbi GoYoga saali akende"
+            description: "Goyoga Tallinn on midagi enamat kui joogastuudio; see on varjupaik. Iga detail – alates materjalide soojusest kuni loomuliku valguse mänguni – on kureeritud, et aidata teil ja teie külalistel leida rahu ja keskendumisvõime. Müüme rahutunnet, mis jääb teiega ka pärast sündmuse lõppu.",
+            image_alt: "Päikesevalgus paistmas läbi Goyoga Tallinn saali akende"
         },
         facilities: {
             title: "Mugavused ja atmosfäär",
@@ -75,8 +75,8 @@ const rentData = {
         },
         about: {
             title: "Enemmän kuin vain huone",
-            description: "GoYoga on enemmän kuin vain joogastudio; se on turvasatama. Jokainen yksityiskohta – materiaalien lämmöstä luonnonvalon leikkiin – on valittu auttamaan sinua ja vieraitasi löytämään rauhan ja keskittymisen. Myymme rauhan tunnetta, joka viipyy kanssasi pitkään tapahtuman jälkeen.",
-            image_alt: "Auringonvalo siivilöityy GoYoga-salin ikkunoista"
+            description: "Goyoga Tallinn on enemmän kuin vain joogastudio; se on turvasatama. Jokainen yksityiskohta – materiaalien lämmöstä luonnonvalon leikkiin – on valittu auttamaan sinua ja vieraitasi löytämään rauhan ja keskittymisen. Myymme rauhan tunnetta, joka viipyy kanssasi pitkään tapahtuman jälkeen.",
+            image_alt: "Auringonvalo siivilöityy Goyoga Tallinn-salin ikkunoista"
         },
         facilities: {
             title: "Mukavuudet ja ilmapiiri",
