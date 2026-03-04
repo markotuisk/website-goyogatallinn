@@ -645,7 +645,7 @@ const eventsData = [
         registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Ashtanga Intensive with Lino Miele',
-            date: 'January - February 2026',
+            date: 'December 12 - 27, 2026',
             location: 'Kovalam Beach, Kerala, India',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Travel to the heart of Kerala to join the traditional Ashtanga Yoga intensive workshop led by world-renowned teacher Lino Miele.',
@@ -673,7 +673,7 @@ const eventsData = [
         },
         et: {
             title: 'Ashtanga intensiiv Lino Mielega',
-            date: 'Jaanuar - Veebruar 2026',
+            date: '12. - 27. Detsember 2026',
             location: 'Kovalam, Kerala, India',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Reisi Kerala südamesse ja liitu traditsioonilise Ashtanga jooga intensiivlaagriga, mida juhendab maailmakuulus õpetaja Lino Miele.',
@@ -701,7 +701,7 @@ const eventsData = [
         },
         fi: {
             title: 'Ashtanga-intensiivi Lino Mielen kanssa',
-            date: 'Tammikuu - Helmikuu 2026',
+            date: '12. - 27. Joulukuu 2026',
             location: 'Kovalam, Kerala, Intia',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Matkusta Keralan sydämeen ja liity perinteiselle Ashtanga-joogan intensiivileirille, jota vetää maailmankuulu opettaja Lino Miele.',
