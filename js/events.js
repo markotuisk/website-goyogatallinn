@@ -88,7 +88,7 @@ const eventsData = [
         active: true,
         featured: true,
         expiryDate: '2026-03-14',
-        image: 'https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1200',
+        image: 'assets/events/#1001-goyoga-tallinn-estonia-marit-tuisk-david-lepp-taiskuu-rituaal-kakao-kong-rannak.webp',
         gallery: [],
         teachers: ['david-lepp'],
         registerLink: '#contact',
