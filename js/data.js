@@ -767,9 +767,16 @@ const classesData = {
         teacherIds: ["marit-tuisk"],
         translations: {
             en: {
-                title: "Meditation",
-                tagline: "Guided inner peace and clarity.",
-                description: "A profound practice dedicated entirely to mental stillness and awareness. Our guided meditation classes offer structured techniques to help you observe your thoughts, regulate your nervous system, and cultivate a deep sense of inner peace. Suitable for all levels, it is the perfect antidote to a busy, overstimulated lifestyle.",
+                title: "Quantum Energy Chakra Balancing Meditation",
+                tagline: "A three-part journey to release energy and balance chakras.",
+                description: `
+                    <p class="mb-4">This 60-minute guided meditation is a three-part journey that helps release accumulated energy in the body, restore connection with yourself, and balance the body's energy centers.</p>
+                    <p class="mb-4">The session begins with a grounding meditation at the quantum level, which helps create a conscious connection with your four bodies — physical, emotional, mental, and spiritual. The goal of this first stage is to bring attention back to the body, calm the nervous system, and prepare the internal space for deeper cleansing.</p>
+                    <p class="mb-4">In the second stage, the meditation moves into energetic cleansing and release. Through guided attention, participants are invited to notice and release residual or stagnant energy accumulated in the body or energy centers. This process helps release tension and create space for the natural flow of energy.</p>
+                    <p class="mb-4">The final stage focuses on balancing the chakras, moving gradually from the root chakra to the crown chakra. Each energy center receives attention and balance, supporting a stronger internal foundation and creating greater harmony between the body, emotions, thoughts, and awareness.</p>
+                    <p class="mb-4">After the session, participants often experience lightness, greater grounding, and a deeper connection with themselves. The practice supports emotional balance, mental clarity, and internal stability in both body and mind.</p>
+                    <p>The meditation is suitable for everyone. You simply need to relax, follow the guidance, and allow your body to restore its natural balance.</p>
+                `,
                 audience: "Anyone looking to reduce stress, improve focus, and develop a consistent mindfulness practice. No prior meditation or yoga experience is required.",
                 benefits: [
                     { title: "Mental Clarity", description: "Enhances focus and clears mental fog." },
@@ -793,9 +800,16 @@ const classesData = {
                 ]
             },
             et: {
-                title: "Meditatsioon",
-                tagline: "Juhendatud sisemine rahu ja selgus.",
-                description: "Sügav praktika, mis on pühendatud täielikult vaimsele vaikusele ja teadlikkusele. Meie juhendatud meditatsioonitunnid pakuvad struktureeritud tehnikaid, mis aitavad sul jälgida oma mõtteid, reguleerida närvisüsteemi ja arendada sügavat sisemist rahu. Sobib kõikidele tasemetele, olles ideaalne vastumürk kiirele ja ülekoormatud elustiilile.",
+                title: "Kvanteenergia tšakrate tasakaalustamise meditatsioon",
+                tagline: "Kolmeosaline rännak energia vabastamiseks ja tšakrate tasakaalustamiseks.",
+                description: `
+                    <p class="mb-4">See 60-minutiline juhendatud meditatsioon on kolmeosaline rännak, mis aitab vabastada kehasse kogunenud energiat, taastada ühenduse iseendaga ning tasakaalustada keha energiakeskused.</p>
+                    <p class="mb-4">Sessioon algab kvanttasandi maandava meditatsiooniga, mis aitab luua teadliku ühenduse oma nelja kehaga — füüsilise, emotsionaalse, mentaalse ja spirituaalse kehaga. Selle esimese etapi eesmärk on tuua tähelepanu tagasi kehasse, rahustada närvisüsteemi ja valmistada sisemine ruum ette sügavamaks puhastumiseks.</p>
+                    <p class="mb-4">Teises etapis liigub meditatsioon energeetilisse puhastusse ja vabastamisse. Juhendatud tähelepanu kaudu kutsutakse osalejaid märkama ja vabastama kehasse või energiakeskustesse kogunenud jääk- või seisma jäänud energiat. See protsess aitab vabastada pingeid ning luua ruumi loomulikuks energiavooluks.</p>
+                    <p class="mb-4">Viimases etapis keskendutakse tšakrate tasakaalustamisele, liikudes järk-järgult juurtšakrast kuni kroontšakrani. Iga energiakeskus saab tähelepanu ja tasakaalu, mis toetab tugevamat sisemist vundamenti ning loob suurema kooskõla keha, emotsioonide, mõtete ja teadlikkuse vahel.</p>
+                    <p class="mb-4">Sessiooni järel kogevad osalejad sageli kergust, suuremat maandatust ning sügavamat ühendust iseendaga. Praktika toetab emotsionaalset tasakaalu, vaimset selgust ning sisemist stabiilsust nii kehas kui meeles.</p>
+                    <p>Meditatsioon sobib kõigile. Piisab sellest, kui lõõgastud, järgid juhendust ja lubad kehal oma loomuliku tasakaalu taastada.</p>
+                `,
                 audience: "Kõigile, kes soovivad vähendada stressi, parandada keskendumist ja kujundada järjepidevat kohaloleku praktikat. Eelnev meditatsiooni- või joogakogemus ei ole vajalik.",
                 benefits: [
                     { title: "Vaimne selgus", description: "Parandab keskendumist ja puhastab vaimset udu." },
@@ -819,9 +833,16 @@ const classesData = {
                 ]
             },
             fi: {
-                title: "Meditaatio",
-                tagline: "Ohjattua sisäistä rauhaa ja selkeyttä.",
-                description: "Syvällinen harjoitus, joka on omistettu kokonaan henkiselle hiljaisuudelle ja tietoisuudelle. Ohjatut meditaatiotuntimme tarjoavat jäsenneltyjä tekniikoita, jotka auttavat tarkkailemaan ajatuksia, säätelemään hermostoa ja kehittämään syvää sisäistä rauhaa. Sopii kaikille tasoille, täydellinen vastalääke kiireiselle elämäntyylille.",
+                title: "Kvanttienergian chakrojen tasapainotusmeditaatio",
+                tagline: "Kolmiosainen matka energian vapauttamiseen ja chakrojen tasapainottamiseen.",
+                description: `
+                    <p class="mb-4">Tämä 60 minuutin ohjattu meditaatio on kolmiosainen matka, joka auttaa vapauttamaan kehoon kertynyttä energiaa, palauttamaan yhteyden itseesi ja tasapainottamaan kehon energiakeskukset.</p>
+                    <p class="mb-4">Sessio alkaa maadoittavalla meditaatiolla kvanttitasolla, mikä auttaa luomaan tietoisen yhteyden neljään kehoosi — fyysiseen, emotionaaliseen, mentaaliseen ja henkiseen kehoon. Tämän ensimmäisen vaiheen tavoitteena on tuoda huomio takaisin kehoon, rauhoittaa hermostoa ja valmistaa sisäinen tila syvempää puhdistumista varten.</p>
+                    <p class="mb-4">Toisessa vaiheessa meditaatio siirtyy energeettiseen puhdistumiseen ja vapautumiseen. Ohjatun huomion kautta osallistujia pyydetään huomaamaan ja vapauttamaan kehoon tai energiakeskuksiin kertynyttä jäännös- tai pysähtynyttä energiaa. Tämä prosessi auttaa vapauttamaan jännitystä ja luomaan tilaa luonnolliselle energian virtaukselle.</p>
+                    <p class="mb-4">Viimeinen vaihe keskittyy chakrojen tasapainottamiseen, liikkuen vähitellen juurichakrasta kruunuchakraan. Jokainen energiakeskus saa huomiota ja tasapainoa, mikä tukee vahvempaa sisäistä perustaa ja luo suurempaa harmoniaa kehon, tunteiden, ajatusten ja tietoisuuden välille.</p>
+                    <p class="mb-4">Session jälkeen osallistujat kokevat usein keveyttä, vahvempaa maadoittumista ja syvempää yhteyttä itseensä. Harjoitus tukee emotionaalista tasapainoa, henkistä selkeyttä ja sisäistä vakautta sekä kehossa että mielessä.</p>
+                    <p>Meditaatio sopii kaikille. Sinun tarvitsee vain rentoutua, seurata ohjausta ja antaa kehosi palauttaa sen luonnollinen tasapaino.</p>
+                `,
                 audience: "Kaikille, jotka haluavat vähentää stressiä, parantaa keskittymistä ja kehittää säännöllistä mindfulness-harjoitusta. Aiempaa kokemusta meditaatiosta tai joogasta ei tarvita.",
                 benefits: [
                     { title: "Henkinen selkeys", description: "Parantaa keskittymistä ja poistaa hengen sumua." },
