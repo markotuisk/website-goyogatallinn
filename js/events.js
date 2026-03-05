@@ -655,19 +655,19 @@ const eventsData = [
                 <p class="mb-4">She regularly travels to Kovalam, Kerala, to participate in Miele's annual intensive workshops. These legendary retreats are renowned for being his longest-running programs, lasting up to two months each year.</p>
                 <p class="mb-4">We are actively gathering a group of dedicated practitioners to join Raili on this profound journey to southern India.</p>
                 
-                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Kovalam Beach, Kerala</h3>
-                <p class="mb-4">The training takes place at the vibrant and beautiful <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalam Beach</a> in Kerala. This location draws over 500 students and teachers from around the globe every year, creating an incredible, buzzing international Ashtanga community.</p>
-                <p class="mb-4">Between practices, Kerala (often referred to as "God's Own Country") offers stunning beaches, traditional Ayurvedic treatments, incredible South Indian cuisine, and the famous tranquil backwaters to explore.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> The Peacock Hotel Yoga Shala</h3>
+                <p class="mb-4">The training takes place at the vibrant and beautiful <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalam Beach</a> in Kerala. The yoga space itself is on the roof top of the <strong>Peacock Hotel</strong>. Nestled in the tropical green of coconut palms, it provides a totally secluded and safe area for students to strengthen and deepen their practice in a pleasant and peaceful environment.</p>
+                <p class="mb-4">This location draws over 500 students and teachers from around the globe every year, creating an incredible, buzzing international Ashtanga community. Between practices, Kerala offers traditional Ayurvedic treatments, incredible South Indian cuisine, and the famous tranquil backwaters to explore.</p>
 
-                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> The Practice</h3>
-                <p class="mb-4">These sessions focus purely on the traditional Ashtanga Yoga method. The training includes:</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> The Practice & Teachings</h3>
+                <p class="mb-4">This Intensive workshop gives students the opportunity to develop a self-practice in which breath and movement are systematically brought together—improving concentration and developing stronger bodies and minds. The focus is on:</p>
                 <ul class="list-disc pl-5 space-y-2 mb-6">
-                    <li>Daily Mysore style practice and LED classes in the Vinyasa system.</li>
-                    <li>Traditional hands-on adjustments directly from Lino Miele and his senior assistants.</li>
-                    <li>In-depth study of the Primary and Advanced series.</li>
-                    <li>Afternoon philosophy, Pranayama, and Q&A sessions.</li>
+                    <li><strong>Breath & Bandhas:</strong> Using breath to draw in energy, and bandhas to contain and direct it throughout the body.</li>
+                    <li><strong>Vinyasa Counting:</strong> The scientific counting method to synchronize breath and movement, bringing precision and clarity of mind.</li>
+                    <li><strong>Led & Mysore Classes:</strong> Led classes are introduced in accordance with Lino's book <em>"Ashtanga Yoga"</em> (written under the guidance of Sri K. Pattabhi Jois).</li>
+                    <li><strong>Guidance:</strong> Lino facilitates the process with his encouragement and perceptive, traditional hands-on adjustments.</li>
                 </ul>
-                <p class="mb-4 italic text-gray-500">Note: This is an intensive traditional study trip requiring dedication to the morning practice schedule.</p>
+                <p class="mb-4 italic text-gray-500">The workshop is highly intensive but suitable for practitioners at all levels (primary, intermediate, advanced A and B).</p>
             `,
             highlights: ['Practice with Lino Miele in India', 'Traditional Mysore & LED classes', 'Experience Kovalam, Kerala', 'Ayurvedic treatments & culture', 'Join a global Ashtanga community']
         },
@@ -683,19 +683,19 @@ const eventsData = [
                 <p class="mb-4">Ta reisib regulaarselt Indiasse, Keralasse, Kovalemi, et osaleda Miele iga-aastastes intensiivsetes töötubades. Need on legendaarsed laagrid, olles tema kõige pikemalt toimuvad programmid, kestes iga kord kuni kaks kuud.</p>
                 <p class="mb-4">Kogume gruppi pühendunud praktiseerijatest, et ühineda Railiga sellel sügaval joogareisil Lõuna-Indiasse.</p>
                 
-                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Kovalemi rand, Kerala</h3>
-                <p class="mb-4">Treeningud toimuvad elavas ja kaunis <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalemi rannas</a> Keralas. See asukoht tõmbab igal aastal ligi üle 500 õpilase ja õpetaja kogu maailmast, luues uskumatu ja sumiseva rahvusvahelise Ashtanga kogukonna.</p>
-                <p class="mb-4">Praktikate vahel pakub Kerala (mida sageli nimetatakse "Jumala omaks maaks") vapustavaid randu, traditsioonilisi Ayurveda hooldusi, uskumatut Lõuna-India kööki ning kuulsaid rahulikke backwater'eid avastamiseks.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Peacock Hotelli Joogashala</h3>
+                <p class="mb-4">Treeningud toimuvad elavas ja kaunis <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalemi rannas</a> Keralas. Joogapind asub <strong>Peacock hotelli</strong> katusel. See kookospalmide troopilisse rohelusse peidetud koht pakub õpilastele täiesti eraldatud ja turvalist ala, et tugevdada ja süvendada oma praktikat meeldivas ning rahulikus keskkonnas.</p>
+                <p class="mb-4">See asukoht tõmbab igal aastal ligi üle 500 õpilase ja õpetaja kogu maailmast, luues uskumatu ja sumiseva rahvusvahelise Ashtanga kogukonna. Praktikate vahel pakub Kerala traditsioonilisi Ayurveda hooldusi, uskumatut Lõuna-India kööki ning kuulsaid rahulikke backwater'eid avastamiseks.</p>
 
-                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Praktika</h3>
-                <p class="mb-4">Need sessioonid keskenduvad puhtalt traditsioonilisele Ashtanga jooga meetodile. Programm hõlmab:</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Praktika ja õpetused</h3>
+                <p class="mb-4">See intensiivlaager annab õpilastele võimaluse arendada iseseisvat praktikat, milles hingamine ja liikumine on süstemaatiliselt ühendatud – parandades keskendumisvõimet ning arendades tugevamat keha ja meelt. Keskendume järgnevale:</p>
                 <ul class="list-disc pl-5 space-y-2 mb-6">
-                    <li>Igapäevane Mysore stiilis praktika ja LED-tunnid vinyasa süsteemis.</li>
-                    <li>Traditsioonilised käelised parandused (adjustments) otse Lino Mielelt ja tema vanem-assistentidelt.</li>
-                    <li>Esimese ja edasijõudnute (Advanced) seeriate süvaõpe.</li>
-                    <li>Pärastlõunased filosoofia, Pranayama ja Q&A sessioonid.</li>
+                    <li><strong>Hingamine ja Bandhad:</strong> Hingamise kasutamine energia ammutamiseks ning bandhad selle energia hoidmiseks ja suunamiseks kogu kehas.</li>
+                    <li><strong>Vinyasa lugemine (Counting):</strong> Teaduslik lugemismeetod hingamise ja liikumise sünkroniseerimiseks, tuues täpsuse ja meeleselguse.</li>
+                    <li><strong>LED ja Mysore tunnid:</strong> Juhendatud (LED) tunnid viiakse läbi vastavalt Lino raamatule <em>"Ashtanga Yoga"</em> (kirjutatud Sri K. Pattabhi Joisi juhendamisel).</li>
+                    <li><strong>Juhendamine:</strong> Lino hõlbustab seda protsessi oma julgustuste ja läbinägelike, traditsiooniliste käeliste parandustega (adjustments).</li>
                 </ul>
-                <p class="mb-4 italic text-gray-500">Märkus: See on intensiivne traditsiooniline õppereis, mis nõuab pühendumist hommikuse praktika graafikule.</p>
+                <p class="mb-4 italic text-gray-500">Laager on väga intensiivne, kuid sobib kõikidel tasemetel praktiseerijatele (primary, intermediate, advanced A ja B).</p>
             `,
             highlights: ['Praktika Lino Mielega Indias', 'Traditsioonilised Mysore ja LED tunnid', 'Kovalemi kogemine, Kerala', 'Ayurveda hoolitsused ja kultuur', 'Kuulumine globaalsesse Ashtanga kogukonda']
         },
@@ -711,19 +711,19 @@ const eventsData = [
                 <p class="mb-4">Hän matkustaa säännöllisesti Kovalamiin, Keralaan osallistuakseen Mielen vuosittaisiin intensiivileireihin. Nämä legendaariset retriitit ovat hänen pisimpään käynnissä olleita ohjelmiaan, kestäen jopa kaksi kuukautta joka vuosi.</p>
                 <p class="mb-4">Kokoamme omistautuneiden harjoittelijoiden ryhmää liittymään Railin mukaan tälle syvälliselle matkalle Etelä-Intiaan.</p>
                 
-                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Kovalam Beach, Kerala</h3>
-                <p class="mb-4">Harjoittelu tapahtuu eloisalla ja kauniilla <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalamin rannalla</a> Keralassa. Tämä sijainti vetää puoleensa yli 500 opiskelijaa ja opettajaa ympäri maailmaa joka vuosi, luoden uskomattoman kansainvälisen Ashtanga-yhteisön.</p>
-                <p class="mb-4">Harjoitusten välissä Kerala tarjoaa upeita rantoja, perinteisiä Ayurveda-hoitoja, uskomatonta eteläintialaista ruokaa ja kuuluisia rauhallisia suvantovesiä tutkittavaksi.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🌴</span> Peacock-hotellin Joogashala</h3>
+                <p class="mb-4">Harjoittelu tapahtuu eloisalla ja kauniilla <a href="https://www.keralatourism.org/destination/kovalam-beach/15" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Kovalamin rannalla</a> Keralassa. Joogatila on <strong>Peacock-hotellin</strong> katolla kookospalmujen trooppisessa vehreydessä, tarjoten täysin suojatun ja turvallisen ympäristön, jossa opiskelijat voivat syventää harjoitustaan rauhassa.</p>
+                <p class="mb-4">Sijainti vetää puoleensa yli 500 opiskelijaa ja opettajaa ympäri maailmaa joka vuosi, luoden uskomattoman kansainvälisen Ashtanga-yhteisön. Harjoitusten välissä Kerala tarjoaa perinteisiä Ayurveda-hoitoja, uskomatonta eteläintialaista ruokaa ja kuuluisia rauhallisia suvantovesiä tutkittavaksi.</p>
 
-                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Harjoitus</h3>
-                <p class="mb-4">Nämä istunnot keskittyvät puhtaasti perinteiseen Ashtanga-joogamenetelmään. Koulutus sisältää:</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">🧘‍♀️</span> Harjoitus ja opetus</h3>
+                <p class="mb-4">Tämä intensiivileiri antaa opiskelijoille mahdollisuuden kehittää omaa harjoitustaan, jossa hengitys ja liike yhdistyvät järjestelmällisesti – parantaen keskittymiskykyä ja kehittäen vahvemman kehon ja mielen. Harjoitus keskittyy:</p>
                 <ul class="list-disc pl-5 space-y-2 mb-6">
-                    <li>Päivittäinen Mysore-tyylinen harjoitus ja ohjatut tunnit Vinyasa-järjestelmässä.</li>
-                    <li>Perinteiset fyysiset avustukset suoraan Lino Mieleltä ja hänen vanhemmilta apulaisiltaan.</li>
-                    <li>Ensimmäisen ja edistyneen sarjan syväluotaava opiskelu.</li>
-                    <li>Iltapäivän filosofiaa, Pranayamaa ja kysymys-vastaus -istuntoja.</li>
+                    <li><strong>Hengitys ja Bandhat:</strong> Hengityksen käyttö energian sisäänvetämiseen ja bandhojen käyttö energian säilyttämiseen ja ohjaamiseen koko kehossa.</li>
+                    <li><strong>Vinyasa-laskenta:</strong> Tieteellinen laskentamenetelmä hengityksen ja liikkeen synkronoimiseksi, mikä tuo tarkkuutta ja mielen selkeyttä.</li>
+                    <li><strong>Ohjatut ja Mysore-tunnit:</strong> Ohjattuja tunteja pidetään Linon <em>"Ashtanga Yoga"</em> -kirjan mukaisesti (kirjoitettu Sri K. Pattabhi Joisin ohjauksessa).</li>
+                    <li><strong>Ohjaus:</strong> Lino tukee prosessia rohkaisullaan ja perinteisillä, oivaltavilla fyysisillä avustuksillaan.</li>
                 </ul>
-                <p class="mb-4 italic text-gray-500">Huomio: Tämä on intensiivinen perinteinen opintomatka, joka vaatii sitoutumista aamuharjoituksen aikatauluun.</p>
+                <p class="mb-4 italic text-gray-500">Leiri on erittäin intensiivinen, mutta sopii kaikentasoisille harjoittelijoille (primary, intermediate, advanced A ja B).</p>
             `,
             highlights: ['Harjoitus Lino Mielen kanssa Intiassa', 'Perinteiset Mysore- ja ohjatut tunnit', 'Kovalam, Kerala', 'Ayurveda ja kulttuuri', 'Liity globaaliin yhteisöön']
         }
