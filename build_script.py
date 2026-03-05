@@ -39,7 +39,22 @@ except Exception as e:
     print(f"Error parsing translationsData: {e}")
     exit(1)
 
-def translate_html(soup, lang, translations):
+# Extract faqData for SEO schema Injection
+faq_js_path = os.path.join(WEBSITE_DIR, 'js', 'faq-data.js')
+try:
+    with open(faq_js_path, 'r', encoding='utf-8') as f:
+        faq_js_content = f.read()
+    faq_match = re.search(r'const faqData = (\{.*?\});', faq_js_content, re.DOTALL)
+    if faq_match:
+        faq_raw_js = faq_match.group(1)
+        faq_data_dict = js2py.eval_js("var a = " + faq_raw_js + "; a").to_dict()
+    else:
+        faq_data_dict = {}
+except Exception as e:
+    print(f"Error parsing faqData: {e}")
+    faq_data_dict = {}
+
+def translate_html(soup, lang, translations, filename, faq_data=None):
     """
     Given a BeautifulSoup object and a language dict,
     replace the innerHTML of elements with data-i18n tags.
@@ -89,6 +104,33 @@ def translate_html(soup, lang, translations):
     html_tag = soup.find('html')
     if html_tag:
         html_tag['lang'] = lang
+        
+    # Inject FAQPage JSON-LD schema if building faq.html
+    if filename == 'faq.html' and faq_data and lang in faq_data:
+        schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": []
+        }
+        categories = faq_data[lang]
+        if isinstance(categories, dict):
+            for cat_name, items in categories.items():
+                if isinstance(items, list):
+                    for item in items:
+                        if 'q' in item and 'a' in item:
+                            schema["mainEntity"].append({
+                                "@type": "Question",
+                                "name": item["q"],
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": item["a"]
+                                }
+                            })
+        if schema["mainEntity"]:
+            script_tag = soup.new_tag("script", type="application/ld+json")
+            script_tag.string = json.dumps(schema, indent=2, ensure_ascii=False)
+            if soup.head:
+                soup.head.append(script_tag)
 
     return soup
 
@@ -107,7 +149,7 @@ for lang in LANGUAGES:
         with open(filepath, 'r', encoding='utf-8') as file:
             soup = BeautifulSoup(file.read(), 'html.parser')
             
-        translated_soup = translate_html(soup, lang, t)
+        translated_soup = translate_html(soup, lang, t, filename, faq_data_dict)
         
         output_path = os.path.join(lang_dir, filename)
         with open(output_path, 'w', encoding='utf-8') as file:
