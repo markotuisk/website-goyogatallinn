@@ -168,11 +168,10 @@ function renderTeacherData(id, lang) {
     }
 
     const emailEl = document.getElementById('social-email');
-    if (emailEl && socials.email && socials.email !== '#') {
-        emailEl.href = `mailto:${socials.email}`;
+    if (emailEl) {
+        const enquirySubject = encodeURIComponent(`Enquiry for ${name}`);
+        emailEl.href = `mailto:info@goyoga.ee?subject=${enquirySubject}`;
         emailEl.classList.remove('hidden');
-    } else if (emailEl) {
-        emailEl.classList.add('hidden');
     }
 
     // Testimonials Section
