@@ -116,19 +116,19 @@ const seoData = {
             "latitude": 59.437,
             "longitude": 24.757
         },
-        "telephone": "+372 551 2345",
+        "telephone": "+372 513 2433",
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "05:30",
-                "closes": "20:30"
+                "opens": "06:30",
+                "closes": "20:00"
             },
             {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "07:30",
-                "closes": "14:00"
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "09:30",
+                "closes": "18:00"
             }
         ],
         "sameAs": [
