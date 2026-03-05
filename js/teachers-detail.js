@@ -346,7 +346,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             philosophy: "For me, the Ashtanga yoga practice is a method to balance out my life. It looks like a practice for the body, but it’s actually a great practice for the mind. It will meet you in whatever state you’re in. Always with tenderness.",
             highlights: [
                 "Teaches Ashtanga Mysore & Led classes",
-                "Raili Maripuu’s assistant teacher training",
+                "Ashtanga Estonia Assistant Teacher Training",
                 "Various workshops with Lino Miele both in Italy and India",
                 "Obsessed with vinyasa count and any kind of jumps :)"
             ],
@@ -375,7 +375,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             philosophy: "Minu jaoks on Ashtanga praktika meetod, millega oma elu tasakaalus hoida. See tundub füüsilise praktikana, kuid tegelikult on see suurepärane treening meelele. See võtab sind vastu täpselt sellises seisundis, nagu sa parajasti oled. Alati hellusega.",
             highlights: [
                 "Õpetab Ashtanga Mysore'i ja juhendatud tunde",
-                "Raili Maripuu õpetajate assisteerimiskoolitus",
+                "Ashtanga Estonia õpetajate assisteerimiskoolitus",
                 "Erinevad Lino Miele töötoad Itaalias ja Indias",
                 "Minu kinnisideeks on vinyasa lugemine ja kõikvõimalikud hüpped :)"
             ],
@@ -404,7 +404,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             philosophy: "Minulle Ashtanga-harjoitus on keino tasapainottaa elämääni. Se näyttää kehon harjoitukselta, mutta todellisuudessa se on loistava harjoitus mielelle. Se kohtaa sinut juuri siinä tilassa, missä olet. Aina lempeydellä.",
             highlights: [
                 "Opastaa Ashtanga Mysore ja ohjattuja tunteja",
-                "Raili Maripuun avustava opettajakoulutus",
+                "Ashtanga Estonian avustava opettajakoulutus",
                 "Erilaisia Lino Mielen työpajoja Italiassa ja Intiassa",
                 "Pakkomielteeni on Vinyasa-laskeminen ja kaikenlaiset hypyt :)"
             ],
