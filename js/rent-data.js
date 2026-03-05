@@ -13,12 +13,12 @@ const rentData = {
         facilities: {
             title: "Amenities & Atmosphere",
             items: [
-                { name: "Traditional Yoga Shala", desc: "Spacious room with high-quality natural wood flooring and excellent acoustics." },
+                { name: "Traditional Yoga Shala", desc: "Spacious room with high-quality natural wood flooring and excellent acoustics. The space belongs to Goyoga Tallinn." },
                 { name: "Tea & Relaxation Corner", desc: "A cozy nook for guests to settle in, enjoy herbal tea, and connect." },
                 { name: "Premium Props", desc: "Access to high-quality mats, blocks, blankets, and bolsters is included." },
-                { name: "Modern Accessibility", desc: "Low-profile staircase for a gentle climb and a modern elevator for effortless access to the 3rd floor." },
-                { name: "Natural Light", desc: "Large windows that fill the space with soft, natural daylight." },
-                { name: "Changing Rooms", desc: "Clean and private facilities for your participants." }
+                { name: "Changing Areas", desc: "2 cozy private dressing cabins, plus a open changing area with mirrors, open lockers, and hairdryers." },
+                { name: "Showers & Washrooms", desc: "2 showers and 2 WCs, along with 3 sinks (2 in the washroom areas and 1 in the changing area)." },
+                { name: "Climate Control", desc: "Excellent ventilation system providing efficient cooling and heating as needed for the Nordic weather." }
             ]
         },
         pricing: {
@@ -47,12 +47,12 @@ const rentData = {
         facilities: {
             title: "Mugavused ja atmosfäär",
             items: [
-                { name: "Traditsiooniline joogasaal", desc: "Avar ruum kvaliteetse loodusliku puitpõranda ja suurepärase akustikaga." },
+                { name: "Traditsiooniline joogasaal", desc: "Avar ruum kvaliteetse loodusliku puitpõranda ja suurepärase akustikaga. Ruum kuulub Goyoga Tallinnale." },
                 { name: "Tee- ja lõõgastusnurk", desc: "Hubane nurgake külalistele sisseseadmiseks, taimetee nautimiseks ja vestlusteks." },
                 { name: "Kvaliteetne varustus", desc: "Juurdepääs kvaliteetsetele mattidele, plokkidele, pleedidele ja patjadele on hinna sees." },
-                { name: "Kaasaegne ligipääs", desc: "Mugav madala profiiliga trepp ja kaasaegne lift, mis viib vaevata 3. korrusele." },
-                { name: "Loomulik valgus", desc: "Suured aknad, mis täidavad ruumi pehme ja loomuliku päevavalgusega." },
-                { name: "Riietusruumid", desc: "Puhtad ja privaatsed ruumid teie osalejatele." }
+                { name: "Riietumisalad", desc: "2 hubast privaatset riietumiskabiini, lisaks avatud riietumisala peeglite, avatud kappide ja föönidega." },
+                { name: "Duširuumid ja WC-d", desc: "2 dušši ja 2 WC-d, koos 3 kraanikausiga (2 pesuruumides ja 1 riietumisalal)." },
+                { name: "Kliimakontroll", desc: "Hea ventilatsioon, mis pakub vastavalt Põhjamaade ilmale vajalikku jahutust ja kütet." }
             ]
         },
         pricing: {
@@ -81,12 +81,12 @@ const rentData = {
         facilities: {
             title: "Mukavuudet ja ilmapiiri",
             items: [
-                { name: "Perinteinen joogasali", desc: "Tilava huone, jossa on laadukas luonnonpuulattia ja erinomainen akustiikka." },
+                { name: "Perinteinen joogasali", desc: "Tilava huone, jossa on laadukas luonnonpuulattia ja erinomainen akustiikka. Tila kuuluu Goyoga Tallinnalle." },
                 { name: "Tee- ja rentoutumiskulma", desc: "Viihtyisä nurkkaus vieraille rauhalliseen teehetkeen ja kohtaamisiin." },
                 { name: "Laadukkaat välineet", desc: "Pääsy laadukkaisiin mattoihin, blokkeihin, peittoihin ja boltstereihin sisältyy hintaan." },
-                { name: "Moderni saavutettavuus", desc: "Matalaprofiiliset portaat ja moderni hissi vaivattomaan pääsyyn 3. kerrokseen." },
-                { name: "Luonnonvalo", desc: "Suuret ikkunat, jotka täyttävät tilan pehmeällä luonnonvalolla." },
-                { name: "Pukuhuoneet", desc: "Puhtaat ja yksityiset tilat osallistujille." }
+                { name: "Pukuhuonetilat", desc: "2 viihtyisää yksityistä pukukoppia sekä avoin pukeutumistila, jossa on peilit, avoimet lokerot ja hiustenkuivaajat." },
+                { name: "Suihkut ja WC:t", desc: "2 suihkua ja 2 WC:tä sekä 3 pesuallasta (2 pesutiloissa ja 1 pukuhuoneessa)." },
+                { name: "Ilmastointi ja lämmitys", desc: "Hyvä ilmanvaihto tarjoaa joko viilennystä tai lämmitystä Pohjoismaiden sääolosuhteiden mukaan." }
             ]
         },
         pricing: {
