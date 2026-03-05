@@ -219,6 +219,13 @@ function renderTeacherData(id, lang) {
         }
     }
 
+    // Update Private Booking Email Subject
+    const bookPrivateBtn = document.getElementById('book-private-btn');
+    if (bookPrivateBtn) {
+        const subject = encodeURIComponent(`Private Class Enquiry for ${name}`);
+        bookPrivateBtn.href = `mailto:info@goyoga.ee?subject=${subject}`;
+    }
+
     // Custom Backgrounds for Specific Teachers
     const heroSection = document.getElementById('teacher-hero-section');
     if (heroSection) {
