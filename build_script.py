@@ -79,7 +79,10 @@ def translate_html(soup, lang, translations):
             href = tag['href']
             if href == 'index.html':
                  tag['href'] = f'/{lang}/'
-            elif href.endswith('.html') and not href.startswith(('http', '/')):
+            elif href.startswith('index.html#'):
+                 hash_part = href.split('#', 1)[1]
+                 tag['href'] = f'/{lang}/#{hash_part}'
+            elif '.html' in href and not href.startswith(('http', '/')):
                  tag['href'] = f'/{lang}/{href}'
 
     # Update html lang attribute
