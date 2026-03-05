@@ -616,7 +616,7 @@ const classesData = {
     "sound-bath-meditation": {
         icon: "music",
         image: "assets/classes/3-sound-bath-goyoga-tallinn-estonia-jooga-stuudio-narvamnt7d-david-lepp-marit-tuisk-kaia-karjatse.jpg",
-        teacherIds: ["kaia-karjatse", "david-lepp"],
+        teacherIds: ["kaia-karjatse", "david-lepp", "marit-tuisk"],
         translations: {
             en: {
                 title: "Sound Baths",
