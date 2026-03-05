@@ -114,7 +114,7 @@
 </div>
 </div>
 <!-- Mobile Menu -->
-<div class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+<div class="fixed inset-0 z-50 bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto" id="mobile-menu">
 <div class="flex justify-end p-4">
 <button class="focus:outline-none" id="menu-close">
 <i class="h-6 w-6" data-lucide="x"></i>
@@ -133,7 +133,7 @@
 <!-- Mobile Language Options in Menu -->
 <div class="flex flex-col gap-4 mt-8">
 <div class="text-center mb-2 text-gray-500 font-medium" data-i18n="nav.language">Kieli</div>
-<div class="flex gap-4">
+<div class="flex flex-wrap justify-center gap-3">
 <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border" data-lang="en">
 <img alt="English" class="language-flag" src="https://flagcdn.com/w20/gb.png"/>
 <span>English</span>
@@ -161,8 +161,8 @@
 </div>
 <div class="container-custom relative z-10 text-center text-white fade-in">
 <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white/10 backdrop-blur-sm rounded-full mb-4" data-i18n="hero.tagline">Joogan ja hyvinvoinnin keidas</span>
-<h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-medium" data-i18n="hero.title">Perinteisen joogan ja hyvinvointipalveluiden koti Tallinnassa</h1>
-<p class="max-w-2xl mx-auto mb-10 text-lg text-white/90" data-i18n="hero.description">Päivittäiset joogatunnit ja hyvinvointitapahtumat Tallinnan keskustassa. Olemme luoneet aidon tilan ja yhteisön, jossa erilaiset joogatyylit ja hyvinvointikäytännöt tukevat ihmisten valintoja.</p>
+<h1 class="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium" data-i18n="hero.title">Perinteisen joogan ja hyvinvointipalveluiden koti Tallinnassa</h1>
+<p class="max-w-2xl mx-auto mb-10 text-base sm:text-lg text-white/90" data-i18n="hero.description">Päivittäiset joogatunnit ja hyvinvointitapahtumat Tallinnan keskustassa. Olemme luoneet aidon tilan ja yhteisön, jossa erilaiset joogatyylit ja hyvinvointikäytännöt tukevat ihmisten valintoja.</p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 <a class="px-8 py-3 bg-white text-gray-800 font-medium rounded-md hover:bg-white/90 transition-colors shadow-md" data-i18n="hero.view_schedule" href="#schedule">Katso aikataulu</a>
 <a class="px-8 py-3 border border-white/60 rounded-md hover:bg-white/10 transition-colors" data-i18n="hero.events" href="#events">Tapahtumat</a>
