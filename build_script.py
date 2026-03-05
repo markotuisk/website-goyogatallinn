@@ -54,7 +54,22 @@ except Exception as e:
     print(f"Error parsing faqData: {e}")
     faq_data_dict = {}
 
-def translate_html(soup, lang, translations, filename, faq_data=None):
+# Extract seoData for header meta translation and schema injection
+seo_js_path = os.path.join(WEBSITE_DIR, 'js', 'seo-data.js')
+try:
+    with open(seo_js_path, 'r', encoding='utf-8') as f:
+        seo_js_content = f.read()
+    seo_match = re.search(r'const seoData = (\{.*?\});', seo_js_content, re.DOTALL)
+    if seo_match:
+        seo_raw_js = seo_match.group(1)
+        seo_data_dict = js2py.eval_js("var a = " + seo_raw_js + "; a").to_dict()
+    else:
+        seo_data_dict = {}
+except Exception as e:
+    print(f"Error parsing seoData: {e}")
+    seo_data_dict = {}
+
+def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=None):
     """
     Given a BeautifulSoup object and a language dict,
     replace the innerHTML of elements with data-i18n tags.
@@ -132,6 +147,42 @@ def translate_html(soup, lang, translations, filename, faq_data=None):
             if soup.head:
                 soup.head.append(script_tag)
 
+    # Inject SEO Meta Tags and Hreflang
+    if seo_data:
+        page_key = filename.replace('.html', '')
+        if page_key == 'index':
+            meta_data = seo_data.get('meta', {}).get(lang)
+        else:
+            meta_data = seo_data.get('meta', {}).get(page_key, {}).get(lang)
+            
+        if meta_data:
+            if 'title' in meta_data and soup.title:
+                soup.title.string = meta_data['title']
+            
+            desc_tag = soup.find('meta', attrs={'name': 'description'})
+            if desc_tag and 'description' in meta_data:
+                desc_tag['content'] = meta_data['description']
+                
+            og_title = soup.find('meta', property='og:title')
+            if og_title and 'ogTitle' in meta_data:
+                og_title['content'] = meta_data['ogTitle']
+                
+            og_desc = soup.find('meta', property='og:description')
+            if og_desc and 'ogDescription' in meta_data:
+                og_desc['content'] = meta_data['ogDescription']
+
+    # Inject hreflang tags for Google Local SEO mapping
+    if soup.head:
+        for l in LANGUAGES:
+            href_path = f"https://goyoga.ee/{l}/" if filename == 'index.html' else f"https://goyoga.ee/{l}/{filename}"
+            link_tag = soup.new_tag("link", rel="alternate", hreflang=l, href=href_path)
+            soup.head.append(link_tag)
+        
+        # Also add x-default pointing back to english base route
+        x_default_href = f"https://goyoga.ee/" if filename == 'index.html' else f"https://goyoga.ee/{filename}"
+        link_tag = soup.new_tag("link", rel="alternate", hreflang="x-default", href=x_default_href)
+        soup.head.append(link_tag)
+
     return soup
 
 # Create the output directories and copy assets
@@ -149,7 +200,7 @@ for lang in LANGUAGES:
         with open(filepath, 'r', encoding='utf-8') as file:
             soup = BeautifulSoup(file.read(), 'html.parser')
             
-        translated_soup = translate_html(soup, lang, t, filename, faq_data_dict)
+        translated_soup = translate_html(soup, lang, t, filename, faq_data_dict, seo_data_dict)
         
         output_path = os.path.join(lang_dir, filename)
         with open(output_path, 'w', encoding='utf-8') as file:
@@ -157,5 +208,32 @@ for lang in LANGUAGES:
             file.write(str(translated_soup))
             
         print(f"Built {output_path}")
+        
+# Generate Multi-Language Sitemap
+print("Generating exhaustive multi-language sitemap.xml...")
+sitemap_urls = []
+for lang in LANGUAGES:
+    for filename in HTML_FILES:
+        # Ignore intermediate deepseek templates
+        if 'deepseek_html_' in filename:
+            continue
+            
+        url = f"https://goyoga.ee/{lang}/" if filename == 'index.html' else f"https://goyoga.ee/{lang}/{filename}"
+        priority = "1.0" if filename == 'index.html' else "0.8"
+        sitemap_urls.append(f'''   <url>
+      <loc>{url}</loc>
+      <changefreq>weekly</changefreq>
+      <priority>{priority}</priority>
+   </url>''')
 
+sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{chr(10).join(sitemap_urls)}
+</urlset>'''
+
+sitemap_path = os.path.join(OUTPUT_DIR, 'sitemap.xml')
+with open(sitemap_path, 'w', encoding='utf-8') as f:
+    f.write(sitemap_content)
+
+print(f"Built {sitemap_path}")
 print("✨ Static HTML Generation Complete!")
