@@ -921,7 +921,7 @@ const classesData = {
     },
     "cacao-ceremonies": {
         icon: "heart",
-        image: "https://images.unsplash.com/photo-1512568400610-62da28bc8a13",
+        image: "assets/classes/7-cao-ceremonies-goyoga-tallinn-estonia-jooga-stuudio-narvamnt7d-david-lepp-marit-tuisk-m-1024w.webp",
         teacherIds: ["marit-tuisk"],
         translations: {
             en: {
