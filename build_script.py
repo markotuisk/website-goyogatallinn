@@ -7,7 +7,7 @@ import js2py
 # Configurations
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 WEBSITE_DIR = BASE_DIR
-OUTPUT_DIR = os.path.join(WEBSITE_DIR, 'public')
+OUTPUT_DIR = WEBSITE_DIR
 LANGUAGES = ['en', 'et', 'fi']
 HTML_FILES = [f for f in os.listdir(WEBSITE_DIR) if f.endswith('.html')]
 
