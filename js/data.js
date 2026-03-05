@@ -274,7 +274,7 @@ window.teachersData = teachersData;
 const classesData = {
     "ashtanga-yoga": {
         icon: "activity", // lucid icon name
-        image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5",
+        image: "assets/classes/2-ashtanga-goyoga-tallinn-estonia-jooga-stuudio-narvamnt7d-raili-maripuu-keiu-grossberg-victooria-pajusaar-.webp.webp",
         teacherIds: ["raili-maripuu", "victoria-palusaar", "keiu-grossberg"],
         translations: {
             en: {
