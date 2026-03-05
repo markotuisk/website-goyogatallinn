@@ -1,4 +1,7 @@
-/tunniplaan /#schedule 301
+/tunniplaan    /et/#schedule 301
+/et/tunniplaan /et/#schedule 301
+/en/tunniplaan /en/#schedule 301
+/fi/tunniplaan /fi/#schedule 301
 
 # --- SEO Language Routing ---
 # If visitor browser language prefers 'et', route to /et/ 
