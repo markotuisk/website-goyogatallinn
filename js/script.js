@@ -26,26 +26,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- Internationalization (i18n) ---
 function initLanguage() {
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    const browserLanguage = navigator.language.substring(0, 2);
+    // Rely on the server/build to set the HTML lang correctly.
+    const htmlLang = document.documentElement.lang || 'en';
+    currentLanguage = htmlLang;
 
-    let langToLoad = 'en';
-    if (savedLanguage && ['en', 'et', 'fi'].includes(savedLanguage)) {
-        langToLoad = savedLanguage;
-    } else if (['en', 'et', 'fi'].includes(browserLanguage)) {
-        langToLoad = browserLanguage;
-    }
-    setLanguage(langToLoad);
+    updateUIDecorators(currentLanguage);
 }
 
 function setLanguage(lang) {
     if (!['en', 'et', 'fi'].includes(lang)) return;
-    currentLanguage = lang;
     localStorage.setItem('preferredLanguage', lang);
-    updateUI(lang);
+
+    // Determine target path
+    const path = window.location.pathname;
+    const langPrefixPattern = /^\/(en|et|fi)(\/|$)/;
+
+    let newPath;
+    if (langPrefixPattern.test(path)) {
+        newPath = path.replace(langPrefixPattern, `/${lang}/`);
+    } else {
+        newPath = `/${lang}${path === '/' ? '/' : path}`;
+    }
+
+    window.location.href = newPath;
 }
 
-function updateUI(lang) {
+function updateUIDecorators(lang) {
     const flagMap = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
     const languageCodeMap = { 'en': 'EN', 'et': 'EE', 'fi': 'FI' };
 
@@ -59,19 +65,6 @@ function updateUI(lang) {
     const mobLangText = document.getElementById('mobile-current-language');
     if (mobLangText) mobLangText.textContent = languageCodeMap[lang];
 
-    // Update Text from Global translationsData
-    const t = translationsData[lang] || translationsData['en'];
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (t[key]) {
-            if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
-                element.setAttribute('placeholder', t[key]);
-            } else {
-                element.innerHTML = t[key];
-            }
-        }
-    });
-
     updateSEO(lang); // Update Meta Tags
 
     // Dropdowns active state
@@ -83,14 +76,6 @@ function updateUI(lang) {
     // Close menus
     document.getElementById('language-dropdown')?.classList.remove('active');
     document.getElementById('mobile-language-dropdown')?.classList.remove('active');
-
-    // Notify other scripts that language has changed
-    document.dispatchEvent(new CustomEvent('languageChanged', { detail: lang }));
-
-    // Refresh reviews and events to apply translations
-    initReviewsCarousel();
-    initGoogleReviewsCarousel();
-    initEvents();
 }
 
 // Logic for Language Switcher Buttons

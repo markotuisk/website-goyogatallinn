@@ -67,6 +67,21 @@ def translate_html(soup, lang, translations):
             if 'active' in el.get('class', []):
                 el['class'].remove('active')
 
+    # Fix relative paths to absolute paths so they work in subdirectories
+    for tag in soup.find_all(['link', 'script', 'img', 'video', 'source']):
+        for attr in ['src', 'href']:
+            if tag.has_attr(attr) and tag[attr].startswith(('css/', 'js/', 'assets/')):
+                tag[attr] = '/' + tag[attr]
+
+    # Ensure local navigation links retain the correct language context
+    for tag in soup.find_all('a'):
+        if tag.has_attr('href'):
+            href = tag['href']
+            if href == 'index.html':
+                 tag['href'] = f'/{lang}/'
+            elif href.endswith('.html') and not href.startswith(('http', '/')):
+                 tag['href'] = f'/{lang}/{href}'
+
     # Update html lang attribute
     html_tag = soup.find('html')
     if html_tag:
