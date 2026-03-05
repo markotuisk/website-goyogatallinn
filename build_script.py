@@ -69,7 +69,43 @@ except Exception as e:
     print(f"Error parsing seoData: {e}")
     seo_data_dict = {}
 
-def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=None):
+# Extract eventsData for SEO schema Injection
+events_js_path = os.path.join(WEBSITE_DIR, 'js', 'events.js')
+try:
+    with open(events_js_path, 'r', encoding='utf-8') as f:
+        events_js_content = f.read()
+    events_match = re.search(r'const eventsData = (\[.*?\]);', events_js_content, re.DOTALL)
+    if events_match:
+        events_raw_js = events_match.group(1)
+        # Sanitize ES6 template literals (backticks) since js2py doesn't support them
+        events_raw_js = re.sub(r'(?m)^\s*fullDescription:\s*`.*?`,$', '', events_raw_js, flags=re.DOTALL)
+        events_raw_js = re.sub(r'(?m)^\s*itinerary:\s*\[.*?\],?$', '', events_raw_js, flags=re.DOTALL)
+        # Ensure array is safe
+        events_data_list = js2py.eval_js("var a = " + events_raw_js + "; a").to_list()
+    else:
+        events_data_list = []
+except Exception as e:
+    print(f"Error parsing eventsData with js2py: {e}")
+    events_data_list = []
+
+# Extract teachersData for SEO schema Injection (found in data.js)
+data_js_path = os.path.join(WEBSITE_DIR, 'js', 'data.js')
+try:
+    with open(data_js_path, 'r', encoding='utf-8') as f:
+        data_js_content = f.read()
+    teachers_match = re.search(r'const teachersData = (\{.*?\});(?:\n.*?)?const classesData =', data_js_content, re.DOTALL)
+    if not teachers_match:
+        teachers_match = re.search(r'const teachersData = (\{.*?\});\n', data_js_content, re.DOTALL)
+    if teachers_match:
+        teachers_raw_js = teachers_match.group(1)
+        teachers_data_dict = js2py.eval_js("var a = " + teachers_raw_js + "; a").to_dict()
+    else:
+        teachers_data_dict = {}
+except Exception as e:
+    print(f"Error parsing teachersData with js2py: {e}")
+    teachers_data_dict = {}
+
+def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=None, events_data=None, teachers_data=None):
     """
     Given a BeautifulSoup object and a language dict,
     replace the innerHTML of elements with data-i18n tags.
@@ -147,6 +183,92 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             if soup.head:
                 soup.head.append(script_tag)
 
+    # Inject Event JSON-LD schema if building events.html
+    if filename == 'events.html' and events_data:
+        event_schemas = []
+        for event in events_data:
+            if not isinstance(event, dict) or lang not in event:
+                continue
+            
+            e_lang = event[lang]
+            event_schema = {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": e_lang.get('title', ''),
+                "description": e_lang.get('description', ''),
+                "startDate": event.get('date', ''), # raw date fallback
+                "endDate": event.get('expiryDate', ''),
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                    "@type": "Place",
+                    "name": e_lang.get('location', ''),
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Tallinn",
+                        "addressCountry": "EE"
+                    }
+                },
+                "image": [f"https://goyoga.ee{event.get('image', '')}"],
+                "organizer": {
+                    "@type": "Organization",
+                    "name": e_lang.get('organizer', 'Goyoga Tallinn'),
+                    "url": "https://goyoga.ee"
+                }
+            }
+            # Only index active events
+            if event.get('active', False):
+                event_schemas.append(event_schema)
+                
+        if event_schemas:
+            script_tag = soup.new_tag("script", type="application/ld+json")
+            script_tag.string = json.dumps(event_schemas, indent=2, ensure_ascii=False)
+            if soup.head:
+                soup.head.append(script_tag)
+
+    # Inject Person (Teacher) JSON-LD schema if building teacher.html
+    if filename == 'teacher.html' and teachers_data:
+        person_schemas = []
+        for tid, tdata in teachers_data.items():
+            if not isinstance(tdata, dict):
+                continue
+                
+            person_schema = {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": tdata.get('name', ''),
+                "jobTitle": tdata.get('title', ''),
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "goyoga.ee"
+                },
+                "image": f"https://goyoga.ee{tdata.get('image', '')}",
+            }
+            if 'socials' in tdata and isinstance(tdata['socials'], dict):
+                person_schema['sameAs'] = list(tdata['socials'].values())
+                
+            person_schemas.append(person_schema)
+            
+        if person_schemas:
+            script_tag = soup.new_tag("script", type="application/ld+json")
+            # Usually only one object is expected, so wrap in a graph if multiple
+            graph_schema = {
+                "@context": "https://schema.org",
+                "@graph": person_schemas
+            }
+            script_tag.string = json.dumps(graph_schema, indent=2, ensure_ascii=False)
+            if soup.head:
+                soup.head.append(script_tag)
+
+    # Translate Image Alt Text
+    if seo_data and 'alts' in seo_data and lang in seo_data['alts']:
+        lang_alts = seo_data['alts'][lang]
+        for img in soup.find_all('img', attrs={'alt': True}):
+            alt_text = img['alt']
+            # Only exact matching for safety based on the curated seo-data dict
+            if alt_text in lang_alts:
+                img['alt'] = lang_alts[alt_text]
+
     # Inject SEO Meta Tags and Hreflang
     if seo_data:
         page_key = filename.replace('.html', '')
@@ -170,6 +292,16 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             og_desc = soup.find('meta', property='og:description')
             if og_desc and 'ogDescription' in meta_data:
                 og_desc['content'] = meta_data['ogDescription']
+
+    # Update Canonical Tag Context
+    canonical_tag = soup.find('link', rel='canonical')
+    if canonical_tag and canonical_tag.has_attr('href'):
+        if lang != 'en':
+            base_url = "https://goyoga.ee"
+            if filename == 'index.html':
+                canonical_tag['href'] = f"{base_url}/{lang}/"
+            else:
+                canonical_tag['href'] = f"{base_url}/{lang}/{filename}"
 
     # Inject hreflang tags for Google Local SEO mapping
     if soup.head:
@@ -200,7 +332,7 @@ for lang in LANGUAGES:
         with open(filepath, 'r', encoding='utf-8') as file:
             soup = BeautifulSoup(file.read(), 'html.parser')
             
-        translated_soup = translate_html(soup, lang, t, filename, faq_data_dict, seo_data_dict)
+        translated_soup = translate_html(soup, lang, t, filename, faq_data_dict, seo_data_dict, events_data_list, teachers_data_dict)
         
         output_path = os.path.join(lang_dir, filename)
         with open(output_path, 'w', encoding='utf-8') as file:

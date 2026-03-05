@@ -143,6 +143,50 @@ const seoData = {
         }
     },
 
+    // Image Alt Text Translations for Local Image SEO Search
+    alts: {
+        et: {
+            "Goyoga Tallinn": "Goyoga Tallinn Joogastuudio",
+            "Student practicing traditional Ashtanga Yoga at Goyoga Tallinn Tallinn studio": "Õpilane praktiseerimas traditsioonilist Ashtanga joogat Goyoga Tallinna stuudios",
+            "Ashtanga Yoga": "Ashtanga Jooga Tallinnas",
+            "Strength": "Jõud ja venivus",
+            "60+ Yoga": "Seenioride jooga 60+",
+            "Qigong": "Qigong ehk hiina võimlemine",
+            "Sound Baths": "Helirännakud ja gongiõhtud Tallinnas",
+            "Yoga Nidra | Meditatsioon": "Yoga Nidra | Meditatsioon",
+            "Meditation": "Meditatsioon Tallinnas",
+            "Slow Flow Yoga": "Slow Flow Jooga",
+            "Vinyasa Flow": "Vinyasa Flow Jooga Tallinnas",
+            "Hatha Yoga": "Hatha Jooga",
+            "Cacao Ceremonies": "Kakaotseremooniad Tallinnas",
+            "Join Our Team": "Liitu meiega",
+            "Spacious and bright yoga shala interior at Narva mnt 7D Tallinn": "Avar ja valgusküllane joogasaal aadressil Narva mnt 7D Tallinn",
+            "Yoga practitioners in lotus position at Goyoga Tallinn Tallinn": "Joogapraktiseerijad lootoseasendis Goyoga Tallinnas",
+            "Meditation and mindfulness session at our Tallinn studio": "Meditatsiooni ja teadveloleku seanss meie Tallinna stuudios",
+            "Professional yoga props including mats and blocks for Ashtanga practice": "Professionaalsed joogamatid ja plokid Ashtanga praktikaks"
+        },
+        fi: {
+            "Goyoga Tallinn": "Goyoga Tallinn Joogastudio",
+            "Student practicing traditional Ashtanga Yoga at Goyoga Tallinn Tallinn studio": "Oppilas harjoittelee perinteistä Ashtanga-joogaa Goyoga Tallinn -studiossa",
+            "Ashtanga Yoga": "Ashtanga Jooga",
+            "Strength": "Voima",
+            "60+ Yoga": "Ikäihmisten jooga 60+",
+            "Qigong": "Qigong",
+            "Sound Baths": "Äänimaljarentoutus Tallinnassa",
+            "Yoga Nidra | Meditatsioon": "Yoga Nidra",
+            "Meditation": "Meditaatio",
+            "Slow Flow Yoga": "Slow Flow Jooga",
+            "Vinyasa Flow": "Vinyasa Flow Jooga",
+            "Hatha Yoga": "Hatha Jooga",
+            "Cacao Ceremonies": "Kaakaoseremoniat",
+            "Join Our Team": "Liity tiimiimme",
+            "Spacious and bright yoga shala interior at Narva mnt 7D Tallinn": "Tilava ja valoisa joogasali osoitteessa Narva mnt 7D Tallinna",
+            "Yoga practitioners in lotus position at Goyoga Tallinn Tallinn": "Joogan harrastajat lootusasennossa Goyoga Tallinnassa",
+            "Meditation and mindfulness session at our Tallinn studio": "Meditaatio- ja mindfulness-sessio Tallinnan studiollamme",
+            "Professional yoga props including mats and blocks for Ashtanga practice": "Ammattitason joogamatot ja tiilet Ashtanga-harjoitusta varten"
+        }
+    },
+
     // Cheeky / Dynamic SEO Settings
     config: {
         canonical: "https://goyoga.ee",
