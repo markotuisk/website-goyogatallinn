@@ -1052,9 +1052,9 @@ function renderEvents(container, featuredOnly = false) {
                     <p class="text-sm text-gray-500 mb-4 italic">${data.organizer}</p>
                     <p class="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed">${data.description}</p>
                     <div class="mt-auto flex gap-3">
-                        <a href="${event.registerLink}" class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
+                        <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
                             ${translationsData[lang]['events.register_button']}
-                        </a>
+                        </button>
                         <a href="event.html?id=${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
                             ${translationsData[lang]['events.learn_more_button']}
                         </a>
@@ -1094,3 +1094,170 @@ async function shareEvent(id, title) {
         }
     }
 }
+
+// --- Event Registration Modal Logic ---
+
+function initEventModal() {
+    // Inject modal HTML into body
+    const modalHtml = `
+        <div id="event-registration-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+            <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl p-8 transform scale-95 transition-transform duration-300 mx-4" id="event-modal-content">
+                <button onclick="closeEventModal()" class="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-900 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                
+                <h2 class="text-2xl font-medium mb-2 text-gray-900"><span data-i18n="events.modal.title">Register for</span></h2>
+                <h3 id="event-modal-target-title" class="text-xl text-pink-600 font-semibold mb-6">Event Title</h3>
+                
+                <div id="event-modal-success" class="hidden text-center py-8">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2" data-i18n="events.modal.success">Thank you! We will contact you soon.</h3>
+                    <button onclick="closeEventModal()" class="mt-6 px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors" data-i18n="events.modal.close">Close</button>
+                </div>
+
+                <form id="event-registration-form" onsubmit="submitEventRegistration(event)" class="space-y-4">
+                    <input type="hidden" id="event-modal-id" name="eventId" value="">
+                    <input type="hidden" id="event-modal-title-input" name="eventTitle" value="">
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" data-i18n="events.modal.name_label">Full Name *</label>
+                        <input type="text" id="event-reg-name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none transition-all">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" data-i18n="events.modal.email_label">Email Address *</label>
+                        <input type="email" id="event-reg-email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none transition-all">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" data-i18n="events.modal.phone_label">Phone Number</label>
+                        <input type="tel" id="event-reg-phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none transition-all">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1" data-i18n="events.modal.message_label">Additional Information / Questions</label>
+                        <textarea id="event-reg-message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none transition-all resize-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="event-reg-submit-btn" class="w-full py-4 mt-6 bg-pink-600 text-white font-bold uppercase tracking-widest rounded-xl hover:bg-pink-700 transition-all shadow-md flex justify-center items-center gap-2">
+                        <span data-i18n="events.modal.submit">Send Registration</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    // Setup click outside to close
+    const modal = document.getElementById('event-registration-modal');
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeEventModal();
+        }
+    });
+}
+
+function openEventModal(eventId, encodedEventTitle) {
+    const title = decodeURIComponent(encodedEventTitle);
+
+    document.getElementById('event-modal-id').value = eventId;
+    document.getElementById('event-modal-title-input').value = title;
+    document.getElementById('event-modal-target-title').textContent = title;
+
+    // Reset form state
+    document.getElementById('event-registration-form').reset();
+    document.getElementById('event-registration-form').classList.remove('hidden');
+    document.getElementById('event-modal-success').classList.add('hidden');
+
+    // Update translations
+    const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'en';
+    updateUI(lang);
+
+    const modal = document.getElementById('event-registration-modal');
+    const content = document.getElementById('event-modal-content');
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+
+    // Small delay for transition
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        content.classList.remove('scale-95');
+    }, 10);
+}
+
+function closeEventModal() {
+    const modal = document.getElementById('event-registration-modal');
+    const content = document.getElementById('event-modal-content');
+
+    modal.classList.add('opacity-0');
+    content.classList.add('scale-95');
+
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }, 300);
+}
+
+async function submitEventRegistration(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('event-reg-submit-btn');
+    const originalBtnHtml = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...';
+    submitBtn.disabled = true;
+
+    const eventId = document.getElementById('event-modal-id').value;
+    const eventTitle = document.getElementById('event-modal-title-input').value;
+    const name = document.getElementById('event-reg-name').value;
+    const email = document.getElementById('event-reg-email').value;
+    const phone = document.getElementById('event-reg-phone').value;
+    const message = document.getElementById('event-reg-message').value;
+
+    const webhookUrl = 'https://discord.com/api/webhooks/1478929947123777739/nQSJDyZvJPtfX0ZYg7tWR6mn2iZd2IsVXzwJN-sIVgU7pHAOiNQAP68BZHbxDlwFvQ1J';
+
+    const payload = {
+        embeds: [{
+            title: "📣 New Event Registration",
+            color: 15277667, // Hex #E91E63 (Pink)
+            fields: [
+                { name: "Event", value: eventTitle, inline: false },
+                { name: "Name", value: name, inline: true },
+                { name: "Email", value: email, inline: true },
+                { name: "Phone", value: phone || "Not provided", inline: true },
+                { name: "Message", value: message || "No message provided", inline: false },
+                { name: "Metadata", value: `**Event ID:** ${eventId}\n**Source URL:** ${window.location.href}\n**Language:** ${typeof currentLanguage !== 'undefined' ? currentLanguage : 'en'}`, inline: false }
+            ],
+            footer: {
+                text: "Goyoga Tallinn Website",
+                icon_url: "https://goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-96x96.png"
+            },
+            timestamp: new Date().toISOString()
+        }]
+    };
+
+    try {
+        await fetch(webhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        // Show success state
+        document.getElementById('event-registration-form').classList.add('hidden');
+        document.getElementById('event-modal-success').classList.remove('hidden');
+    } catch (error) {
+        console.error("Error submitting registration:", error);
+        alert("There was an error sending your registration. Please try again or email us directly at info@goyoga.ee");
+    } finally {
+        submitBtn.innerHTML = originalBtnHtml;
+        submitBtn.disabled = false;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initEventModal();
+});

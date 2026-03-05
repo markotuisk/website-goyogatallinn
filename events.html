@@ -233,9 +233,9 @@
                                 <p class="text-sm text-gray-500 mb-6 italic">${data.organizer}</p>
                                 <p class="text-gray-600 mb-8 text-sm leading-relaxed line-clamp-3">${data.description}</p>
                                 <div class="mt-auto flex flex-col gap-3">
-                                    <a href="${event.registerLink}" class="w-full text-center py-4 bg-gray-900 text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-pink-600 transition-all duration-300 shadow-md">
+                                    <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="w-full text-center py-4 bg-gray-900 text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-pink-600 transition-all duration-300 shadow-md">
                                         ${translationsData[lang]['events.register_button']}
-                                    </a>
+                                    </button>
                                     <a href="event.html?id=${event.id}" class="w-full text-center py-4 border border-gray-200 text-gray-700 text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-gray-50 transition-all">
                                         ${translationsData[lang]['events.learn_more_button']}
                                     </a>
