@@ -329,17 +329,72 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white pt-12 pb-10">
+    <footer class="bg-gray-800 text-white pt-16 pb-10">
         <div class="container-custom">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
-                <div class="mb-5">
-                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn"
-                        class="h-10 w-auto brightness-0 invert">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <div class="mb-5">
+                        <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn"
+                            class="h-12 w-auto brightness-0 invert">
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-xs" data-i18n="footer.description">Traditional Ashtanga yoga in
+                        the heart of the city. Join our community of dedicated practitioners.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="youtube"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"
+                                class="h-5 w-5"></i></a>
+                    </div>
                 </div>
-                <div class="flex gap-8">
-                    <a href="index.html#home" class="text-gray-300 hover:text-white" data-i18n="nav.home">Home</a>
-                    <a href="index.html#studio" class="text-gray-300 hover:text-white" data-i18n="nav.studio">Studio</a>
-                    <a href="faq.html" class="text-gray-300 hover:text-white" data-i18n="footer.faq">FAQ</a>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.quick_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.about">About</a></li>
+                        <li><a href="index.html#schedule" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="index.html#teachers" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="index.html#events" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.events">Events</a>
+                        </li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.resources">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="index.html#events" class="text-gray-300 hover:text-white"
+                                data-i18n="footer.workshops">Workshops</a></li>
+                        <li><a href="faq.html" class="hover:text-pink-600 transition-colors"
+                                data-i18n="footer.faq">FAQ</a></li>
+                        <li><a href="rent.html" class="hover:text-pink-600 transition-colors"
+                                data-i18n="footer.rent">Studio Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.newsletter">Newsletter</h4>
+                    <p class="text-gray-300 mb-4" data-i18n="footer.newsletter_description">Join our newsletter to
+                        receive updates about workshops and events.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="hidden" name="formType" value="newsletter">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            data-i18n-placeholder="footer.email_placeholder" required>
+                        <button type="submit"
+                            class="w-full mt-2 px-4 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700"
+                            data-i18n="footer.subscribe_button">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">

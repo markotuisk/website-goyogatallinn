@@ -259,46 +259,54 @@
 </section>
 </main>
 <!-- Footer (Same as index.html) -->
-<footer class="bg-gray-900 text-white pt-20 pb-10" id="footer">
+<footer class="bg-gray-800 text-white pt-16 pb-10">
 <div class="container-custom">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<!-- Footer content same as index.html -->
-<div class="lg:col-span-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+<div>
 <div class="mb-5">
 <img alt="Goyoga Tallinn" class="h-12 w-auto brightness-0 invert" src="/assets/branding/logo-goyoga-tallinn-estonia.svg"/>
 </div>
-<p class="text-gray-400 mb-8 max-w-xs" data-i18n="footer.description">Perinteisen joogan ja hyvinvointipalveluiden koti Tallinnassa.</p>
+<p class="text-gray-300 mb-6 max-w-xs" data-i18n="footer.description">Perinteisen joogan ja hyvinvointipalveluiden koti Tallinnassa.</p>
 <div class="flex space-x-4">
-<a class="text-white hover:text-pink-400 transition-colors" href="#"><i class="h-6 w-6" data-lucide="instagram"></i></a>
-<a class="text-white hover:text-pink-400 transition-colors" href="#"><i class="h-6 w-6" data-lucide="facebook"></i></a>
+<a class="text-gray-400 hover:text-white" href="#"><i class="h-5 w-5" data-lucide="instagram"></i></a>
+<a class="text-gray-400 hover:text-white" href="#"><i class="h-5 w-5" data-lucide="facebook"></i></a>
+<a class="text-gray-400 hover:text-white" href="#"><i class="h-5 w-5" data-lucide="youtube"></i></a>
+<a class="text-gray-400 hover:text-white" href="#"><i class="h-5 w-5" data-lucide="twitter"></i></a>
 </div>
 </div>
 <div>
-<h4 class="text-lg font-medium mb-6" data-i18n="footer.quick_links">Pikalinkit</h4>
-<ul class="space-y-4">
-<li><a class="text-gray-400 hover:text-white transition-colors" data-i18n="nav.home" href="index.html#home">Koti</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" data-i18n="nav.about" href="index.html#about">Meistä</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" data-i18n="nav.schedule" href="index.html#schedule">Aikataulu</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" data-i18n="nav.pricing" href="index.html#pricing">Hinnat</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" data-i18n="nav.teachers" href="index.html#teachers">Opettajat</a></li>
+<h4 class="text-xl font-medium mb-5" data-i18n="footer.quick_links">Pikalinkit</h4>
+<ul class="space-y-3">
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.home" href="index.html#home">Koti</a></li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.about" href="index.html#about">Meistä</a></li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.schedule" href="index.html#schedule">Aikataulu</a></li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.pricing" href="index.html#pricing">Hinnat</a></li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.teachers" href="index.html#teachers">Opettajat</a></li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.events" href="index.html#events">Tapahtumat</a>
+</li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="nav.contact" href="index.html#contact">Yhteystiedot</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-lg font-medium mb-6" data-i18n="footer.contact">Contact</h4>
-<ul class="space-y-4">
-<li class="flex items-start">
-<i class="h-5 w-5 text-pink-500 mr-3 mt-1" data-lucide="map-pin"></i>
-<span class="text-gray-400">Narva mnt 7D, <span data-i18n="footer.location_floor">3. kerros</span><br/>Tallinn, 10117</span>
-</li>
-<li class="flex items-center">
-<i class="h-5 w-5 text-pink-500 mr-3" data-lucide="mail"></i>
-<a class="text-gray-400 hover:text-white transition-colors" href="mailto:info@goyoga.ee">info@goyoga.ee</a>
-</li>
+<h4 class="text-xl font-medium mb-5" data-i18n="footer.resources">Resurssit</h4>
+<ul class="space-y-3">
+<li><a class="text-gray-300 hover:text-white" data-i18n="footer.blog" href="#">Blogi</a></li>
+<li><a class="text-gray-300 hover:text-white" data-i18n="footer.workshops" href="index.html#events">Työpajat</a></li>
+<li><a class="hover:text-pink-600 transition-colors" data-i18n="footer.faq" href="/fi/faq.html">UKK</a></li>
+<li><a class="hover:text-pink-600 transition-colors" data-i18n="footer.rent" href="/fi/rent.html">Studion vuokraus</a></li>
 </ul>
 </div>
-<!-- Newsletter -->
+<div>
+<h4 class="text-xl font-medium mb-5" data-i18n="footer.newsletter">Uutiskirje</h4>
+<p class="text-gray-300 mb-4" data-i18n="footer.newsletter_description">Liity uutiskirjeeseemme.</p>
+<form class="newsletter-form" id="newsletter-form">
+<input name="formType" type="hidden" value="newsletter"/>
+<input class="w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-pink-500" data-i18n-placeholder="footer.email_placeholder" name="email" placeholder="Your email" required="" type="email"/>
+<button class="w-full mt-2 px-4 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700" data-i18n="footer.subscribe_button" type="submit">Tilaa</button>
+</form>
 </div>
-<div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+</div>
+<div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
 <p data-i18n="footer.copyright">© 2025 goyoga.ee. Kaikki oikeudet pidätetään.</p>
 </div>
 </div>
