@@ -669,7 +669,12 @@ const classesData = {
             en: {
                 title: "Yoga Nidra",
                 tagline: "Deep conscious relaxation and meditative rest.",
-                description: "Yoga Nidra, or yogic sleep, is a state of consciousness between waking and sleeping. This deeply restorative practice involves guided meditation while lying comfortably in Savasana. It systematically relaxes the body and mind, helping to release deep-seated physical, mental, and emotional tension.",
+                description: `
+                    <p class="mb-4">This 60-minute session is a guided journey into deep nervous system restoration through Yoga Nidra and immersive sound meditation. As the body settles into stillness, David Lepp gently guides participants into a state between waking and sleep where the mind becomes quiet and the body can release accumulated tension.</p>
+                    <p class="mb-4">Throughout the practice, subtle sound frequencies from gong and sound instruments create a supportive field that helps the nervous system unwind, allowing the brain to shift into deeper restorative states. In this space, the body naturally begins to reset, the mind softens, and clarity can emerge.</p>
+                    <p class="mb-4">Participants often experience a sense of deep rest, emotional balance, and mental spaciousness — similar to the restorative effect of several hours of sleep. The practice supports nervous system regulation, improves sleep quality, reduces stress, and reconnects you with a calm, centered state within.</p>
+                    <p>This session is accessible to everyone. You simply lie down, receive the guidance, and allow the body and mind to restore themselves.</p>
+                `,
                 audience: "Perfect for everyone, especially those seeking profound rest, stress relief, and improved sleep quality. No physical exertion is required.",
                 benefits: [
                     { title: "Deep Relaxation", description: "Activates the parasympathetic nervous system for profound rest." },
@@ -695,7 +700,12 @@ const classesData = {
             et: {
                 title: "Jooga Nidra | Meditatsioon | Pehme jooga helilõdvestusega",
                 tagline: "Sügav teadlik lõdvestus ja meditatiivne puhkus.",
-                description: "Jooga Nidra ehk joogalik uni on teadvuse seisund ärkveloleku ja une vahel. See sügavalt taastav praktika hõlmab juhendatud meditatsiooni, lamades mugavalt Savasanas. See lõdvestab süstemaatiliselt keha ja meelt, aidates vabastada sügavaid füüsilisi, vaimseid ja emotsionaalseid pingeid.",
+                description: `
+                    <p class="mb-4">See 60-minutiline sessioon on juhendatud rännak sügavasse närvisüsteemi taastumisse läbi Jooga Nidra praktika ja helimeditatsiooni. Keha puhkab liikumatult, samal ajal kui õpetaja juhendab osalejaid seisundisse ärkveloleku ja une vahel, kus meel rahuneb ning keha saab vabastada kogunenud pinged.</p>
+                    <p class="mb-4">Praktika ajal loovad gongi ja teiste heliriistade pehmed sagedused toetava helivälja, mis aitab närvisüsteemil lõdvestuda ja viib aju sügavamatesse taastavatesse seisunditesse. Selles ruumis saab keha loomulikult taastuda, meel muutub selgemaks ning sisemine tasakaal saab taastuda.</p>
+                    <p class="mb-4">Osalejad kogevad sageli sügavat puhkust, emotsionaalset tasakaalu ja vaimset selgust — mõju, mis võib olla võrreldav mitme tunni sügava unega. Praktika toetab närvisüsteemi regulatsiooni, parandab une kvaliteeti, vähendab stressi ning aitab taasühenduda rahuliku ja tasakaaluka sisemise seisundiga.</p>
+                    <p>See sessioon sobib kõigile. Piisab sellest, kui heidad pikali, kuulad juhendust ja lubad kehal ning meelel taastuda.</p>
+                `,
                 audience: "Ideaalne kõigile, eriti neile, kes otsivad sügavat puhkust, stressileevendust ja paremat unekvaliteeti. Füüsilist pingutust ei nõuta.",
                 benefits: [
                     { title: "Sügav lõdvestus", description: "Aktiveerib parasümpaatilise närvisüsteemi sügavaks puhkuseks." },
@@ -721,7 +731,12 @@ const classesData = {
             fi: {
                 title: "Jooga Nidra | Meditaatio | Lempeä jooga äänirentoutuksella",
                 tagline: "Syvä tietoinen rentoutuminen ja meditatiivinen lepo.",
-                description: "Jooga Nidra, eli jooginen uni, on tietoisuuden tila valveillaolon ja unen välillä. Tämä syvästi palauttava harjoitus sisältää ohjatun meditaation, kun makaat mukavasti Savasanassa. Se rentouttaa järjestelmällisesti kehoa ja mieltä auttaen vapauttamaan syviä fyysisiä, henkisiä ja emotionaalisia jännitteitä.",
+                description: `
+                    <p class="mb-4">Tämä 60 minuutin sessio on ohjattu matka syvään hermoston palautumiseen Jooga Nidran ja äänimeditaation avulla. Kehon asettuessa aloilleen, ohjaaja johdattaa osallistujat lempeästi tilaan valveillaolon ja unen välille, jossa mieli hiljenee ja keho voi vapauttaa kertynyttä jännitystä.</p>
+                    <p class="mb-4">Harjoituksen aikana gongin ja muiden soittimien pehmeät äänitaajuudet luovat tukevan kentän, joka auttaa hermostoa rentoutumaan ja vie aivot syvempiin palauttaviin tiloihin. Tässä tilassa keho alkaa luonnollisesti palautua, mieli pehmenee ja selkeys voi parantua.</p>
+                    <p class="mb-4">Osallistujat kokevat usein syvää lepoa, emotionaalista tasapainoa ja henkistä avaruutta — vaikutus on verrattavissa usean tunnin syvään uneen. Harjoitus tukee hermoston säätelyä, parantaa unen laatua, vähentää stressiä ja auttaa yhdistymään rauhalliseen, tasapainoiseen sisäiseen tilaan.</p>
+                    <p>Tämä harjoitus sopii kaikille. Sinun tarvitsee vain mennä makuulle, ottaa vastaan ohjaus ja antaa kehon ja mielen palautua luonnollisesti.</p>
+                `,
                 audience: "Sopii täydellisesti kaikille, erityisesti niille, jotka etsivät syvää lepoa, stressin helpotusta ja parempaa unenlaatua. Fyysistä rasitusta ei tarvita.",
                 benefits: [
                     { title: "Syvä rentoutuminen", description: "Aktivoi parasympaattisen hermoston syvää lepoa varten." },
