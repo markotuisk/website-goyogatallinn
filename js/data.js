@@ -746,6 +746,176 @@ const classesData = {
             }
         }
     },
+    "meditation": {
+        icon: "sun",
+        image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+        teacherIds: ["marit-tuisk"],
+        translations: {
+            en: {
+                title: "Meditation",
+                tagline: "Guided inner peace and clarity.",
+                description: "A profound practice dedicated entirely to mental stillness and awareness. Our guided meditation classes offer structured techniques to help you observe your thoughts, regulate your nervous system, and cultivate a deep sense of inner peace. Suitable for all levels, it is the perfect antidote to a busy, overstimulated lifestyle.",
+                audience: "Anyone looking to reduce stress, improve focus, and develop a consistent mindfulness practice. No prior meditation or yoga experience is required.",
+                benefits: [
+                    { title: "Mental Clarity", description: "Enhances focus and clears mental fog." },
+                    { title: "Emotional Balance", description: "Provides tools to navigate stress and anxiety effectively." },
+                    { title: "Nervous System Regulation", description: "Calms the fight-or-flight response, promoting deep relaxation." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Guided Practice</h3>
+                            <p>The teacher will lead you through breathwork, body scans, or visualization techniques to help anchor your attention.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Seated Comfort</h3>
+                            <p>You will explore various comfortable seated postures using props like bolsters and blocks to ensure your physical body does not distract your mind.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "I can't stop thinking, is meditation for me?", answer: "Absolutely. The goal of meditation is not to stop thinking, but to change your relationship with your thoughts. You will learn how to observe them without judgment." }
+                ]
+            },
+            et: {
+                title: "Meditatsioon",
+                tagline: "Juhendatud sisemine rahu ja selgus.",
+                description: "Sügav praktika, mis on pühendatud täielikult vaimsele vaikusele ja teadlikkusele. Meie juhendatud meditatsioonitunnid pakuvad struktureeritud tehnikaid, mis aitavad sul jälgida oma mõtteid, reguleerida närvisüsteemi ja arendada sügavat sisemist rahu. Sobib kõikidele tasemetele, olles ideaalne vastumürk kiirele ja ülekoormatud elustiilile.",
+                audience: "Kõigile, kes soovivad vähendada stressi, parandada keskendumist ja kujundada järjepidevat kohaloleku praktikat. Eelnev meditatsiooni- või joogakogemus ei ole vajalik.",
+                benefits: [
+                    { title: "Vaimne selgus", description: "Parandab keskendumist ja puhastab vaimset udu." },
+                    { title: "Emotsionaalne tasakaal", description: "Annab tööriistad stressi ja ärevusega tõhusalt toimetulekuks." },
+                    { title: "Närvisüsteemi reguleerimine", description: "Rahustab võitle-või-põgene reageeringut, soodustades sügavat lõdvestust." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Juhendatud Praktika</h3>
+                            <p>Õpetaja juhendab sind läbi hingamisharjutuste, keha skaneerimise või visualiseerimistehnikate, et aidata ankurdada sinu tähelepanu.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Mugav Istumisasend</h3>
+                            <p>Uurime erinevaid mugavaid istumisasendeid, kasutades abivahendeid nagu polstrid ja plokid, et füüsiline keha ei häiriks sinu meelt.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Ma ei suuda oma mõtteid peatada, kas meditatsioon on mulle?", answer: "Kindlasti. Meditatsiooni eesmärk ei ole mõtlemise peatamine, vaid suhte muutmine oma mõtetega. Sa õpid neid jälgima hinnanguid andmata." }
+                ]
+            },
+            fi: {
+                title: "Meditaatio",
+                tagline: "Ohjattua sisäistä rauhaa ja selkeyttä.",
+                description: "Syvällinen harjoitus, joka on omistettu kokonaan henkiselle hiljaisuudelle ja tietoisuudelle. Ohjatut meditaatiotuntimme tarjoavat jäsenneltyjä tekniikoita, jotka auttavat tarkkailemaan ajatuksia, säätelemään hermostoa ja kehittämään syvää sisäistä rauhaa. Sopii kaikille tasoille, täydellinen vastalääke kiireiselle elämäntyylille.",
+                audience: "Kaikille, jotka haluavat vähentää stressiä, parantaa keskittymistä ja kehittää säännöllistä mindfulness-harjoitusta. Aiempaa kokemusta meditaatiosta tai joogasta ei tarvita.",
+                benefits: [
+                    { title: "Henkinen selkeys", description: "Parantaa keskittymistä ja poistaa hengen sumua." },
+                    { title: "Emotionaalinen tasapaino", description: "Tarjoaa työkaluja stressin ja ahdistuksen tehokkaaseen hallintaan." },
+                    { title: "Hermoston säätely", description: "Rauhoittaa taistele-tai-pakene-reaktiota edistäen syvää rentoutumista." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Ohjattu Harjoitus</h3>
+                            <p>Opettaja ohjaa sinua hengitysharjoitusten, kehoskannausten tai visualisointitekniikoiden läpi auttaakseen ankkuroimaan huomiosi.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Mukava Istuma-asento</h3>
+                            <p>Tutkimme erilaisia mukavia istuma-asentoja käyttämällä apuvälineitä, jotta fyysinen keho ei häiritse mieltäsi.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "En pysty lopettamaan ajattelemista, onko meditaatio minua varten?", answer: "Ehdottomasti. Meditaation tavoitteena ei ole pysäyttää ajattelua, vaan muuttaa suhdettasi ajatuksiisi." }
+                ]
+            }
+        }
+    },
+    "slow-flow-yoga": {
+        icon: "waves",
+        image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5",
+        teacherIds: ["kaia-karjatse"],
+        translations: {
+            en: {
+                title: "Slow Flow Yoga",
+                tagline: "Gentle, mindful movement.",
+                description: "A calming and deliberate practice that bridges the gap between dynamic Vinyasa and still Hatha. Slow Flow links movement with breath at a much gentler pace, giving you ample time to transition mindfully and find the correct alignment in each pose. It balances active stretching with periods of restorative rest.",
+                audience: "Ideal for beginners, individuals recovering from injuries, or regular practitioners looking for a softer, more introspective physical practice to balance out a demanding lifestyle.",
+                benefits: [
+                    { title: "Mind-Body Connection", description: "The slow pace allows for deeper awareness of physical sensations and breath." },
+                    { title: "Gentle Strengthening", description: "Builds functional strength without overtaxing the body or spiking the heart rate." },
+                    { title: "Tension Release", description: "Methodical stretching unknots tight muscles and fascia accumulated from daily stress." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Mindful Pacing</h3>
+                            <p>Expect to hold poses for a few breaths and transition between them slowly. You will not feel rushed.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Focus on Alignment and Breath</h3>
+                            <p>The gentle tempo provides the luxury of time—time to feel the pose, adjust your body using props, and deepen your inhale and exhale.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Is this class too slow if I want a workout?", answer: "While gentler than Vinyasa, Slow Flow still builds heat and relies on muscle engagement. It is a subtle but effective workout that prioritizes intention over intensity." }
+                ]
+            },
+            et: {
+                title: "Slow Flow Jooga",
+                tagline: "Õrn ja teadlik liikumine.",
+                description: "Rahustav ja kaalutletud praktika, mis sillutab teed dünaamilise Vinyasa ja paigalseisva Hatha vahel. Slow Flow seob liikumise hingamisega palju õrnema tempoga, andes sulle rohkelt aega teadlikuks üleminekuks ja õige joondumise leidmiseks igas asendis. See tasakaalustab aktiivset venitust taastava puhkuse perioodidega.",
+                audience: "Ideaalne algajatele, vigastustest taastuvatele isikutele või regulaarsetele praktiseerijatele, kes otsivad pehmemat ja sisevaatluslikumat füüsilist praktikat nõudliku elustiili tasakaalustamiseks.",
+                benefits: [
+                    { title: "Keha ja meele ühendus", description: "Aeglane tempo võimaldab sügavamat teadlikkust füüsilistest aistingutest ja hingamisest." },
+                    { title: "Õrn tugevdamine", description: "Kasvatab funktsionaalset tugevust keha kurnamata või pulssi liigselt tõstmata." },
+                    { title: "Pingete vabastamine", description: "Metoodiline venitus aitab lahti sõlmida igapäevasest stressist kogunenud pinged lihastes ja fastsias." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Teadlik Tempo</h3>
+                            <p>Oota asendite hoidmist mitme hingetõmbe jooksul ja aeglaseid üleminekuid. Sul ei teki kiirustamise tunnet.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Fookus joondumisel ja hingamisel</h3>
+                            <p>Õrn tempo pakub luksust—aega asendi tunnetamiseks, keha kohandamiseks abivahenditega ning sisse- ja väljahingamise süvendamiseks.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Kas see tund on liiga aeglane, kui ma soovin trenni teha?", answer: "Kuigi see on pehmem kui Vinyasa, kasvatab Slow Flow endiselt kuumust ja nõuab lihaste kaasamist. See on peen, kuid tõhus treening, kus eesmärk on olulisem kui intensiivsus." }
+                ]
+            },
+            fi: {
+                title: "Slow Flow Jooga",
+                tagline: "Lempeä, tietoinen liike.",
+                description: "Rauhoittava ja harkittu harjoitus, joka on silta dynaamisen Vinyasan ja paikallaan olevan Hathan välillä. Slow Flow yhdistää liikkeen hengitykseen paljon lempeämmällä tahdilla, antaen sinulle runsaasti aikaa siirtyä tietoisesti ja löytää oikea linjaus jokaisessa asennossa. Se tasapainottaa aktiivista venytystä palauttavalla levolla.",
+                audience: "Ihanteellinen aloittelijoille, vammoista toipuville tai säännöllisille harjoittelijoille, jotka etsivät pehmeämpää, sisäänpäin kääntynyttä fyysistä harjoitusta.",
+                benefits: [
+                    { title: "Mielen ja kehon yhteys", description: "Hidas tahti mahdollistaa syvemmän tietoisuuden fyysisistä aistimuksista ja hengityksestä." },
+                    { title: "Lempeä vahvistuminen", description: "Rakentaa toiminnallista voimaa ylikuormittamatta kehoa." },
+                    { title: "Jännityksen vapauttaminen", description: "Järjestelmällinen venyttely avaa päivittäisen stressin kertymiä lihaksissa." }
+                ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Tietoinen Tahti</h3>
+                            <p>Odota pitäväsi asentoja muutaman hengenvadon ajan ja siirtyväsi hitaasti. Et tunne kiirettä.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Keskittyminen Linjaukseen ja Hengitykseen</h3>
+                            <p>Lempeä tempo tarjoaa ylellisyyttä—aikaa tuntea asento, säätää kehoasi apuvälineillä ja syventää sisään- ja uloshengitystä.</p>
+                        </div>
+                    </div>
+                `,
+                faqs: [
+                    { question: "Onko tämä tunti liian hidas, jos haluan treenata?", answer: "Vaikka se on lempeämpi kuin Vinyasa, Slow Flow rakentaa silti lämpöä ja vaatii lihasten aktivaatiota." }
+                ]
+            }
+        }
+    },
     "vinyasa-flow": {
         icon: "waves",
         image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5",
