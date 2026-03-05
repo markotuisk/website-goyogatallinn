@@ -661,90 +661,87 @@ const classesData = {
             }
         }
     },
-    "yin-yoga": {
+    "yoga-nidra": {
         icon: "moon",
-        image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
-        teacherIds: [],
+        image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+        teacherIds: ["david-lepp"],
         translations: {
             en: {
-                title: "Yin Yoga",
-                tagline: "Deep release through sustained, mindful stillness.",
-                description: "Yin Yoga is a slow-paced, therapeutic style of yoga where terrestrial postures are held for an extended period, typically three to five minutes. This approach targets the deep connective tissues of the body, such as ligaments, joints, and fascia, rather than the muscles. By maintaining stillness, the practice calms the central nervous system, creating profound physical and mental clarity.",
-                audience: "Highly beneficial for individuals looking to increase joint mobility, reduce stress, or counterbalance a fast-paced lifestyle or dynamic workout routines. Suitable for all levels, including complete beginners.",
+                title: "Yoga Nidra",
+                tagline: "Deep conscious relaxation and meditative rest.",
+                description: "Yoga Nidra, or yogic sleep, is a state of consciousness between waking and sleeping. This deeply restorative practice involves guided meditation while lying comfortably in Savasana. It systematically relaxes the body and mind, helping to release deep-seated physical, mental, and emotional tension.",
+                audience: "Perfect for everyone, especially those seeking profound rest, stress relief, and improved sleep quality. No physical exertion is required.",
                 benefits: [
-                    { title: "Joint Mobility", description: "Gently stretches and hydrates the deep connective tissues." },
-                    { title: "Nervous System Regulation", description: "Activates the parasympathetic nervous system, reducing stress and anxiety." },
-                    { title: "Mental Endurance", description: "Teaches the mind to remain calm and observing during physical stillness." }
+                    { title: "Deep Relaxation", description: "Activates the parasympathetic nervous system for profound rest." },
+                    { title: "Stress Reduction", description: "Helps clear mental clutter and calm the mind." },
+                    { title: "Better Sleep", description: "Improves overall sleep quality and restores energy." }
                 ],
                 whatToExpect: `
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> The Practice Itself</h3>
-                            <p>Postures are mostly seated or lying down. We make heavy use of props—bolsters, blocks, and blankets—to support your body in each pose so your muscles can fully relax and surrender to gravity. The room is kept at a comfortable, normal temperature to aid in relaxation.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Effortless Rest</h3>
+                            <p>You will lie down comfortably using props like bolsters and blankets to ensure the body is completely supported and warm.</p>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Finding Stillness</h3>
-                            <p>You will be guided to find your edge in a posture, become still, and hold the pose for several minutes. The focus is on deep, natural breathing and cultivating inner observation, allowing physical tensions and mental clutter to slowly dissolve.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Guided Journey</h3>
+                            <p>The teacher will guide you through a structured meditation, rotating consciousness throughout the body, allowing you to reach a state of deep, conscious sleep.</p>
                         </div>
                     </div>
                 `,
                 faqs: [
-                    { question: "Is Yin Yoga the same as Restorative Yoga?", answer: "While both are slow and use props, Yin focuses on gently stretching the deep connective tissues, whereas Restorative focuses entirely on passive release without any active stretching." },
-                    { question: "Can I do Yin if I am not flexible?", answer: "Yes, Yin is excellent for improving flexibility. Props are used to bring the floor to you, ensuring you are supported at your current level of mobility." }
+                    { question: "Will I actually fall asleep?", answer: "The goal is to hover in the space between wakefulness and sleep, but if you fall asleep, your subconscious will still benefit from the practice." }
                 ]
             },
             et: {
-                title: "Yin Jooga",
-                tagline: "Sügav lõdvestus läbi hoitud asendite ja teadliku vaikuse.",
-                description: "Yin jooga on aeglases tempos terapeutiline joogastiil, kus maas tehtavaid asendeid hoitakse pikema aja jooksul, tavaliselt kolm kuni viis minutit. See lähenemine on suunatud pigem keha sügavatele sidekudedele (ligamendid, liigesed ja fastsia) kui lihastele. Paigalseisu hoidmisega rahustab praktika kesknärvisüsteemi, luues sügava füüsilise ja vaimse selguse.",
-                audience: "Väga kasulik inimestele, kes soovivad suurendada liigeste liikuvust, vähendada stressi või tasakaalustada kiiret elutempot ja dünaamilisi treeningrutiine. Sobib kõikidele tasemetele, sealhulgas täiesti algajatele.",
+                title: "Jooga Nidra | Meditatsioon | Pehme jooga helilõdvestusega",
+                tagline: "Sügav teadlik lõdvestus ja meditatiivne puhkus.",
+                description: "Jooga Nidra ehk joogalik uni on teadvuse seisund ärkveloleku ja une vahel. See sügavalt taastav praktika hõlmab juhendatud meditatsiooni, lamades mugavalt Savasanas. See lõdvestab süstemaatiliselt keha ja meelt, aidates vabastada sügavaid füüsilisi, vaimseid ja emotsionaalseid pingeid.",
+                audience: "Ideaalne kõigile, eriti neile, kes otsivad sügavat puhkust, stressileevendust ja paremat unekvaliteeti. Füüsilist pingutust ei nõuta.",
                 benefits: [
-                    { title: "Liigeste liikuvus", description: "Venitab õrnalt ja niisutab sügavaid sidekudesid." },
-                    { title: "Närvisüsteemi reguleerimine", description: "Aktiveerib parasümpaatilise närvisüsteemi, vähendades stressi ja ärevust." },
-                    { title: "Vaimne vastupidavus", description: "Õpetab meelt jääma füüsilise paigalseisu ajal rahulikuks ja vaatlevaks." }
+                    { title: "Sügav lõdvestus", description: "Aktiveerib parasümpaatilise närvisüsteemi sügavaks puhkuseks." },
+                    { title: "Stressi vähendamine", description: "Aitab puhastada vaimset müra ja rahustada meelt." },
+                    { title: "Parem uni", description: "Parandab üldist unekvaliteeti ja taastab energiat." }
                 ],
                 whatToExpect: `
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Praktika Olemus</h3>
-                            <p>Asendid on peamiselt istuvad või lamavad. Me kasutame ohtralt abivahendeid (polstreid, plokke ja tekke) et toetada sinu keha igas asendis, nii et lihased saaksid täielikult lõdvestuda ja raskusjõule alistuda. Ruum on hoitud mugaval normaaltemperatuuril.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Pingutusevaba puhkus</h3>
+                            <p>Labad mugavalt, kasutades abivahendeid nagu polstrid ja tekid, et keha oleks täielikult toetatud ja soojas.</p>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Paigalseisu Leidmine</h3>
-                            <p>Sind juhendatakse leidma oma piir, jääma paigale ja hoidma asendit mitu minutit. Fookus on sügaval loomulikul hingamisel ja sisemisel vaatlusel, võimaldades füüsilistel pingetel ja vaimsel müral aeglaselt hajuda.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Juhendatud rännak</h3>
+                            <p>Õpetaja juhendab sind läbi struktureeritud meditatsiooni, viies tähelepanu läbi kogu keha, võimaldades sul jõuda sügavasse teadliku une seisundisse.</p>
                         </div>
                     </div>
                 `,
                 faqs: [
-                    { question: "Kas Yin jooga on sama mis taastav (Restorative) jooga?", answer: "Kuigi mõlemad on aeglased ja kasutavad abivahendeid, keskendub Yin sügavate sidekudede õrnale venitamisele, samas kui taastav jooga keskendub täielikult passiivsele lõdvestusele ilma aktiivse venituseta." },
-                    { question: "Kas ma saan Yin joogat teha, kui ma ei ole painduv?", answer: "Jah, Yin on suurepärane painduvuse parandamiseks. Abivahendeid kasutatakse selleks, et toetada sind vastavalt sinu praegusele liikuvusele." }
+                    { question: "Kas ma jään reaalselt magama?", answer: "Eesmärk on püsida ärkveloleku ja une piiril, kuid isegi kui sa uinud, saab sinu alateadvus praktikast kasu." }
                 ]
             },
             fi: {
-                title: "Yin Jooga",
-                tagline: "Syvä rentoutuminen pitkäkestoisten asentojen ja tietoisen hiljaisuuden kautta.",
-                description: "Yin-jooga on hidastempoinen, terapeuttinen joogatyyli, jossa asennot tehdään lattialla ja niitä pidetään pidempään, yleensä kolmesta viiteen minuuttia. Tämä lähestymistapa kohdistuu pikemminkin kehon syviin sidekudoksiin (nivelsiteisiin, niveliin ja faskioihin) kuin lihaksiin. Pysymällä paikallaan harjoitus rauhoittaa keskushermostoa ja luo syvän fyysisen ja henkisen selkeyden.",
-                audience: "Erittäin hyödyllinen henkilöille, jotka haluavat lisätä nivelten liikkuvuutta, vähentää stressiä tai tasapainottaa nopeatempoista elämäntyyliä. Sopii kaikille tasoille, myös täysin aloittelijoille.",
+                title: "Jooga Nidra | Meditaatio | Lempeä jooga äänirentoutuksella",
+                tagline: "Syvä tietoinen rentoutuminen ja meditatiivinen lepo.",
+                description: "Jooga Nidra, eli jooginen uni, on tietoisuuden tila valveillaolon ja unen välillä. Tämä syvästi palauttava harjoitus sisältää ohjatun meditaation, kun makaat mukavasti Savasanassa. Se rentouttaa järjestelmällisesti kehoa ja mieltä auttaen vapauttamaan syviä fyysisiä, henkisiä ja emotionaalisia jännitteitä.",
+                audience: "Sopii täydellisesti kaikille, erityisesti niille, jotka etsivät syvää lepoa, stressin helpotusta ja parempaa unenlaatua. Fyysistä rasitusta ei tarvita.",
                 benefits: [
-                    { title: "Nivelten liikkuvuus", description: "Venyttää hellästi ja kosteuttaa syviä sidekudoksia." },
-                    { title: "Hermoston säätely", description: "Aktivoi parasympaattista hermostoa, vähentäen stressiä ja ahdistusta." },
-                    { title: "Henkinen kestävyys", description: "Opettaa mielen pysymään rauhallisena ja tarkkailevana fyysisen paikallaanolon aikana." }
+                    { title: "Syvä rentoutuminen", description: "Aktivoi parasympaattisen hermoston syvää lepoa varten." },
+                    { title: "Stressin vähentäminen", description: "Auttaa tyhjentämään mielen sotkua ja rauhoittamaan mieltä." },
+                    { title: "Parempi uni", description: "Parantaa yleistä unenlaatua ja palauttaa energiaa." }
                 ],
                 whatToExpect: `
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Itse Harjoitus</h3>
-                            <p>Asennot ovat enimmäkseen istuvia tai makaavia. Käytämme paljon apuvälineitä (tyynyjä, tiiliä ja vilttejä) tukemaan kehoasi jokaisessa asennossa, jotta lihaksesi voivat täysin rentoutua ja antautua painovoimalle.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Vaivaton lepo</h3>
+                            <p>Makaat mukavasti käyttämällä apuvälineitä, kuten tyynyjä ja peittoja, jotta keho on täysin tuettu ja lämmin.</p>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Hiljaisuuden Löytäminen</h3>
-                            <p>Sinua ohjataan löytämään rajasi, pysymään paikallasi ja pitämään asento useita minuutteja. Keskitytään syvään, luonnolliseen hengitykseen ja sisäisen havainnoinnin kehittämiseen.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Ohjattu matka</h3>
+                            <p>Opettaja ohjaa sinut jäsennellyn meditaation läpi, kierrättäen tietoisuutta koko kehossa, mikä mahdollistaa syvän, tietoisen unen tilan saavuttamisen.</p>
                         </div>
                     </div>
                 `,
                 faqs: [
-                    { question: "Onko Yin-jooga sama asia kuin restoratiivinen jooga?", answer: "Vaikka molemmat ovat hitaita ja käyttävät apuvälineitä, Yin keskittyy syvien sidekudosten hellävaraiseen venyttämiseen, kun taas restoratiivinen jooga keskittyy täysin passiiviseen vapautumiseen." },
-                    { question: "Voinko tehdä Yin-joogaa, jos en ole taipuisa?", answer: "Kyllä, Yin on erinomainen tapa parantaa joustavuutta. Apuvälineillä luodaan tuki nykyisellä liikkuvuustasollasi." }
+                    { question: "Nukahdanko todella?", answer: "Tavoitteena on leijua valveillaolon ja unen välisessä tilassa, mutta jos nukahdat, alitajuntasi hyötyy silti harjoituksesta." }
                 ]
             }
         }
