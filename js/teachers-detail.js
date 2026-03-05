@@ -332,65 +332,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             testimonials: []
         }
     },
-    "katlin-epner": {
-        en: {
-            name: "Kätlin Epner",
-            role: "Yin Yoga",
-            quote: "I believe that true peace and clarity are born in the moments we allow ourselves to slow down.",
-            bio: "Finding her way to yoga through a desire to move more consciously, Kätlin discovered that the practice is far more than physical—it is a way to create profound clarity and peace in both body and mind. She is especially passionate about Yin Yoga; a practice simple in its essence yet deeply effective, revealing how intentionally slowing down actually replenishes our life energy.\n\nHaving experienced the supportive and transformative power of deep presence herself, Kätlin decided to become a teacher to create that same safe space for others. Her approach is calm, conscious, and deeply supportive, removing all pressure and expectations so students can arrive exactly as they are.",
-            philosophy: "In the studio, I combine body and mind through mindful movement, offering a space for being rather than performing. Off the mat, I am a Business Analytics Engineer, movement enthusiast, creative soul, and poet. Whether golfing, running, doing Pilates, or dancing, I am inspired by anything that keeps life flowing and balanced.",
-            highlights: [
-                "200hr Yoga Teacher Training (Hatha, Vinyasa, Ashtanga)",
-                "Specialization in Yin Yoga & Nervous System Regulation",
-                "Focuses on mindful, unhurried movement and deep relaxation",
-                "Advocate for balancing effort and softness"
-            ],
-            testimonials: [
-                {
-                    title: "Calming & Grounding",
-                    text: "Kätlin's classes have a wonderfully pleasant and soothing effect on me."
-                }
-            ]
-        },
-        et: {
-            name: "Kätlin Epner",
-            role: "Yin Jooga",
-            quote: "Usun, et päris rahu ja selgus sünnivad hetkedel, mil lubame endal aeglustada.",
-            bio: "Joogat jõudsin õppima soovist teadlikumalt liikuda ja õpingud näitasid, et jooga ei ole ainult füüsilised harjutused, vaid viis luua selgust ja rahu nii kehas kui ka meeles – just seda, mida üha rohkem vajame. Eriti südamelähedane on mulle yin-jooga – olemuselt lihtne, kuid väga tõhusa mõjuga praktika, näidates kuidas teadlikult aeglustudes saame hoopis eluenergiat juurde.\n\nOtsustasin õpetama hakata, sest kogesin ise, kui sügavalt toetav ja transformeeriv võib olla aeglustamine ja kohalolu. Soovin luua turvalise ruumi, kus inimene saab tulla just sellisena, nagu ta on – ilma surveta, ilma ootusteta.",
-            philosophy: "Minu õpetamisstiil 3 sõnaga: rahulik, teadlik, toetav. Minu fookus on pehmel ja teadlikul liikumisel, pakkudes sügavat lõdvestust ja närvisüsteemi rahustavaid praktikaid. Matilt väljaspool olen ärianalüütika insener, liikumisentusiast, loovhing ja iluhoolik. Oma mõtete korrastamiseks kirjutan luulet ning mind inspireerib kõik, mis aitab hoida elu voolavana ja tasakaalus.",
-            highlights: [
-                "200-tunnine joogaõpetaja väljaõpe (Hatha, Vinyasa, Ashtanga)",
-                "Spetsialiseerumine Yin-joogale ja närvisüsteemi rahustamisele",
-                "Fookus teadlikul, kiirustamata liikumisel ja sügaval lõdvestumisel",
-                "Leiab tasakaalu pingutuse ja pehmuse vahel"
-            ],
-            testimonials: [
-                {
-                    title: "Rahustav ja maandav",
-                    text: "Tagasideks on tulnud, et mu tunnid on mõjunud mõnusalt ja rahustavalt."
-                }
-            ]
-        },
-        fi: {
-            name: "Kätlin Epner",
-            role: "Yin Jooga",
-            quote: "Uskon, että todellinen rauha ja selkeys syntyvät hetkinä, jolloin sallimme itsemme hidastaa tahtia.",
-            bio: "Löydettyään tiensä joogan pariin halusta liikkua tietoisemmin Kätlin huomasi, että harjoitus on paljon muutakin kuin fyysistä – se on tapa luoda syvää selkeyttä ja rauhaa sekä kehoon että mieleen. Hän suhtautuu erityisen intohimoisesti Yin-joogaan; harjoitukseen, joka on olemukseltaan yksinkertainen mutta tehokas, ja joka osoittaa, kuinka tahallinen hidastaminen todella palauttaa elinvoimaamme.\n\nKoettuaan itse syvän läsnäolon tukevan ja muuttavan voiman Kätlin päätti ryhtyä opettajaksi luodakseen saman turvallisen tilan muille. Hänen lähestymistapansa on rauhallinen, tietoinen ja syvästi tukeva; hän poistaa kaiken paineen ja odotukset, jotta oppilaat voivat saapua juuri sellaisina kuin he ovat.",
-            philosophy: "Studiolla yhdistän kehon ja mielen tietoisen liikkeen kautta, tarjoten tilan olemiselle suorittamisen sijaan. Maton ulkopuolella olen liiketoiminta-analytiikan insinööri, liikuntaentusiasti, luova sielu ja runoilija. Innostun kaikesta, mikä pitää elämän virtaavana ja tasapainoisena, olipa kyseessä golf, juoksu, pilates tai tanssi.",
-            highlights: [
-                "200 tunnin joogaopettajakoulutus (Hatha, Vinyasa, Ashtanga)",
-                "Erikoistuminen Yin-joogaan ja hermoston rauhoittamiseen",
-                "Keskittyy tietoiseen, kiireettömään liikkeeseen ja syvään rentoutumiseen",
-                "Tasapainon löytäminen ponnistuksen ja pehmeyden välillä"
-            ],
-            testimonials: [
-                {
-                    title: "Rauhoittava ja maadoittava",
-                    text: "Kätlinin tunneilla on ihanan miellyttävä ja rauhoittava vaikutus."
-                }
-            ]
-        }
-    },
+
 
     "keiu-grossberg": {
         en: {
