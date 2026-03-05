@@ -207,32 +207,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             highlights: ["Gong- ja kristallimaljamestari", "Tanssi- ja liiketerapeuti", "Ikääntyneiden hyvinvoinnin edistäjä"]
         }
     },
-    "edith-tiitsaar": {
-        en: {
-            name: "Edith Tiitsaar",
-            role: "Qigong | Energy Work",
-            quote: "Energy flows where intention goes.",
-            bio: "Edith teaches Radiant Lotus Women's Qigong, a practice designed to support the female body's energy meridians. Her classes focus on emotional balance and self-healing through gentle movement.",
-            philosophy: "Working with the meridians is like tuning a beautiful instrument. By clearing the paths, we allow our life force (Qi) to flow freely and vibrantly.",
-            highlights: ["Radiant Lotus Qigong", "Meridian activation", "Women's wellness specialist"]
-        },
-        et: {
-            name: "Edith Tiitsaar",
-            role: "Qigong | Energiatöö",
-            quote: "Energia voolab sinna, kuhu läheb tahtlus.",
-            bio: "Edith õpetab Särava Lootose naiste Qigongi, praktikat, mis on loodud toetama naise keha energiameridiaane. Tema tunnid keskenduvad emotsionaalsele tasakaalule ja enesetervendamisele läbi õrna liikumise.",
-            philosophy: "Meridiaanidega töötamine on nagu kauni instrumendi häälestamine. Teid puhastades laskeme oma elujõul (Qi) voolata vabalt ja elavalt.",
-            highlights: ["Särava Lootose Qigong", "Meridiaanide aktiveerimine", "Naiste heaolu spetsialist"]
-        },
-        fi: {
-            name: "Edith Tiitsaar",
-            role: "Qigong | Energiatyö",
-            quote: "Energia virtaa sinne, minne huomio keskittyy.",
-            bio: "Edith opettaa Radiant Lotus Women's Qigongia, harjoitusta, joka on suunniteltu tukemaan naisen kehon energiameridiaaneja. Hänen tuntinsa keskittyvät emotionaaliseen tasapainoon ja itseparantamiseen lempeän liikkeen kautta.",
-            philosophy: "Työskentely meridiaanien parissa on kuin kauniin instrumentin virittämistä. Puhdistamalla polut annamme elämänvoimamme (Qi) virrata vapaasti ja eloisasti.",
-            highlights: ["Radiant Lotus Qigong", "Meridiaanien aktivointi", "Naisten hyvinvoinnin asiantuntija"]
-        }
-    },
+
     "marit-tuisk": {
         en: {
             name: "Marit Tuisk",
