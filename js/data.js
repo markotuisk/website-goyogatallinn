@@ -875,7 +875,13 @@ const classesData = {
             en: {
                 title: "Slow Flow Yoga",
                 tagline: "Gentle, mindful movement.",
-                description: "A calming and deliberate practice that bridges the gap between dynamic Vinyasa and still Hatha. Slow Flow links movement with breath at a much gentler pace, giving you ample time to transition mindfully and find the correct alignment in each pose. It balances active stretching with periods of restorative rest.",
+                description: `
+                    <p class="mb-4">An empowering, yet soft and therapeutic yoga class that gives you mental strength and self-belief on your journey of self-discovery. As a result of the practice, the body finds its suitable and optimal internal rhythm, and a healthy and happy state of being.</p>
+                    <p class="mb-4">Movement happens freely and flowingly in the rhythm of the breath; smooth movement is beneficial for the heart and the well-being of the whole organism. The exercises improve physical capability and coordination; the body becomes more flexible, supple, stronger, and posture improves. Continuous practice eliminates muscle tension, improves blood circulation and digestion, and helps you breathe deeper and more freely. Deep stretches give the body extra tone.</p>
+                    <p class="mb-4">The class concludes with relaxation/meditation in healing sounds. The vibrational frequencies of gongs, singing bowls, and wind chimes calm the nervous system and recharge you with fresh energy.</p>
+                    <p class="mb-4">With the help of therapeutic yoga exercises and healing sounds, the skill of relaxation develops, and stress and anxiety recede. Energy moves freely and easily in a tension-free body, improving the overall well-being of the body.</p>
+                    <p>The class is of moderate intensity, requires no prior preparation, and is suitable for everyone, including complete beginners.</p>
+                `,
                 audience: "Ideal for beginners, individuals recovering from injuries, or regular practitioners looking for a softer, more introspective physical practice to balance out a demanding lifestyle.",
                 benefits: [
                     { title: "Mind-Body Connection", description: "The slow pace allows for deeper awareness of physical sensations and breath." },
@@ -901,7 +907,13 @@ const classesData = {
             et: {
                 title: "Slow Flow Jooga",
                 tagline: "Õrn ja teadlik liikumine.",
-                description: "Rahustav ja kaalutletud praktika, mis sillutab teed dünaamilise Vinyasa ja paigalseisva Hatha vahel. Slow Flow seob liikumise hingamisega palju õrnema tempoga, andes sulle rohkelt aega teadlikuks üleminekuks ja õige joondumise leidmiseks igas asendis. See tasakaalustab aktiivset venitust taastava puhkuse perioodidega.",
+                description: `
+                    <p class="mb-4">Jõuduandev, samas pehme ja teraapiline joogatund annab sulle meelejõudu ja eneseusku iseenda avastamise teekonnal. Harjutamise tulemusel leiab keha sobiva ja optimaalse sisemise rütmi ning terve ja õnneliku olemise.</p>
+                    <p class="mb-4">Liikumine toimub vabalt ja voolavalt hingamise rütmis, sujuv liikumine on kasulik südamele ning kogu organismi heaolule. Harjutused parandavad, kehalist võimekust ja koordinatsiooni, keha saab painduvamaks, nõtkemaks, tugevamaks ja paraneb rüht. Jätkuv harjutamine kõrvaldab lihaspingeid, parandab verevarustust ja seedimist, aitab sügavamalt ja vabamalt hingata. Sügavad venitused annavad kehale lisatoonust.</p>
+                    <p class="mb-4">Tunni lõpetab lõdvestus/meditatsioon tervendavates helides. Gongide, helikausside ja tuulekellade võnkesagedused rahustavad närvisüsteemi ja laevad sind värske energiaga.</p>
+                    <p class="mb-4">Teraapiliste joogaharjutuste ja tervendavate helide kaasabil areneb lõdvestumisoskus ning stress ja ärevus taanduvad. Pingetest vabas kehas liigub energia vabalt, kergelt ning paraneb ka keha üldine heaolu.</p>
+                    <p>Tund on mõõduka koormusega, ei nõua eelnevat ettevalmistust ja sobib kõigile, ka päris algajatele.</p>
+                `,
                 audience: "Ideaalne algajatele, vigastustest taastuvatele isikutele või regulaarsetele praktiseerijatele, kes otsivad pehmemat ja sisevaatluslikumat füüsilist praktikat nõudliku elustiili tasakaalustamiseks.",
                 benefits: [
                     { title: "Keha ja meele ühendus", description: "Aeglane tempo võimaldab sügavamat teadlikkust füüsilistest aistingutest ja hingamisest." },
@@ -927,7 +939,13 @@ const classesData = {
             fi: {
                 title: "Slow Flow Jooga",
                 tagline: "Lempeä, tietoinen liike.",
-                description: "Rauhoittava ja harkittu harjoitus, joka on silta dynaamisen Vinyasan ja paikallaan olevan Hathan välillä. Slow Flow yhdistää liikkeen hengitykseen paljon lempeämmällä tahdilla, antaen sinulle runsaasti aikaa siirtyä tietoisesti ja löytää oikea linjaus jokaisessa asennossa. Se tasapainottaa aktiivista venytystä palauttavalla levolla.",
+                description: `
+                    <p class="mb-4">Voimaannuttava, mutta samalla pehmeä ja terapeuttinen joogatunti antaa sinulle mielenvoimaa ja itseluottamusta itsesi löytämisen matkalla. Harjoittelun tuloksena keho löytää sopivan ja optimaalisen sisäisen rytminsä sekä terveen ja onnellisen olotilan.</p>
+                    <p class="mb-4">Liike tapahtuu vapaasti ja virtaavasti hengityksen tahdissa; sujuva liike on hyväksi sydämelle ja koko elimistön hyvinvoinnille. Harjoitukset parantavat fyysistä suorituskykyä ja koordinaatiota; kehosta tulee joustavampi, notkeampi, vahvempi ja ryhti paranee. Jatkuva harjoittelu poistaa lihasjännityksiä, parantaa verenkiertoa ja ruoansulatusta, ja auttaa hengittämään syvempään ja vapaammin. Syvät venytykset antavat keholle lisäjäntevyyttä.</p>
+                    <p class="mb-4">Tunti päättyy rentoutukseen/meditaatioon parantavissa äänissä. Gongien, äänimaljojen ja tuulikellojen värähtelytaajuudet rauhoittavat hermostoa ja lataavat sinuun tuoretta energiaa.</p>
+                    <p class="mb-4">Terapeuttisten joogaharjoitusten ja parantavien äänien avulla rentoutumisen taito kehittyy, ja stressi ja ahdistus väistyvät. Jännityksestä vapaassa kehossa energia liikkuu vapaasti ja kevyesti, mikä parantaa myös kehon yleistä hyvinvointia.</p>
+                    <p>Tunti on kohtuukuormitteinen, ei vaadi aiempaa valmistautumista ja sopii kaikille, myös aivan aloittelijoille.</p>
+                `,
                 audience: "Ihanteellinen aloittelijoille, vammoista toipuville tai säännöllisille harjoittelijoille, jotka etsivät pehmeämpää, sisäänpäin kääntynyttä fyysistä harjoitusta.",
                 benefits: [
                     { title: "Mielen ja kehon yhteys", description: "Hidas tahti mahdollistaa syvemmän tietoisuuden fyysisistä aistimuksista ja hengityksestä." },
