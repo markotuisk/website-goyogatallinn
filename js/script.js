@@ -70,10 +70,13 @@ function setLanguage(lang) {
         targetFilename = seoData.urlRoutes[lang][baseFilename] || baseFilename;
     }
 
+    const searchStr = window.location.search || '';
+    const hashStr = window.location.hash || '';
+
     if (targetFilename === 'index.html') {
-        window.location.href = `/${lang === 'en' ? '' : lang + '/'}`;
+        window.location.href = `/${lang === 'en' ? '' : lang + '/'}${searchStr}${hashStr}`;
     } else {
-        window.location.href = `/${lang}/${targetFilename}`;
+        window.location.href = `/${lang}/${targetFilename}${searchStr}${hashStr}`;
     }
 }
 

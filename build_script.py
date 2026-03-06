@@ -151,14 +151,17 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             base_filename = href.split('#')[0] if '#' in href else href
             hash_part = f"#{href.split('#', 1)[1]}" if '#' in href else ""
             
+            query_part = f"?{base_filename.split('?', 1)[1]}" if '?' in base_filename else ""
+            base_filename = base_filename.split('?')[0] if '?' in base_filename else base_filename
+            
             # Translate the filename if it matches a registered English route
             if seo_data and 'urlRoutes' in seo_data and lang in seo_data['urlRoutes']:
                 base_filename = seo_data['urlRoutes'][lang].get(base_filename, base_filename)
             
             if base_filename == 'index.html':
-                 tag['href'] = f'/{lang}/{hash_part}'
+                 tag['href'] = f'/{lang}/{query_part}{hash_part}'
             elif '.html' in base_filename:
-                 tag['href'] = f'/{lang}/{base_filename}{hash_part}'
+                 tag['href'] = f'/{lang}/{base_filename}{query_part}{hash_part}'
 
     # Update html lang attribute
     html_tag = soup.find('html')
