@@ -1218,7 +1218,7 @@ async function submitEventRegistration(e) {
             ],
             footer: {
                 text: "Goyoga Tallinn Website",
-                icon_url: "https://goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-96x96.png"
+                icon_url: "https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-96x96.png"
             },
             timestamp: new Date().toISOString()
         }]

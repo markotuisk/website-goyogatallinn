@@ -98,11 +98,11 @@ const seoData = {
     schema: {
         "@context": "https://schema.org",
         "@type": "YogaStudio",
-        "name": "goyoga.ee Yoga & Wellness Sanctuary",
+        "name": "Goyoga Tallinn",
         "alternateName": "Goyoga Tallinn",
-        "url": "https://goyoga.ee",
-        "logo": "https://goyoga.ee/logo.png",
-        "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+        "url": "https://www.goyoga.ee",
+        "logo": "https://www.goyoga.ee/logo.png",
+        "image": "https://www.goyoga.ee/assets/studio/2-goyoga-tallinn-stuudio-estonia.webp",
         "description": "Home of traditional yoga and wellness practises in Tallinn. Offering Ashtanga, Vinyasa, Yin Yoga, Pilates, and unique wellness events.",
         "address": {
             "@type": "PostalAddress",
@@ -189,7 +189,7 @@ const seoData = {
 
     // Cheeky / Dynamic SEO Settings
     config: {
-        canonical: "https://goyoga.ee",
+        canonical: "https://www.goyoga.ee",
         twitterHandle: "@goyoga_ee",
         defaultImage: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
     }
