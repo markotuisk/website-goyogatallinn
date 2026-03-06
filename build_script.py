@@ -315,6 +315,25 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
         link_tag = soup.new_tag("link", rel="alternate", hreflang="x-default", href=x_default_href)
         soup.head.append(link_tag)
 
+    # Inject Google Analytics 4 (GA4) Tracking Snippet
+    ga_id = "G-367719851"
+    if soup.head:
+        # Avoid duplicate injections if running multiple times
+        existing_ga = soup.head.find('script', src=f"https://www.googletagmanager.com/gtag/js?id={ga_id}")
+        if not existing_ga:
+            ga_script_src = soup.new_tag("script", async_="async", src=f"https://www.googletagmanager.com/gtag/js?id={ga_id}")
+            soup.head.append(ga_script_src)
+            
+            ga_script_inline = soup.new_tag("script")
+            ga_script_inline.string = f"""
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){{dataLayer.push(arguments);}}
+              gtag('js', new Date());
+            
+              gtag('config', '{ga_id}');
+            """
+            soup.head.append(ga_script_inline)
+
     return soup
 
 # Create the output directories and copy assets
