@@ -209,11 +209,11 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
                         "addressCountry": "EE"
                     }
                 },
-                "image": [f"https://goyoga.ee{event.get('image', '')}"],
+                "image": [f"https://www.goyoga.ee{event.get('image', '')}"],
                 "organizer": {
                     "@type": "Organization",
                     "name": e_lang.get('organizer', 'Goyoga Tallinn'),
-                    "url": "https://goyoga.ee"
+                    "url": "https://www.goyoga.ee"
                 }
             }
             # Only index active events
@@ -242,7 +242,7 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
                     "@type": "Organization",
                     "name": "goyoga.ee"
                 },
-                "image": f"https://goyoga.ee{tdata.get('image', '')}",
+                "image": f"https://www.goyoga.ee{tdata.get('image', '')}",
             }
             if 'socials' in tdata and isinstance(tdata['socials'], dict):
                 person_schema['sameAs'] = list(tdata['socials'].values())
@@ -297,7 +297,7 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
     canonical_tag = soup.find('link', rel='canonical')
     if canonical_tag and canonical_tag.has_attr('href'):
         if lang != 'en':
-            base_url = "https://goyoga.ee"
+            base_url = "https://www.goyoga.ee"
             if filename == 'index.html':
                 canonical_tag['href'] = f"{base_url}/{lang}/"
             else:
@@ -306,12 +306,12 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
     # Inject hreflang tags for Google Local SEO mapping
     if soup.head:
         for l in LANGUAGES:
-            href_path = f"https://goyoga.ee/{l}/" if filename == 'index.html' else f"https://goyoga.ee/{l}/{filename}"
+            href_path = f"https://www.goyoga.ee/{l}/" if filename == 'index.html' else f"https://www.goyoga.ee/{l}/{filename}"
             link_tag = soup.new_tag("link", rel="alternate", hreflang=l, href=href_path)
             soup.head.append(link_tag)
         
         # Also add x-default pointing back to english base route
-        x_default_href = f"https://goyoga.ee/" if filename == 'index.html' else f"https://goyoga.ee/{filename}"
+        x_default_href = f"https://www.goyoga.ee/" if filename == 'index.html' else f"https://www.goyoga.ee/{filename}"
         link_tag = soup.new_tag("link", rel="alternate", hreflang="x-default", href=x_default_href)
         soup.head.append(link_tag)
 
@@ -369,7 +369,7 @@ for lang in LANGUAGES:
         if 'deepseek_html_' in filename:
             continue
             
-        url = f"https://goyoga.ee/{lang}/" if filename == 'index.html' else f"https://goyoga.ee/{lang}/{filename}"
+        url = f"https://www.goyoga.ee/{lang}/" if filename == 'index.html' else f"https://www.goyoga.ee/{lang}/{filename}"
         priority = "1.0" if filename == 'index.html' else "0.8"
         sitemap_urls.append(f'''   <url>
       <loc>{url}</loc>
