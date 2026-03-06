@@ -139,17 +139,26 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             if tag.has_attr(attr) and tag[attr].startswith(('css/', 'js/', 'assets/')):
                 tag[attr] = '/' + tag[attr]
 
-    # Ensure local navigation links retain the correct language context
+    # Ensure local navigation links retain the correct language context and localized filenames
     for tag in soup.find_all('a'):
         if tag.has_attr('href'):
             href = tag['href']
-            if href == 'index.html':
-                 tag['href'] = f'/{lang}/'
-            elif href.startswith('index.html#'):
-                 hash_part = href.split('#', 1)[1]
-                 tag['href'] = f'/{lang}/#{hash_part}'
-            elif '.html' in href and not href.startswith(('http', '/')):
-                 tag['href'] = f'/{lang}/{href}'
+            
+            # Skip empty hrefs, external links, anchor-only links, or already absolute links
+            if not href or href.startswith(('http', 'mailto:', 'tel:', '/', '#')):
+                continue
+
+            base_filename = href.split('#')[0] if '#' in href else href
+            hash_part = f"#{href.split('#', 1)[1]}" if '#' in href else ""
+            
+            # Translate the filename if it matches a registered English route
+            if seo_data and 'urlRoutes' in seo_data and lang in seo_data['urlRoutes']:
+                base_filename = seo_data['urlRoutes'][lang].get(base_filename, base_filename)
+            
+            if base_filename == 'index.html':
+                 tag['href'] = f'/{lang}/{hash_part}'
+            elif '.html' in base_filename:
+                 tag['href'] = f'/{lang}/{base_filename}{hash_part}'
 
     # Update html lang attribute
     html_tag = soup.find('html')
@@ -296,17 +305,20 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
     # Update Canonical Tag Context
     canonical_tag = soup.find('link', rel='canonical')
     if canonical_tag and canonical_tag.has_attr('href'):
+        # Get translated slug for active language
+        translated_canonical = seo_data.get('urlRoutes', {}).get(lang, {}).get(filename, filename) if seo_data else filename
         if lang != 'en':
             base_url = "https://www.goyoga.ee"
-            if filename == 'index.html':
+            if translated_canonical == 'index.html':
                 canonical_tag['href'] = f"{base_url}/{lang}/"
             else:
-                canonical_tag['href'] = f"{base_url}/{lang}/{filename}"
+                canonical_tag['href'] = f"{base_url}/{lang}/{translated_canonical}"
 
     # Inject hreflang tags for Google Local SEO mapping
     if soup.head:
         for l in LANGUAGES:
-            href_path = f"https://www.goyoga.ee/{l}/" if filename == 'index.html' else f"https://www.goyoga.ee/{l}/{filename}"
+            translated_slug = seo_data.get('urlRoutes', {}).get(l, {}).get(filename, filename) if seo_data else filename
+            href_path = f"https://www.goyoga.ee/{l}/" if translated_slug == 'index.html' else f"https://www.goyoga.ee/{l}/{translated_slug}"
             link_tag = soup.new_tag("link", rel="alternate", hreflang=l, href=href_path)
             soup.head.append(link_tag)
         
@@ -353,7 +365,9 @@ for lang in LANGUAGES:
             
         translated_soup = translate_html(soup, lang, t, filename, faq_data_dict, seo_data_dict, events_data_list, teachers_data_dict)
         
-        output_path = os.path.join(lang_dir, filename)
+        # Determine output filename based on localization map
+        output_filename = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get(filename, filename)
+        output_path = os.path.join(lang_dir, output_filename)
         with open(output_path, 'w', encoding='utf-8') as file:
             # BeautifulSoup prettify sometimes adds weird spacing, write raw string
             file.write(str(translated_soup))
@@ -369,8 +383,9 @@ for lang in LANGUAGES:
         if 'deepseek_html_' in filename:
             continue
             
-        url = f"https://www.goyoga.ee/{lang}/" if filename == 'index.html' else f"https://www.goyoga.ee/{lang}/{filename}"
-        priority = "1.0" if filename == 'index.html' else "0.8"
+        translated_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get(filename, filename)
+        url = f"https://www.goyoga.ee/{lang}/" if translated_slug == 'index.html' else f"https://www.goyoga.ee/{lang}/{translated_slug}"
+        priority = "1.0" if translated_slug == 'index.html' else "0.8"
         sitemap_urls.append(f'''   <url>
       <loc>{url}</loc>
       <changefreq>weekly</changefreq>

@@ -33,22 +33,48 @@ function initLanguage() {
     updateUIDecorators(currentLanguage);
 }
 
+// Utility to resolve the correct URL slug based on seoData translation maps
+function getTranslatedUrl(filename) {
+    if (typeof seoData !== 'undefined' && seoData.urlRoutes && typeof currentLanguage !== 'undefined') {
+        const langRoutes = seoData.urlRoutes[currentLanguage] || seoData.urlRoutes['en'];
+        return langRoutes[filename] || filename;
+    }
+    return filename;
+}
+
 function setLanguage(lang) {
     if (!['en', 'et', 'fi'].includes(lang)) return;
     localStorage.setItem('preferredLanguage', lang);
 
-    // Determine target path
     const path = window.location.pathname;
-    const langPrefixPattern = /^\/(en|et|fi)(\/|$)/;
 
-    let newPath;
-    if (langPrefixPattern.test(path)) {
-        newPath = path.replace(langPrefixPattern, `/${lang}/`);
-    } else {
-        newPath = `/${lang}${path === '/' ? '/' : path}`;
+    // Extract current filename
+    let currentFilename = path.split('/').pop() || 'index.html';
+    if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
+
+    // Reverse lookup to find the English (base) filename
+    let baseFilename = currentFilename;
+    if (typeof seoData !== 'undefined' && seoData.urlRoutes) {
+        const activeLangDict = seoData.urlRoutes[currentLanguage] || seoData.urlRoutes['en'];
+        for (const [enKey, locName] of Object.entries(activeLangDict)) {
+            if (locName === currentFilename) {
+                baseFilename = enKey;
+                break;
+            }
+        }
     }
 
-    window.location.href = newPath;
+    // Forward lookup to get the target language filename
+    let targetFilename = baseFilename;
+    if (typeof seoData !== 'undefined' && seoData.urlRoutes && seoData.urlRoutes[lang]) {
+        targetFilename = seoData.urlRoutes[lang][baseFilename] || baseFilename;
+    }
+
+    if (targetFilename === 'index.html') {
+        window.location.href = `/${lang === 'en' ? '' : lang + '/'}`;
+    } else {
+        window.location.href = `/${lang}/${targetFilename}`;
+    }
 }
 
 function updateUIDecorators(lang) {
@@ -900,11 +926,26 @@ function updateSEO(lang) {
     let data;
     const path = window.location.pathname;
 
-    if (path.includes('rent.html')) {
+    // Reverse lookup to find base English filename
+    let currentFilename = path.split('/').pop() || 'index.html';
+    if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
+
+    let baseFilename = currentFilename;
+    if (typeof seoData !== 'undefined' && seoData.urlRoutes) {
+        const activeLangDict = seoData.urlRoutes[lang] || seoData.urlRoutes['en'];
+        for (const [enKey, locName] of Object.entries(activeLangDict)) {
+            if (locName === currentFilename) {
+                baseFilename = enKey;
+                break;
+            }
+        }
+    }
+
+    if (baseFilename === 'rent.html') {
         data = (seoData.meta.rent && seoData.meta.rent[lang]) || (seoData.meta.rent && seoData.meta.rent['en']);
-    } else if (path.includes('faq.html')) {
+    } else if (baseFilename === 'faq.html') {
         data = (seoData.meta.faq && seoData.meta.faq[lang]) || (seoData.meta.faq && seoData.meta.faq['en']);
-    } else if (path.includes('offers.html')) {
+    } else if (baseFilename === 'offers.html') {
         data = (seoData.meta.offers && seoData.meta.offers[lang]) || (seoData.meta.offers && seoData.meta.offers['en']);
     } else {
         data = seoData.meta[lang] || seoData.meta['en'];
@@ -1040,7 +1081,7 @@ function renderEvents(container, featuredOnly = false) {
                         <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
                             ${translationsData[lang]['events.register_button']}
                         </button>
-                        <a href="event.html?id=${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
+                        <a href="${getTranslatedUrl('event.html')}?id=${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
                             ${translationsData[lang]['events.learn_more_button']}
                         </a>
                     </div>
@@ -1056,7 +1097,7 @@ function renderEvents(container, featuredOnly = false) {
 }
 
 async function shareEvent(id, title) {
-    const url = `${window.location.origin}${window.location.pathname.replace(/\/[^\/]*$/, '')}/event.html?id=${id}`;
+    const url = `${window.location.origin}${window.location.pathname.replace(/\/[^\/]*$/, '')}/${getTranslatedUrl('event.html')}?id=${id}`;
 
     if (navigator.share) {
         try {

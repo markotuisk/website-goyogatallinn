@@ -1,5 +1,39 @@
 // SEO Data Configuration
 const seoData = {
+    // Localized URL Routing
+    urlRoutes: {
+        en: {
+            "index.html": "index.html",
+            "class.html": "class.html",
+            "event.html": "event.html",
+            "events.html": "events.html",
+            "faq.html": "faq.html",
+            "offers.html": "offers.html",
+            "rent.html": "rent.html",
+            "teacher.html": "teacher.html"
+        },
+        et: {
+            "index.html": "index.html",
+            "class.html": "tunnid.html",
+            "event.html": "uritus.html",
+            "events.html": "uritused.html",
+            "faq.html": "korduma-kippuvad-kusimused.html",
+            "offers.html": "hinnakiri.html",
+            "rent.html": "rendi-ruumid.html",
+            "teacher.html": "opetajad.html"
+        },
+        fi: {
+            "index.html": "index.html",
+            "class.html": "tunnit.html",
+            "event.html": "tapahtuma.html",
+            "events.html": "tapahtumat.html",
+            "faq.html": "ukk.html",
+            "offers.html": "hinnasto.html",
+            "rent.html": "tilojen-vuokraus.html",
+            "teacher.html": "opettajat.html"
+        }
+    },
+
     // Basic Meta Tags by Language
     meta: {
         en: {
