@@ -48,9 +48,10 @@ function setLanguage(lang) {
 
     const path = window.location.pathname;
 
-    // Extract current filename
+    // Extract current filename and normalize Cloudflare extensionless paths
     let currentFilename = path.split('/').pop() || 'index.html';
     if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
+    if (currentFilename !== 'index.html' && !currentFilename.includes('.')) currentFilename += '.html';
 
     // Reverse lookup to find the English (base) filename
     let baseFilename = currentFilename;
@@ -73,10 +74,13 @@ function setLanguage(lang) {
     const searchStr = window.location.search || '';
     const hashStr = window.location.hash || '';
 
+    // Strip .html for clean Cloudflare aesthetics when assigning location
+    const cleanTarget = targetFilename.replace('.html', '');
+
     if (targetFilename === 'index.html') {
         window.location.href = `/${lang === 'en' ? '' : lang + '/'}${searchStr}${hashStr}`;
     } else {
-        window.location.href = `/${lang}/${targetFilename}${searchStr}${hashStr}`;
+        window.location.href = `/${lang}/${cleanTarget}${searchStr}${hashStr}`;
     }
 }
 
