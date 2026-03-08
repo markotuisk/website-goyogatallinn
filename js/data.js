@@ -541,11 +541,36 @@ const classesData = {
                     { title: "Puhastumine", description: "Sisemine kuumus puhastab keha." },
                     { title: "Vaimne selgus", description: "Fookus hingamisel rahustab meelt." }
                 ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Esimese tunni valimine</h3>
+                            <p>Kui oled Ashtanga joogaga täiesti uus, soovitame alustada <strong>algajate tunni või juhendatud (Led) tunniga</strong>. Led tunnis juhendab õpetaja kogu gruppi järjestuse läbi koos, nimetades iga asendi ja hingamise loenduse. See on ideaalne viis õppida põhiasendeid, hingamisrütmi (<em>ujjayi pranayama</em>) ning liikumise ja hingamise koordinatsiooni — toetavas, juhendatud keskkonnas. Varasemaid kogemusi ei nõuta.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Tunni ajal</h3>
+                            <p>Ashtanga tund järgib kindlat asendite järjestust. Liigute läbi päikesetervituste, seismisel asendite, istuvate asendite ja lõpetava järjestuse. Õpetaja juhendab ja kohandab sind kogu aeg. Kuna praktika sünkroniseerib sügava, rütmilise hingamise pideva liikumisega, on treening intensiivsem kui paljud teised joogastiilid. See tekitab märkimisväärset sisemist soojust — ruumitemperatuur tõuseb mitu kraadi. <strong>Higistamine on normaalne</strong>, seega too rätik ja veemusel.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Mysore stiilile üleminek</h3>
+                            <p>Kui oled järjestuse selgeks õppinud ja tunned end hingamise-liikumise koordinatsiooniga kindlalt, saad liikuda <strong>Mysore stiiliga</strong> — Ashtanga traditsioonilise, omas tempos formaat. Mysore tunnis praktiseerib iga õpilane omal kiirusel, samal ajal kui õpetaja liigub ringi, pakkudes individuaalseid kohandusi ja juhendust. Siin muutub praktika tõeliselt sinu omaks.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Pärast tundi</h3>
+                            <p>Enamik inimesi lahkub Ashtanga tunnist tundes end <strong>energilise, rahuliku ja sügavalt fokuseerituna</strong>. Füüsilise pingutuse ja meditatiivse hingamise kombinatsioon loob ainulaadse selguse tunde, mida paljud kirjeldavad kui meele ja keha "lähtestamist".</p>
+                        </div>
+                        <div class="bg-pink-50 border border-pink-100 rounded-xl p-6 text-center">
+                            <p class="text-gray-700"><strong>Kas sul on veel küsimusi?</strong> Vaata meie <a href="#class-faq" class="text-pink-600 hover:text-pink-800 underline font-medium">KKK sektsiooni allpool</a> praktiliste näpunäidete ja vastuste jaoks kõige levinumatele küsimustele Ashtanga praktika alustamise kohta.</p>
+                        </div>
+                    </div>
+                `,
+                lineage: `Goyoga Tallinn on traditsioonilise Ashtanga Eesti jooga kool Tallinna kesklinnas aastast 2016. Kool on pühendunud traditsioonilist ashtanga joogat õpetama nii, nagu seda arendas ja süstematiseeris <a href="https://en.wikipedia.org/wiki/K._Pattabhi_Jois" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Sri K. Pattabhi Jois</a>. Kasutatakse traditsioonilist <a href="https://www.researchgate.net/profile/Mudit-Pandey-2/publication/398320435_The_Guru-Shishya_Parampara_An_Efficient_and_Time-_Tested_Education_System_in_Ancient_India/links/69316e9b27359023a008d9d9/The-Guru-Shishya-Parampara-An-Efficient-and-Time-Tested-Education-System-in-Ancient-India.pdf" target="_blank" class="text-pink-600 hover:text-pink-800 underline">parampara õpetamismeetodit</a>, mis tähendab et praktika ja teadmised edastatakse õpilasele otse ja isiklikult õpetajalt. Õpetaja-õpilase side Ashtanga Eestis tuleb läbi kogenud vanema ashtanga jooga õpetaja <a href="https://www.linomiele.com/?pagina=ayri.php" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Lino Miele</a>, kes on olnud Pattabhi Joisi õpilane alates 1988. aastast. Lino Miele on asutaja ja õpetaja Ashtanga Eestis, <a href="teacher.html?id=raili-maripuu" class="text-pink-600 hover:text-pink-800 underline">Raili Maripuu</a> peamine õpetaja alates 2010. aastast.`,
                 faqs: [
                     { question: "Kas ma pean olema painduv?", answer: "Sugugi mitte. Painduvus on praktika tulemus." },
                     { question: "Kas see sobib algajatele?", answer: "Jah, õpetajad kohandavad praktikat vastavalt sinule." }
                 ]
             },
+
             fi: {
                 title: "Ashtanga Jooga",
                 tagline: "Dynaaminen liikkuva meditaatio.",
@@ -556,12 +581,37 @@ const classesData = {
                     { title: "Puhdistautuminen", description: "Hikoilu puhdistaa kehoa." },
                     { title: "Mielen selkeys", description: "Keskittyminen rauhoittaa mieltä." }
                 ],
+                whatToExpect: `
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Ensimmäisen tunnin valinta</h3>
+                            <p>Jos olet täysin uusi Ashtanga-joogassa, suosittelemme aloittamaan <strong>aloittelija- tai ohjatulla (Led) tunnilla</strong>. Led-tunnilla opettaja ohjaa koko ryhmän läpi sarjan yhdessä, kutsuen esille jokaisen asennon ja hengityslaskennan. Tämä on täydellinen tapa oppia perusasennot, hengitysrytmi (<em>ujjayi pranayama</em>) sekä liikkeen ja hengityksen koordinaatio – kaikki turvallisessa, ohjattussa ympäristössä. Aiempaa kokemusta ei tarvita.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Tunnin aikana</h3>
+                            <p>Ashtanga-tunti seuraa kiinteää asantojen sarjaa. Liikutte aurinkotervehdusten, seisoma-asentojen, istuva-asentojen ja lopetussarjan läpi. Opettaja ohjaa ja auttaa sinua koko ajan. Koska harjoitus synkronoi syvän, rytmisen hengityksen jatkuvaan liikkeeseen, harjoitus on intensiivisempää kuin monet muut joogalajit. Tämä synnyttää merkittävää sisäistä lämpöä. <strong>Hikoilu on normaalia</strong>, joten tuo pyyhe ja vesipullo.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Siirtyminen Mysore-tyyliin</h3>
+                            <p>Kun olet oppinut sarjan ja tunnet olosi varmaksi hengitys-liike-koordinaatiossa, voit siirtyä <strong>Mysore-tyyliin</strong> — Ashtangan perinteiseen, omaan tahtiin etenevään muotoon. Mysore-tunnilla jokainen opiskelija harjoittelee omaan tahtiinsa, kun opettaja liikkuu ympäri huonetta tarjoten yksilöllisiä ohjausta ja korjauksia. Täällä harjoitus todella tulee omaksesi.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center"><span class="text-pink-500 mr-2">●</span> Tunnin jälkeen</h3>
+                            <p>Useimmat ihmiset lähtevät Ashtanga-tunnilta tunteen olonsa <strong>energiseksi, rauhalliseksi ja syvän keskittyneeksi</strong>. Fyysisen ponnistuksen ja meditatiivisen hengityksen yhdistelmä luo ainutlaatuisen selkeyden tunteen, jota monet kuvaavat mielen ja kehon "nollaukseksi".</p>
+                        </div>
+                        <div class="bg-pink-50 border border-pink-100 rounded-xl p-6 text-center">
+                            <p class="text-gray-700"><strong>Onko sinulla vielä kysymyksiä?</strong> Tutustu <a href="#class-faq" class="text-pink-600 hover:text-pink-800 underline font-medium">UKK-osioomme alla</a> käytännön vinkkejä ja vastauksia yleisimpiin kysymyksiin Ashtanga-harjoituksen aloittamisesta.</p>
+                        </div>
+                    </div>
+                `,
+                lineage: `Goyoga Tallinna isännöi perinteistä Ashtanga Estonia shalaa (koulua) Tallinnan keskustassa vuodesta 2016. Koulu on omistautunut opettamaan perinteistä ashtanga-joogaa sellaisena kuin <a href="https://en.wikipedia.org/wiki/K._Pattabhi_Jois" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Sri K. Pattabhi Jois</a> kehitti ja systematisoi sen. Käytetään perinteistä <a href="https://www.researchgate.net/profile/Mudit-Pandey-2/publication/398320435_The_Guru-Shishya_Parampara_An_Efficient_and_Time-_Tested_Education_System_in_Ancient_India/links/69316e9b27359023a008d9d9/The-Guru-Shishya-Parampara-An-Efficient-and-Time-Tested-Education-System-in-Ancient-India.pdf" target="_blank" class="text-pink-600 hover:text-pink-800 underline">parampara-opetusmenetelmää</a>, mikä tarkoittaa, että harjoitus ja tieto siirretään opiskelijalle suoraan ja henkilökohtaisesti opettajalta. Opettaja-opiskelija-yhteys Ashtanga Estoniassa kulkee arvostetun vanhemman ashtanga-joogaopettajan <a href="https://www.linomiele.com/?pagina=ayri.php" target="_blank" class="text-pink-600 hover:text-pink-800 underline">Lino Mielen</a> kautta, joka on ollut Pattabhi Joisin oppilas vuodesta 1988. Lino Miele on Ashtanga Estonian perustajan ja opettajan, <a href="teacher.html?id=raili-maripuu" class="text-pink-600 hover:text-pink-800 underline">Raili Maripuun</a> pääopettaja vuodesta 2010.`,
                 faqs: [
                     { question: "Täytyykö minun olla notkea?", answer: "Ei tarvitse. Notkeus tulee harjoittelun myötä." }
                 ]
             }
         }
     },
+
     "strength-training": {
         icon: "dumbbell",
         image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
