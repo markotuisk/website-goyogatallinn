@@ -275,4 +275,42 @@ function updateTeacherSEO(id, lang) {
 
     const ogImg = document.getElementById('og-image');
     if (ogImg && basic) ogImg.setAttribute('content', basic.image);
+
+    // --- Inject per-teacher Person JSON-LD for Google Knowledge Panel ---
+    const teacherUrl = `https://www.goyoga.ee/teacher.html?id=${teacherId}`;
+    const langMap = { en: 'English', et: 'Estonian', fi: 'Finnish', es: 'Spanish', id: 'Indonesian' };
+    const knowsLangs = (basic?.languages || ['en', 'et']).map(l => langMap[l] || l);
+
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": name,
+        "jobTitle": role,
+        "url": teacherUrl,
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Goyoga Tallinn",
+            "url": "https://www.goyoga.ee"
+        },
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Goyoga Tallinn",
+            "url": "https://www.goyoga.ee"
+        },
+        "nationality": { "@type": "Country", "name": "Estonia" },
+        "knowsLanguage": knowsLangs,
+        "knowsAbout": [role, "Yoga", "Wellness", "Tallinn", "Estonia"].filter(Boolean)
+    };
+    if (basic?.image) personSchema.image = `https://www.goyoga.ee${basic.image}`;
+    if (basic?.socials) {
+        const sameAs = Object.values(basic.socials).filter(v => typeof v === 'string' && v.startsWith('http'));
+        if (sameAs.length) personSchema.sameAs = sameAs;
+    }
+    // Remove old person schema if re-rendered
+    document.querySelectorAll('script[data-teacher-schema]').forEach(el => el.remove());
+    const ldScript = document.createElement('script');
+    ldScript.type = 'application/ld+json';
+    ldScript.setAttribute('data-teacher-schema', teacherId);
+    ldScript.textContent = JSON.stringify(personSchema, null, 2);
+    document.head.appendChild(ldScript);
 }

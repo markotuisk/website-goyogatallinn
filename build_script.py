@@ -245,19 +245,44 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             if not isinstance(tdata, dict):
                 continue
                 
+            # Build teacher page URL from their ID
+            teacher_url = f"https://www.goyoga.ee/teacher.html?id={tid}"
+            
+            # Map language codes to readable names for knowsLanguage
+            lang_name_map = {'en': 'English', 'et': 'Estonian', 'fi': 'Finnish',
+                             'es': 'Spanish', 'id': 'Indonesian'}
+            teacher_langs = [lang_name_map.get(l, l) for l in tdata.get('languages', ['en', 'et'])]
+
             person_schema = {
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "name": tdata.get('name', ''),
                 "jobTitle": tdata.get('title', ''),
+                "url": teacher_url,
                 "worksFor": {
                     "@type": "Organization",
-                    "name": "Goyoga Tallinn"
+                    "name": "Goyoga Tallinn",
+                    "url": "https://www.goyoga.ee"
+                },
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Goyoga Tallinn",
+                    "url": "https://www.goyoga.ee"
                 },
                 "image": f"https://www.goyoga.ee{tdata.get('image', '')}",
+                "nationality": {
+                    "@type": "Country",
+                    "name": "Estonia"
+                },
+                "knowsLanguage": teacher_langs,
+                "knowsAbout": tdata.get('title', '').split(' | ') + ["Yoga", "Wellness", "Tallinn"],
             }
+            # Only include real URLs in sameAs (filter out '#' placeholders)
             if 'socials' in tdata and isinstance(tdata['socials'], dict):
-                person_schema['sameAs'] = list(tdata['socials'].values())
+                same_as = [v for v in tdata['socials'].values() 
+                           if isinstance(v, str) and v.startswith('http')]
+                if same_as:
+                    person_schema['sameAs'] = same_as
                 
             person_schemas.append(person_schema)
             
