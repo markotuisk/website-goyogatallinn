@@ -212,7 +212,12 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             name: "Edith Tiitsaar",
             role: "Meridian Gymnastics; Qigong",
             quote: "By balancing Qi within ourselves, we also create balance in our body and mind.",
-            bio: "I am interested in Eastern therapies and forms of movement. I believe that health and staying healthy are primarily up to us, and various forms of movement and therapies are an invaluable support on this journey. My journey with Eastern practices began in 2014 when I started studying the Japanese therapy Shindo. Quite soon I discovered Qigong, various massage techniques and meditation, all of which I have continued to learn on my path. Today, I am a certified Radiant Lotus Qigong instructor for women, a Shindo instructor, and a student of the Lotus NeiGong school and a daily Neigong practitioner. Eastern practices have become an inseparable part of my life and a source of inspiration, and feeling the balancing and healing power of these techniques, I wish to share them with you.",
+            bio: [
+                "I am interested in Eastern therapies and forms of movement. I believe that health and staying healthy are primarily up to us, and various forms of movement and therapies are an invaluable support on this journey.",
+                "My journey with Eastern practices began in 2014 when I started studying the Japanese therapy Shindo. Quite soon I discovered Qigong, various massage techniques and meditation, all of which I have continued to learn on my path.",
+                "Today, I am a certified Radiant Lotus Qigong instructor for women, a Shindo instructor, and a student of the Lotus NeiGong school and a daily Neigong practitioner.",
+                "Eastern practices have become an inseparable part of my life and a source of inspiration, and feeling the balancing and healing power of these techniques, I wish to share them with you."
+            ],
             philosophy: "By balancing Qi, or life energy, within ourselves, we also create balance in our body and mind.",
             highlights: ["Radiant Lotus Qigong Instructor", "Shindo Instructor", "Lotus NeiGong Practitioner"]
         },
@@ -220,7 +225,12 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             name: "Edith Tiitsaar",
             role: "Meridiaanivõimlemine; Qigong",
             quote: "Tasakaalustades qi’d enese sees, loome tasakaalu oma kehas ja meeles.",
-            bio: "Mind huvitavad idamaised teraapiad ja liikumisvormid. Usun, et tervis ja tervena püsimine on ennekõike meie enda teha ning erinevad liikumisvormid ja teraapiad on sel teekonnal hindamatuks toeks. Minu idamaiste praktikate teekond algas aastal 2014 kui alustasin Jaapani teraapia shindo õpinguid. Üsna pea avastasin enese jaoks qigongi, erinevad massaažitehnikad ning meditatsiooni, seda kõike olen oma teekonnal ka juurde õppinud. Tänaseks olen sertifitseeritud Särava Lootose qigong vormi juhendaja naistele, shindo instruktor ning Lotus NeiGong kooli õpilane ja igapäevane neigong praktiseerija. Idamaised praktikad on saanud minu elu lahutamatuks osaks ja inspiratsiooniallikaks ning tundes nende tehnikate tasakaalustavat ja tervendavat jõudu soovin neid jagada ka teiega.",
+            bio: [
+                "Mind huvitavad idamaised teraapiad ja liikumisvormid. Usun, et tervis ja tervena püsimine on ennekõike meie enda teha ning erinevad liikumisvormid ja teraapiad on sel teekonnal hindamatuks toeks.",
+                "Minu idamaiste praktikate teekond algas aastal 2014 kui alustasin Jaapani teraapia shindo õpinguid. Üsna pea avastasin enese jaoks qigongi, erinevad massaažitehnikad ning meditatsiooni, seda kõike olen oma teekonnal ka juurde õppinud.",
+                "Tänaseks olen sertifitseeritud Särava Lootose qigong vormi juhendaja naistele, shindo instruktor ning Lotus NeiGong kooli õpilane ja igapäevane neigong praktiseerija.",
+                "Idamaised praktikad on saanud minu elu lahutamatuks osaks ja inspiratsiooniallikaks ning tundes nende tehnikate tasakaalustavat ja tervendavat jõudu soovin neid jagada ka teiega."
+            ],
             philosophy: "Tasakaalustades qi’d ehk eluenergiat enese sees, loome tasakaalu ka oma kehas ning meeles.",
             highlights: ["Särava Lootose Qigong juhendaja", "Shindo instruktor", "Lotus NeiGong praktiseerija"]
         },
@@ -228,7 +238,12 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             name: "Edith Tiitsaar",
             role: "Meridiaanivoimistelu; Qigong",
             quote: "Tasapainottamalla Qi:tä sisällämme, luomme tasapainoa kehoomme ja mieleemme.",
-            bio: "Olen kiinnostunut itämaisista terapioista ja liikuntamuodoista. Uskon, että terveys ja terveenä pysyminen ovat ensisijaisesti itsestämme kiinni, ja erilaiset liikuntamuodot ja terapiat ovat korvaamaton tuki tällä matkalla. Matkani itämaisten harjoitusten parissa alkoi vuonna 2014, kun aloin opiskella japanilaista Shindo-terapiaa. Melko pian löysin Qigongin, erilaiset hierontatekniikat ja meditaation, joita kaikkia olen oppinut lisää matkallani. Tänään olen sertifioitu Radiant Lotus Qigong -ohjaaja naisille, Shindo-ohjaaja sekä Lotus NeiGong -koulun opiskelija ja päivittäinen Neigong-harjoittaja. Itämaisista harjoituksista on tullut erottamaton osa elämääni ja inspiraation lähde, ja tuntien näiden tekniikoiden tasapainottavan ja parantavan voiman, haluan jakaa ne kanssanne.",
+            bio: [
+                "Olen kiinnostunut itämaisista terapioista ja liikuntamuodoista. Uskon, että terveys ja terveenä pysyminen ovat ensisijaisesti itsestämme kiinni, ja erilaiset liikuntamuodot ja terapiat ovat korvaamaton tuki tällä matkalla.",
+                "Matkani itämaisten harjoitusten parissa alkoi vuonna 2014, kun aloin opiskella japanilaista Shindo-terapiaa. Melko pian löysin Qigongin, erilaiset hierontatekniikat ja meditaation, joita kaikkia olen oppinut lisää matkallani.",
+                "Tänään olen sertifioitu Radiant Lotus Qigong -ohjaaja naisille, Shindo-ohjaaja sekä Lotus NeiGong -koulun opiskelija ja päivittäinen Neigong-harjoittaja.",
+                "Itämaisista harjoituksista on tullut erottamaton osa elämääni ja inspiraation lähde, ja tuntien näiden tekniikoiden tasapainottavan ja parantavan voiman, haluan jakaa ne kanssanne."
+            ],
             philosophy: "Tasapainottamalla Qi:tä eli elämänenergiaa sisällämme, luomme tasapainoa myös kehoomme ja mieleemme.",
             highlights: ["Radiant Lotus Qigong -ohjaaja", "Shindo-ohjaaja", "Lotus NeiGong -harjoittaja"]
         }

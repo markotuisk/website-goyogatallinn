@@ -400,9 +400,9 @@
 - Seniors Wellness Advocate
 
 ### Edith Tiitsaar
-**Role:** Qigong | Energy Work
+**Role:** Meridian Gymnastics; Qigong
 **Quote:** "Energy flows where intention goes."
-**Bio:** Edith teaches Radiant Lotus Women's Qigong, a practice designed to support the female body's energy meridians. Her classes focus on emotional balance and self-healing through gentle movement.
+**Bio:** I am interested in Eastern therapies and forms of movement. I believe that health and staying healthy are primarily up to us, and various forms of movement and therapies are an invaluable support on this journey. My journey with Eastern practices began in 2014 when I started studying the Japanese therapy Shindo. Quite soon I discovered Qigong, various massage techniques and meditation, all of which I have continued to learn on my path. Today, I am a certified Radiant Lotus Qigong instructor for women, a Shindo instructor, and a student of the Lotus NeiGong school and a daily Neigong practitioner. Eastern practices have become an inseparable part of my life and a source of inspiration, and feeling the balancing and healing power of these techniques, I wish to share them with you.
 **Philosophy:** Working with the meridians is like tuning a beautiful instrument. By clearing the paths, we allow our life force (Qi) to flow freely and vibrantly.
 **Highlights:**
 - Radiant Lotus Qigong
