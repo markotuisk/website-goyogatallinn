@@ -1,7 +1,17 @@
+# --- Apex Domain → www (canonical) ---
+https://goyoga.ee/* https://www.goyoga.ee/:splat 301
+
+# --- Schedule page redirects ---
 /tunniplaan    /et/#schedule 301
 /et/tunniplaan /et/#schedule 301
 /en/tunniplaan /en/#schedule 301
 /fi/tunniplaan /fi/#schedule 301
+
+# --- Common Google-indexed subpaths → localized pages ---
+/tunnid        /et/tunnid 301
+/hinnakiri     /et/hinnakiri 301
+/opetajad      /et/opetajad 301
+/uritused      /et/uritused 301
 
 # --- SEO Language Routing ---
 # If visitor browser language prefers 'et', route to /et/ 
@@ -12,3 +22,4 @@
 
 # Fallback: Default to English if no match
 / /en/ 302
+

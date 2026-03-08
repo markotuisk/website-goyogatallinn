@@ -252,7 +252,7 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
                 "jobTitle": tdata.get('title', ''),
                 "worksFor": {
                     "@type": "Organization",
-                    "name": "goyoga.ee"
+                    "name": "Goyoga Tallinn"
                 },
                 "image": f"https://www.goyoga.ee{tdata.get('image', '')}",
             }
