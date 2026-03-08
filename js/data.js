@@ -12,7 +12,7 @@ const translationsData = {
         "teachers.victoria-palusaar.title": "Ashtanga | Nutritional Therapist", "teachers.victoria-palusaar.description": "Focusing on conscious eating and the traditional Ashtanga method.",
         "teachers.triin-parro.title": "Strength & Holistic Health", "teachers.triin-parro.description": "Specializing in strength training and personalized wellness journeys.",
         "teachers.kaia-karjatse.title": "60+ Yoga | Sound Therapy", "teachers.kaia-karjatse.description": "Gentle movement and healing vibrations for all stages of life.",
-        "teachers.edith-tiitsaar.title": "Qigong | Energy Work", "teachers.edith-tiitsaar.description": "Working with meridians and the Radiant Lotus Qigong tradition.",
+        "teachers.edith-tiitsaar.title": "Meridian Gymnastics; Qigong", "teachers.edith-tiitsaar.description": "Focuses on bodywork through the Taoist meridian system.",
         "teachers.marit-tuisk.title": "Meditations | Cacao Ceremonies", "teachers.marit-tuisk.description": "Opening hearts through sacred rituals and deep presence.",
         "teachers.david-lepp.title": "Sound Baths | Yoga Nidra", "teachers.david-lepp.description": "Mastering the gong to clear blockages and restore harmony.",
         "teachers.dian-jarvenkyla.title": "Vinyasa & Hatha Yoga", "teachers.dian-jarvenkyla.description": "Guiding mindfulness, strength, and body awareness through flowing movement.",
@@ -95,7 +95,7 @@ const translationsData = {
         "teachers.victoria-palusaar.title": "Ashtanga | Toitumisterapeut", "teachers.victoria-palusaar.description": "Keskendub teadlikule toitumisele ja traditsioonilisele Ashtanga meetodile.",
         "teachers.triin-parro.title": "Jõud ja holistiline tervis", "teachers.triin-parro.description": "Spetsialiseerunud jõutreeningule ja individuaalsetele heaolu teekondadele.",
         "teachers.kaia-karjatse.title": "60+ jooga | Heliteraapia", "teachers.kaia-karjatse.description": "Õrn liikumine ja tervendavad vibratsioonid kõikidele eluetappidele.",
-        "teachers.edith-tiitsaar.title": "Qigong | Energiatöö", "teachers.edith-tiitsaar.description": "Töö meridiaanide ja Särava Lootose Qigong traditsiooniga.",
+        "teachers.edith-tiitsaar.title": "Meridiaanivõimlemine; Qigong", "teachers.edith-tiitsaar.description": "Keskendub kehatööle läbi taoistliku meridiaanisüsteemi.",
         "teachers.marit-tuisk.title": "Meditatsioonid | Kakaotseremooniad", "teachers.marit-tuisk.description": "Avab südameid läbi pühade rituaalide ja sügava kohalolu.",
         "teachers.david-lepp.title": "Helirännakud | Yoga Nidra", "teachers.david-lepp.description": "Gongi valdaja, et puhastada blokeeringud ja taastada harmoonia.",
         "teachers.dian-jarvenkyla.title": "Vinyasa ja Hatha jooga", "teachers.dian-jarvenkyla.description": "Juhendab teadvelolekut, jõudu ja kehateadlikkust läbi voolava liikumise.",
@@ -181,7 +181,7 @@ const translationsData = {
         "teachers.victoria-palusaar.title": "Ashtanga | Ravintoterapeutti", "teachers.victoria-palusaar.description": "Keskittyy tietoiseen syömiseen ja perinteiseen Ashtanga-menetelmään.",
         "teachers.triin-parro.title": "Voima ja holistinen terveys", "teachers.triin-parro.description": "Erikoistunut voimaharjoitteluun ja yksilöllisiin hyvinvointimatkoihin.",
         "teachers.kaia-karjatse.title": "60+ jooga | Ääniterapia", "teachers.kaia-karjatse.description": "Lempeää liikettä ja parantavia värähtelyjä elämän kaikkiin vaiheisiin.",
-        "teachers.edith-tiitsaar.title": "Qigong | Energiatyö", "teachers.edith-tiitsaar.description": "Työskentely meridiaanien ja Radiant Lotus Qigong -perinteen parissa.",
+        "teachers.edith-tiitsaar.title": "Meridiaanivoimistelu; Qigong", "teachers.edith-tiitsaar.description": "Keskittyy kehotyöhön taolaisen meridiaanijärjestelmän kautta.",
         "teachers.marit-tuisk.title": "Meditaatiot | Kaakaoseremoniat", "teachers.marit-tuisk.description": "Sydänten avaaminen pyhien rituaalien ja syvän läsnäolon kautta.",
         "teachers.david-lepp.title": "Äänimaljakylvyt | Yoga Nidra", "teachers.david-lepp.description": "Gongin mestari poistamaan tukoksia ja palauttamaan harmonian.",
         "teachers.dian-jarvenkyla.title": "Vinyasa & Hatha Jooga", "teachers.dian-jarvenkyla.description": "Ohjaa tietoisuutta, voimaa ja kehotietoisuutta virtaavan liikkeen kautta.",
@@ -354,7 +354,7 @@ const teachersData = {
     "victoria-palusaar": { "name": "Victoria Palusaar", "title": "Ashtanga | Nutritional Therapist", "image": "/assets/victoria-palusaar/profile-goyoga-tallinn-jooga-estonia-profile-viktooria-palusaar-ashtanga-teacher-juhendaja.jpg", "gallery": ["/assets/victoria-palusaar/gallery1-goyoga-tallinn-jooga-estonia-profile-viktooria-palusaar-ashtanga-teacher-juhendaja.jpg", "/assets/victoria-palusaar/gallery2-goyoga-tallinn-jooga-estonia-profile-viktooria-palusaar-ashtanga-teacher-juhendaja.jpg", "/assets/victoria-palusaar/gallery3-goyoga-tallinn-jooga-estonia-profile-viktooria-palusaar-ashtanga-teacher-juhendaja.HEIC", "/assets/victoria-palusaar/gallery4-goyoga-tallinn-jooga-estonia-profile-viktooria-palusaar-ashtanga-teacher-juhendaja.jpg"], "languages": ["et", "en"], "socials": { "instagram": "https://www.instagram.com/vicky_pa/", "facebook": "https://www.facebook.com/victoria.palusaar" } },
     "triin-parro": { "name": "Triin Parro", "title": "Strength & Holistic Health", "image": "/assets/triin-parro/profile-tallinn-jooga-estonia-profile-triin-parro-joud-holistiline-tervis.jpg", "gallery": ["/assets/triin-parro/gallery1-tallinn-jooga-estonia-profile-triin-parro-joud-holistiline-tervis.JPG", "/assets/triin-parro/gallery2-tallinn-jooga-estonia-profile-triin-parro-joud-holistiline-tervis.JPG", "/assets/triin-parro/gallery3-tallinn-jooga-estonia-profile-triin-parro-joud-holistiline-tervis.JPG", "/assets/triin-parro/gallery4-tallinn-jooga-estonia-profile-triin-parro-joud-holistiline-tervis.JPG"], "languages": ["et", "en", "fi"], "socials": { "instagram": "https://www.instagram.com/triin.p/", "facebook": "https://www.facebook.com/fitmindoy/" } },
     "kaia-karjatse": { "name": "Kaia Karjatse", "title": "60+ Yoga | Sound Therapy", "image": "/assets/kaia-karjatse/profile-tallinn-jooga-estonia-profile-kaia-karjatse-60plusyoga-60plusjooga-soundtherapy-heliteraapia.jpg", "gallery": ["/assets/kaia-karjatse/gallery1-tallinn-jooga-estonia-profile-kaia-karjatse-60plusyoga-60plusjooga-soundtherapy-heliteraapia.jpg", "/assets/kaia-karjatse/gallery2-tallinn-jooga-estonia-profile-kaia-karjatse-60plusyoga-60plusjooga-soundtherapy-heliteraapia.jpg", "/assets/kaia-karjatse/gallery3-tallinn-jooga-estonia-profile-kaia-karjatse-60plusyoga-60plusjooga-soundtherapy-heliteraapia.jpg", "/assets/kaia-karjatse/gallery4-tallinn-jooga-estonia-profile-kaia-karjatse-60plusyoga-60plusjooga-soundtherapy-heliteraapia.png"], "languages": ["et", "en"], "socials": { "instagram": "https://www.instagram.com/kaiakarjatse/", "facebook": "#" } },
-    "edith-tiitsaar": { "name": "Edith Tiitsaar", "title": "Qigong | Energy Work", "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597", "languages": ["et", "en"], "socials": { "instagram": "#", "facebook": "#" } },
+    "edith-tiitsaar": { "name": "Edith Tiitsaar", "title": "Meridian Gymnastics; Qigong", "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597", "languages": ["et", "en"], "socials": { "instagram": "#", "facebook": "#" } },
     "marit-tuisk": { "name": "Marit Tuisk", "title": "Meditations | Cacao Ceremonies", "image": "/assets/marit-tuisk/profile-goyoga-tallinn-jooga-estonia-profile-marit-tuisk-meditatsioonid-kakaotseremooniad-juhendaja.JPG", "gallery": ["/assets/marit-tuisk/gallery1-goyoga-tallinn-jooga-estonia-profile-marit-tuisk-meditatsioonid-kakaotseremooniad-juhendaja.jpg", "/assets/marit-tuisk/gallery2-goyoga-tallinn-jooga-estonia-profile-marit-tuisk-meditatsioonid-kakaotseremooniad-juhendaja.jpg", "/assets/marit-tuisk/gallery3-goyoga-tallinn-jooga-estonia-profile-marit-tuisk-meditatsioonid-kakaotseremooniad-juhendaja.png", "/assets/marit-tuisk/gallery4-goyoga-tallinn-jooga-estonia-profile-marit-tuisk-meditatsioonid-kakaotseremooniad-juhendaja.jpg"], "languages": ["et", "en"], "socials": { "instagram": "https://www.instagram.com/mar.tuisk/", "facebook": "https://www.facebook.com/casarituals" } },
     "david-lepp": { "name": "David Lepp", "title": "Sound Baths | Yoga Nidra", "image": "/assets/david-lepp/profile-goyoga-tallinn-jooga-estonia-profile-david-lepp-helirannak-gongid-juhendaja.png", "gallery": ["/assets/david-lepp/gallery1-goyoga-tallinn-jooga-estonia-profile-david-lepp-helirannak-gongid-juhendaja.png", "/assets/david-lepp/gallery2-goyoga-tallinn-jooga-estonia-profile-david-lepp-helirannak-gongid-juhendaja.png", "/assets/david-lepp/gallery3-goyoga-tallinn-jooga-estonia-profile-david-lepp-helirannak-gongid-juhendaja.png", "/assets/david-lepp/gallery4-goyoga-tallinn-jooga-estonia-profile-david-lepp-helirannak-gongid-juhendaja.png"], "languages": ["en", "et"], "socials": { "instagram": "https://www.instagram.com/david.lepp/", "facebook": "https://www.facebook.com/casarituals" } },
     "dian-jarvenkyla": { "name": "Dian Jarvenkyla-Aikani", "title": "Vinyasa & Hatha Yoga", "image": "/assets/dian-jarvenkyla/profile-goyoga-tallinn-jooga-estonia-dian-jarvenkyla-aikani-vinyasa-hata copy-2.webp", "gallery": ["/assets/dian-jarvenkyla/gallery1-goyoga-tallinn-jooga-estonia-dian-jarvenkyla-aikani-vinyasa-hata.webp", "/assets/dian-jarvenkyla/gallery2-goyoga-tallinn-jooga-estonia-dian-jarvenkyla-aikani-vinyasa-hata.jpg.webp", "/assets/dian-jarvenkyla/gallery3-goyoga-tallinn-jooga-estonia-dian-jarvenkyla-aikani-vinyasa-hata.jpg.webp", "/assets/dian-jarvenkyla/gallery4-goyoga-tallinn-jooga-estonia-dian-jarvenkyla-aikani-vinyasa-hata.jpg.webp"], "languages": ["en", "id"], "socials": { "instagram": "https://www.instagram.com/aikani_yoga/", "instagram2": "https://www.instagram.com/aikaniclass", "tiktok": "https://www.tiktok.com/@aikaniyoga", "yogaalliance": "https://app.yogaalliance.org/teacherpublicprofile/0033g00001b1NZeAAM/dian-jarvenkyla" } },
@@ -664,9 +664,9 @@ const classesData = {
         teacherIds: ["edith-tiitsaar"],
         translations: {
             en: {
-                title: "Qigong",
+                title: "Meridian Gymnastics",
                 tagline: "Cultivating energy through gentle flow.",
-                description: "Qigong (Meridiaanivõimlemine) involves coordinated body-posture and movement, breathing, and meditation used for the purposes of health, spirituality, and martial-arts training.",
+                description: "The Meridian Gymnastics class is based on Eastern teachings of body meridians – these are energy channels in our body through which Qi, or life energy, flows. Specifically, we work with the 12 meridians of the Taoist tradition, each of which is connected to a specific organ and has its own specific functions. In Asia it is known – good health and a balanced mind start with the nature of Qi movement - if Qi flows harmoniously in the meridians, a person is healthy, active and happy; but if Qi movement is obstructed for some reason, it can be felt in one's mind and body as imbalance – e.g. fatigue, weak immunity, pains, a tense mind.<br><br>The gymnastics class takes place at a calm pace and consists of various movement exercises, static stretching postures and massage, to support the harmonious movement of Qi in the body. On a physical level, the exercises help to open the joints and spine, improve blood and lymphatic circulation, and calm the mind. We finish the class with a pleasant relaxation.",
                 audience: "Anyone seeking stress relief, better energy flow, and a meditative movement practice.",
                 benefits: [
                     { title: "Energy Flow", description: "Unblocks stagnant energy (Qi)." },
@@ -674,13 +674,13 @@ const classesData = {
                     { title: "Mindfulness", description: "Deepens mind-body connection." }
                 ],
                 faqs: [
-                    { question: "What is the difference from Yoga?", answer: "Qigong focuses more on subtle energy flow and repetitive fluid movements." }
+                    { question: "What is the difference from Yoga?", answer: "Meridian Gymnastics focuses more on subtle energy flow and specific meridian lines." }
                 ]
             },
             et: {
-                title: "Qigong (Meridiaanivõimlemine)",
+                title: "Meridiaanivõimlemine",
                 tagline: "Energia kasvatamine läbi õrna voo.",
-                description: "Qigong hõlmab koordineeritud kehaasendeid, liikumist, hingamist ja meditatsiooni tervise ja vaimsuse eesmärgil.",
+                description: "Meridiaanivõimlemise tund baseerub idamaisel õpetusel kehameridiaanidest – need on energiakanalid meie kehas, mida mööda qi ehk eluenergia voolab. Täpsemalt töötame taoistliku traditsiooni 12 meridiaaniga, milledest igaüks on seotud kindla organiga ning millel on omad kindlad funktsioonid. Aasias teatakse – hea tervis ning tasakaalus meel saab alguse qi liikumise iseloomust - kui qi liigub meridiaanides harmooniliselt, on inimene terve, tegus ja rõõmus; kui aga qi liikumine on mingil põhjusel takistunud, võib seda tunda enese meeles ja kehas tasakaalutusena – nt väsimus, nõrk immuunsus, valud, pinges meel.<br><br>Võimlemistund toimub rahulikus tempos ning koosneb erinevatest liikumisharjutustest, staatilistest venitusasenditest ning massaažist, et toetada qi harmoonilist liikumist kehas. Füüsilisel tasandil aitavad harjutused avada liigeseid ja selgroogu, parandada vere- ja lümfiringet ning rahustada meelt. Tunni lõpetame mõnusa lõdvestusega.",
                 audience: "Kõigile, kes otsivad stressileevendust ja paremat energiavoolu.",
                 benefits: [
                     { title: "Energiavool", description: "Vabastab blokeerunud energia." },
@@ -688,20 +688,20 @@ const classesData = {
                     { title: "Teadlikkus", description: "Süvendab keha ja meele ühendust." }
                 ],
                 faqs: [
-                    { question: "Kuidas see erineb joogast?", answer: "Qigong keskendub peenematele energiatele ja voolavusele." }
+                    { question: "Kuidas see erineb joogast?", answer: "Meridiaanivõimlemine keskendub peenematele energiatele ja konkreetsetele meridiaaniliinidele." }
                 ]
             },
             fi: {
-                title: "Qigong",
+                title: "Meridiaanivoimistelu",
                 tagline: "Energian viljelyä.",
-                description: "Qigong yhdistää liikkeen, hengityksen ja meditaation.",
+                description: "Meridiaanivoimistelu perustuu itämaisiin oppeihin kehon meridiaaneista – nämä ovat energiakanavia kehossamme, joita pitkin Qi eli elämänenergia virtaa. Työskentelemme erityisesti taolaisen perinteen 12 meridiaanin kanssa, joista jokainen on yhteydessä tiettyyn elimeen ja joilla on omat erityiset toimintonsa. Aasiassa tiedetään, että hyvä terveys ja tasapainoinen mieli alkavat Qin liikkeen laadusta - jos Qi virtaa harmonisesti meridiaaneissa, ihminen on terve, aktiivinen ja iloinen; mutta jos Qin liike on jostain syystä estynyt, se voi tuntua mielessä ja kehossa epätasapainona, kuten väsymyksenä, heikkona vastustuskykynä, kipuina tai jännittyneenä mielenä.<br><br>Voimistelutunti etenee rauhalliseen tahtiin ja koostuu erilaisista liikeharjoitteista, staattisista venytysasennoista ja hieronnasta tukeakseen Qin harmonista virtausta kehossa. Fyysisellä tasolla harjoitukset auttavat avaamaan niveliä ja selkärankaa, parantamaan veren- ja lymfan kiertoa sekä rauhoittamaan mieltä. Päätämme tunnin miellyttävään rentoutukseen.",
                 audience: "Kaikille stressinlievitystä etsiville.",
                 benefits: [
                     { title: "Energia", description: "Parantaa virtausta." },
                     { title: "Mielenrauha", description: "Vähentää stressiä." }
                 ],
                 faqs: [
-                    { question: "Miten eroaa joogasta?", answer: "Keskittyy enemmän energian virtaukseen." }
+                    { question: "Miten eroaa joogasta?", answer: "Keskittyy enemmän energian virtaukseen ja erityisiin meridiaanilinjoihin." }
                 ]
             }
         }
