@@ -4,7 +4,7 @@
 
 const eventsData = [
     {
-        id: 'full-moon-cacao-gong-mar-4',
+        id: 'full-moon-cacao-gong-mar-4-2026',
         type: 'studio',
         category: 'studio',
         active: true,
@@ -45,7 +45,7 @@ const eventsData = [
         }
     },
     {
-        id: 'womens-day-cacao-mar-8',
+        id: 'womens-day-cacao-mar-8-2026',
         type: 'studio',
         category: 'studio',
         active: false,
@@ -84,7 +84,7 @@ const eventsData = [
         }
     },
     {
-        id: 'reiki-gong-mar-13',
+        id: 'reiki-gong-mar-13-2026',
         type: 'studio',
         category: 'studio',
         active: true,
@@ -125,7 +125,7 @@ const eventsData = [
         }
     },
     {
-        id: 'equinox-quantum-mar-20',
+        id: 'equinox-quantum-mar-20-2026',
         type: 'studio',
         category: 'studio',
         active: true,
@@ -164,7 +164,7 @@ const eventsData = [
         }
     },
     {
-        id: 'spring-fullmoon-restart-mar-31',
+        id: 'spring-fullmoon-restart-mar-31-2026',
         type: 'studio',
         category: 'studio',
         active: true,
