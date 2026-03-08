@@ -9,8 +9,16 @@ description: How to deploy GoYoga website changes to Cloudflare Pages
 This is a **static site generator architecture**:
 - Source HTML files live in the root (e.g. `teacher.html`, `index.html`)
 - `build_script.py` reads these source files + data from `js/*.js` and outputs translated static HTML to `en/`, `et/`, `fi/` subdirectories
-- Cloudflare Pages deploys the **entire repository root** as a static site — NO build command runs on Cloudflare's end
-- This means all pre-built static HTML (`en/`, `et/`, `fi/`) **must be committed and pushed** to GitHub before deployment
+- Cloudflare Pages is deployed **directly via Wrangler CLI** — the GitHub webhook is broken and should NOT be used
+- All pre-built static HTML (`en/`, `et/`, `fi/`) **must be committed first**, then deployed via CLI
+
+## 🔑 Credentials (stored in `.env` — never commit this file!)
+
+```
+CLOUDFLARE_API_TOKEN=yhn02GlF6iPiPiNoYQ8ZdARlGDB7oQD1ejcofZv0
+CLOUDFLARE_ACCOUNT_ID=bc3f6c1145456bef0f781f62744c74ed
+```
+Token permissions: **Cloudflare Pages - Edit**
 
 ## Deployment Workflow
 
@@ -43,14 +51,24 @@ git push
 
 > Critical: Make sure to also `git add` the `en/`, `et/`, `fi/` directories and `sitemap.xml`. These are the compiled outputs that Cloudflare Pages actually serves.
 
-### Step 4 — Verify Cloudflare Pages deploys the correct commit
-After pushing, Cloudflare Pages should automatically trigger a new build. Monitor at:
-**https://dash.cloudflare.com → Pages → goyoga-website → Deployments**
 
-Expected build log should show:
-- `HEAD is now at <YOUR LATEST COMMIT HASH>` — if this shows an old commit, the webhook is broken (see Troubleshooting)
-- `No build command specified. Skipping build step.` — this is NORMAL and expected
-- `Success: Your site was deployed!`
+### Step 4 — Deploy via Wrangler CLI (NOT GitHub push — webhook is broken!)
+```bash
+# Load credentials
+source .env
+
+# Or set inline:
+export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh"
+CLOUDFLARE_API_TOKEN=yhn02GlF6iPiPiNoYQ8ZdARlGDB7oQD1ejcofZv0 \
+CLOUDFLARE_ACCOUNT_ID=bc3f6c1145456bef0f781f62744c74ed \
+wrangler pages deploy . --project-name goyoga-website --branch main
+```
+
+Expected output:
+```
+✨ Success! Uploaded N files (N already uploaded)
+✨ Deployment complete! Take a peek over at https://XXXXX.goyoga-website.pages.dev
+```
 
 ### Step 5 — Cache-bust JS data files if changed
 If you changed any JS data file (e.g. `js/teachers-detail.js`), bump the `?v=N` version query on script tags in the source HTML (`teacher.html`) and rebuild:
@@ -60,7 +78,7 @@ If you changed any JS data file (e.g. `js/teachers-detail.js`), bump the `?v=N` 
 <script src="js/teachers-detail.js?v=3"></script>
 ```
 
-Then re-run Step 2 and Step 3.
+Then re-run Steps 2, 3, and 4.
 
 ---
 
