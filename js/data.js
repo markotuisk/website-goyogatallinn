@@ -253,10 +253,7 @@ const translationsData = {
         "contact.modal.gallery.entrance": "Hoone sissepääs", "contact.modal.gallery.door": "Peauks", "contact.modal.gallery.hallway": "3. korruse koridor", "contact.modal.gallery.studio": "Stuudio sissepääs", "contact.modal.gallery.note": "Fotod, mis näitavad teed meie shalasse. Otsi Goyoga Tallinn silte 3. korrusel."
     },
     fi: {
-        // ... (For brevity, using a simpler fallback or previously extracted FI data would go here, 
-        // to save context tokens I will trust the logic handles it or copy from previous turns if needed. 
-        // I'll define a basic subset for now or just the EN/ET if tokens are tight, but let's do a quick one).
-        "nav.home": "Koti", "nav.about": "Meistä", "nav.studio": "Studio", "nav.schedule": "Aikataulu", "nav.pricing": "Hinnat", "nav.teachers": "Opettajat", "nav.events": "Tapahtumat", "nav.community": "Yhteisö", "nav.contact": "Yhteystiedot", "nav.language": "Kieli",
+        "nav.home": "Koti", "nav.about": "Meistä", "nav.classes": "Tunnit", "nav.studio": "Studio", "nav.schedule": "Aikataulu", "nav.pricing": "Hinnat", "nav.teachers": "Opettajat", "nav.events": "Tapahtumat", "nav.community": "Yhteisö", "nav.contact": "Yhteystiedot", "nav.language": "Kieli",
         "hero.tagline": "Joogan ja hyvinvoinnin keidas", "hero.title": "Perinteisen joogan ja hyvinvointipalveluiden koti Tallinnassa", "hero.description": "Päivittäiset joogatunnit ja hyvinvointitapahtumat Tallinnan keskustassa. Olemme luoneet aidon tilan ja yhteisön, jossa erilaiset joogatyylit ja hyvinvointikäytännöt tukevat ihmisten valintoja.", "hero.view_schedule": "Katso aikataulu", "hero.events": "Tapahtumat", "hero.discover_more": "Lue lisää", "hero.seasonal_offer": "Kausitarjous!",
         "about.tagline": "Lähestymistapamme", "about.title": "Turvasatama Tallinnan sydämessä", "about.description": "Goyoga Tallinn on turvasatama Tallinnan sydämessä kaikenikäisille ja -taustaisille ihmisille, tulla irrottautumaan, rentoutumaan ja virkistymään.", "about.subtitle": "Tarjontamme", "about.content1": "Harjoituksemme juurtuvat perinteeseen, mutta ne on suunniteltu moderniin elämään, tarjoten polun fyysiseen elinvoimaan ja henkiseen rauhaan.", "about.content2": "Etsitpä sitten Ashtangan dynaamista virtausta tai äänimaljakylvyn syvää rentoutumista, yhteisömme on täällä tukemassa matkaasi.", "about.benefits.physical.title": "Jooga", "about.benefits.physical.description": "Ashtanga, Vinyasa, Yin, Strength, 60+ jooga, Pilates, Qigong.", "about.benefits.mental.title": "Hyvinvointi", "about.benefits.mental.description": "Meditaatiot, äänimaljakylvyt, kaakaoseremoniat, Yoga Nidra.",
         "studio.tagline": "Tila olemiseen", "studio.title": "Koti harjoituksellesi", "studio.description1": "Sijaitsee osoitteessa <span class='font-semibold'>Narva mnt 7D, Tallinna</span> – shalamme on urbaani retriitti syvään harjoitteluun.", "studio.description2": "Luonnonvalolla ja maadoittavalla estetiikalla suunniteltu tila tarjoaa ensiluokkaisen ympäristön kaikkine mukavuuksineen.", "studio.rent_button": "Vuokraa tilamme",
@@ -267,7 +264,7 @@ const translationsData = {
         "teachers.victoria-palusaar.title": "Ashtanga | Ravintoterapeutti", "teachers.victoria-palusaar.description": "Keskittyy tietoiseen syömiseen ja perinteiseen Ashtanga-menetelmään.",
         "teachers.triin-parro.title": "Voima ja holistinen terveys", "teachers.triin-parro.description": "Erikoistunut voimaharjoitteluun ja yksilöllisiin hyvinvointimatkoihin.",
         "teachers.kaia-karjatse.title": "60+ jooga | Ääniterapia", "teachers.kaia-karjatse.description": "Lempeää liikettä ja parantavia värähtelyjä elämän kaikkiin vaiheisiin.",
-        "teachers.edith-tiitsaar.title": "Qigong | Energiatyö", "teachers.edith-tiitsaar.description": "Työskentely meridiaanien ja Radiant Lotus Qigong -perinteen parissa.",
+        "teachers.edith-tiitsaar.title": "Meridiaanivoimistelu; Qigong", "teachers.edith-tiitsaar.description": "Keskittyy kehotyöhön taolaisen meridiaanijärjestelmän kautta.",
         "teachers.marit-tuisk.title": "Meditaatiot | Kaakaoseremoniat", "teachers.marit-tuisk.description": "Sydänten avaaminen pyhien rituaalien ja syvän läsnäolon kautta.",
         "teachers.david-lepp.title": "Äänimaljakylvyt | Yoga Nidra", "teachers.david-lepp.description": "Gongin mestari poistamaan tukoksia ja palauttamaan harmonian.",
         "teachers.dian-jarvenkyla.title": "Vinyasa & Hatha Jooga", "teachers.dian-jarvenkyla.description": "Ohjaa tietoisuutta, voimaa ja kehotietoisuutta virtaavan liikkeen kautta.",
@@ -315,6 +312,8 @@ const translationsData = {
         "classes.qigong.tagline": "Energian viljelyä.",
         "classes.soundbath.title": "Äänimaljakylvyt",
         "classes.soundbath.tagline": "Syvä rentoutuminen.",
+        "classes.yoga_nidra.title": "Yoga Nidra",
+        "classes.yoga_nidra.tagline": "Syvä tietoinen rentoutuminen ja meditatiivinen lepo.",
         "classes.yin.title": "Yin Jooga",
         "classes.yin.tagline": "Syvä rentoutuminen pitkäkestoisten asentojen ja tietoisen hiljaisuuden kautta.",
         "classes.vinyasa.title": "Vinyasa Flow",
@@ -337,6 +336,7 @@ const translationsData = {
         "contact.modal.gallery.entrance": "Rakennuksen sisäänkäynti", "contact.modal.gallery.door": "Pääovi", "contact.modal.gallery.hallway": "3. kerroksen käytävä", "contact.modal.gallery.studio": "Studion sisäänkäynti", "contact.modal.gallery.note": "Kuvat näyttävät reitin shalallemme. Etsi Goyoga Tallinn-kylttejä 3. kerroksesta."
     }
 };
+
 
 const reviewsData = [
     { "name": "Kam Wattanodom", "timeAgo": "6 months ago", "stars": 5, "text": "Visiting Tallinn from abroad, happy to have found this shala. Raili was incredibly welcoming and I gained much from her instruction and adjustments.", "source": "google", "badge": null },
