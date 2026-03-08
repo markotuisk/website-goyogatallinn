@@ -334,19 +334,19 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
     ga_id = "G-367719851"
     if soup.head:
         # Avoid duplicate injections if running multiple times
-        existing_ga = soup.head.find('script', src=f"https://www.googletagmanager.com/gtag/js?id={ga_id}")
+        existing_ga = soup.head.find('script', attrs={'src': f"https://www.googletagmanager.com/gtag/js?id={ga_id}"})
         if not existing_ga:
-            ga_script_src = soup.new_tag("script", async_="async", src=f"https://www.googletagmanager.com/gtag/js?id={ga_id}")
+            # Use attrs dict so BeautifulSoup emits `async` (boolean) not `async_="async"`
+            ga_script_src = soup.new_tag("script", attrs={"async": True, "src": f"https://www.googletagmanager.com/gtag/js?id={ga_id}"})
             soup.head.append(ga_script_src)
             
             ga_script_inline = soup.new_tag("script")
             ga_script_inline.string = f"""
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){{dataLayer.push(arguments);}}
-              gtag('js', new Date());
-            
-              gtag('config', '{ga_id}');
-            """
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', '{ga_id}');
+"""
             soup.head.append(ga_script_inline)
 
     return soup
