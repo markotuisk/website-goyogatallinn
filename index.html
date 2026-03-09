@@ -82,14 +82,14 @@
       "priceRange": "€€"
     }
     </script>
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-N0X5B7NG6N');
-  </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-N0X5B7NG6N');
+    </script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -267,6 +267,16 @@
                         class="px-8 py-3 border border-white/60 rounded-md hover:bg-white/10 transition-colors"
                         data-i18n="hero.events">Events</a>
                 </div>
+                <!-- Practice Finder CTA -->
+                <div class="mt-6">
+                    <a href="http://localhost:5050" target="_blank"
+                        class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full text-white text-sm font-medium hover:bg-white/25 transition-all duration-300 group">
+                        <span class="text-base">✨</span>
+                        <span data-i18n="hero.finder_cta">Not sure where to start? Let us help you decide.</span>
+                        <span class="group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    </a>
+                </div>
+
             </div>
             <a href="#about"
                 class="absolute bottom-24 md:bottom-10 left-1/2 transform -translate-x-1/2 text-white fade-in animate-delay-800">
