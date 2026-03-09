@@ -179,7 +179,7 @@ function renderClassDetails(id, lang) {
                 // script.js translates [data-i18n]. So we render with data-i18n attributes!
 
                 teachersContainer.innerHTML += `
-                    <div class="teacher-card bg-gray-50 rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer group" onclick="window.location.href='teacher.html?id=${tId}'">
+                    <div class="teacher-card bg-gray-50 rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer group" onclick="window.location.href='/teacher.html?id=${tId}'">
                         <div class="relative h-64 overflow-hidden">
                             <img src="${teacher.image}" alt="${teacher.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         </div>
