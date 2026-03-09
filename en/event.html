@@ -225,7 +225,7 @@
                     const teacherData = teachersData[tId];
                     if (!teacherData) return '';
                     return `
-                        <a href="teacher.html?id=${tId}" class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-pink-200 hover:bg-pink-50/30 transition-all group">
+                        <a href="/teacher.html?id=${tId}" class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-pink-200 hover:bg-pink-50/30 transition-all group">
                             <img src="${teacherData.image}" alt="${teacherData.name}" class="w-14 h-14 rounded-full object-cover shadow-sm">
                             <div>
                                 <h4 class="font-medium text-gray-900 group-hover:text-pink-600 transition-colors">${teacherData.name}</h4>
