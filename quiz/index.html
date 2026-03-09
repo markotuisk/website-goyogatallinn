@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Practice | Goyoga Tallinn</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --pink: #c85a8a;
+            --pink-light: #f5e6ef;
+            --dark: #1a1a1a;
+            --gray: #6b7280;
+            --light: #fcfbf9;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(252, 251, 249, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 36px;
+        }
+
+        nav span {
+            font-size: 0.75rem;
+            color: var(--gray);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ── PROGRESS ── */
+        #progress-bar-wrap {
+            position: fixed;
+            top: 65px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            height: 3px;
+            background: var(--border);
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: var(--pink);
+            transition: width 0.4s ease;
+        }
+
+        /* ── SCREENS ── */
+        .screen {
+            display: none;
+            min-height: 100vh;
+            padding: 100px 1.5rem 3rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .screen.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ── INTRO ── */
+        #screen-intro {
+            text-align: center;
+            align-items: center;
+        }
+
+        #screen-intro h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        #screen-intro p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 500px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .tag-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .tag {
+            background: var(--pink-light);
+            color: var(--pink);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.9rem;
+            border-radius: 99px;
+        }
+
+        /* ── QUESTION ── */
+        .q-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--pink);
+            margin-bottom: 0.75rem;
+        }
+
+        .q-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            line-height: 1.35;
+            margin-bottom: 0.5rem;
+        }
+
+        .q-sub {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .options {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .opt {
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .opt:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(200, 90, 138, 0.1);
+        }
+
+        .opt.selected {
+            border-color: var(--pink);
+            background: var(--pink-light);
+            color: var(--pink);
+            font-weight: 500;
+        }
+
+        .opt .opt-icon {
+            font-size: 1.3rem;
+            margin-right: 0.6rem;
+        }
+
+        .multi-hint {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        /* ── NAME SCREEN ── */
+        #screen-name {
+            text-align: center;
+            align-items: center;
+        }
+
+        #screen-name h2 {
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        #screen-name p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        #name-input {
+            width: 100%;
+            max-width: 380px;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+            margin-bottom: 1.5rem;
+            background: white;
+        }
+
+        #name-input:focus {
+            border-color: var(--pink);
+        }
+
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--pink);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(200, 90, 138, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--dark);
+            border: 2px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--dark);
+        }
+
+        .btn-pink {
+            background: var(--pink);
+            color: white;
+        }
+
+        .btn-pink:hover {
+            background: #a8436e;
+            transform: translateY(-1px);
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* ── REPORT ── */
+        #screen-report {
+            display: none;
+            padding-top: 80px;
+        }
+
+        #screen-report.active {
+            display: block;
+        }
+
+        .report-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #3d1a2e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .report-hero .profile-tag {
+            display: inline-block;
+            background: var(--pink);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            margin-bottom: 1.25rem;
+        }
+
+        .report-hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .report-hero .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .report-hero .name-greeting {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .report-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        /* match bars */
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--pink);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .class-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .class-card.top-pick {
+            border-color: var(--pink);
+            box-shadow: 0 4px 24px rgba(200, 90, 138, 0.15);
+        }
+
+        .class-card-body {
+            padding: 1.5rem;
+        }
+
+        .class-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .class-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .match-pct {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--pink);
+            background: var(--pink-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            white-space: nowrap;
+        }
+
+        .match-bar-bg {
+            height: 4px;
+            background: var(--border);
+            border-radius: 99px;
+            margin-bottom: 1rem;
+        }
+
+        .match-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--pink), #e8829f);
+            border-radius: 99px;
+            transition: width 1s ease;
+        }
+
+        .class-why {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .class-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .class-tag {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.7rem;
+            border-radius: 99px;
+            background: #f3f4f6;
+            color: var(--gray);
+        }
+
+        .top-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: var(--pink);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 99px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* event cards */
+        .event-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .event-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .event-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .event-why {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* journey */
+        .journey-box {
+            background: linear-gradient(135deg, #fdf4f8, #fcfbf9);
+            border: 1px solid var(--pink-light);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .journey-steps {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.25rem;
+        }
+
+        .journey-step {
+            flex: 1;
+            min-width: 160px;
+            background: white;
+            border-radius: 14px;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .journey-step .step-num {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--pink);
+            margin-bottom: 0.4rem;
+        }
+
+        .journey-step .step-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+        }
+
+        .journey-step .step-note {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        /* evolving message */
+        .evolve-box {
+            background: var(--dark);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .evolve-box h3 {
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+
+        .evolve-box p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* actions */
+        .report-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        /* loading */
+        #loading-screen {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--light);
+            z-index: 200;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #loading-screen.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--border);
+            border-top-color: var(--pink);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .methodology-box {
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .methodology-toggle {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--dark);
+            text-align: left;
+        }
+
+        .methodology-toggle:hover {
+            background: var(--pink-light);
+        }
+
+        .methodology-body {
+            display: none;
+            padding: 1.25rem 1.5rem;
+            background: #fafafa;
+            border-top: 1px solid var(--border);
+        }
+
+        .methodology-body.open {
+            display: block;
+        }
+
+        .methodology-body p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .methodology-body table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .methodology-body th {
+            text-align: left;
+            padding: 0.4rem 0.6rem;
+            color: var(--pink);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .methodology-body td {
+            padding: 0.4rem 0.6rem;
+            color: var(--gray);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* lang picker */
+        .lang-row {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 99px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: white;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            border-color: var(--pink);
+            color: var(--pink);
+            background: var(--pink-light);
+        }
+
+        /* question hint */
+        .q-hint-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #aaa;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1.5px solid #ccc;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            transition: all 0.2s;
+        }
+
+        .q-hint-btn:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+        }
+
+        .q-hint-box {
+            background: #f8f8f8;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            font-size: 0.82rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            display: none;
+        }
+
+        .q-hint-box.open {
+            display: block;
+        }
+
+        /* links section */
+        .links-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.1rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.2s;
+        }
+
+        .link-card:hover {
+            border-color: var(--pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(200, 90, 138, 0.12);
+        }
+
+        .link-card .lc-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .link-card .lc-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--pink);
+        }
+
+        .link-card .lc-sub {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 0.2rem;
+        }
+
+        /* explorer pass */
+        .explorer-box {
+            background: linear-gradient(135deg, #fff0f7, #fff8fb);
+            border: 2px solid var(--pink-light);
+            border-radius: 20px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .explorer-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .explorer-box p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        /* feedback */
+        .feedback-box {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .feedback-box p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            font-size: 1.8rem;
+            cursor: pointer;
+            opacity: 0.3;
+            transition: opacity 0.15s;
+        }
+
+        .star.on {
+            opacity: 1;
+        }
+
+        .feedback-text {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-family: Inter, sans-serif;
+            resize: vertical;
+            min-height: 60px;
+            outline: none;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-text:focus {
+            border-color: var(--pink);
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+
+            nav,
+            #progress-bar-wrap,
+            .report-actions,
+            .methodology-box,
+            .no-print {
+                display: none !important;
+            }
+
+            #screen-report {
+                padding-top: 0 !important;
+            }
+
+            .print-only {
+                display: flex !important;
+                padding: 1.5rem 2rem;
+                border-bottom: 2px solid var(--border);
+                margin-bottom: 1rem;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .print-logo {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            .print-contacts {
+                font-size: 0.78rem;
+                color: var(--gray);
+                text-align: right;
+                line-height: 1.6;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .class-header {
+                flex-direction: column;
+            }
+
+            .report-hero {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <img src="https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia.svg"
+            onerror="this.onerror=null;this.src='';this.style.fontFamily='Playfair Display, serif';this.style.fontSize='1.2rem';this.style.fontWeight='700';this.alt='Goyoga Tallinn';"
+            alt="Goyoga Tallinn" />
+        <span id="nav-step-label">Find Your Practice</span>
+    </nav>
+    <div id="progress-bar-wrap">
+        <div id="progress-bar" style="width:0%"></div>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p style="color:var(--gray);font-size:0.9rem;">Analysing your answers...</p>
+    </div>
+
+    <!-- ════════════ INTRO ════════════ -->
+    <div class="screen active" id="screen-intro">
+        <div class="lang-row">
+            <button class="lang-btn" id="lb-et" onclick="setLang('et')">🇪🇪 Eesti</button>
+            <button class="lang-btn active" id="lb-en" onclick="setLang('en')">🇬🇧 English</button>
+            <button class="lang-btn" id="lb-fi" onclick="setLang('fi')">🇫🇮 Suomi</button>
+        </div>
+        <h1 id="i-h1">Find Your<br /><em>Perfect Practice</em></h1>
+        <p id="i-sub">12 questions · 5 minutes · personalised for you.<br />Discover which Goyoga classes, events and
+            retreats truly suit who you are.</p>
+        <div class="tag-row">
+            <span class="tag" id="t1">Physical</span>
+            <span class="tag" id="t2">Mental</span>
+            <span class="tag" id="t3">Spiritual</span>
+            <span class="tag" id="t4">Astrological</span>
+        </div>
+        <button class="btn btn-primary" id="i-begin" onclick="startQuiz()">Begin →</button>
+    </div>
+
+    <!-- ════════════ QUESTIONS ════════════ -->
+    <div class="screen" id="screen-q">
+        <div class="q-label" id="q-label">Question 1 of 13</div>
+        <div style="display:flex;align-items:flex-start;gap:0.4rem">
+            <div class="q-text" id="q-text" style="flex:1"></div>
+            <button class="q-hint-btn" id="q-hint-btn" onclick="toggleHint()" title="Why do we ask this?">?</button>
+        </div>
+        <div class="q-hint-box" id="q-hint-box"></div>
+        <div class="q-sub" id="q-sub"></div>
+        <div class="multi-hint" id="multi-hint" style="display:none">Select all that apply</div>
+        <div class="options" id="options-container"></div>
+        <div class="nav-btns">
+            <button class="btn btn-outline" id="btn-back" onclick="prevQ()">← Back</button>
+            <button class="btn btn-primary" id="btn-next" onclick="nextQ()" disabled>Continue →</button>
+        </div>
+    </div>
+
+    <!-- ════════════ NAME ════════════ -->
+    <div class="screen" id="screen-name">
+        <h2>One last thing...</h2>
+        <p style="color:var(--gray)">What's your name? We'll personalise your report.</p>
+        <input type="text" id="name-input" placeholder="Your first name..." maxlength="40" />
+        <button class="btn btn-primary" onclick="generateReport()">See My Practice Profile →</button>
+    </div>
+
+    <!-- ════════════ REPORT ════════════ -->
+    <div class="screen" id="screen-report">
+        <div class="report-hero">
+            <div class="profile-tag" id="r-profile-tag">Your Profile</div>
+            <div class="name-greeting" id="r-name-greeting"></div>
+            <h1 id="r-profile-title">Your Practice Profile</h1>
+            <p class="subtitle" id="r-profile-subtitle"></p>
+        </div>
+
+        <div class="report-body">
+
+            <!-- Explorer Pass (shown for beginners) -->
+            <div id="r-explorer" style="display:none"></div>
+
+            <!-- Top 3 classes -->
+            <div class="section-title" id="r-class-title">Your Top 3 Class Matches</div>
+            <div id="r-classes"></div>
+
+            <!-- Events & Retreats -->
+            <div class="section-title" style="margin-top:2.5rem" id="r-events-title">Recommended Events & Retreats</div>
+            <div id="r-events"></div>
+
+            <!-- Your Journey -->
+            <div class="journey-box" id="r-journey">
+                <div class="section-title" style="margin-bottom:0.75rem;border:none;padding:0">Your Suggested Journey
+                </div>
+                <p style="color:var(--gray);font-size:0.9rem;margin-bottom:0">If you're newer to practice, think of this
+                    as a path, not a destination. Start gently, explore, and let the practice find you.</p>
+                <div class="journey-steps" id="r-journey-steps"></div>
+            </div>
+
+            <!-- Evolving message -->
+            <div class="evolve-box">
+                <h3>Your practice will evolve. That's the point.</h3>
+                <p>These recommendations are based on where you are today. As you grow, your practice will naturally
+                    shift. If you're a beginner — try things, be curious, there are no wrong choices here. Goyoga's
+                    teachers are here to guide you every step of the way.</p>
+            </div>
+
+            <!-- Methodology -->
+            <div class="methodology-box">
+                <button class="methodology-toggle"
+                    onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">
+                    <span>🔍 How does this quiz work? (Methodology)</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="methodology-body">
+                    <p>We believe you deserve to understand exactly how your recommendations are generated. Here is the
+                        complete framework.</p>
+                    <p><strong>Your answers are scored across 4 primary dimensions:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Dimension</th>
+                            <th>What it measures</th>
+                        </tr>
+                        <tr>
+                            <td>🏋️ Physical</td>
+                            <td>Intensity, strength demand & movement volume of the practice</td>
+                        </tr>
+                        <tr>
+                            <td>🧠 Mental</td>
+                            <td>Meditative depth, nervous system calming & mindfulness focus</td>
+                        </tr>
+                        <tr>
+                            <td>✨ Spiritual</td>
+                            <td>Energetic, ceremonial & transformative depth of the practice</td>
+                        </tr>
+                        <tr>
+                            <td>🌱 Experience</td>
+                            <td>How accessible the class is for beginners vs dedicated practitioners</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top:0.75rem">Each of the 12 questions contributes weighted points to these
+                        dimensions — and to class-specific signals (e.g. choosing "I love structure" directly boosts
+                        Ashtanga and Mysore scores).</p>
+                    <p>Your <strong>astrological element</strong> adds a further directional signal: Fire and Earth lean
+                        toward structure & intensity, Air toward creativity & flow, Water toward depth & gentleness.
+                        This is not deterministic — it is one of many factors.</p>
+                    <p>Each class has a predefined profile. We compare your accumulated score vector against every class
+                        profile using weighted dot-product similarity, then normalise to 0–100%. The top 3 are shown.
+                    </p>
+                    <p><strong>Events and retreats</strong> are matched based on direct answer triggers — e.g. choosing
+                        sound bath interest directly elevates those event scores.</p>
+                    <p style="font-style:italic;color:var(--pink)">This is a starting point. Yoga is deeply personal and
+                        your practice will evolve. We encourage you to try, explore and trust your own experience above
+                        any quiz.</p>
+                </div>
+            </div>
+
+            <!-- Links to Goyoga -->
+            <div class="section-title" style="margin-top:2.5rem">Ready to begin?</div>
+            <div class="links-box">
+                <a class="link-card" href="https://www.goyoga.ee/tunnid.html" target="_blank">
+                    <div class="lc-icon">🗓</div>
+                    <div class="lc-label">Class Schedule</div>
+                    <div class="lc-sub">Book your first class</div>
+                </a>
+                <a class="link-card" href="https://www.goyoga.ee/events.html" target="_blank">
+                    <div class="lc-icon">✨</div>
+                    <div class="lc-label">Events</div>
+                    <div class="lc-sub">Ceremonies &amp; workshops</div>
+                </a>
+                <a class="link-card" href="https://www.goyoga.ee/events.html#retreats" target="_blank">
+                    <div class="lc-icon">✈️</div>
+                    <div class="lc-label">Retreats</div>
+                    <div class="lc-sub">Morocco · Italy · India</div>
+                </a>
+                <a class="link-card" href="https://www.goyoga.ee/hinnad.html" target="_blank">
+                    <div class="lc-icon">🎫</div>
+                    <div class="lc-label">Prices</div>
+                    <div class="lc-sub">Passes &amp; memberships</div>
+                </a>
+                <a class="link-card" href="https://www.goyoga.ee/en/teachers.html" target="_blank">
+                    <div class="lc-icon">🧑‍🏫</div>
+                    <div class="lc-label">Teachers</div>
+                    <div class="lc-sub">Meet our instructors</div>
+                </a>
+                <a class="link-card" href="https://www.goyoga.ee/en/studio.html" target="_blank">
+                    <div class="lc-icon">🏛️</div>
+                    <div class="lc-label">Studio</div>
+                    <div class="lc-sub">Our space &amp; story</div>
+                </a>
+            </div>
+
+            <!-- Actions -->
+            <div class="report-actions">
+                <button class="btn btn-pink" onclick="shareReport()">↗ Share</button>
+                <button class="btn btn-outline" onclick="emailReport()">✉ Email</button>
+            </div>
+
+            <!-- Email form -->
+            <div id="email-form" style="display:none;margin-top:1.5rem;text-align:center;">
+                <input type="email" id="user-email" placeholder="your@email.com"
+                    style="padding:0.9rem 1.25rem;border:2px solid var(--border);border-radius:14px;font-size:1rem;width:100%;max-width:360px;outline:none;margin-bottom:1rem;font-family:Inter,sans-serif;" />
+                <br />
+                <button class="btn btn-primary" onclick="sendEmail()">Send Report →</button>
+            </div>
+            <p id="email-status" style="text-align:center;margin-top:1rem;font-size:0.9rem;color:var(--gray);"></p>
+
+            <!-- Feedback -->
+            <div class="feedback-box">
+                <p>Was this quiz helpful? Let us know 🙏</p>
+                <div class="stars" id="stars">
+                    <span class="star" data-v="1" onclick="rateStar(1)">★</span>
+                    <span class="star" data-v="2" onclick="rateStar(2)">★</span>
+                    <span class="star" data-v="3" onclick="rateStar(3)">★</span>
+                    <span class="star" data-v="4" onclick="rateStar(4)">★</span>
+                    <span class="star" data-v="5" onclick="rateStar(5)">★</span>
+                </div>
+                <textarea class="feedback-text" id="feedback-text" placeholder="Any thoughts? (optional)"></textarea>
+                <button class="btn btn-outline" onclick="sendFeedback()">Send Feedback</button>
+                <p id="feedback-status" style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray);"></p>
+            </div>
+        </div>
+
+        <!-- Print header: logo + contacts, only visible in PDF -->
+        <div class="print-only" id="print-header">
+            <div>
+                <div class="print-logo">Goyoga Tallinn</div>
+                <div style="font-size:0.7rem;color:#aaa;margin-top:0.2rem">Find Your Practice — Personal Report</div>
+            </div>
+            <div class="print-contacts">
+                www.goyoga.ee<br />
+                Tatari 64, Tallinn, Estonia<br />
+                info@goyoga.ee
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ════════════════════════════════════════════
+        // CONFIGURATION
+        // ════════════════════════════════════════════
+        const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1480378527525371956/Tgz3Kc0TSZMcvzMtdZFb3xdxuWboPNIW7SJxhnv48mXpIemhpnVbMiKA2Zbm0zzUkmxR';
+        const GA4_ID = 'G-N0X5B7NG6N';
+        const QUIZ_SESSION_ID = 'quiz-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+        let currentLang = 'en';
+        let starRating = 0;
+
+        const LANG = {
+            en: { h1: 'Find Your<br/><em>Perfect Practice</em>', sub: '13 questions · 5 minutes · personalised for you.', begin: 'Begin →', t1: 'Physical', t2: 'Mental', t3: 'Spiritual', t4: 'Astrological' },
+            et: { h1: 'Leia oma<br/><em>Täiuslik praktika</em>', sub: '13 küsimust · 5 minutit · isikustatud just sulle.', begin: 'Alusta →', t1: 'Füüsiline', t2: 'Vaimne', t3: 'Hingeline', t4: 'Astroloogia' },
+            fi: { h1: 'Löydä oma<br/><em>Täydellinen harjoitus</em>', sub: '13 kysymystä · 5 minuuttia · sinulle räätälöity.', begin: 'Aloita →', t1: 'Fyysinen', t2: 'Mielentila', t3: 'Henkinen', t4: 'Astrologinen' }
+        };
+
+        function setLang(l) {
+            currentLang = l;
+            ['en', 'et', 'fi'].forEach(x => document.getElementById('lb-' + x).classList.toggle('active', x === l));
+            const t = LANG[l];
+            document.getElementById('i-h1').innerHTML = t.h1;
+            document.getElementById('i-sub').textContent = t.sub;
+            document.getElementById('i-begin').textContent = t.begin;
+            ['t1', 't2', 't3', 't4'].forEach((id, i) => document.getElementById(id).textContent = [t.t1, t.t2, t.t3, t.t4][i]);
+        }
+
+        // Auto-detect language from browser
+        (function () {
+            const bl = (navigator.language || 'en').slice(0, 2).toLowerCase();
+            if (bl === 'et') setLang('et');
+            else if (bl === 'fi') setLang('fi');
+            else setLang('en');
+        })();
+
+        function getGA4ClientId() {
+            try {
+                const ga = document.cookie.split(';').find(c => c.trim().startsWith('_ga='));
+                if (ga) return ga.split('=').pop().split('.').slice(-2).join('.');
+            } catch (e) { }
+            return 'unknown';
+        }
+        function fireGA4Event(eventName, params) {
+            if (window.gtag) window.gtag('event', eventName, { ...params, quiz_session_id: QUIZ_SESSION_ID });
+        }
+        function toggleHint() {
+            document.getElementById('q-hint-box').classList.toggle('open');
+        }
+        function rateStar(v) {
+            starRating = v;
+            document.querySelectorAll('.star').forEach(s => s.classList.toggle('on', +s.dataset.v <= v));
+        }
+        function sendFeedback() {
+            const text = document.getElementById('feedback-text').value.trim();
+            const profile = getProfile();
+            if (!starRating && !text) { document.getElementById('feedback-status').textContent = 'Please rate or leave a comment first.'; return; }
+            if (DISCORD_WEBHOOK) {
+                fetch(DISCORD_WEBHOOK, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        embeds: [{
+                            title: '⭐ Quiz Feedback', color: 0xf5c842,
+                            fields: [{ name: 'Rating', value: '⭐'.repeat(starRating || 0) || 'No rating', inline: true },
+                            { name: 'Name', value: userName || 'Anonymous', inline: true },
+                            { name: 'Profile', value: profile.tag, inline: true },
+                            { name: 'Comment', value: text || '—', inline: false }],
+                            footer: { text: 'Goyoga Practice Finder · goyoga.ee' }, timestamp: new Date().toISOString()
+                        }]
+                    })
+                }).catch(() => { });
+            }
+            document.getElementById('feedback-status').textContent = '✓ Thank you for your feedback!';
+            document.getElementById('feedback-text').value = '';
+            document.querySelector('.stars').style.pointerEvents = 'none';
+        }
+
+
+        // ════════════════════════════════════════════
+        // QUESTIONS
+        // ════════════════════════════════════════════
+        const questions = [
+            {
+                id: 'goal',
+                hint: 'This helps us understand which dimension to prioritise — physical results, mental calm, or spiritual depth.',
+                text: 'What are you primarily looking for?',
+                sub: 'Choose the one that resonates most right now.',
+                multi: false,
+                options: [
+                    { icon: '💪', label: 'Physical strength, flexibility & fitness', weights: { physical: 3, mental: 0, spiritual: 0, energy: 2 } },
+                    { icon: '🧠', label: 'Mental clarity, calm & stress relief', weights: { mental: 3, physical: 1, spiritual: 1, energy: -1 } },
+                    { icon: '✨', label: 'Spiritual connection & deeper meaning', weights: { spiritual: 3, mental: 1, physical: 0, energy: 0 } },
+                    { icon: '🌀', label: 'All of the above — a complete practice', weights: { physical: 2, mental: 2, spiritual: 2, energy: 1 } },
+                ]
+            },
+            {
+                id: 'experience',
+                hint: 'Your experience level determines which classes are safely accessible right now. Beginners thrive when they start in the right environment — no judgement here.',
+                text: 'How would you describe your movement & yoga experience?',
+                sub: "Be honest — there's no wrong answer here.",
+                multi: false,
+                options: [
+                    { icon: '🌱', label: "Complete beginner — I'm curious but new", weights: { beginner: 3 } },
+                    { icon: '🌿', label: "Some experience — I've tried a few classes", weights: { beginner: 2 } },
+                    { icon: '🌳', label: 'Regular mover — I have a consistent practice', weights: { beginner: 0, advanced: 1 } },
+                    { icon: '🔥', label: 'Experienced practitioner — I train seriously', weights: { beginner: -1, advanced: 3, intensity: 2 } },
+                ]
+            },
+            {
+                id: 'gender',
+                hint: 'Some practices have historical gender-specific traditions. This also helps us recommend the most relevant passes and programmes tailored to you.',
+                text: 'How do you identify?',
+                sub: 'Helps us personalise your pass and programme recommendations.',
+                multi: false,
+                options: [
+                    { icon: '♂️', label: 'Male', weights: { male: 1 } },
+                    { icon: '♀️', label: 'Female', weights: { female: 1 } },
+                    { icon: '🌈', label: 'Non-binary', weights: {} },
+                    { icon: '🤍', label: 'Prefer not to say', weights: {} },
+                ]
+            },
+            {
+                id: 'age',
+                hint: 'Age affects which intensity levels and class formats best support your body, both safely and effectively.',
+                text: "What's your age group?",
+                sub: 'Helps us match intensity and class style.',
+                multi: false,
+                options: [
+                    { icon: '🌸', label: 'Under 30', weights: { youth: 2, intensity: 1 } },
+                    { icon: '🌺', label: '30 – 45', weights: { youth: 1 } },
+                    { icon: '🍂', label: '45 – 60', weights: { mature: 1 } },
+                    { icon: '🌙', label: '60 and above', weights: { senior: 3, beginner: 2 } },
+                ]
+            },
+            {
+                id: 'element',
+                hint: 'In Ayurvedic tradition, your elemental nature suggests natural affinities for certain types of movement and energy. Fire does NOT mean you avoid intensity — quite the opposite!',
+                text: "What's your zodiac element?",
+                sub: 'Each element has a natural affinity with certain practices.',
+                multi: false,
+                options: [
+                    { icon: '🔥', label: 'Fire — Aries, Leo, Sagittarius', weights: { structure: 2, intensity: 2, physical: 1, spiritual: 1 } },
+                    { icon: '🌍', label: 'Earth — Taurus, Virgo, Capricorn', weights: { structure: 3, physical: 2, steady: 2 } },
+                    { icon: '💨', label: 'Air — Gemini, Libra, Aquarius', weights: { flow: 2, mental: 2, creative: 2 } },
+                    { icon: '💧', label: 'Water — Cancer, Scorpio, Pisces', weights: { spiritual: 2, mental: 2, gentle: 2 } },
+                    { icon: '🤷', label: "I don't know my sign", weights: {} },
+                ]
+            },
+            {
+                id: 'body_now',
+                text: 'How does your body feel right now, today?',
+                sub: 'Not in general — right now, this week.',
+                multi: false,
+                options: [
+                    { icon: '⚡', label: 'Energised and ready for a challenge', weights: { intensity: 2, physical: 1, energy: 2 } },
+                    { icon: '😴', label: 'Tired and depleted — I need restoration', weights: { gentle: 2, energy: -2, mental: 1 } },
+                    { icon: '😣', label: 'Stiff and tense — I need to open up', weights: { flow: 2, yin: 2, physical: 1 } },
+                    { icon: '😊', label: 'Good overall — open to anything', weights: {} },
+                ]
+            },
+            {
+                id: 'mind_now',
+                text: 'And your mind — how are you right now?',
+                sub: 'Emotionally and mentally, this week.',
+                multi: false,
+                options: [
+                    { icon: '😰', label: 'Anxious or overwhelmed', weights: { gentle: 2, spiritual: 1, yin: 2, mental: 2 } },
+                    { icon: '😑', label: 'Flat or disconnected — I need to feel alive', weights: { intensity: 2, physical: 2, energy: 2 } },
+                    { icon: '🤔', label: 'Searching for clarity and direction', weights: { mental: 2, spiritual: 2, structure: 1 } },
+                    { icon: '😌', label: 'Calm and centered — I want to go deeper', weights: { spiritual: 2, advanced: 1, structure: 1 } },
+                ]
+            },
+            {
+                id: 'structure',
+                text: 'How do you relate to structure and discipline?',
+                sub: 'In life and movement, which feels most like you?',
+                multi: false,
+                options: [
+                    { icon: '🎯', label: 'I thrive with ritual, repetition and clear rules', weights: { structure: 3, ashtanga: 2, steady: 2 } },
+                    { icon: '🌊', label: 'I like some guidance but love creative freedom', weights: { flow: 2, vinyasa: 2 } },
+                    { icon: '🍃', label: 'I prefer to let my body lead — gently', weights: { gentle: 2, yin: 2, flow: 1 } },
+                    { icon: '🛋️', label: 'I mostly need stillness and to just breathe', weights: { gentle: 3, yin: 2, sound: 2, mental: 1 } },
+                ]
+            },
+            {
+                id: 'feeling_after',
+                text: 'What do you want to feel after your session?',
+                sub: 'The result that matters most to you.',
+                multi: false,
+                options: [
+                    { icon: '💪', label: 'Strong, accomplished and physically worked', weights: { physical: 3, intensity: 2, ashtanga: 2 } },
+                    { icon: '🕊️', label: 'Calm, clear and at peace', weights: { mental: 2, spiritual: 1, yin: 2, sound: 1 } },
+                    { icon: '🌈', label: 'Energised, open and lit up from inside', weights: { flow: 2, energy: 2, vinyasa: 2, spiritual: 1 } },
+                    { icon: '🌿', label: 'Grounded, safe and at home in my body', weights: { gentle: 2, yin: 1, qigong: 2, structure: 1 } },
+                ]
+            },
+            {
+                id: 'learning',
+                text: 'How do you learn and practise best?',
+                sub: 'Think about how you like to be in a class setting.',
+                multi: false,
+                options: [
+                    { icon: '🧑‍🏫', label: 'At my own pace, with individual teacher guidance', weights: { mysore: 3, ashtanga: 2 } },
+                    { icon: '👥', label: 'As a group, everyone moving together', weights: { led: 3, vinyasa: 2 } },
+                    { icon: '✋', label: 'Being guided step by step through a sequence', weights: { led: 2, structure: 2, beginner: 1 } },
+                    { icon: '🌊', label: 'Free to explore, with light guidance', weights: { flow: 2, gentle: 1, yin: 1 } },
+                ]
+            },
+            {
+                id: 'time',
+                text: 'How much time can you realistically dedicate per week?',
+                sub: 'Honest answer — it helps match sustainable practices.',
+                multi: false,
+                options: [
+                    { icon: '⏱', label: '1 session per week — life is full right now', weights: { sound: 1, yin: 1 } },
+                    { icon: '🗓', label: '2–3 sessions per week', weights: { ashtanga: 1, steady: 1 } },
+                    { icon: '🔄', label: '4–5 times a week — I am committed', weights: { ashtanga: 2, mysore: 2, intensity: 1 } },
+                    { icon: '🌅', label: 'Daily practice is my goal', weights: { ashtanga: 3, mysore: 3, structure: 2 } },
+                ]
+            },
+            {
+                id: 'events_interest',
+                text: 'What types of events or experiences call to you?',
+                sub: 'You can select multiple.',
+                multi: true,
+                options: [
+                    { icon: '🌕', label: 'Full moon rituals & ceremonies', weights: { spiritual: 2, sound: 1, event_moon: 3 } },
+                    { icon: '🥁', label: 'Sound baths & gong journeys', weights: { sound: 3, spiritual: 2, mental: 1, event_sound: 3 } },
+                    { icon: '🍫', label: 'Cacao ceremonies & heart opening', weights: { spiritual: 3, mental: 1, event_cacao: 3 } },
+                    { icon: '✈️', label: 'Retreats abroad (Morocco, Italy, India)', weights: { spiritual: 2, physical: 1, event_retreat: 3 } },
+                    { icon: '📚', label: 'Workshops & skill deepening', weights: { ashtanga: 1, structure: 1, event_workshop: 2 } },
+                    { icon: '🤍', label: 'None for now — classes are enough', weights: {} },
+                ]
+            },
+            {
+                id: 'spiritual_open',
+                text: 'How open are you to the spiritual side of yoga?',
+                sub: 'No right answer — just where you are today.',
+                multi: false,
+                options: [
+                    { icon: '🙏', label: 'Deeply — it\'s the whole reason I\'m here', weights: { spiritual: 3, sound: 1, qigong: 1 } },
+                    { icon: '🌿', label: 'Open — I\'m curious and exploring', weights: { spiritual: 2, qigong: 1 } },
+                    { icon: '🤸', label: 'Neutral — I\'m focused on the physical for now', weights: { physical: 2, ashtanga: 1 } },
+                    { icon: '⚗️', label: 'Sceptical — I prefer the science-backed approach', weights: { physical: 3, mental: 1, ashtanga: 1 } },
+                ]
+            },
+        ];
+
+        // ════════════════════════════════════════════
+        // CLASS PROFILES — scoring matrix
+        // Each class has a base score vector + weights for quiz dimensions
+        // ════════════════════════════════════════════
+        const classes = [
+            {
+                id: 'mysore',
+                name: 'Mysore Ashtanga',
+                emoji: '🛏️',
+                teachers: [
+                    { name: 'Raili Maripuu', slug: 'raili-maripuu' },
+                    { name: 'Victoria Palusaar', slug: 'victoria-palusaar' },
+                    { name: 'Keiu Grossberg', slug: 'keiu-grossberg' },
+                ],
+                tags: ['Self-paced', 'Traditional', 'Individual guidance', 'All levels'],
+                profile: { physical: 3, mental: 2, spiritual: 3, structure: 3, intensity: 3, beginner: -1, advanced: 3, mysore: 5, ashtanga: 3, steady: 2, flow: 0, gentle: 0, yin: 0, sound: 0, led: 0, vinyasa: 0, qigong: 0, creative: 0 },
+                why_templates: [
+                    'Mysore is the heart of traditional Ashtanga. You practise at your own pace, with the same sequence every day, and the teacher comes to you. Perfect for someone who values ritual, discipline and an individual relationship with their teacher.',
+                    'The daily Mysore practice creates a meditative container. The repetition becomes liberation. Your element and your love of structure make this a powerful fit.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=ashtanga-yoga',
+            },
+            {
+                id: 'ashtanga-led',
+                name: 'Led Ashtanga',
+                emoji: '🎯',
+                teachers: [
+                    { name: 'Raili Maripuu', slug: 'raili-maripuu' },
+                    { name: 'Victoria Palusaar', slug: 'victoria-palusaar' },
+                    { name: 'Keiu Grossberg', slug: 'keiu-grossberg' },
+                ],
+                tags: ['Group class', 'Fixed sequence', 'Energising', 'Traditional'],
+                profile: { physical: 3, mental: 2, spiritual: 2, structure: 3, intensity: 3, beginner: 0, advanced: 2, ashtanga: 3, led: 4, steady: 2, flow: 0, gentle: -1, yin: -1, sound: 0, mysore: 0, vinyasa: 0, qigong: 0, creative: 0 },
+                why_templates: [
+                    'In a Led class, the teacher calls every breath and movement for the whole group. It\'s energising, traditional and deeply satisfying for those who love structure with community.',
+                    'If you want the Ashtanga sequence but prefer to move with others rather than on your own, Led is where the magic happens.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=ashtanga-yoga',
+            },
+            {
+                id: 'beginners',
+                name: 'Beginners Yoga',
+                emoji: '🌱',
+                teachers: [
+                    { name: 'Raili Maripuu', slug: 'raili-maripuu' },
+                ],
+                tags: ['Welcoming', 'Foundational', 'No experience needed', 'Step by step'],
+                profile: { physical: 1, mental: 2, spiritual: 1, structure: 2, intensity: 0, beginner: 5, advanced: -2, gentle: 2, steady: 2, mysore: -2, ashtanga: 0, led: 1, flow: 1, yin: 0, sound: 0, vinyasa: 0, qigong: 0, creative: 0 },
+                why_templates: [
+                    'Beginners Yoga gives you the foundation: postures, breathing, and the language of yoga explained clearly. No experience needed, no expectations, just curiosity.',
+                    'Starting here means building confidence. After a few months you\'ll feel ready to explore any other class on offer.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=ashtanga-yoga',
+            },
+            {
+                id: 'yin',
+                name: 'Yin Yoga',
+                emoji: '🌙',
+                teachers: [
+                    { name: 'Katlin Epner', slug: 'katlin-epner' },
+                ],
+                tags: ['Deep stretching', 'Meditative', 'Slow-paced', 'Restorative'],
+                profile: { physical: 1, mental: 3, spiritual: 2, structure: 1, intensity: -2, beginner: 3, gentle: 4, yin: 5, mental: 3, sound: 1, flow: 1, ashtanga: -1, led: 0, mysore: 0, steady: 0, advanced: 0, vinyasa: 0, qigong: 1, creative: 0 },
+                why_templates: [
+                    'Yin holds poses for 3 to 5 minutes each, reaching deep into connective tissue and fascia. Meditative, quiet and deeply releasing: perfect for a tired or stressed body.',
+                    'If your body is holding tension and your mind is running fast, Yin creates the stillness to let both unwind. Incredibly complementary to more dynamic practices.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=yin-yoga',
+            },
+            {
+                id: 'hatha',
+                name: 'Hatha Yoga',
+                emoji: '🌿',
+                teachers: [
+                    { name: 'Dian Järvenkylä', slug: 'dian-jarvenkyla' },
+                ],
+                tags: ['Alignment-focused', 'Held poses', 'All levels', 'Grounding'],
+                profile: { physical: 2, mental: 2, spiritual: 1, structure: 2, intensity: 1, beginner: 2, gentle: 2, flow: 1, steady: 2, ashtanga: 0, led: 1, mysore: 0, yin: 1, sound: 0, vinyasa: 0, qigong: 0, advanced: 0, creative: 0 },
+                why_templates: [
+                    'Hatha is the root of most modern yoga. Poses are held with focus on correct alignment and breath. Grounding, balancing and accessible for almost everyone.',
+                    'If you want to understand your body deeply: how to align it, how to breathe within it. Hatha gives you that solid foundation.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=hatha-yoga',
+            },
+            {
+                id: 'vinyasa',
+                name: 'Vinyasa Flow',
+                emoji: '🌊',
+                teachers: [
+                    { name: 'Dian Järvenkylä', slug: 'dian-jarvenkyla' },
+                ],
+                tags: ['Flowing', 'Creative', 'Dynamic', 'Breath-linked'],
+                profile: { physical: 2, mental: 2, spiritual: 1, structure: 1, intensity: 2, beginner: 1, flow: 4, vinyasa: 5, creative: 3, gentle: 0, yin: -1, sound: 0, ashtanga: 0, led: 2, mysore: 0, steady: 0, advanced: 1, qigong: 0 },
+                why_templates: [
+                    'Vinyasa links each breath with movement, creating a flowing, almost dance-like practice. Creative, energising and endlessly varied: no two classes are the same.',
+                    'If you love the feeling of moving freely and expressively, Vinyasa gives you that aliveness. Great for Air element personalities who crave variety and creativity.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=vinyasa-yoga',
+            },
+            {
+                id: 'yoga60plus',
+                name: '60+ Yoga',
+                emoji: '🌸',
+                teachers: [
+                    { name: 'Kaia Karjatse', slug: 'kaia-karjatse' },
+                ],
+                tags: ['Gentle', 'Safe', '60+ community', 'Adapted'],
+                profile: { physical: 1, mental: 2, spiritual: 1, structure: 2, intensity: -2, beginner: 3, senior: 6, gentle: 3, steady: 2, mature: 3, yin: 1, sound: 0, ashtanga: -3, led: 0, mysore: -3, flow: 0, advanced: -3, vinyasa: 0, qigong: 0, creative: 0 },
+                why_templates: [
+                    '60+ Yoga is gentle, adapted and focused on the needs of an older body: joint health, balance, flexibility and wellbeing. A warm, supportive community environment.',
+                    'Designed for safety and accessibility, this class honours where older bodies are today while building strength and vitality gently over time.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=60-yoga',
+            },
+            {
+                id: 'qigong',
+                name: 'Meridian Gymnastics (Qigong)',
+                emoji: '🌀',
+                teachers: [
+                    { name: 'Edith Tiitsaar', slug: 'edith-tiitsaar' },
+                ],
+                tags: ['Energy body', 'Chinese medicine', 'Prevention', 'Subtle'],
+                profile: { physical: 1, mental: 2, spiritual: 3, structure: 2, intensity: 0, beginner: 2, qigong: 5, gentle: 2, spiritual: 3, creative: 0, yin: 1, sound: 1, ashtanga: 0, led: 0, mysore: 0, flow: 1, steady: 1, advanced: 0, vinyasa: 0 },
+                why_templates: [
+                    'Meridian Gymnastics works with the body\'s energy channels from Traditional Chinese Medicine. Gentle movements that activate and balance Qi: perfect for prevention, energy flow and subtle awareness.',
+                    'If you feel drawn to the less visible layer of your body: the energy, the breath, the meridians. This practice opens up a profound world beneath the surface.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=meridian-gymnastics',
+            },
+            {
+                id: 'soundbath',
+                name: 'Sound Bath & Gong Journey',
+                emoji: '🔔',
+                teachers: [
+                    { name: 'David Lepp', slug: 'david-lepp' },
+                    { name: 'Marit Tuisk', slug: 'marit-tuisk' },
+                ],
+                tags: ['Deep rest', 'Nervous system', 'Sound healing', 'No movement needed'],
+                profile: { physical: 0, mental: 3, spiritual: 3, structure: 0, intensity: -3, beginner: 3, sound: 6, gentle: 3, spiritual: 3, yin: 2, mental: 3, energy: -2, ashtanga: -2, led: 0, mysore: -2, flow: 0, steady: 0, advanced: 0, vinyasa: 0, qigong: 1, creative: 0 },
+                why_templates: [
+                    'You lie down. Sound does the work. The gong\'s frequencies move through your body, calming the nervous system, releasing held tension and opening doorways you didn\'t know were there.',
+                    'If you\'re drawn to healing, to depth, to the mystical: or if your body is just exhausted and needs profound rest. Sound Bath is one of the most powerful offerings at Goyoga.',
+                ],
+                url: 'https://www.goyoga.ee/class.html?id=sound-baths',
+            }
+        ];
+
+        // Event recommendations
+        const events = [
+            {
+                id: 'moon',
+                name: 'Full Moon Ritual: Cacao & Gong',
+                icon: '🌕',
+                triggers: ['event_moon', 'event_cacao', 'spiritual', 'sound'],
+                why: 'Full moon ceremonies work with natural lunar cycles to support release, reflection and intention. The combination of ceremonial cacao, astrology and gong makes this one of Goyoga\'s most transformative evenings.',
+                url: 'https://www.goyoga.ee/event.html?id=full-moon-cacao-gong-mar-4-2026',
+            },
+            {
+                id: 'reiki-gong',
+                name: 'Reiki Infused Gong Journey & Yoga Nidra',
+                icon: '✨',
+                triggers: ['event_sound', 'sound', 'spiritual', 'gentle', 'mental'],
+                why: 'Yoga Nidra brings conscious deep rest, Reiki gently moves energy, and the gong frequencies do the rest. A full nervous system reset in 2 hours.',
+                url: 'https://www.goyoga.ee/event.html?id=reiki-gong-mar-13-2026',
+            },
+            {
+                id: 'cacao',
+                name: 'Cacao Ceremony',
+                icon: '🍫',
+                triggers: ['event_cacao', 'spiritual', 'mental'],
+                why: 'Ceremonial cacao is a heart-opening plant medicine. Combined with meditation and intention, these evenings create space for clarity, connection and emotional release.',
+                url: 'https://www.goyoga.ee/events.html',
+            },
+            {
+                id: 'morocco',
+                name: 'Spring Wellness Retreat — Morocco',
+                icon: '🇲🇦',
+                triggers: ['event_retreat', 'physical', 'spiritual'],
+                why: '5 days at the 5-star Baberrih Resort in Essaouira. Daily yoga, sound journeys, plant-based meals and Moroccan culture. For those ready to step fully into their practice.',
+                url: 'https://www.goyoga.ee/event.html?id=morocco-spring-2026',
+            },
+            {
+                id: 'italy',
+                name: 'Ashtanga Retreat with Lino Miele — Italy',
+                icon: '🇮🇹',
+                triggers: ['event_retreat', 'ashtanga', 'structure', 'advanced'],
+                why: 'Practise with one of the world\'s most respected Ashtanga teachers at his home shala in the Italian countryside. Limited to 10 people. A profound and rare opportunity.',
+                url: 'https://www.goyoga.ee/event.html?id=italy-retreat-2026',
+            },
+            {
+                id: 'india',
+                name: 'Ashtanga Intensive — Kovalam, India',
+                icon: '🇮🇳',
+                triggers: ['event_retreat', 'ashtanga', 'intensity', 'advanced', 'spiritual'],
+                why: 'Two weeks in Kerala with Lino Miele and a global Ashtanga community. For dedicated practitioners ready for immersive, transformative study in the motherland of yoga.',
+                url: 'https://www.goyoga.ee/event.html?id=india-retreat-2026',
+            },
+        ];
+
+        // Profile archetypes
+        const profiles = [
+            { tag: 'The Disciplined Fire', subtitle: 'You are built for intensity, structure and transformation.', condition: a => a.structure >= 3 && a.intensity >= 2 },
+            { tag: 'The Gentle Seeker', subtitle: 'You are finding your way — softly, with curiosity and care.', condition: a => a.gentle >= 3 && a.spiritual >= 1 },
+            { tag: 'The Deep Diver', subtitle: 'You are drawn to what lies beneath the surface.', condition: a => a.spiritual >= 3 },
+            { tag: 'The Flowing Spirit', subtitle: 'You move through life with creativity and grace.', condition: a => a.flow >= 3 || a.creative >= 2 },
+            { tag: 'The Steady Earth', subtitle: 'You build slowly, consistently and with great intention.', condition: a => a.steady >= 2 && a.structure >= 2 },
+            { tag: 'The Restorative Mind', subtitle: 'Your body and mind are calling for rest and renewal.', condition: a => a.mental >= 3 && a.gentle >= 2 },
+            { tag: 'The Curious Beginner', subtitle: 'You are at the start of something beautiful.', condition: a => a.beginner >= 3 },
+            { tag: 'The Complete Practitioner', subtitle: 'You weave the physical, mental and spiritual into one path.', condition: () => true },
+        ];
+
+        // ════════════════════════════════════════════
+        // QUIZ STATE
+        // ════════════════════════════════════════════
+        let current = 0;
+        let answers = {}; // accumulated weight scores
+        let selections = {}; // per-question selections
+        let userName = '';
+
+        function startQuiz() {
+            document.getElementById('screen-intro').classList.remove('active');
+            document.getElementById('screen-q').classList.add('active');
+            renderQ(0);
+        }
+
+        function renderQ(idx) {
+            const q = questions[idx];
+            current = idx;
+            document.getElementById('q-label').textContent = `Question ${idx + 1} of ${questions.length}`;
+            document.getElementById('q-text').textContent = q.text;
+            document.getElementById('q-sub').textContent = q.sub || '';
+            document.getElementById('multi-hint').style.display = q.multi ? 'block' : 'none';
+            document.getElementById('nav-step-label').textContent = `Question ${idx + 1} / ${questions.length}`;
+            document.getElementById('progress-bar').style.width = ((idx / questions.length) * 100) + '%';
+            document.getElementById('btn-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
+            // Hint
+            const hintBox = document.getElementById('q-hint-box');
+            const hintBtn = document.getElementById('q-hint-btn');
+            hintBox.textContent = q.hint || '';
+            hintBox.classList.remove('open');
+            hintBtn.style.display = q.hint ? 'inline-flex' : 'none';
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            q.options.forEach((opt, i) => {
+                const div = document.createElement('div');
+                div.className = 'opt';
+                div.innerHTML = `<span class="opt-icon">${opt.icon}</span>${opt.label}`;
+
+                // restore selection
+                const sel = selections[q.id] || [];
+                if (sel.includes(i)) div.classList.add('selected');
+
+                div.onclick = () => {
+                    if (q.multi) {
+                        div.classList.toggle('selected');
+                    } else {
+                        container.querySelectorAll('.opt').forEach(d => d.classList.remove('selected'));
+                        div.classList.add('selected');
+                    }
+                    const selected = [...container.querySelectorAll('.opt.selected')].map(d => +d.dataset.idx);
+                    document.getElementById('btn-next').disabled = selected.length === 0;
+                };
+                div.dataset.idx = i;
+                container.appendChild(div);
+            });
+
+            const sel = selections[q.id] || [];
+            document.getElementById('btn-next').disabled = sel.length === 0;
+        }
+
+        function nextQ() {
+            const q = questions[current];
+            const container = document.getElementById('options-container');
+            const selected = [...container.querySelectorAll('.opt.selected')].map(d => +d.dataset.idx);
+            selections[q.id] = selected;
+
+            // accumulate weights
+            selected.forEach(i => {
+                const weights = q.options[i].weights || {};
+                Object.entries(weights).forEach(([k, v]) => {
+                    answers[k] = (answers[k] || 0) + v;
+                });
+            });
+
+            if (current + 1 < questions.length) {
+                renderQ(current + 1);
+            } else {
+                // Go to name screen
+                document.getElementById('screen-q').classList.remove('active');
+                document.getElementById('screen-name').classList.add('active');
+                document.getElementById('progress-bar').style.width = '100%';
+                document.getElementById('nav-step-label').textContent = 'Almost done…';
+            }
+        }
+
+        function prevQ() {
+            if (current > 0) renderQ(current - 1);
+        }
+
+        // ════════════════════════════════════════════
+        // SCORING ENGINE
+        // ════════════════════════════════════════════
+        function scoreClasses() {
+            const a = answers;
+            return classes.map(cls => {
+                let score = 0;
+                let maxPossible = 0;
+
+                Object.entries(cls.profile).forEach(([dim, val]) => {
+                    const userVal = a[dim] || 0;
+                    if (val > 0) {
+                        score += Math.min(userVal, val) * val;
+                        maxPossible += val * val;
+                    } else if (val < 0) {
+                        // penalty if user has positive weight here
+                        score += userVal > 0 ? val * userVal : 0;
+                    }
+                });
+
+                const pct = maxPossible > 0 ? Math.round(Math.max(0, Math.min(100, (score / maxPossible) * 100))) : 50;
+                return { ...cls, score: pct };
+            }).sort((a, b) => b.score - a.score);
+        }
+
+        function scoreEvents() {
+            const a = answers;
+            return events.map(ev => {
+                const score = ev.triggers.reduce((sum, t) => sum + (a[t] || 0), 0);
+                return { ...ev, score };
+            }).filter(ev => ev.score > 0).sort((a, b) => b.score - a.score).slice(0, 3);
+        }
+
+        function getProfile() {
+            const a = answers;
+            return profiles.find(p => p.condition(a)) || profiles[profiles.length - 1];
+        }
+
+        // ════════════════════════════════════════════
+        // REPORT GENERATION
+        // ════════════════════════════════════════════
+        function generateReport() {
+            userName = (document.getElementById('name-input').value || '').trim();
+
+            // Send to Discord immediately on name submit
+            sendToDiscord('Quiz Completed');
+            fireGA4Event('quiz_completed', { profile_tag: 'calculating...' });
+
+            // Loading screen
+            document.getElementById('screen-name').classList.remove('active');
+            document.getElementById('loading-screen').classList.add('active');
+
+            setTimeout(() => {
+                document.getElementById('loading-screen').classList.remove('active');
+                buildReport();
+                document.getElementById('screen-report').classList.add('active');
+            }, 1800);
+        }
+
+        function buildReport() {
+            const ranked = scoreClasses();
+            const top3 = ranked.slice(0, 3);
+            const evRecs = scoreEvents();
+            const profile = getProfile();
+            const isBeginnerish = (answers.beginner || 0) >= 2;
+
+            // Hero
+            document.getElementById('r-profile-tag').textContent = profile.tag;
+            document.getElementById('r-profile-title').textContent = profile.tag;
+            document.getElementById('r-profile-subtitle').textContent = profile.subtitle;
+            document.getElementById('r-name-greeting').textContent = userName ? `For ${userName}` : '';
+
+            // Explorer Pass (beginners only)
+            const explorerEl = document.getElementById('r-explorer');
+            if (isBeginnerish) {
+                explorerEl.style.display = 'block';
+                explorerEl.innerHTML = `<div class="explorer-box">
+                    <div class="section-title" style="border:none;padding:0;margin-bottom:0.75rem">🎫 Our Recommendation for You</div>
+                    <h3>Start with the Explorer Pass</h3>
+                    <p>Because you're newer to yoga, we recommend the <strong>Explorer Pass</strong>: it gives you access to all beginner-friendly classes for 30 days. Try multiple practices (Beginners Yoga, Hatha, Yin) before committing to one style. It's the most cost-effective and supportive way to find what truly resonates.</p>
+                    <a href="https://www.goyoga.ee/hinnad.html" target="_blank" class="btn btn-pink" style="text-decoration:none;display:inline-flex">See Explorer Pass prices →</a>
+                </div>`;
+            } else {
+                explorerEl.style.display = 'none';
+            }
+
+            // Classes
+            const classContainer = document.getElementById('r-classes');
+            classContainer.innerHTML = '';
+            top3.forEach((cls, i) => {
+                const why = cls.why_templates[Math.floor(Math.random() * cls.why_templates.length)];
+                const card = document.createElement('div');
+                card.className = 'class-card' + (i === 0 ? ' top-pick' : '');
+                const teacherHtml = (cls.teachers || []).map(t =>
+                    `<a href="https://www.goyoga.ee/en/teacher.html?id=${t.slug}" target="_blank" style="color:var(--pink);font-size:0.78rem;font-weight:600;text-decoration:none;background:var(--pink-light);padding:0.25rem 0.6rem;border-radius:99px;white-space:nowrap;">${t.name}</a>`
+                ).join(' ');
+                card.innerHTML = `
+      <div class="class-card-body">
+        <div class="class-header">
+          <div>
+            <div class="class-name">${cls.emoji} ${cls.name}${i === 0 ? '<span class="top-badge">Top Match</span>' : ''}</div>
+          </div>
+          <div class="match-pct">${cls.score}% match</div>
+        </div>
+        <div class="match-bar-bg"><div class="match-bar" style="width:0%" data-target="${cls.score}%"></div></div>
+        <div class="class-why">${why}</div>
+        <div class="class-tags">${cls.tags.map(t => `<span class="class-tag">${t}</span>`).join('')}</div>
+        ${teacherHtml ? `<div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center"><span style="font-size:0.72rem;color:#aaa;margin-right:0.2rem;">With:</span>${teacherHtml}</div>` : ''}
+        ${cls.url ? `<div style="margin-top:1rem"><a href="${cls.url}" target="_blank" style="color:var(--pink);font-size:0.85rem;font-weight:600;text-decoration:none;">View class details →</a></div>` : ''}
+      </div>`;
+                classContainer.appendChild(card);
+            });
+            // Animate bars
+            setTimeout(() => {
+                document.querySelectorAll('.match-bar').forEach(bar => {
+                    bar.style.width = bar.dataset.target;
+                });
+            }, 100);
+
+            // Events
+            const evContainer = document.getElementById('r-events');
+            evContainer.innerHTML = '';
+            if (evRecs.length === 0) {
+                evContainer.innerHTML = '<p style="color:var(--gray);font-size:0.9rem;">Keep exploring classes first — events will call you when the time is right. 🌿</p>';
+            } else {
+                evRecs.forEach(ev => {
+                    const card = document.createElement('div');
+                    card.className = 'event-card';
+                    card.innerHTML = `
+        <div class="event-icon">${ev.icon}</div>
+        <div>
+          <div class="event-name">${ev.name}</div>
+          <div class="event-why">${ev.why}</div>
+          ${ev.url ? `<a href="${ev.url}" target="_blank" style="color:var(--pink);font-size:0.82rem;font-weight:600;text-decoration:none;margin-top:0.4rem;display:inline-block;">Learn more →</a>` : ''}
+        </div>`;
+                    evContainer.appendChild(card);
+                });
+            }
+
+            // Journey
+            const journeySteps = document.getElementById('r-journey-steps');
+            journeySteps.innerHTML = '';
+            const steps = [
+                { num: 'Start here', name: top3[0]?.name || '', note: 'Your primary match' },
+                { num: 'Explore next', name: top3[1]?.name || '', note: 'After a few weeks' },
+                { num: 'Go deeper', name: top3[2]?.name || evRecs[0]?.name || '', note: '1–2 months in' },
+            ];
+            steps.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'journey-step';
+                div.innerHTML = `<div class="step-num">${s.num}</div><div class="step-name">${s.name}</div><div class="step-note">${s.note}</div>`;
+                journeySteps.appendChild(div);
+            });
+        }
+
+        // ════════════════════════════════════════════
+        // DISCORD WEBHOOK
+        // ════════════════════════════════════════════
+        function sendToDiscord(trigger) {
+            if (!DISCORD_WEBHOOK) return;
+            const ranked = scoreClasses();
+            const allEvents = events.map(ev => {
+                const score = ev.triggers.reduce((s, t) => s + (answers[t] || 0), 0);
+                return { ...ev, score };
+            }).sort((a, b) => b.score - a.score);
+            const profile = getProfile();
+            const ga4ClientId = getGA4ClientId();
+            const allClassLines = ranked.map((c, i) => `${i + 1}. ${c.name}: ${c.score}%`).join('\n');
+            const allEventLines = allEvents.map(ev => `${ev.score > 0 ? '✅' : '⬜'} ${ev.name} (${ev.score})`).join('\n');
+            const payload = {
+                embeds: [{
+                    title: `🧘 New Practice Match — ${profile.tag}`,
+                    color: 0xc85a8a,
+                    fields: [
+                        { name: '👤 Name', value: userName || 'Anonymous', inline: true },
+                        { name: '🌐 Language', value: currentLang.toUpperCase(), inline: true },
+                        { name: '📬 Triggered by', value: trigger, inline: true },
+                        { name: '✨ Profile', value: profile.subtitle, inline: false },
+                        { name: '🏆 ALL Class Scores (9)', value: '```' + allClassLines + '```', inline: false },
+                        { name: '📅 ALL Event Scores', value: '```' + allEventLines + '```', inline: false },
+                        { name: '🎫 Explorer Pass offered?', value: (answers.beginner || 0) >= 2 ? 'Yes ✅' : 'No', inline: true },
+                        { name: '📊 GA4 Session ID', value: '`' + QUIZ_SESSION_ID + '`', inline: false },
+                        { name: '📊 GA4 Client ID', value: '`' + ga4ClientId + '`\n*GA4 → Explore → User Explorer*', inline: false },
+                    ],
+                    footer: { text: 'Goyoga Practice Finder Quiz · goyoga.ee' },
+                    timestamp: new Date().toISOString()
+                }]
+            };
+            fetch(DISCORD_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(() => { });
+        }
+
+        function shareReport() {
+            const profile = getProfile();
+            const ranked = scoreClasses();
+            const text = `🧘 My Goyoga Practice Profile: "${profile.tag}"\n\n${profile.subtitle}\n\nTop matches: ${ranked[0]?.name}, ${ranked[1]?.name}, ${ranked[2]?.name}\n\nDiscover yours at www.goyoga.ee`;
+            sendToDiscord('Share Button');
+            fireGA4Event('quiz_share', { profile_tag: profile.tag });
+            if (navigator.share) {
+                navigator.share({ title: 'My Goyoga Practice Profile', text, url: 'https://www.goyoga.ee' }).catch(() => { });
+            } else {
+                navigator.clipboard.writeText(text).then(() => {
+                    document.getElementById('email-status').textContent = '✓ Profile summary copied to clipboard — paste it anywhere to share!';
+                    setTimeout(() => document.getElementById('email-status').textContent = '', 4000);
+                });
+            }
+        }
+
+        function emailReport() {
+            const form = document.getElementById('email-form');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function sendEmail() {
+            const email = document.getElementById('user-email').value.trim();
+            if (!email || !email.includes('@')) { document.getElementById('email-status').textContent = 'Please enter a valid email address.'; return; }
+            sendToDiscord(`Email request: ${email}`);
+            fireGA4Event('quiz_email_request', { profile_tag: getProfile().tag });
+            document.getElementById('email-status').textContent = "✓ Received! We'll send your report to " + email + ' shortly.';
+            document.getElementById('email-form').style.display = 'none';
+        }
+
+
+
+    </script>
+</body>
+
+</html>
