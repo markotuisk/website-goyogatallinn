@@ -131,7 +131,7 @@ const seoData = {
     // This part is "AI Finding" bait.
     schema: {
         "@context": "https://schema.org",
-        "@type": "YogaStudio",
+        "@type": ["LocalBusiness", "YogaStudio"],
         "name": "Goyoga Tallinn",
         "alternateName": "Goyoga Tallinn",
         "url": "https://www.goyoga.ee",
@@ -172,8 +172,8 @@ const seoData = {
         "priceRange": "$$",
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "24"
+            "ratingValue": 5.0,
+            "reviewCount": 24
         }
     },
 
