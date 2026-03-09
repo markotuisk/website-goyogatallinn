@@ -356,7 +356,7 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
         soup.head.append(link_tag)
 
     # Inject Google Analytics 4 (GA4) Tracking Snippet
-    ga_id = "G-367719851"
+    ga_id = "G-N0X5B7NG6N"
     if soup.head:
         # Avoid duplicate injections if running multiple times
         existing_ga = soup.head.find('script', attrs={'src': f"https://www.googletagmanager.com/gtag/js?id={ga_id}"})

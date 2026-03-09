@@ -36,13 +36,13 @@
         }
     </style>
 <!-- Google Analytics 4 -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-367719851"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-367719851');
-  </script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-N0X5B7NG6N');
+    </script>
 <link href="https://www.goyoga.ee/en/event.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/uritus.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/tapahtuma.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/event.html" hreflang="x-default" rel="alternate"/></head>
 <body class="text-gray-900 pt-24">
 <!-- Navbar (Aligned with index.html) -->
@@ -106,6 +106,51 @@
             }
 
             const data = event[lang] || event['en'];
+
+            // --- SEO: Update page title and meta description dynamically ---
+            document.title = `${data.title} | Goyoga Tallinn`;
+            let metaDesc = document.querySelector('meta[name="description"]');
+            if (!metaDesc) {
+                metaDesc = document.createElement('meta');
+                metaDesc.setAttribute('name', 'description');
+                document.head.appendChild(metaDesc);
+            }
+            metaDesc.setAttribute('content', `${data.description} ${data.date} — ${data.location}. Goyoga Tallinn.`);
+
+            // --- SEO: Inject Schema.org Event JSON-LD ---
+            const enData = event['en'] || data;
+            const eventSchema = {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": enData.title,
+                "description": enData.description,
+                "startDate": event.expiryDate,
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "url": `https://www.goyoga.ee/event.html?id=${event.id}`,
+                "image": event.headerImage || event.image,
+                "location": {
+                    "@type": "Place",
+                    "name": enData.location || "Goyoga Tallinn Studio",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Tatari 64",
+                        "addressLocality": "Tallinn",
+                        "addressCountry": "EE"
+                    }
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": "Goyoga Tallinn",
+                    "url": "https://www.goyoga.ee"
+                },
+                "inLanguage": lang
+            };
+            const ldScript = document.createElement('script');
+            ldScript.type = 'application/ld+json';
+            ldScript.textContent = JSON.stringify(eventSchema, null, 2);
+            document.head.appendChild(ldScript);
+
             const now = new Date();
             const todayStr = now.toDateString();
 
