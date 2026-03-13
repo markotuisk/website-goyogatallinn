@@ -1,0 +1,10 @@
+
+# --- SEO Language Routing ---
+# If visitor browser language is exactly 'et', route to /et/ 
+/ /et/ 302 Language=et
+
+# If visitor browser language is exactly 'fi', route to /fi/
+/ /fi/ 302 Language=fi
+
+# Fallback: Default to English if no match
+/ /en/ 302
