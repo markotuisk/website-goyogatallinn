@@ -399,7 +399,7 @@ const eventsData = [
         country: { en: 'Italy', et: 'Itaalia', fi: 'Italia' },
         active: true,
         featured: true,
-        expiryDate: '2026-06-20',
+        expiryDate: '2026-08-08',
         image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216', // Typical Tuscan/Lazio landscape representation
         gallery: [
             'https://images.unsplash.com/photo-1549488344-c27773295da9',
@@ -410,7 +410,7 @@ const eventsData = [
         registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Ashtanga Yoga Retreat with Lino Miele',
-            date: 'June 2026 (6 Days)',
+            date: 'August 1–7, 2026',
             location: 'Casa La Martana, Italy',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Join a small, exclusive group to practice with world-renowned Ashtanga teacher Lino Miele at his home shala in the serene Italian countryside.',
@@ -455,7 +455,7 @@ const eventsData = [
         },
         et: {
             title: 'Ashtanga jooga retriit Lino Mielega',
-            date: 'Juuni 2026 (6 päeva)',
+            date: '1.–7. august 2026',
             location: 'Casa La Martana, Itaalia',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Liitu väikese ja eksklusiivse grupiga, et praktiseerida maailmakuulsa Ashtanga õpetaja Lino Mielega tema kodushalas rahulikus Itaalia maapiirkonnas.',
@@ -500,7 +500,7 @@ const eventsData = [
         },
         fi: {
             title: 'Ashtanga-joogaretriitti Lino Mielen kanssa',
-            date: 'Kesäkuu 2026 (6 päivää)',
+            date: '1.–7. elokuuta 2026',
             location: 'Casa La Martana, Italia',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Liity pieneen ja eksklusiiviseen ryhmään harjoittelemaan maailmankuulun Ashtanga-opettajan Lino Mielen kanssa hänen kotishalassaan Italian maaseudulla.',
