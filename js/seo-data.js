@@ -31,6 +31,16 @@ const seoData = {
             "offers.html": "hinnasto.html",
             "rent.html": "tilojen-vuokraus.html",
             "teacher.html": "opettajat.html"
+        },
+        ru: {
+            "index.html": "index.html",
+            "class.html": "zanyatiya.html",
+            "event.html": "sobytie.html",
+            "events.html": "sobytiya.html",
+            "faq.html": "faq.html",
+            "offers.html": "predlozheniya.html",
+            "rent.html": "arenda.html",
+            "teacher.html": "uchitelya.html"
         }
     },
 
@@ -57,6 +67,13 @@ const seoData = {
             ogTitle: "Joogan ja hyvinvoinnin keidas Tallinnassa | goyoga.ee",
             ogDescription: "Löydä aito tila joogalle ja hyvinvoinnille Tallinnan sydämessä. Tunteja kaikille tasoille ja ikäryhmille."
         },
+        ru: {
+            title: "Goyoga Tallinn | Йога и велнес-оазис | Центр Таллина",
+            description: "Дом традиционной йоги и велнес-практик в Таллине. Аштанга, Виньяса, Инь-йога, Пилатес и звуковые ванны в goyoga.ee.",
+            keywords: "Йога Таллин, велнес, Аштанга, Виньяса, Инь йога, звуковые ванны Таллин, церемонии какао, Пилатес Таллин, Цигун, Йога Нидра",
+            ogTitle: "Йога и велнес-оазис в Таллине | goyoga.ee",
+            ogDescription: "Найдите аутентичное пространство для йоги и велнеса в сердце Таллина. Занятия для всех уровней и возрастов."
+        },
         rent: {
             en: {
                 title: "Studio Rental | Light-filled Space in Tallinn Centre | Goyoga Tallinn",
@@ -72,6 +89,11 @@ const seoData = {
                 title: "Studion vuokraus | Valoisa tila Tallinnan keskustassa | Goyoga Tallinn",
                 description: "Vuokraa kaunis joogastudiomme seuraavaa työpajaasi, seminaariasi tai tapahtumaasi varten. Luonnonpuulattiat, laadukkaat mugavused ja rauhallinen ilmapiiri Tallinnan keskustassa | Goyoga Tallinn",
                 keywords: "studion vuokraus Tallinna, työpajatila Tallinna, seminaarihuone Tallinna, joogasalivuokraus, Goyoga Tallinn"
+            },
+            ru: {
+                title: "Аренда студии | Светлое пространство в центре Таллина | Goyoga Tallinn",
+                description: "Арендуйте нашу красивую студию йоги для следующего мастер-класса, семинара или мероприятия. Деревянные полы, высококачественное оборудование и спокойная атмосфера в центре Таллина.",
+                keywords: "аренда студии Таллин, рабочее пространство Таллин, зал для семинара Таллин, аренда зала йоги, Goyoga Tallinn"
             }
         },
         faq: {
@@ -89,6 +111,11 @@ const seoData = {
                 title: "UKK | Usein Kysytyt Kysymykset | Goyoga Tallinna",
                 description: "Löydät vastauksia usein kysyttyihin kysymyksiin Ashtanga-joogasta Goyoga Tallinnassa. Uudet oppilaat, hinnat, etiketti ja muuta.",
                 keywords: "jooga UKK, joogan aloittaminen Tallinna, Ashtanga joogaopas, joogaetiketti"
+            },
+            ru: {
+                title: "ЧАВО | Часто Задаваемые Вопросы | Goyoga Tallinn",
+                description: "Найдите ответы на частые вопросы о практике Аштанга-йоги в Goyoga Tallinn. Новые студенты, цены, этикет и многое другое.",
+                keywords: "йога ЧАВО, начать йогу Таллин, руководство Аштанга йога, этикет йоги, йога для начинающих Таллин"
             }
         },
         offers: {
@@ -107,6 +134,11 @@ const seoData = {
                 description: "Tutustu rajoitetun ajan tarjouksiin, työpajoihin ja eksklusiivisiin kausitarjouksiin osoitteessa goyoga.ee. Perinteistä Ashtanga-joogaa Tallinnan keskustassa.",
                 keywords: "joogatarjoukset Tallinna, kausitarjoukset jooga, työpaja-alennukset, Goyoga Tallinn-tarjous"
             },
+            ru: {
+                title: "Сезонные предложения | Эксклюзивные скидки | Goyoga Tallinn",
+                description: "Откройте для себя предложения с ограниченным сроком действия, мастер-классы и эксклюзивные сезонные скидки на goyoga.ee. Традиционная Аштанга-йога в центре Таллина.",
+                keywords: "предложения йога Таллин, сезонные скидки йога, скидки на мастер-классы, Goyoga Tallinn эксклюзив, Аштанга скидки"
+            },
         },
         teachers: {
             en: {
@@ -123,6 +155,11 @@ const seoData = {
                 title: "{name} | Opettajan matka | Goyoga Tallinna",
                 description: "Tutustu opettajan {name} matkaan, filosofiaan ja asiantuntemukseen Goyoga Tallinnassa. Liity jooga- ja hyvinvointiyhteisöömme.",
                 keywords: "{name}, joogaopettaja Tallinna, hyvinvointiasiantuntija Viro, {role}, Goyoga Tallinn-profiili"
+            },
+            ru: {
+                title: "{name} | Путь учителя | Goyoga Tallinn",
+                description: "Откройте для себя путь, философию и опыт {name} в Goyoga Tallinn. Присоединяйтесь к нашему сообществу йоги и велнеса.",
+                keywords: "{name}, учитель йоги Таллин, велнес-эксперт Эстония, {role}, Goyoga Tallinn профиль"
             }
         }
     },
@@ -218,6 +255,26 @@ const seoData = {
             "Yoga practitioners in lotus position at Goyoga Tallinn Tallinn": "Joogan harrastajat lootusasennossa Goyoga Tallinnassa",
             "Meditation and mindfulness session at our Tallinn studio": "Meditaatio- ja mindfulness-sessio Tallinnan studiollamme",
             "Professional yoga props including mats and blocks for Ashtanga practice": "Ammattitason joogamatot ja tiilet Ashtanga-harjoitusta varten"
+        },
+        ru: {
+            "Goyoga Tallinn": "Студия йоги Goyoga Tallinn",
+            "Student practicing traditional Ashtanga Yoga at Goyoga Tallinn Tallinn studio": "Студент практикует традиционную Аштанга-йогу в студии Goyoga Tallinn в Таллине",
+            "Ashtanga Yoga": "Аштанга йога в Таллине",
+            "Strength": "Силовые тренировки",
+            "60+ Yoga": "Йога для пожилых 60+",
+            "Qigong": "Цигун",
+            "Sound Baths": "Звуковые ванны в Таллине",
+            "Yoga Nidra | Meditatsioon": "Йога Нидра | Медитация",
+            "Meditation": "Медитация в Таллине",
+            "Slow Flow Yoga": "Медленная йога",
+            "Vinyasa Flow": "Виньяса Флоу йога в Таллине",
+            "Hatha Yoga": "Хатха йога",
+            "Cacao Ceremonies": "Церемонии какао в Таллине",
+            "Join Our Team": "Присоединяйтесь к нам",
+            "Spacious and bright yoga shala interior at Narva mnt 7D Tallinn": "Просторный и светлый интерьер зала йоги по адресу Narva mnt 7D, Таллин",
+            "Yoga practitioners in lotus position at Goyoga Tallinn Tallinn": "Практикующие йогу в позе лотоса в Goyoga Tallinn",
+            "Meditation and mindfulness session at our Tallinn studio": "Сеанс медитации и осознанности в нашей студии в Таллине",
+            "Professional yoga props including mats and blocks for Ashtanga practice": "Профессиональные коврики и блоки для практики Аштанги"
         }
     },
 

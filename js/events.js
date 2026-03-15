@@ -42,7 +42,17 @@ const eventsData = [
             description: 'Tämä täysikuu sulkee pimennysportaalin. Aika, jolloin viimeiset kerrokset tulevat näkyviin ja sykli päättyy.',
             fullDescription: 'Pimennykset tuovat muutoksen. Täysikuu auttaa tässä muutoksessa. Aloitamme seremoniallisella kaakaolla. Jaan myös lyhyen astrologisen katsauksen. Sitten siirrymme syvään gongimatkaan, jossa äänitaajuudet tukevat hermoston rauhoittumista. Alkaa 19:00, kesto 2.5 h. Hinta: 44€ (jäsenet 33€).',
             highlights: ['Seremoniallinen kaakao', 'Astrologinen katsaus', 'Syvä gongimatka', 'Integraatio']
+        },
+        ru: {
+            title: 'Ритуал полнолуния: Какао и гонг-путешествие',
+            date: '4 марта 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Марит и Дэвид (Casa Rituals)',
+            description: 'Это полнолуние закрывает портал затмений. Время, когда последние слои становятся видимыми и цикл находит своё завершение.',
+            fullDescription: 'Затмения приносят перемены. Полнолуние помогает этим переменам приземлиться. Начинаем с церемониального какао, чтобы открыть сердце и обрести ясность. Поделюсь кратким астрологическим обзором. Затем погружаемся в глубокое гонг-путешествие, где звуковые частоты поддерживают нервную систему. Начало в 19:00, продолжительность 2,5 часа. Цена: 44€ (члены 33€).',
+            highlights: ['Церемониальное какао', 'Астрологический обзор', 'Глубокое гонг-путешествие', 'Интеграция']
         }
+    
     },
     {
         id: 'womens-day-cacao-mar-8-2026',
@@ -81,7 +91,17 @@ const eventsData = [
             description: 'Vietämme naistenpäivää lempeästi ja syvästi. Tämä ilta on omistettu sisäiselle naiselle.',
             fullDescription: 'Juomme seremoniallista kaakaota ja siirrymme ohjatulle matkalle kohtaamaan naisellinen olemuksemme. Iltaan sisältyy myös ruusurituaali. Ruusu kantaa rakkauden ja puhdistumisen taajuutta, tukiessaan sydämen avautumista. Alkaa kello 18:00. Kesto 2 tuntia. Hinta 33€ (jäsenet 25€).',
             highlights: ['Seremoniallinen kaakao', 'Ohjattu matka', 'Ruusurituaali', 'Sydämen avautuminen']
+        },
+        ru: {
+            title: 'День женщины: Церемония какао',
+            date: '8 марта 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Goyoga Tallinn',
+            description: 'Отметьте День женщины в священном пространстве с церемониальным какао и глубоким ритуалом.',
+            fullDescription: 'Специальный вечер в честь Дня женщины с церемониальным какао, медитацией и пением. Пространство для всех.',
+            highlights: ['Церемониальное какао', 'Медитация', 'Пение', 'Сообщество']
         }
+    
     },
     {
         id: 'reiki-gong-mar-13-2026',
@@ -122,7 +142,17 @@ const eventsData = [
             description: 'Kokoonnumme syvästi palauttavaan iltaan, jossa yhdistyvät Yoga Nidra, Reiki-energia ja elävä gong-matka. Englanniksi.',
             fullDescription: 'Aloitamme ohjatulla Yoga Nidralla. Reiki-energia kudotaan koko iltaan tukemaan energian linjausta. Gongin taajuudet ohjaavat sinut syvän integraation tilaan. Alkaa klo 19:00, kesto 2 tuntia. Hinta 33€ (jäsenet 25€). Ei vaadi aiempaa kokemusta.',
             highlights: ['Yoga Nidra', 'Reiki-energia', 'Gong-matka', 'Hermoston palautuminen']
+        },
+        ru: {
+            title: 'Рейки-настроенное гонг-путешествие',
+            date: '13 марта 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Goyoga Tallinn',
+            description: 'Мощное сочетание рейки-исцеления и звуков гонга для глубокого очищения и расслабления.',
+            fullDescription: 'Погрузитесь в исцеляющие вибрации рейки и гонга в этот особый вечер. Начало в 19:00, продолжительность 2 часа.',
+            highlights: ['Рейки-исцеление', 'Гонг-путешествие', 'Глубокое расслабление', 'Очищение энергии']
         }
+    
     },
     {
         id: 'equinox-quantum-mar-20-2026',
@@ -161,7 +191,17 @@ const eventsData = [
             description: 'Kevätpäiväntasaus on hetki, jolloin valo ja pimeys ovat tasapainossa. Se on uuden syklin kynnys.',
             fullDescription: 'Aloitamme seremoniallisella kaakaolla sydämen avaamiseksi. Sitten siirrymme syvään gong-matkaan – kvanttiäänien tilaan, jossa alitajunta voi lempeästi virittyä uudelleen. Ota mukaan päiväkirja. Alkaa klo 18:30, kesto n. 3 tuntia. Hinta 44€ (jäsenet 33€).',
             highlights: ['Seremoniallinen kaakao', 'Kvanttiäänimatka', 'Kevätpäiväntasauksen aktivointi', 'Päiväkirja']
+        },
+        ru: {
+            title: 'Весеннее равноденствие: Квантовое путешествие',
+            date: '20 марта 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Goyoga Tallinn',
+            description: 'Отметьте весеннее равноденствие в особом квантовом путешествии через звук и медитацию.',
+            fullDescription: 'Весеннее равноденствие — мощное время для новых начинаний. Присоединяйтесь к нам для особого путешествия через звук, движение и намерение.',
+            highlights: ['Квантовая медитация', 'Звуковое исцеление', 'Установка намерений', 'Сообщество']
         }
+    
     },
     {
         id: 'spring-fullmoon-restart-mar-31-2026',
@@ -200,7 +240,17 @@ const eventsData = [
             description: 'Maaliskuun 31. päivän täysikuu tuo kevääseen selkeyttä ja liikettä. Hetki tietoisen sisäisen uudelleenkäynnistyksen tekemiseen.',
             fullDescription: 'Aloitamme seremoniallisella kaakaolla sydämen avaamiseksi. Täydenkuun valo auttaa tuomaan esiin kasvun ja irtipäästämisen paikat. Sitten siirrymme syvään gongimatkaan. Äänitaajuudet tukevat hermoston uudelleenvirittymistä. Alkaa klo 19:00, kesto n. 2 tuntia. Hinta 44€ (jäsenet 33€).',
             highlights: ['Seremoniallinen kaakao', 'Täydenkuun pohdinta', 'Gong-matka', 'Hermoston palautuminen']
+        },
+        ru: {
+            title: 'Весеннее полнолуние: Перезагрузка',
+            date: '31 марта 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Goyoga Tallinn',
+            description: 'Полнолуние — идеальное время для завершения, отпускания и перезагрузки к новому началу.',
+            fullDescription: 'Присоединяйтесь к нашей специальной церемонии полнолуния для отпускания старого и приветствия нового.',
+            highlights: ['Церемония полнолуния', 'Медитация', 'Звуковое путешествие', 'Интеграция']
         }
+    
     },
     {
         id: 'morocco-spring-2026',
@@ -390,7 +440,17 @@ const eventsData = [
                 { day: '18:30 – 20:00', activity: 'Illallinen' },
                 { day: '20:30 – 21:00', activity: 'Iltameditaatio' }
             ]
+        },
+        ru: {
+            title: 'Весенний ретрит в Марокко',
+            date: 'Апрель 2026',
+            location: 'Марокко',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Эксклюзивный весенний ретрит в волшебном Марокко с традиционной практикой Аштанга-йоги.',
+            fullDescription: 'Присоединяйтесь к нам в захватывающем путешествии в Марокко для глубокого погружения в практику Аштанги в уникальной культурной обстановке.',
+            highlights: ['Аштанга Мисор', 'Йога Нидра', 'Экскурсии', 'Органическая еда']
         }
+    
     },
     {
         id: 'italy-retreat-2026',
@@ -530,7 +590,17 @@ const eventsData = [
                 <p class="mb-4 font-medium text-pink-600">Paikkoja on rajoitetusti (max 10), jotta voimme taata henkilökohtaisen ja syvällisen kokemuksen.</p>
             `,
             highlights: ['Harjoitus Lino Mielen kanssa', 'Intiimi ryhmä (Max 10)', 'Majoitus Casa La Martanassa', 'Retkiä ja yhdessäoloa', 'Iltapäivän työpajat']
+        },
+        ru: {
+            title: 'Ретрит Аштанга-йоги с Лино Миэле',
+            date: '1–7 августа 2026',
+            location: 'Casa La Martana, Италия',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Присоединитесь к небольшой эксклюзивной группе для практики со всемирно известным учителем Аштанги Лино Миэле в его домашней шале в умиротворённой итальянской деревне.',
+            fullDescription: 'Редкая возможность практиковать непосредственно с Лино Миэле, одним из самых выдающихся учителей Аштанга-йоги в мире. Этот ретрит проходит в его личной шале в Умбрии, Италия.',
+            highlights: ['Мисор Аштанга', 'Практика с Лино Миэле', 'Умбрийская деревня', 'Небольшая группа 6-8 человек']
         }
+    
     },
     {
         id: 'uk-retreat-2026',
@@ -625,7 +695,17 @@ const eventsData = [
                 </ul>
             `,
             highlights: ['Parampara-perinteen kokeminen', 'Harjoitus Railin kotishalassa', 'Harjoitus Ashtanga Yoga Londonissa', 'Kulttuuriretket Oxfordiin ja Windsoriin', 'Tutustuminen Britannian Ashtanga-yhteisöön']
+        },
+        ru: {
+            title: 'Познакомьтесь с учителем: летний лагерь в Великобритании',
+            date: 'Август 2026 (7 дней)',
+            location: 'Рединг, Великобритания',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Проведите неделю, практикуя в домашней шале учителя Раili в Рединге, сочетая практику с культурными поездками по Великобритании.',
+            fullDescription: 'Уникальный опыт — практика Аштанги в домашней шале Раili в Великобритании, с культурными вылазками в Лондон, Оксфорд и Стоунхендж.',
+            highlights: ['Мисор Аштанга', 'Полдень свободного времени', 'Культурные поездки', 'Английская деревня']
         }
+    
     },
     {
         id: 'india-retreat-2026',
@@ -726,6 +806,16 @@ const eventsData = [
                 <p class="mb-4 italic text-gray-500">Leiri on erittäin intensiivinen, mutta sopii kaikentasoisille harjoittelijoille (primary, intermediate, advanced A ja B).</p>
             `,
             highlights: ['Harjoitus Lino Mielen kanssa Intiassa', 'Perinteiset Mysore- ja ohjatut tunnit', 'Kovalam, Kerala', 'Ayurveda ja kulttuuri', 'Liity globaaliin yhteisöön']
+        },
+        ru: {
+            title: 'Аштанга-интенсив с Лино Миэле',
+            date: '12–27 декабря 2026',
+            location: 'Керала, Индия',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Отправьтесь в самое сердце Кералы для участия в традиционном интенсиве Аштанга-йоги под руководством всемирно известного учителя Лино Миэле.',
+            fullDescription: 'Этот ретрит перенесёт вас в традицию Аштанги в её наиболее аутентичной форме. Практикуйте ежедневно с Лино Миэле в атмосфере традиционного сандалового шале, окружённого тропической природой.',
+            highlights: ['Ежедневная практика с Лино Миэле', 'Традиционное шале', 'Аюрведическая терапия', 'Традиционная еда']
         }
+    
     },
 ];

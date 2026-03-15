@@ -8,7 +8,7 @@ import js2py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 WEBSITE_DIR = BASE_DIR
 OUTPUT_DIR = WEBSITE_DIR
-LANGUAGES = ['en', 'et', 'fi']
+LANGUAGES = ['en', 'et', 'fi', 'ru']
 HTML_FILES = [f for f in os.listdir(WEBSITE_DIR) if f.endswith('.html')]
 
 # We need to extract the raw JavaScript 'translationsData' hash map
@@ -249,7 +249,7 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             teacher_url = f"https://www.goyoga.ee/teacher.html?id={tid}"
             
             # Map language codes to readable names for knowsLanguage
-            lang_name_map = {'en': 'English', 'et': 'Estonian', 'fi': 'Finnish',
+            lang_name_map = {'en': 'English', 'et': 'Estonian', 'fi': 'Finnish', 'ru': 'Russian',
                              'es': 'Spanish', 'id': 'Indonesian'}
             teacher_langs = [lang_name_map.get(l, l) for l in tdata.get('languages', ['en', 'et'])]
 

@@ -26,6 +26,11 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/en/brand.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/en/faq.html</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -62,6 +67,11 @@
    </url>
    <url>
       <loc>https://www.goyoga.ee/et/uritused.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/brand.html</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -106,6 +116,11 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/fi/brand.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/fi/ukk.html</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -117,6 +132,51 @@
    </url>
    <url>
       <loc>https://www.goyoga.ee/fi/hinnasto.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/arenda.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/zanyatiya.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/sobytie.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/sobytiya.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/brand.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/faq.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/uchitelya.html</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/predlozheniya.html</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>

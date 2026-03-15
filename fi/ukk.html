@@ -14,7 +14,7 @@
 <meta content="Answers to all your Ashtanga and Yoga questions." id="og-description" property="og:description"/>
 <meta content="https://images.unsplash.com/photo-1506744038136-46273834b3fb" id="og-image" property="og:image"/>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link href="/css/style.css" rel="stylesheet"/>
 <!-- Favicons -->
@@ -25,6 +25,27 @@
 <script src="/js/data.js"></script>
 <script src="/js/seo-data.js"></script>
 <script src="/js/faq-data.js"></script>
+<!-- Brand Identity Schema — AI-Readiness Layer -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Brand",
+      "@id": "https://www.goyoga.ee/#brand",
+      "name": "GoYoga Tallinn",
+      "alternateName": ["Goyoga Tallinn", "GoYoga", "goyoga.ee"],
+      "url": "https://www.goyoga.ee",
+      "logo": "https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-512x512.png",
+      "slogan": "Yoga & Wellness Sanctuary",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "primaryColor",    "value": "#8A7055" },
+        { "@type": "PropertyValue", "name": "backgroundColor", "value": "#FAF9F6" },
+        { "@type": "PropertyValue", "name": "accentColor",     "value": "#DB2777" },
+        { "@type": "PropertyValue", "name": "headingFont",     "value": "Playfair Display" },
+        { "@type": "PropertyValue", "name": "bodyFont",        "value": "Inter" },
+        { "@type": "PropertyValue", "name": "guidelinesDocument", "value": "https://www.goyoga.ee/brand_identity.md" }
+      ]
+    }
+    </script>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
 <script>
@@ -182,7 +203,7 @@
       }
     }
   ]
-}</script><link href="https://www.goyoga.ee/en/faq.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/korduma-kippuvad-kusimused.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/ukk.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/faq.html" hreflang="x-default" rel="alternate"/></head>
+}</script><link href="https://www.goyoga.ee/en/faq.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/korduma-kippuvad-kusimused.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/ukk.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/ru/faq.html" hreflang="ru" rel="alternate"/><link href="https://www.goyoga.ee/faq.html" hreflang="x-default" rel="alternate"/></head>
 <body class="bg-gray-50 text-gray-800">
 <!-- Navbar (Simplified/Reuse styles) -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm" id="navbar">
@@ -205,6 +226,10 @@
 <div class="language-option" data-lang="en"><span>English</span></div>
 <div class="language-option" data-lang="et"><span>Eesti</span></div>
 <div class="language-option active" data-lang="fi"><span>Suomi</span></div>
+<div class="language-option" data-lang="ru">
+<img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png">
+<span>Русский</span>
+</img></div>
 </div>
 </li>
 </ul>

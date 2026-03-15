@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title id="seo-title">Stuudio rent | Valgusküllane ruum Tallinna kesklinnas | Goyoga Tallinn</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link href="/css/style.css" rel="stylesheet"/>
 <!-- Favicons -->
@@ -17,6 +17,27 @@
 <script src="/js/data.js"></script>
 <script src="/js/rent-data.js"></script>
 <script src="/js/seo-data.js"></script>
+<!-- Brand Identity Schema — AI-Readiness Layer -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Brand",
+      "@id": "https://www.goyoga.ee/#brand",
+      "name": "GoYoga Tallinn",
+      "alternateName": ["Goyoga Tallinn", "GoYoga", "goyoga.ee"],
+      "url": "https://www.goyoga.ee",
+      "logo": "https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-512x512.png",
+      "slogan": "Yoga & Wellness Sanctuary",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "primaryColor",    "value": "#8A7055" },
+        { "@type": "PropertyValue", "name": "backgroundColor", "value": "#FAF9F6" },
+        { "@type": "PropertyValue", "name": "accentColor",     "value": "#DB2777" },
+        { "@type": "PropertyValue", "name": "headingFont",     "value": "Playfair Display" },
+        { "@type": "PropertyValue", "name": "bodyFont",        "value": "Inter" },
+        { "@type": "PropertyValue", "name": "guidelinesDocument", "value": "https://www.goyoga.ee/brand_identity.md" }
+      ]
+    }
+    </script>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
 <script>
@@ -25,7 +46,7 @@
     gtag('js', new Date());
     gtag('config', 'G-N0X5B7NG6N');
   </script>
-<link href="https://www.goyoga.ee/en/rent.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/rendi-ruumid.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/tilojen-vuokraus.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/rent.html" hreflang="x-default" rel="alternate"/></head>
+<link href="https://www.goyoga.ee/en/rent.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/rendi-ruumid.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/tilojen-vuokraus.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/ru/arenda.html" hreflang="ru" rel="alternate"/><link href="https://www.goyoga.ee/rent.html" hreflang="x-default" rel="alternate"/></head>
 <body class="bg-white text-gray-800">
 <!-- Navbar -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm" id="navbar">
@@ -61,6 +82,10 @@
 <img alt="Suomi" class="language-flag" src="https://flagcdn.com/w20/fi.png"/>
 <span>Suomi</span>
 </div>
+<div class="language-option" data-lang="ru">
+<img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png">
+<span>Русский</span>
+</img></div>
 </div>
 </li>
 </ul>
@@ -280,6 +305,10 @@
 <li><a class="text-gray-300 hover:text-white" data-i18n="footer.workshops" href="/et/#events">Töötoad</a></li>
 <li><a class="hover:text-pink-600 transition-colors" data-i18n="footer.faq" href="/et/korduma-kippuvad-kusimused.html">KKK</a></li>
 <li><a class="hover:text-pink-600 transition-colors" data-i18n="footer.rent" href="/et/rendi-ruumid.html">Rendi ruumid</a></li>
+<li><a class="hover:text-pink-400 transition-colors text-gray-400 flex items-center gap-1.5" href="/et/brand.html">
+<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                            Brand Identity
+                        </a></li>
 </ul>
 </div>
 <div>

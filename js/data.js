@@ -338,7 +338,92 @@ const translationsData = {
         "contact.modal.title.walking": "Kävelyaika", "contact.modal.content.walking": "Arvioitu kävelyaika tärkeimmistä maamerkeistä:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Viru Keskus: 4 min</li><li>Foorum: 1 min</li><li>Rotermannin kortteli: 2 min</li><li>Tallinnan Kaubamaja: 5 min</li><li>Coca-Cola Plaza: 2 min</li></ul>",
         "contact.modal.title.gallery": "Rakennuksen galleria",
         "contact.modal.gallery.entrance": "Rakennuksen sisäänkäynti", "contact.modal.gallery.door": "Pääovi", "contact.modal.gallery.hallway": "3. kerroksen käytävä", "contact.modal.gallery.studio": "Studion sisäänkäynti", "contact.modal.gallery.note": "Kuvat näyttävät reitin shalallemme. Etsi Goyoga Tallinn-kylttejä 3. kerroksesta."
+    },
+    ru: {
+        "nav.home": "Главная", "nav.about": "О нас", "nav.classes": "Занятия", "nav.studio": "Студия", "nav.schedule": "Расписание", "nav.pricing": "Цены", "nav.teachers": "Учителя", "nav.events": "События", "nav.community": "Сообщество", "nav.contact": "Контакты", "nav.language": "Язык",
+        "hero.tagline": "Йога и велнес-оазис", "hero.title": "Дом традиционной йоги и велнес-практик в Таллине", "hero.description": "Ежедневные занятия йогой и велнес-мероприятия в центре Таллина. Мы создали аутентичное пространство и сообщество, где различные стили йоги и велнес-практики поддерживают выбор людей.", "hero.view_schedule": "Посмотреть расписание", "hero.events": "События", "hero.discover_more": "Узнать больше", "hero.finder_cta": "Не знаете, с чего начать? Позвольте нам помочь.", "hero.seasonal_offer": "Сезонное предложение!",
+        "about.tagline": "Наш подход", "about.title": "Безопасное убежище в сердце Таллина", "about.description": "Goyoga Tallinn — безопасное убежище в сердце Таллина для людей всех возрастов и предпочтений, чтобы прийти и отключиться, расслабиться и восстановить силы.", "about.subtitle": "Наши предложения", "about.content1": "Наши практики уходят корнями в традицию, но разработаны для современной жизни, обеспечивая путь к физической жизненной силе и душевному спокойствию.", "about.content2": "Ищете ли вы динамичный поток Аштанги или глубокое расслабление звуковой ванны, наше сообщество здесь, чтобы поддержать ваш путь.", "about.benefits.physical.title": "Йога", "about.benefits.physical.description": "Аштанга, Виньяса, Инь, Силовая, Йога 60+, Пилатес, Цигун.", "about.benefits.mental.title": "Велнес", "about.benefits.mental.description": "Медитации, звуковые ванны, церемонии какао, Йога Нидра.",
+        "studio.tagline": "Живое пространство", "studio.title": "Дом для вашей практики", "studio.description1": "Расположено по адресу <span class='font-semibold'>Narva mnt 7D, Таллин</span>, наша шала — это городское убежище для глубокой практики и общения.", "studio.description2": "При естественном свете и заземляющей эстетике мы предоставляем премиальную среду, включая высококачественные коврики, реквизит и уютный уголок с чаем.", "studio.rent_button": "Арендовать наш зал",
+        "schedule.tagline": "Расписание занятий", "schedule.title": "Найдите своё время для практики", "schedule.description": "Наше расписание всегда актуально. Найдите урок и забронируйте место прямо через календарь ниже.",
+        "pricing.tagline": "Варианты цен", "pricing.title": "Инвестируйте в свою практику", "pricing.description": "Мы предлагаем гибкие ценовые варианты в соответствии с вашим расписанием.", "pricing.single.title": "Разовое занятие", "pricing.single.description": "Идеально для пробного посещения.", "pricing.memberships.title": "Абонементы", "pricing.memberships.description": "Лучшая ценность для преданных практикующих.", "pricing.passes.title": "Многоразовые карты", "pricing.passes.description": "Отличная ценность для регулярных студентов.", "pricing.view_options": "Посмотреть варианты", "pricing.most_popular": "Самый популярный", "pricing.view_seasonal_offers": "Сезонные предложения", "pricing.offer.title": "Сезонное предложение", "pricing.offer.subtitle": "Studio Explorer Pass", "pricing.offer.description": "Посетите 3 занятия йогой и велнесом на ваш выбор. Действительно 30 дней с момента покупки.", "pricing.offer.ends_in": "Предложение заканчивается:", "pricing.offer.days": "Дней", "pricing.offer.hours": "Часов", "pricing.offer.minutes": "Минут", "pricing.offer.seconds": "Секунд", "pricing.offer.claim_button": "Получить карту",
+        "teachers.tagline": "Наши учителя", "teachers.title": "Опыт и мудрость", "teachers.description": "Разнообразная команда практикующих, посвящённых вашему пути йоги и велнеса.",
+        "teachers.raili-maripuu.title": "Основатель | Аштанга", "teachers.raili-maripuu.description": "Привносит аутентичную практику Аштанги в Таллин с многолетним опытом.",
+        "teachers.victoria-palusaar.title": "Аштанга | Нутрициологический терапевт", "teachers.victoria-palusaar.description": "Фокусируется на осознанном питании и традиционном методе Аштанги.",
+        "teachers.triin-parro.title": "Сила и холистическое здоровье", "teachers.triin-parro.description": "Специализируется на силовых тренировках и индивидуальных велнес-путешествиях.",
+        "teachers.kaia-karjatse.title": "Йога 60+ | Звуковая терапия", "teachers.kaia-karjatse.description": "Мягкое движение и целебные вибрации для всех этапов жизни.",
+        "teachers.edith-tiitsaar.title": "Меридианная гимнастика; Цигун", "teachers.edith-tiitsaar.description": "Фокусируется на телесной работе через даосскую меридианную систему.",
+        "teachers.marit-tuisk.title": "Медитации | Церемонии какао", "teachers.marit-tuisk.description": "Открывает сердца через священные ритуалы и глубокое присутствие.",
+        "teachers.david-lepp.title": "Звуковые ванны | Йога Нидра", "teachers.david-lepp.description": "Мастер гонга для устранения блоков и восстановления гармонии.",
+        "teachers.dian-jarvenkyla.title": "Виньяса и Хатха йога", "teachers.dian-jarvenkyla.description": "Ведёт к осознанности, силе и телесному сознанию через текучее движение.",
+        "teachers.katlin-epner.title": "Инь йога", "teachers.katlin-epner.description": "Сосредоточена на создании пространства для замедления, дыхания и ясности.",
+        "teachers.keiu-grossberg.title": "Аштанга йога", "teachers.keiu-grossberg.description": "Помогает студентам изучить свои пределы и страхи.",
+        "teachers.join-us.name": "Это можете быть вы", "teachers.join-us.title": "Присоединяйтесь к нашему сообществу", "teachers.join-us.description": "Независимо от того, являетесь ли вы новым учителем, полным идей, или опытным практикующим, ищущим постоянный дом.", "teachers.join-us.cta": "Связаться с нами",
+        "teachers.discover": "Познакомиться", "teachers.teaching_languages": "Языки преподавания",
+        "teachers.biography": "Мой путь", "teachers.philosophy": "Моя философия", "teachers.highlights": "Специализации", "teachers.what_students_say": "Что говорят студенты", "teachers.gallery": "Моменты из практики",
+        "teachers.private_classes_info": "Все наши учителя доступны для индивидуальных занятий и мероприятий.", "teachers.book_private": "Забронировать индивидуальное занятие / мероприятие", "teachers.book_class": "Практиковать со мной",
+        "events.tagline": "Углубите свою практику", "events.title": "Предстоящие события и ретриты", "events.description": "Присоединяйтесь к нам на специальных мастер-классах и иммерсивных ретритах.", "events.event1.title": "Осенний ретрит обновления", "events.event1.description": "4-дневный иммерсивный ретрит в эстонской деревне.", "events.event2.title": "Мастер-класс по инверсиям", "events.event2.description": "Присоединяйтесь, чтобы освоить инверсии.", "events.register_button": "Зарегистрироваться", "events.learn_more_button": "Подробнее", "events.view_all": "Все события и ретриты", "events.guided_by": "Ведёт", "events.member_disclaimer": "Членские цены распространяются на владельцев Аштанга-пасса (59€/мес.), Полного пасса (69€/мес.) и 1-месячного пасса (79€).", "events.status.today": "Сегодня", "events.status.tomorrow": "Завтра", "events.status.passed": "Прошло",
+        "events.modal.title": "Зарегистрироваться на", "events.modal.name_label": "Полное имя", "events.modal.email_label": "Электронная почта", "events.modal.phone_label": "Номер телефона", "events.modal.message_label": "Дополнительная информация / Вопросы", "events.modal.submit": "Отправить регистрацию", "events.modal.success": "Спасибо! Мы свяжемся с вами в ближайшее время.", "events.modal.close": "Закрыть",
+        "community.tagline": "Сообщество", "community.title": "Слова от нашего сообщества", "community.description": "Послушайте, что говорят наши студенты и учителя.", "community.leave_review_button": "Оставить отзыв",
+        "instagram.tagline": "Сообщество", "instagram.title": "Следите за нашим путём", "instagram.description": "Смотрите снимки нашей ежедневной практики. Подписывайтесь на нас в Instagram <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
+        "contact.tagline": "Связаться с нами", "contact.title": "Контакты", "contact.description": "Мы здесь, чтобы помочь.", "contact.form.title": "Отправить нам сообщение", "contact.form.name": "Ваше имя", "contact.form.email": "Электронная почта", "contact.form.message": "Ваше сообщение", "contact.form.send_button": "Отправить сообщение", "contact.info.title": "Информация о студии", "contact.info.location": "Расположение", "contact.info.parking": "Парковка", "contact.info.transport": "Транспорт", "contact.info.directions": "Как добраться", "contact.info.hours": "Часы работы", "contact.info.phone": "Телефон", "contact.info.email": "Электронная почта", "contact.info.call_whatsapp": "Позвонить или WhatsApp",
+        "footer.description": "Дом традиционной йоги и велнес-практик.", "footer.quick_links": "Быстрые ссылки", "footer.resources": "Ресурсы", "footer.blog": "Блог", "footer.workshops": "Мастер-классы", "footer.faq": "ЧАВО", "footer.newsletter": "Рассылка", "footer.newsletter_description": "Подписаться на рассылку.", "footer.email_placeholder": "Ваша почта", "footer.subscribe_button": "Подписаться", "footer.copyright": "© 2025 www.goyoga.ee. Все права защищены.",
+        "footer.rent": "Аренда студии",
+        "footer.location_floor": "3-й этаж",
+        "footer.hours_mon_fri": "Пн-Пт",
+        "footer.hours_sat_sun": "Сб-Вс",
+        "classes.tagline": "НАШИ ПРЕДЛОЖЕНИЯ",
+        "classes.title": "Занятия и практики",
+        "classes.description": "Исследуйте наш разнообразный ассортимент занятий, разработанных для питания вашего тела, ума и духа.",
+        "classes.read_more": "Читать далее",
+        "classes.finder_cta": "Не уверены, какое занятие вам подходит? Пройдите тест «Подбор практики».",
+        "classes.back_to_classes": "Вернуться к занятиям",
+        "classes.what_is_it": "Что это такое?",
+        "classes.who_is_it_for": "Для кого это?",
+        "classes.benefits": "Ключевые преимущества",
+        "classes.what_to_expect": "Чего ожидать",
+        "classes.lineage": "Линия передачи",
+        "classes.social_proof_title": "История Аштанги",
+        "classes.meet_guides": "Познакомьтесь с учителями",
+        "classes.faq": "Часто задаваемые вопросы",
+        "classes.ready_to_start": "Готовы начать?",
+        "classes.book_cta": "Посмотрите расписание и забронируйте следующее занятие сегодня.",
+        "teachers.back_to_teachers": "Вернуться к учителям",
+        "teachers.meet": "Познакомиться",
+        "teachers.contact_info": "Контактная информация",
+        "classes.ashtanga.title": "Аштанга йога",
+        "classes.ashtanga.tagline": "Динамическая движущаяся медитация, развивающая силу и концентрацию.",
+        "classes.strength.title": "Силовая тренировка",
+        "classes.strength.tagline": "Функциональная сила для сбалансированного тела.",
+        "classes.60plus.title": "Йога 60+",
+        "classes.60plus.tagline": "Мягкое движение для жизненной силы и долголетия.",
+        "classes.qigong.title": "Цигун",
+        "classes.qigong.tagline": "Культивирование энергии через мягкий поток.",
+        "classes.soundbath.title": "Звуковые ванны",
+        "classes.soundbath.tagline": "Глубокое расслабление через целебные вибрации.",
+        "classes.yoga_nidra.title": "Йога Нидра",
+        "classes.yoga_nidra.tagline": "Глубокое осознанное расслабление.",
+        "classes.yin.title": "Инь йога",
+        "classes.yin.tagline": "Глубокое расслабление через длительное, осознанное удержание поз.",
+        "classes.vinyasa.title": "Виньяса Флоу",
+        "classes.vinyasa.tagline": "Динамичное движение, синхронизированное с дыханием.",
+        "classes.hatha.title": "Хатха йога",
+        "classes.hatha.tagline": "Базовые позы, сосредоточенные на выравнивании и силе.",
+        "classes.cacao.title": "Церемонии какао",
+        "classes.cacao.tagline": "Ритуалы открытия сердца для глубокой внутренней связи.",
+        "reviews.ago": "назад",
+        "reviews.google": "Отзывы Google",
+        "reviews.facebook": "Отзывы Facebook",
+        "reviews.verified": "Подтверждённый отзыв Google",
+        "reviews.local_guide": "Местный гид",
+        "faq.search_placeholder": "Поиск вопросов...", "faq.no_results": "Вопросы, соответствующие вашему поиску, не найдены.",
+        "contact.info.walking": "Пешком", "contact.info.gallery": "Галерея",
+        "contact.modal.title.parking": "Варианты парковки", "contact.modal.content.parking": "У Narva mnt 7D есть платная парковка (EP56). Поблизости находятся парковочные дома Foorum, Viru Keskus и Rotermann. Цены от 3€/ч в зоне Kesklinn и от 4,80€/ч в зоне Südalinn.",
+        "contact.modal.title.transport": "Общественный транспорт", "contact.modal.content.transport": "Студия отлично доступна на общественном транспорте. Ближайшая остановка — <strong>Hobujaama</strong>, где останавливаются трамваи 1, 2, 3, 4 и многочисленные автобусные линии (1, 5, 8, 40, 48 и др.).",
+        "contact.modal.title.walking": "Время пешком", "contact.modal.content.walking": "Приблизительное время ходьбы от ближайших ориентиров:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Viru Keskus: 4 мин</li><li>Foorum: 1 мин</li><li>Rotermanni kvartal: 2 мин</li><li>Tallinna Kaubamaja: 5 мин</li><li>Coca-Cola Plaza: 2 мин</li></ul>",
+        "contact.modal.title.gallery": "Галерея здания",
+        "contact.modal.gallery.entrance": "Вход в здание", "contact.modal.gallery.door": "Главная дверь", "contact.modal.gallery.hallway": "Коридор 3-го этажа", "contact.modal.gallery.studio": "Вход в студию", "contact.modal.gallery.note": "Фотографии, показывающие путь к нашей шале. Ищите знаки Goyoga Tallinn на 3-м этаже."
     }
+
 };
 
 
@@ -612,7 +697,23 @@ const classesData = {
                 faqs: [
                     { question: "Täytyykö minun olla notkea?", answer: "Ei tarvitse. Notkeus tulee harjoittelun myötä." }
                 ]
+            },
+            ru: {
+                title: "Аштанга йога",
+                tagline: "Динамическая движущаяся медитация, развивающая силу и концентрацию.",
+                description: "Аштанга-йога — это традиционная система йоги, синхронизирующая дыхание с прогрессивной серией поз. Этот процесс производит интенсивное внутреннее тепло и обильный очищающий пот, который детоксифицирует мышцы и органы.",
+                audience: "Идеально для тех, кто ищет дисциплинированную, физически требовательную практику. Подходит для начинающих, готовых к вызову, и опытных практиков.",
+                benefits: [
+                    { title: 'Сила и гибкость', description: 'Строит сильное, гибкое тело через динамичное движение.' },
+                    { title: 'Детоксикация', description: 'Внутреннее тепло очищает мышцы и органы.' },
+                    { title: 'Ментальный фокус', description: 'Метод Тристана обостряет концентрацию.' }
+                ],
+                faqs: [
+                    { question: 'Нужно ли быть гибким?', answer: 'Нет. Гибкость — результат практики, а не предпосылка.' },
+                    { question: 'Подходит ли для начинающих?', answer: 'Да, наши учителя адаптируют практику к вашему уровню.' }
+                ]
             }
+
         }
     },
 
@@ -661,7 +762,22 @@ const classesData = {
                 faqs: [
                     { question: "Käytämmekö painoja?", answer: "Kyllä, käytämme kahvakuulia ja käsipainoja." }
                 ]
+            },
+            ru: {
+                title: "Силовая тренировка",
+                tagline: "Функциональная силовая тренировка для сбалансированного тела.",
+                description: "Наши силовые занятия сосредоточены на наращивании функциональных мышц, улучшении стабильности корпуса и совершенствовании общей механики тела.",
+                audience: "Всем, кто хочет увеличить физическую силу, улучшить осанку или предотвратить травмы.",
+                benefits: [
+                    { title: 'Функциональная сила', description: 'Сила, которая помогает в повседневной жизни.' },
+                    { title: 'Профилактика травм', description: 'Стабилизирует суставы и укрепляет соединительную ткань.' },
+                    { title: 'Стабильность корпуса', description: 'Глубокая работа с мышцами кора.' }
+                ],
+                faqs: [
+                    { question: 'Используем ли мы веса?', answer: 'Да, мы используем гири, гантели и собственный вес.' }
+                ]
             }
+
         }
     },
     "yoga-for-seniors": {
@@ -709,7 +825,22 @@ const classesData = {
                 faqs: [
                     { question: "Onko se turvallista?", answer: "Kyllä, tunti on hyvin lempeä." }
                 ]
+            },
+            ru: {
+                title: "Йога 60+",
+                tagline: "Мягкое движение для жизненной силы и долголетия.",
+                description: "Разработанный специально для людей 60 лет и старше, этот класс фокусируется на мягком движении, подвижности суставов и равновесии.",
+                audience: "Пожилые люди, желающие оставаться активными, улучшить равновесие и наслаждаться поддерживающим сообществом.",
+                benefits: [
+                    { title: 'Подвижность', description: 'Поддерживает суставы смазанными и свободно двигающимися.' },
+                    { title: 'Баланс', description: 'Снижает риск падений путём укрепления стабилизаторов.' },
+                    { title: 'Сообщество', description: 'Общайтесь с единомышленниками.' }
+                ],
+                faqs: [
+                    { question: 'Безопасно ли при травмах?', answer: 'Да, учитель адаптирует все позы.' }
+                ]
             }
+
         }
     },
     "qigong-energy-work": {
@@ -757,7 +888,22 @@ const classesData = {
                 faqs: [
                     { question: "Miten eroaa joogasta?", answer: "Keskittyy enemmän energian virtaukseen ja erityisiin meridiaanilinjoihin." }
                 ]
+            },
+            ru: {
+                title: "Меридианная гимнастика",
+                tagline: "Культивирование энергии через мягкий поток.",
+                description: "Занятие меридианной гимнастикой основано на восточных учениях о меридианах тела — это энергетические каналы в нашем теле, по которым течёт Ци, или жизненная энергия.",
+                audience: "Всем, ищущим снятия стресса, улучшения потока энергии и медитативной практики движения.",
+                benefits: [
+                    { title: 'Поток энергии', description: 'Разблокирует застоявшуюся энергию (Ци).' },
+                    { title: 'Снятие стресса', description: 'Успокаивает нервную систему.' },
+                    { title: 'Осознанность', description: 'Углубляет связь тела и разума.' }
+                ],
+                faqs: [
+                    { question: 'В чём отличие от йоги?', answer: 'Меридианная гимнастика фокусируется на тонком потоке энергии и конкретных меридианных линиях.' }
+                ]
             }
+
         }
     },
     "sound-bath-meditation": {
@@ -805,7 +951,22 @@ const classesData = {
                 faqs: [
                     { question: "Teemmekö asanoita?", answer: "Ei, yleensä makaat mukavasti lattialla." }
                 ]
+            },
+            ru: {
+                title: "Звуковые ванны",
+                tagline: "Глубокое расслабление через целебные вибрации.",
+                description: "Звуковая ванна — медитативный опыт, где участники «купаются» в звуковых волнах. Эти волны производятся различными источниками, включая гонги, поющие чаши, перкуссию и колокольцы.",
+                audience: "Всем, кто ищет глубокого расслабления, снятия стресса или медитативного опыта без физического движения.",
+                benefits: [
+                    { title: 'Глубокое расслабление', description: 'Способствует состоянию глубокого отдыха.' },
+                    { title: 'Снижение стресса', description: 'Снижает уровень кортизола.' },
+                    { title: 'Ментальная ясность', description: 'Помогает очистить разум от шума.' }
+                ],
+                faqs: [
+                    { question: 'Нужно ли делать позы йоги?', answer: 'Нет, вы обычно лежите удобно под одеялами.' }
+                ]
             }
+
         }
     },
     "yoga-nidra": {
