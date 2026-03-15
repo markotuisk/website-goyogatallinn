@@ -997,7 +997,7 @@ function initEvents() {
 }
 
 function renderEvents(container, featuredOnly = false) {
-    const lang = localStorage.getItem('preferredLanguage') || 'en';
+    const lang = currentLanguage || 'en';
     const now = new Date();
     const todayStr = now.toDateString();
 
@@ -1037,12 +1037,12 @@ function renderEvents(container, featuredOnly = false) {
     container.innerHTML = displayEvents.map(event => {
         const data = event[lang] || event['en'];
         const typeLabel = event.type === 'retreat'
-            ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
-            : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
+            ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : lang === 'ru' ? 'Ретрит' : 'Retreat')
+            : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : lang === 'ru' ? 'Событие' : 'Event');
         const categoryLabel = event.category === 'estonia'
-            ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : 'Estonia')
+            ? (lang === 'et' ? 'Eestis' : lang === 'fi' ? 'Virossa' : lang === 'ru' ? 'В Эстонии' : 'Estonia')
             : event.category === 'studio'
-                ? (lang === 'et' ? 'Stuudios' : lang === 'fi' ? 'Studiolla' : 'Studio')
+                ? (lang === 'et' ? 'Stuudios' : lang === 'fi' ? 'Studiolla' : lang === 'ru' ? 'В студии' : 'Studio')
                 : '';
 
         // Calculate Status Tag
