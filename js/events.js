@@ -9,6 +9,7 @@ const eventsData = [
         category: 'studio',
         active: true,
         featured: true,
+        startDate: '2026-03-04',
         expiryDate: '2026-03-05',
         cardImage: '/assets/events/1003-goyoga-tallinn-estonia-marit-tuisk-david-lepp-reiki-infused-gong-rannak-jooga-nidra-full-moon ritual-cacao-gong-journey.webp',
         headerImage: '/assets/events/1004-goyoga-tallinn-estonia-marit-tuisk-david-lepp-reiki-infused-gong-rannak-jooga-nidra-full-moon ritual-cacao-gong-journey.png',
@@ -60,6 +61,7 @@ const eventsData = [
         category: 'studio',
         active: false,
         featured: false,
+        startDate: '2026-03-08',
         expiryDate: '2026-03-09',
         image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
@@ -109,6 +111,7 @@ const eventsData = [
         category: 'studio',
         active: true,
         featured: true,
+        startDate: '2026-03-13',
         expiryDate: '2026-03-14',
         cardImage: '/assets/events/1001-goyoga-tallinn-estonia-marit-tuisk-david-lepp-taiskuu-rituaal-kakao-kong-rannak.webp',
         headerImage: '/assets/events/1002-goyoga-tallinn-estonia-marit-tuisk-david-lepp-reiki-infused-gong-rannak-jooga-nidra-1024w.webp',
@@ -160,6 +163,7 @@ const eventsData = [
         category: 'studio',
         active: true,
         featured: true,
+        startDate: '2026-03-20',
         expiryDate: '2026-03-21',
         image: 'https://images.unsplash.com/photo-1552691021-7043334e0b51?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
@@ -209,6 +213,7 @@ const eventsData = [
         category: 'studio',
         active: true,
         featured: true,
+        startDate: '2026-03-31',
         expiryDate: '2026-04-01',
         image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200',
         gallery: [],
@@ -259,6 +264,7 @@ const eventsData = [
         country: { en: 'Morocco', et: 'Maroko', fi: 'Marokko' },
         active: true,
         featured: true,
+        startDate: '2026-03-14',
         expiryDate: '2026-03-20',
         cardImage: '/assets/retreats/1-LandingPageCard-morocco-2026-goyoga-photo-baberrih-hotel-hospitality-palaces-resorts-essaouira-39-1024w.webp',
         headerImage: '/assets/retreats/2-EventPageHeader-morocco-2026-goyoga-photo-baberrih-hotel-hospitality-palaces-resorts-essaouira-39-1024w.webp',
@@ -459,6 +465,7 @@ const eventsData = [
         country: { en: 'Italy', et: 'Itaalia', fi: 'Italia' },
         active: true,
         featured: true,
+        startDate: '2026-08-01',
         expiryDate: '2026-08-08',
         image: 'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216', // Typical Tuscan/Lazio landscape representation
         gallery: [
@@ -609,6 +616,7 @@ const eventsData = [
         country: { en: 'United Kingdom', et: 'Inglismaa', fi: 'Iso-Britannia' },
         active: true,
         featured: true,
+        startDate: '2026-08-01',
         expiryDate: '2026-08-30',
         image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad', // London/UK vibe
         gallery: [
@@ -714,6 +722,7 @@ const eventsData = [
         country: { en: 'India', et: 'India', fi: 'Intia' },
         active: true,
         featured: true,
+        startDate: '2026-12-12',
         expiryDate: '2027-02-28',
         image: 'https://images.unsplash.com/photo-1596711425164-90fd727a89e9', // Kovalam/Kerala vibe
         gallery: [

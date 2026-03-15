@@ -195,21 +195,34 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             if soup.head:
                 soup.head.append(script_tag)
 
-    # Inject Event JSON-LD schema if building events.html
-    if filename == 'events.html' and events_data:
+    # Inject Event JSON-LD schema if building events.html or its translated equivalents
+    is_events_page = False
+    if filename == 'events.html':
+        is_events_page = True
+    elif seo_data and 'urlRoutes' in seo_data and lang in seo_data['urlRoutes']:
+        # check if this is the translated name of 'events.html'
+        for key, val in seo_data['urlRoutes'][lang].items():
+            if key == 'events.html' and val == filename:
+                is_events_page = True
+
+    if is_events_page and events_data:
         event_schemas = []
         for event in events_data:
             if not isinstance(event, dict) or lang not in event:
                 continue
-            
+
             e_lang = event[lang]
+            image_url = event.get('image', '')
+            if image_url and not image_url.startswith('http'):
+                image_url = f"https://www.goyoga.ee{image_url}"
+
             event_schema = {
                 "@context": "https://schema.org",
                 "@type": "Event",
                 "name": e_lang.get('title', ''),
                 "description": e_lang.get('description', ''),
-                "startDate": event.get('date', ''), # raw date fallback
-                "endDate": event.get('expiryDate', ''),
+                "startDate": event.get('startDate', event.get('date', '')),
+                "endDate": event.get('expiryDate', event.get('startDate', event.get('date', ''))),
                 "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                 "eventStatus": "https://schema.org/EventScheduled",
                 "location": {
@@ -221,11 +234,22 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
                         "addressCountry": "EE"
                     }
                 },
-                "image": [f"https://www.goyoga.ee{event.get('image', '')}"],
+                "image": [image_url],
                 "organizer": {
                     "@type": "Organization",
                     "name": e_lang.get('organizer', 'Goyoga Tallinn'),
                     "url": "https://www.goyoga.ee"
+                },
+                "performer": {
+                    "@type": "Organization",
+                    "name": e_lang.get('organizer', 'Goyoga Tallinn')
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "url": f"https://www.goyoga.ee/{lang}/{filename}",
+                    "price": "0",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock"
                 }
             }
             # Only index active events
