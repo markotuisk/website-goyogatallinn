@@ -43,7 +43,7 @@ function getTranslatedUrl(filename) {
 }
 
 function setLanguage(lang) {
-    if (!['en', 'et', 'fi'].includes(lang)) return;
+    if (!['en', 'et', 'fi', 'ru'].includes(lang)) return;
     localStorage.setItem('preferredLanguage', lang);
 
     const path = window.location.pathname;
@@ -85,8 +85,8 @@ function setLanguage(lang) {
 }
 
 function updateUIDecorators(lang) {
-    const flagMap = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png' };
-    const languageCodeMap = { 'en': 'EN', 'et': 'EE', 'fi': 'FI' };
+    const flagMap = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png', 'ru': 'https://flagcdn.com/w20/ru.png' };
+    const languageCodeMap = { 'en': 'EN', 'et': 'EE', 'fi': 'FI', 'ru': 'RU' };
 
     // Update switchers
     const currentFlag = document.getElementById('current-flag');
@@ -688,7 +688,8 @@ function initTeacherLanguages() {
     const flagUrls = {
         'en': 'https://flagcdn.com/w20/gb.png',
         'et': 'https://flagcdn.com/w20/ee.png',
-        'fi': 'https://flagcdn.com/w20/fi.png'
+        'fi': 'https://flagcdn.com/w20/fi.png',
+        'ru': 'https://flagcdn.com/w20/ru.png'
     };
 
     document.querySelectorAll('.teacher-card').forEach(card => {
