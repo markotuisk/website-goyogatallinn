@@ -922,6 +922,7 @@
             <button class="lang-btn" id="lb-et" onclick="setLang('et')">🇪🇪 Eesti</button>
             <button class="lang-btn active" id="lb-en" onclick="setLang('en')">🇬🇧 English</button>
             <button class="lang-btn" id="lb-fi" onclick="setLang('fi')">🇫🇮 Suomi</button>
+            <button class="lang-btn" id="lb-ru" onclick="setLang('ru')">🇷🇺 Русский</button>
         </div>
         <h1 id="i-h1">Find Your<br /><em>Perfect Practice</em></h1>
         <p id="i-sub">12 questions · 5 minutes · personalised for you.<br />Discover which Goyoga classes, events and
@@ -1142,12 +1143,13 @@
         const LANG = {
             en: { h1: 'Find Your<br/><em>Perfect Practice</em>', sub: '13 questions · 5 minutes · personalised for you.', begin: 'Begin →', t1: 'Physical', t2: 'Mental', t3: 'Spiritual', t4: 'Astrological' },
             et: { h1: 'Leia oma<br/><em>Jooga Praktika</em>', sub: '13 küsimust · 5 minutit · isikustatud just sulle.', begin: 'Alusta →', t1: 'Füüsiline', t2: 'Vaimne', t3: 'Hingeline', t4: 'Astroloogia' },
-            fi: { h1: 'Löydä oma<br/><em>Täydellinen harjoitus</em>', sub: '13 kysymystä · 5 minuuttia · sinulle räätälöity.', begin: 'Aloita →', t1: 'Fyysinen', t2: 'Mielentila', t3: 'Henkinen', t4: 'Astrologinen' }
+            fi: { h1: 'Löydä oma<br/><em>Täydellinen harjoitus</em>', sub: '13 kysymystä · 5 minuuttia · sinulle räätälöity.', begin: 'Aloita →', t1: 'Fyysinen', t2: 'Mielentila', t3: 'Henkinen', t4: 'Astrologinen' },
+            ru: { h1: 'Найдите свою<br/><em>Идеальную практику</em>', sub: '13 вопросов · 5 минут · персонально для вас.', begin: 'Начать →', t1: 'Физическая', t2: 'Ментальная', t3: 'Духовная', t4: 'Астрологическая' }
         };
 
         function setLang(l) {
             currentLang = l;
-            ['en', 'et', 'fi'].forEach(x => document.getElementById('lb-' + x).classList.toggle('active', x === l));
+            ['en', 'et', 'fi', 'ru'].forEach(x => document.getElementById('lb-' + x).classList.toggle('active', x === l));
             const t = LANG[l];
             document.getElementById('i-h1').innerHTML = t.h1;
             document.getElementById('i-sub').textContent = t.sub;
@@ -1160,6 +1162,7 @@
             const bl = (navigator.language || 'en').slice(0, 2).toLowerCase();
             if (bl === 'et') setLang('et');
             else if (bl === 'fi') setLang('fi');
+            else if (bl === 'ru') setLang('ru');
             else setLang('en');
         })();
 
