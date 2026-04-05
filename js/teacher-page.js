@@ -162,6 +162,7 @@ function renderTeacherData(id, lang) {
     const websiteEl = document.getElementById('social-website');
     if (websiteEl && socials.website && socials.website !== '#') {
         websiteEl.href = socials.website;
+        websiteEl.title = socials.website.includes('casarituals') ? 'Casa Rituals Schedule' : 'Visit Website';
         websiteEl.classList.remove('hidden');
     } else if (websiteEl) {
         websiteEl.classList.add('hidden');

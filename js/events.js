@@ -252,7 +252,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1510425463958-dcced28da480',
         teachers: ['david-lepp'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
             title: 'Deeply Restorative Evening: Yoga Nidra & Gong',
             date: 'April 10, 2026',
@@ -304,7 +304,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
         teachers: ['marit-tuisk'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
             title: 'Ritual with Cacao: Clear Intent & Calm Heart',
             date: 'April 12, 2026',
@@ -356,7 +356,7 @@ const eventsData = [
         memberPrice: 33,
         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
         teachers: ['marit-tuisk', 'david-lepp'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
             title: 'Spring Ritual with Cacao and Gong Journey',
             date: 'April 17, 2026',
@@ -408,7 +408,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1549488344-c27773295da9',
         teachers: ['david-lepp'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
             title: 'Reiki Infused Gong Journey & Yoga Nidra',
             date: 'April 19, 2026',
@@ -460,7 +460,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
         teachers: ['marit-tuisk'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
             title: 'Ritual with Cacao: Clear Intent & Calm Heart',
             date: 'April 24, 2026',

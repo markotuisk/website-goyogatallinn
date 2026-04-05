@@ -355,9 +355,13 @@
                                 </div>
 
                                 <div class="pt-8 border-t border-gray-50 flex flex-col gap-4">
-                                    <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="w-full py-4 bg-gray-900 text-white text-center font-bold uppercase tracking-widest rounded-xl hover:bg-pink-600 transition-all shadow-md">
+                                    ${(event.registerLink && event.registerLink.startsWith('http')) ? `
+                                    <a href="${event.registerLink}" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-gray-900 text-white text-center font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-pink-600 transition-all shadow-md flex justify-center items-center">
+                                        <span>${event.registerLink.includes('casarituals') ? 'Casa Rituals Schedule' : translationsData[lang]['events.register_button']}</span>
+                                    </a>` : `
+                                    <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="w-full py-4 bg-gray-900 text-white text-center font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-pink-600 transition-all shadow-md">
                                         <span data-i18n="events.register_button">Register Now</span>
-                                    </button>
+                                    </button>`}
                                     <p class="text-xs text-gray-400 text-center leading-relaxed italic" data-i18n="events.member_disclaimer">
                                         Member discounts apply to active holders of the Ashtanga Pass, Full Pass, or 1-Month Pass.
                                     </p>

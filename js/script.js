@@ -1098,9 +1098,13 @@ function renderEvents(container, featuredOnly = false) {
                     <p class="text-sm text-gray-500 mb-4 italic">${data.organizer}</p>
                     <p class="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed">${data.description}</p>
                     <div class="mt-auto flex gap-3">
-                        <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
+                        ${(event.registerLink && event.registerLink.startsWith('http')) ? `
+                        <a href="${event.registerLink}" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center py-3 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
+                            ${event.registerLink.includes('casarituals') ? 'Casa Rituals Schedule' : translationsData[lang]['events.register_button']}
+                        </a>` : `
+                        <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="flex-1 text-center py-3 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
                             ${translationsData[lang]['events.register_button']}
-                        </button>
+                        </button>`}
                         <a href="${getTranslatedUrl('event.html')}?id=${event.id}" class="flex-1 text-center py-3 border border-gray-200 text-gray-700 text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-gray-50 transition-all">
                             ${translationsData[lang]['events.learn_more_button']}
                         </a>
