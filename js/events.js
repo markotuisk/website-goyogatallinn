@@ -497,6 +497,58 @@ const eventsData = [
             fullDescription: 'На церемонии мы осознанно пьем какао, проходим через управляемое присутствие, простое дыхание. Намерение рождается не из ума, а из того места, где вы присутствуете по-настоящему. Этот ритуал подходит как для обозначения нового начала, так и для мягкой сонастройки в период перемен. Включает медитацию, распитие какао, установку намерения, звуковое пространство (тибетские поющие чаши) и интеграцию.',
             highlights: ['Церемониальное какао', 'Установка намерения', 'Поющие чаши', 'Медитация']
         }
+    },
+    {
+        id: 'open-day-may-2026',
+        type: 'event',
+        category: 'estonia',
+        active: true,
+        featured: true,
+        startDate: '2026-05-02',
+        expiryDate: '2026-05-02',
+        startTime: '09:00',
+        endTime: '17:00',
+        price: 0,
+        memberPrice: 0,
+        image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0',
+        teachers: [],
+        registerLink: 'mailto:events@goyoga.ee',
+        en: {
+            title: 'Goyoga Studio Open Day | Yoga & Wellness',
+            date: 'May 2, 2026',
+            location: 'Goyoga Tallinn Studio',
+            organizer: 'Goyoga Tallinn',
+            description: 'Join us for a wonderful community Saturday in the heart of Tallinn! Come and explore our studio, try out classes, and meet our teachers.',
+            fullDescription: 'Our Open Day is a great opportunity to get to know our studio and community. Throughout the day, we will be hosting taster classes, lectures, rituals, and sharing delicious flavors. You will have the chance to meet our teachers and practitioners, ask questions, and simply enjoy a mindful weekend. \n\nThe Open Day is completely FREE to attend. Official booking for specific taster classes opens on April 6th, but you can pre-register your interest via email right now.',
+            highlights: ['Free Taster Classes', 'Lectures & Rituals', 'Meet the Teachers', 'Community Gathering']
+        },
+        et: {
+            title: 'Goyoga Stuudio Lahtiste Uste Päev | Jooga & Heaolu',
+            date: '2. mai 2026',
+            location: 'Goyoga Tallinn Stuudio',
+            organizer: 'Goyoga Tallinn',
+            description: 'Suurepärane kogukonna laupäev Tallinna kesklinnas. Tule tutvu meie stuudio, õpetajate ja praktikatega.',
+            fullDescription: 'Tule tutvu meie proovitundide, loengute, rituaalide ja maitsetega. Kohal on meie õpetajad ja praktikud, kellega saad vahetult suhelda. See on ideaalne võimalus astuda esimene samm joogamaailma või lihtsalt veeta üks mõnus ja teadlik laupäev sarnaselt mõtlevate inimeste seltsis.\n\nLahtiste uste päev on täiesti TASUTA. Kohtade ametlik broneerimine proovitundidesse avaneb 6. aprillil, samas saad juba praegu oma huvi eelregistreerida.',
+            highlights: ['Tasuta proovitunnid', 'Loengud ja rituaalid', 'Kohtumine õpetajatega', 'Mõnus kogukond']
+        },
+        fi: {
+            title: 'Goyoga-studion Avoimet Ovet | Jooga & Hyvinvointi',
+            date: '2. toukokuuta 2026',
+            location: 'Goyoga Tallinn Studio',
+            organizer: 'Goyoga Tallinn',
+            description: 'Upea yhteisöllinen lauantai Tallinnan keskustassa. Tule tutustumaan studioomme, opettajiimme ja harjoituksiimme.',
+            fullDescription: 'Tule kokeilemaan näytetunteja, kuuntelemaan luentoja, osallistumaan rituaaleihin ja nauttimaan mauista. Opettajamme ja harjoittajamme ovat paikalla vastaamassa kysymyksiin ja vaihtamassa ajatuksia. \n\nAvoimet ovet on täysin ILMAINEN tapahtuma. Virallinen paikkavaraus näytetunneille aukeaa 6. huhtikuuta, mutta voit ennakkoilmoittautua jo nyt.',
+            highlights: ['Ilmaisia näytetunteja', 'Luentoja ja rituaaleja', 'Tapaa opettajat', 'Yhteisöllinen päivä']
+        },
+        ru: {
+            title: 'День открытых дверей Goyoga | Йога и здоровье',
+            date: '2 мая 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Goyoga Tallinn',
+            description: 'Прекрасная общественная суббота в центре Таллина! Приходите познакомиться с нашей студией, попробовать занятия и встретиться с преподавателями.',
+            fullDescription: 'Наш День открытых дверей — это отличная возможность познакомиться с нашей студией и сообществом. В течение дня мы проведем пробные занятия, лекции, ритуалы и предложим вкусные угощения. У вас будет возможность встретиться с нашими учителями и практиками, задать вопросы и просто отлично провести выходные.\n\nДень открытых дверей абсолютно БЕСПЛАТНЫЙ. Официальное бронирование на конкретные пробные занятия открывается 6 апреля, но вы можете предварительно зарегистрироваться по электронной почте уже сейчас.',
+            highlights: ['Бесплатные пробные занятия', 'Лекции и ритуалы', 'Знакомство с преподавателями', 'Собрание сообщества']
+        }
     }
 ];
 
