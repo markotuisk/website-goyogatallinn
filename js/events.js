@@ -234,6 +234,25 @@ const eventsData = [
             location: 'Ковалам, Керала, Индия',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Традиционный интенсив Аштанга-йоги под руководством Лино Миэле в Керале.',
+            fullDescription: 'Поездка в Кералу для участия в традиционном интенсиве по Аштанга-йоге с всемирно известным учителем Лино Миэле. Цена: TBD.',
+            highlights: ['Практика с Лино Миэле', 'Опыт в Керале']
+        }
+    },
+    {
+        id: 'casa-rituals-nidra-10-apr-2026',
+        type: 'event',
+        category: 'estonia',
+        active: true,
+        featured: false,
+        startDate: '2026-04-10',
+        expiryDate: '2026-04-10',
+        startTime: '19:00',
+        endTime: '21:00',
+        price: 30,
+        memberPrice: 25,
+        image: 'https://images.unsplash.com/photo-1510425463958-dcced28da480',
+        teachers: ['david-lepp'],
+        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
             title: 'Yoga Nidra with Gong Journey and Reiki Energy',
             date: 'April 10, 2026',
@@ -363,36 +382,116 @@ const eventsData = [
             date: 'April 12, 2026',
             location: 'Goyoga Tallinn Studio',
             organizer: 'Casa Rituals & Marit Tuisk',
-            description: 'The ceremonial cacao ritual is a time to slow down and return to your center. We create a space where the body can relax and the heart can open.',
-            fullDescription: 'During the ceremony, we drink cacao consciously, moving through guided presence, simple breathing, and quiet tuning. The intention does not arise from the mind, but from a place of true presence. This ritual is for those who seek inner clarity and stability. Includes guided meditation, cacao drinking, intention setting, sound space (Tibetan singing bowls), and group sharing.',
-            highlights: ['Ceremonial Cacao', 'Intention Setting', 'Tibetan Singing Bowls', 'Guided Meditation']
+            description: 'The ceremonial cacao ritual is a time to slow down and return to your center. A short astrological insight into spring opens the supporting energies.',
+            fullDescription: `
+                <p class="mb-4">We begin the evening with a short astrological insight into spring, helping you understand the energies currently in motion and what this period activates within you.</p>
+                <p class="mb-4">Next, we open our hearts with ceremonial cacao to bring clarity to what this period has stirred in you. I will share another short astrological overview to help understand the larger cycle we are completing and where the energy is moving next.</p>
+                <p class="mb-4">Afterward, we transition into a deep gong journey. The sound frequencies support the calming of the nervous system and help integrate the experience in both body and subconscious. This is a space where transformation can take root.</p>
+                <p class="mb-6 font-medium">This evening is for closure, integration, and consciously stepping into a new phase. Everything you need is already here. Just show up and allow the process to unfold fully.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> The Ritual Flow</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Space-opening meditation</li>
+                    <li>Cacao ceremony and conscious drinking</li>
+                    <li>Intention setting</li>
+                    <li>Sound space to hold your intention (Tibetan singing bowls)</li>
+                    <li>Space-closing meditation</li>
+                    <li>Group sharing and integration</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Marit Tuisk</h3>
+                <p class="mb-4">Marit Tuisk is a conscious leadership mentor, ceremony creator, and co-founder of Casa Rituals. She is a certified ceremonialist, quantum dowsing practitioner, and healer who has lived and worked in the United States for the past 30 years.</p>
+                <p class="mb-4">In recent years, she has dedicated herself to energetic and conscious healing, supporting people on their inner journeys. Previously, she was the founder of a sustainable fashion brand and spent many years in the corporate sector, which built her strong understanding of structure, leadership, and patterns of human behavior.</p>
+                <p class="mb-4">Her work weaves together practical life experience and deep energetic space-holding, creating a clear and supportive environment that helps people find inner balance, clarity, and move more consciously through their life and leadership.</p>
+            `,
+            highlights: ['Astrological Insights', 'Ceremonial Cacao', 'Gong Journey & Sound Bowls', 'Guided Meditation']
         },
         et: {
             title: 'Rituaal kakaoga: selge kavatsus ja rahulik süda',
             date: '12. aprill 2026',
             location: 'Goyoga Tallinn Stuudio',
             organizer: 'Casa Rituals & Marit Tuisk',
-            description: 'Tseremoniaalse kakao rituaal on aeg maha võtta ja tulla tagasi enda keskmesse. Me loome ruumi, kus keha saab rahuneda ja süda avaneda.',
-            fullDescription: 'Tseremoonial joome teadlikult kakaod, liigume läbi juhendatud kohalolu, lihtsa hingamise ja vaikse häälestuse. Kavatsus ei sünni mõistusest, vaid sellest kohast, kus oled päriselt kohal ja kuulad, mis tahab edasi liikuda. Rituaal sobib nii uue alguse märgistamiseks kui ka pehmeks taashäälestuseks keset muutust. Rituaali kulg: ruumi avamise meditatsioon, kakaotseremoonia, kavatsuse seadmine, heliruum (Tiibeti metallhelikausid), ruumi sulgemine ja integratsioon.',
-            highlights: ['Tseremoniaalne kakao', 'Kavatsuse seadmine', 'Tiibeti helikausid', 'Juhendatud meditatsioon']
+            description: 'Tseremoniaalse kakao rituaal on aeg maha võtta ja tulla tagasi enda keskmesse. Lühike astroloogiline sissevaade kevadesse avab toetavad energiad.',
+            fullDescription: `
+                <p class="mb-4">Alustame õhtut lühikese astroloogilise sissevaatega kevadesse, et mõista, millised energiad on hetkel liikumises ja mida see periood sinus aktiveerib.</p>
+                <p class="mb-4">Seejärel alustame tseremoniaalse kakaoga, et avada süda ja tuua selgus sellesse, mida see periood sinus liigutas. Jagan ka lühikest astroloogilist ülevaadet – et mõista, millise suurema tsükli me nüüd lõpetame ja kuhu energia edasi liigub.</p>
+                <p class="mb-4">Seejärel liigume sügavasse gongirännakusse. Helisagedused toetavad närvisüsteemi rahunemist ja aitavad integreerida kogetu nii kehas kui alateadvuses. See on ruum, kus muutus saab kinnistuda.</p>
+                <p class="mb-6 font-medium">See õhtu on sulgemiseks, integreerimiseks ja teadlikuks uue faasi alustamiseks. Kõik vajalik on kohapeal olemas. Sina tule kohale ja luba protsessil lõpuni liikuda.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Rituaali Kulg</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Ruumi avamise meditatsioon</li>
+                    <li>Kakaotseremoonia ja teadlik kakao joomine</li>
+                    <li>Kavatsuse seadmine</li>
+                    <li>Heliruum kavatsuse hoidmiseks (Tiibeti metallhelikausid)</li>
+                    <li>Ruumi sulgemise meditatsioon</li>
+                    <li>Grupi jagamine ja integratsioon</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Marit Tuisk</h3>
+                <p class="mb-4">Marit Tuisk on teadliku juhtimise mentor, tseremoniate looja ja Casa Ritualsi kaasasutaja. Ta on sertifitseeritud tseremonialist, quantum dowsingu praktik ja tervendaja, kes on viimased 30 aastat elanud ja töötanud Ameerika Ühendriikides.</p>
+                <p class="mb-4">Viimastel aastatel on ta pühendunud energeetilisele ja teadlikule tervenemisele ning inimeste toetamisele nende sisemisel teekonnal. Varasemalt tegutses ta jätkusuutliku moebrändi loojana ning töötas pikalt corporate-sektoris, kus kujunes tema tugev arusaam struktuurist, juhtimisest ja inimkäitumise mustritest.</p>
+                <p class="mb-4">Tema töös põimuvad praktiline elukogemus ja sügav energeetiline ruumihoidmine, luues selge ja toetava välja, mis aitab inimestel leida sisemist tasakaalu, selgust ja liikuda teadlikumalt oma elus ja juhtimises.</p>
+            `,
+            highlights: ['Astroloogiline sissevaade', 'Tseremoniaalne kakao', 'Gongirännak ja helikausid', 'Juhendatud meditatsioon']
         },
         fi: {
             title: 'Kaakaorituaali: Selkeä aikomus ja rauhallinen sydän',
             date: '12. huhtikuuta 2026',
             location: 'Goyoga Tallinn Studio',
             organizer: 'Casa Rituals & Marit Tuisk',
-            description: 'Seremoniallisen kaakaon rituaali on aika hidastaa ja palata omaan keskukseesi. Luomme tilan, jossa keho voi rauhoittua ja sydän avautua.',
-            fullDescription: 'Seremonian aikana juomme tietoisesti kaakaota, liikumme ohjatun läsnäolon, yksinkertaisen hengityksen ja hiljaisen virittäytymisen kautta. Aikomus ei synny mielestä, vaan sieltä, missä olet todella läsnä. Tämä rituaali sopii uuden alun merkitsemiseen tai pehmeään uudelleen virittäytymiseen muutoksen keskellä. Sisältää ohjatun meditaation, kaakaon juonnin, aikomuksen asettamisen, äänitilan (Tiibetin äänimaljat) ja ryhmän jakamisen.',
-            highlights: ['Seremoniallinen kaakao', 'Aikomuksen asettaminen', 'Äänimaljat', 'Ohjattu meditaatio']
+            description: 'Seremoniallisen kaakaon rituaali on aika hidastaa ja palata omaan keskukseesi. Lyhyt astrologinen katsaus kevääseen avaa tukevat energiat.',
+            fullDescription: `
+                <p class="mb-4">Aloitamme illan lyhyellä astrologisella katsauksella kevääseen ymmärtääksemme, mitä energioita on tällä hetkellä liikkeellä ja mitä tämä ajanjakso aktivoi sinussa.</p>
+                <p class="mb-4">Tämän jälkeen avaamme sydämet seremoniallisella kaakaolla tuodaksemme selkeyttä siihen, mitä tämä ajanjakso on nostanut pintaan. Jaan myös toisen lyhyen astrologisen katsauksen ymmärtääksemme suuremman syklin, jota olemme parhaillaan lopettamassa, ja minne energia siirtyy seuraavaksi.</p>
+                <p class="mb-4">Sitten siirrymme syvään gongimatkaan. Äänitaajuudet tukevat hermoston rauhoittumista ja auttavat integroimaan kokemuksen sekä kehossa että alitajunnassa. Tämä on tila, jossa muutos voi juurtua.</p>
+                <p class="mb-6 font-medium">Tämä ilta on tarkoitettu sulkemiselle, integraatiolle ja uuden vaiheen tietoiselle aloittamiselle. Kaikki tarvittava on paikan päällä. Tule vain paikalle ja anna prosessin edetä luonnollisesti.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Rituaalin Kulku</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Tilan avaava meditaatio</li>
+                    <li>Kaakaoseremonia ja tietoinen juominen</li>
+                    <li>Aikomuksen asettaminen</li>
+                    <li>Äänitila aikomuksen tukemiseksi (Tiibetin äänimaljat)</li>
+                    <li>Tilan sulkeva meditaatio</li>
+                    <li>Ryhmän jakaminen ja integraatio</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Marit Tuisk</h3>
+                <p class="mb-4">Marit Tuisk on tietoisen johtamisen mentori, seremonioiden luoja ja Casa Ritualsin perustajajäsen. Hän on lisensoitu seremonialisti, kvantti-dowsing-harjoittaja ja parantaja, joka on asunut ja työskennellyt Yhdysvalloissa viimeiset 30 vuotta.</p>
+                <p class="mb-4">Viime vuosina hän on omistautunut energeettiselle ja tietoiselle parantamiselle ja auttanut ihmisiä heidän sisäisillä matkoillaan. Aikaisemmin hän loi kestävän muotibrändin ja työskenteli pitkään yritysmaailmassa, mikä loi vahvan ymmärryksen rakenteista, johtajuudesta ja ihmisen käyttäytymismalleista.</p>
+                <p class="mb-4">Hänen työssään yhdistyvät käytännön elämänkokemus ja syvä energeettinen tilan pito, mikä luo selkeän ja tukevan kentän, joka auttaa ihmisiä löytämään sisäisen tasapainon, selkeyden ja siirtymään tietoisemmin elämässään ja johtamisessaan.</p>
+            `,
+            highlights: ['Astrologiset oivallukset', 'Seremoniallinen kaakao', 'Gongimatka ja äänimaljat', 'Ohjattu meditaatio']
         },
         ru: {
             title: 'Ритуал с какао: Ясное намерение и спокойное сердце',
             date: '12 апреля 2026',
             location: 'Студия Goyoga Tallinn',
             organizer: 'Casa Rituals & Marit Tuisk',
-            description: 'Ритуал церемониального какао — это время замедлиться и вернуться к своему центру. Мы создаем пространство, где тело может расслабиться.',
-            fullDescription: 'На церемонии мы осознанно пьем какао, проходим через управляемое присутствие, простое дыхание. Намерение рождается не из ума, а из того места, где вы присутствуете по-настоящему. Этот ритуал подходит как для обозначения нового начала, так и для мягкой сонастройки в период перемен. Включает медитацию, распитие какао, установку намерения, звуковое пространство (тибетские поющие чаши) и интеграцию.',
-            highlights: ['Церемониальное какао', 'Установка намерения', 'Поющие чаши', 'Медитация']
+            description: 'Ритуал церемониального какао — это время замедлиться и вернуться к своему центру. Краткий астрологический обзор открывает поддерживающие энергии.',
+            fullDescription: `
+                <p class="mb-4">Мы начинаем вечер с краткого астрологического обзора весны, чтобы понять, какие энергии сейчас находятся в движении и что этот период активирует в вас.</p>
+                <p class="mb-4">Затем мы начинаем с церемониального какао, чтобы открыть сердце и внести ясность в то, что этот период пробудил в вас. Я также поделюсь кратким астрологическим обзором, чтобы понять, какой большой цикл мы сейчас завершаем и куда движется энергия дальше.</p>
+                <p class="mb-4">После этого мы переходим к глубокому путешествию с гонгом. Звуковые частоты способствуют успокоению нервной системы и помогают интегрировать пережитое как в теле, так и в подсознании. Это пространство, где изменения могут закрепиться.</p>
+                <p class="mb-6 font-medium">Этот вечер предназначен для завершения, интеграции и осознанного начала нового этапа. Все необходимое уже есть на месте. Вам нужно только прийти и позволить процессу завершиться.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Ход Ритуала</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Медитация на открытие пространства</li>
+                    <li>Церемония какао и осознанное распитие</li>
+                    <li>Установка намерения</li>
+                    <li>Звуковое пространство для поддержания намерения (Тибетские поющие чаши)</li>
+                    <li>Медитация на закрытие пространства</li>
+                    <li>Обмен опытом в группе и интеграция</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Марит Туйск</h3>
+                <p class="mb-4">Марит Туйск — ментор по осознанному лидерству, создатель церемоний и соучредитель Casa Rituals. Она является сертифицированным специалистом по церемониям, практиком квантовой биолокации и целителем, жившим и работавшим в Соединенных Штатах последние 30 лет.</p>
+                <p class="mb-4">В последние годы она посвятила себя энергетическому и осознанному исцелению, поддерживая людей на их внутреннем пути. Ранее она основала бренд устойчивой моды и долгое время работала в корпоративном секторе, где у нее сформировалось глубокое понимание структуры, лидерства и моделей человеческого поведения.</p>
+                <p class="mb-4">В ее работе переплетаются практический жизненный опыт и глубокое удержание энергетического пространства, создавая ясное и поддерживающее поле, которое помогает людям обрести внутренний баланс, ясность и более осознанно управлять своей жизнью.</p>
+            `,
+            highlights: ['Астрологический обзор', 'Церемониальное какао', 'Путешествие с гонгом и чаши', 'Медитация']
         }
     },
     {
