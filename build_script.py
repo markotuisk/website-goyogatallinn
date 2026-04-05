@@ -501,6 +501,10 @@ for lang in LANGUAGES:
         if 'deepseek_html_' in filename:
             continue
             
+        # Ignore base raw templates that require query parameters (avoids Soft 404s)
+        if filename in ['event.html', 'class.html', 'teacher.html', 'post.html', 'article.html']:
+            continue
+            
         translated_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get(filename, filename)
         url = f"https://www.goyoga.ee/{lang}/" if translated_slug == 'index.html' else f"https://www.goyoga.ee/{lang}/{translated_slug}"
         priority = "1.0" if translated_slug == 'index.html' else "0.8"
@@ -508,6 +512,17 @@ for lang in LANGUAGES:
       <loc>{url}</loc>
       <changefreq>weekly</changefreq>
       <priority>{priority}</priority>
+   </url>''')
+
+    # dynamically map event.html pages
+    translated_event_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get('event.html', 'event.html')
+    for ev in events_data_list:
+        if ev.get('active', True):
+            ev_url = f"https://www.goyoga.ee/{lang}/{translated_event_slug}?id={ev['id']}"
+            sitemap_urls.append(f'''   <url>
+      <loc>{ev_url}</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
    </url>''')
 
 sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>

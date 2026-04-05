@@ -108,6 +108,11 @@
             const event = eventsData.find(e => e.id === eventId);
 
             if (!event) {
+                const metaRobots = document.createElement('meta');
+                metaRobots.name = "robots";
+                metaRobots.content = "noindex, nofollow";
+                document.head.appendChild(metaRobots);
+                
                 container.innerHTML = `
                     <div class="container-custom py-24 text-center">
                         <h1 class="text-4xl mb-4">Event Not Found</h1>
