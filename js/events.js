@@ -810,7 +810,7 @@ const eventsData = [
         endTime: '21:00',
         price: 30,
         memberPrice: 25,
-        image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
+        image: 'https://cdn.prod.website-files.com/61a921351681fe719a5e20c4/6542ba511258c4ac8c984215_MB16veeb.jpg',
         teachers: ['marit-tuisk'],
         registerLink: 'mailto:events@goyoga.ee',
         en: {
