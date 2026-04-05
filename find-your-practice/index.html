@@ -1505,11 +1505,54 @@
 
         function sendEmail() {
             const email = document.getElementById('user-email').value.trim();
-            if (!email || !email.includes('@')) { document.getElementById('email-status').textContent = 'Please enter a valid email address.'; return; }
+            if (!email || !email.includes('@')) { document.getElementById('email-status').textContent = l('emailReqValid'); return; }
             sendToDiscord(`Email request: ${email}`);
             fireGA4Event('quiz_email_request', { profile_tag: getProfile().tag });
-            document.getElementById('email-status').textContent = "✓ Received! We'll send your report to " + email + ' shortly.';
+            document.getElementById('email-status').textContent = l('emailReceived').replace('{email}', email);
             document.getElementById('email-form').style.display = 'none';
+        }
+
+        // ════════════════════════════════════════════
+        // FEEDBACK HANDLING
+        // ════════════════════════════════════════════
+        function rateStar(val) {
+            starRating = val;
+            const stars = document.querySelectorAll('#stars .star');
+            stars.forEach((s, idx) => {
+                if (idx < val) s.classList.add('active');
+                else s.classList.remove('active');
+            });
+        }
+
+        function sendFeedback() {
+            const text = document.getElementById('feedback-text').value.trim();
+            if (starRating === 0 && !text) {
+                document.getElementById('feedback-status').textContent = l('fbbGiven');
+                return;
+            }
+
+            const profile = getProfile();
+            const payload = {
+                embeds: [{
+                    title: `🗣️ New Quiz Feedback — ${profile.tag.en || profile.tag}`,
+                    color: 0x4a90e2,
+                    fields: [
+                        { name: '👤 Name', value: userName || 'Anonymous', inline: true },
+                        { name: '⭐ Rating', value: starRating > 0 ? '★'.repeat(starRating) : 'None', inline: true },
+                        { name: '🌐 Language', value: currentLang.toUpperCase(), inline: true },
+                        { name: '💬 Comments', value: text || '*No additional comments*', inline: false }
+                    ],
+                    footer: { text: 'Goyoga Practice Finder Quiz' },
+                    timestamp: new Date().toISOString()
+                }]
+            };
+
+            fetch(DISCORD_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(() => { });
+            
+            fireGA4Event('quiz_feedback', { rating: starRating, has_comments: text.length > 0 });
+            
+            document.getElementById('feedback-status').textContent = l('fbbThanks');
+            document.getElementById('btn-feedback').style.display = 'none';
         }
 
 
