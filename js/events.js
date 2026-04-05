@@ -250,7 +250,7 @@ const eventsData = [
         endTime: '21:00',
         price: 30,
         memberPrice: 25,
-        image: 'https://images.unsplash.com/photo-1510425463958-dcced28da480',
+        image: 'https://fienta.com/cf/img/?width=1070&dpr=1&format=webp&gcs=true&file=/org/37107/uMxWwheTOuGlPAB.png',
         teachers: ['david-lepp'],
         registerLink: 'mailto:events@goyoga.ee',
         en: {
