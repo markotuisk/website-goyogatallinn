@@ -183,7 +183,7 @@ const eventsData = [
         endTime: '11:00',
         price: 0,
         memberPrice: 0,
-        image: 'https://images.unsplash.com/photo-1596711425164-90fd727a89e9',
+        image: 'https://www.linomiele.com/images/kovalam6b.jpg',
         gallery: [
             'https://images.unsplash.com/photo-1602216056096-3b40cc0f5310',
             'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
