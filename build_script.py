@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 from bs4 import BeautifulSoup
 import js2py
 
@@ -10,6 +11,7 @@ WEBSITE_DIR = BASE_DIR
 OUTPUT_DIR = WEBSITE_DIR
 LANGUAGES = ['en', 'et', 'fi', 'ru']
 HTML_FILES = [f for f in os.listdir(WEBSITE_DIR) if f.endswith('.html')]
+CACHE_BUSTER = int(time.time())
 
 # We need to extract the raw JavaScript 'translationsData' hash map
 data_js_path = os.path.join(WEBSITE_DIR, 'js', 'data.js')
@@ -137,7 +139,12 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
     for tag in soup.find_all(['link', 'script', 'img', 'video', 'source']):
         for attr in ['src', 'href']:
             if tag.has_attr(attr) and tag[attr].startswith(('css/', 'js/', 'assets/')):
-                tag[attr] = '/' + tag[attr]
+                base_path = '/' + tag[attr]
+                if base_path.endswith(('.css', '.js')):
+                    tag[attr] = f"{base_path}?v={CACHE_BUSTER}"
+                else:
+                    tag[attr] = base_path
+
 
     # Ensure local navigation links retain the correct language context and localized filenames
     for tag in soup.find_all('a'):
