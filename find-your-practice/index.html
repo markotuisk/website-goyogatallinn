@@ -1074,6 +1074,24 @@
         let currentLang = 'en';
         let starRating = 0;
 
+        // GA4 Telemetry Helpers
+        function getGA4ClientId() {
+            const match = document.cookie.match(/_ga=([^;]+)/);
+            if (match) {
+                const parts = match[1].split('.');
+                if (parts.length >= 4) {
+                    return parts[2] + '.' + parts[3];
+                }
+            }
+            return 'unknown';
+        }
+
+        function fireGA4Event(eventName, eventParams) {
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', eventName, eventParams);
+            }
+        }
+
         function l(key) { return UI_LANG[currentLang] && UI_LANG[currentLang][key] || UI_LANG['en'][key] || key; }
         
         function setLang(langCode) {

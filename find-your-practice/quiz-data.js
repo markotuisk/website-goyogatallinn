@@ -111,7 +111,8 @@ const UI_LANG = {
         emailReqValid: 'Palun sisesta korrektne e-posti aadress.',
         emailSendForm: 'Saada raport →',
         fbbGiven: 'Palun lisa esmalt hinnang või kommentaar.',
-        fbbThanks: '✓ Aitäh tagasiside eest!'
+        fbbThanks: '✓ Aitäh tagasiside eest!',
+        rFor: "{1} jaoks"
     },
     fi: {
         navLabel: 'Löydä harjoituksesi', navBack: '← Takaisin', loading: 'Analysoidaan vastauksia...',
@@ -157,7 +158,8 @@ const UI_LANG = {
         emailReqValid: 'Anna voimassa oleva sähköpostiosoite.',
         emailSendForm: 'Lähetä raportti →',
         fbbGiven: 'Anna ensin arvosana tai kommentti.',
-        fbbThanks: '✓ Kiitos palautteestasi!'
+        fbbThanks: '✓ Kiitos palautteestasi!',
+        rFor: "Käyttäjälle {1}"
     },
     ru: {
         navLabel: 'Найдите свою практику',
@@ -225,7 +227,8 @@ const UI_LANG = {
         emailReqValid: 'Пожалуйста, введите корректный email.',
         emailSendForm: 'Отправить отчет →',
         fbbGiven: 'Пожалуйста, оцените или оставьте комментарий.',
-        fbbThanks: '✓ Спасибо за ваш отзыв!'
+        fbbThanks: '✓ Спасибо за ваш отзыв!',
+        rFor: "Для {1}"
     }
 };
 
