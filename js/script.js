@@ -1083,9 +1083,16 @@ function renderEvents(container, featuredOnly = false) {
                     </button>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <div class="flex items-center text-sm text-pink-500 mb-2 font-semibold">
-                        <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
-                        <span>${data.date}</span>
+                    <div class="flex justify-between items-center text-pink-500 mb-2 font-semibold">
+                        <div class="flex items-center text-sm">
+                            <i data-lucide="calendar" class="h-4 w-4 mr-2"></i>
+                            <span>${data.date}</span>
+                        </div>
+                        ${(event.category === 'estonia' || event.category === 'studio') && event.startTime && event.endTime ? `
+                        <div class="flex items-center text-gray-500 text-xs font-mono bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                            <i data-lucide="clock" class="h-3 w-3 mr-1"></i>
+                            <span>${event.startTime} - ${event.endTime}</span>
+                        </div>` : ''}
                     </div>
                     <h3 class="text-xl font-medium mb-2 group-hover:text-pink-600 transition-colors line-clamp-1">${data.title}</h3>
                     <p class="text-sm text-gray-500 mb-4 italic">${data.organizer}</p>

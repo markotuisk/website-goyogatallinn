@@ -321,6 +321,11 @@
                                         <i data-lucide="calendar" class="h-5 w-5 text-pink-400"></i>
                                         <span>${data.date}</span>
                                     </div>
+                                    ${(event.category === 'estonia' || event.category === 'studio') && event.startTime && event.endTime ? `
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="clock" class="h-5 w-5 text-pink-400"></i>
+                                        <span>${event.startTime} - ${event.endTime}</span>
+                                    </div>` : ''}
                                     <div class="flex items-center gap-2">
                                         <i data-lucide="map-pin" class="h-5 w-5 text-pink-400"></i>
                                         <span>${data.location}</span>
