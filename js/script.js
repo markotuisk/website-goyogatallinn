@@ -1023,6 +1023,9 @@ function renderEvents(container, featuredOnly = false) {
         return event.active && !isHidden && isFeaturedMatch;
     });
 
+    // Sort active events chronologically by start date
+    activeEvents.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
     let displayEvents = activeEvents;
 
     // Show 3 events and 3 retreats if on homepage
