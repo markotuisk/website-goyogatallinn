@@ -363,6 +363,94 @@ const eventsData = [
         }
     },
     {
+        id: 'ashtanga-beginners-workshop-11-apr-2026',
+        type: 'event',
+        category: 'estonia',
+        active: true,
+        featured: false,
+        startDate: '2026-04-11',
+        expiryDate: '2026-04-11',
+        startTime: '14:00',
+        endTime: '16:30',
+        price: 25,
+        memberPrice: 25,
+        image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0',
+        teachers: ['raili-maripuu'],
+        registerLink: 'mailto:events@goyoga.ee',
+        en: {
+            title: 'Ashtanga Yoga Beginners Workshop',
+            date: 'April 11, 2026',
+            location: 'Goyoga Tallinn Studio',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'A perfect opportunity to learn the fundamentals and start your Ashtanga yoga journey. Suitable for complete beginners or those wanting to restart their practice.',
+            fullDescription: `
+                <p class="mb-4">An excellent opportunity to get to know and start your Ashtanga yoga journey! The workshop lasts for 2.5 hours and consists of two parts: theory and practice.</p>
+                <p class="mb-4">In the theoretical part, we will cover the basic elements of Ashtanga yoga: breathing, 'locks' (bandhas), yoga postures, focus, and flowing movement. In the second half of the workshop, there will be a traditional guided Ashtanga yoga class.</p>
+                <p class="mb-4">The workshop is intended for complete beginners, but also for those who have "fallen off the practice wagon" and want to give their practice a kickstart.</p>
+                <p class="mb-4">Based on a scientific system, Ashtanga yoga's almost official motto "99% practice, 1% theory" has made this style a very modern and practical tool for people to keep themselves healthy simply and easily.</p>
+                <p class="mb-4">With Ashtanga yoga, you literally get the energy moving in your body. What makes Ashtanga special is that you can feel a noticeable difference every single time you step off your mat.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Raili Maripuu</h3>
+                <p class="mb-6">This workshop is led by Raili Maripuu, an Ashtanga yoga teacher and former dancer. She has been practicing yoga for 20 years and teaching Ashtanga yoga for 10 years. She practices 5-6 times a week and teaches regularly in Estonia, England, Italy, and India.</p>
+                <p class="font-medium text-pink-600">The workshop is held in Estonian. Price is 25€. Spots are limited!</p>
+            `,
+            highlights: ['Theory & Guided Practice', 'Learn Breath & Bandhas', 'Perfect for Complete Beginners', 'Build a Healthy Foundation']
+        },
+        et: {
+            title: 'Algajate Ashtanga Jooga Workshop',
+            date: '11. aprill 2026',
+            location: 'Goyoga Tallinn Stuudio',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Suurepärane võimalus tutvuda ja alustada ashtanga joogaga! Sobib täiesti algajatele või neile, kes soovivad oma praktikale kickstarti teha.',
+            fullDescription: `
+                <p class="mb-4">Suurepärane võimalus tutvuda ja alustada Ashtanga joogaga! Workshop kestab 2.5 tundi ja koosneb kahest osast: teooriast ja praktikast.</p>
+                <p class="mb-4">Teoreetilises osas käime läbi ashtanga jooga põhielemendid: hingamise, ‘lukud’ (bandhad), joogaasendid, keskendumise ja voolava liikumise. Workshopi teises pooles toimub traditsiooniline ashtanga jooga juhendatud tund.</p>
+                <p class="mb-4">Workshop on mõeldud täiesti algajatele, aga samuti neile, kes on oma praktikaredelilt nn maha kukkunud ning tahavad oma praktikale kickstarti teha.</p>
+                <p class="mb-4">Teaduslikul süsteemil põhinev ashtanga jooga peaaegu et ametlik "99% praktikat, 1% teooriat" moto on sellest stiilist teinud väga tänapäevase ja praktilise vahendi, millega inimene saab end ise lihtsalt ja kergelt tervena hoida.</p>
+                <p class="mb-4">Ashtanga joogaga lükkad Sa oma kehas energia sõna otseses mõttes liikuma. Ashtanga teebki eriliseks see, et seda märgatavat vahet tunned Sa absoluutselt iga kord, kui oled oma matilt maha astunud.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Raili Maripuu</h3>
+                <p class="mb-6">Seekordset töötuba veab Raili Maripuu, kes on ashtanga jooga õpetaja ning endine tantsija. Joogat praktiseerinud 20 aastat ning ashtanga joogat õpetanud 10 aastat. Joogat praktiseerib 5-6x nädalas ning õpetab regulaarselt Eestis, Inglismaal, Itaalias ja Indias.</p>
+                <p class="font-medium text-pink-600">Töötuba toimub eesti keeles. Hind on 25€. Kohtade arv on piiratud!</p>
+            `,
+            highlights: ['Teooria ja juhendatud praktika', 'Hingamine ja lukud (bandhad)', 'Mõeldud täiesti algajatele', 'Turvaline aluspõhi']
+        },
+        fi: {
+            title: 'Ashtanga-joogan alkeiskurssi',
+            date: '11. huhtikuuta 2026',
+            location: 'Goyoga Tallinn Studio',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Erinomainen tilaisuus oppia perusteet ja aloittaa Ashtanga-joogamatkasi. Sopii täysin aloittelijoille.',
+            fullDescription: `
+                <p class="mb-4">Erinomainen tilaisuus tutustua Ashtanga-joogaan ja aloittaa harjoitus! Työpaja kestää 2,5 tuntia ja koostuu kahdesta osasta: teoriasta ja käytännöstä.</p>
+                <p class="mb-4">Teoreettisessa osassa käymme läpi Ashtanga-joogan peruselementit: hengityksen, 'lukot' (bandhat), asennot, keskittymisen ja virtaavan liikkeen. Työpajan toisella puoliskolla on perinteinen ohjattu Ashtanga-joogatunti.</p>
+                <p class="mb-4">Työpaja on tarkoitettu täysin aloittelijoille sekä niille, jotka haluavat käynnistää harjoituksensa uudelleen tauon jälkeen.</p>
+                <p class="mb-4">Tieteelliseen järjestelmään perustuvan Ashtanga-joogan motto "99 % harjoitusta, 1 % teoriaa" tekee tästä tyylistä erittäin modernin ja käytännöllisen työkalun terveyden ylläpitämiseen.</p>
+                <p class="mb-4">Ashtanga-joogalla laitat energian todella liikkeelle kehossasi. Tunnet selkeän eron olossasi joka kerta, kun astut pois matoltasi.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Raili Maripuu</h3>
+                <p class="mb-6">Työpajan vetää Raili Maripuu, Ashtanga-joogan opettaja ja entinen tanssija. Hänellä on 20 vuoden kokemus joogasta ja hän on opettanut 10 vuotta. Raili harjoittelee 5-6 kertaa viikossa ja opettaa säännöllisesti Virossa, Englannissa, Italiassa ja Intiassa.</p>
+                <p class="font-medium text-pink-600">Työpajan opetuskieli on viro. Hinta 25€. Paikkoja on rajoitetusti!</p>
+            `,
+            highlights: ['Teoria & ohjattu harjoitus', 'Hengitys ja lukot', 'Täysin aloittelijoille', 'Terveellinen perusta']
+        },
+        ru: {
+            title: 'Воркшоп по Аштанга-йоге для начинающих',
+            date: '11 апреля 2026',
+            location: 'Студия Goyoga Tallinn',
+            organizer: 'Goyoga Tallinn & Raili Maripuu',
+            description: 'Отличная возможность изучить основы и начать свой путь в Аштанга-йоге. Подходит для абсолютных новичков.',
+            fullDescription: `
+                <p class="mb-4">Отличная возможность познакомиться с Аштанга-йогой и начать практику! Воркшоп длится 2,5 часа и состоит из двух частей: теории и практики.</p>
+                <p class="mb-4">В теоретической части мы рассмотрим основные элементы Аштанга-йоги: дыхание, «замки» (бандхи), асаны, концентрацию и плавное движение. Во второй половине воркшопа пройдет традиционный класс Аштанги с инструктором.</p>
+                <p class="mb-4">Воркшоп предназначен для абсолютных новичков, а также для тех, кто сделал перерыв и хочет заново запустить свою практику.</p>
+                <p class="mb-4">Основанный на научной системе, девиз Аштанга-йоги «99% практики, 1% теории» сделал этот стиль очень современным и практичным инструментом для поддержания здоровья простым и легким способом.</p>
+                <p class="mb-4">Занимаясь Аштанга-йогой, вы в прямом смысле заставляете энергию двигаться в вашем теле. Аштанга особенна тем, что вы чувствуете заметную разницу каждый раз, когда сходите с коврика.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Райли Марипуу</h3>
+                <p class="mb-6">Этот семинар проводит Райли Марипуу — преподаватель Аштанга-йоги и бывшая танцовщица. Она практикует йогу 20 лет и преподает уже 10 лет. Райли сама занимается 5-6 раз в неделю и регулярно преподает в Эстонии, Англии, Италии и Индии.</p>
+                <p class="font-medium text-pink-600">Воркшоп проводится на эстонском языке. Цена: 25€. Количество мест ограничено!</p>
+            `,
+            highlights: ['Теория и практика', 'Дыхание и замки (бандхи)', 'Для абсолютных новичков', 'Закладка здорового фундамента']
+        }
+    },
+    {
         id: 'casa-rituals-cacao-12-apr-2026',
         type: 'event',
         category: 'estonia',
