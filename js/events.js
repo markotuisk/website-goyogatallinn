@@ -234,60 +234,113 @@ const eventsData = [
             location: 'Ковалам, Керала, Индия',
             organizer: 'Goyoga Tallinn & Raili Maripuu',
             description: 'Традиционный интенсив Аштанга-йоги под руководством Лино Миэле в Керале.',
-            fullDescription: 'Погрузитесь в практику Аштанги в Индии. Цена: TBD.',
-            highlights: ['Мисор Аштанга', 'Культурные поездки', 'Индийская деревня']
-        }
-    },
-    {
-        id: 'casa-rituals-nidra-10-apr-2026',
-        type: 'event',
-        category: 'estonia',
-        active: true,
-        featured: false,
-        startDate: '2026-04-10',
-        expiryDate: '2026-04-10',
-        startTime: '19:00',
-        endTime: '21:00',
-        price: 30,
-        memberPrice: 25,
-        image: 'https://images.unsplash.com/photo-1510425463958-dcced28da480',
-        teachers: ['david-lepp'],
-        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
         en: {
-            title: 'Deeply Restorative Evening: Yoga Nidra & Gong',
+            title: 'Yoga Nidra with Gong Journey and Reiki Energy',
             date: 'April 10, 2026',
             location: 'Goyoga Tallinn Studio',
             organizer: 'Casa Rituals & David Lepp',
             description: 'We gather for a deeply restorative evening where Yoga Nidra, Reiki energy, and a live gong journey meet.',
-            fullDescription: 'We begin with guided Yoga Nidra to consciously relax the body and quiet the mind. Reiki energy will be woven throughout the evening, supporting gentle energetic alignment. The gong frequencies will then guide you into a deep state of integration and nervous system reset. This is a two-hour immersion designed to restore, recalibrate, and return you to clarity.',
-            highlights: ['Yoga Nidra', 'Reiki Energy', 'Live Gong Journey', 'Deep Restoration']
+            fullDescription: `
+                <p class="mb-4">We begin with guided Yoga Nidra to consciously relax the body and quiet the mind. Reiki energy is gently woven throughout the entire evening, supporting your energetic balance. Afterward, the sound frequencies of the gong will guide you into deep relaxation and integration, helping your nervous system restore and recalibrate.</p>
+                <p class="mb-6 font-medium">This is a two-hour journey that supports restoration, balance, and inner clarity.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> The Experience Flow</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Opening the space and presence, balancing and clearing energies</li>
+                    <li>Guided Yoga Nidra deep relaxation for the body and consciousness</li>
+                    <li>Channeling Reiki energy</li>
+                    <li>Reiki-infused gong and sound therapy</li>
+                    <li>Integration and sharing circle</li>
+                    <li>Balanced closure of the space and energies</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> David Lepp</h3>
+                <p class="mb-4">David brings over 25 years of experience in alternative therapies, shaped by his work in internationally recognized 5-Star spa environments in the United States and Estonia. Working with clients all over the world, he has cultivated a holistic approach to energy balancing and results-oriented comprehensive wellness.</p>
+                <p class="mb-4">Over time, his practice has focused on sound therapy, where he uses frequencies as a holistic tool to support the nervous system, balance emotional states, and restore the body's natural harmony.</p>
+                <p class="mb-4">Today, David guides sound journey experiences and Yoga Nidra meditations, creating spaces that support deep relaxation, clarity, and lasting changes in overall well-being.</p>
+            `,
+            highlights: ['Deep relaxation & calmed nervous system', 'Emotional and energetic release', 'Clearer mind & grounded presence', 'Expanded consciousness and lightness']
         },
         et: {
-            title: 'Sügavalt taastav õhtu: Jooga Nidra & Gongirännak',
+            title: 'Jooga Nidra koos Gongirännakuga ja Reiki Energiaga',
             date: '10. aprill 2026',
             location: 'Goyoga Tallinn Stuudio',
             organizer: 'Casa Rituals & David Lepp',
             description: 'Koguneme sügavalt taastavaks õhtuks, kus kohtuvad jooga nidra, Reiki energia ja elav gongirännak.',
-            fullDescription: 'Alustame juhendatud jooga nidraga, mis aitab kehal teadlikult lõdvestuda ja meelel vaibuda. Reiki energia on õrnalt põimitud kogu õhtusse, toetades sinu energeetilist tasakaalu. Seejärel viivad gongi helisagedused sind sügavasse lõdvestusse ja integratsiooni, aidates närvisüsteemil taastuda ja ümber häälestuda. See on kahetunnine rännak, mis toetab taastumist, tasakaalu ja sisemist selgust.',
-            highlights: ['Jooga Nidra', 'Reiki energia', 'Gongirännak', 'Närvisüsteemi taastamine']
+            fullDescription: `
+                <p class="mb-4">Alustame juhendatud jooga nidraga, mis aitab kehal teadlikult lõdvestuda ja meelel vaibuda. Reiki energia on õrnalt põimitud kogu õhtusse, toetades sinu energeetilist tasakaalu. Seejärel viivad gongi helisagedused sind sügavasse lõdvestusse ja integratsiooni, aidates närvisüsteemil taastuda ja ümber häälestuda.</p>
+                <p class="mb-6 font-medium">See on kahetunnine rännak, mis toetab taastumist, tasakaalu ja sisemist selgust.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Kogemuse Kulg</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Ruumi ja kohalolu avamine, energiate tasakaalustamine ja puhastamine</li>
+                    <li>Juhendatud Yoga Nidra süvalõdvestus kehale ja teadvusele</li>
+                    <li>Reiki energia kanaldamine</li>
+                    <li>Reiki energiaga laetud gongi ja heliteraapia</li>
+                    <li>Kogemuse lahtimõtestamise jagamise ring</li>
+                    <li>Ruumi ja energiate balanseeritud lõpule viimine</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> David Lepp</h3>
+                <p class="mb-4">David toob kaasa oma enam kui 25-aastase kogemuse alternatiivteraapiate valdkonnas, mida on kujundanud töö rahvusvaheliselt tunnustatud 5-Star spaakeskkondades Ameerika Ühendriikides ja Eestis. Töötades klientidega üle kogu maailma, on ta kogenud holistilise lähenemisega energiate balanseerimisele ja tulemustele suunatud terviklikule heaolule.</p>
+                <p class="mb-4">Tema praktika on ajapikku keskendunud heliteraapiale, kus ta kasutab sagedusi holistilise tööriistana närvisüsteemi toetamiseks, emotsionaalsete seisundite tasakaalustamiseks ning keha loomuliku harmoonia taastamiseks.</p>
+                <p class="mb-4">David juhendab täna helirännaku kogemusi ja Yoga Nidra meditatsioone luues kooslusi, mis toetavad sügavat lõõgastust, selgust ja püsivaid muutusi üldises heaolus.</p>
+            `,
+            highlights: ['Sügav lõõgastus ja rahustatud närvisüsteem', 'Emotsionaalne ja energeetiline vabanemine', 'Selgem meel ja maandatud kohalolu', 'Teadvuse avardumine ja kergus']
         },
         fi: {
-            title: 'Syvästi palauttava ilta: Yoga Nidra & Gongimatka',
+            title: 'Yoga Nidra, Gongimatka ja Reiki-energia',
             date: '10. huhtikuuta 2026',
             location: 'Goyoga Tallinn Studio',
             organizer: 'Casa Rituals & David Lepp',
-            description: 'Kokoonnumme syvästi palauttavaan iltaan, jossa Yoga Nidra, Reiki-energia ja elävä gongimatka kohtaavat.',
-            fullDescription: 'Aloitamme ohjatulla Yoga Nidralla, joka auttaa kehoa rentoutumaan tietoisesti ja rauhoittaa mielen. Reiki-energia kietoutuu läpi illan tukien energeettistä tasapainoasi. Tämän jälkeen gongin taajuudet ohjaavat sinut syvään rentoutumiseen ja integraatioon. Tämä on kahden tunnin matka, joka tukee palautumista, tasapainoa ja sisäistä selkeyttä.',
-            highlights: ['Yoga Nidra', 'Reiki-energia', 'Gongimatka', 'Hermoston palautuminen']
+            description: 'Kokoonnumme syvästi palauttavaan iltaan, jossa kohtaavat Yoga Nidra, Reiki-energia ja elävä gongimatka.',
+            fullDescription: `
+                <p class="mb-4">Aloitamme ohjatulla Yoga Nidralla, joka auttaa kehoa tietoisesti rentoutumaan ja mieltä rauhoittumaan. Reiki-energia kietoutuu lempeästi koko iltaan tukien energeettistä tasapainoasi. Tämän jälkeen gongin äänitaajuudet ohjaavat sinut syvään rentoutumiseen ja integraatioon, auttaen hermostoa palautumaan ja uudelleen virittäytymään.</p>
+                <p class="mb-6 font-medium">Tämä on kahden tunnin matka, joka tukee palautumista, tasapainoa ja sisäistä selkeyttä.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Kokemuksen Kulku</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Tilan ja läsnäolon avaaminen, energioiden tasapainoittaminen ja puhdistaminen</li>
+                    <li>Ohjattu Yoga Nidra -syvärentoutus keholle ja tietoisuudelle</li>
+                    <li>Reiki-energian kanavointi</li>
+                    <li>Reiki-energialla ladattu gongi- ja ääniterapia</li>
+                    <li>Integraatio- ja jakamispiiri</li>
+                    <li>Tilan ja energioiden tasapainoinen sulkeminen</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> David Lepp</h3>
+                <p class="mb-4">David tuo mukanaan yli 25 vuoden kokemuksen vaihtoehtoisista terapiamuodoista, joita on muovannut työskentely kansainvälisesti tunnetuissa 5 tähden kylpyläympäristöissä Yhdysvalloissa ja Virossa. Työskennellessään asiakkaiden kanssa ympäri maailmaa hän on kehittänyt kokonaisvaltaisen lähestymistavan energioiden tasapainottamiseen ja tuloskeskeiseen hyvinvointiin.</p>
+                <p class="mb-4">Ajan myötä hänen harjoituksensa on keskittynyt ääniterapiaan, jossa hän käyttää taajuuksia kokonaisvaltaisena työkaluna hermoston tukemiseen, tunnetilojen tasapainottamiseen ja kehon luonnollisen harmonian palauttamiseen.</p>
+                <p class="mb-4">Tänään David ohjaa äänimatkoja ja Yoga Nidra -meditaatioita luoden tiloja, jotka tukevat syvää rentoutumista, selkeyttä ja pysyviä muutoksia yleisessä hyvinvoinnissa.</p>
+            `,
+            highlights: ['Syvä rentoutuminen ja rauhoittunut hermosto', 'Emotionaalinen ja energeettinen vapautuminen', 'Selkeämpi mieli ja maadoittunut läsnäolo', 'Laajentunut tietoisuus ja keveys']
         },
         ru: {
-            title: 'Глубоко восстанавливающий вечер: Йога Нидра и Гонг',
+            title: 'Йога Нидра с путешествием под гонг и энергией Рейки',
             date: '10 апреля 2026',
             location: 'Студия Goyoga Tallinn',
             organizer: 'Casa Rituals & David Lepp',
-            description: 'Мы собираемся на глубоко восстанавливающий вечер, где встречаются Йога Нидра, энергия Рейки и живое путешествие с гонгом.',
-            fullDescription: 'Мы начинаем с управляемой Йоги Нидры, чтобы сознательно расслабить тело и успокоить ум. Энергия Рейки будет мягко вплетена на протяжении всего вечера, поддерживая ваш энергетический баланс. Затем звуковые частоты гонга погрузят вас в глубокое расслабление и интеграцию, помогая нервной системе восстановиться. Это двухчасовое путешествие, которое поддерживает восстановление, баланс и внутреннюю ясность.',
-            highlights: ['Йога Нидра', 'Энергия Рейки', 'Медитация с гонгом', 'Восстановление нервной системы']
+            description: 'Мы собираемся на глубоко восстанавливающий вечер, где встречаются йога нидра, энергия рейки и живое путешествие с гонгом.',
+            fullDescription: `
+                <p class="mb-4">Мы начинаем с управляемой Йоги Нидры, которая помогает телу осознанно расслабиться, а уму — успокоиться. Энергия Рейки мягко вплетается на протяжении всего вечера, поддерживая ваш энергетический баланс. Затем звуковые частоты гонга погружают вас в глубокое расслабление и интеграцию, помогая нервной системе восстановиться и перенастроиться.</p>
+                <p class="mb-6 font-medium">Это двухчасовое путешествие, которое поддерживает восстановление, баланс и внутреннюю ясность.</p>
+                
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Ход Погружения</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Открытие пространства и присутствия, балансировка и очищение энергий</li>
+                    <li>Управляемая Йога Нидра для глубокого расслабления тела и сознания</li>
+                    <li>Направление энергии Рейки</li>
+                    <li>Гонг и звукотерапия, заряженные энергией Рейки</li>
+                    <li>Круг интеграции и обмена опытом</li>
+                    <li>Сбалансированное закрытие пространства и энергий</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Дэвид Лепп</h3>
+                <p class="mb-4">Дэвид опирается на более чем 25-летний опыт работы в области альтернативных методов терапии, сформированный практикой во всемирно известных 5-звездочных спа-центрах США и Эстонии. Работая с клиентами по всему миру, он разработал целостный подход к балансировке энергий и всестороннему благополучию.</p>
+                <p class="mb-4">Со временем его практика сфокусировалась на звукотерапии, где он использует звуковые частоты как целостный инструмент для поддержки нервной системы, балансировки эмоциональных состояний и восстановления естественной гармонии тела.</p>
+                <p class="mb-4">Сегодня Дэвид проводит медикаментозные звуковые путешествия и медитации Йога Нидра, создавая пространства, способствующие глубокому расслаблению, ясности и долгосрочным улучшениям в общем самочувствии.</p>
+            `,
+            highlights: ['Глубокое расслабление и спокойная нервная система', 'Эмоциональное и энергетическое освобождение', 'Более ясный ум и заземленное присутствие', 'Расширение сознания и легкость']
         }
     },
     {
