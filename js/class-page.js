@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const classData = window.classesData[classId];
 
     // Wait for language init (script.js fires languageChanged) or manual init
-    // For simplicity, we hook into the same mechanism as other pages
-    // But we need to define renderClassDetails first
-    renderClassDetails(classId, currentLanguage);
+    const initialLang = typeof currentLanguage !== 'undefined' ? currentLanguage : (document.documentElement.lang || 'en');
+    renderClassDetails(classId, initialLang);
 
     document.addEventListener('languageChanged', (e) => {
         renderClassDetails(classId, e.detail);

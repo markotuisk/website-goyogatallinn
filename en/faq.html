@@ -268,10 +268,7 @@
 <script>
         // Specific logic for FAQ page injection
         document.addEventListener('DOMContentLoaded', () => {
-            // Initial render delay to wait for currentLanguage to be resolved by script.js
-            setTimeout(() => {
-                renderFAQs();
-            }, 50);
+            renderFAQs();
 
             // Search functionality
             const searchInput = document.getElementById('faq-search');

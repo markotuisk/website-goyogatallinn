@@ -3,7 +3,6 @@ let currentLanguage = 'en';
 
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
-    initLanguage();
     initModals();
     initReviewsCarousel();
     initGoogleReviewsCarousel();
@@ -32,6 +31,9 @@ function initLanguage() {
 
     updateUIDecorators(currentLanguage);
 }
+
+// Call immediately to set currentLanguage before other scripts load
+initLanguage();
 
 // Utility to resolve the correct URL slug based on seoData translation maps
 function getTranslatedUrl(filename) {
