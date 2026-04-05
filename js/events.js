@@ -106,7 +106,7 @@ const eventsData = [
         endTime: '12:00',
         price: 900,
         memberPrice: 0,
-        image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad',
+        image: 'https://scontent-hel3-1.xx.fbcdn.net/v/t51.75761-15/485297931_18308468290227334_5976358282235771331_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=13d280&_nc_ohc=f9LDkU3hM40Q7kNvwG7wQF_&_nc_oc=AdqWG4DtB2qV5z6tOdGEYVAe24kTMZ-WJYp5bgUAxOwZSrv46FwypSBNO5hVB4H16oI&_nc_zt=23&_nc_ht=scontent-hel3-1.xx&_nc_gid=Q80ogoI105LvV_7ruubYIg&_nc_ss=7a3a8&oh=00_Af334WOkwBgya830cP18rdpicTyVGofA5CwcAyyUHDWnDg&oe=69D888BA',
         gallery: [
             'https://images.unsplash.com/photo-1505205296326-2178af1b4fb4',
             'https://images.unsplash.com/photo-1488747279002-c8523379faaa',
