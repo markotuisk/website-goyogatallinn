@@ -132,31 +132,73 @@
 
             // --- SEO: Inject Schema.org Event JSON-LD ---
             const enData = event['en'] || data;
+            const buildDate = new Date().toISOString().split('T')[0];
+            const startTime = event.startTime || '09:00';
+            const endTime = event.endTime || '12:00';
+
+            // Performer Mapping
+            const performers = (event.teachers || []).map(tid => {
+                const t = teachersData[tid] || { name: tid };
+                return {
+                    "@type": "Person",
+                    "name": t.name,
+                    "url": `https://www.goyoga.ee/teacher.html?id=${tid}`
+                };
+            });
+            if (performers.length === 0) performers.push({ "@type": "Organization", "name": "Goyoga Tallinn" });
+
+            // Offers Mapping
+            const offers = [];
+            offers.push({
+                "@type": "Offer",
+                "name": "Standard Price",
+                "price": String(event.price || 0),
+                "priceCurrency": "EUR",
+                "validFrom": buildDate,
+                "url": window.location.href,
+                "availability": "https://schema.org/InStock"
+            });
+            if (event.memberPrice > 0) {
+                offers.push({
+                    "@type": "Offer",
+                    "name": "Member Price",
+                    "price": String(event.memberPrice),
+                    "priceCurrency": "EUR",
+                    "validFrom": buildDate,
+                    "url": window.location.href,
+                    "availability": "https://schema.org/InStock",
+                    "category": "MembershipDiscount"
+                });
+            }
+
             const eventSchema = {
                 "@context": "https://schema.org",
                 "@type": "Event",
                 "name": enData.title,
                 "description": enData.description,
-                "startDate": event.expiryDate,
+                "startDate": `${event.startDate}T${startTime}:00`,
+                "endDate": `${event.expiryDate || event.startDate}T${endTime}:00`,
                 "eventStatus": "https://schema.org/EventScheduled",
                 "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                 "url": `https://www.goyoga.ee/event.html?id=${event.id}`,
-                "image": event.headerImage || event.image,
+                "image": [event.image],
                 "location": {
                     "@type": "Place",
                     "name": enData.location || "Goyoga Tallinn Studio",
                     "address": {
                         "@type": "PostalAddress",
-                        "streetAddress": "Tatari 64",
-                        "addressLocality": "Tallinn",
-                        "addressCountry": "EE"
+                        "streetAddress": event.type === 'retreat' ? "" : "Narva mnt 7D",
+                        "addressLocality": event.type === 'retreat' ? (enData.location || "").split(',')[0] : "Tallinn",
+                        "addressCountry": event.country ? (event.country.en || "EE") : "EE"
                     }
                 },
                 "organizer": {
                     "@type": "Organization",
-                    "name": "Goyoga Tallinn",
+                    "name": enData.organizer || "Goyoga Tallinn",
                     "url": "https://www.goyoga.ee"
                 },
+                "performer": performers,
+                "offers": offers,
                 "inLanguage": lang
             };
             const ldScript = document.createElement('script');

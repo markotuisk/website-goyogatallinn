@@ -207,6 +207,9 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
 
     if is_events_page and events_data:
         event_schemas = []
+        import datetime
+        build_date = datetime.date.today().isoformat()
+        
         for event in events_data:
             if not isinstance(event, dict) or lang not in event:
                 continue
@@ -216,41 +219,97 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             if image_url and not image_url.startswith('http'):
                 image_url = f"https://www.goyoga.ee{image_url}"
 
+            # Construct ISO 8601 timestamps
+            start_time = event.get('startTime', '09:00')
+            end_time = event.get('endTime', '12:00')
+            start_date_iso = f"{event.get('startDate')}T{start_time}:00"
+            end_date_iso = f"{event.get('expiryDate', event.get('startDate'))}T{end_time}:00"
+
+            # Performer Mapping: Map teacher IDs to names
+            performers = []
+            if 'teachers' in event and isinstance(event['teachers'], list):
+                for tid in event['teachers']:
+                    if tid in teachers_data:
+                        performers.append({
+                            "@type": "Person",
+                            "name": teachers_data[tid].get('name', tid),
+                            "url": f"https://www.goyoga.ee/teacher.html?id={tid}"
+                        })
+            if not performers:
+                performers = [{"@type": "Organization", "name": "Goyoga Tallinn"}]
+
+            # Offers: Standard and Member
+            offers = []
+            base_price = event.get('price', 0)
+            member_price = event.get('memberPrice', 0)
+            
+            # Standard Offer
+            offers.append({
+                "@type": "Offer",
+                "name": "Standard Price",
+                "price": str(base_price),
+                "priceCurrency": "EUR",
+                "validFrom": build_date,
+                "url": f"https://www.goyoga.ee/{lang}/{filename}?id={event.get('id')}",
+                "availability": "https://schema.org/InStock"
+            })
+            
+            # Member Offer
+            if member_price > 0:
+                offers.append({
+                    "@type": "Offer",
+                    "name": "Member Price",
+                    "price": str(member_price),
+                    "priceCurrency": "EUR",
+                    "validFrom": build_date,
+                    "url": f"https://www.goyoga.ee/{lang}/{filename}?id={event.get('id')}",
+                    "availability": "https://schema.org/InStock",
+                    "category": "MembershipDiscount"
+                })
+
+            # Location Logic (Studio vs Abroad)
+            if event.get('type') == 'retreat' and 'country' in event:
+                country_en = event['country'].get('en', 'Italy')
+                location_schema = {
+                    "@type": "Place",
+                    "name": e_lang.get('location', country_en),
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": e_lang.get('location', '').split(',')[0],
+                        "addressCountry": country_en
+                    }
+                }
+            else:
+                location_schema = {
+                    "@type": "Place",
+                    "name": "Goyoga Tallinn Studio",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Narva mnt 7D",
+                        "addressLocality": "Tallinn",
+                        "postalCode": "10117",
+                        "addressCountry": "EE"
+                    }
+                }
+
             event_schema = {
                 "@context": "https://schema.org",
                 "@type": "Event",
                 "name": e_lang.get('title', ''),
                 "description": e_lang.get('description', ''),
-                "startDate": event.get('startDate', event.get('date', '')),
-                "endDate": event.get('expiryDate', event.get('startDate', event.get('date', ''))),
+                "startDate": start_date_iso,
+                "endDate": end_date_iso,
                 "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                 "eventStatus": "https://schema.org/EventScheduled",
-                "location": {
-                    "@type": "Place",
-                    "name": e_lang.get('location', ''),
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Tallinn",
-                        "addressCountry": "EE"
-                    }
-                },
+                "location": location_schema,
                 "image": [image_url],
                 "organizer": {
                     "@type": "Organization",
                     "name": e_lang.get('organizer', 'Goyoga Tallinn'),
                     "url": "https://www.goyoga.ee"
                 },
-                "performer": {
-                    "@type": "Organization",
-                    "name": e_lang.get('organizer', 'Goyoga Tallinn')
-                },
-                "offers": {
-                    "@type": "Offer",
-                    "url": f"https://www.goyoga.ee/{lang}/{filename}",
-                    "price": "0",
-                    "priceCurrency": "EUR",
-                    "availability": "https://schema.org/InStock"
-                }
+                "performer": performers,
+                "offers": offers
             }
             # Only index active events
             if event.get('active', False):
