@@ -382,7 +382,7 @@ const eventsData = [
         endTime: '16:30',
         price: 25,
         memberPrice: 25,
-        image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0',
+        image: 'https://fienta.com/cf/img/?width=1070&dpr=1&format=webp&gcs=true&file=/org/19245/OR5psIgRyyJjlwv.png',
         teachers: ['raili-maripuu'],
         registerLink: 'mailto:events@goyoga.ee',
         en: {
