@@ -996,7 +996,7 @@ function updateSEO(lang) {
 function initEvents() {
     const container = document.getElementById('events-container');
     if (!container) return;
-    renderEvents(container, true); // true = homepage (featured only)
+    renderEvents(container, false); // false = show all events
 }
 
 function renderEvents(container, featuredOnly = false) {
