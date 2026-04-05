@@ -15,6 +15,8 @@ When adding a new event or retreat to `website/js/events.js`, **you must not mak
 - **`active`**: Boolean (`true` to display, `false` to hide).
 - **`startDate`**: ISO 8601 string (`YYYY-MM-DD`). 
 - **`expiryDate`**: ISO 8601 string (`YYYY-MM-DD`). For single-day events, this is typically the day *after* the `startDate`.
+- **`startTime`**: (Required for Studio Events) String in HH:MM format (e.g., `'18:00'`).
+- **`endTime`**: (Required for Studio Events) String in HH:MM format (e.g., `'20:00'`). These MUST be populated so that the schedule organically visually appears on both the homepage event cards and the single event details template.
 - **`image`**: A valid relative URL (e.g., `/assets/events/...`) or absolute HTTP URL (e.g., Unsplash).
 - **`teachers`**: Array of teacher IDs matching the `teachers.js` data (e.g., `['marit-tuisk', 'david-lepp']`).
 - **`registerLink`**: Registration hook (e.g., `#contact` or `mailto:events@goyoga.ee`).
