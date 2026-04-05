@@ -252,7 +252,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1510425463958-dcced28da480',
         teachers: ['david-lepp'],
-        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Yoga Nidra with Gong Journey and Reiki Energy',
             date: 'April 10, 2026',
@@ -277,6 +277,8 @@ const eventsData = [
                 <p class="mb-4">David brings over 25 years of experience in alternative therapies, shaped by his work in internationally recognized 5-Star spa environments in the United States and Estonia. Working with clients all over the world, he has cultivated a holistic approach to energy balancing and results-oriented comprehensive wellness.</p>
                 <p class="mb-4">Over time, his practice has focused on sound therapy, where he uses frequencies as a holistic tool to support the nervous system, balance emotional states, and restore the body's natural harmony.</p>
                 <p class="mb-4">Today, David guides sound journey experiences and Yoga Nidra meditations, creating spaces that support deep relaxation, clarity, and lasting changes in overall well-being.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals Schedule & Information</a></div>
             `,
             highlights: ['Deep relaxation & calmed nervous system', 'Emotional and energetic release', 'Clearer mind & grounded presence', 'Expanded consciousness and lightness']
         },
@@ -304,6 +306,8 @@ const eventsData = [
                 <p class="mb-4">David toob kaasa oma enam kui 25-aastase kogemuse alternatiivteraapiate valdkonnas, mida on kujundanud töö rahvusvaheliselt tunnustatud 5-Star spaakeskkondades Ameerika Ühendriikides ja Eestis. Töötades klientidega üle kogu maailma, on ta kogenud holistilise lähenemisega energiate balanseerimisele ja tulemustele suunatud terviklikule heaolule.</p>
                 <p class="mb-4">Tema praktika on ajapikku keskendunud heliteraapiale, kus ta kasutab sagedusi holistilise tööriistana närvisüsteemi toetamiseks, emotsionaalsete seisundite tasakaalustamiseks ning keha loomuliku harmoonia taastamiseks.</p>
                 <p class="mb-4">David juhendab täna helirännaku kogemusi ja Yoga Nidra meditatsioone luues kooslusi, mis toetavad sügavat lõõgastust, selgust ja püsivaid muutusi üldises heaolus.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals ajakava ja lisainfo</a></div>
             `,
             highlights: ['Sügav lõõgastus ja rahustatud närvisüsteem', 'Emotsionaalne ja energeetiline vabanemine', 'Selgem meel ja maandatud kohalolu', 'Teadvuse avardumine ja kergus']
         },
@@ -331,6 +335,8 @@ const eventsData = [
                 <p class="mb-4">David tuo mukanaan yli 25 vuoden kokemuksen vaihtoehtoisista terapiamuodoista, joita on muovannut työskentely kansainvälisesti tunnetuissa 5 tähden kylpyläympäristöissä Yhdysvalloissa ja Virossa. Työskennellessään asiakkaiden kanssa ympäri maailmaa hän on kehittänyt kokonaisvaltaisen lähestymistavan energioiden tasapainottamiseen ja tuloskeskeiseen hyvinvointiin.</p>
                 <p class="mb-4">Ajan myötä hänen harjoituksensa on keskittynyt ääniterapiaan, jossa hän käyttää taajuuksia kokonaisvaltaisena työkaluna hermoston tukemiseen, tunnetilojen tasapainottamiseen ja kehon luonnollisen harmonian palauttamiseen.</p>
                 <p class="mb-4">Tänään David ohjaa äänimatkoja ja Yoga Nidra -meditaatioita luoden tiloja, jotka tukevat syvää rentoutumista, selkeyttä ja pysyviä muutoksia yleisessä hyvinvoinnissa.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals -aikataulu ja lisätiedot</a></div>
             `,
             highlights: ['Syvä rentoutuminen ja rauhoittunut hermosto', 'Emotionaalinen ja energeettinen vapautuminen', 'Selkeämpi mieli ja maadoittunut läsnäolo', 'Laajentunut tietoisuus ja keveys']
         },
@@ -358,6 +364,8 @@ const eventsData = [
                 <p class="mb-4">Дэвид опирается на более чем 25-летний опыт работы в области альтернативных методов терапии, сформированный практикой во всемирно известных 5-звездочных спа-центрах США и Эстонии. Работая с клиентами по всему миру, он разработал целостный подход к балансировке энергий и всестороннему благополучию.</p>
                 <p class="mb-4">Со временем его практика сфокусировалась на звукотерапии, где он использует звуковые частоты как целостный инструмент для поддержки нервной системы, балансировки эмоциональных состояний и восстановления естественной гармонии тела.</p>
                 <p class="mb-4">Сегодня Дэвид проводит медикаментозные звуковые путешествия и медитации Йога Нидра, создавая пространства, способствующие глубокому расслаблению, ясности и долгосрочным улучшениям в общем самочувствии.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Расписание и дополнительная информация Casa Rituals</a></div>
             `,
             highlights: ['Глубокое расслабление и спокойная нервная система', 'Эмоциональное и энергетическое освобождение', 'Более ясный ум и заземленное присутствие', 'Расширение сознания и легкость']
         }
@@ -464,7 +472,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
         teachers: ['marit-tuisk'],
-        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Ritual with Cacao: Clear Intent & Calm Heart',
             date: 'April 12, 2026',
@@ -491,6 +499,8 @@ const eventsData = [
                 <p class="mb-4">Marit Tuisk is a conscious leadership mentor, ceremony creator, and co-founder of Casa Rituals. She is a certified ceremonialist, quantum dowsing practitioner, and healer who has lived and worked in the United States for the past 30 years.</p>
                 <p class="mb-4">In recent years, she has dedicated herself to energetic and conscious healing, supporting people on their inner journeys. Previously, she was the founder of a sustainable fashion brand and spent many years in the corporate sector, which built her strong understanding of structure, leadership, and patterns of human behavior.</p>
                 <p class="mb-4">Her work weaves together practical life experience and deep energetic space-holding, creating a clear and supportive environment that helps people find inner balance, clarity, and move more consciously through their life and leadership.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals Schedule & Information</a></div>
             `,
             highlights: ['Astrological Insights', 'Ceremonial Cacao', 'Gong Journey & Sound Bowls', 'Guided Meditation']
         },
@@ -520,6 +530,8 @@ const eventsData = [
                 <p class="mb-4">Marit Tuisk on teadliku juhtimise mentor, tseremoniate looja ja Casa Ritualsi kaasasutaja. Ta on sertifitseeritud tseremonialist, quantum dowsingu praktik ja tervendaja, kes on viimased 30 aastat elanud ja töötanud Ameerika Ühendriikides.</p>
                 <p class="mb-4">Viimastel aastatel on ta pühendunud energeetilisele ja teadlikule tervenemisele ning inimeste toetamisele nende sisemisel teekonnal. Varasemalt tegutses ta jätkusuutliku moebrändi loojana ning töötas pikalt corporate-sektoris, kus kujunes tema tugev arusaam struktuurist, juhtimisest ja inimkäitumise mustritest.</p>
                 <p class="mb-4">Tema töös põimuvad praktiline elukogemus ja sügav energeetiline ruumihoidmine, luues selge ja toetava välja, mis aitab inimestel leida sisemist tasakaalu, selgust ja liikuda teadlikumalt oma elus ja juhtimises.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals ajakava ja lisainfo</a></div>
             `,
             highlights: ['Astroloogiline sissevaade', 'Tseremoniaalne kakao', 'Gongirännak ja helikausid', 'Juhendatud meditatsioon']
         },
@@ -549,6 +561,8 @@ const eventsData = [
                 <p class="mb-4">Marit Tuisk on tietoisen johtamisen mentori, seremonioiden luoja ja Casa Ritualsin perustajajäsen. Hän on lisensoitu seremonialisti, kvantti-dowsing-harjoittaja ja parantaja, joka on asunut ja työskennellyt Yhdysvalloissa viimeiset 30 vuotta.</p>
                 <p class="mb-4">Viime vuosina hän on omistautunut energeettiselle ja tietoiselle parantamiselle ja auttanut ihmisiä heidän sisäisillä matkoillaan. Aikaisemmin hän loi kestävän muotibrändin ja työskenteli pitkään yritysmaailmassa, mikä loi vahvan ymmärryksen rakenteista, johtajuudesta ja ihmisen käyttäytymismalleista.</p>
                 <p class="mb-4">Hänen työssään yhdistyvät käytännön elämänkokemus ja syvä energeettinen tilan pito, mikä luo selkeän ja tukevan kentän, joka auttaa ihmisiä löytämään sisäisen tasapainon, selkeyden ja siirtymään tietoisemmin elämässään ja johtamisessaan.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals -aikataulu ja lisätiedot</a></div>
             `,
             highlights: ['Astrologiset oivallukset', 'Seremoniallinen kaakao', 'Gongimatka ja äänimaljat', 'Ohjattu meditaatio']
         },
@@ -578,6 +592,8 @@ const eventsData = [
                 <p class="mb-4">Марит Туйск — ментор по осознанному лидерству, создатель церемоний и соучредитель Casa Rituals. Она является сертифицированным специалистом по церемониям, практиком квантовой биолокации и целителем, жившим и работавшим в Соединенных Штатах последние 30 лет.</p>
                 <p class="mb-4">В последние годы она посвятила себя энергетическому и осознанному исцелению, поддерживая людей на их внутреннем пути. Ранее она основала бренд устойчивой моды и долгое время работала в корпоративном секторе, где у нее сформировалось глубокое понимание структуры, лидерства и моделей человеческого поведения.</p>
                 <p class="mb-4">В ее работе переплетаются практический жизненный опыт и глубокое удержание энергетического пространства, создавая ясное и поддерживающее поле, которое помогает людям обрести внутренний баланс, ясность и более осознанно управлять своей жизнью.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Расписание и дополнительная информация Casa Rituals</a></div>
             `,
             highlights: ['Астрологический обзор', 'Церемониальное какао', 'Путешествие с гонгом и чаши', 'Медитация']
         }
@@ -596,7 +612,7 @@ const eventsData = [
         memberPrice: 33,
         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
         teachers: ['marit-tuisk', 'david-lepp'],
-        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Spring Ritual with Cacao and Gong Journey',
             date: 'April 17, 2026',
@@ -625,6 +641,8 @@ const eventsData = [
                 <p class="mb-4">We experienced a society of wellness that valued security more than the soul. We experienced success and burnout, stability as well as inner emptiness. Now, we have made a conscious turn in our journey and have returned to our roots in our native Estonia—more conscious, experienced, and open-hearted.</p>
                 <p class="mb-4">Our co-created holistic vision, Casa Rituals, was born from this inner experience. Consequently, Casa Rituals is a temple for those who are ready to experience their own inner evolution and see their life as a conscious journey.</p>
                 <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>David</strong> is a certified sound therapist, Yoga Nidra, and Reiki Master, combining vibrational therapy, energy work, and conscious presence in his practice.<br><br><strong>Marit</strong> is a certified ceremony creator and space holder with a Quantum Dowsing Mastery certification, combining ritual, energy perception, and conscious space creation in her work.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals Schedule & Information</a></div>
             `,
             highlights: ['Astrological Insights', 'Ceremonial Cacao', 'Crystal Bowls & Gong Journey', 'Guided Meditation']
         },
@@ -656,6 +674,8 @@ const eventsData = [
                 <p class="mb-4">Oleme saanud olla osa heaolu ühiskonnast, mis väärtustas turvalisust rohkem kui hinge. Kogesime edu ja läbipõlemist, stabiilsust ja ühtlasi ka sisemist tühjust. Nüüd oleme teinud teadliku pöörde oma rännakul ja oleme tagasi oma juurte juures koduses Eestis – teadlikumate, kogenenumate ja sisemuselt avatumatena.</p>
                 <p class="mb-4">Meie ühiselt loodud holistiline visioon Casa Rituals sündis sellest sisemisest kogemusest. Sellest tulenevalt on ka Casa Rituals tempel neile, kes on valmis kogema oma sisemist arengut ja nägema oma elu kui teadlikku teekonda.</p>
                 <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>David</strong> on sertifitseeritud heliterapeut, jooga nidra ja Reiki Meister, ühendades oma töös vibratsiooniteraapia, energiatöö ja teadliku kohalolu.<br><br><strong>Marit</strong> on sertifitseeritud tseremooniate looja ja ruumihoidja ning omab Quantum Dowsing Mastery taseme sertifikaati, ühendades oma töös rituaali, energiataju ja teadliku ruumi loomise.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals ajakava ja lisainfo</a></div>
             `,
             highlights: ['Astroloogiline sissevaade', 'Tseremoniaalne kakao', 'Kristallkausid ja gongirännak', 'Juhendatud meditatsioon']
         },
@@ -687,6 +707,8 @@ const eventsData = [
                 <p class="mb-4">Saimme kokea hyvinvointiyhteiskunnan, joka arvosti turvallisuutta enemmän kuin sielua. Koimme niin menestystä, loppuunpalamista, vakautta kuin myös sisäistä tyhjyyttä. Nyt olemme tehneet tietoisen käännöksen matkallamme ja palanneet juurillemme Viroon – tietoisempina, kokeneempina ja avosydämisempinä.</p>
                 <p class="mb-4">Yhdessä luomamme holistinen visio Casa Rituals syntyi tästä sisäisestä kokemuksesta. Siksi Casa Rituals on temppeli niille, jotka ovat valmiita kokemaan oman sisäisen kehityksensä ja näkemään elämänsä tietoisena matkana.</p>
                 <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>David</strong> on lisensoitu ääniterapeutti, Yoga Nidra ja Reiki Master, joka yhdistää työssään värähtelyterapian, energiatyön ja tietoisen läsnäolon.<br><br><strong>Marit</strong> on sertifioitu seremonioiden luoja ja tilanpitäjä, jolla on Quantum Dowsing Mastery -sertifikaatti, ja joka yhdistää työssään rituaalin, energiatajun ja tietoisen tilan luomisen.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Casa Rituals -aikataulu ja lisätiedot</a></div>
             `,
             highlights: ['Astrologinen katsaus', 'Seremoniallinen kaakao', 'Kristallimaljat ja gongi', 'Ohjattu meditaatio']
         },
@@ -718,6 +740,8 @@ const eventsData = [
                 <p class="mb-4">Мы смогли стать частью общества благополучия, которое ценило стабильность больше, чем душу. Мы познали и успех, и выгорание, стабильность и одновременно внутреннюю пустоту. Теперь мы совершили осознанный поворот на нашем пути и вернулись к своим корням в родную Эстонию — более осознанными, опытными и открытыми сердцем.</p>
                 <p class="mb-4">Созданное нами холистическое видение Casa Rituals родилось из этого внутреннего опыта. Поэтому Casa Rituals — это храм для тех, кто готов испытать свое внутреннее развитие и увидеть свою жизнь как осознанное путешествие.</p>
                 <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>Дэвид</strong> — сертифицированный звукотерапевт, Мастер Йога Нидры и Рейки, объединяющий в своей работе вибрационную терапию, работу с энергией и осознанное присутствие.<br><br><strong>Марит</strong> — сертифицированная создательница церемоний, обладательница сертификата Quantum Dowsing Mastery, объединяющая ритуалы, чувствование энергий и создание осознанного пространства.</p>
+            
+                <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-100"><a href="https://linktr.ee/casarituals" target="_blank" class="flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm"><i data-lucide="external-link" class="h-4 w-4 mr-2"></i>Расписание и дополнительная информация Casa Rituals</a></div>
             `,
             highlights: ['Астрологический обзор', 'Церемониальное какао', 'Хрустальные чаши и гонг', 'Медитация']
         }
@@ -736,7 +760,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1549488344-c27773295da9',
         teachers: ['david-lepp'],
-        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Reiki Infused Gong Journey & Yoga Nidra',
             date: 'April 19, 2026',
@@ -788,7 +812,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa',
         teachers: ['marit-tuisk'],
-        registerLink: 'https://linktr.ee/casarituals?utm_source=linktree_profile_share&ltsid=1a66c81a-b165-413c-9795-c1526e61c7ca',
+        registerLink: 'mailto:events@goyoga.ee',
         en: {
             title: 'Ritual with Cacao: Clear Intent & Calm Heart',
             date: 'April 24, 2026',

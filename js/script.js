@@ -1100,7 +1100,7 @@ function renderEvents(container, featuredOnly = false) {
                     <div class="mt-auto flex gap-3">
                         ${(event.registerLink && event.registerLink.startsWith('http')) ? `
                         <a href="${event.registerLink}" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center py-3 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
-                            ${event.registerLink.includes('casarituals') ? 'Casa Rituals Schedule' : translationsData[lang]['events.register_button']}
+                            ${translationsData[lang]['events.register_button']}
                         </a>` : `
                         <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="flex-1 text-center py-3 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
                             ${translationsData[lang]['events.register_button']}
