@@ -515,17 +515,61 @@ const eventsData = [
             location: 'Goyoga Tallinn Studio',
             organizer: 'Casa Rituals',
             description: 'We begin the evening with a short astrological insight into spring to understand the energies in motion, followed by ceremonial cacao and a deep gong journey.',
-            fullDescription: 'We start with ceremonial cacao to open the heart and bring clarity to what this period has moved within you. I will also share a short astrological overview. We then move into a deep gong journey. The sound frequencies support the nervous system to calm down and help integrate the experience in both the body and the subconscious. This evening is for closing, integrating, and consciously starting a new phase.',
-            highlights: ['Astrological Insight', 'Ceremonial Cacao', 'Gong Journey', 'Spring Integration']
+            fullDescription: `
+                <p class="mb-4">We begin the evening with a short astrological insight into spring to understand which energies are currently in motion and what this period activates within you.</p>
+                <p class="mb-4">We then begin with ceremonial cacao to open the heart and bring clarity to what this period has stirred in you. I will also share a short astrological overview to understand the larger cycle we are completing and where the energy is moving next.</p>
+                <p class="mb-4">Afterward, we move into a deep gong journey. The sound frequencies support the calming of the nervous system and help integrate the experience in both body and subconscious. This is a space where transformation can take root.</p>
+                <p class="mb-4 text-gray-700">This evening is for closure, integration, and consciously starting a new phase.</p>
+                <p class="mb-6 font-medium">Everything you need is already here. Just show up and allow yourself to receive.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> The Ritual Flow</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Space-opening meditation</li>
+                    <li>Cacao ceremony and conscious drinking</li>
+                    <li>Intention setting</li>
+                    <li>Sound space to hold your intention (crystal bowls and gong)</li>
+                    <li>Space-closing meditation</li>
+                    <li>Group sharing and integration</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Marit & David</h3>
+                <p class="mb-4">We are Marit and David. We have shared a path for over 30 years—navigating life, raising a family, and now sharing a unified holistic mission. From Estonia, life brought us to the United States, where we lived for nearly 30 years and went through profound inner transformations.</p>
+                <p class="mb-4">We experienced a society of wellness that valued security more than the soul. We experienced success and burnout, stability as well as inner emptiness. Now, we have made a conscious turn in our journey and have returned to our roots in our native Estonia—more conscious, experienced, and open-hearted.</p>
+                <p class="mb-4">Our co-created holistic vision, Casa Rituals, was born from this inner experience. Consequently, Casa Rituals is a temple for those who are ready to experience their own inner evolution and see their life as a conscious journey.</p>
+                <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>David</strong> is a certified sound therapist, Yoga Nidra, and Reiki Master, combining vibrational therapy, energy work, and conscious presence in his practice.<br><br><strong>Marit</strong> is a certified ceremony creator and space holder with a Quantum Dowsing Mastery certification, combining ritual, energy perception, and conscious space creation in her work.</p>
+            `,
+            highlights: ['Astrological Insights', 'Ceremonial Cacao', 'Crystal Bowls & Gong Journey', 'Guided Meditation']
         },
         et: {
-            title: 'Kevade rituaal kakao ja gongi rännakuga',
+            title: 'Kevade Rituaal Kakao ja Gongi rännakuga',
             date: '17. aprill 2026',
             location: 'Goyoga Tallinn Stuudio',
             organizer: 'Casa Rituals',
-            description: 'Alustame õhtut lühikese astroloogilise sissevaatega kevadesse, et mõista liikvel olevaid energiaid, millele järgneb kakao ja gongirännak.',
-            fullDescription: 'Alustame tseremoniaalse kakaoga, et avada süda ja tuua selgus sellesse, mida see periood sinus liigutas. Jagan ka lühikest astroloogilist ülevaadet – et mõista, millise suurema tsükli me nüüd lõpetame. Seejärel liigume sügavasse gongirännakusse. Helisagedused toetavad närvisüsteemi rahunemist ja aitavad integreerida kogetu. See õhtu on sulgemiseks, integreerimiseks ja teadlikuks uue faasi alustamiseks.',
-            highlights: ['Astroloogiline ülevaade', 'Tseremoniaalne kakao', 'Sügav Gongirännak', 'Kevadine integratsioon']
+            description: 'Alustame õhtut lühikese astroloogilise sissevaatega kevadesse, et mõista, millised energiad on hetkel liikumises ja mida see periood sinus aktiveerib.',
+            fullDescription: `
+                <p class="mb-4">Alustame õhtut lühikese astroloogilise sissevaatega kevadesse, et mõista, millised energiad on hetkel liikumises ja mida see periood sinus aktiveerib.</p>
+                <p class="mb-4">Seejärel alustame tseremoniaalse kakaoga, et avada süda ja tuua selgus sellesse, mida see periood sinus liigutas. Jagan ka lühikest astroloogilist ülevaadet – et mõista, millise suurema tsükli me nüüd lõpetame ja kuhu energia edasi liigub.</p>
+                <p class="mb-4">Seejärel liigume sügavasse gongirännakusse. Helisagedused toetavad närvisüsteemi rahunemist ja aitavad integreerida kogetu nii kehas kui alateadvuses. See on ruum, kus muutus saab kinnistuda.</p>
+                <p class="mb-4 text-gray-700">See õhtu on sulgemiseks, integreerimiseks ja teadlikuks uue faasi alustamiseks.</p>
+                <p class="mb-6 font-medium">Kõik vajalik on kohapeal olemas. Sina tule kohale ja luba endal vastu võtta.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Rituaali Kulg</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Ruumi avamise meditatsioon</li>
+                    <li>Kakaotseremoonia ja teadlik kakao joomine</li>
+                    <li>Kavatsuse seadmine</li>
+                    <li>Heliruum kristallkausside ja gongiga kavatsuse hoidmiseks</li>
+                    <li>Ruumi sulgemise meditatsioon</li>
+                    <li>Grupi jagamine ja integratsioon</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Marit & David</h3>
+                <p class="mb-4">Meie oleme Marit ja David. Oleme koos elanud ja jaganud ühist teed üle 30 aasta – käies läbi elu, kasvatades peret ja nüüd omades ühtset holistlikku missiooni. Eestist viis elu meid Ameerika Ühendriikidesse, kus elasime ligi 30 aastat ja läbisime ka sügavaid sisemisi muutuseid.</p>
+                <p class="mb-4">Oleme saanud olla osa heaolu ühiskonnast, mis väärtustas turvalisust rohkem kui hinge. Kogesime edu ja läbipõlemist, stabiilsust ja ühtlasi ka sisemist tühjust. Nüüd oleme teinud teadliku pöörde oma rännakul ja oleme tagasi oma juurte juures koduses Eestis – teadlikumate, kogenenumate ja sisemuselt avatumatena.</p>
+                <p class="mb-4">Meie ühiselt loodud holistiline visioon Casa Rituals sündis sellest sisemisest kogemusest. Sellest tulenevalt on ka Casa Rituals tempel neile, kes on valmis kogema oma sisemist arengut ja nägema oma elu kui teadlikku teekonda.</p>
+                <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>David</strong> on sertifitseeritud heliterapeut, jooga nidra ja Reiki Meister, ühendades oma töös vibratsiooniteraapia, energiatöö ja teadliku kohalolu.<br><br><strong>Marit</strong> on sertifitseeritud tseremooniate looja ja ruumihoidja ning omab Quantum Dowsing Mastery taseme sertifikaati, ühendades oma töös rituaali, energiataju ja teadliku ruumi loomise.</p>
+            `,
+            highlights: ['Astroloogiline sissevaade', 'Tseremoniaalne kakao', 'Kristallkausid ja gongirännak', 'Juhendatud meditatsioon']
         },
         fi: {
             title: 'Kevätjuhla kaakaolla ja gongimatkalla',
@@ -533,8 +577,30 @@ const eventsData = [
             location: 'Goyoga Tallinn Studio',
             organizer: 'Casa Rituals',
             description: 'Aloitamme illan lyhyellä astrologisella katsauksella kevääseen, jota seuraa seremoniallinen kaakao ja syvä gongimatka.',
-            fullDescription: 'Aloitamme seremoniallisella kaakaolla sydämen avaamiseksi. Jaan myös lyhyen astrologisen katsauksen. Tämän jälkeen siirrymme syvään gongimatkaan. Äänitaajuudet tukevat hermoston rauhoittumista ja auttavat integroimaan kokemuksen. Tämä ilta on tarkoitettu päättämiseen, integroimiseen ja tietoisesti uuden vaiheen aloittamiseen.',
-            highlights: ['Astrologinen katsaus', 'Seremoniallinen kaakao', 'Gongimatka', 'Kevään integraatio']
+            fullDescription: `
+                <p class="mb-4">Aloitamme illan lyhyellä astrologisella katsauksella kevääseen, jotta ymmärrämme, mitä energioita on tällä hetkellä liikkeellä ja mitä tämä ajanjakso aktivoi sinussa.</p>
+                <p class="mb-4">Tämän jälkeen aloitamme seremoniallisella kaakaolla sydämen avaamiseksi ja selkeyden tuomiseksi siihen, mitä tämä ajanjakso on nostanut esiin. Jaan myös lyhyen astrologisen katsauksen ymmärtääksemme suuremman syklin, jota olemme päättämässä, ja minne energia siirtyy seuraavaksi.</p>
+                <p class="mb-4">Sitten siirrymme syvään gongimatkaan. Äänitaajuudet auttavat hermostoa rauhoittumaan ja integroimaan kokemuksen sekä kehossa että alitajunnassa. Tämä on tila, jossa muutos voi juurtua.</p>
+                <p class="mb-4 text-gray-700">Tämä ilta on tarkoitettu sulkemiselle, integraatiolle ja uuden vaiheen tietoiselle aloittamiselle.</p>
+                <p class="mb-6 font-medium">Kaikki tarvittava on paikan päällä. Tule vain paikalle ja salli itsesi vastaanottaa.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Rituaalin Kulku</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Tilan avaava meditaatio</li>
+                    <li>Kaakaoseremonia ja tietoinen juominen</li>
+                    <li>Aikomuksen asettaminen</li>
+                    <li>Äänitila aikomuksen tukemiseen (kristallimaljat ja gongi)</li>
+                    <li>Tilan sulkeva meditaatio</li>
+                    <li>Ryhmän jakaminen ja integraatio</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Marit & David</h3>
+                <p class="mb-4">Olemme Marit ja David. Olemme jakaneet yhteisen polun yli 30 vuoden ajan – kasvattaen perhettä ja nykyään jakaen yhtenäisen holistisen mission. Virosta elämä vei meidät Yhdysvaltoihin, jossa asuimme lähes 30 vuotta käyden läpi syviä sisäisiä muutoksia.</p>
+                <p class="mb-4">Saimme kokea hyvinvointiyhteiskunnan, joka arvosti turvallisuutta enemmän kuin sielua. Koimme niin menestystä, loppuunpalamista, vakautta kuin myös sisäistä tyhjyyttä. Nyt olemme tehneet tietoisen käännöksen matkallamme ja palanneet juurillemme Viroon – tietoisempina, kokeneempina ja avosydämisempinä.</p>
+                <p class="mb-4">Yhdessä luomamme holistinen visio Casa Rituals syntyi tästä sisäisestä kokemuksesta. Siksi Casa Rituals on temppeli niille, jotka ovat valmiita kokemaan oman sisäisen kehityksensä ja näkemään elämänsä tietoisena matkana.</p>
+                <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>David</strong> on lisensoitu ääniterapeutti, Yoga Nidra ja Reiki Master, joka yhdistää työssään värähtelyterapian, energiatyön ja tietoisen läsnäolon.<br><br><strong>Marit</strong> on sertifioitu seremonioiden luoja ja tilanpitäjä, jolla on Quantum Dowsing Mastery -sertifikaatti, ja joka yhdistää työssään rituaalin, energiatajun ja tietoisen tilan luomisen.</p>
+            `,
+            highlights: ['Astrologinen katsaus', 'Seremoniallinen kaakao', 'Kristallimaljat ja gongi', 'Ohjattu meditaatio']
         },
         ru: {
             title: 'Весенний ритуал с какао и гонгом',
@@ -542,8 +608,30 @@ const eventsData = [
             location: 'Студия Goyoga Tallinn',
             organizer: 'Casa Rituals',
             description: 'Мы начинаем вечер с короткого астрологического обзора весны, за которым последует церемониальное какао и глубокое путешествие с гонгом.',
-            fullDescription: 'Мы начнем с церемониального какао, чтобы открыть сердце. Я также поделюсь кратким астрологическим обзором. Затем мы погрузимся в глубокое путешествие с гонгом. Звуковые частоты помогают нервной системе успокоиться. Этот вечер предназначен для завершения, интеграции и осознанного начала новой фазы.',
-            highlights: ['Астрологический обзор', 'Церемониальное какао', 'Медитация с гонгом', 'Интеграция весны']
+            fullDescription: `
+                <p class="mb-4">Мы начинаем вечер с небольшого астрологического обзора весны, чтобы понять, какие энергии сейчас движутся и что этот период активирует в вас.</p>
+                <p class="mb-4">Затем мы открываем сердце церемониальным какао, чтобы внести ясность в то, что этот период пробудил в вас. Я также поделюсь кратким астрологическим обзором — чтобы понять, какой большой цикл мы сейчас завершаем и куда движется энергия дальше.</p>
+                <p class="mb-4">После этого мы переходим к глубокому путешествию с гонгом. Звуковые частоты помогают успокоить нервную систему и интегрировать пережитое как в теле, так и в подсознании. Это пространство, где изменения могут закрепиться.</p>
+                <p class="mb-4 text-gray-700">Этот вечер предназначен для завершения, интеграции и осознанного начала нового этапа.</p>
+                <p class="mb-6 font-medium">Все необходимое уже есть на месте. Просто придите и позвольте себе принять опыт.</p>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Ход Ритуала</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-8">
+                    <li>Медитация на открытие пространства</li>
+                    <li>Церемония какао и осознанное распитие</li>
+                    <li>Установка намерения</li>
+                    <li>Звуковое пространство для поддержания намерения (хрустальные чаши и гонг)</li>
+                    <li>Медитация на закрытие пространства</li>
+                    <li>Групповая интеграция</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-3 flex items-center"><span class="text-pink-500 mr-2">✧</span> Марит и Дэвид</h3>
+                <p class="mb-4">Мы — Марит и Дэвид. Мы делим общий путь уже более 30 лет — проживая жизнь, воспитывая семью и теперь обладая единой холистической миссией. Из Эстонии жизнь привела нас в США, где мы прожили почти 30 лет и прошли через глубокие внутренние трансформации.</p>
+                <p class="mb-4">Мы смогли стать частью общества благополучия, которое ценило стабильность больше, чем душу. Мы познали и успех, и выгорание, стабильность и одновременно внутреннюю пустоту. Теперь мы совершили осознанный поворот на нашем пути и вернулись к своим корням в родную Эстонию — более осознанными, опытными и открытыми сердцем.</p>
+                <p class="mb-4">Созданное нами холистическое видение Casa Rituals родилось из этого внутреннего опыта. Поэтому Casa Rituals — это храм для тех, кто готов испытать свое внутреннее развитие и увидеть свою жизнь как осознанное путешествие.</p>
+                <p class="mb-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg mt-6"><strong>Дэвид</strong> — сертифицированный звукотерапевт, Мастер Йога Нидры и Рейки, объединяющий в своей работе вибрационную терапию, работу с энергией и осознанное присутствие.<br><br><strong>Марит</strong> — сертифицированная создательница церемоний, обладательница сертификата Quantum Dowsing Mastery, объединяющая ритуалы, чувствование энергий и создание осознанного пространства.</p>
+            `,
+            highlights: ['Астрологический обзор', 'Церемониальное какао', 'Хрустальные чаши и гонг', 'Медитация']
         }
     },
     {
