@@ -252,7 +252,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://fienta.com/cf/img/?width=1070&dpr=1&format=webp&gcs=true&file=/org/37107/uMxWwheTOuGlPAB.png',
         teachers: ['david-lepp'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://fienta.com/et/yoganidra-176547',
         en: {
             title: 'Yoga Nidra with Gong Journey and Reiki Energy',
             date: 'April 10, 2026',
