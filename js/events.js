@@ -760,7 +760,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://cdn.prod.website-files.com/61a921351681fe719a5e20c4/672a2b39d174ca4657b68143_BF229F80-7614-4DD8-8299-7515DDEA1647-p-800.jpg',
         teachers: ['david-lepp'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://app.hopitude.com/et/workouts/standalone/404082/1776621600000',
         en: {
             title: 'Reiki Infused Gong Journey & Yoga Nidra',
             date: 'April 19, 2026',
