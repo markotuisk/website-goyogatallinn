@@ -1,0 +1,45 @@
+{
+    "single": {
+        "title": "Single Session",
+        "options": [
+            {
+                "name": "1 session",
+                "price": "18 €"
+            }
+        ]
+    },
+    "passes": {
+        "title": "Multi-Visit Passes",
+        "options": [
+            {
+                "name": "5-class pass",
+                "price": "50 €"
+            },
+            {
+                "name": "12-class pass",
+                "price": "108 €"
+            },
+            {
+                "name": "20-class pass",
+                "price": "199 €"
+            }
+        ]
+    },
+    "memberships": {
+        "title": "Membership",
+        "options": [
+            {
+                "name": "1 month unlimited",
+                "price": "70 €"
+            },
+            {
+                "name": "6 month membership",
+                "price": "65 €/month"
+            },
+            {
+                "name": "Annual membership",
+                "price": "60 €/month"
+            }
+        ]
+    }
+}

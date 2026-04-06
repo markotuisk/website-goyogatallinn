@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Kam Wattanodom",
+        "timeAgo": "6 months ago",
+        "date": "2025-07-27",
+        "stars": 5,
+        "text": "Visiting Tallinn from abroad, happy to have found this shala. Raili was incredibly welcoming and I gained much from her instruction and adjustments.",
+        "source": "google",
+        "badge": null
+    },
+    {
+        "name": "Sébastien Migeotte",
+        "timeAgo": "9 months ago",
+        "date": "2025-04-27",
+        "stars": 5,
+        "text": "Very nice place, easy to park or get there by public transport. The teachers are professional and nice.",
+        "source": "google",
+        "badge": null
+    },
+    {
+        "name": "Triin Parro",
+        "timeAgo": "3 years ago",
+        "date": "2023-01-27",
+        "stars": 5,
+        "text": "Nice and cozy studio in the city center. Very nice teachers and a warm and supportive environment 🙏",
+        "source": "google",
+        "badge": null
+    },
+    {
+        "name": "Sandra Linneberg",
+        "timeAgo": "3 years ago",
+        "date": "2023-01-26",
+        "stars": 5,
+        "text": "A beautiful and supportive space for practice.",
+        "source": "google",
+        "badge": null
+    },
+    {
+        "name": "Anne Nõlvak",
+        "timeAgo": "4 years ago",
+        "date": "2022-01-27",
+        "stars": 5,
+        "text": "Amazing place with more amazing people 💗",
+        "source": "google",
+        "badge": {
+            "type": "localGuide",
+            "text": "Local Guide"
+        }
+    },
+    {
+        "name": "Kristi Pähklimägi",
+        "timeAgo": "4 years ago",
+        "date": "2022-01-26",
+        "stars": 5,
+        "text": "Highly recommended for traditional Ashtanga practice.",
+        "source": "google",
+        "badge": null
+    },
+    {
+        "name": "Eret Hünninen",
+        "timeAgo": "5 years ago",
+        "date": "2021-01-27",
+        "stars": 5,
+        "text": "Transformative experience and wonderful community.",
+        "source": "google",
+        "badge": {
+            "type": "reviewer",
+            "text": "1 review"
+        }
+    },
+    {
+        "name": "Kiira Kuldma",
+        "timeAgo": "5 years ago",
+        "date": "2021-01-26",
+        "stars": 5,
+        "text": "A sanctuary in the heart of Tallinn. Peaceful and professional.",
+        "source": "google",
+        "badge": {
+            "type": "localGuide",
+            "text": "Local Guide • 49 reviews • 80 photos"
+        }
+    }
+]

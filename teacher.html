@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="seo-title">Teacher Profile | Goyoga Tallinn</title>
+    <meta name="description" id="seo-description"
+        content="Discover the journey and philosophy of our experienced teachers at Goyoga Tallinn." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=latin,cyrillic&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/branding/logo-goyoga-tallinn-estonia.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logo-goyoga-tallinn-estonia-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/logo-goyoga-tallinn-estonia-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Data Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/teachers-detail.js?v=2"></script>
+    <script src="js/seo-data.js"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N0X5B7NG6N');
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar (Same as index.html) -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm">
+        <div class="container-custom py-4 md:py-5">
+            <div class="flex items-center justify-between">
+                <a href="index.html#home" class="flex items-center">
+                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn" class="h-10 w-auto">
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="index.html#home" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#about" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.about">About</a></li>
+                        <li><a href="index.html#studio" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.studio">Studio</a></li>
+                        <li><a href="index.html#schedule" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="index.html#pricing" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="index.html#teachers" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="index.html#events" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.events">Events</a></li>
+                        <li><a href="index.html#community" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.community">Community</a></li>
+                        <li><a href="index.html#contact" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.contact">Contact</a></li>
+
+                        <!-- Language Switcher -->
+                        <li class="language-switcher ml-4">
+                            <button id="language-toggle" class="flex items-center gap-2 text-sm font-medium">
+                                <span class="language-flag-container">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag"
+                                        id="current-flag">
+                                </span>
+                                <span id="current-language">EN</span>
+                                <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                            </button>
+                            <div class="language-dropdown" id="language-dropdown">
+                                <div class="language-option" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                                    <span>English</span>
+                                </div>
+                                <div class="language-option" data-lang="et">
+                                    <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                                    <span>Eesti</span>
+                                </div>
+                                <div class="language-option" data-lang="fi">
+                                    <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                                    <span>Suomi</span>
+                                </div>
+                        <div class="language-option" data-lang="ru">
+                            <img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png"/>
+                            <span>Русский</span>
+                        </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="menu-toggle" class="block md:hidden focus:outline-none">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Teacher Hero Section -->
+        <section id="teacher-hero-section" class="relative py-20 overflow-hidden transition-all duration-700">
+            <div class="container-custom">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <a href="index.html#teachers"
+                            class="inline-flex items-center text-sm font-medium text-pink-600 mb-8 hover:text-pink-700 transition-colors">
+                            <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i>
+                            <span data-i18n="teachers.back_to_teachers">Back to Teachers</span>
+                        </a>
+                        <h1 id="teacher-name" class="text-4xl md:text-5xl lg:text-6xl font-medium mb-4">Teacher Name
+                        </h1>
+                        <p id="teacher-role" class="text-xl text-pink-500 font-medium mb-8 uppercase tracking-wider">
+                            Role / Specialization</p>
+                        <blockquote
+                            class="relative border-l-4 border-pink-200 pl-6 mb-8 italic text-2xl text-gray-600 font-serif">
+                            <p id="teacher-quote">"Inspirational quote goes here."</p>
+                        </blockquote>
+
+                        <!-- Teaching Languages Container -->
+                        <div id="teacher-languages-container" class="mb-10 hidden">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3"
+                                data-i18n="teachers.teaching_languages">Teaching Languages</p>
+                            <div id="teacher-languages-flags" class="flex flex-wrap gap-2"></div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 mb-10">
+                            <!-- Social / Links Placeholders -->
+                            <a id="social-instagram" href="javascript:void(0)" target="_blank"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden">
+                                <i data-lucide="instagram" class="h-5 w-5"></i>
+                            </a>
+                            <a id="social-facebook" href="javascript:void(0)" target="_blank"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden">
+                                <i data-lucide="facebook" class="h-5 w-5"></i>
+                            </a>
+                            <a id="social-instagram2" href="javascript:void(0)" target="_blank"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden">
+                                <i data-lucide="instagram" class="h-5 w-5"></i>
+                            </a>
+                            <a id="social-tiktok" href="javascript:void(0)" target="_blank"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                                </svg>
+                            </a>
+                            <a id="social-yogaalliance" href="javascript:void(0)" target="_blank"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden"
+                                title="Yoga Alliance Certified">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <path d="M9 12l2 2 4-4" />
+                                </svg>
+                            </a>
+                            <a id="social-website" href="javascript:void(0)" target="_blank"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden">
+                                <i data-lucide="globe" class="h-5 w-5"></i>
+                            </a>
+                            <a id="social-email" href="javascript:void(0)"
+                                class="p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-all text-pink-600 hidden">
+                                <i data-lucide="mail" class="h-5 w-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="fade-in delay-200">
+                        <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                            <img id="teacher-image" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b"
+                                alt="Teacher" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="section-padding bg-white">
+            <div class="container-custom">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div class="md:col-span-2">
+                            <h2 class="text-3xl font-medium mb-6" data-i18n="teachers.biography">My Journey</h2>
+                            <div id="teacher-bio" class="text-lg text-gray-600 leading-relaxed space-y-4">
+                                <!-- Bio injected here -->
+                            </div>
+
+                            <h2 class="text-3xl font-medium mt-16 mb-6" data-i18n="teachers.philosophy">My Philosophy
+                            </h2>
+                            <p id="teacher-philosophy" class="text-lg text-gray-600 leading-relaxed italic">
+                                <!-- Philosophy injected here -->
+                            </p>
+                        </div>
+                        <div>
+                            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                                <h3 class="text-xl font-medium mb-6" data-i18n="teachers.highlights">Specializations
+                                </h3>
+                                <ul id="teacher-highlights" class="space-y-4">
+                                    <!-- Highlights injected here -->
+                                </ul>
+
+                                <div class="mt-12">
+                                    <h3 class="text-xl font-medium mb-4" data-i18n="teachers.book_class">Practise with
+                                        Me</h3>
+                                    <p class="text-sm text-gray-500 mb-6 italic"
+                                        data-i18n="teachers.private_classes_info">
+                                        All our teachers are available for private classes and events.
+                                    </p>
+                                    <div class="space-y-3">
+                                        <a href="index.html#schedule"
+                                            class="block w-full text-center px-6 py-4 bg-gray-800 text-white font-medium rounded-xl hover:bg-gray-700 transition-colors shadow-md"
+                                            data-i18n="hero.view_schedule">
+                                            View Schedule
+                                        </a>
+                                        <a id="book-private-btn"
+                                            href="mailto:info@goyoga.ee?subject=Private%20Class%20Enquiry"
+                                            class="block w-full text-center px-6 py-4 bg-pink-50 text-pink-600 font-medium rounded-xl hover:bg-pink-100 transition-colors shadow-sm border border-pink-100"
+                                            data-i18n="teachers.book_private">
+                                            Book a Private Class / Event
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Testimonials Section (Hidden by default) -->
+        <section id="teacher-testimonials-section" class="section-padding bg-gray-50 hidden">
+            <div class="container-custom max-w-5xl mx-auto">
+                <h2 class="text-3xl font-medium mb-4 text-center" data-i18n="teachers.what_students_say">What Students
+                    Say</h2>
+                <p class="text-gray-500 text-center mb-12 text-lg">How students describe practising with <span
+                        id="testimonials-teacher-name">this teacher</span></p>
+                <div id="teacher-testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Testimonials injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Gallery Section -->
+        <section id="teacher-gallery-section" class="section-padding bg-gray-50 overflow-hidden hidden">
+            <div class="container-custom">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-3xl font-medium" data-i18n="teachers.gallery">Moments from Practice</h2>
+                    <div class="flex gap-2">
+                        <button class="p-2 rounded-full border border-gray-200 hover:bg-white transition-colors"><i
+                                data-lucide="chevron-left" class="h-5 w-5"></i></button>
+                        <button class="p-2 rounded-full border border-gray-200 hover:bg-white transition-colors"><i
+                                data-lucide="chevron-right" class="h-5 w-5"></i></button>
+                    </div>
+                </div>
+                <!-- Dynamic Gallery Container -->
+                <div id="teacher-gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Images injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-800 text-white pt-16 pb-10">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <div class="mb-5">
+                        <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn"
+                            class="h-12 w-auto brightness-0 invert">
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-xs" data-i18n="footer.description">Traditional Ashtanga yoga in
+                        the heart of the city. Join our community of dedicated practitioners.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="youtube"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"
+                                class="h-5 w-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.quick_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.about">About</a></li>
+                        <li><a href="index.html#schedule" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="index.html#teachers" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="index.html#events" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.events">Events</a>
+                        </li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.resources">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="index.html#events" class="text-gray-300 hover:text-white"
+                                data-i18n="footer.workshops">Workshops</a></li>
+                        <li><a href="faq.html" class="hover:text-pink-600 transition-colors"
+                                data-i18n="footer.faq">FAQ</a></li>
+                        <li><a href="rent.html" class="hover:text-pink-600 transition-colors"
+                                data-i18n="footer.rent">Studio Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.newsletter">Newsletter</h4>
+                    <p class="text-gray-300 mb-4" data-i18n="footer.newsletter_description">Join our newsletter to
+                        receive updates about workshops and events.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="hidden" name="formType" value="newsletter">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            data-i18n-placeholder="footer.email_placeholder" required>
+                        <button type="submit"
+                            class="w-full mt-2 px-4 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700"
+                            data-i18n="footer.subscribe_button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p data-i18n="footer.copyright">© 2025 goyoga.ee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/teacher-page.js"></script>
+</body>
+
+</html>

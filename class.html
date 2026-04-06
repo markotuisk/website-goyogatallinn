@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="seo-title">Class Details | Goyoga Tallinn</title>
+    <meta name="description" id="seo-description" content="Learn more about our yoga classes and wellness practices." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=latin,cyrillic&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/branding/logo-goyoga-tallinn-estonia.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logo-goyoga-tallinn-estonia-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/logo-goyoga-tallinn-estonia-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Data Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/seo-data.js"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N0X5B7NG6N');
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar (Same as index.html) -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm">
+        <div class="container-custom py-4 md:py-5">
+            <div class="flex items-center justify-between">
+                <a href="index.html#home" class="flex items-center">
+                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn" class="h-10 w-auto">
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="index.html#home" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#about" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.about">About</a></li>
+                        <li><a href="index.html#classes"
+                                class="text-sm font-medium link-underline transition-colors text-pink-600"
+                                data-i18n="nav.classes">Classes</a></li>
+                        <li><a href="index.html#studio" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.studio">Studio</a></li>
+                        <li><a href="index.html#schedule" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="index.html#pricing" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="index.html#teachers" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="index.html#events" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.events">Events</a></li>
+                        <li><a href="index.html#community" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.community">Community</a></li>
+                        <li><a href="index.html#contact" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.contact">Contact</a></li>
+
+                        <!-- Language Switcher -->
+                        <li class="language-switcher ml-4">
+                            <button id="language-toggle" class="flex items-center gap-2 text-sm font-medium">
+                                <span class="language-flag-container">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag"
+                                        id="current-flag">
+                                </span>
+                                <span id="current-language">EN</span>
+                                <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                            </button>
+                            <div class="language-dropdown" id="language-dropdown">
+                                <div class="language-option" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                                    <span>English</span>
+                                </div>
+                                <div class="language-option" data-lang="et">
+                                    <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                                    <span>Eesti</span>
+                                </div>
+                                <div class="language-option" data-lang="fi">
+                                    <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                                    <span>Suomi</span>
+                                </div>
+                        <div class="language-option" data-lang="ru">
+                            <img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png"/>
+                            <span>Русский</span>
+                        </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <!-- Mobile Language Switcher -->
+                    <div class="language-switcher md:hidden">
+                        <button id="mobile-language-toggle" class="flex items-center gap-2 text-sm font-medium">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag"
+                                id="mobile-current-flag">
+                            <span id="mobile-current-language">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="mobile-language-dropdown">
+                            <div class="language-option-mobile" data-lang="en">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option-mobile" data-lang="et">
+                                <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                                <span>Eesti</span>
+                            </div>
+                            <div class="language-option-mobile" data-lang="fi">
+                                <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                                <span>Suomi</span>
+                            </div>
+                            <div class="language-option-mobile" data-lang="ru">
+                                <img src="https://flagcdn.com/w20/ru.png" alt="Русский" class="language-flag">
+                                <span>Русский</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="menu-toggle" class="block md:hidden focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="flex justify-end p-4">
+                <button id="menu-close" class="focus:outline-none">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col h-full justify-center items-center space-y-8 p-8">
+                <a href="index.html#home" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.home">Home</a>
+                <a href="index.html#about" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.about">About</a>
+                <a href="index.html#classes"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.classes">Classes</a>
+                <a href="index.html#studio"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.studio">Studio</a>
+                <a href="index.html#schedule"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.schedule">Schedule</a>
+                <a href="index.html#pricing"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.pricing">Pricing</a>
+                <a href="index.html#teachers"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.teachers">Teachers</a>
+                <a href="index.html#events"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.events">Events</a>
+                <a href="index.html#community"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.community">Community</a>
+                <a href="index.html#contact"
+                    class="mobile-link text-xl font-medium transition-colors hover:text-gray-600"
+                    data-i18n="nav.contact">Contact</a>
+
+                <!-- Mobile Language Options in Menu -->
+                <div class="flex flex-col gap-4 mt-8">
+                    <div class="text-center mb-2 text-gray-500 font-medium" data-i18n="nav.language">Language</div>
+                    <div class="flex gap-4">
+                        <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border"
+                            data-lang="en">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </button>
+                        <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border"
+                            data-lang="et">
+                            <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                            <span>Eesti</span>
+                        </button>
+                        <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border"
+                            data-lang="fi">
+                            <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                            <span>Suomi</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Class Hero Section -->
+        <section class="relative py-20 overflow-hidden bg-gray-50">
+            <div class="container-custom">
+                <div class="flex flex-col items-center text-center">
+                    <a href="index.html#classes"
+                        class="inline-flex items-center text-sm font-medium text-pink-600 mb-8 hover:text-pink-700 transition-colors">
+                        <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i>
+                        <span data-i18n="classes.back_to_classes">Back to Classes</span>
+                    </a>
+                    <div class="p-3 bg-pink-100 rounded-xl mb-6">
+                        <img id="class-icon-img" src="" alt="Icon" class="h-10 w-10 text-pink-600 hidden">
+                        <i id="class-icon" data-lucide="flower-2" class="h-10 w-10 text-pink-600"></i>
+                    </div>
+                    <h1 id="class-title" class="text-4xl md:text-5xl font-medium mb-6">Class Title</h1>
+                    <p id="class-tagline" class="text-xl text-gray-500 max-w-2xl mx-auto mb-8">
+                        Short tagline describing the essence of the class.
+                    </p>
+                </div>
+                <div class="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl mt-8">
+                    <img id="class-image" src="" alt="Class Image" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is it & Who is it for -->
+        <section class="section-padding bg-white">
+            <div class="container-custom">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-2xl font-medium mb-6 flex items-center">
+                            <i data-lucide="info" class="h-6 w-6 text-pink-500 mr-3"></i>
+                            <span data-i18n="classes.what_is_it">What is it?</span>
+                        </h2>
+                        <div id="class-description" class="text-gray-600 leading-relaxed text-lg space-y-4">
+                            <!-- Description Injected Here -->
+                        </div>
+                    </div>
+                    <div class="bg-pink-50/50 p-8 rounded-2xl border border-pink-100">
+                        <h2 class="text-2xl font-medium mb-6 flex items-center">
+                            <i data-lucide="users" class="h-6 w-6 text-pink-500 mr-3"></i>
+                            <span data-i18n="classes.who_is_it_for">Who is it for?</span>
+                        </h2>
+                        <div id="class-audience" class="text-gray-700 leading-relaxed space-y-4 font-medium">
+                            <!-- Audience Injected Here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits & Features (moved up) -->
+        <section class="section-padding bg-white">
+            <div class="container-custom">
+                <h2 class="text-3xl font-medium mb-12 text-center" data-i18n="classes.benefits">Key Benefits</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="class-benefits">
+                    <!-- Benefits injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section (Hidden by default) -->
+        <section id="class-what-to-expect-section" class="section-padding bg-gray-50 hidden">
+            <div class="container-custom max-w-4xl mx-auto">
+                <h2 class="text-3xl font-medium mb-8 text-center flex items-center justify-center">
+                    <i data-lucide="compass" class="h-8 w-8 text-pink-500 mr-3"></i>
+                    <span data-i18n="classes.what_to_expect">What to Expect</span>
+                </h2>
+                <div id="class-what-to-expect-content" class="text-lg text-gray-600 leading-relaxed space-y-6">
+                    <!-- What to Expect Injected Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Lineage Section (Hidden by default) -->
+        <section id="class-lineage-section" class="section-padding bg-white hidden">
+            <div class="container-custom max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-medium mb-8 flex items-center justify-center">
+                    <i data-lucide="scroll" class="h-8 w-8 text-pink-500 mr-3"></i>
+                    <span data-i18n="classes.lineage">The Lineage</span>
+                </h2>
+                <div id="class-lineage-content" class="text-lg text-gray-600 leading-relaxed space-y-6 font-serif">
+                    <!-- Lineage Injected Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Section (Hidden by default) -->
+        <section id="class-social-proof-section" class="section-padding bg-gray-50 hidden">
+            <div class="container-custom">
+                <h2 class="text-3xl font-medium mb-12 text-center" data-i18n="classes.social_proof_title">Celebrities,
+                    Business Professionals and Entrepreneurs about Ashtanga Yoga</h2>
+                <div id="class-social-proof-grid"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Social Proof Cards Injected Here -->
+                </div>
+                <div class="text-center mt-12 hidden" id="social-proof-show-more-container">
+                    <button id="social-proof-show-more-btn"
+                        class="inline-flex items-center justify-center px-8 py-3 border border-pink-200 text-base font-medium rounded-full text-pink-700 bg-pink-50 hover:bg-pink-100 transition-colors duration-300">
+                        Show More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Section (Who teaches this) -->
+        <section class="section-padding bg-white">
+            <div class="container-custom">
+                <h2 class="text-3xl font-medium mb-12 text-center" data-i18n="classes.meet_guides">Meet Your Guides</h2>
+                <div id="related-teachers"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-center">
+                    <!-- Teachers injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding bg-gray-50">
+            <div class="container-custom max-w-3xl">
+                <h2 class="text-3xl font-medium mb-12 text-center" data-i18n="classes.faq">Common Questions</h2>
+                <div id="class-faq" class="space-y-4">
+                    <!-- FAQs injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-gray-900 text-white text-center">
+            <div class="container-custom">
+                <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="classes.ready_to_start">Ready to Start?
+                </h2>
+                <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto" data-i18n="classes.book_cta">Check our schedule
+                    and book your next class today.</p>
+                <a href="index.html#schedule"
+                    class="px-8 py-4 bg-white text-gray-900 font-medium rounded-md hover:bg-gray-100 transition-colors shadow-lg text-lg">
+                    <span data-i18n="hero.view_schedule">View Schedule</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-800 text-white pt-16 pb-10">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <div class="mb-5">
+                        <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn"
+                            class="h-12 w-auto brightness-0 invert">
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-xs" data-i18n="footer.description">Traditional Ashtanga yoga in
+                        the heart of the city. Join our community of dedicated practitioners.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="youtube"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter"
+                                class="h-5 w-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.quick_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.about">About</a></li>
+                        <li><a href="index.html#schedule" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="index.html#teachers" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="index.html#events" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.events">Events</a>
+                        </li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white"
+                                data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.resources">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="index.html#events" class="text-gray-300 hover:text-white"
+                                data-i18n="footer.workshops">Workshops</a></li>
+                        <li><a href="faq.html" class="hover:text-pink-600 transition-colors"
+                                data-i18n="footer.faq">FAQ</a></li>
+                        <li><a href="rent.html" class="hover:text-pink-600 transition-colors"
+                                data-i18n="footer.rent">Studio Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.newsletter">Newsletter</h4>
+                    <p class="text-gray-300 mb-4" data-i18n="footer.newsletter_description">Join our newsletter to
+                        receive updates about workshops and events.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="hidden" name="formType" value="newsletter">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                            data-i18n-placeholder="footer.email_placeholder" required>
+                        <button type="submit"
+                            class="w-full mt-2 px-4 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700"
+                            data-i18n="footer.subscribe_button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p data-i18n="footer.copyright">© 2025 goyoga.ee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/class-page.js"></script>
+</body>
+
+</html>

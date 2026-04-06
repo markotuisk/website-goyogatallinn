@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Practice | Goyoga Tallinn</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --pink: #c85a8a;
+            --pink-light: #f5e6ef;
+            --dark: #1a1a1a;
+            --gray: #6b7280;
+            --light: #fcfbf9;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(252, 251, 249, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 36px;
+        }
+
+        nav span {
+            font-size: 0.75rem;
+            color: var(--gray);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ── PROGRESS ── */
+        #progress-bar-wrap {
+            position: fixed;
+            top: 65px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            height: 3px;
+            background: var(--border);
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: var(--pink);
+            transition: width 0.4s ease;
+        }
+
+        /* ── SCREENS ── */
+        .screen {
+            display: none;
+            min-height: 100vh;
+            padding: 100px 1.5rem 3rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .screen.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ── INTRO ── */
+        #screen-intro {
+            text-align: center;
+            align-items: center;
+        }
+
+        #screen-intro h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        #screen-intro p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 500px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .tag-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .tag {
+            background: var(--pink-light);
+            color: var(--pink);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.9rem;
+            border-radius: 99px;
+        }
+
+        /* ── QUESTION ── */
+        .q-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--pink);
+            margin-bottom: 0.75rem;
+        }
+
+        .q-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            line-height: 1.35;
+            margin-bottom: 0.5rem;
+        }
+
+        .q-sub {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .options {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .opt {
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .opt:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(200, 90, 138, 0.1);
+        }
+
+        .opt.selected {
+            border-color: var(--pink);
+            background: var(--pink-light);
+            color: var(--pink);
+            font-weight: 500;
+        }
+
+        .opt .opt-icon {
+            font-size: 1.3rem;
+            margin-right: 0.6rem;
+        }
+
+        .multi-hint {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        /* ── NAME SCREEN ── */
+        #screen-name {
+            text-align: center;
+            align-items: center;
+        }
+
+        #screen-name h2 {
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        #screen-name p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        #name-input {
+            width: 100%;
+            max-width: 380px;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+            margin-bottom: 1.5rem;
+            background: white;
+        }
+
+        #name-input:focus {
+            border-color: var(--pink);
+        }
+
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--pink);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(200, 90, 138, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--dark);
+            border: 2px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--dark);
+        }
+
+        .btn-pink {
+            background: var(--pink);
+            color: white;
+        }
+
+        .btn-pink:hover {
+            background: #a8436e;
+            transform: translateY(-1px);
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* ── REPORT ── */
+        #screen-report {
+            display: none;
+            padding-top: 80px;
+        }
+
+        #screen-report.active {
+            display: block;
+        }
+
+        .report-hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #3d1a2e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .report-hero .profile-tag {
+            display: inline-block;
+            background: var(--pink);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            margin-bottom: 1.25rem;
+        }
+
+        .report-hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .report-hero .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .report-hero .name-greeting {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .report-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        /* match bars */
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--pink);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .class-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .class-card.top-pick {
+            border-color: var(--pink);
+            box-shadow: 0 4px 24px rgba(200, 90, 138, 0.15);
+        }
+
+        .class-card-body {
+            padding: 1.5rem;
+        }
+
+        .class-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .class-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .match-pct {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--pink);
+            background: var(--pink-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            white-space: nowrap;
+        }
+
+        .match-bar-bg {
+            height: 4px;
+            background: var(--border);
+            border-radius: 99px;
+            margin-bottom: 1rem;
+        }
+
+        .match-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--pink), #e8829f);
+            border-radius: 99px;
+            transition: width 1s ease;
+        }
+
+        .class-why {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .class-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .class-tag {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.7rem;
+            border-radius: 99px;
+            background: #f3f4f6;
+            color: var(--gray);
+        }
+
+        .top-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: var(--pink);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 99px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* event cards */
+        .event-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .event-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .event-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .event-why {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* journey */
+        .journey-box {
+            background: linear-gradient(135deg, #fdf4f8, #fcfbf9);
+            border: 1px solid var(--pink-light);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .journey-steps {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.25rem;
+        }
+
+        .journey-step {
+            flex: 1;
+            min-width: 160px;
+            background: white;
+            border-radius: 14px;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .journey-step .step-num {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--pink);
+            margin-bottom: 0.4rem;
+        }
+
+        .journey-step .step-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+        }
+
+        .journey-step .step-note {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        /* evolving message */
+        .evolve-box {
+            background: var(--dark);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .evolve-box h3 {
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+
+        .evolve-box p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* actions */
+        .report-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        /* loading */
+        #loading-screen {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--light);
+            z-index: 200;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #loading-screen.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--border);
+            border-top-color: var(--pink);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .methodology-box {
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .methodology-toggle {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--dark);
+            text-align: left;
+        }
+
+        .methodology-toggle:hover {
+            background: var(--pink-light);
+        }
+
+        .methodology-body {
+            display: none;
+            padding: 1.25rem 1.5rem;
+            background: #fafafa;
+            border-top: 1px solid var(--border);
+        }
+
+        .methodology-body.open {
+            display: block;
+        }
+
+        .methodology-body p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .methodology-body table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .methodology-body th {
+            text-align: left;
+            padding: 0.4rem 0.6rem;
+            color: var(--pink);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .methodology-body td {
+            padding: 0.4rem 0.6rem;
+            color: var(--gray);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* lang picker */
+        .lang-row {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 99px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: white;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            border-color: var(--pink);
+            color: var(--pink);
+            background: var(--pink-light);
+        }
+
+        /* question hint */
+        .q-hint-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #aaa;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1.5px solid #ccc;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            transition: all 0.2s;
+        }
+
+        .q-hint-btn:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+        }
+
+        .q-hint-box {
+            background: #f8f8f8;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            font-size: 0.82rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            display: none;
+        }
+
+        .q-hint-box.open {
+            display: block;
+        }
+
+        /* links section */
+        .links-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .link-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.1rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.2s;
+        }
+
+        .link-card:hover {
+            border-color: var(--pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(200, 90, 138, 0.12);
+        }
+
+        .link-card .lc-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .link-card .lc-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--pink);
+        }
+
+        .link-card .lc-sub {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 0.2rem;
+        }
+
+        /* explorer pass */
+        .explorer-box {
+            background: linear-gradient(135deg, #fff0f7, #fff8fb);
+            border: 2px solid var(--pink-light);
+            border-radius: 20px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .explorer-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .explorer-box p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        /* feedback */
+        .feedback-box {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .feedback-box p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            font-size: 1.8rem;
+            cursor: pointer;
+            opacity: 0.3;
+            transition: opacity 0.15s;
+        }
+
+        .star.on {
+            opacity: 1;
+        }
+
+        .feedback-text {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-family: Inter, sans-serif;
+            resize: vertical;
+            min-height: 60px;
+            outline: none;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-text:focus {
+            border-color: var(--pink);
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+
+            nav,
+            #progress-bar-wrap,
+            .report-actions,
+            .methodology-box,
+            .no-print {
+                display: none !important;
+            }
+
+            #screen-report {
+                padding-top: 0 !important;
+            }
+
+            .print-only {
+                display: flex !important;
+                padding: 1.5rem 2rem;
+                border-bottom: 2px solid var(--border);
+                margin-bottom: 1rem;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .print-logo {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            .print-contacts {
+                font-size: 0.78rem;
+                color: var(--gray);
+                text-align: right;
+                line-height: 1.6;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .class-header {
+                flex-direction: column;
+            }
+
+            .report-hero {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="https://www.goyoga.ee/" style="display:flex;align-items:center;text-decoration:none;">
+            <img src="https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia.svg"
+                onerror="this.onerror=null;this.src='';this.style.fontFamily='Playfair Display, serif';this.style.fontSize='1.2rem';this.style.fontWeight='700';this.alt='Goyoga Tallinn';"
+                alt="Goyoga Tallinn" />
+        </a>
+        <span id="nav-step-label">Find Your Practice</span>
+        <a href="https://www.goyoga.ee/"
+            style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.82rem;font-weight:600;color:#888;text-decoration:none;white-space:nowrap;padding:0.4rem 0.85rem;border:1.5px solid #ddd;border-radius:99px;transition:all 0.2s;"
+            onmouseover="this.style.borderColor='#C85A8A';this.style.color='#C85A8A';"
+            onmouseout="this.style.borderColor='#ddd';this.style.color='#888';">
+            ← Back
+        </a>
+    </nav>
+    <div id="progress-bar-wrap">
+        <div id="progress-bar" style="width:0%"></div>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p style="color:var(--gray);font-size:0.9rem;">Analysing your answers...</p>
+    </div>
+
+    <!-- ════════════ INTRO ════════════ -->
+    <div class="screen active" id="screen-intro">
+        <div class="lang-row">
+            <button class="lang-btn" id="lb-et" onclick="setLang('et')">🇪🇪 Eesti</button>
+            <button class="lang-btn active" id="lb-en" onclick="setLang('en')">🇬🇧 English</button>
+            <button class="lang-btn" id="lb-fi" onclick="setLang('fi')">🇫🇮 Suomi</button>
+            <button class="lang-btn" id="lb-ru" onclick="setLang('ru')">🇷🇺 Русский</button>
+        </div>
+        <h1 id="i-h1">Find Your<br /><em>Perfect Practice</em></h1>
+        <p id="i-sub">12 questions · 5 minutes · personalised for you.<br />Discover which Goyoga classes, events and
+            retreats truly suit who you are.</p>
+        <div class="tag-row">
+            <span class="tag" id="t1">Physical</span>
+            <span class="tag" id="t2">Mental</span>
+            <span class="tag" id="t3">Spiritual</span>
+            <span class="tag" id="t4">Astrological</span>
+        </div>
+        <button class="btn btn-primary" id="i-begin" onclick="startQuiz()">Begin →</button>
+    </div>
+
+    <!-- ════════════ QUESTIONS ════════════ -->
+    <div class="screen" id="screen-q">
+        <div class="q-label" id="q-label">Question 1 of 13</div>
+        <div style="display:flex;align-items:flex-start;gap:0.4rem">
+            <div class="q-text" id="q-text" style="flex:1"></div>
+            <button class="q-hint-btn" id="q-hint-btn" onclick="toggleHint()" title="Why do we ask this?">?</button>
+        </div>
+        <div class="q-hint-box" id="q-hint-box"></div>
+        <div class="q-sub" id="q-sub"></div>
+        <div class="multi-hint" id="multi-hint" style="display:none">Select all that apply</div>
+        <div class="options" id="options-container"></div>
+        <div class="nav-btns">
+            <button class="btn btn-outline" id="btn-back" onclick="prevQ()">← Back</button>
+            <button class="btn btn-primary" id="btn-next" onclick="nextQ()" disabled>Continue →</button>
+        </div>
+    </div>
+
+    <!-- ════════════ NAME ════════════ -->
+    <div class="screen" id="screen-name">
+        <h2>One last thing...</h2>
+        <p style="color:var(--gray)">What's your name? We'll personalise your report.</p>
+        <input type="text" id="name-input" placeholder="Your first name..." maxlength="40" />
+        <button class="btn btn-primary" onclick="generateReport()">See My Practice Profile →</button>
+    </div>
+
+    <!-- ════════════ REPORT ════════════ -->
+    <div class="screen" id="screen-report">
+        <div class="report-hero">
+            <div class="profile-tag" id="r-profile-tag">Your Profile</div>
+            <div class="name-greeting" id="r-name-greeting"></div>
+            <h1 id="r-profile-title">Your Practice Profile</h1>
+            <p class="subtitle" id="r-profile-subtitle"></p>
+        </div>
+
+        <div class="report-body">
+
+            <!-- Explorer Pass (shown for beginners) -->
+            <div id="r-explorer" style="display:none"></div>
+
+            <!-- Top 3 classes -->
+            <div class="section-title" id="r-class-title">Your Top 3 Class Matches</div>
+            <div id="r-classes"></div>
+
+            <!-- Events & Retreats -->
+            <div class="section-title" style="margin-top:2.5rem" id="r-events-title">Recommended Events & Retreats</div>
+            <div id="r-events"></div>
+
+            <!-- Your Journey -->
+            <div class="journey-box" id="r-journey">
+                <div class="section-title" style="margin-bottom:0.75rem;border:none;padding:0">Your Suggested Journey
+                </div>
+                <p style="color:var(--gray);font-size:0.9rem;margin-bottom:0">If you're newer to practice, think of this
+                    as a path, not a destination. Start gently, explore, and let the practice find you.</p>
+                <div class="journey-steps" id="r-journey-steps"></div>
+            </div>
+
+            <!-- Evolving message -->
+            <div class="evolve-box">
+                <h3>Your practice will evolve. That's the point.</h3>
+                <p>These recommendations are based on where you are today. As you grow, your practice will naturally
+                    shift. If you're a beginner — try things, be curious, there are no wrong choices here. Goyoga's
+                    teachers are here to guide you every step of the way.</p>
+            </div>
+
+            <!-- Methodology -->
+            <div class="methodology-box">
+                <button class="methodology-toggle"
+                    onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').textContent=this.nextElementSibling.classList.contains('open')?'▲':'▼'">
+                    <span id="meth-toggle">🔍 How does this quiz work? (Methodology)</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="methodology-body" id="meth-body">
+                    <!-- filled by buildReport -->
+                </div>
+            </div>
+
+            <!-- Links to Goyoga -->
+            <div class="section-title" style="margin-top:2.5rem" id="ready-title">Ready to begin?</div>
+            <div class="links-box" id="links-box">
+                <!-- filled by buildReport -->
+            </div>
+
+            <!-- Actions -->
+            <div class="report-actions">
+                <button class="btn btn-pink" onclick="shareReport()">↗ Share</button>
+                <button class="btn btn-outline" onclick="emailReport()">✉ Email</button>
+            </div>
+
+            <!-- Email form -->
+            <div id="email-form" style="display:none;margin-top:1.5rem;text-align:center;">
+                <input type="email" id="user-email" placeholder="your@email.com"
+                    style="padding:0.9rem 1.25rem;border:2px solid var(--border);border-radius:14px;font-size:1rem;width:100%;max-width:360px;outline:none;margin-bottom:1rem;font-family:Inter,sans-serif;" />
+                <br />
+                <button class="btn btn-primary" onclick="sendEmail()">Send Report →</button>
+            </div>
+            <p id="email-status" style="text-align:center;margin-top:1rem;font-size:0.9rem;color:var(--gray);"></p>
+
+            <!-- Feedback -->
+            <div class="feedback-box">
+                <p id="fbb-title">Was this quiz helpful? Let us know 🙏</p>
+                <div class="stars" id="stars">
+                    <span class="star" data-v="1" onclick="rateStar(1)">★</span>
+                    <span class="star" data-v="2" onclick="rateStar(2)">★</span>
+                    <span class="star" data-v="3" onclick="rateStar(3)">★</span>
+                    <span class="star" data-v="4" onclick="rateStar(4)">★</span>
+                    <span class="star" data-v="5" onclick="rateStar(5)">★</span>
+                </div>
+                <textarea class="feedback-text" id="feedback-text" placeholder="Any thoughts? (optional)"></textarea>
+                <button class="btn btn-outline" id="btn-feedback" onclick="sendFeedback()">Send Feedback</button>
+                <p id="feedback-status" style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray);"></p>
+            </div>
+        </div>
+
+        <!-- Print header: logo + contacts, only visible in PDF -->
+        <div class="print-only" id="print-header">
+            <div>
+                <div class="print-logo">Goyoga Tallinn</div>
+                <div style="font-size:0.7rem;color:#aaa;margin-top:0.2rem">Find Your Practice — Personal Report</div>
+            </div>
+            <div class="print-contacts">
+                www.goyoga.ee<br />
+                Tatari 64, Tallinn, Estonia<br />
+                info@goyoga.ee
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script>
+        // ════════════════════════════════════════════
+        // CONFIGURATION
+        // ════════════════════════════════════════════
+        const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1480378527525371956/Tgz3Kc0TSZMcvzMtdZFb3xdxuWboPNIW7SJxhnv48mXpIemhpnVbMiKA2Zbm0zzUkmxR';
+        const GA4_ID = 'G-N0X5B7NG6N';
+        const QUIZ_SESSION_ID = 'quiz-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+        let currentLang = 'en';
+        let starRating = 0;
+
+        // GA4 Telemetry Helpers
+        function getGA4ClientId() {
+            const match = document.cookie.match(/_ga=([^;]+)/);
+            if (match) {
+                const parts = match[1].split('.');
+                if (parts.length >= 4) {
+                    return parts[2] + '.' + parts[3];
+                }
+            }
+            return 'unknown';
+        }
+
+        function fireGA4Event(eventName, eventParams) {
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', eventName, eventParams);
+            }
+        }
+
+        function l(key) { return UI_LANG[currentLang] && UI_LANG[currentLang][key] || UI_LANG['en'][key] || key; }
+        
+        function setLang(langCode) {
+            currentLang = langCode;
+            ['en', 'et', 'fi', 'ru'].forEach(x => {
+                const btn = document.getElementById('lb-' + x);
+                if (btn) btn.classList.toggle('active', x === currentLang);
+            });
+            
+            document.getElementById('i-h1').innerHTML = l('introH1');
+            document.getElementById('i-sub').innerHTML = l('introSub');
+            document.getElementById('i-begin').textContent = l('btnBegin');
+            document.getElementById('t1').textContent = l('t1');
+            document.getElementById('t2').textContent = l('t2');
+            document.getElementById('t3').textContent = l('t3');
+            document.getElementById('t4').textContent = l('t4');
+            document.getElementById('nav-step-label').textContent = l('navLabel');
+            
+            // Buttons
+            const backBtn = document.getElementById('btn-back');
+            if (backBtn) backBtn.textContent = l('btnBack');
+            const nextBtn = document.getElementById('btn-next');
+            if (nextBtn) nextBtn.textContent = l('btnNext');
+            const hintBtn = document.getElementById('q-hint-btn');
+            if (hintBtn) hintBtn.title = l('hintBtnTitle');
+            const multiHint = document.getElementById('multi-hint');
+            if (multiHint) multiHint.textContent = l('multiHint');
+
+            // Name screen
+            const nameScreen = document.getElementById('screen-name');
+            if (nameScreen) {
+                nameScreen.querySelector('h2').textContent = l('nameH2');
+                nameScreen.querySelector('p').textContent = l('nameSub');
+                document.getElementById('name-input').placeholder = l('namePlaceholder');
+                nameScreen.querySelector('.btn').textContent = l('nameBtn');
+            }
+            
+            // Report screens & other UI
+            const loadingP = document.getElementById('loading-screen').querySelector('p');
+            if (loadingP) loadingP.textContent = l('loading');
+
+            const fbbTitle = document.getElementById('fbb-title');
+            if (fbbTitle) fbbTitle.textContent = l('fbbTitle');
+            const fbbTextarea = document.getElementById('feedback-text');
+            if (fbbTextarea) fbbTextarea.placeholder = l('fbbPlaceholder');
+            const fbbBtn = document.getElementById('btn-feedback');
+            if (fbbBtn) fbbBtn.textContent = l('btnFeedback');
+
+            if (document.getElementById('screen-q').classList.contains('active')) renderQ(current);
+            if (document.getElementById('screen-report').classList.contains('active')) buildReport();
+        }
+
+        // Auto-detect language
+        (function () {
+            const bl = (navigator.language || 'en').slice(0, 2).toLowerCase();
+            if (['et', 'fi', 'ru'].includes(bl)) setLang(bl);
+            else setLang('en');
+        })();
+
+        let current = 0;
+        let answers = {}; // accumulated weight scores
+        let selections = {}; // per-question selections
+        let userName = '';
+
+        function startQuiz() {
+            document.getElementById('screen-intro').classList.remove('active');
+            document.getElementById('screen-q').classList.add('active');
+            renderQ(0);
+        }
+
+        function renderQ(idx) {
+            const q = QUESTIONS[idx];
+            current = idx;
+            document.getElementById('q-label').textContent = l('qLabel') + (idx + 1) + l('qOf') + QUESTIONS.length;
+            document.getElementById('q-text').textContent = q.text[currentLang] || q.text['en'];
+            document.getElementById('q-sub').textContent = (q.sub && q.sub[currentLang]) || (q.sub && q.sub['en']) || '';
+            document.getElementById('multi-hint').style.display = q.multi ? 'block' : 'none';
+            document.getElementById('nav-step-label').textContent = l('qLabel') + (idx + 1) + ' / ' + QUESTIONS.length;
+            document.getElementById('progress-bar').style.width = ((idx / QUESTIONS.length) * 100) + '%';
+            document.getElementById('btn-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
+            
+            // Hint
+            const hintBox = document.getElementById('q-hint-box');
+            const hintBtn = document.getElementById('q-hint-btn');
+            hintBox.textContent = (q.hint && q.hint[currentLang]) || (q.hint && q.hint['en']) || '';
+            hintBox.classList.remove('open');
+            hintBtn.style.display = (q.hint && q.hint['en'] && q.hint['en'].trim()) ? 'inline-flex' : 'none';
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            q.options.forEach((opt, i) => {
+                const div = document.createElement('div');
+                div.className = 'opt';
+                const label = opt.label[currentLang] || opt.label['en'];
+                div.innerHTML = `<span class="opt-icon">${opt.icon}</span>${label}`;
+
+                // restore selection
+                const sel = selections[q.id] || [];
+                if (sel.includes(i)) div.classList.add('selected');
+
+                div.onclick = () => {
+                    if (q.multi) {
+                        div.classList.toggle('selected');
+                    } else {
+                        container.querySelectorAll('.opt').forEach(d => d.classList.remove('selected'));
+                        div.classList.add('selected');
+                        setTimeout(nextQ, 400); // auto-advance on single choice
+                    }
+                    const selected = [...container.querySelectorAll('.opt.selected')].map(d => +d.dataset.idx);
+                    document.getElementById('btn-next').disabled = selected.length === 0;
+                };
+                div.dataset.idx = i;
+                container.appendChild(div);
+            });
+
+            const sel = selections[q.id] || [];
+            document.getElementById('btn-next').disabled = sel.length === 0;
+        }
+
+        function nextQ() {
+            const q = QUESTIONS[current];
+            const container = document.getElementById('options-container');
+            const selected = [...container.querySelectorAll('.opt.selected')].map(d => +d.dataset.idx);
+            selections[q.id] = selected;
+
+            // accumulate weights
+            selected.forEach(i => {
+                const weights = q.options[i].weights || {};
+                Object.entries(weights).forEach(([k, v]) => {
+                    answers[k] = (answers[k] || 0) + v;
+                });
+            });
+
+            if (current + 1 < QUESTIONS.length) {
+                renderQ(current + 1);
+            } else {
+                // Go to name screen
+                document.getElementById('screen-q').classList.remove('active');
+                document.getElementById('screen-name').classList.add('active');
+                document.getElementById('progress-bar').style.width = '100%';
+                document.getElementById('nav-step-label').textContent = 'Almost done…';
+            }
+        }
+
+        function prevQ() {
+            if (current > 0) renderQ(current - 1);
+        }
+
+        // ════════════════════════════════════════════
+        // SCORING ENGINE
+        // ════════════════════════════════════════════
+        function scoreClasses() {
+            const a = answers;
+            return CLASSES.map(cls => {
+                let score = 0;
+                let maxPossible = 0;
+
+                Object.entries(cls.profile).forEach(([dim, val]) => {
+                    const userVal = a[dim] || 0;
+                    if (val > 0) {
+                        score += Math.min(userVal, val) * val;
+                        maxPossible += val * val;
+                    } else if (val < 0) {
+                        // penalty if user has positive weight here
+                        score += userVal > 0 ? val * userVal : 0;
+                    }
+                });
+
+                const pct = maxPossible > 0 ? Math.round(Math.max(0, Math.min(100, (score / maxPossible) * 100))) : 50;
+                return { ...cls, score: pct };
+            }).sort((a, b) => b.score - a.score);
+        }
+
+        function scoreEvents() {
+            const a = answers;
+            return EVENTS.map(ev => {
+                const score = ev.triggers.reduce((sum, t) => sum + (a[t] || 0), 0);
+                return { ...ev, score };
+            }).filter(ev => ev.score > 0).sort((a, b) => b.score - a.score).slice(0, 3);
+        }
+
+        function getProfile() {
+            const a = answers;
+            return PROFILES.find(p => p.condition(a)) || PROFILES[PROFILES.length - 1];
+        }
+
+        // ════════════════════════════════════════════
+        // REPORT GENERATION
+        // ════════════════════════════════════════════
+        function generateReport() {
+            userName = (document.getElementById('name-input').value || '').trim();
+
+            // Send to Discord immediately on name submit
+            sendToDiscord('Quiz Completed');
+            fireGA4Event('quiz_completed', { profile_tag: 'calculating...' });
+
+            // Loading screen
+            document.getElementById('screen-name').classList.remove('active');
+            document.getElementById('loading-screen').classList.add('active');
+
+            setTimeout(() => {
+                document.getElementById('loading-screen').classList.remove('active');
+                buildReport();
+                document.getElementById('screen-report').classList.add('active');
+            }, 1800);
+        }
+
+        function buildReport() {
+            const ranked = scoreClasses();
+            const top3 = ranked.slice(0, 3);
+            const evRecs = scoreEvents();
+            const profile = getProfile();
+            const isBeginnerish = (answers.beginner || 0) >= 2;
+
+            // Hero
+            const pTag = profile.tag[currentLang] || profile.tag['en'];
+            const pSub = profile.subtitle[currentLang] || profile.subtitle['en'];
+            document.getElementById('r-profile-tag').textContent = pTag;
+            document.getElementById('r-profile-title').textContent = pTag;
+            document.getElementById('r-profile-subtitle').textContent = pSub;
+            document.getElementById('r-name-greeting').textContent = userName ? l('rFor').replace('{1}', userName) : '';
+            
+            // Updates for static text
+            document.getElementById('r-class-title').textContent = l('rClassTitle');
+            document.getElementById('r-events-title').textContent = l('rEventsTitle');
+            document.getElementById('ready-title').textContent = l('readyTitle');
+            document.getElementById('meth-toggle').textContent = l('methToggle');
+
+            const explorerEl = document.getElementById('r-explorer');
+            if (isBeginnerish) {
+                explorerEl.style.display = 'block';
+                explorerEl.innerHTML = `<div class="explorer-box">
+                    <div class="section-title" style="border:none;padding:0;margin-bottom:0.75rem">${l('explorerTag')}</div>
+                    <h3>${l('explorerTitle')}</h3>
+                    <p>${l('explorerSub')}</p>
+                    <a href="https://www.goyoga.ee/hinnad.html" target="_blank" class="btn btn-pink" style="text-decoration:none;display:inline-flex">${l('explorerBtn')}</a>
+                </div>`;
+            } else {
+                explorerEl.style.display = 'none';
+            }
+
+            const classContainer = document.getElementById('r-classes');
+            classContainer.innerHTML = '';
+            top3.forEach((cls, i) => {
+                const whyTemplates = cls.why_templates[currentLang] || cls.why_templates['en'];
+                const why = whyTemplates[Math.floor(Math.random() * whyTemplates.length)];
+                const card = document.createElement('div');
+                const cName = cls.name[currentLang] || cls.name['en'];
+                const cTags = cls.tags[currentLang] || cls.tags['en'];
+                card.className = 'class-card' + (i === 0 ? ' top-pick' : '');
+                const teacherHtml = (cls.teachers || []).map(t =>
+                    `<a href="https://www.goyoga.ee/en/teacher.html?id=${t.slug}" target="_blank" style="color:var(--pink);font-size:0.78rem;font-weight:600;text-decoration:none;background:var(--pink-light);padding:0.25rem 0.6rem;border-radius:99px;white-space:nowrap;">${t.name}</a>`
+                ).join(' ');
+                card.innerHTML = `
+      <div class="class-card-body">
+        <div class="class-header">
+          <div>
+            <div class="class-name">${cls.emoji} ${cName}${i === 0 ? `<span class="top-badge">${l('rTopBadge')}</span>` : ''}</div>
+          </div>
+          <div class="match-pct">${cls.score}% ${l('rMatch')}</div>
+        </div>
+        <div class="match-bar-bg"><div class="match-bar" style="width:0%" data-target="${cls.score}%"></div></div>
+        <div class="class-why">${why}</div>
+        <div class="class-tags">${cTags.map(t => `<span class="class-tag">${t}</span>`).join('')}</div>
+        ${teacherHtml ? `<div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center"><span style="font-size:0.72rem;color:#aaa;margin-right:0.2rem;">${l('rWith')}</span>${teacherHtml}</div>` : ''}
+        ${cls.url ? `<div style="margin-top:1rem"><a href="${cls.url}" target="_blank" style="color:var(--pink);font-size:0.85rem;font-weight:600;text-decoration:none;">${l('rViewClass')}</a></div>` : ''}
+      </div>`;
+                classContainer.appendChild(card);
+            });
+            setTimeout(() => { document.querySelectorAll('.match-bar').forEach(bar => { bar.style.width = bar.dataset.target; }); }, 100);
+
+            const evContainer = document.getElementById('r-events');
+            evContainer.innerHTML = '';
+            if (evRecs.length === 0) {
+                evContainer.innerHTML = `<p style="color:var(--gray);font-size:0.9rem;">${l('rNoEvents')}</p>`;
+            } else {
+                evRecs.forEach(ev => {
+                    const card = document.createElement('div');
+                    card.className = 'event-card';
+                    const eName = ev.name[currentLang] || ev.name['en'];
+                    const eWhy = ev.why[currentLang] || ev.why['en'];
+                    card.innerHTML = `
+        <div class="event-icon">${ev.icon}</div>
+        <div>
+          <div class="event-name">${eName}</div>
+          <div class="event-why">${eWhy}</div>
+          ${ev.url ? `<a href="${ev.url}" target="_blank" style="color:var(--pink);font-size:0.82rem;font-weight:600;text-decoration:none;margin-top:0.4rem;display:inline-block;">${l('rLearnMore')}</a>` : ''}
+        </div>`;
+                    evContainer.appendChild(card);
+                });
+            }
+
+            const journeyBox = document.getElementById('r-journey');
+            journeyBox.querySelector('.section-title').textContent = l('rJourneyTitle');
+            journeyBox.querySelector('p').textContent = l('rJourneySub');
+            const journeySteps = document.getElementById('r-journey-steps');
+            journeySteps.innerHTML = '';
+            const steps = [
+                { num: l('jStep1Num'), name: top3[0]?.name[currentLang] || top3[0]?.name['en'] || '', note: l('jStep1Note') },
+                { num: l('jStep2Num'), name: top3[1]?.name[currentLang] || top3[1]?.name['en'] || '', note: l('jStep2Note') },
+                { num: l('jStep3Num'), name: top3[2]?.name[currentLang] || top3[2]?.name['en'] || evRecs[0]?.name[currentLang] || evRecs[0]?.name['en'] || '', note: l('jStep3Note') },
+            ];
+            steps.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'journey-step';
+                div.innerHTML = `<div class="step-num">${s.num}</div><div class="step-name">${s.name}</div><div class="step-note">${s.note}</div>`;
+                journeySteps.appendChild(div);
+            });
+
+            // Evolve box
+            const evolveBox = document.querySelector('.evolve-box');
+            evolveBox.querySelector('h3').textContent = l('rEvolveH3');
+            evolveBox.querySelector('p').textContent = l('rEvolveP');
+
+            // Methodology Body
+            document.getElementById('meth-body').innerHTML = `
+                <p>${l('methP1')}</p>
+                <p>${l('methP2')}</p>
+                <table>
+                    <tr><th>${l('methTh1')}</th><th>${l('methTh2')}</th></tr>
+                    <tr><td>${l('methTr1')}</td><td>${l('methTd1')}</td></tr>
+                    <tr><td>${l('methTr2')}</td><td>${l('methTd2')}</td></tr>
+                    <tr><td>${l('methTr3')}</td><td>${l('methTd3')}</td></tr>
+                    <tr><td>${l('methTr4')}</td><td>${l('methTd4')}</td></tr>
+                </table>
+                <p style="margin-top:0.75rem">${l('methP3')}</p>
+                <p>${l('methP4')}</p>
+                <p>${l('methP5')}</p>
+                <p>${l('methP6')}</p>
+                <p style="font-style:italic;color:var(--pink)">${l('methP7')}</p>
+            `;
+
+            // Links Box
+            const links = [
+                { id: 'Schedule', icon: '🗓', url: 'https://www.goyoga.ee/tunnid.html' },
+                { id: 'Events', icon: '✨', url: 'https://www.goyoga.ee/events.html' },
+                { id: 'Retreats', icon: '✈️', url: 'https://www.goyoga.ee/events.html#retreats' },
+                { id: 'Prices', icon: '🎫', url: 'https://www.goyoga.ee/hinnad.html' },
+                { id: 'Teachers', icon: '🧑‍🏫', url: 'https://www.goyoga.ee/en/teachers.html' },
+                { id: 'Studio', icon: '🏛️', url: 'https://www.goyoga.ee/en/studio.html' }
+            ];
+            document.getElementById('links-box').innerHTML = links.map(lnk => `
+                <a class="link-card" href="${lnk.url}" target="_blank">
+                    <div class="lc-icon">${lnk.icon}</div>
+                    <div class="lc-label">${l('link' + lnk.id)}</div>
+                    <div class="lc-sub">${l('link' + lnk.id + 'Sub')}</div>
+                </a>
+            `).join('');
+
+            // Actions
+            document.querySelector('.report-actions button:nth-child(1)').textContent = l('btnShare');
+            document.querySelector('.report-actions button:nth-child(2)').textContent = l('btnEmail');
+        }
+
+        // ════════════════════════════════════════════
+        // DISCORD WEBHOOK
+        // ════════════════════════════════════════════
+        function sendToDiscord(trigger) {
+            if (!DISCORD_WEBHOOK) return;
+            const ranked = scoreClasses();
+            const allEvents = EVENTS.map(ev => {
+                const score = ev.triggers.reduce((s, t) => s + (answers[t] || 0), 0);
+                return { ...ev, score };
+            }).sort((a, b) => b.score - a.score);
+            const profile = getProfile();
+            const ga4ClientId = getGA4ClientId();
+            const allClassLines = ranked.map((c, i) => `${i + 1}. ${c.name}: ${c.score}%`).join('\n');
+            const allEventLines = allEvents.map(ev => `${ev.score > 0 ? '✅' : '⬜'} ${ev.name} (${ev.score})`).join('\n');
+            const payload = {
+                embeds: [{
+                    title: `🧘 New Practice Match — ${profile.tag}`,
+                    color: 0xc85a8a,
+                    fields: [
+                        { name: '👤 Name', value: userName || 'Anonymous', inline: true },
+                        { name: '🌐 Language', value: currentLang.toUpperCase(), inline: true },
+                        { name: '📬 Triggered by', value: trigger, inline: true },
+                        { name: '✨ Profile', value: profile.subtitle, inline: false },
+                        { name: '🏆 ALL Class Scores (9)', value: '```' + allClassLines + '```', inline: false },
+                        { name: '📅 ALL Event Scores', value: '```' + allEventLines + '```', inline: false },
+                        { name: '🎫 Explorer Pass offered?', value: (answers.beginner || 0) >= 2 ? 'Yes ✅' : 'No', inline: true },
+                        { name: '📊 GA4 Session ID', value: '`' + QUIZ_SESSION_ID + '`', inline: false },
+                        { name: '📊 GA4 Client ID', value: '`' + ga4ClientId + '`\n*GA4 → Explore → User Explorer*', inline: false },
+                    ],
+                    footer: { text: 'Goyoga Practice Finder Quiz · goyoga.ee' },
+                    timestamp: new Date().toISOString()
+                }]
+            };
+            fetch(DISCORD_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(() => { });
+        }
+
+        function shareReport() {
+            const profile = getProfile();
+            const ranked = scoreClasses();
+            const text = `🧘 My Goyoga Practice Profile: "${profile.tag}"\n\n${profile.subtitle}\n\nTop matches: ${ranked[0]?.name}, ${ranked[1]?.name}, ${ranked[2]?.name}\n\nDiscover yours at www.goyoga.ee`;
+            sendToDiscord('Share Button');
+            fireGA4Event('quiz_share', { profile_tag: profile.tag });
+            if (navigator.share) {
+                navigator.share({ title: 'My Goyoga Practice Profile', text, url: 'https://www.goyoga.ee' }).catch(() => { });
+            } else {
+                navigator.clipboard.writeText(text).then(() => {
+                    document.getElementById('email-status').textContent = '✓ Profile summary copied to clipboard — paste it anywhere to share!';
+                    setTimeout(() => document.getElementById('email-status').textContent = '', 4000);
+                });
+            }
+        }
+
+        function emailReport() {
+            const form = document.getElementById('email-form');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function sendEmail() {
+            const email = document.getElementById('user-email').value.trim();
+            if (!email || !email.includes('@')) { document.getElementById('email-status').textContent = l('emailReqValid'); return; }
+            sendToDiscord(`Email request: ${email}`);
+            fireGA4Event('quiz_email_request', { profile_tag: getProfile().tag });
+            document.getElementById('email-status').textContent = l('emailReceived').replace('{email}', email);
+            document.getElementById('email-form').style.display = 'none';
+        }
+
+        // ════════════════════════════════════════════
+        // FEEDBACK HANDLING
+        // ════════════════════════════════════════════
+        function rateStar(val) {
+            starRating = val;
+            const stars = document.querySelectorAll('#stars .star');
+            stars.forEach((s, idx) => {
+                if (idx < val) s.classList.add('active');
+                else s.classList.remove('active');
+            });
+        }
+
+        function sendFeedback() {
+            const text = document.getElementById('feedback-text').value.trim();
+            if (starRating === 0 && !text) {
+                document.getElementById('feedback-status').textContent = l('fbbGiven');
+                return;
+            }
+
+            const profile = getProfile();
+            const payload = {
+                embeds: [{
+                    title: `🗣️ New Quiz Feedback — ${profile.tag.en || profile.tag}`,
+                    color: 0x4a90e2,
+                    fields: [
+                        { name: '👤 Name', value: userName || 'Anonymous', inline: true },
+                        { name: '⭐ Rating', value: starRating > 0 ? '★'.repeat(starRating) : 'None', inline: true },
+                        { name: '🌐 Language', value: currentLang.toUpperCase(), inline: true },
+                        { name: '💬 Comments', value: text || '*No additional comments*', inline: false }
+                    ],
+                    footer: { text: 'Goyoga Practice Finder Quiz' },
+                    timestamp: new Date().toISOString()
+                }]
+            };
+
+            fetch(DISCORD_WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(() => { });
+            
+            fireGA4Event('quiz_feedback', { rating: starRating, has_comments: text.length > 0 });
+            
+            document.getElementById('feedback-status').textContent = l('fbbThanks');
+            document.getElementById('btn-feedback').style.display = 'none';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

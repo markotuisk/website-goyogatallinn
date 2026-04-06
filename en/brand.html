@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brand Identity | GoYoga Tallinn — Yoga &amp; Wellness Sanctuary</title>
+<meta content="GoYoga Tallinn Brand Identity &amp; Design Guidelines. Our visual language, colour palette, typography, voice, and AI-readiness layer — codified for partners and future creators." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://www.goyoga.ee/brand.html" rel="canonical"/>
+<!-- OG -->
+<meta content="website" property="og:type"/>
+<meta content="Brand Identity | GoYoga Tallinn" property="og:title"/>
+<meta content="The visual and verbal DNA of GoYoga Tallinn — for partners, designers, and AI generators." property="og:description"/>
+<meta content="https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" property="og:image"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="/css/style.css?v=1775482089" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="site.webmanifest" rel="manifest"/>
+<!-- Brand JSON-LD -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.goyoga.ee/#brand",
+      "name": "GoYoga Tallinn",
+      "url": "https://www.goyoga.ee",
+      "logo": "https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-512x512.png",
+      "slogan": "Yoga & Wellness Sanctuary",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "primaryColor", "value": "#8A7055" },
+        { "@type": "PropertyValue", "name": "backgroundColor", "value": "#FAF9F6" },
+        { "@type": "PropertyValue", "name": "accentColor", "value": "#DB2777" },
+        { "@type": "PropertyValue", "name": "headingFont", "value": "Playfair Display" },
+        { "@type": "PropertyValue", "name": "bodyFont", "value": "Inter" },
+        { "@type": "PropertyValue", "name": "guidelinesDocument", "value": "https://www.goyoga.ee/brand_identity.md" }
+      ]
+    }
+    </script>
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-N0X5B7NG6N');
+    </script>
+<style>
+        :root {
+            --bg: #FAF9F6;
+            --text: #282420;
+            --primary: #8A7055;
+            --accent: #DB2777;
+            --cream: #F2EFE9;
+            --ash: #6B6057;
+            --border: #E8E2DA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(32px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @keyframes slideRight {
+            from { opacity: 0; transform: translateX(-24px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.92); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139,112,85,0); }
+            50%       { transform: scale(1.02); box-shadow: 0 0 0 8px rgba(139,112,85,0.08); }
+        }
+        @keyframes wipe {
+            from { width: 0; }
+            to   { width: 100%; }
+        }
+
+        .anim-fade-up   { animation: fadeUp 0.7s ease-out both; }
+        .anim-fade-in   { animation: fadeIn 0.8s ease-out both; }
+        .anim-slide-r   { animation: slideRight 0.6s ease-out both; }
+        .anim-scale-in  { animation: scaleIn 0.6s ease-out both; }
+
+        .delay-1  { animation-delay: 0.1s; }
+        .delay-2  { animation-delay: 0.2s; }
+        .delay-3  { animation-delay: 0.35s; }
+        .delay-4  { animation-delay: 0.5s; }
+        .delay-5  { animation-delay: 0.65s; }
+        .delay-6  { animation-delay: 0.8s; }
+
+        /* Scroll-triggered */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Colour swatch */
+        .swatch {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+        }
+        .swatch:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+        .swatch .hex-label {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            background: rgba(255,255,255,0.85);
+            color: var(--text);
+            padding: 2px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .swatch:hover .hex-label { opacity: 1; }
+        .copied-toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--text);
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 13px;
+            padding: 10px 20px;
+            border-radius: 40px;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            z-index: 999;
+        }
+        .copied-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Typography demo */
+        .font-demo-heading { font-family: 'Playfair Display', serif; }
+        .font-demo-body    { font-family: 'Inter', sans-serif; }
+        .font-demo-mono    { font-family: 'Roboto Mono', monospace; }
+
+        /* Voice card */
+        .voice-card {
+            border-left: 3px solid var(--border);
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        .voice-card:hover {
+            border-left-color: var(--primary);
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .voice-card.danger { border-left-color: #e8d5d5; }
+        .voice-card.danger:hover { border-left-color: #c0392b; }
+
+        /* Section tab nav */
+        .tab-btn {
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--ash);
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--text);
+            color: white;
+            border-color: var(--text);
+        }
+
+        /* Hero gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #8A7055 0%, #DB2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Wipe underline */
+        .wipe-line {
+            position: relative;
+            display: inline-block;
+        }
+        .wipe-line::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background: var(--accent);
+            transition: width 0.5s ease;
+        }
+        .wipe-line:hover::after { width: 100%; }
+
+        /* Grid for do/don't */
+        .do-dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media(max-width:640px) { .do-dont-grid { grid-template-columns: 1fr; } }
+
+        /* AI chip */
+        .ai-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #DB2777;
+            color: #DB2777;
+            background: #FDF2F8;
+        }
+
+        /* Sticky top-nav */
+        #brand-nav {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: rgba(250,249,246,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+        #brand-nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+
+        /* JSON block */
+        pre.json-block {
+            background: #1a1814;
+            color: #e8e2da;
+            border-radius: 16px;
+            padding: 24px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+        .json-key   { color: #DB2777; }
+        .json-str   { color: #a8d8a8; }
+        .json-num   { color: #f6c90e; }
+        .json-punct { color: #888; }
+    </style>
+<link href="https://www.goyoga.ee/en/brand.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/brand.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/brand.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/ru/brand.html" hreflang="ru" rel="alternate"/><link href="https://www.goyoga.ee/brand.html" hreflang="x-default" rel="alternate"/></head>
+<body>
+<!-- Sticky nav -->
+<nav id="brand-nav">
+<div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+<a class="flex items-center gap-3 text-sm font-medium text-[#8A7055] hover:text-[#6B5340] transition-colors" href="/en/">
+<i class="h-4 w-4" data-lucide="arrow-left"></i>
+                Back to GoYoga
+            </a>
+<div class="hidden md:flex items-center gap-1">
+<a class="tab-btn" href="#essence">Essence</a>
+<a class="tab-btn" href="#colours">Colours</a>
+<a class="tab-btn" href="#typography">Type</a>
+<a class="tab-btn" href="#voice">Voice</a>
+<a class="tab-btn" href="#ui">UI</a>
+<a class="tab-btn" href="#ai">AI Layer</a>
+</div>
+<a class="text-xs font-mono text-[#6B6057] hover:text-[#282420] transition-colors hidden md:block" href="brand_identity.md">
+                brand_identity.md ↗
+            </a>
+</div>
+</nav>
+<!-- Hero -->
+<section class="relative overflow-hidden" style="background: #1a1814; min-height: 85vh; display: flex; align-items: center;">
+<!-- Background pattern -->
+<div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #8A7055 0, #8A7055 1px, transparent 0, transparent 50%); background-size: 24px 24px;"></div>
+<!-- Warm glow -->
+<div class="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #8A7055, transparent); filter: blur(80px);"></div>
+<div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-10" style="background: radial-gradient(circle, #DB2777, transparent); filter: blur(60px);"></div>
+<div class="max-w-6xl mx-auto px-6 py-24 relative z-10">
+<div class="anim-fade-in delay-1">
+<span class="ai-chip mb-6 inline-flex">
+<span>◈</span> Brand Identity Portal
+                </span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-white leading-[1.05] mb-8 anim-fade-up delay-2">
+                The Soul<br/>
+<span class="gradient-text">of GoYoga</span>
+</h1>
+<p class="text-lg md:text-xl text-white/60 max-w-xl leading-relaxed mb-12 anim-fade-up delay-3">
+                Every design decision, word, and colour flows from a single belief: that authentic practice transforms people. This is our brand — codified.
+            </p>
+<div class="flex flex-wrap gap-4 anim-fade-up delay-4">
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-[#8A7055] text-white rounded-full font-medium hover:bg-[#7a6048] transition-all hover:-translate-y-0.5 hover:shadow-lg" href="#colours">
+                    Explore the Palette <i class="h-4 w-4" data-lucide="palette"></i>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 rounded-full font-medium hover:bg-white/10 transition-all" href="#voice">
+                    Brand Voice <i class="h-4 w-4" data-lucide="message-square"></i>
+</a>
+</div>
+<!-- Quick stats row -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-10 border-t border-white/10 anim-fade-up delay-5">
+<div>
+<p class="text-3xl font-serif text-white font-medium">2016</p>
+<p class="text-white/40 text-sm mt-1">Founded</p>
+</div>
+<div>
+<p class="text-3xl font-serif text-white font-medium">3+</p>
+<p class="text-white/40 text-sm mt-1">Languages</p>
+</div>
+<div>
+<p class="text-3xl font-serif text-white font-medium">10+</p>
+<p class="text-white/40 text-sm mt-1">Class Types</p>
+</div>
+<div>
+<p class="text-3xl font-serif text-white font-medium">@goyoga.ee</p>
+<p class="text-white/40 text-sm mt-1">Instagram</p>
+</div>
+</div>
+</div>
+</section>
+<div class="max-w-6xl mx-auto px-6 py-6">
+<!-- ═══ SECTION 1: ESSENCE ═══ -->
+<section class="py-20 reveal" id="essence">
+<span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A7055] block mb-3">01 — Foundation</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-6 text-[#282420]">The Inside-Out Philosophy</h2>
+<p class="text-lg text-[#6B6057] max-w-2xl leading-relaxed mb-12">
+                GoYoga's design is not decorative — it is <em>functional spirituality</em>. Every visual decision starts from the inside: from what we believe, not from what looks good.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-[#F2EFE9] rounded-2xl p-8 reveal delay-1">
+<div class="w-10 h-10 rounded-full bg-[#8A7055] flex items-center justify-center mb-5">
+<i class="h-5 w-5 text-white" data-lucide="anchor"></i>
+</div>
+<h3 class="text-xl font-serif font-medium mb-3">Tradition Anchors</h3>
+<p class="text-[#6B6057] text-sm leading-relaxed">Even with modern tools, the language and imagery must feel rooted in lineage — Mysore, Pattabhi Jois, the parampara tradition.</p>
+</div>
+<div class="bg-[#F2EFE9] rounded-2xl p-8 reveal delay-2">
+<div class="w-10 h-10 rounded-full bg-[#DB2777] flex items-center justify-center mb-5">
+<i class="h-5 w-5 text-white" data-lucide="heart"></i>
+</div>
+<h3 class="text-xl font-serif font-medium mb-3">Community First</h3>
+<p class="text-[#6B6057] text-sm leading-relaxed">We don't sell product — we hold space. Every touchpoint communicates belonging, safety, and welcome.</p>
+</div>
+<div class="bg-[#F2EFE9] rounded-2xl p-8 reveal delay-3">
+<div class="w-10 h-10 rounded-full bg-[#282420] flex items-center justify-center mb-5">
+<i class="h-5 w-5 text-white" data-lucide="minimize"></i>
+</div>
+<h3 class="text-xl font-serif font-medium mb-3">Intentional Minimalism</h3>
+<p class="text-[#6B6057] text-sm leading-relaxed">Nothing is there for its own sake. Warm, uncluttered, unhurried aesthetics serve the practitioner's need for calm.</p>
+</div>
+</div>
+<!-- Mission -->
+<div class="mt-12 rounded-3xl border border-[#E8E2DA] p-10 md:p-14 reveal delay-2" style="background: linear-gradient(135deg, #FAF9F6 60%, #F2EFE9);">
+<p class="text-xs font-semibold tracking-widest uppercase text-[#8A7055] mb-4">Official Mission Statement</p>
+<blockquote class="text-2xl md:text-3xl font-serif font-medium text-[#282420] leading-relaxed italic mb-6">
+                    "Goyoga Tallinn is a safe sanctuary at the heart of Tallinn for people of all ages and preferences to come and switch off, relax and reinvigorate."
+                </blockquote>
+<div class="flex items-center gap-4">
+<div>
+<p class="font-medium text-[#282420]">Official Tagline</p>
+<p class="text-[#8A7055] font-semibold text-lg">Yoga &amp; Wellness Sanctuary</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ SECTION 2: COLOURS ═══ -->
+<section class="py-20 reveal" id="colours">
+<span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A7055] block mb-3">02 — Visual Identity</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-4 text-[#282420]">Colour Palette</h2>
+<p class="text-[#6B6057] max-w-xl leading-relaxed mb-12">Warm, organic, and grounded. Inspired by natural materials: linen, wood, sand, and earth. Click any swatch to copy the hex code.</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mb-12">
+<!-- Linen White -->
+<div class="reveal delay-1">
+<div class="swatch h-32 border border-[#E8E2DA]" onclick="copyHex('#FAF9F6')" style="background:#FAF9F6;">
+<span class="hex-label">#FAF9F6</span>
+</div>
+<p class="mt-3 text-sm font-medium text-[#282420]">Linen White</p>
+<p class="text-xs text-[#6B6057]">Background</p>
+</div>
+<!-- Shala Sand -->
+<div class="reveal delay-2">
+<div class="swatch h-32" onclick="copyHex('#8A7055')" style="background:#8A7055;">
+<span class="hex-label">#8A7055</span>
+</div>
+<p class="mt-3 text-sm font-medium text-[#282420]">Shala Sand</p>
+<p class="text-xs text-[#6B6057]">Primary Brand</p>
+</div>
+<!-- Mysore Dark -->
+<div class="reveal delay-3">
+<div class="swatch h-32" onclick="copyHex('#282420')" style="background:#282420;">
+<span class="hex-label">#282420</span>
+</div>
+<p class="mt-3 text-sm font-medium text-[#282420]">Mysore Dark</p>
+<p class="text-xs text-[#6B6057]">Text &amp; Headings</p>
+</div>
+<!-- Cream -->
+<div class="reveal delay-4">
+<div class="swatch h-32 border border-[#E8E2DA]" onclick="copyHex('#F2EFE9')" style="background:#F2EFE9;">
+<span class="hex-label">#F2EFE9</span>
+</div>
+<p class="mt-3 text-sm font-medium text-[#282420]">Cream</p>
+<p class="text-xs text-[#6B6057]">Card Surfaces</p>
+</div>
+<!-- Warm Ash -->
+<div class="reveal delay-5">
+<div class="swatch h-32" onclick="copyHex('#6B6057')" style="background:#6B6057;">
+<span class="hex-label">#6B6057</span>
+</div>
+<p class="mt-3 text-sm font-medium text-[#282420]">Warm Ash</p>
+<p class="text-xs text-[#6B6057]">Muted Text</p>
+</div>
+<!-- Lotus Pink -->
+<div class="reveal delay-6">
+<div class="swatch h-32" onclick="copyHex('#DB2777')" style="background:#DB2777;">
+<span class="hex-label">#DB2777</span>
+</div>
+<p class="mt-3 text-sm font-medium text-[#282420]">Lotus Pink</p>
+<p class="text-xs text-[#6B6057]">Interactive Accent</p>
+</div>
+</div>
+<!-- Usage rules -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+<div class="rounded-2xl p-8" style="background:#1a1814; color:white;">
+<p class="text-xs font-semibold tracking-widest uppercase text-white/40 mb-4">On Dark Backgrounds</p>
+<p class="font-serif text-2xl text-white mb-2">White text only</p>
+<p class="text-white/60 text-sm">Hero sections, overlays, dark navbars. Use <code class="text-[#DB2777] font-mono">#FFFFFF</code> text and white/translucent UI elements.</p>
+<div class="mt-6 flex gap-3">
+<span class="px-4 py-2 bg-white text-[#282420] rounded-full text-sm font-medium">View Schedule</span>
+<span class="px-4 py-2 border border-white/30 text-white rounded-full text-sm">Events</span>
+</div>
+</div>
+<div class="rounded-2xl p-8 bg-[#FAF9F6] border border-[#E8E2DA]">
+<p class="text-xs font-semibold tracking-widest uppercase text-[#6B6057] mb-4">On Light Backgrounds</p>
+<p class="font-serif text-2xl text-[#282420] mb-2">Warm tones</p>
+<p class="text-[#6B6057] text-sm">Use Mysore Dark for headings, Warm Ash for body text. Reserve Lotus Pink for hover states and CTA only.</p>
+<div class="mt-6 flex gap-3">
+<span class="px-4 py-2 bg-[#282420] text-white rounded-full text-sm font-medium">Book Now</span>
+<span class="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">View Offers</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ SECTION 3: TYPOGRAPHY ═══ -->
+<section class="py-20 reveal" id="typography">
+<span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A7055] block mb-3">03 — Typography</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-4 text-[#282420]">Typefaces</h2>
+<p class="text-[#6B6057] max-w-xl leading-relaxed mb-14">Two complementary voices — one editorial and timeless, one clean and modern.</p>
+<div class="space-y-8">
+<!-- Playfair -->
+<div class="rounded-3xl border border-[#E8E2DA] p-10 hover:border-[#8A7055] transition-colors duration-500 reveal delay-1">
+<div class="flex items-start justify-between mb-6">
+<div>
+<p class="text-xs tracking-widest uppercase text-[#6B6057] mb-1">Headings — H1 to H6</p>
+<p class="font-semibold text-[#282420]">Playfair Display</p>
+</div>
+<span class="text-xs font-mono bg-[#F2EFE9] text-[#6B6057] px-3 py-1 rounded-full">Serif</span>
+</div>
+<div class="space-y-2 mb-8">
+<p class="font-demo-heading text-6xl text-[#282420] tracking-tight">AaBbCc</p>
+<p class="font-demo-heading text-2xl text-[#282420] italic">A Safe Sanctuary at the Heart of Tallinn</p>
+<p class="font-demo-heading text-lg text-[#6B6057]">Experience &amp; Wisdom · Traditional yet Modern</p>
+</div>
+<div class="grid grid-cols-3 gap-4 text-sm text-[#6B6057] border-t border-[#E8E2DA] pt-6">
+<span>Regular 400</span><span>Medium 500</span><span>SemiBold 600</span>
+<span>Italic 400i</span><span>Letter-spacing: -0.025em</span><span>—</span>
+</div>
+</div>
+<!-- Inter -->
+<div class="rounded-3xl border border-[#E8E2DA] p-10 hover:border-[#8A7055] transition-colors duration-500 reveal delay-2">
+<div class="flex items-start justify-between mb-6">
+<div>
+<p class="text-xs tracking-widest uppercase text-[#6B6057] mb-1">Body &amp; UI</p>
+<p class="font-semibold text-[#282420]">Inter</p>
+</div>
+<span class="text-xs font-mono bg-[#F2EFE9] text-[#6B6057] px-3 py-1 rounded-full">Sans-Serif</span>
+</div>
+<div class="space-y-2 mb-8">
+<p class="font-demo-body text-5xl text-[#282420] font-light">AaBbCc</p>
+<p class="font-demo-body text-xl text-[#282420]">Home of traditional yoga and wellness practises in Tallinn.</p>
+<p class="font-demo-body text-base text-[#6B6057] leading-relaxed">Daily yoga classes and wellness events in the centre of Tallinn. We have created an authentic space and community where different yoga styles and wellness practises support people's choices.</p>
+</div>
+<div class="grid grid-cols-3 gap-4 text-sm text-[#6B6057] border-t border-[#E8E2DA] pt-6">
+<span>Light 300</span><span>Regular 400</span><span>Medium 500</span>
+<span>SemiBold 600</span><span>Bold 700</span><span>Line-height: 1.6</span>
+</div>
+</div>
+<!-- Roboto Mono -->
+<div class="rounded-3xl border border-[#E8E2DA] p-10 hover:border-[#8A7055] transition-colors duration-500 reveal delay-3">
+<div class="flex items-start justify-between mb-6">
+<div>
+<p class="text-xs tracking-widest uppercase text-[#6B6057] mb-1">Technical UI Only</p>
+<p class="font-semibold text-[#282420]">Roboto Mono</p>
+</div>
+<span class="text-xs font-mono bg-[#F2EFE9] text-[#6B6057] px-3 py-1 rounded-full">Monospace</span>
+</div>
+<p class="font-demo-mono text-3xl text-[#282420] mb-4">03 : 14 : 59</p>
+<p class="text-sm text-[#6B6057]">Used exclusively for countdown timers, hex codes, and technical values. Never for headings or body copy.</p>
+</div>
+</div>
+</section>
+<!-- ═══ SECTION 4: BRAND VOICE ═══ -->
+<section class="py-20 reveal" id="voice">
+<span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A7055] block mb-3">04 — Verbal Identity</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-4 text-[#282420]">Brand Voice</h2>
+<p class="text-[#6B6057] max-w-xl leading-relaxed mb-12">Warm, grounded, and quietly confident. We speak like a knowledgeable friend — not an institution.</p>
+<!-- Voice traits -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+<div class="reveal delay-1 rounded-2xl bg-[#F2EFE9] p-6 text-center">
+<i class="h-8 w-8 text-[#8A7055] mx-auto mb-3" data-lucide="users"></i>
+<p class="font-semibold text-[#282420] mb-1">Inviting</p>
+<p class="text-xs text-[#6B6057]">Always welcoming, never exclusive. Yoga is for everyone.</p>
+</div>
+<div class="reveal delay-2 rounded-2xl bg-[#F2EFE9] p-6 text-center">
+<i class="h-8 w-8 text-[#8A7055] mx-auto mb-3" data-lucide="book-open"></i>
+<p class="font-semibold text-[#282420] mb-1">Authentic</p>
+<p class="text-xs text-[#6B6057]">Rooted in real lineage — Mysore, Jois, parampara are natural references.</p>
+</div>
+<div class="reveal delay-3 rounded-2xl bg-[#F2EFE9] p-6 text-center">
+<i class="h-8 w-8 text-[#8A7055] mx-auto mb-3" data-lucide="feather"></i>
+<p class="font-semibold text-[#282420] mb-1">Calm</p>
+<p class="text-xs text-[#6B6057]">Short sentences. No exclamation marks in formal contexts.</p>
+</div>
+<div class="reveal delay-4 rounded-2xl bg-[#F2EFE9] p-6 text-center">
+<i class="h-8 w-8 text-[#8A7055] mx-auto mb-3" data-lucide="compass"></i>
+<p class="font-semibold text-[#282420] mb-1">Non-prescriptive</p>
+<p class="text-xs text-[#6B6057]">We support choices. We never tell people what they need.</p>
+</div>
+</div>
+<!-- Do/Don't -->
+<h3 class="text-2xl font-serif font-medium text-[#282420] mb-6 reveal">Do &amp; Don't</h3>
+<div class="space-y-4 reveal delay-1">
+<div class="do-dont-grid">
+<div class="voice-card rounded-xl p-6 bg-white border border-[#E8E2DA]">
+<span class="text-xs font-semibold text-green-600 uppercase tracking-widest">✓ Do</span>
+<p class="mt-3 text-[#282420] font-medium">"A safe space to switch off, relax and reinvigorate."</p>
+</div>
+<div class="voice-card danger rounded-xl p-6 bg-white border border-[#E8E2DA]">
+<span class="text-xs font-semibold text-red-500 uppercase tracking-widest">✗ Don't</span>
+<p class="mt-3 text-[#282420] font-medium">"The BEST yoga studio in Tallinn! 🔥🔥"</p>
+</div>
+</div>
+<div class="do-dont-grid">
+<div class="voice-card rounded-xl p-6 bg-white border border-[#E8E2DA]">
+<span class="text-xs font-semibold text-green-600 uppercase tracking-widest">✓ Do</span>
+<p class="mt-3 text-[#282420] font-medium">"Our practices are rooted in tradition but designed for modern living."</p>
+</div>
+<div class="voice-card danger rounded-xl p-6 bg-white border border-[#E8E2DA]">
+<span class="text-xs font-semibold text-red-500 uppercase tracking-widest">✗ Don't</span>
+<p class="mt-3 text-[#282420] font-medium">"We offer premium services for discerning clients."</p>
+</div>
+</div>
+<div class="do-dont-grid">
+<div class="voice-card rounded-xl p-6 bg-white border border-[#E8E2DA]">
+<span class="text-xs font-semibold text-green-600 uppercase tracking-widest">✓ Do</span>
+<p class="mt-3 text-[#282420] font-medium">"Whether you're a beginner or a lifelong practitioner — you're welcome."</p>
+</div>
+<div class="voice-card danger rounded-xl p-6 bg-white border border-[#E8E2DA]">
+<span class="text-xs font-semibold text-red-500 uppercase tracking-widest">✗ Don't</span>
+<p class="mt-3 text-[#282420] font-medium">"Only for serious practitioners."</p>
+</div>
+</div>
+</div>
+<!-- Key phrases -->
+<div class="mt-12 reveal delay-2">
+<h3 class="text-xl font-serif font-medium text-[#282420] mb-5">Key Phrases to Use</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Safe sanctuary</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Switch off, relax, reinvigorate</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Shala</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Practice</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Practitioner</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Journey</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">Traditional yet modern</span>
+<span class="px-4 py-2 rounded-full bg-[#F2EFE9] text-[#8A7055] text-sm font-medium">People of all ages</span>
+</div>
+</div>
+</section>
+<!-- ═══ SECTION 5: UI IDENTITY ═══ -->
+<section class="py-20 reveal" id="ui">
+<span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A7055] block mb-3">05 — Web &amp; UI</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-4 text-[#282420]">UI Language</h2>
+<p class="text-[#6B6057] max-w-xl leading-relaxed mb-14">Consistent rules that make every page feel unmistakably GoYoga.</p>
+<!-- Buttons -->
+<div class="reveal mb-12">
+<h3 class="font-semibold text-[#282420] mb-6 text-lg">Button System</h3>
+<div class="flex flex-wrap gap-4 p-8 rounded-2xl bg-[#F2EFE9]">
+<button class="px-6 py-3 bg-[#282420] text-white rounded-xl font-medium hover:bg-[#3d3731] transition-all hover:-translate-y-0.5 hover:shadow-md">Primary Dark</button>
+<button class="px-6 py-3 bg-pink-100 text-pink-800 rounded-xl font-medium hover:bg-pink-200 transition-all hover:-translate-y-0.5">Secondary Pink</button>
+<button class="px-6 py-3 border border-[#E8E2DA] text-[#282420] rounded-full font-medium bg-white hover:border-[#8A7055] transition-all hover:shadow-sm">Soft Pill</button>
+<button class="inline-flex items-center gap-2 text-pink-600 font-medium hover:text-pink-700 transition-colors">
+                        Text Link <i class="h-4 w-4" data-lucide="arrow-right"></i>
+</button>
+</div>
+</div>
+<!-- Section header pattern -->
+<div class="reveal mb-12">
+<h3 class="font-semibold text-[#282420] mb-6 text-lg">Section Header Pattern</h3>
+<div class="p-10 rounded-2xl border border-[#E8E2DA] text-center">
+<span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4">Our Approach</span>
+<h2 class="text-3xl font-serif font-medium mb-4 text-[#282420]">A Safe Sanctuary at the Heart of Tallinn</h2>
+<p class="text-[#6B6057] max-w-md mx-auto text-sm">Every section opens with a small uppercase tagline pill, then an H2 in Playfair Display, then a brief description. This rhythm is non-negotiable.</p>
+</div>
+</div>
+<!-- Animation principles -->
+<div class="reveal">
+<h3 class="font-semibold text-[#282420] mb-6 text-lg">Animation Principles</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="rounded-2xl p-6 border border-[#E8E2DA] hover:shadow-md transition-shadow group">
+<div class="h-12 w-12 rounded-xl bg-[#F2EFE9] flex items-center justify-center mb-4 group-hover:bg-[#8A7055] transition-colors">
+<i class="h-5 w-5 text-[#8A7055] group-hover:text-white transition-colors" data-lucide="eye"></i>
+</div>
+<p class="font-medium text-[#282420] mb-2">Fade on scroll</p>
+<p class="text-sm text-[#6B6057]">0.8s ease-out. All major sections fade up as they enter view.</p>
+</div>
+<div class="rounded-2xl p-6 border border-[#E8E2DA] hover:-translate-y-1 hover:shadow-lg transition-all group">
+<div class="h-12 w-12 rounded-xl bg-[#F2EFE9] flex items-center justify-center mb-4 group-hover:bg-[#8A7055] transition-colors">
+<i class="h-5 w-5 text-[#8A7055] group-hover:text-white transition-colors" data-lucide="layers"></i>
+</div>
+<p class="font-medium text-[#282420] mb-2">Card lift on hover</p>
+<p class="text-sm text-[#6B6057]">translateY(-4px) + shadow increase. Applied to all cards.</p>
+</div>
+<div class="rounded-2xl p-6 border border-[#E8E2DA] group overflow-hidden relative">
+<div class="h-12 w-12 rounded-xl bg-[#F2EFE9] flex items-center justify-center mb-4 group-hover:bg-[#8A7055] transition-colors">
+<i class="h-5 w-5 text-[#8A7055] group-hover:text-white transition-colors" data-lucide="minus"></i>
+</div>
+<p class="font-medium text-[#282420] mb-2 wipe-line">Link underline</p>
+<p class="text-sm text-[#6B6057]">CSS ::after slide-in. Used on nav links and text CTAs.</p>
+</div>
+</div>
+<p class="mt-6 text-sm text-[#6B6057] italic">Animation principle: smooth and unhurried. Duration should feel like a breath — not a bounce.</p>
+</div>
+</section>
+<!-- ═══ SECTION 6: AI LAYER ═══ -->
+<section class="py-20 reveal" id="ai">
+<span class="ai-chip mb-6 inline-flex anim-fade-in">
+<span>◈</span> AI-Readiness Layer
+            </span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-4 text-[#282420]">Future-Proof Schema</h2>
+<p class="text-[#6B6057] max-w-2xl leading-relaxed mb-12">
+                We embed a machine-readable Brand schema in the <code class="font-mono text-sm bg-[#F2EFE9] px-2 py-0.5 rounded">&lt;head&gt;</code> of every page. When AI tools crawl or rebuild this site, they know not just <em>what it looks like</em> — but <em>why it was designed that way</em>.
+            </p>
+<!-- Why it matters -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12 reveal">
+<div class="rounded-2xl p-6 bg-[#1a1814] text-white">
+<div class="text-[#DB2777] mb-3"><i class="h-6 w-6" data-lucide="cpu"></i></div>
+<p class="font-semibold mb-2">Colour tokens</p>
+<p class="text-white/50 text-sm">AI generators read <code class="font-mono text-[#DB2777]">#8A7055</code> as the primary brand colour — not a guess.</p>
+</div>
+<div class="rounded-2xl p-6 bg-[#1a1814] text-white">
+<div class="text-[#DB2777] mb-3"><i class="h-6 w-6" data-lucide="type"></i></div>
+<p class="font-semibold mb-2">Font names</p>
+<p class="text-white/50 text-sm">Heading font: <code class="font-mono text-[#8A7055]">Playfair Display</code>. Body: <code class="font-mono text-[#8A7055]">Inter</code>. Encoded in the schema.</p>
+</div>
+<div class="rounded-2xl p-6 bg-[#1a1814] text-white">
+<div class="text-[#DB2777] mb-3"><i class="h-6 w-6" data-lucide="message-circle"></i></div>
+<p class="font-semibold mb-2">Philosophy</p>
+<p class="text-white/50 text-sm">Inside-Out intent is encoded — AI won't drift to generic yoga templates.</p>
+</div>
+</div>
+<!-- JSON preview -->
+<div class="reveal delay-2">
+<h3 class="text-xl font-serif font-medium text-[#282420] mb-4">Brand Schema Snippet</h3>
+<pre class="json-block"><span class="json-punct">{</span>
+  <span class="json-key">"@type"</span><span class="json-punct">:</span> <span class="json-str">"Brand"</span><span class="json-punct">,</span>
+  <span class="json-key">"name"</span><span class="json-punct">:</span> <span class="json-str">"GoYoga Tallinn"</span><span class="json-punct">,</span>
+  <span class="json-key">"slogan"</span><span class="json-punct">:</span> <span class="json-str">"Yoga &amp; Wellness Sanctuary"</span><span class="json-punct">,</span>
+  <span class="json-key">"additionalProperty"</span><span class="json-punct">: [</span>
+    <span class="json-punct">{</span> <span class="json-key">"name"</span><span class="json-punct">:</span> <span class="json-str">"primaryColor"</span><span class="json-punct">,</span>  <span class="json-key">"value"</span><span class="json-punct">:</span> <span class="json-str">"#8A7055"</span>  <span class="json-punct">},</span>
+    <span class="json-punct">{</span> <span class="json-key">"name"</span><span class="json-punct">:</span> <span class="json-str">"accentColor"</span><span class="json-punct">,</span>   <span class="json-key">"value"</span><span class="json-punct">:</span> <span class="json-str">"#DB2777"</span>  <span class="json-punct">},</span>
+    <span class="json-punct">{</span> <span class="json-key">"name"</span><span class="json-punct">:</span> <span class="json-str">"headingFont"</span><span class="json-punct">,</span>   <span class="json-key">"value"</span><span class="json-punct">:</span> <span class="json-str">"Playfair Display"</span> <span class="json-punct">},</span>
+    <span class="json-punct">{</span> <span class="json-key">"name"</span><span class="json-punct">:</span> <span class="json-str">"brandPhilosophy"</span><span class="json-punct">,</span> <span class="json-key">"value"</span><span class="json-punct">:</span> <span class="json-str">"Inside-Out..."</span>    <span class="json-punct">}</span>
+  <span class="json-punct">]</span>
+<span class="json-punct">}</span></pre>
+</div>
+<!-- Verify CTA -->
+<div class="mt-10 p-8 rounded-2xl bg-gradient-to-r from-pink-50 to-[#F2EFE9] border border-pink-100 reveal delay-3">
+<p class="font-medium text-[#282420] mb-2">Verify the live schema</p>
+<p class="text-sm text-[#6B6057] mb-5">After deploying, paste the site URL into Google's Rich Results Test to confirm the Brand entity is parsed correctly.</p>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#282420] text-white rounded-lg text-sm font-medium hover:bg-[#3d3731] transition-all" href="https://search.google.com/test/rich-results" rel="noopener" target="_blank">
+                    Rich Results Test <i class="h-4 w-4" data-lucide="external-link"></i>
+</a>
+</div>
+</section>
+<!-- Download -->
+<section class="py-16 reveal">
+<div class="rounded-3xl p-12 md:p-16 text-center" style="background: linear-gradient(135deg, #1a1814 0%, #282420 100%);">
+<p class="text-xs font-semibold tracking-widest uppercase text-[#8A7055] mb-4">Single Source of Truth</p>
+<h2 class="text-3xl md:text-4xl font-serif text-white mb-4">Full Guidelines Document</h2>
+<p class="text-white/50 max-w-md mx-auto mb-8 text-sm leading-relaxed">The complete human-readable brand codex — colours, voice, UI rules, social media guidelines, and AI schema all in one markdown file.</p>
+<a class="inline-flex items-center gap-2 px-8 py-4 bg-[#8A7055] text-white rounded-2xl font-medium hover:bg-[#7a6048] transition-all hover:-translate-y-1 hover:shadow-xl" href="brand_identity.md">
+<i class="h-5 w-5" data-lucide="file-text"></i>
+                    Open brand_identity.md
+                </a>
+</div>
+</section>
+</div><!-- /max-w-6xl -->
+<!-- Footer -->
+<footer class="bg-[#282420] text-white py-12 mt-4">
+<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<img alt="GoYoga Tallinn" class="h-8 w-auto brightness-0 invert" src="/assets/branding/logo-goyoga-tallinn-estonia.svg"/>
+<span class="text-[#6B6057] text-sm">Brand Identity Portal</span>
+</div>
+<div class="flex gap-6 text-sm text-[#6B6057]">
+<a class="hover:text-white transition-colors" href="/en/">Home</a>
+<a class="hover:text-white transition-colors font-mono" href="brand_identity.md">brand_identity.md</a>
+<a class="hover:text-white transition-colors" href="/en/faq.html">FAQ</a>
+<a class="hover:text-white transition-colors" href="/en/rent.html">Studio Rental</a>
+</div>
+<p class="text-xs text-[#6B6057]">© 2026 www.goyoga.ee</p>
+</div>
+</footer>
+<!-- Copy toast -->
+<div class="copied-toast" id="copy-toast">Hex copied to clipboard</div>
+<script src="/js/data.js?v=1775482089"></script>
+<script>
+        // Lucide icons
+        if (window.lucide) lucide.createIcons();
+
+        // Nav scroll shadow
+        const nav = document.getElementById('brand-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    // Stagger children with delay classes
+                    const children = e.target.querySelectorAll('[class*="delay-"]');
+                    children.forEach(child => child.classList.add('visible'));
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        reveals.forEach(el => revealObs.observe(el));
+
+        // Copy hex to clipboard
+        const toast = document.getElementById('copy-toast');
+        let toastTimer;
+        function copyHex(hex) {
+            navigator.clipboard.writeText(hex).then(() => {
+                toast.textContent = `${hex} copied!`;
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

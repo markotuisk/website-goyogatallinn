@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Details | Goyoga Tallinn</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="/css/style.css?v=1775482089" rel="stylesheet"/>
+<!-- Favicons -->
+<link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="site.webmanifest" rel="manifest"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbf9;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gallery-grid img {
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-N0X5B7NG6N');
+    </script>
+<link href="https://www.goyoga.ee/en/event.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/uritus.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/tapahtuma.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/ru/sobytie.html" hreflang="ru" rel="alternate"/><link href="https://www.goyoga.ee/event.html" hreflang="x-default" rel="alternate"/></head>
+<body class="text-gray-900 pt-24">
+<!-- Navbar (Aligned with index.html) -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm" id="navbar">
+<div class="container-custom py-4 md:py-5">
+<div class="flex items-center justify-between">
+<a class="flex items-center" href="/ru/">
+<img alt="Студия йоги Goyoga Tallinn" class="h-10 w-auto" src="/assets/branding/logo-goyoga-tallinn-estonia.svg"/>
+</a>
+<nav class="hidden md:block">
+<ul class="flex items-center space-x-8">
+<li><a class="text-sm font-medium link-underline" data-i18n="nav.home" href="/ru/#home">Главная</a></li>
+<li><a class="text-sm font-medium link-underline text-pink-600" data-i18n="nav.events" href="/ru/sobytiya.html">События</a></li>
+<li><a class="text-sm font-medium link-underline" data-i18n="nav.contact" href="/ru/#contact">Контакты</a></li>
+</ul>
+</nav>
+<button class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-pink-600 transition-colors" onclick="window.history.back()">
+<i class="h-4 w-4" data-lucide="arrow-left"></i>
+<span data-i18n="classes.back_to_classes">Вернуться к занятиям</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pb-24" id="event-detail-content">
+<!-- Dynamic Content Loader -->
+<div class="container-custom flex justify-center py-24">
+<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600"></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container-custom text-center">
+<div class="mb-6 flex justify-center">
+<img alt="Студия йоги Goyoga Tallinn" class="h-10 w-auto brightness-0 invert" src="/assets/branding/logo-goyoga-tallinn-estonia.svg"/>
+</div>
+<p class="text-gray-400 text-sm" data-i18n="footer.copyright">© 2025 www.goyoga.ee. Все права защищены.</p>
+</div>
+</footer>
+<!-- Scripts -->
+<script src="/js/data.js?v=1775482089"></script>
+<script src="/js/events.js?v=1775482089"></script>
+<script src="/js/script.js?v=1775482089"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const eventId = params.get('id');
+            const lang = localStorage.getItem('preferredLanguage') || 'en';
+            const container = document.getElementById('event-detail-content');
+
+            const event = eventsData.find(e => e.id === eventId);
+
+            if (!event) {
+                const metaRobots = document.createElement('meta');
+                metaRobots.name = "robots";
+                metaRobots.content = "noindex, nofollow";
+                document.head.appendChild(metaRobots);
+                
+                container.innerHTML = `
+                    <div class="container-custom py-24 text-center">
+                        <h1 class="text-4xl mb-4">Event Not Found</h1>
+                        <p class="mb-8 text-gray-500">The event you are looking for might have expired or been moved.</p>
+                        <a href="events.html" class="px-8 py-3 bg-gray-900 text-white rounded-full uppercase tracking-widest text-sm font-bold">View All Events</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const data = event[lang] || event['en'];
+
+            // --- SEO: Update page title and meta description dynamically ---
+            document.title = `${data.title} | Goyoga Tallinn`;
+            let metaDesc = document.querySelector('meta[name="description"]');
+            if (!metaDesc) {
+                metaDesc = document.createElement('meta');
+                metaDesc.setAttribute('name', 'description');
+                document.head.appendChild(metaDesc);
+            }
+            metaDesc.setAttribute('content', `${data.description} ${data.date} — ${data.location}. Goyoga Tallinn.`);
+
+            // --- SEO: Inject Schema.org Event JSON-LD ---
+            const enData = event['en'] || data;
+            const buildDate = new Date().toISOString().split('T')[0];
+            const startTime = event.startTime || '09:00';
+            const endTime = event.endTime || '12:00';
+
+            // Performer Mapping
+            const performers = (event.teachers || []).map(tid => {
+                const t = teachersData[tid] || { name: tid };
+                return {
+                    "@type": "Person",
+                    "name": t.name,
+                    "url": `https://www.goyoga.ee/teacher.html?id=${tid}`
+                };
+            });
+            if (performers.length === 0) performers.push({ "@type": "Organization", "name": "Goyoga Tallinn" });
+
+            // Offers Mapping
+            const offers = [];
+            offers.push({
+                "@type": "Offer",
+                "name": "Standard Price",
+                "price": String(event.price || 0),
+                "priceCurrency": "EUR",
+                "validFrom": buildDate,
+                "url": window.location.href,
+                "availability": "https://schema.org/InStock"
+            });
+            if (event.memberPrice > 0) {
+                offers.push({
+                    "@type": "Offer",
+                    "name": "Member Price",
+                    "price": String(event.memberPrice),
+                    "priceCurrency": "EUR",
+                    "validFrom": buildDate,
+                    "url": window.location.href,
+                    "availability": "https://schema.org/InStock",
+                    "category": "MembershipDiscount"
+                });
+            }
+
+            const eventSchema = {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": enData.title,
+                "description": enData.description,
+                "startDate": `${event.startDate}T${startTime}:00`,
+                "endDate": `${event.expiryDate || event.startDate}T${endTime}:00`,
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "url": `https://www.goyoga.ee/event.html?id=${event.id}`,
+                "image": [event.image],
+                "location": {
+                    "@type": "Place",
+                    "name": enData.location || "Goyoga Tallinn Studio",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": event.type === 'retreat' ? "" : "Narva mnt 7D",
+                        "addressLocality": event.type === 'retreat' ? (enData.location || "").split(',')[0] : "Tallinn",
+                        "addressCountry": event.country ? (event.country.en || "EE") : "EE"
+                    }
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": enData.organizer || "Goyoga Tallinn",
+                    "url": "https://www.goyoga.ee"
+                },
+                "performer": performers,
+                "offers": offers,
+                "inLanguage": lang
+            };
+            const ldScript = document.createElement('script');
+            ldScript.type = 'application/ld+json';
+            ldScript.textContent = JSON.stringify(eventSchema, null, 2);
+            document.head.appendChild(ldScript);
+
+            const now = new Date();
+            const todayStr = now.toDateString();
+
+            const tomorrow = new Date(now);
+            tomorrow.setDate(now.getDate() + 1);
+            const tomorrowStr = tomorrow.toDateString();
+
+            const yesterday = new Date(now);
+            yesterday.setDate(now.getDate() - 1);
+            const yesterdayStr = yesterday.toDateString();
+
+            // Calculate Status Tag
+            const expiryDate = new Date(event.expiryDate);
+            const eventDate = new Date(expiryDate.getTime() - 24 * 60 * 60 * 1000);
+            const eventDateStr = eventDate.toDateString();
+
+            let statusTag = '';
+            const t = translationsData[lang];
+
+            if (eventDateStr === todayStr) {
+                statusTag = `<span class="px-3 py-1 bg-green-500 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md animate-pulse">${t['events.status.today']}</span>`;
+            } else if (eventDateStr === tomorrowStr) {
+                statusTag = `<span class="px-3 py-1 bg-blue-500 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md">${t['events.status.tomorrow']}</span>`;
+            } else if (eventDateStr === yesterdayStr) {
+                statusTag = `<span class="px-3 py-1 bg-gray-500 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-md">${t['events.status.passed']}</span>`;
+            }
+
+            const typeLabel = event.type === 'retreat'
+                ? (lang === 'et' ? 'Retriit' : lang === 'fi' ? 'Retriitti' : 'Retreat')
+                : (lang === 'et' ? 'Sündmus' : lang === 'fi' ? 'Tapahtuma' : 'Event');
+
+            const countryLabel = (event.type === 'retreat' && event.category === 'abroad' && event.country)
+                ? event.country[lang] || event.country['en']
+                : (event.category === 'estonia' ? (lang === 'et' ? 'Eesti' : lang === 'fi' ? 'Viro' : 'Estonia') : '');
+
+            let itineraryHtml = '';
+            if (data.itinerary && data.itinerary.length > 0) {
+                itineraryHtml = `
+                    <div class="mt-16">
+                        <h2 class="text-3xl mb-8">Itinerary</h2>
+                        <div class="space-y-6">
+                            ${data.itinerary.map(item => `
+                                <div class="flex gap-6 pb-6 border-b border-gray-100 last:border-0">
+                                    <span class="font-bold text-pink-600 min-w-[80px] uppercase tracking-tighter text-sm pt-0.5">${item.day}</span>
+                                    <p class="text-gray-700">${item.activity}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            let galleryHtml = '';
+            if (event.gallery && event.gallery.length > 0) {
+                galleryHtml = `
+                    <div class="mt-16">
+                        <h2 class="text-3xl mb-8">Atmosphere</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gallery-grid">
+                            ${event.gallery.map(img => `
+                                <div class="aspect-video md:aspect-square overflow-hidden rounded-xl bg-gray-100">
+                                    <img src="${img}" class="w-full h-full object-cover" alt="Event preview">
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            let teachersHtml = '';
+            if (event.teachers && event.teachers.length > 0) {
+                const teacherCards = event.teachers.map(tId => {
+                    const teacherData = teachersData[tId];
+                    if (!teacherData) return '';
+                    return `
+                        <a href="/teacher.html?id=${tId}" class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-pink-200 hover:bg-pink-50/30 transition-all group">
+                            <img src="${teacherData.image}" alt="${teacherData.name}" class="w-14 h-14 rounded-full object-cover shadow-sm">
+                            <div>
+                                <h4 class="font-medium text-gray-900 group-hover:text-pink-600 transition-colors">${teacherData.name}</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">${teacherData.title}</p>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+
+                if (teacherCards) {
+                    teachersHtml = `
+                        <div class="mt-8 pt-8 border-t border-gray-50">
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4" data-i18n="events.guided_by">Guided by</h3>
+                            <div class="space-y-3">
+                                ${teacherCards}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            container.innerHTML = `
+                <!-- Hero -->
+                <div class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+                    <img src="${event.headerImage || event.image}" class="w-full h-full object-cover" alt="${data.title}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-16">
+                        <div class="container-custom">
+                            <div class="flex flex-col gap-4 max-w-4xl">
+                                <div class="flex flex-wrap gap-2">
+                                    ${statusTag}
+                                    <span class="px-3 py-1 bg-pink-600 text-white text-xs font-bold uppercase tracking-widest rounded-full">${typeLabel}</span>
+                                    ${countryLabel ? `<span class="px-3 py-1 bg-white/20 backdrop-blur-md text-white border border-white/30 text-xs font-bold uppercase tracking-widest rounded-full">${countryLabel}</span>` : ''}
+                                </div>
+                                <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-medium leading-tight">${data.title}</h1>
+                                <div class="flex flex-wrap items-center gap-6 text-white/90 font-medium">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="calendar" class="h-5 w-5 text-pink-400"></i>
+                                        <span>${data.date}</span>
+                                    </div>
+                                    ${(event.category === 'estonia' || event.category === 'studio') && event.startTime && event.endTime ? `
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="clock" class="h-5 w-5 text-pink-400"></i>
+                                        <span>${event.startTime} - ${event.endTime}</span>
+                                    </div>` : ''}
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="map-pin" class="h-5 w-5 text-pink-400"></i>
+                                        <span>${data.location}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-custom mt-12 md:mt-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                        <!-- Left Column: Details -->
+                        <div class="lg:col-span-2">
+                            <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed italic border-l-4 border-pink-100 pl-6 mb-12">
+                                ${data.description}
+                            </div>
+                            
+                            <div class="text-lg text-gray-800 leading-relaxed mb-12">
+                                ${data.fullDescription || ''}
+                            </div>
+
+                            ${itineraryHtml}
+                            ${galleryHtml}
+                        </div>
+
+                        <!-- Right Column: Sidebar -->
+                        <div class="lg:col-span-1">
+                            <div class="sticky top-32 p-8 bg-white border border-gray-100 rounded-3xl shadow-sm space-y-8">
+                                <div>
+                                    <h3 class="text-xl mb-6">Highlights</h3>
+                                    <ul class="space-y-4">
+                                        ${data.highlights.map(h => `
+                                            <li class="flex items-start gap-3 text-gray-600">
+                                                <i data-lucide="check-circle-2" class="h-5 w-5 text-green-500 shrink-0 mt-0.5"></i>
+                                                <span>${h}</span>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+
+                                <div class="pt-8 border-t border-gray-50 flex flex-col gap-4">
+                                    ${(event.registerLink && event.registerLink.startsWith('http')) ? `
+                                    <a href="${event.registerLink}" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-gray-900 text-white text-center font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-pink-600 transition-all shadow-md flex justify-center items-center">
+                                        <span>${translationsData[lang]['events.register_button']}</span>
+                                    </a>` : `
+                                    <button onclick="openEventModal('${event.id}', '${encodeURIComponent(data.title)}')" class="w-full py-4 bg-gray-900 text-white text-center font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-pink-600 transition-all shadow-md">
+                                        <span data-i18n="events.register_button">Register Now</span>
+                                    </button>`}
+                                    <p class="text-xs text-gray-400 text-center leading-relaxed italic" data-i18n="events.member_disclaimer">
+                                        Member discounts apply to active holders of the Ashtanga Pass, Full Pass, or 1-Month Pass.
+                                    </p>
+                                    <button onclick="shareEvent('${event.id}', '${data.title}')" class="w-full py-4 border border-gray-200 text-gray-700 flex items-center justify-center gap-2 font-bold uppercase tracking-widest rounded-xl hover:bg-gray-50 transition-all mt-2">
+                                        <i data-lucide="share-2" class="h-4 w-4"></i>
+                                        Share Event
+                                    </button>
+                                </div>
+
+                                ${teachersHtml}
+
+                                <div class="pt-4 text-center">
+                                    <p class="text-sm text-gray-400 font-mono">${data.organizer}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            if (window.lucide) window.lucide.createIcons();
+
+            // Re-run i18n for the static parts
+            updateUI(lang);
+        });
+    </script>
+</body>
+</html>

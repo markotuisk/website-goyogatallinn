@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoYoga.ee | Ashtanga Yoga Studio</title>
+    <meta name="description" content="Explore the practice of Ashtanga Yoga with GoYoga.ee. Find class schedules, pricing, and connect with our experienced teachers." />
+    <meta name="author" content="GoYoga.ee" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --background: 40 33% 98%;
+            --foreground: 30 10% 15%;
+            --primary: 35 25% 45%;
+            --secondary: 25 15% 94%;
+            --muted: 25 15% 94%;
+            --muted-foreground: 30 10% 40%;
+            --border: 30 15% 90%;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.025em;
+        }
+        .container-custom {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container-custom {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container-custom {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        .section-padding {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+            }
+        }
+        .link-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .link-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: hsl(var(--primary));
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .link-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in-section {
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+        }
+        .animate-delay-200 { animation-delay: 200ms; }
+        .animate-delay-400 { animation-delay: 400ms; }
+        .animate-delay-600 { animation-delay: 600ms; }
+        .animate-delay-800 { animation-delay: 800ms; }
+        
+        .like-button svg {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .flying-heart {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fly-away 1s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes fly-away {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-80px) scale(0.5);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes gentle-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        .animate-gentle-pulse {
+            animation: gentle-pulse 2.5s infinite;
+            animation-delay: 3s;
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .teacher-card {
+            cursor: pointer;
+        }
+        
+        /* Instagram Carousel */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-266px * 7)); } /* (250px width + 16px margin) * 7 slides */
+        }
+        .slider-track {
+            animation: scroll 40s linear infinite;
+        }
+        .slider-container:hover .slider-track {
+            animation-play-state: paused;
+        }
+
+        /* Reviews Carousel Styles */
+        .reviews-carousel {
+            position: relative;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+
+        .review-card {
+            flex: 0 0 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+            .review-card {
+                flex: 0 0 50%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .review-card {
+                flex: 0 0 33.333%;
+            }
+        }
+
+        .review-content {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .review-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .reviewer-details h4 {
+            font-weight: 600;
+            font-size: 16px;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .reviewer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #6b7280;
+            background: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        .review-date {
+            font-size: 13px;
+            color: #9ca3af;
+            text-align: right;
+            margin-bottom: 4px;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 16px;
+        }
+
+        .review-text {
+            color: #4b5563;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .review-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 16px;
+            padding: 4px 10px;
+            background: #f8fafc;
+            border-radius: 16px;
+        }
+
+        .review-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .review-dot.active {
+            background: #ec4899;
+            transform: scale(1.2);
+        }
+
+        /* Language Switcher Styles */
+        .language-switcher {
+            position: relative;
+        }
+        
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-width: 140px;
+            display: none;
+            z-index: 100;
+        }
+        
+        .language-dropdown.active {
+            display: block;
+        }
+        
+        .language-option {
+            padding: 10px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+        
+        .language-option:hover {
+            background-color: #f9fafb;
+        }
+        
+        .language-option.active {
+            background-color: #f3f4f6;
+            color: #ec4899;
+            font-weight: 500;
+        }
+        
+        .language-flag {
+            width: 20px;
+            height: 15px;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container-custom py-4 md:py-5">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="text-2xl font-serif font-medium tracking-wide">GoYoga</a>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="#home" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.about">About</a></li>
+                        <li><a href="#studio" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.studio">Studio</a></li>
+                        <li><a href="#schedule" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="#pricing" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="#teachers" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="#events" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.events">Events</a></li>
+                        <li><a href="#community" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.community">Community</a></li>
+                        <li><a href="#contact" class="text-sm font-medium link-underline transition-colors" data-i18n="nav.contact">Contact</a></li>
+                        
+                        <!-- Language Switcher -->
+                        <li class="language-switcher ml-4">
+                            <button id="language-toggle" class="flex items-center gap-2 text-sm font-medium">
+                                <span class="language-flag-container">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag" id="current-flag">
+                                </span>
+                                <span id="current-language">EN</span>
+                                <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                            </button>
+                            <div class="language-dropdown" id="language-dropdown">
+                                <div class="language-option" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                                    <span>English</span>
+                                </div>
+                                <div class="language-option" data-lang="et">
+                                    <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                                    <span>Eesti</span>
+                                </div>
+                                <div class="language-option" data-lang="fi">
+                                    <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                                    <span>Suomi</span>
+                                </div>
+<div class="language-option" data-lang="ru">
+<img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png"/>
+<span>Русский</span>
+</div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <!-- Mobile Language Switcher -->
+                    <div class="language-switcher md:hidden">
+                        <button id="mobile-language-toggle" class="flex items-center gap-2 text-sm font-medium">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag" id="mobile-current-flag">
+                            <span id="mobile-current-language">EN</span>
+                        </button>
+                        <div class="language-dropdown" id="mobile-language-dropdown">
+                            <div class="language-option" data-lang="en">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="et">
+                                <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                                <span>Eesti</span>
+                            </div>
+                            <div class="language-option" data-lang="fi">
+                                <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                                <span>Suomi</span>
+                            </div>
+<div class="language-option" data-lang="ru">
+<img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png"/>
+<span>Русский</span>
+</div>
+                        </div>
+                    </div>
+                    
+                    <button id="menu-toggle" class="block md:hidden focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="flex justify-end p-4">
+                 <button id="menu-close" class="focus:outline-none">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col h-full justify-center items-center space-y-8 p-8">
+                <a href="#home" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.home">Home</a>
+                <a href="#about" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.about">About</a>
+                <a href="#studio" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.studio">Studio</a>
+                <a href="#schedule" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.schedule">Schedule</a>
+                <a href="#pricing" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.pricing">Pricing</a>
+                <a href="#teachers" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.teachers">Teachers</a>
+                <a href="#events" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.events">Events</a>
+                <a href="#community" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.community">Community</a>
+                <a href="#contact" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.contact">Contact</a>
+                
+                <!-- Mobile Language Options in Menu -->
+                <div class="flex flex-col gap-4 mt-8">
+                    <div class="text-center mb-2 text-gray-500 font-medium" data-i18n="nav.language">Language</div>
+                    <div class="flex gap-4">
+                        <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border" data-lang="en">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </button>
+                        <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border" data-lang="et">
+                            <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag">
+                            <span>Eesti</span>
+                        </button>
+                        <button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border" data-lang="fi">
+                            <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag">
+                            <span>Suomi</span>
+                        </button>
+<button class="language-option-mobile flex items-center gap-2 px-4 py-2 rounded-lg border" data-lang="ru">
+<img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png"/>
+<span>Русский</span>
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-100">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); filter: brightness(0.9) contrast(1.1);"></div>
+                <div class="absolute inset-0 bg-gray-900/40"></div>
+            </div>
+            <div class="container-custom relative z-10 text-center text-white fade-in">
+                <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white/10 backdrop-blur-sm rounded-full mb-4" data-i18n="hero.tagline">Mysore Style Ashtanga</span>
+                <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-medium" data-i18n="hero.title">Transform Your Body<br />and Mind Through Ashtanga</h1>
+                <p class="max-w-2xl mx-auto mb-10 text-lg text-white/90" data-i18n="hero.description">Traditional Ashtanga yoga in a serene and supportive environment. Begin your journey to inner peace and physical wellness.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#schedule" class="px-8 py-3 bg-white text-gray-800 font-medium rounded-md hover:bg-white/90 transition-colors shadow-md" data-i18n="hero.view_schedule">View Schedule</a>
+                    <a href="#events" class="px-8 py-3 border border-white/60 rounded-md hover:bg-white/10 transition-colors" data-i18n="hero.events">Events</a>
+                </div>
+            </div>
+            <a href="#about" class="absolute bottom-24 md:bottom-10 left-1/2 transform -translate-x-1/2 text-white fade-in animate-delay-800">
+                <div class="flex flex-col items-center">
+                    <span class="text-sm font-medium mb-2" data-i18n="hero.discover_more">Discover More</span>
+                    <i data-lucide="arrow-down" class="h-5 w-5 animate-bounce"></i>
+                </div>
+            </a>
+            <!-- Hero Seasonal Offer -->
+            <a href="#pricing" class="absolute bottom-8 right-8 bg-white/20 backdrop-blur-md text-white p-3 rounded-lg shadow-lg flex items-center space-x-3 transition-all duration-300 hover:bg-white/30 animate-gentle-pulse">
+                <i data-lucide="gift" class="h-5 w-5 text-pink-300"></i>
+                <div>
+                    <p class="text-sm font-semibold" data-i18n="hero.seasonal_offer">Seasonal Offer!</p>
+                    <div id="hero-countdown" class="flex items-center text-xs space-x-1 font-mono">
+                         <!-- Mini countdown will be injected here -->
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-white fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4" data-i18n="about.tagline">About Ashtanga</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="about.title">An Ancient Practice for Modern Life</h2>
+                    <p class="text-lg text-gray-500" data-i18n="about.description">Ashtanga yoga is a system of yoga recorded by the sage Vamana Rishi in the Yoga Korunta, an ancient manuscript.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-4" data-i18n="about.subtitle">The Eight Limbs</h3>
+                        <p class="mb-6" data-i18n="about.content1">Ashtanga means "eight limbs" in Sanskrit, referring to the eight aspects of yoga described by Patanjali in the Yoga Sutras. These eight limbs are a progressive system that purifies the body and mind, leading to self-realization.</p>
+                        <p class="mb-6" data-i18n="about.content2">The practice combines flowing movements with breath (vinyasa), specific gazing points (drishti), and energy locks (bandhas) to create a moving meditation that builds strength, flexibility, and inner peace.</p>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="bg-gray-50 p-5 rounded-md">
+                                <h4 class="font-medium mb-2" data-i18n="about.benefits.physical.title">Physical Benefits</h4>
+                                <p class="text-sm text-gray-500" data-i18n="about.benefits.physical.description">Increased strength, flexibility, improved circulation, and detoxification of the body.</p>
+                            </div>
+                            <div class="bg-gray-50 p-5 rounded-md">
+                                <h4 class="font-medium mb-2" data-i18n="about.benefits.mental.title">Mental Benefits</h4>
+                                <p class="text-sm text-gray-500" data-i18n="about.benefits.mental.description">Reduced stress, improved focus, mental clarity, and emotional balance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-[500px] rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843" alt="Ashtanga Yoga Practice" class="absolute inset-0 w-full h-full object-cover rounded-lg" style="filter: brightness(1.05) contrast(1.1)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Section -->
+        <section id="studio" class="section-padding bg-gray-50 fade-in-section">
+            <div class="container-custom">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-white rounded-full mb-4" data-i18n="studio.tagline">Our Space</span>
+                        <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="studio.title">A Sanctuary in the City</h2>
+                        <p class="text-lg text-gray-600 mb-4" data-i18n="studio.description1">Located at <span class="font-semibold">Narva mnt 7D, Tallinn</span>, our studio is a peaceful retreat on the 3rd floor, away from the city's hustle and bustle. Please note that access is by stairs only as there is no elevator in the building.</p>
+                        <p class="text-gray-600 mb-6" data-i18n="studio.description2">Designed with natural wood floors and calming earth tones, the space is filled with light and positive energy. We provide all the amenities you need for a comfortable practice, including high-quality mats, props, changing rooms, and a cozy tea corner for you to relax in before or after your class.</p>
+                        <button id="rent-studio-button" class="inline-block px-8 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors" data-i18n="studio.rent_button">Rent Our Space</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://media.gettyimages.com/id/1495479126/photo/interior-of-an-empty-yoga-center.jpg?s=612x612&w=0&k=20&c=B9KM7aHD_YgZGTYSdjVc78ymYy8mayZMEX61YBy6NDs=" alt="Bright yoga studio interior" class="rounded-lg shadow-md w-full h-full object-cover">
+                        <img src="https://st3.depositphotos.com/10439530/13566/i/380/depositphotos_135665562-stock-photo-couple-sitting-in-lotus-position.jpg" alt="Close up of yoga mats" class="rounded-lg shadow-md w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e" alt="Woman meditating in studio" class="rounded-lg shadow-md w-full h-full object-cover">
+                        <img src="https://media.istockphoto.com/id/869915476/photo/yoga-equipment.jpg?s=612x612&w=0&k=20&c=HKmrau7egtTYtw4KUgoLd9U1qZ07rnJNh7sq7JXCvr8=" alt="Yoga props and accessories" class="rounded-lg shadow-md w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="section-padding bg-white fade-in-section">
+            <div class="container-custom">
+                 <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4" data-i18n="schedule.tagline">Live Class Schedule</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="schedule.title">Find Your Time to Practice</h2>
+                    <p class="text-lg text-gray-500" data-i18n="schedule.description">Our schedule is always up-to-date. Find a class and book your spot directly through the calendar below.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden p-2">
+                    <iframe 
+                       src="https://app.hopitude.com/et/calendar?cl=491" 
+                       width="100%" 
+                       height="800px" 
+                       style="border:none; border-radius: 0.75rem;"
+                       title="GoYoga.ee Class Schedule">
+                   </iframe>
+               </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section-padding bg-gray-50 fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-white rounded-full mb-4" data-i18n="pricing.tagline">Pricing Options</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="pricing.title">Invest in Your Practice</h2>
+                    <p class="text-lg text-gray-500" data-i18n="pricing.description">We offer flexible pricing options to suit your schedule and commitment level. Choose a category to see the options.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pricing Group 1: Single Session -->
+                    <div class="border border-gray-200 rounded-xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <i data-lucide="user" class="h-12 w-12 text-pink-500 mb-4"></i>
+                        <h3 class="text-2xl font-medium mb-2" data-i18n="pricing.single.title">Single Session</h3>
+                        <p class="text-gray-600 mb-6 flex-grow" data-i18n="pricing.single.description">Perfect for drop-ins or trying out a class.</p>
+                        <button data-pricing-group="single" class="pricing-button mt-auto w-full py-3 text-center rounded-md font-medium transition-colors bg-pink-100 text-pink-800 hover:bg-pink-200" data-i18n="pricing.view_options">View Options</button>
+                    </div>
+                    <!-- Pricing Group 2: Memberships (Most Popular) -->
+                    <div class="border-2 border-pink-500 rounded-xl p-8 flex flex-col items-center text-center transition-all duration-300 shadow-lg -translate-y-0 md:-translate-y-4 relative">
+                        <div class="absolute top-0 -right-1 bg-pink-500 text-white text-xs font-medium px-3 py-1 rounded-full -mt-3 shadow-md" data-i18n="pricing.most_popular">Most Popular</div>
+                        <i data-lucide="gem" class="h-12 w-12 text-pink-500 mb-4"></i>
+                        <h3 class="text-2xl font-medium mb-2" data-i18n="pricing.memberships.title">Memberships</h3>
+                        <p class="text-gray-600 mb-6 flex-grow" data-i18n="pricing.memberships.description">The best value for dedicated practitioners.</p>
+                        <button data-pricing-group="memberships" class="pricing-button mt-auto w-full py-3 text-center rounded-md font-medium transition-colors bg-gray-800 text-white hover:bg-gray-700" data-i18n="pricing.view_options">View Options</button>
+                    </div>
+                    <!-- Pricing Group 3: Multi-Visit Passes -->
+                     <div class="border border-gray-200 rounded-xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <i data-lucide="star" class="h-12 w-12 text-pink-500 mb-4"></i>
+                        <h3 class="text-2xl font-medium mb-2" data-i18n="pricing.passes.title">Multi-Visit Passes</h3>
+                        <p class="text-gray-600 mb-6 flex-grow" data-i18n="pricing.passes.description">Great value for regular students who need flexibility.</p>
+                        <button data-pricing-group="passes" class="pricing-button mt-auto w-full py-3 text-center rounded-md font-medium transition-colors bg-pink-100 text-pink-800 hover:bg-pink-200" data-i18n="pricing.view_options">View Options</button>
+                    </div>
+                </div>
+                 <!-- Seasonal Offer -->
+                <div id="seasonal-offer" class="mt-16 max-w-4xl mx-auto rounded-xl p-8 text-white bg-gradient-to-r from-pink-600 to-rose-500 shadow-lg transition-all duration-300 hover:shadow-2xl fade-in-section">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                        <div class="md:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="gift" class="h-6 w-6 mr-3"></i>
+                                <h3 class="text-2xl font-serif font-medium" data-i18n="pricing.offer.title">Seasonal Offering</h3>
+                            </div>
+                            <p class="text-xl font-semibold mb-2" data-i18n="pricing.offer.subtitle">Back to Yoga Special!</p>
+                            <p class="text-rose-100 mb-4" data-i18n="pricing.offer.description">Commit to your practice this autumn. Get a 5-class pass and start your journey back to the mat.</p>
+                            <div class="flex items-baseline space-x-3 mb-4">
+                                <span class="text-4xl font-bold">€40</span>
+                                <span class="text-xl line-through text-rose-200">€50</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm uppercase tracking-wider mb-2 text-rose-100" data-i18n="pricing.offer.ends_in">Offer Ends In:</p>
+                            <div id="countdown" class="flex justify-center space-x-4 text-2xl font-mono font-bold">
+                                <div><span id="days">00</span><span class="block text-xs font-sans font-normal" data-i18n="pricing.offer.days">Days</span></div>
+                                <div><span id="hours">00</span><span class="block text-xs font-sans font-normal" data-i18n="pricing.offer.hours">Hours</span></div>
+                                <div><span id="minutes">00</span><span class="block text-xs font-sans font-normal" data-i18n="pricing.offer.minutes">Mins</span></div>
+                                <div><span id="seconds">00</span><span class="block text-xs font-sans font-normal" data-i18n="pricing.offer.seconds">Secs</span></div>
+                            </div>
+                            <a href="#contact" class="mt-6 block w-full py-3 text-center rounded-md font-medium transition-colors bg-white text-pink-600 hover:bg-rose-100" data-i18n="pricing.offer.claim_button">Claim Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="section-padding bg-white fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                     <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4" data-i18n="teachers.tagline">Our Teachers</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="teachers.title">Learn from Experienced Practitioners</h2>
+                    <p class="text-lg text-gray-500" data-i18n="teachers.description">Our teachers are dedicated to guiding you through the Ashtanga yoga journey with knowledge, compassion, and authenticity.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                    <!-- Teacher 1: Raili Maripuu -->
+                    <div class="teacher-card bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md" data-teacher-id="raili">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Raili Maripuu" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" loading="lazy">
+                            <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-medium mb-1">Raili Maripuu</h3>
+                            <p class="text-pink-500 mb-4" data-i18n="teachers.raili.title">Founder & Teacher</p>
+                            <p class="text-gray-700 mb-5 text-sm" data-i18n="teachers.raili.description">Raili is the heart of our studio, bringing authentic Ashtanga practice to all levels.</p>
+                        </div>
+                    </div>
+                     <!-- Teacher 2: Ave Lajal -->
+                    <div class="teacher-card bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md" data-teacher-id="ave">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3" alt="Ave Lajal" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" loading="lazy">
+                            <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-medium mb-1">Ave Lajal</h3>
+                            <p class="text-pink-500 mb-4" data-i18n="teachers.ave.title">Ashtanga Teacher</p>
+                            <p class="text-gray-700 mb-5 text-sm" data-i18n="teachers.ave.description">Ave shares the traditional Ashtanga method with precision and warmth.</p>
+                        </div>
+                    </div>
+                     <!-- Teacher 3: Triin Parro -->
+                    <div class="teacher-card bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md" data-teacher-id="triin">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Triin Parro" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" loading="lazy">
+                             <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-medium mb-1">Triin Parro</h3>
+                            <p class="text-pink-500 mb-4" data-i18n="teachers.triin.title">Fitness & Power Trainer</p>
+                            <p class="text-gray-700 mb-5 text-sm" data-i18n="teachers.triin.description">Triin brings dynamic energy to her classes, focusing on building strength.</p>
+                        </div>
+                    </div>
+                    <!-- Teacher 4: Elizaveta Lebedeva -->
+                    <div class="teacher-card bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md" data-teacher-id="elizaveta">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a" alt="Elizaveta Lebedeva" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" loading="lazy">
+                             <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-medium mb-1">Elizaveta Lebedeva</h3>
+                            <p class="text-pink-500 mb-4" data-i18n="teachers.elizaveta.title">Ashtanga Teacher</p>
+                            <p class="text-gray-700 mb-5 text-sm" data-i18n="teachers.elizaveta.description">Elizaveta guides students with a gentle yet disciplined approach.</p>
+                        </div>
+                    </div>
+                    <!-- Teacher 5: Viktooria Palusaar -->
+                    <div class="teacher-card bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md" data-teacher-id="viktooria">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564" alt="Viktooria Palusaar" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" loading="lazy">
+                            <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-medium mb-1">Viktooria Palusaar</h3>
+                            <p class="text-pink-500 mb-4" data-i18n="teachers.viktooria.title">Nutritional Therapist</p>
+                            <p class="text-gray-700 mb-5 text-sm" data-i18n="teachers.viktooria.description">Viktooria supports your well-being through balanced nutrition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section-padding bg-gray-50 fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-white rounded-full mb-4" data-i18n="events.tagline">Deepen Your Practice</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="events.title">Upcoming Events & Retreats</h2>
+                    <p class="text-lg text-gray-500" data-i18n="events.description">Join us for special workshops and immersive retreats designed to expand your knowledge and rejuvenate your spirit.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Event 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://bookretreats.com/cdn-cgi/image/width=1200,quality=65,f=auto,sharpen=1,fit=cover,gravity=auto/assets/photo/retreat/0m/29k/29132/p_1142181/1000_1692081290.jpg" alt="Yoga Retreat" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105">
+                            <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-pink-500 mb-2 font-medium">October 15-18, 2025</p>
+                            <h3 class="text-xl font-medium mb-3" data-i18n="events.event1.title">Autumn Rejuvenation Retreat</h3>
+                            <p class="text-gray-700 mb-5 flex-grow" data-i18n="events.event1.description">A 4-day immersive retreat in the Estonian countryside. Deepen your practice with daily yoga, meditation, and healthy vegetarian meals.</p>
+                            <div class="mt-auto flex flex-col sm:flex-row items-center gap-3">
+                               <a href="#contact" class="w-full text-center px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors" data-i18n="events.register_button">Register Now</a>
+                               <button class="event-details-button w-full text-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-200 transition-colors" data-i18n="events.learn_more_button">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://www.playpausebe.com/wp-content/uploads/2022/10/Mastering-Inversion-Yoga-Poses-A-Guide-to-Headstand.webp" alt="Inversion Workshop" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105">
+                            <button class="like-button absolute bottom-4 left-4 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                                <i data-lucide="heart" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-pink-500 mb-2 font-medium">November 5, 2025</p>
+                            <h3 class="text-xl font-medium mb-3" data-i18n="events.event2.title">Mastering Inversions Workshop</h3>
+                            <p class="text-gray-700 mb-5 flex-grow" data-i18n="events.event2.description">Join Mia Johnson to build the strength and confidence to master headstands, handstands, and other inversions safely.</p>
+                            <div class="mt-auto flex flex-col sm:flex-row items-center gap-3">
+                               <a href="#contact" class="w-full text-center px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors" data-i18n="events.register_button">Register Now</a>
+                               <button class="event-details-button w-full text-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-200 transition-colors" data-i18n="events.learn_more_button">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Words from Our Community Section -->
+        <section id="community-words" class="section-padding bg-white fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4" data-i18n="community.tagline">Community</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="community.title">Words from Our Community</h2>
+                    <p class="text-lg text-gray-500" data-i18n="community.description">Hear what our students have to say about their journey with us.</p>
+                    
+                    <!-- Overall Rating -->
+                    <div class="mt-8 flex flex-col items-center">
+                        <div class="flex items-center justify-center mb-2">
+                            <!-- Star Ratings -->
+                            <div class="flex items-center space-x-1">
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                                <i data-lucide="star" class="h-6 w-6 text-yellow-500 fill-yellow-500"></i>
+                            </div>
+                            <span class="ml-3 text-3xl font-bold text-gray-800">5.0</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">GoYoga Ashtanga Yoga Shala • Narva mnt 7D, 10117 Tallinn</p>
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-blue-600">
+                                <i data-lucide="star" class="h-4 w-4 mr-1 text-blue-500 fill-blue-500"></i>
+                                <span>Google Reviews</span>
+                            </a>
+                            <a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-blue-600">
+                                <i data-lucide="star" class="h-4 w-4 mr-1 text-blue-500 fill-blue-500"></i>
+                                <span>Facebook Reviews</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reviews Carousel -->
+                <div class="relative max-w-6xl mx-auto">
+                    <!-- Carousel Container -->
+                    <div class="reviews-carousel overflow-hidden">
+                        <div id="reviews-track" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Reviews will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button id="prev-review" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-10">
+                        <i data-lucide="chevron-left" class="h-6 w-6 text-gray-700"></i>
+                    </button>
+                    <button id="next-review" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-10">
+                        <i data-lucide="chevron-right" class="h-6 w-6 text-gray-700"></i>
+                    </button>
+                    
+                    <!-- Dots Indicator -->
+                    <div id="review-dots" class="flex justify-center mt-8 space-x-2">
+                        <!-- Dots will be injected here by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Leave Review Button -->
+                <div class="text-center mt-12">
+                    <button id="leave-review-button" class="px-8 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors shadow-md" data-i18n="community.leave_review_button">
+                        Leave a Review
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section id="community" class="section-padding bg-gray-50 fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-white rounded-full mb-4" data-i18n="instagram.tagline">Community</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-4" data-i18n="instagram.title">Follow Our Journey</h2>
+                    <p class="text-lg text-gray-500 mb-6" data-i18n="instagram.description">See snapshots of our daily practice, community events, and moments of peace. Follow us on Instagram <a href="#" class="text-pink-600 font-semibold hover:underline">@goyoga.ee</a>.</p>
+                </div>
+            </div>
+             <div class="slider-container relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+                <div class="slider-track flex w-max">
+                    <!-- Posts injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-white fade-in-section">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4" data-i18n="contact.tagline">Contact Us</span>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6" data-i18n="contact.title">Get In Touch</h2>
+                    <p class="text-lg text-gray-500" data-i18n="contact.description">If you have questions about our classes, pricing, or anything else, we're here to help.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-6" data-i18n="contact.form.title">Send Us a Message</h3>
+                        <form id="contact-form" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2" data-i18n="contact.form.name">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2" data-i18n="contact.form.email">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2" data-i18n="contact.form.message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required></textarea>
+                            </div>
+                            <button type="submit" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors" data-i18n="contact.form.send_button">
+                                <i data-lucide="send" class="h-4 w-4 mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-medium mb-6" data-i18n="contact.info.title">Studio Information</h3>
+                        <div class="space-y-8">
+                            <div>
+                                <div class="flex">
+                                    <i data-lucide="map-pin" class="h-6 w-6 text-pink-500 mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="font-medium mb-2" data-i18n="contact.info.location">Location</h4>
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Narva+mnt+7D,+Tallinn" target="_blank" class="hover:text-pink-600">
+                                            <p>Narva mnt 7D, 3rd floor<br>Tallinn, Estonia</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mt-4 pl-10 flex flex-wrap gap-2">
+                                    <button id="parking-button" class="flex items-center text-sm text-gray-600 hover:text-pink-600 bg-gray-100 px-3 py-1 rounded-full"><i data-lucide="car" class="h-4 w-4 mr-2"></i><span data-i18n="contact.info.parking">Parking</span></button>
+                                    <button id="transport-button" class="flex items-center text-sm text-gray-600 hover:text-pink-600 bg-gray-100 px-3 py-1 rounded-full"><i data-lucide="bus" class="h-4 w-4 mr-2"></i><span data-i18n="contact.info.transport">Transport</span></button>
+                                    <a href="https://www.google.com/maps/dir/?api=1&destination=Narva+mnt+7D,+Tallinn" target="_blank" class="flex items-center text-sm text-gray-600 hover:text-pink-600 bg-gray-100 px-3 py-1 rounded-full">
+                                        <i data-lucide="navigation" class="h-4 w-4 mr-2"></i><span data-i18n="contact.info.directions">Directions</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex"><i data-lucide="clock" class="h-6 w-6 text-pink-500 mr-4 flex-shrink-0"></i><div><h4 class="font-medium mb-2" data-i18n="contact.info.hours">Opening Hours</h4><p>Mon-Fri: 05:30 - 20:30<br>Sat: 07:30 - 14:00</p></div></div>
+                            <div class="flex"><i data-lucide="phone" class="h-6 w-6 text-pink-500 mr-4 flex-shrink-0"></i><div><h4 class="font-medium mb-2" data-i18n="contact.info.phone">Phone</h4><p><a href="tel:+3725512345" class="hover:text-pink-600">+372 551 2345</a></p></div></div>
+                            <div class="flex"><i data-lucide="mail" class="h-6 w-6 text-pink-500 mr-4 flex-shrink-0"></i><div><h4 class="font-medium mb-2" data-i18n="contact.info.email">Email</h4><p><a href="mailto:info@goyoga.ee" class="hover:text-pink-600">info@goyoga.ee</a></p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-10">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <h3 class="text-2xl font-serif mb-5">GoYoga.ee</h3>
+                    <p class="text-gray-300 mb-6 max-w-xs" data-i18n="footer.description">Traditional Ashtanga yoga in the heart of the city. Join our community of dedicated practitioners.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="youtube" class="h-5 w-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter" class="h-5 w-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.quick_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-white" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white" data-i18n="nav.about">About</a></li>
+                        <li><a href="#schedule" class="text-gray-300 hover:text-white" data-i18n="nav.schedule">Schedule</a></li>
+                        <li><a href="#pricing" class="text-gray-300 hover:text-white" data-i18n="nav.pricing">Pricing</a></li>
+                        <li><a href="#teachers" class="text-gray-300 hover:text-white" data-i18n="nav.teachers">Teachers</a></li>
+                        <li><a href="#events" class="text-gray-300 hover:text-white" data-i18n="nav.events">Events</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="text-xl font-medium mb-5" data-i18n="footer.resources">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white" data-i18n="footer.workshops">Workshops</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white" data-i18n="footer.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium mb-5" data-i18n="footer.newsletter">Newsletter</h4>
+                    <p class="text-gray-300 mb-4" data-i18n="footer.newsletter_description">Join our newsletter to receive updates about workshops and events.</p>
+                    <form><input type="email" placeholder="Your email" class="w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-pink-500" data-i18n-placeholder="footer.email_placeholder"><button type="submit" class="w-full mt-2 px-4 py-3 bg-pink-600 text-white font-medium rounded-md hover:bg-pink-700" data-i18n="footer.subscribe_button">Subscribe</button></form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p data-i18n="footer.copyright">© 2025 GoYoga.ee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All Modals will be injected here by Javascript -->
+
+    <script>
+        // Language Configuration
+        const translations = {
+            en: {
+                // Navigation
+                "nav.home": "Home",
+                "nav.about": "About",
+                "nav.studio": "Studio",
+                "nav.schedule": "Schedule",
+                "nav.pricing": "Pricing",
+                "nav.teachers": "Teachers",
+                "nav.events": "Events",
+                "nav.community": "Community",
+                "nav.contact": "Contact",
+                "nav.language": "Language",
+                
+                // Hero Section
+                "hero.tagline": "Mysore Style Ashtanga",
+                "hero.title": "Transform Your Body<br />and Mind Through Ashtanga",
+                "hero.description": "Traditional Ashtanga yoga in a serene and supportive environment. Begin your journey to inner peace and physical wellness.",
+                "hero.view_schedule": "View Schedule",
+                "hero.events": "Events",
+                "hero.discover_more": "Discover More",
+                "hero.seasonal_offer": "Seasonal Offer!",
+                
+                // About Section
+                "about.tagline": "About Ashtanga",
+                "about.title": "An Ancient Practice for Modern Life",
+                "about.description": "Ashtanga yoga is a system of yoga recorded by the sage Vamana Rishi in the Yoga Korunta, an ancient manuscript.",
+                "about.subtitle": "The Eight Limbs",
+                "about.content1": "Ashtanga means \"eight limbs\" in Sanskrit, referring to the eight aspects of yoga described by Patanjali in the Yoga Sutras. These eight limbs are a progressive system that purifies the body and mind, leading to self-realization.",
+                "about.content2": "The practice combines flowing movements with breath (vinyasa), specific gazing points (drishti), and energy locks (bandhas) to create a moving meditation that builds strength, flexibility, and inner peace.",
+                "about.benefits.physical.title": "Physical Benefits",
+                "about.benefits.physical.description": "Increased strength, flexibility, improved circulation, and detoxification of the body.",
+                "about.benefits.mental.title": "Mental Benefits",
+                "about.benefits.mental.description": "Reduced stress, improved focus, mental clarity, and emotional balance.",
+                
+                // Studio Section
+                "studio.tagline": "Our Space",
+                "studio.title": "A Sanctuary in the City",
+                "studio.description1": "Located at <span class='font-semibold'>Narva mnt 7D, Tallinn</span>, our studio is a peaceful retreat on the 3rd floor, away from the city's hustle and bustle. Please note that access is by stairs only as there is no elevator in the building.",
+                "studio.description2": "Designed with natural wood floors and calming earth tones, the space is filled with light and positive energy. We provide all the amenities you need for a comfortable practice, including high-quality mats, props, changing rooms, and a cozy tea corner for you to relax in before or after your class.",
+                "studio.rent_button": "Rent Our Space",
+                
+                // Schedule Section
+                "schedule.tagline": "Live Class Schedule",
+                "schedule.title": "Find Your Time to Practice",
+                "schedule.description": "Our schedule is always up-to-date. Find a class and book your spot directly through the calendar below.",
+                
+                // Pricing Section
+                "pricing.tagline": "Pricing Options",
+                "pricing.title": "Invest in Your Practice",
+                "pricing.description": "We offer flexible pricing options to suit your schedule and commitment level. Choose a category to see the options.",
+                "pricing.single.title": "Single Session",
+                "pricing.single.description": "Perfect for drop-ins or trying out a class.",
+                "pricing.memberships.title": "Memberships",
+                "pricing.memberships.description": "The best value for dedicated practitioners.",
+                "pricing.passes.title": "Multi-Visit Passes",
+                "pricing.passes.description": "Great value for regular students who need flexibility.",
+                "pricing.view_options": "View Options",
+                "pricing.most_popular": "Most Popular",
+                "pricing.offer.title": "Seasonal Offering",
+                "pricing.offer.subtitle": "Back to Yoga Special!",
+                "pricing.offer.description": "Commit to your practice this autumn. Get a 5-class pass and start your journey back to the mat.",
+                "pricing.offer.ends_in": "Offer Ends In:",
+                "pricing.offer.days": "Days",
+                "pricing.offer.hours": "Hours",
+                "pricing.offer.minutes": "Mins",
+                "pricing.offer.seconds": "Secs",
+                "pricing.offer.claim_button": "Claim Offer",
+                
+                // Teachers Section
+                "teachers.tagline": "Our Teachers",
+                "teachers.title": "Learn from Experienced Practitioners",
+                "teachers.description": "Our teachers are dedicated to guiding you through the Ashtanga yoga journey with knowledge, compassion, and authenticity.",
+                "teachers.raili.title": "Founder & Teacher",
+                "teachers.raili.description": "Raili is the heart of our studio, bringing authentic Ashtanga practice to all levels.",
+                "teachers.ave.title": "Ashtanga Teacher",
+                "teachers.ave.description": "Ave shares the traditional Ashtanga method with precision and warmth.",
+                "teachers.triin.title": "Fitness & Power Trainer",
+                "teachers.triin.description": "Triin brings dynamic energy to her classes, focusing on building strength.",
+                "teachers.elizaveta.title": "Ashtanga Teacher",
+                "teachers.elizaveta.description": "Elizaveta guides students with a gentle yet disciplined approach.",
+                "teachers.viktooria.title": "Nutritional Therapist",
+                "teachers.viktooria.description": "Viktooria supports your well-being through balanced nutrition.",
+                
+                // Events Section
+                "events.tagline": "Deepen Your Practice",
+                "events.title": "Upcoming Events & Retreats",
+                "events.description": "Join us for special workshops and immersive retreats designed to expand your knowledge and rejuvenate your spirit.",
+                "events.event1.title": "Autumn Rejuvenation Retreat",
+                "events.event1.description": "A 4-day immersive retreat in the Estonian countryside. Deepen your practice with daily yoga, meditation, and healthy vegetarian meals.",
+                "events.event2.title": "Mastering Inversions Workshop",
+                "events.event2.description": "Join Mia Johnson to build the strength and confidence to master headstands, handstands, and other inversions safely.",
+                "events.register_button": "Register Now",
+                "events.learn_more_button": "Learn More",
+                
+                // Community Section
+                "community.tagline": "Community",
+                "community.title": "Words from Our Community",
+                "community.description": "Hear what our students have to say about their journey with us.",
+                "community.leave_review_button": "Leave a Review",
+                
+                // Instagram Section
+                "instagram.tagline": "Community",
+                "instagram.title": "Follow Our Journey",
+                "instagram.description": "See snapshots of our daily practice, community events, and moments of peace. Follow us on Instagram <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
+                
+                // Contact Section
+                "contact.tagline": "Contact Us",
+                "contact.title": "Get In Touch",
+                "contact.description": "If you have questions about our classes, pricing, or anything else, we're here to help.",
+                "contact.form.title": "Send Us a Message",
+                "contact.form.name": "Your Name",
+                "contact.form.email": "Email Address",
+                "contact.form.message": "Your Message",
+                "contact.form.send_button": "Send Message",
+                "contact.info.title": "Studio Information",
+                "contact.info.location": "Location",
+                "contact.info.parking": "Parking",
+                "contact.info.transport": "Transport",
+                "contact.info.directions": "Directions",
+                "contact.info.hours": "Opening Hours",
+                "contact.info.phone": "Phone",
+                "contact.info.email": "Email",
+                
+                // Footer
+                "footer.description": "Traditional Ashtanga yoga in the heart of the city. Join our community of dedicated practitioners.",
+                "footer.quick_links": "Quick Links",
+                "footer.resources": "Resources",
+                "footer.blog": "Blog",
+                "footer.workshops": "Workshops",
+                "footer.faq": "FAQ",
+                "footer.newsletter": "Newsletter",
+                "footer.newsletter_description": "Join our newsletter to receive updates about workshops and events.",
+                "footer.email_placeholder": "Your email",
+                "footer.subscribe_button": "Subscribe",
+                "footer.copyright": "© 2025 GoYoga.ee. All rights reserved."
+            },
+            et: {
+                // Navigation
+                "nav.home": "Kodu",
+                "nav.about": "Meist",
+                "nav.studio": "Stuudio",
+                "nav.schedule": "Tunniplaan",
+                "nav.pricing": "Hinnad",
+                "nav.teachers": "Õpetajad",
+                "nav.events": "Sündmused",
+                "nav.community": "Kogukond",
+                "nav.contact": "Kontakt",
+                "nav.language": "Keel",
+                
+                // Hero Section
+                "hero.tagline": "Mysore stiilis Ashtanga",
+                "hero.title": "Muuda oma keha<br />ja vaimu Ashtanga kaudu",
+                "hero.description": "Traditsiooniline Ashtanga jooga rahulikus ja toetavas keskkonnas. Alusta oma teekonda sisemise rahu ja füüsilise heaolu poole.",
+                "hero.view_schedule": "Vaata tunniplaani",
+                "hero.events": "Sündmused",
+                "hero.discover_more": "Uuri lähemalt",
+                "hero.seasonal_offer": "Hooajapakkumine!",
+                
+                // About Section
+                "about.tagline": "Ashtangast",
+                "about.title": "Iidne praktika kaasaegseks eluks",
+                "about.description": "Ashtanga jooga on jooga süsteem, mille salvestas vaim Vamana Rishi iidses käsikirjas Yoga Koruntas.",
+                "about.subtitle": "Kaheksa haru",
+                "about.content1": "Ashtanga tähendab sanskriti keeles \"kaheksat haru\", viidates kaheksale jooga aspektile, mida Patanjali kirjeldas Joogasutrites. Need kaheksa haru on progressiivne süsteem, mis puhastab keha ja vaimu, viies eneseteostuseni.",
+                "about.content2": "Praktika ühendab voolavaid liigutusi hingamisega (vinjaasa), spetsiifilisi vaatepunkte (drišti) ja energia lukke (bandhas), et luua liikuv meditatsioon, mis loob jõudu, painduvust ja sisemist rahu.",
+                "about.benefits.physical.title": "Füüsilised eelised",
+                "about.benefits.physical.description": "Suurenenud jõud, painduvus, parem vereringe ja keha detoksifikatsioon.",
+                "about.benefits.mental.title": "Vaimsed eelised",
+                "about.benefits.mental.description": "Vähenenud stress, parem kontsentreerumine, vaimne selgus ja emotsionaalne tasakaal.",
+                
+                // Studio Section
+                "studio.tagline": "Meie ruum",
+                "studio.title": "Varjupaik linnas",
+                "studio.description1": "Asub aadressil <span class='font-semibold'>Narva mnt 7D, Tallinn</span>, meie stuudio on rahulik põgenemine 3. korrusel, eemal linna kärast ja mürast. Pange tähele, et ligipääs on ainult trepi kaudu, kuna hoones ei ole lifti.",
+                "studio.description2": "Loodusliku põrandaga ja rahustavate maatoonidega disainitud ruum on valguse ja positiivse energiaga täidetud. Pakume kõiki mugavusi, mida vajate mugavaks praktikaks, sealhulgas kvaliteetseid matte, abivahendeid, riietusruume ja mõnusat teenurka, kus saate enne või pärast tundi lõõgastuda.",
+                "studio.rent_button": "Rendi meie ruum",
+                
+                // Schedule Section
+                "schedule.tagline": "Reaalajaline tunniplaan",
+                "schedule.title": "Leia oma aeg praktiseerimiseks",
+                "schedule.description": "Meie tunniplaan on alati ajakohane. Leia klass ja broneeri koht otse alloleva kalendri kaudu.",
+                
+                // Pricing Section
+                "pricing.tagline": "Hinnavalikud",
+                "pricing.title": "Investeeri oma praktikasse",
+                "pricing.description": "Pakume paindlikke hinnavalikuid, mis sobivad sinu graafikule ja pühendumistasemele. Vali kategooria, et näha valikuid.",
+                "pricing.single.title": "Üksikkord",
+                "pricing.single.description": "Täiuslik ühekordseks külastuseks või proovimiseks.",
+                "pricing.memberships.title": "Liikmelisus",
+                "pricing.memberships.description": "Parim väärtus pühendunud praktiseerijatele.",
+                "pricing.passes.title": "Mitmikkorrakardid",
+                "pricing.passes.description": "Suurepärane väärtus regulaarsetele õpilastele, kes vajavad paindlikkust.",
+                "pricing.view_options": "Vaata valikuid",
+                "pricing.most_popular": "Populaarseim",
+                "pricing.offer.title": "Hooajaline pakkumine",
+                "pricing.offer.subtitle": "Tagasi jooga eripakkumine!",
+                "pricing.offer.description": "Pühendu oma praktikale sel sügisel. Hanki 5 korraga pilet ja alusta oma teekonda tagasi matile.",
+                "pricing.offer.ends_in": "Pakkumine lõppeb:",
+                "pricing.offer.days": "Päeva",
+                "pricing.offer.hours": "Tundi",
+                "pricing.offer.minutes": "Minutit",
+                "pricing.offer.seconds": "Sekundit",
+                "pricing.offer.claim_button": "Kasuta pakkumist",
+                
+                // Teachers Section
+                "teachers.tagline": "Meie õpetajad",
+                "teachers.title": "Õpi kogenud praktikantidelt",
+                "teachers.description": "Meie õpetajad on pühendunud sinu Ashtanga joogateekonna juhendamisele teadmiste, kaastunde ja autentsusega.",
+                "teachers.raili.title": "Asutaja ja Õpetaja",
+                "teachers.raili.description": "Raili on meie stuudio süda, tuues autentse Ashtanga praktika kõikidele tasemetele.",
+                "teachers.ave.title": "Ashtanga Õpetaja",
+                "teachers.ave.description": "Ave jagab traditsioonilist Ashtanga meetodit täpsuse ja soojusega.",
+                "teachers.triin.title": "Fitnessi- ja Jõutreener",
+                "teachers.triin.description": "Triin toob oma tundidesse dünaamilist energiat, keskendudes jõu arendamisele.",
+                "teachers.elizaveta.title": "Ashtanga Õpetaja",
+                "teachers.elizaveta.description": "Elizaveta juhendab õpilasi õrna, kuid distsiplineeritud lähenemisega.",
+                "teachers.viktooria.title": "Toitumisterapeut",
+                "teachers.viktooria.description": "Viktooria toetab sinu heaolu tasakaalustatud toitumise kaudu.",
+                
+                // Events Section
+                "events.tagline": "Süvenda oma praktikat",
+                "events.title": "Tulevased sündmused ja retriidid",
+                "events.description": "Liitu meiega spetsiaalsetel töötubadel ja põhjalikel retriitidel, mis on loodud teadmiste laiendamiseks ja vaimu värskendamiseks.",
+                "events.event1.title": "Sügise värskendusretriit",
+                "events.event1.description": "4-päevane põhjalik retriit Eesti maal. Süvenda oma praktikat igapäevase jooga, meditatsiooni ja tervislike taimetoitlike söökidega.",
+                "events.event2.title": "Pöördasendite meisterdamise töötuba",
+                "events.event2.description": "Liitu Mia Johnsoniga, et arendada jõudu ja enesekindlust peaseadete, käeseadete ja teiste pöördasendite ohutuks meisterdamiseks.",
+                "events.register_button": "Registreeri kohe",
+                "events.learn_more_button": "Loe lähemalt",
+                
+                // Community Section
+                "community.tagline": "Kogukond",
+                "community.title": "Sõnad meie kogukonnast",
+                "community.description": "Kuula, mida meie õpilased oma teekonnast meiega räägivad.",
+                "community.leave_review_button": "Jäta Tagasisidet",
+                
+                // Instagram Section
+                "instagram.tagline": "Kogukond",
+                "instagram.title": "Jälgi meie teekonda",
+                "instagram.description": "Vaata meie igapäevase praktika, kogukonnaürituste ja rahulike hetkede pilte. Jälgi meid Instagramis <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
+                
+                // Contact Section
+                "contact.tagline": "Võta ühendust",
+                "contact.title": "Kontakt",
+                "contact.description": "Kui sul on küsimusi meie tundide, hindade või millegi muu kohta, siis oleme siin, et aidata.",
+                "contact.form.title": "Saada meile sõnum",
+                "contact.form.name": "Sinu nimi",
+                "contact.form.email": "E-posti aadress",
+                "contact.form.message": "Sinu sõnum",
+                "contact.form.send_button": "Saada sõnum",
+                "contact.info.title": "Stuudio informatsioon",
+                "contact.info.location": "Asukoht",
+                "contact.info.parking": "Parkimine",
+                "contact.info.transport": "Transport",
+                "contact.info.directions": "Juhised",
+                "contact.info.hours": "Lahtiolekuajad",
+                "contact.info.phone": "Telefon",
+                "contact.info.email": "E-post",
+                
+                // Footer
+                "footer.description": "Traditsiooniline Ashtanga jooga linna südames. Liitu meie pühendunud praktiseerijate kogukonnaga.",
+                "footer.quick_links": "Kiirlingid",
+                "footer.resources": "Ressursid",
+                "footer.blog": "Blogi",
+                "footer.workshops": "Töötoad",
+                "footer.faq": "KKK",
+                "footer.newsletter": "Uudiskiri",
+                "footer.newsletter_description": "Liitu uudiskirjaga, et saada infot töötubade ja sündmuste kohta.",
+                "footer.email_placeholder": "Sinu e-post",
+                "footer.subscribe_button": "Liitu",
+                "footer.copyright": "© 2025 GoYoga.ee. Kõik õigused kaitstud."
+            },
+            fi: {
+                // Navigation
+                "nav.home": "Koti",
+                "nav.about": "Meistä",
+                "nav.studio": "Studio",
+                "nav.schedule": "Aikataulu",
+                "nav.pricing": "Hinnat",
+                "nav.teachers": "Opettajat",
+                "nav.events": "Tapahtumat",
+                "nav.community": "Yhteisö",
+                "nav.contact": "Yhteystiedot",
+                "nav.language": "Kieli",
+                
+                // Hero Section
+                "hero.tagline": "Mysore-tyyli Ashtanga",
+                "hero.title": "Muunna kehoasi<br />ja mieltäsi Ashtangan avulla",
+                "hero.description": "Perinteistä Ashtanga joogaa rauhallisessa ja tukevassa ympäristössä. Aloita matkasi sisäiseen rauhaan ja fyysiseen hyvinvointiin.",
+                "hero.view_schedule": "Katso aikataulu",
+                "hero.events": "Tapahtumat",
+                "hero.discover_more": "Lue lisää",
+                "hero.seasonal_offer": "Kausitarjous!",
+                
+                // About Section
+                "about.tagline": "Ashtangasta",
+                "about.title": "Muinainen harjoitus moderniin elämään",
+                "about.description": "Ashtanga jooga on joogan järjestelmä, jonka viisas Vamana Rishi tallensi muinaiseen käsikirjaan Yoga Koruntaan.",
+                "about.subtitle": "Kahdeksan haaraa",
+                "about.content1": "Ashtanga tarkoittaa sanskritin kielellä \"kahdeksaa haaraa\", viitaten kahdeksaan joogan näkökohtaan, joita Patanjali kuvasi Joogasutrassa. Nämä kahdeksan haaraa ovat progressiivinen järjestelmä, joka puhdistaa kehon ja mielen johtaen itseymmärrykseen.",
+                "about.content2": "Harjoitus yhdistää virtaavia liikkeitä hengitykseen (vinjaasa), erityisiin katselupisteisiin (drišti) ja energialukoihin (bandhas) luodakseen liikkuvan meditaation, joka rakentaa voimaa, joustavuutta ja sisäistä rauhaa.",
+                "about.benefits.physical.title": "Fyysiset edut",
+                "about.benefits.physical.description": "Lisääntynyt voima, joustavuus, parantunut verenkierto ja kehon detoksikointi.",
+                "about.benefits.mental.title": "Mentaaliset edut",
+                "about.benefits.mental.description": "Vähentynyt stressi, parantunut keskittymiskyky, mentaalin selkeys ja emotionaalinen tasapaino.",
+                
+                // Studio Section
+                "studio.tagline": "Tilamme",
+                "studio.title": "Turvasatama kaupungissa",
+                "studio.description1": "Sijaitsee osoitteessa <span class='font-semibold'>Narva mnt 7D, Tallinna</span>, studionme on rauhallinen vetäytymispaikka 3. kerroksessa, poissa kaupungin vilinasta ja melusta. Huomaa, että pääsy on vain portaita pitkin, sillä rakennuksessa ei ole hissiä.",
+                "studio.description2": "Luonnonpuulattioilla ja rauhoittavilla maan väreillä suunniteltu tila on täynnä valoa ja positiivista energiaa. Tarjoamme kaikki mukavuudet mukavaa harjoittelua varten, mukaan lukien laadukkaat matot, apuvälineet, pukuhuoneet ja kodikas teenurkka rentoutumiseen ennen tai jälkeen tunnin.",
+                "studio.rent_button": "Vuokraa tilamme",
+                
+                // Schedule Section
+                "schedule.tagline": "Reaaliaikainen aikataulu",
+                "schedule.title": "Löydä aika harjoitteluun",
+                "schedule.description": "Aikataulumme on aina ajan tasalla. Löydä luokka ja varaa paikkasi suoraan alla olevan kalenterin kautta.",
+                
+                // Pricing Section
+                "pricing.tagline": "Hintavaihtoehdot",
+                "pricing.title": "Investoi harjoitteluusi",
+                "pricing.description": "Tarjoamme joustavia hintavaihtoehtoja, jotka sopivat aikatauluusi ja sitoutumistasoosi. Valitse kategoria nähdäksesi vaihtoehdot.",
+                "pricing.single.title": "Yksittäiskerta",
+                "pricing.single.description": "Täydellinen kertakäynteihin tai kokeiluun.",
+                "pricing.memberships.title": "Jäsenyydet",
+                "pricing.memberships.description": "Paras arvo omistautuneille harjoittajille.",
+                "pricing.passes.title": "Useamman kerran liput",
+                "pricing.passes.description": "Loistava arvo säännöllisille oppilaille, jotka tarvitsevat joustavuutta.",
+                "pricing.view_options": "Katso vaihtoehdot",
+                "pricing.most_popular": "Suosituin",
+                "pricing.offer.title": "Kausitarjous",
+                "pricing.offer.subtitle": "Takaisin jooga -erikoistarjous!",
+                "pricing.offer.description": "Sitoudu harjoitteluusi tänä syksynä. Hanki 5 kerran lippu ja aloita matkasi takaisin matolle.",
+                "pricing.offer.ends_in": "Tarjous päättyy:",
+                "pricing.offer.days": "Päivää",
+                "pricing.offer.hours": "Tuntia",
+                "pricing.offer.minutes": "Minuuttia",
+                "pricing.offer.seconds": "Sekuntia",
+                "pricing.offer.claim_button": "Käytä tarjousta",
+                
+                // Teachers Section
+                "teachers.tagline": "Opettajamme",
+                "teachers.title": "Opi kokeneilta harjoittajilta",
+                "teachers.description": "Opettajamme ovat omistautuneet ohjaamaan sinua Ashtanga joogan matkalla tiedon, myötätunnon ja aitouden avulla.",
+                "teachers.raili.title": "Perustaja ja Opettaja",
+                "teachers.raili.description": "Raili on studionme sydän, tuoden aitoa Ashtanga harjoitusta kaikille tasoille.",
+                "teachers.ave.title": "Ashtanga Opettaja",
+                "teachers.ave.description": "Ave jakaa perinteistä Ashtanga menetelmää tarkkuudella ja lämpimydellä.",
+                "teachers.triin.title": "Fitness- ja Voimavalmentaja",
+                "teachers.triin.description": "Triin tuo tunneilleen dynaamista energiaa keskittyen voiman rakentamiseen.",
+                "teachers.elizaveta.title": "Ashtanga Opettaja",
+                "teachers.elizaveta.description": "Elizaveta ohjaa oppilaita lempeällä mutta kurinalaisella lähestymistavalla.",
+                "teachers.viktooria.title": "Ravitsemusterapeutti",
+                "teachers.viktooria.description": "Viktooria tukee hyvinvointiasi tasapainoisen ravitsemuksen kautta.",
+                
+                // Events Section
+                "events.tagline": "Syvennä harjoitustasi",
+                "events.title": "Tulevat tapahtumat ja retriitit",
+                "events.description": "Liity mukaan erityisissä työpajoissa ja syvällisissä retriiteissä, jotka on suunniteltu laajentamaan tietämystäsi ja virkistämään mieltäsi.",
+                "events.event1.title": "Syksyn virkistysretriitti",
+                "events.event1.description": "4 päivän syvällinen retriitti Viron maaseudulla. Syvennä harjoitustasi päivittäisellä joogalla, meditaatiolla ja terveellisillä kasvisruuilla.",
+                "events.event2.title": "Käännösasentojen hallitseminen -työpaja",
+                "events.event2.description": "Liity Mia Johnsonin kanssa rakentaaksesi voimaa ja luottamusta hallitaksesi pään- ja käsistännöt sekä muut käännösasennat turvallisesti.",
+                "events.register_button": "Rekisteröidy nyt",
+                "events.learn_more_button": "Lue lisää",
+                
+                // Community Section
+                "community.tagline": "Yhteisö",
+                "community.title": "Sanoja yhteisöltämme",
+                "community.description": "Kuule, mitä oppilaamme sanovat matkastaan kanssamme.",
+                "community.leave_review_button": "Jätä Arvostelu",
+                
+                // Instagram Section
+                "instagram.tagline": "Yhteisö",
+                "instagram.title": "Seuraa matkaamme",
+                "instagram.description": "Katsele kuvia päivittäisestä harjoituksestamme, yhteisötapahtumista ja rauhallisista hetkistä. Seuraa meitä Instagramissa <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
+                
+                // Contact Section
+                "contact.tagline": "Ota yhteyttä",
+                "contact.title": "Yhteystiedot",
+                "contact.description": "Jos sinulla on kysymyksiä tunneistamme, hinnoista tai mistään muusta, olemme täällä auttamassa.",
+                "contact.form.title": "Lähetä viesti",
+                "contact.form.name": "Nimesi",
+                "contact.form.email": "Sähköpostiosoite",
+                "contact.form.message": "Viestisi",
+                "contact.form.send_button": "Lähetä viesti",
+                "contact.info.title": "Studio tiedot",
+                "contact.info.location": "Sijainti",
+                "contact.info.parking": "Pysäköinti",
+                "contact.info.transport": "Julkinen liikenne",
+                "contact.info.directions": "Reittiohjeet",
+                "contact.info.hours": "Aukioloajat",
+                "contact.info.phone": "Puhelin",
+                "contact.info.email": "Sähköposti",
+                
+                // Footer
+                "footer.description": "Perinteistä Ashtanga joogaa kaupungin sydämessä. Liity omistautuneiden harjoittajien yhteisöömme.",
+                "footer.quick_links": "Pikalinkit",
+                "footer.resources": "Resurssit",
+                "footer.blog": "Blogi",
+                "footer.workshops": "Työpajat",
+                "footer.faq": "UKK",
+                "footer.newsletter": "Uutiskirje",
+                "footer.newsletter_description": "Liity uutiskirjeeseemme saadaksesi tietoa työpajoista ja tapahtumista.",
+                "footer.email_placeholder": "Sähköpostisi",
+                "footer.subscribe_button": "Tilaa",
+                "footer.copyright": "© 2025 GoYoga.ee. Kaikki oikeudet pidätetään."
+            }
+        };
+
+        // Language management
+        let currentLanguage = 'en';
+        
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update flag and language code
+            const flagMap = {
+                'en': 'https://flagcdn.com/w20/gb.png',
+                'et': 'https://flagcdn.com/w20/ee.png',
+                'fi': 'https://flagcdn.com/w20/fi.png'
+            };
+            
+            const languageCodeMap = {
+                'en': 'EN',
+                'et': 'EE',
+                'fi': 'FI'
+            };
+            
+            // Update desktop language switcher
+            document.getElementById('current-flag').src = flagMap[lang];
+            document.getElementById('current-language').textContent = languageCodeMap[lang];
+            
+            // Update mobile language switcher
+            document.getElementById('mobile-current-flag').src = flagMap[lang];
+            document.getElementById('mobile-current-language').textContent = languageCodeMap[lang];
+            
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                        element.setAttribute('placeholder', translations[lang][key]);
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.setAttribute('placeholder', translations[lang][key]);
+                }
+            });
+            
+            // Update active state in dropdowns
+            document.querySelectorAll('.language-option').forEach(option => {
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+            
+            // Store preference in localStorage
+            localStorage.setItem('preferredLanguage', lang);
+            
+            // Close dropdowns
+            document.getElementById('language-dropdown').classList.remove('active');
+            document.getElementById('mobile-language-dropdown').classList.remove('active');
+        }
+        
+        // Initialize language from localStorage or browser preference
+        function initLanguage() {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            const browserLanguage = navigator.language.substring(0, 2);
+            
+            // Check if browser language is one of our supported languages
+            if (savedLanguage) {
+                setLanguage(savedLanguage);
+            } else if (translations[browserLanguage]) {
+                setLanguage(browserLanguage);
+            } else {
+                setLanguage('en'); // Default to English
+            }
+        }
+
+        // All modal HTML will be created by this script to keep the body clean.
+        function createModals() {
+            const modalContainer = document.createElement('div');
+            modalContainer.innerHTML = `
+                <!-- Booking Confirmation Modal -->
+                <div id="booking-modal" class="modal-overlay fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-md mx-auto transform scale-95 opacity-0 text-center p-8">
+                        <i data-lucide="check-circle" class="h-16 w-16 text-green-500 mx-auto mb-4"></i>
+                        <h2 class="text-2xl font-serif text-gray-800 mb-2">Booking Successful!</h2>
+                        <p id="booking-confirmation-text" class="text-gray-600 mb-6"></p>
+                        <button id="booking-modal-close" class="w-full py-3 text-center rounded-md font-medium transition-colors bg-gray-800 text-white hover:bg-gray-700">Close</button>
+                    </div>
+                </div>
+                 <!-- Class Details/Booking Modal -->
+                <div id="class-booking-modal" class="modal-overlay fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                   <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-md mx-auto transform scale-95 opacity-0">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h2 id="booking-title" class="text-2xl font-serif text-gray-800 mb-1"></h2>
+                                    <p id="booking-teacher" class="text-gray-500 mb-4"></p>
+                                </div>
+                                <button id="booking-modal-close-main" class="text-gray-400 hover:text-gray-700"><i data-lucide="x" class="h-6 w-6"></i></button>
+                            </div>
+                            <div class="space-y-3 text-sm text-gray-700">
+                                <p class="flex items-center"><i data-lucide="clock" class="h-4 w-4 mr-2 text-pink-500"></i><strong class="mr-2">Time:</strong> <span id="booking-time"></span></p>
+                                <p class="flex items-center"><i data-lucide="hourglass" class="h-4 w-4 mr-2 text-pink-500"></i><strong class="mr-2">Duration:</strong> <span id="booking-duration"></span></p>
+                                <p class="flex items-center"><i data-lucide="bar-chart-2" class="h-4 w-4 mr-2 text-pink-500"></i><strong class="mr-2">Level:</strong> <span id="booking-level"></span></p>
+                                <p class="flex items-center"><i data-lucide="users" class="h-4 w-4 mr-2 text-pink-500"></i><strong class="mr-2">Available spots:</strong> <span id="booking-spots"></span></p>
+                            </div>
+                             <p id="booking-notes" class="text-sm text-red-600 bg-red-100 p-3 rounded-md mt-4"></p>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <button id="confirm-booking-btn" class="w-full py-3 text-center rounded-md font-medium transition-colors bg-gray-800 text-white hover:bg-gray-700">Confirm Booking</button>
+                        </div>
+                   </div>
+                </div>
+
+                <!-- Event Details Modal -->
+                <div id="event-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-lg mx-auto transform scale-95 opacity-0 overflow-hidden">
+                        <div class="relative"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Retreat" class="w-full h-48 object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div><h2 class="absolute bottom-4 left-6 text-3xl font-serif text-white">Autumn Retreat</h2></div>
+                        <div class="p-6 md:p-8 max-h-[60vh] overflow-y-auto"><div class="space-y-6 text-gray-700"><div><h3 class="font-semibold text-lg mb-2 text-gray-800">Atmosphere</h3><p>A peaceful escape to reconnect with yourself and nature. Ideal for all levels who wish to deepen their practice in a tranquil environment.</p></div><div><h3 class="font-semibold text-lg mb-2 text-gray-800">What's Included in the Price</h3><ul class="list-disc list-inside space-y-1 pl-2"><li>4 days, 3 nights accommodation</li><li>Daily morning and evening yoga classes</li><li>Guided meditation and pranayama</li><li>Three delicious vegetarian meals per day</li><li>Access to hiking trails and sauna</li></ul></div><div><h3 class="font-semibold text-lg mb-2 text-gray-800">Location</h3><p>Our retreat takes place in a private guesthouse in the forests of Lahemaa National Park, just an hour's drive from Tallinn. Exact address provided upon registration.</p></div><div><h3 class="font-semibold text-lg mb-2 text-gray-800">What to Bring</h3><p>Your yoga mat, comfortable clothes for both practice and leisure time, journal, swimwear for the sauna, and an open heart.</p></div></div></div>
+                        <div class="px-6 md:px-8 py-4 bg-gray-50 border-t border-gray-200 grid grid-cols-2 gap-3"><button id="modal-understand" class="px-6 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors">I Understand</button><a href="#contact" id="modal-question" class="block text-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-200 transition-colors">I Have a Question</a></div>
+                    </div>
+                </div>
+
+                <!-- Pricing Details Modal -->
+                <div id="pricing-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-lg mx-auto transform scale-95 opacity-0 overflow-hidden">
+                        <div class="p-6 md:p-8"><div class="flex justify-between items-center mb-6"><h2 id="pricing-modal-title" class="text-3xl font-serif text-gray-800"></h2><button id="pricing-modal-close" class="text-gray-500 hover:text-gray-800"><i data-lucide="x" class="h-6 w-6"></i></button></div><div id="pricing-modal-body" class="space-y-4 max-h-[60vh] overflow-y-auto"></div></div>
+                    </div>
+                </div>
+
+                <!-- Teacher Details Modal -->
+                <div id="teacher-modal" class="modal-overlay fixed inset-0 z-[60] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-md mx-auto transform scale-95 opacity-0 overflow-hidden">
+                        <div class="relative"><img id="teacher-modal-img" src="" alt="Teacher" class="w-full h-56 object-cover"><button id="teacher-modal-close" class="absolute top-4 right-4 text-white bg-black/30 rounded-full p-1.5 hover:bg-black/50"><i data-lucide="x" class="h-5 w-5"></i></button></div>
+                        <div class="p-6"><h2 id="teacher-modal-name" class="text-3xl font-serif text-gray-800"></h2><p id="teacher-modal-title" class="text-pink-500 mb-4"></p><p id="teacher-modal-bio" class="text-gray-700 mb-6"></p><div id="teacher-modal-socials" class="flex space-x-4"></div></div>
+                    </div>
+                </div>
+
+                <!-- Studio Rental Modal -->
+                <div id="studio-modal" class="modal-overlay fixed inset-0 z-[60] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-4xl mx-auto transform scale-95 opacity-0 overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-8 flex flex-col">
+                                <div><span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-pink-700 bg-pink-100 rounded-full mb-4">Our Space, Your Vision</span><h2 class="text-3xl font-serif text-gray-800 mb-4">Rent Our Studio</h2><p class="text-gray-600 mb-8">Our beautiful and light-filled studio is available for private rental. It is the perfect canvas for your next event, workshop, or private session.</p></div>
+                                <div class="space-y-6"><div class="bg-gray-50 p-4 rounded-lg"><h3 class="font-semibold text-lg mb-2 text-gray-800">For Instructors and Trainers</h3><p class="text-sm text-gray-600 mb-3">Host your private lessons, workshops or one-on-one sessions in a professional and peaceful environment.</p><a href="#contact" class="modal-contact-link text-sm font-semibold text-pink-600 hover:text-pink-700">Request Information &rarr;</a></div><div class="bg-gray-50 p-4 rounded-lg"><h3 class="font-semibold text-lg mb-2 text-gray-800">For Companies</h3><p class="text-sm text-gray-600 mb-3">A unique venue for team events, mindfulness workshops or corporate wellness days away from the office.</p><a href="#contact" class="modal-contact-link text-sm font-semibold text-pink-600 hover:text-pink-700">Request Information &rarr;</a></div><div class="bg-gray-50 p-4 rounded-lg"><h3 class="font-semibold text-lg mb-2 text-gray-800">For Private Lessons and Events</h3><p class="text-sm text-gray-600 mb-3">An intimate setting for wellness-focused birthdays, sound journeys, or creative photo sessions.</p><a href="#contact" class="modal-contact-link text-sm font-semibold text-pink-600 hover:text-pink-700">Request Information &rarr;</a></div></div>
+                                <div class="mt-auto pt-8"><button id="studio-modal-close" class="w-full py-3 text-center rounded-md font-medium transition-colors bg-gray-200 text-gray-800 hover:bg-gray-300">Close</button></div>
+                            </div>
+                            <div class="hidden md:block"><img src="https://images.unsplash.com/photo-1545389336-cf090694435e" alt="Yoga studio interior" class="w-full h-full object-cover"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parking Modal -->
+                 <div id="parking-modal" class="modal-overlay fixed inset-0 z-[60] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-lg mx-auto transform scale-95 opacity-0 overflow-hidden">
+                         <div class="p-6 md:p-8"><div class="flex justify-between items-center mb-6"><h2 class="text-3xl font-serif text-gray-800">Parking Information</h2><button id="parking-modal-close" class="text-gray-500 hover:text-gray-800"><i data-lucide="x" class="h-6 w-6"></i></button></div>
+                         <div class="space-y-4 max-h-[60vh] overflow-y-auto text-gray-700">
+                            <p>Our studio is located in the "Südalinn" parking zone. Please consider the following options:</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>Street parking (Südalinn zone):</strong> Paid Mon-Fri 07:00-19:00, Sat 08:00-15:00. First 15 minutes free with parking clock.</li>
+                                <li><strong>Viru Keskus parking garage:</strong> Large and convenient underground parking a short walk away. Open 24/7.</li>
+                                <li><strong>Rotermanni kvartal parking:</strong> Another nearby option with both outdoor and underground spots.</li>
+                            </ul>
+                            <div class="bg-blue-50 p-4 rounded-lg mt-4">
+                                <h3 class="font-semibold text-lg mb-2 text-blue-800 flex items-center"><i data-lucide="zap" class="h-5 w-5 mr-2"></i>BOLT Vehicles</h3>
+                                <p class="text-sm text-blue-700">You can end your BOLT ride and park in designated nearby parking areas without additional fees, making it a very convenient option.</p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                
+                <!-- Transport Modal -->
+                 <div id="transport-modal" class="modal-overlay fixed inset-0 z-[60] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-lg mx-auto transform scale-95 opacity-0 overflow-hidden">
+                         <div class="p-6 md:p-8"><div class="flex justify-between items-center mb-6"><h2 class="text-3xl font-serif text-gray-800">Public Transport</h2><button id="transport-modal-close" class="text-gray-500 hover:text-gray-800"><i data-lucide="x" class="h-6 w-6"></i></button></div>
+                         <div class="space-y-6 max-h-[60vh] overflow-y-auto text-gray-700">
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2 text-gray-800 flex items-center"><i data-lucide="tram-front" class="h-5 w-5 mr-2 text-pink-500"></i>Trams</h3>
+                                <p>The nearest tram stop is <span class="font-semibold">Hobujaama</span>, just a 5-minute walk from the studio. Lines stopping there: 1, 2, 3, 4, 5.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2 text-gray-800 flex items-center"><i data-lucide="bus" class="h-5 w-5 mr-2 text-pink-500"></i>Buses</h3>
+                                <p>The <span class="font-semibold">Hobujaama</span> and <span class="font-semibold">A. Laikmaa</span> bus stops are also very close and serve a large number of city buses.</p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Form Modal -->
+                <div id="feedback-modal" class="modal-overlay fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4 opacity-0 pointer-events-none">
+                    <div class="modal-content bg-white rounded-2xl shadow-xl w-full max-w-md mx-auto transform scale-95 opacity-0">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-2xl font-serif text-gray-800">Share Your Experience</h2>
+                                <button id="feedback-modal-close" class="text-gray-500 hover:text-gray-800">
+                                    <i data-lucide="x" class="h-6 w-6"></i>
+                                </button>
+                            </div>
+                            <form id="feedback-form" class="space-y-5">
+                                <div>
+                                    <label for="feedback-name" class="block text-sm font-medium mb-2">Your Name</label>
+                                    <input type="text" id="feedback-name" name="name" class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" required>
+                                </div>
+                                <div>
+                                    <label for="feedback-message" class="block text-sm font-medium mb-2">Your Feedback</label>
+                                    <textarea id="feedback-message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Share your thoughts about your experience with us..." required></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-3 text-center rounded-md font-medium transition-colors bg-gray-800 text-white hover:bg-gray-700">
+                                    Submit Feedback
+                                </button>
+                            </form>
+                            <!-- Thank You Message (hidden by default) -->
+                            <div id="feedback-thankyou" class="hidden text-center py-8">
+                                <i data-lucide="heart" class="h-16 w-16 text-pink-500 mx-auto mb-4"></i>
+                                <h3 class="text-2xl font-serif text-gray-800 mb-2">Thank You!</h3>
+                                <p class="text-gray-600">We appreciate you sharing your experience with our community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modalContainer);
+        }
+
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createModals(); // Inject modals into the DOM
+            lucide.createIcons(); // Re-run lucide to process newly added icons in modals
+            
+            // Initialize language system
+            initLanguage();
+            
+            // Language switcher functionality
+            const languageToggle = document.getElementById('language-toggle');
+            const mobileLanguageToggle = document.getElementById('mobile-language-toggle');
+            const languageDropdown = document.getElementById('language-dropdown');
+            const mobileLanguageDropdown = document.getElementById('mobile-language-dropdown');
+            const mobileLanguageOptions = document.querySelectorAll('.language-option-mobile');
+            
+            // Desktop language switcher
+            if (languageToggle && languageDropdown) {
+                languageToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    languageDropdown.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
+                        languageDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Language selection
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.addEventListener('click', () => {
+                        const lang = option.getAttribute('data-lang');
+                        setLanguage(lang);
+                    });
+                });
+            }
+            
+            // Mobile language switcher
+            if (mobileLanguageToggle && mobileLanguageDropdown) {
+                mobileLanguageToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    mobileLanguageDropdown.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileLanguageToggle.contains(e.target) && !mobileLanguageDropdown.contains(e.target)) {
+                        mobileLanguageDropdown.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Mobile menu language options
+            mobileLanguageOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const lang = option.getAttribute('data-lang');
+                    setLanguage(lang);
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu) {
+                        mobileMenu.classList.add('translate-x-full');
+                    }
+                });
+            });
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 10) {
+                        navbar.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+                        navbar.classList.remove('bg-transparent');
+                    } else {
+                        navbar.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+                        navbar.classList.add('bg-transparent');
+                    }
+                });
+            }
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuClose = document.getElementById('menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            
+            if (menuToggle && mobileMenu) menuToggle.addEventListener('click', () => { mobileMenu.classList.remove('translate-x-full'); });
+            if (menuClose && mobileMenu) menuClose.addEventListener('click', () => { mobileMenu.classList.add('translate-x-full'); });
+            if (mobileLinks.length && mobileMenu) mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('translate-x-full'); }); });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offset = 80; // Navbar height
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = targetElement.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Fade-in Sections on Scroll
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+            
+             // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert(currentLanguage === 'en' ? 'Thank you for your message. We will get back to you soon!' : 
+                          currentLanguage === 'et' ? 'Täname sõnumi eest. Võtame teiega peagi ühendust!' :
+                          'Kiitos viestistä. Otamme sinuun pian yhteyttä!');
+                    this.reset();
+                });
+            }
+
+            // Like button functionality
+            const likeButtons = document.querySelectorAll('.like-button');
+            likeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    button.classList.toggle('liked');
+                    const heartIcon = button.querySelector('svg');
+                    if (heartIcon) {
+                        if (button.classList.contains('liked')) {
+                            heartIcon.style.fill = 'rgb(236, 72, 153)';
+                            heartIcon.style.color = 'rgb(236, 72, 153)';
+                            const flyingHeart = document.createElement('div');
+                            flyingHeart.className = 'flying-heart';
+                            flyingHeart.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(236, 72, 153)" stroke="rgb(236, 72, 153)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart h-5 w-5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`;
+                            button.appendChild(flyingHeart);
+                            setTimeout(() => { flyingHeart.remove(); }, 1000);
+                        } else {
+                            heartIcon.style.fill = 'none';
+                            heartIcon.style.color = 'currentColor';
+                        }
+                    }
+                });
+            });
+
+            // Generic Modal Functionality
+            function setupModal(modalId, openButtonsSelector, closeButtonId) {
+                const modal = document.getElementById(modalId);
+                if (!modal) return { showModal: () => {}, hideModal: () => {} };
+
+                const modalContent = modal.querySelector('.modal-content');
+                const openButtons = document.querySelectorAll(openButtonsSelector);
+                const closeButton = document.getElementById(closeButtonId);
+                
+                function showModal() {
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    if (modalContent) modalContent.classList.remove('scale-95', 'opacity-0');
+                }
+
+                function hideModal() {
+                    modal.classList.add('opacity-0');
+                    if (modalContent) modalContent.classList.add('scale-95', 'opacity-0');
+                    setTimeout(() => modal.classList.add('pointer-events-none'), 300);
+                }
+
+                openButtons.forEach(button => button.addEventListener('click', showModal));
+                if (closeButton) closeButton.addEventListener('click', hideModal);
+                modal.addEventListener('click', e => { if (e.target === modal) hideModal(); });
+                modal.querySelectorAll('.modal-contact-link').forEach(link => link.addEventListener('click', hideModal));
+
+                return { showModal, hideModal };
+            }
+
+            // Setup all modals
+            const { hideModal: hideEventModal } = setupModal('event-modal', '.event-details-button', 'modal-understand');
+            const questionButton = document.getElementById('modal-question');
+            if(questionButton) questionButton.addEventListener('click', hideEventModal);
+            
+            setupModal('studio-modal', '#rent-studio-button', 'studio-modal-close');
+            setupModal('parking-modal', '#parking-button', 'parking-modal-close');
+            setupModal('transport-modal', '#transport-button', 'transport-modal-close');
+            const { showModal: showBookingModal } = setupModal('booking-modal', null, 'booking-modal-close');
+
+
+            // Pricing Modal specific setup
+            const pricingModal = document.getElementById('pricing-modal');
+            if (pricingModal) {
+                const pricingModalContent = pricingModal.querySelector('.modal-content');
+                const pricingModalTitle = document.getElementById('pricing-modal-title');
+                const pricingModalBody = document.getElementById('pricing-modal-body');
+                const pricingModalClose = document.getElementById('pricing-modal-close');
+                const pricingButtons = document.querySelectorAll('.pricing-button');
+                const pricingData = {
+                    single: { title: 'Single Session', options: [{ name: '1 session', price: '18 €' }] },
+                    passes: { title: 'Multi-Visit Passes', options: [{ name: '5-class pass', price: '50 €' }, { name: '12-class pass', price: '108 €' }, { name: '20-class pass', price: '199 €' }] },
+                    memberships: { title: 'Membership', options: [{ name: '1 month unlimited', price: '70 €' }, { name: '6 month membership', price: '65 €/month' }, { name: 'Annual membership', price: '60 €/month' }] }
+                };
+                function showPricingModal(group) {
+                    const data = pricingData[group];
+                    pricingModalTitle.textContent = data.title;
+                    pricingModalBody.innerHTML = '';
+                    data.options.forEach(option => {
+                        const optionEl = document.createElement('div');
+                        optionEl.className = 'p-4 border rounded-lg flex justify-between items-center';
+                        optionEl.innerHTML = `<span class="font-medium text-gray-800">${option.name}</span><span class="font-bold text-lg text-pink-600">${option.price}</span>`;
+                        pricingModalBody.appendChild(optionEl);
+                    });
+                    pricingModal.classList.remove('opacity-0', 'pointer-events-none');
+                    pricingModalContent.classList.remove('scale-95', 'opacity-0');
+                }
+                 function hidePricingModal() {
+                    pricingModal.classList.add('opacity-0');
+                    pricingModalContent.classList.add('scale-95', 'opacity-0');
+                    setTimeout(() => { pricingModal.classList.add('pointer-events-none'); }, 300);
+                }
+                pricingButtons.forEach(button => { button.addEventListener('click', () => { showPricingModal(button.dataset.pricingGroup); }); });
+                if(pricingModalClose) pricingModalClose.addEventListener('click', hidePricingModal);
+                pricingModal.addEventListener('click', (e) => { if(e.target === pricingModal) { hidePricingModal(); } });
+            }
+
+            // Teacher Modal specific setup
+            const teacherModal = document.getElementById('teacher-modal');
+            if (teacherModal) {
+                const teacherModalContent = teacherModal.querySelector('.modal-content');
+                const teacherCards = document.querySelectorAll('.teacher-card');
+                const teacherModalClose = document.getElementById('teacher-modal-close');
+                const teacherData = {
+                    raili: { name: 'Raili Maripuu', title: 'Founder & Teacher', image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b', bio: 'Raili is the heart of our studio, bringing authentic Ashtanga practice to all levels, focusing on mindful movement, breathing and the joy of self-discovery. Her classes are a warm and welcoming space for both new and experienced practitioners.', socials: { instagram: 'https://www.instagram.com/raili.yoga/?hl=en', facebook: 'https://www.facebook.com/raili.yoga' } },
+                    ave: { name: 'Ave Lajal', title: 'Ashtanga Teacher', image: 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3', bio: 'Ave shares the traditional Ashtanga method with precision and warmth. With deep respect for the lineage, she helps students build a strong, graceful and sustainable practice for life.', socials: { instagram: 'https://www.instagram.com/avelajal/', facebook: 'https://www.facebook.com/ave.lajal/' } },
+                    triin: { name: 'Triin Parro', title: 'Fitness & Strength Trainer', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b', bio: 'Triin brings dynamic energy and functional strength training to her classes. Her classes are designed to build strength, stability and endurance that complement and support your yoga practice.', socials: { instagram: 'https://www.instagram.com/triin.p/', facebook: 'https://www.facebook.com/fitmindoy/?locale=en_GB' } },
+                    elizaveta: { name: 'Elizaveta Lebedeva', title: 'Ashtanga Teacher', image: 'https://images.unsplash.com/photo-1549576490-b0b4831ef60a', bio: 'Elizaveta guides students with a gentle yet disciplined approach. Her classes foster a deep connection between mind, body and breath, making Ashtanga practice accessible and profound.', socials: { instagram: 'https://www.instagram.com/lizavetalebed/', facebook: 'https://www.facebook.com/lebedeva.lizaveta/' } },
+                    viktooria: { name: 'Viktooria Palusaar', title: 'Nutritional Therapist', image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564', bio: 'Viktooria supports your well-being through balanced nutrition and mindful eating habits, helping you build a healthy relationship with food that nourishes your body and mind for both yoga practice and everyday life.', socials: { instagram: 'https://www.instagram.com/vicky_pa/', facebook: 'https://www.facebook.com/victoria.palusaar' } }
+                };
+                function showTeacherModal(teacherId) {
+                    const data = teacherData[teacherId];
+                    document.getElementById('teacher-modal-img').src = data.image;
+                    document.getElementById('teacher-modal-name').textContent = data.name;
+                    document.getElementById('teacher-modal-title').textContent = data.title;
+                    document.getElementById('teacher-modal-bio').textContent = data.bio;
+                    const socialsContainer = document.getElementById('teacher-modal-socials');
+                    socialsContainer.innerHTML = '';
+                    if(data.socials.instagram) socialsContainer.innerHTML += `<a href="${data.socials.instagram}" target="_blank" class="p-2 text-gray-600 hover:text-pink-500"><i data-lucide="instagram" class="h-6 w-6"></i></a>`;
+                    if(data.socials.facebook) socialsContainer.innerHTML += `<a href="${data.socials.facebook}" target="_blank" class="p-2 text-gray-600 hover:text-pink-500"><i data-lucide="facebook" class="h-6 w-6"></i></a>`;
+                    lucide.createIcons();
+                    teacherModal.classList.remove('opacity-0', 'pointer-events-none');
+                    teacherModalContent.classList.remove('scale-95', 'opacity-0');
+                }
+                 function hideTeacherModal() {
+                    teacherModal.classList.add('opacity-0');
+                    teacherModalContent.classList.add('scale-95', 'opacity-0');
+                    setTimeout(() => { teacherModal.classList.add('pointer-events-none'); }, 300);
+                }
+                teacherCards.forEach(card => card.addEventListener('click', () => showTeacherModal(card.dataset.teacherId)));
+                if(teacherModalClose) teacherModalClose.addEventListener('click', hideTeacherModal);
+                teacherModal.addEventListener('click', (e) => { if(e.target === teacherModal) {hideTeacherModal()}});
+            }
+
+            // Countdown Timer for Seasonal Offer
+            const countdownElement = document.getElementById('countdown');
+            if (countdownElement) {
+                const offerEndDate = new Date('October 31, 2025 23:59:59').getTime();
+                const countdownInterval = setInterval(() => {
+                    const now = new Date().getTime();
+                    const distance = offerEndDate - now;
+                    if (distance < 0) {
+                        clearInterval(countdownInterval);
+                        document.getElementById('seasonal-offer').innerHTML = '<p class="text-center text-xl font-semibold">This offer has expired.</p>';
+                        return;
+                    }
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    
+                    const heroCountdown = document.getElementById('hero-countdown');
+                    if (heroCountdown) {
+                        heroCountdown.innerHTML = `<span>${String(days).padStart(2, '0')}p</span>:<span>${String(hours).padStart(2, '0')}t</span>:<span>${String(minutes).padStart(2, '0')}m</span>`;
+                    }
+                    document.getElementById('days').innerText = String(days).padStart(2, '0');
+                    document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                    document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                    document.getElementById('seconds').innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+                }, 1000);
+            }
+
+            // Reviews Carousel Logic
+            const reviewsCarousel = document.getElementById('reviews-track');
+            if (reviewsCarousel) {
+                const reviews = [
+                    {
+                        name: "Kam Wattanodom",
+                        timeAgo: "6 months ago",
+                        stars: 5,
+                        text: "Visiting Tallinn from abroad, happy to have found this shala. Raili was incredibly welcoming and I gained much from her instruction and adjustments.",
+                        source: "google",
+                        badge: null
+                    },
+                    {
+                        name: "Anne Nõlvak",
+                        timeAgo: "4 years ago",
+                        stars: 5,
+                        text: "Amazing place with more amazing people 💗",
+                        source: "google",
+                        badge: { type: "localGuide", text: "Local Guide" }
+                    },
+                    {
+                        name: "Sébastien Migeotte",
+                        timeAgo: "9 months ago",
+                        stars: 5,
+                        text: "Very nice place, easy to park or get there by public transport. The teachers are professional and nice.",
+                        source: "google",
+                        badge: null
+                    },
+                    {
+                        name: "Triin Parro",
+                        timeAgo: "3 years ago",
+                        stars: 5,
+                        text: "Nice and cozy studio in the city center. Very nice teachers and a warm and supportive environment 🙏",
+                        source: "google",
+                        badge: null
+                    },
+                    {
+                        name: "Sandra Linneberg",
+                        timeAgo: "3 years ago",
+                        stars: 5,
+                        text: "",
+                        source: "google",
+                        badge: null
+                    },
+                    {
+                        name: "Kristi Pähklimägi",
+                        timeAgo: "4 years ago",
+                        stars: 5,
+                        text: "",
+                        source: "google",
+                        badge: null
+                    },
+                    {
+                        name: "Eret Hünninen",
+                        timeAgo: "5 years ago",
+                        stars: 5,
+                        text: "",
+                        source: "google",
+                        badge: { type: "reviewer", text: "1 review" }
+                    },
+                    {
+                        name: "Kiira Kuldma",
+                        timeAgo: "5 years ago",
+                        stars: 5,
+                        text: "",
+                        source: "google",
+                        badge: { type: "localGuide", text: "Local Guide • 49 reviews • 80 photos" }
+                    }
+                ];
+
+                let currentSlide = 0;
+                let slidesPerView = 1;
+                
+                // Calculate slides per view based on screen size
+                function updateSlidesPerView() {
+                    if (window.innerWidth >= 1024) {
+                        slidesPerView = 3;
+                    } else if (window.innerWidth >= 768) {
+                        slidesPerView = 2;
+                    } else {
+                        slidesPerView = 1;
+                    }
+                    updateCarousel();
+                }
+                
+                // Initialize carousel
+                function initCarousel() {
+                    reviewsCarousel.innerHTML = '';
+                    
+                    reviews.forEach((review, index) => {
+                        const reviewCard = document.createElement('div');
+                        reviewCard.className = 'review-card';
+                        
+                        // Generate initials for avatar
+                        const initials = review.name.split(' ').map(n => n[0]).join('').toUpperCase();
+                        
+                        // Generate star HTML
+                        let starsHtml = '';
+                        for (let i = 0; i < 5; i++) {
+                            starsHtml += `<i data-lucide="star" class="h-4 w-4 ${i < review.stars ? 'text-yellow-500 fill-yellow-500' : 'text-gray-300'}"></i>`;
+                        }
+                        
+                        // Generate badge HTML
+                        let badgeHtml = '';
+                        if (review.badge) {
+                            const icon = review.badge.type === 'localGuide' ? 'map-pin' : 'star';
+                            badgeHtml = `<span class="reviewer-badge"><i data-lucide="${icon}" class="h-3 w-3"></i>${review.badge.text}</span>`;
+                        }
+                        
+                        reviewCard.innerHTML = `
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">${initials}</div>
+                                        <div class="reviewer-details">
+                                            <h4>${review.name}</h4>
+                                            ${badgeHtml}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="review-date">${review.timeAgo}</div>
+                                        <div class="review-stars">${starsHtml}</div>
+                                    </div>
+                                </div>
+                                ${review.text ? `<p class="review-text">${review.text}</p>` : '<p class="review-text text-gray-400 italic">No review text provided</p>'}
+                                <div class="review-source">
+                                    ${review.source === 'google' ? '<i data-lucide="globe" class="h-3 w-3"></i>Google' : '<i data-lucide="facebook" class="h-3 w-3"></i>Facebook'}
+                                </div>
+                            </div>
+                        `;
+                        
+                        reviewsCarousel.appendChild(reviewCard);
+                    });
+                    
+                    // Initialize dots
+                    initDots();
+                    updateCarousel();
+                    lucide.createIcons();
+                }
+                
+                // Initialize dots indicator
+                function initDots() {
+                    const dotsContainer = document.getElementById('review-dots');
+                    dotsContainer.innerHTML = '';
+                    
+                    const totalDots = Math.ceil(reviews.length / slidesPerView);
+                    
+                    for (let i = 0; i < totalDots; i++) {
+                        const dot = document.createElement('div');
+                        dot.className = `review-dot ${i === 0 ? 'active' : ''}`;
+                        dot.addEventListener('click', () => {
+                            currentSlide = i;
+                            updateCarousel();
+                        });
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+                
+                // Update carousel position
+                function updateCarousel() {
+                    const slideWidth = 100 / slidesPerView;
+                    const translateX = -currentSlide * slideWidth;
+                    reviewsCarousel.style.transform = `translateX(${translateX}%)`;
+                    
+                    // Update active dot
+                    const dots = document.querySelectorAll('.review-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentSlide);
+                    });
+                }
+                
+                // Navigation functions
+                function nextSlide() {
+                    const maxSlide = Math.ceil(reviews.length / slidesPerView) - 1;
+                    currentSlide = currentSlide < maxSlide ? currentSlide + 1 : 0;
+                    updateCarousel();
+                }
+                
+                function prevSlide() {
+                    const maxSlide = Math.ceil(reviews.length / slidesPerView) - 1;
+                    currentSlide = currentSlide > 0 ? currentSlide - 1 : maxSlide;
+                    updateCarousel();
+                }
+                
+                // Initialize
+                initCarousel();
+                
+                // Add event listeners
+                document.getElementById('next-review').addEventListener('click', nextSlide);
+                document.getElementById('prev-review').addEventListener('click', prevSlide);
+                
+                // Update on resize
+                window.addEventListener('resize', () => {
+                    updateSlidesPerView();
+                    initDots();
+                });
+                
+                // Auto-advance carousel
+                let autoSlideInterval = setInterval(nextSlide, 5000);
+                
+                // Pause auto-advance on hover
+                reviewsCarousel.parentElement.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlideInterval);
+                });
+                
+                reviewsCarousel.parentElement.addEventListener('mouseleave', () => {
+                    autoSlideInterval = setInterval(nextSlide, 5000);
+                });
+                
+                // Initialize slides per view
+                updateSlidesPerView();
+                
+                // Leave Review Button functionality
+                const leaveReviewButton = document.getElementById('leave-review-button');
+                if (leaveReviewButton) {
+                    leaveReviewButton.addEventListener('click', () => {
+                        // Open review modal or external link
+                        window.open('https://g.page/r/CYHeaA4O-cjREB0/review', '_blank');
+                    });
+                }
+            }
+
+            // Instagram Carousel Logic
+            const sliderContainer = document.querySelector('.slider-container');
+            if(sliderContainer) {
+                const sliderTrack = sliderContainer.querySelector('.slider-track');
+                const posts = [
+                    { link: "https://www.instagram.com/reel/DPEMfsCDFHb/?utm_source=ig_web_copy_link", img: "https://images.unsplash.com/photo-1593179449458-e45a112c3cc2", date: "NOV 29, 2021" },
+                    { link: "https://www.instagram.com/p/DPQfsiNjKt9/?utm_source=ig_web_copy_link", img: "https://images.unsplash.com/photo-1545389336-cf090694435e", date: "NOV 25, 2021"},
+                    { link: "https://www.instagram.com/p/DPL8_lqjGR7/?utm_source=ig_web_copy_link", img: "https://images.unsplash.com/photo-1599447462855-c0194b34c34a", date: "NOV 23, 2021"},
+                    { link: "https://www.instagram.com/reel/DOvmP38jMbS/?utm_source=ig_web_copy_link", img: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3", date: "NOV 13, 2021"},
+                    { link: "https://www.instagram.com/p/DOtXL_fjFUx/", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b", date: "NOV 11, 2021" },
+                    { link: "#", img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b", date: "NOV 10, 2021" },
+                    { link: "#", img: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a", date: "NOV 08, 2021" },
+                ];
+
+                const allPosts = [...posts, ...posts]; 
+                
+                sliderTrack.innerHTML = '';
+                allPosts.forEach(post => {
+                    const postEl = document.createElement('a');
+                    postEl.href = post.link;
+                    postEl.target = "_blank";
+                    postEl.className = "w-[250px] aspect-square mx-2 flex-shrink-0 relative rounded-lg overflow-hidden group";
+                    postEl.innerHTML = `
+                        <img src="${post.img}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-full">${post.date}</div>
+                         <button class="like-button absolute bottom-2 left-2 bg-white/70 backdrop-blur-sm p-2 rounded-full text-gray-600 hover:text-pink-500 focus:outline-none z-10">
+                            <i data-lucide="heart" class="h-5 w-5"></i>
+                        </button>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-lucide="instagram" class="h-10 w-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                        </div>
+                    `;
+                    sliderTrack.appendChild(postEl);
+                });
+                
+                // Add like button functionality to new instagram posts
+                sliderTrack.querySelectorAll('.like-button').forEach(button => {
+                   button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    button.classList.toggle('liked');
+                    const heartIcon = button.querySelector('svg');
+                    if (heartIcon) {
+                        if (button.classList.contains('liked')) {
+                            heartIcon.style.fill = 'rgb(236, 72, 153)';
+                            heartIcon.style.color = 'rgb(236, 72, 153)';
+                            const flyingHeart = document.createElement('div');
+                            flyingHeart.className = 'flying-heart';
+                            flyingHeart.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(236, 72, 153)" stroke="rgb(236, 72, 153)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart h-5 w-5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>`;
+                            button.appendChild(flyingHeart);
+                            setTimeout(() => { flyingHeart.remove(); }, 1000);
+                        } else {
+                            heartIcon.style.fill = 'none';
+                            heartIcon.style.color = 'currentColor';
+                        }
+                    }
+                });
+                });
+
+                lucide.createIcons();
+            }
+
+        });
+    </script>
+</body>
+</html>

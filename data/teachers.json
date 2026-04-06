@@ -1,0 +1,52 @@
+{
+    "raili": {
+        "name": "Raili Maripuu",
+        "title": "Founder & Teacher",
+        "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+        "bio": "Raili is the heart of our studio, bringing authentic Ashtanga practice to all levels, focusing on mindful movement, breathing and the joy of self-discovery. Her classes are a warm and welcoming space for both new and experienced practitioners.",
+        "socials": {
+            "instagram": "https://www.instagram.com/raili.yoga/?hl=en",
+            "facebook": "https://www.facebook.com/raili.yoga"
+        }
+    },
+    "ave": {
+        "name": "Ave Lajal",
+        "title": "Ashtanga Teacher",
+        "image": "https://images.unsplash.com/photo-1552196563-55cd4e45efb3",
+        "bio": "Ave shares the traditional Ashtanga method with precision and warmth. With deep respect for the lineage, she helps students build a strong, graceful and sustainable practice for life.",
+        "socials": {
+            "instagram": "https://www.instagram.com/avelajal/",
+            "facebook": "https://www.facebook.com/ave.lajal/"
+        }
+    },
+    "triin": {
+        "name": "Triin Parro",
+        "title": "Fitness & Strength Trainer",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+        "bio": "Triin brings dynamic energy and functional strength training to her classes. Her classes are designed to build strength, stability and endurance that complement and support your yoga practice.",
+        "socials": {
+            "instagram": "https://www.instagram.com/triin.p/",
+            "facebook": "https://www.facebook.com/fitmindoy/?locale=en_GB"
+        }
+    },
+    "elizaveta": {
+        "name": "Elizaveta Lebedeva",
+        "title": "Ashtanga Teacher",
+        "image": "https://images.unsplash.com/photo-1549576490-b0b4831ef60a",
+        "bio": "Elizaveta guides students with a gentle yet disciplined approach. Her classes foster a deep connection between mind, body and breath, making Ashtanga practice accessible and profound.",
+        "socials": {
+            "instagram": "https://www.instagram.com/lizavetalebed/",
+            "facebook": "https://www.facebook.com/lebedeva.lizaveta/"
+        }
+    },
+    "viktooria": {
+        "name": "Viktooria Palusaar",
+        "title": "Nutritional Therapist",
+        "image": "https://images.unsplash.com/photo-1543362906-acfc16c67564",
+        "bio": "Viktooria supports your well-being through balanced nutrition and mindful eating habits, helping you build a healthy relationship with food that nourishes your body and mind for both yoga practice and everyday life.",
+        "socials": {
+            "instagram": "https://www.instagram.com/vicky_pa/",
+            "facebook": "https://www.facebook.com/victoria.palusaar"
+        }
+    }
+}
