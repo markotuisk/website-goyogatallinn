@@ -472,7 +472,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://fienta.com/cf/img/?width=1070&dpr=1&format=webp&gcs=true&file=/org/37107/S5ojsruswflz7lw.png',
         teachers: ['marit-tuisk'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://fienta.com/et/rituaal-kakaoga-176546',
         en: {
             title: 'Ritual with Cacao: Clear Intent & Calm Heart',
             date: 'April 12, 2026',
