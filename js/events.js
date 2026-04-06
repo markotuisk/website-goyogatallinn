@@ -612,7 +612,7 @@ const eventsData = [
         memberPrice: 33,
         image: 'https://fienta.com/cf/img/?width=1070&dpr=1&format=webp&gcs=true&file=/org/37107/nX8JxIKbfYaQarG.png',
         teachers: ['marit-tuisk', 'david-lepp'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://fienta.com/et/kevadrituaal-176545',
         en: {
             title: 'Spring Ritual with Cacao and Gong Journey',
             date: 'April 17, 2026',
