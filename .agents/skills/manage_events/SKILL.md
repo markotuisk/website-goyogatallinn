@@ -50,3 +50,9 @@ It is absolutely critical to follow these translation rules for `et` (Estonian) 
 After inserting the event data:
 1. Re-run `build_script.py` to regenerate all static HTML (including JSON-LD schema metadata).
 2. Manually commit the changes and push to the `main` branch to trigger a Cloudflare update.
+
+## 6. Self-Correction & Technical Reminders (For AI Agent)
+To prevent frustrating deployment and execution loops, completely adhere to the following:
+1. **Cache-Busting Awareness**: Because Cloudflare and user browsers aggressively cache `js/events.js`, make sure the latest `build_script.py` implementation is utilized. It automatically appends a `?v=TIMESTAMP` cache-buster to the injected script tags across all `.html` pages. If updates still don't show up in the live environment, deliberately run `build_script.py` again, ensure the HTML files updated with the new timestamp, and advise the user to perform a Hard Refresh (`Cmd + Shift + R`).
+2. **JSON Syntax Integrity**: When using surgical code replacement tools (like `replace_file_content`) to update an event, be incredibly careful with the JSON brackets `}` and commas `,` separating events inside `eventsData`. Always double-check that you haven't accidentally erased closing brackets of the preceding event, otherwise it will corrupt the entire site build.
+3. **Workspace Path Validation**: The master frontend codebase is located strictly inside `.../Goyoga Tallinn/website`, **NOT** at the root of `GOYOGA website`. Before executing file reads, terminal commands, or git commits, explicitly verify your `Cwd` and absolute paths to ensure you aren't trying to manipulate an empty mirror directory.
