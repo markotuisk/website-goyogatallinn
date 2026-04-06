@@ -384,7 +384,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://fienta.com/cf/img/?width=1070&dpr=1&format=webp&gcs=true&file=/org/19245/OR5psIgRyyJjlwv.png',
         teachers: ['raili-maripuu'],
-        registerLink: 'https://app.hopitude.com/et/workouts/standalone/403805/1775916000000',
+        registerLink: 'https://fienta.com/et/algajate-ashtanga-jooga-workshop-177422',
         en: {
             title: 'Ashtanga Yoga Beginners Workshop',
             date: 'April 11, 2026',
