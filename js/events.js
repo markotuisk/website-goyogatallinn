@@ -812,7 +812,7 @@ const eventsData = [
         memberPrice: 25,
         image: 'https://cdn.prod.website-files.com/61a921351681fe719a5e20c4/6542ba511258c4ac8c984215_MB16veeb.jpg',
         teachers: ['marit-tuisk'],
-        registerLink: 'mailto:events@goyoga.ee',
+        registerLink: 'https://app.hopitude.com/et/workouts/standalone/405532/1777057200000',
         en: {
             title: 'Ritual with Cacao: Clear Intent & Calm Heart',
             date: 'April 24, 2026',
