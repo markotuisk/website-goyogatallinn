@@ -65,7 +65,7 @@ const seoData = {
             ogDescription: "Avasta autentne ruum jooga ja heaolu jaoks Tallinna südames. Tunnid igale tasemele ja vanusele."
         },
         fi: {
-            title: "Goyoga Tallinna | Joogan ja hyvinvoinnin keidas | Tallinnan keskusta",
+            title: "Goyoga Tallinna | Joogan ja hyvinvoinnin keidas",
             description: "Perinteisen joogan ja hyvinvointipalveluiden koti Tallinnassa. Ashtanga, Vinyasa, Yin-jooga, Pilates ja äänimaljakylvyt goyoga.ee:ssä.",
             keywords: "Jooga Tallinna, hyvinvointi, Ashtanga, Vinyasa, Yin jooga, äänimaljakylpy Tallinna, kaakaoseremonia, Pilates Tallinna, Qigong, Yoga Nidra",
             ogTitle: "Joogan ja hyvinvoinnin keidas Tallinnassa | goyoga.ee",
@@ -80,44 +80,44 @@ const seoData = {
         },
         rent: {
             en: {
-                title: "Studio Rental | Light-filled Space in Tallinn Centre | Goyoga Tallinn",
+                title: "Studio Rental | Yoga Space in Tallinn | Goyoga Tallinn",
                 description: "Rent our beautiful yoga studio for your next workshop, seminar or event. Natural wood floors, premium amenities, and a tranquil atmosphere in the heart of Tallinn.",
                 keywords: "yoga studio rental Tallinn, workshop space Tallinn, seminar room Tallinn, studio hire Tallinn, Goyoga Tallinn rental"
             },
             et: {
-                title: "Stuudio rent | Valgusküllane ruum Tallinna kesklinnas | Goyoga Tallinn",
+                title: "Stuudio rent | Valgusküllane ruum | Goyoga Tallinn",
                 description: "Rendi meie kaunis joogastuudio oma järgmiseks töötoaks, seminariks või sündmuseks. Looduslikud puitpõrandate ja kvaliteetsed mugavused ja rahulik atmosfäär Tallinna südames.",
                 keywords: "stuudio rent Tallinn, saali rent Tallinn, koolitusruum Tallinn, joogasaali rent, Goyoga Tallinn rent"
             },
             fi: {
-                title: "Studion vuokraus | Valoisa tila Tallinnan keskustassa | Goyoga Tallinn",
+                title: "Studion vuokraus | Valoisa tila | Goyoga Tallinn",
                 description: "Vuokraa kaunis joogastudiomme seuraavaa työpajaasi, seminaariasi tai tapahtumaasi varten. Luonnonpuulattiat, laadukkaat mugavused ja rauhallinen ilmapiiri Tallinnan keskustassa | Goyoga Tallinn",
                 keywords: "studion vuokraus Tallinna, työpajatila Tallinna, seminaarihuone Tallinna, joogasalivuokraus, Goyoga Tallinn"
             },
             ru: {
-                title: "Аренда студии | Светлое пространство в центре Таллина | Goyoga Tallinn",
+                title: "Аренда студии | Йога-зал в Таллине | Goyoga Tallinn",
                 description: "Арендуйте нашу красивую студию йоги для следующего мастер-класса, семинара или мероприятия. Деревянные полы, высококачественное оборудование и спокойная атмосфера в центре Таллина.",
                 keywords: "аренда студии Таллин, рабочее пространство Таллин, зал для семинара Таллин, аренда зала йоги, Goyoga Tallinn"
             }
         },
         corporate: {
             en: {
-                title: "Corporate Wellness | Yoga & Team Well-being Tallinn | Goyoga Tallinn",
+                title: "Corporate Wellness | Team Well-being | Goyoga Tallinn",
                 description: "Boost your team's productivity and health. Customized corporate yoga, meditation, and stress management at our studio or your office in Tallinn.",
                 keywords: "corporate wellness Tallinn, corporate yoga Tallinn, team building Tallinn, employee wellbeing, meditation for companies, workplace health"
             },
             et: {
-                title: "Ettevõtetele | Jooga ja meeskonna heaolu | Goyoga Tallinn",
+                title: "Ettevõtetele | Meeskonna heaolu | Goyoga Tallinn",
                 description: "Tõsta oma meeskonna produktiivsust ja tervist. Kohandatud ettevõtte jooga, meditatsioon ja stressijuhtimine meie stuudios või teie kontoris Tallinnas.",
                 keywords: "ettevõtte heaolu Tallinn, ettevõtte jooga Tallinn, meeskonna üritused, töötajate heaolu, meditatsioon ettevõtetele, tervisedendus töökohal"
             },
             fi: {
-                title: "Yrityksille | Jooga ja tiimin hyvinvointi | Goyoga Tallinn",
+                title: "Yrityksille | Tiimin hyvinvointi | Goyoga Tallinn",
                 description: "Paranna tiimisi tuottavuutta ja terveyttä. Räätälöity yritysjooga, meditaatio ja stressinhallinta studiollamme tai toimistollanne Tallinnassa.",
                 keywords: "yritysten hyvinvointi Tallinna, yritysjooga Tallinna, tiimipäivä Tallinna, työntekijöiden hyvinvointi, meditaatio yrityksille, työterveys"
             },
             ru: {
-                title: "Корпоративным клиентам | Йога и благополучие команды | Goyoga Tallinn",
+                title: "Корпоративным клиентам | Велнес | Goyoga Tallinn",
                 description: "Повысьте продуктивность и здоровье вашей команды. Индивидуальная корпоративная йога, медитация и управление стрессом в нашей студии или в вашем офисе в Таллине.",
                 keywords: "корпоративный велнес Таллин, корпоративная йога Таллин, тимбилдинг Таллин, благополучие сотрудников, медитация для компаний"
             }
@@ -151,7 +151,7 @@ const seoData = {
                 keywords: "yoga offers Tallinn, seasonal yoga deals, workshop discounts, Goyoga Tallinn exclusive, Ashtanga deals"
             },
             et: {
-                title: "Hooajalised pakkumised | Eksklusiivsed soodustused | Goyoga Tallinn",
+                title: "Jooga Hinnakiri | Pakkumised | Goyoga Tallinn",
                 description: "Avasta piiratud ajaga pakkumised, töötoad ja eksklusiivsed soodustused goyoga.ee-s. Traditsiooniline Ashtanga jooga Tallinna kesklinnas.",
                 keywords: "jooga pakkumised, sügisene jooga soodustus, töötubade soodustused, Goyoga Tallinn sooduspakkumised"
             },
