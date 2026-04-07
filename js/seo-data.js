@@ -151,7 +151,7 @@ const seoData = {
                 keywords: "yoga offers Tallinn, seasonal yoga deals, workshop discounts, Goyoga Tallinn exclusive, Ashtanga deals"
             },
             et: {
-                title: "Jooga Hinnakiri | Pakkumised | Goyoga Tallinn",
+                title: "Jooga ja Teenuste Hinnakiri | Goyoga Tallinn",
                 description: "Avasta piiratud ajaga pakkumised, töötoad ja eksklusiivsed soodustused goyoga.ee-s. Traditsiooniline Ashtanga jooga Tallinna kesklinnas.",
                 keywords: "jooga pakkumised, sügisene jooga soodustus, töötubade soodustused, Goyoga Tallinn sooduspakkumised"
             },
