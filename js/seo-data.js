@@ -168,24 +168,46 @@ const seoData = {
         },
         teachers: {
             en: {
-                title: "{name} | Teacher Journey | Goyoga Tallinn",
-                description: "Explore the journey, philosophy, and expertise of {name} at Goyoga Tallinn. Join our community of yoga and wellness practitioners.",
+                title: "{name} | {role} Teacher Journey | Goyoga Tallinn",
+                description: "Explore the journey, philosophy, and expertise of {name}, dedicated {role} at Goyoga Tallinn. Join our community for authentic yoga and wellness in Tallinn.",
                 keywords: "{name}, yoga teacher Tallinn, wellness expert Estonia, {role}, Goyoga Tallinn profile"
             },
             et: {
-                title: "{name} | Õpetaja teekond | Goyoga Tallinn",
-                description: "Avasta {name} teekond, filosoofia ja kogemused Goyoga Tallinnas. Liitu meie jooga- ja heaolu kogukonnaga.",
+                title: "{name} | {role} Õpetaja teekond | Goyoga Tallinn",
+                description: "Avasta {name} teekond, filosoofia ja kogemused Goyoga Tallinnas. {name} on pühendunud {role}, kes toetab sinu jooga- ja heaolu teekonda.",
                 keywords: "{name}, joogaõpetaja Tallinn, heaolu ekspert, {role}, Goyoga Tallinn profiil"
             },
             fi: {
-                title: "{name} | Opettajan matka | Goyoga Tallinna",
-                description: "Tutustu opettajan {name} matkaan, filosofiaan ja asiantuntemukseen Goyoga Tallinnassa. Liity jooga- ja hyvinvointiyhteisöömme.",
+                title: "{name} | {role} Opettajan matka | Goyoga Tallinna",
+                description: "Tutustu opettajan {name} matkaan, filosofiaan ja asiantuntemukseen Goyoga Tallinnassa. Kokenut {role} {name} toivottaa sinut tervetulleeksi joogayhteisöömme.",
                 keywords: "{name}, joogaopettaja Tallinna, hyvinvointiasiantuntija Viro, {role}, Goyoga Tallinn-profiili"
             },
             ru: {
-                title: "{name} | Путь учителя | Goyoga Tallinn",
-                description: "Откройте для себя путь, философию и опыт {name} в Goyoga Tallinn. Присоединяйтесь к нашему сообществу йоги и велнеса.",
+                title: "{name} | {role} Путь учителя | Goyoga Tallinn",
+                description: "Откройте для себя путь, философию и опыт {name} в Goyoga Tallinn. Квалифицированный {role} {name} поможет вам в вашей практике йоги и велнеса.",
                 keywords: "{name}, учитель йоги Таллин, велнес-эксперт Эстония, {role}, Goyoga Tallinn профиль"
+            }
+        },
+        classes: {
+            en: {
+                title: "{title} | Traditional Yoga in Tallinn | Goyoga Tallinn",
+                description: "{title} at Goyoga Tallinn: {tagline} Discover our authentic classes and wellness sanctuary in the heart of Tallinn.",
+                keywords: "{title} Tallinn, traditional yoga, wellness practices, Goyoga classes"
+            },
+            et: {
+                title: "{title} | Traditsiooniline jooga Tallinnas | Goyoga Tallinn",
+                description: "{title} Goyoga Tallinnas: {tagline} Avasta meie autentsed joogatunnid ja heaolu oaas Tallinna südalinnas.",
+                keywords: "{title} Tallinn, traditsiooniline jooga, heaolu praktikad, Goyoga tunnid"
+            },
+            fi: {
+                title: "{title} | Perinteinen jooga Tallinnassa | Goyoga Tallinna",
+                description: "{title} Goyoga Tallinnassa: {tagline} Tutustu aitoihin joogatunteihimme ja hyvinvoinnin keitaaseen Tallinnan sydämessä.",
+                keywords: "{title} Tallinna, perinteinen jooga, hyvinvointipalvelut, Goyoga tunnit"
+            },
+            ru: {
+                title: "{title} | Традиционная йога в Таллине | Goyoga Tallinn",
+                description: "{title} в Goyoga Tallinn: {tagline} Откройте для себя наши аутентичные занятия йогой и велнес-оазис в центре Таллина.",
+                keywords: "{title} Таллин, традиционная йога, велнес-практики, занятия Goyoga"
             }
         }
     },

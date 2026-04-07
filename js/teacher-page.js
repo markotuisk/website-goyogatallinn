@@ -252,8 +252,8 @@ function updateTeacherSEO(id, lang) {
 
     const t = seoData.meta.teachers[lang] || seoData.meta.teachers['en'];
 
-    const title = t.title.replace('{name}', name);
-    const description = t.description.replace('{name}', name);
+    const title = t.title.replace('{name}', name).replace('{role}', role);
+    const description = t.description.replace('{name}', name).replace('{role}', role);
     const keywords = t.keywords.replace('{name}', name).replace('{role}', role);
 
     document.title = title;

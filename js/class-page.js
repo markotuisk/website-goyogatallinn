@@ -40,8 +40,8 @@ function renderClassDetails(id, lang) {
     document.getElementById('class-title').textContent = t('title');
     document.getElementById('class-tagline').textContent = t('tagline');
     document.getElementById('class-image').src = data.image; // Universal image
-    document.getElementById('seo-title').textContent = `${t('title')} | Goyoga Tallinn`;
-    document.getElementById('seo-description').setAttribute('content', t('description').substring(0, 150) + "...");
+    
+    updateClassSEO(id, lang);
 
     // Icon
     const iconEl = document.getElementById('class-icon');
@@ -215,4 +215,49 @@ function renderClassDetails(id, lang) {
     if (window.lucide) window.lucide.createIcons();
     // Re-run translations for the newly injected teacher cards
     if (window.updateUI) window.updateUI(currentLanguage);
+}
+
+function updateClassSEO(id, lang) {
+    if (typeof seoData === 'undefined' || !seoData.meta.classes) return;
+
+    const data = window.classesData[id];
+    if (!data) return;
+
+    // Translation helper
+    const t = (key) => {
+        if (data.translations && data.translations[lang] && data.translations[lang][key]) {
+            return data.translations[lang][key];
+        }
+        return data.translations?.['en']?.[key] || '';
+    };
+
+    const title = t('title');
+    const tagline = t('tagline');
+
+    const seoTemplate = seoData.meta.classes[lang] || seoData.meta.classes['en'];
+
+    const finalTitle = seoTemplate.title.replace('{title}', title);
+    const finalDescription = seoTemplate.description.replace('{title}', title).replace('{tagline}', tagline);
+    const finalKeywords = seoTemplate.keywords.replace('{title}', title);
+
+    document.title = finalTitle;
+
+    const titleEl = document.getElementById('seo-title');
+    if (titleEl) titleEl.textContent = finalTitle;
+
+    const descEl = document.getElementById('seo-description');
+    if (descEl) descEl.setAttribute('content', finalDescription);
+
+    const keyEl = document.getElementById('seo-keywords');
+    if (keyEl) keyEl.setAttribute('content', finalKeywords);
+
+    // OG Tags
+    const ogTitle = document.getElementById('og-title');
+    if (ogTitle) ogTitle.setAttribute('content', finalTitle);
+
+    const ogDesc = document.getElementById('og-description');
+    if (ogDesc) ogDesc.setAttribute('content', finalDescription);
+
+    const ogImg = document.getElementById('og-image');
+    if (ogImg && data.image) ogImg.setAttribute('content', data.image);
 }
