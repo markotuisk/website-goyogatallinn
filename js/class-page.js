@@ -180,7 +180,7 @@ function renderClassDetails(id, lang) {
                 teachersContainer.innerHTML += `
                     <div class="teacher-card bg-gray-50 rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer group" onclick="window.location.href='/teacher.html?id=${tId}'">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="${teacher.image}" alt="${teacher.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <img src="${teacher.image}" alt="${teacher.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" title="${teacher.name}">
                         </div>
                         <div class="p-6 text-center">
                             <h3 class="text-xl font-medium mb-1">${teacher.name}</h3>

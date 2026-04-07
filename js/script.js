@@ -333,19 +333,19 @@ function initModals() {
             infoBody.innerHTML = `
                         < div class="grid grid-cols-2 gap-4 mt-2" >
                     <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Building Entrance">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Building Entrance" title="Building Entrance">
                         <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.entrance']}</p>
                     </div>
                     <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1514533212735-5df27d970db0" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Main Door">
+                        <img src="https://images.unsplash.com/photo-1514533212735-5df27d970db0" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Main Door" title="Main Door">
                         <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.door']}</p>
                     </div>
                     <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1552072805-2a9039d00e57" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Floor Map">
+                        <img src="https://images.unsplash.com/photo-1552072805-2a9039d00e57" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Floor Map" title="Floor Map">
                         <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.hallway']}</p>
                     </div>
                     <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Studio Entrance">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Studio Entrance" title="Studio Entrance">
                         <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.studio']}</p>
                     </div>
                 </div >
@@ -441,10 +441,10 @@ function initReviewsCarousel() {
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col w-full h-full overflow-hidden transition-all duration-300 hover:shadow-md group">
                 <!--Image Header-->
                 <div class="h-48 w-full relative overflow-hidden">
-                    <img src="${story.image}" alt="Community Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <img src="${story.image}" alt="Community Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" title="Community Story">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-4 left-4 flex items-center gap-3">
-                        <img src="${story.avatar}" alt="${story.author}" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                        <img src="${story.avatar}" alt="${story.author}" class="w-10 h-10 rounded-full border-2 border-white object-cover" title="${story.author}">
                         <div>
                             <h4 class="font-bold text-white text-sm leading-tight">${story.author}</h4>
                             <p class="text-[10px] text-gray-200 uppercase tracking-widest">${story.role}</p>
@@ -1071,7 +1071,7 @@ function renderEvents(container, featuredOnly = false) {
         return `
             <div class="bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full border border-gray-100 group">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="${event.cardImage || event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <img src="${event.cardImage || event.image}" alt="${data.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" title="${data.title}">
                     <div class="absolute top-4 left-4 flex flex-col gap-2">
                         ${statusTag}
                         <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-bold uppercase tracking-widest text-pink-600 rounded-full shadow-sm">${typeLabel}</span>

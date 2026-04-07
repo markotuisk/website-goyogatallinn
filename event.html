@@ -56,7 +56,7 @@
         <div class="container-custom py-4 md:py-5">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center">
-                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn" class="h-10 w-auto">
+                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn" class="h-10 w-auto" title="Goyoga Tallinn">
                 </a>
                 <nav class="hidden md:block">
                     <ul class="flex items-center space-x-8">
@@ -91,7 +91,7 @@
         <div class="container-custom text-center">
             <div class="mb-6 flex justify-center">
                 <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn"
-                    class="h-10 w-auto brightness-0 invert">
+                    class="h-10 w-auto brightness-0 invert" title="Goyoga Tallinn">
             </div>
             <p class="text-gray-400 text-sm" data-i18n="footer.copyright">© 2025 goyoga.ee. All rights reserved.</p>
         </div>
@@ -274,7 +274,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gallery-grid">
                             ${event.gallery.map(img => `
                                 <div class="aspect-video md:aspect-square overflow-hidden rounded-xl bg-gray-100">
-                                    <img src="${img}" class="w-full h-full object-cover" alt="Event preview">
+                                    <img src="${img}" class="w-full h-full object-cover" alt="Event preview" title="Event preview">
                                 </div>
                             `).join('')}
                         </div>
@@ -289,7 +289,7 @@
                     if (!teacherData) return '';
                     return `
                         <a href="/teacher.html?id=${tId}" class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-pink-200 hover:bg-pink-50/30 transition-all group">
-                            <img src="${teacherData.image}" alt="${teacherData.name}" class="w-14 h-14 rounded-full object-cover shadow-sm">
+                            <img src="${teacherData.image}" alt="${teacherData.name}" class="w-14 h-14 rounded-full object-cover shadow-sm" title="${teacherData.name}">
                             <div>
                                 <h4 class="font-medium text-gray-900 group-hover:text-pink-600 transition-colors">${teacherData.name}</h4>
                                 <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">${teacherData.title}</p>
@@ -313,7 +313,7 @@
             container.innerHTML = `
                 <!-- Hero -->
                 <div class="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
-                    <img src="${event.headerImage || event.image}" class="w-full h-full object-cover" alt="${data.title}">
+                    <img src="${event.headerImage || event.image}" class="w-full h-full object-cover" alt="${data.title}" title="${data.title}">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 w-full p-8 md:p-16">
                         <div class="container-custom">

@@ -93,6 +93,7 @@ function renderTeacherData(id, lang) {
             optimizedAlt += ` | Goyoga Estonia Tallinn`;
         }
         imageEl.alt = optimizedAlt;
+        imageEl.title = optimizedAlt;
 
         // Custom Image Positioning from data.js
         if (basic && basic.profilePosition) {
@@ -217,7 +218,7 @@ function renderTeacherData(id, lang) {
             galleryGrid.innerHTML = gallery.map(imgUrl => `
                 <div class="aspect-square bg-gray-200 rounded-xl overflow-hidden shadow-sm">
                     <img src="${imgUrl}" alt="Gallery Moment"
-                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy">
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" title="Gallery Moment">
                 </div>
             `).join('');
             gallerySection.classList.remove('hidden');
