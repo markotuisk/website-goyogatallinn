@@ -76,13 +76,13 @@ function setLanguage(lang) {
     const searchStr = window.location.search || '';
     const hashStr = window.location.hash || '';
 
-    // Strip .html for clean Cloudflare aesthetics when assigning location
-    const cleanTarget = targetFilename.replace('.html', '');
+    // Keep .html for clean Cloudflare aesthetics when assigning location
+    const targetUrl = targetFilename;
 
     if (targetFilename === 'index.html') {
         window.location.href = `/${lang === 'en' ? '' : lang + '/'}${searchStr}${hashStr}`;
     } else {
-        window.location.href = `/${lang}/${cleanTarget}${searchStr}${hashStr}`;
+        window.location.href = `/${lang}/${targetUrl}${searchStr}${hashStr}`;
     }
 }
 

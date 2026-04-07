@@ -10,7 +10,8 @@ const seoData = {
             "faq.html": "faq.html",
             "offers.html": "offers.html",
             "rent.html": "rent.html",
-            "teacher.html": "teacher.html"
+            "teacher.html": "teacher.html",
+            "corporate.html": "corporate.html"
         },
         et: {
             "index.html": "index.html",
@@ -20,7 +21,8 @@ const seoData = {
             "faq.html": "korduma-kippuvad-kusimused.html",
             "offers.html": "hinnakiri.html",
             "rent.html": "rendi-ruumid.html",
-            "teacher.html": "opetajad.html"
+            "teacher.html": "opetajad.html",
+            "corporate.html": "ettevotetele.html"
         },
         fi: {
             "index.html": "index.html",
@@ -30,7 +32,8 @@ const seoData = {
             "faq.html": "ukk.html",
             "offers.html": "hinnasto.html",
             "rent.html": "tilojen-vuokraus.html",
-            "teacher.html": "opettajat.html"
+            "teacher.html": "opettajat.html",
+            "corporate.html": "yrityksille.html"
         },
         ru: {
             "index.html": "index.html",
@@ -40,7 +43,8 @@ const seoData = {
             "faq.html": "faq.html",
             "offers.html": "predlozheniya.html",
             "rent.html": "arenda.html",
-            "teacher.html": "uchitelya.html"
+            "teacher.html": "uchitelya.html",
+            "corporate.html": "korporativnym.html"
         }
     },
 
@@ -94,6 +98,28 @@ const seoData = {
                 title: "Аренда студии | Светлое пространство в центре Таллина | Goyoga Tallinn",
                 description: "Арендуйте нашу красивую студию йоги для следующего мастер-класса, семинара или мероприятия. Деревянные полы, высококачественное оборудование и спокойная атмосфера в центре Таллина.",
                 keywords: "аренда студии Таллин, рабочее пространство Таллин, зал для семинара Таллин, аренда зала йоги, Goyoga Tallinn"
+            }
+        },
+        corporate: {
+            en: {
+                title: "Corporate Wellness | Yoga & Team Well-being Tallinn | Goyoga Tallinn",
+                description: "Boost your team's productivity and health. Customized corporate yoga, meditation, and stress management at our studio or your office in Tallinn.",
+                keywords: "corporate wellness Tallinn, corporate yoga Tallinn, team building Tallinn, employee wellbeing, meditation for companies, workplace health"
+            },
+            et: {
+                title: "Ettevõtetele | Jooga ja meeskonna heaolu | Goyoga Tallinn",
+                description: "Tõsta oma meeskonna produktiivsust ja tervist. Kohandatud ettevõtte jooga, meditatsioon ja stressijuhtimine meie stuudios või teie kontoris Tallinnas.",
+                keywords: "ettevõtte heaolu Tallinn, ettevõtte jooga Tallinn, meeskonna üritused, töötajate heaolu, meditatsioon ettevõtetele, tervisedendus töökohal"
+            },
+            fi: {
+                title: "Yrityksille | Jooga ja tiimin hyvinvointi | Goyoga Tallinn",
+                description: "Paranna tiimisi tuottavuutta ja terveyttä. Räätälöity yritysjooga, meditaatio ja stressinhallinta studiollamme tai toimistollanne Tallinnassa.",
+                keywords: "yritysten hyvinvointi Tallinna, yritysjooga Tallinna, tiimipäivä Tallinna, työntekijöiden hyvinvointi, meditaatio yrityksille, työterveys"
+            },
+            ru: {
+                title: "Корпоративным клиентам | Йога и благополучие команды | Goyoga Tallinn",
+                description: "Повысьте продуктивность и здоровье вашей команды. Индивидуальная корпоративная йога, медитация и управление стрессом в нашей студии или в вашем офисе в Таллине.",
+                keywords: "корпоративный велнес Таллин, корпоративная йога Таллин, тимбилдинг Таллин, благополучие сотрудников, медитация для компаний"
             }
         },
         faq: {
