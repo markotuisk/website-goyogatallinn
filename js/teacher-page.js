@@ -85,7 +85,14 @@ function renderTeacherData(id, lang) {
     const imageEl = document.getElementById('teacher-image');
     if (imageEl) {
         imageEl.src = image;
-        imageEl.alt = name;
+        
+        let optimizedAlt = name;
+        if (role) {
+            optimizedAlt += ` - ${role} | Goyoga Estonia Tallinn`;
+        } else {
+            optimizedAlt += ` | Goyoga Estonia Tallinn`;
+        }
+        imageEl.alt = optimizedAlt;
 
         // Custom Image Positioning from data.js
         if (basic && basic.profilePosition) {
