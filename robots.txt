@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
+Disallow: /corporate.html
+Disallow: /en/corporate.html
+Disallow: /et/ettevotetele.html
+Disallow: /fi/yrityksille.html
+Disallow: /ru/korporativnym.html
 Sitemap: https://www.goyoga.ee/sitemap.xml
