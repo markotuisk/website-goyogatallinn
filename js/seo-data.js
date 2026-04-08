@@ -11,7 +11,8 @@ const seoData = {
             "offers.html": "offers.html",
             "rent.html": "rent.html",
             "teacher.html": "teacher.html",
-            "corporate.html": "corporate.html"
+            "corporate.html": "corporate.html",
+            "card.html": "card.html"
         },
         et: {
             "index.html": "index.html",
@@ -22,7 +23,8 @@ const seoData = {
             "offers.html": "hinnakiri.html",
             "rent.html": "rendi-ruumid.html",
             "teacher.html": "opetajad.html",
-            "corporate.html": "ettevotetele.html"
+            "corporate.html": "ettevotetele.html",
+            "card.html": "kaart.html"
         },
         fi: {
             "index.html": "index.html",
@@ -33,7 +35,8 @@ const seoData = {
             "offers.html": "hinnasto.html",
             "rent.html": "tilojen-vuokraus.html",
             "teacher.html": "opettajat.html",
-            "corporate.html": "yrityksille.html"
+            "corporate.html": "yrityksille.html",
+            "card.html": "kortti.html"
         },
         ru: {
             "index.html": "index.html",
@@ -44,7 +47,8 @@ const seoData = {
             "offers.html": "predlozheniya.html",
             "rent.html": "arenda.html",
             "teacher.html": "uchitelya.html",
-            "corporate.html": "korporativnym.html"
+            "corporate.html": "korporativnym.html",
+            "card.html": "karta.html"
         }
     },
 
@@ -142,6 +146,28 @@ const seoData = {
                 title: "Йога ЧАВО | Гид для начинающих и этикет | Goyoga Tallinn",
                 description: "Найдите ответы на частые вопросы о практике Аштанга-йоги в Goyoga Tallinn. Новые студенты, цены, этикет и многое другое.",
                 keywords: "йога ЧАВО, начать йогу Таллин, руководство Аштанга йога, этикет йоги, йога для начинающих Таллин"
+            }
+        },
+        card: {
+            en: {
+                title: "{name} | Digital Card | Goyoga Tallinn",
+                description: "Digital business card for {name}, {role} at Goyoga Tallinn. Save contact details and book classes.",
+                keywords: "{name}, {role}, yoga teacher card, digital business card, Goyoga Tallinn"
+            },
+            et: {
+                title: "{name} | Digitaalne visiitkaart | Goyoga Tallinn",
+                description: "{name} digitaalne visiitkaart. {role} Goyoga Tallinnas. Salvesta kontakt ja broneeri tund.",
+                keywords: "{name}, {role}, joogaõpetaja visiitkaart, digitaalne kaart, Goyoga Tallinn"
+            },
+            fi: {
+                title: "{name} | Digitaalinen käyntikortti | Goyoga Tallinna",
+                description: "{name}n digitaalinen käyntikortti. {role} Goyoga Tallinnassa. Tallenna yhteystiedot ja varaa tunti.",
+                keywords: "{name}, {role}, joogaopettajan käyntikortti, digitaalinen kortti, Goyoga Tallinna"
+            },
+            ru: {
+                title: "{name} | Цифровая визитка | Goyoga Tallinn",
+                description: "Цифровая визитка {name}, {role} в Goyoga Tallinn. Сохраните контакт и запишитесь на занятие.",
+                keywords: "{name}, {role}, визитка учителя йоги, цифровая карта, Goyoga Tallinn"
             }
         },
         offers: {

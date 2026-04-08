@@ -107,7 +107,7 @@ except Exception as e:
     print(f"Error parsing teachersData with js2py: {e}")
     teachers_data_dict = {}
 
-def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=None, events_data=None, teachers_data=None):
+def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=None, events_data=None, teachers_data=None, teacher_id=None):
     """
     Given a BeautifulSoup object and a language dict,
     replace the innerHTML of elements with data-i18n tags.
@@ -408,14 +408,23 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             
         if meta_data:
             if 'title' in meta_data and soup.title:
-                soup.title.string = meta_data['title']
+                title = meta_data['title']
+                if teacher_id and teachers_data and teacher_id in teachers_data:
+                    teacher = teachers_data[teacher_id]
+                    title = title.replace('{name}', teacher.get('name', '')).replace('{role}', teacher.get('title', ''))
+                soup.title.string = title
             
             desc_tag = soup.find('meta', attrs={'name': 'description'})
             if desc_tag and 'description' in meta_data:
-                desc_tag['content'] = meta_data['description']
+                desc = meta_data['description']
+                if teacher_id and teachers_data and teacher_id in teachers_data:
+                    teacher = teachers_data[teacher_id]
+                    desc = desc.replace('{name}', teacher.get('name', '')).replace('{role}', teacher.get('title', ''))
+                desc_tag['content'] = desc
                 
             og_title = soup.find('meta', property='og:title')
             if og_title and 'ogTitle' in meta_data:
+                soup.title.string = meta_data['ogTitle'] # Fallback if no ogTitle replacement logic, but let's keep it simple
                 og_title['content'] = meta_data['ogTitle']
                 
             og_desc = soup.find('meta', property='og:description')
@@ -485,6 +494,25 @@ for lang in LANGUAGES:
             
         translated_soup = translate_html(soup, lang, t, filename, faq_data_dict, seo_data_dict, events_data_list, teachers_data_dict)
         
+        # Special handling for card.html: Generate per-teacher cards
+        if filename == 'card.html' and teachers_data_dict:
+            card_base_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get('card.html', 'card.html').replace('.html', '')
+            card_dir = os.path.join(lang_dir, card_base_slug)
+            os.makedirs(card_dir, exist_ok=True)
+            
+            for teacher_id, tdata in teachers_data_dict.items():
+                if teacher_id == 'join-us': continue
+                
+                # Clone soup for each teacher
+                teacher_soup = BeautifulSoup(str(soup), 'html.parser')
+                translated_card = translate_html(teacher_soup, lang, t, filename, faq_data_dict, seo_data_dict, events_data_list, teachers_data_dict, teacher_id)
+                
+                # Save as [teacher_id].html inside card directory
+                card_output_path = os.path.join(card_dir, f"{teacher_id}.html")
+                with open(card_output_path, 'w', encoding='utf-8') as f:
+                    f.write(str(translated_card))
+                # print(f"Built Teacher Card: {card_output_path}")
+
         # Determine output filename based on localization map
         output_filename = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get(filename, filename)
         output_path = os.path.join(lang_dir, output_filename)
@@ -492,7 +520,7 @@ for lang in LANGUAGES:
             # BeautifulSoup prettify sometimes adds weird spacing, write raw string
             file.write(str(translated_soup))
             
-        print(f"Built {output_path}")
+        # print(f"Built {output_path}")
         
 # Generate Multi-Language Sitemap
 print("Generating exhaustive multi-language sitemap.xml...")
@@ -529,6 +557,17 @@ for lang in LANGUAGES:
       <loc>{ev_url}</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
+   </url>''')
+
+    # dynamically map card.html pages
+    translated_card_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get('card.html', 'card.html').replace('.html', '')
+    for teacher_id in teachers_data_dict:
+        if teacher_id == 'join-us': continue
+        card_url = f"https://www.goyoga.ee/{lang}/{translated_card_slug}/{teacher_id}"
+        sitemap_urls.append(f'''   <url>
+      <loc>{card_url}</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
    </url>''')
 
 sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>

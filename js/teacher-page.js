@@ -183,6 +183,17 @@ function renderTeacherData(id, lang) {
         emailEl.classList.remove('hidden');
     }
 
+    // Digital Card Button Link
+    const digitalCardBtn = document.getElementById('digital-card-btn');
+    if (digitalCardBtn) {
+        // Find localized card slug
+        let cardBaseSlug = 'card';
+        if (window.seoData?.urlRoutes?.[lang]?.['card.html']) {
+            cardBaseSlug = window.seoData.urlRoutes[lang]['card.html'].replace('.html', '');
+        }
+        digitalCardBtn.href = `/${lang}/${cardBaseSlug}/${id}`;
+    }
+
     // Testimonials Section
     const testimonialsSection = document.getElementById('teacher-testimonials-section');
     const testimonialsGrid = document.getElementById('teacher-testimonials-grid');

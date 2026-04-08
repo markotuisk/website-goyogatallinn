@@ -123,7 +123,8 @@ const translationsData = {
         "corporate.package.wellness_day.title": "Wellness Day",
         "corporate.package.wellness_day.description": "Team Wellbeing Day. A tailored program for your team at our authentic shala in the city center or at your office. Can include practices, healthy snacks, and workshops.",
         "corporate.cta.title": "Invest in Your Team's Well-being",
-        "corporate.cta.button": "Request a Quote"
+        "corporate.cta.button": "Request a Quote",
+        "card.email": "Email", "card.call": "Call", "card.social": "Social", "card.save_contact": "Save Contact", "card.class_schedule": "Class Schedule", "card.view_biography": "Full Biography", "card.share_qr": "Share QR Code", "card.scan_to_save": "Scan to Save My Card", "card.qr_instructions": "Point your camera at the screen to instantly open this digital business card on your phone.", "card.close": "Close"
     },
     et: {
         "nav.home": "Kodu", "nav.about": "Meist", "nav.classes": "Tunnid", "nav.studio": "Stuudio", "nav.schedule": "Tunniplaan", "nav.pricing": "Hinnad", "nav.teachers": "Õpetajad", "nav.events": "Sündmused", "nav.community": "Kogukond", "nav.corporate": "Ettevõtetele", "nav.contact": "Kontakt", "nav.language": "Keel",
@@ -248,7 +249,8 @@ const translationsData = {
         "corporate.package.wellness_day.title": "Wellness Day",
         "corporate.package.wellness_day.description": "Meeskonna heaolu päev. Eritellimusel valmiv programm teie meeskonnale meie kaunis stuudios kesklinnas või teie kontoris. Võib sisaldada praktikaid, tervislikke suupisteid ja töötubasid.",
         "corporate.cta.title": "Investeeri oma meeskonna heaolusse",
-        "corporate.cta.button": "Küsi pakkumist"
+        "corporate.cta.button": "Küsi pakkumist",
+        "card.email": "E-post", "card.call": "Helista", "card.social": "Sotsiaalmeedia", "card.save_contact": "Salvesta kontakt", "card.class_schedule": "Tunniplaan", "card.view_biography": "Täispikk biograafia", "card.share_qr": "Jaga QR-koodi", "card.scan_to_save": "Skaneeri, et salvestada", "card.qr_instructions": "Suuna oma kaamera ekraanile, et avada see digitaalne visiitkaart koheselt oma telefonis.", "card.close": "Sulge"
     },
     fi: {
         "nav.home": "Koti", "nav.about": "Meistä", "nav.classes": "Tunnit", "nav.studio": "Studio", "nav.schedule": "Aikataulu", "nav.pricing": "Hinnat", "nav.teachers": "Opettajat", "nav.events": "Tapahtumat", "nav.community": "Yhteisö", "nav.corporate": "Yrityksille", "nav.contact": "Yhteystiedot", "nav.language": "Kieli",
@@ -373,7 +375,8 @@ const translationsData = {
         "corporate.package.wellness_day.title": "Wellness Day",
         "corporate.package.wellness_day.description": "Tiimin hyvinvointipäivä. Räätälöity ohjelma tiimillesi autenttisessa shalassamme keskustassa tai toimistollanne. Voi sisältää harjoituksia, terveellisiä välipaloja ja työpajoja.",
         "corporate.cta.title": "Investoi tiimisi hyvinvointiin",
-        "corporate.cta.button": "Pyydä tarjous"
+        "corporate.cta.button": "Pyydä tarjous",
+        "card.email": "Sähköposti", "card.call": "Soita", "card.social": "Social", "card.save_contact": "Tallenna yhteystiedot", "card.class_schedule": "Aikataulu", "card.view_biography": "Koko elämäkerta", "card.share_qr": "Jaa QR-koodi", "card.scan_to_save": "Skannaa tallentaaksesi", "card.qr_instructions": "Osu kameralla näyttöön avataksesi tämän digitaalisen käyntikortin välittömästi puhelimessasi.", "card.close": "Sulje"
     },
     ru: {
         "nav.home": "Главная", "nav.about": "О нас", "nav.classes": "Занятия", "nav.studio": "Студия", "nav.schedule": "Расписание", "nav.pricing": "Цены", "nav.teachers": "Учителя", "nav.events": "События", "nav.community": "Сообщество", "nav.corporate": "Корпоративным", "nav.contact": "Контакты", "nav.language": "Язык",
@@ -498,7 +501,8 @@ const translationsData = {
         "corporate.package.wellness_day.title": "Wellness Day",
         "corporate.package.wellness_day.description": "День велнеса для команды. Индивидуальная программа для вашей команды в нашей аутентичной шале в центре города или в вашем офисе. Может включать практики, полезные перекусы и мастер-классы.",
         "corporate.cta.title": "Инвестируйте в благополучие вашей команды",
-        "corporate.cta.button": "Запросить предложение"
+        "corporate.cta.button": "Запросить предложение",
+        "card.email": "Email", "card.call": "Позвонить", "card.social": "Соцсети", "card.save_contact": "Сохранить контакт", "card.class_schedule": "Расписание занятий", "card.view_biography": "Полная биография", "card.share_qr": "Поделиться QR-кодом", "card.scan_to_save": "Сканируйте, чтобы сохранить", "card.qr_instructions": "Направьте камеру на экран, чтобы мгновенно открыть эту цифровую визитку на своем телефоне.", "card.close": "Закрыть"
 
     }
 

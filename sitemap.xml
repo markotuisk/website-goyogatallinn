@@ -11,6 +11,11 @@
       <priority>1.0</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/en/card</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/en/corporate</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -86,6 +91,56 @@
       <priority>0.9</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/en/card/david-lepp</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/dian-jarvenkyla</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/edith-tiitsaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/kaia-karjatse</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/keiu-grossberg</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/lorena-rodrigo</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/marit-tuisk</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/raili-maripuu</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/triin-parro</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/en/card/victoria-palusaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/et/rendi-ruumid</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -94,6 +149,11 @@
       <loc>https://www.goyoga.ee/et/</loc>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.goyoga.ee/et/ettevotetele</loc>
@@ -171,6 +231,56 @@
       <priority>0.9</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/et/kaart/david-lepp</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/dian-jarvenkyla</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/edith-tiitsaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/kaia-karjatse</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/keiu-grossberg</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/lorena-rodrigo</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/marit-tuisk</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/raili-maripuu</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/triin-parro</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/kaart/victoria-palusaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/fi/tilojen-vuokraus</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -179,6 +289,11 @@
       <loc>https://www.goyoga.ee/fi/</loc>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.goyoga.ee/fi/yrityksille</loc>
@@ -256,6 +371,56 @@
       <priority>0.9</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/fi/kortti/david-lepp</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/dian-jarvenkyla</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/edith-tiitsaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/kaia-karjatse</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/keiu-grossberg</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/lorena-rodrigo</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/marit-tuisk</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/raili-maripuu</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/triin-parro</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/fi/kortti/victoria-palusaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/ru/arenda</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -264,6 +429,11 @@
       <loc>https://www.goyoga.ee/ru/</loc>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.goyoga.ee/ru/korporativnym</loc>
@@ -339,5 +509,55 @@
       <loc>https://www.goyoga.ee/ru/sobytie?id=open-day-may-2026</loc>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/david-lepp</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/dian-jarvenkyla</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/edith-tiitsaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/kaia-karjatse</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/keiu-grossberg</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/lorena-rodrigo</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/marit-tuisk</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/raili-maripuu</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/triin-parro</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/karta/victoria-palusaar</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
    </url>
 </urlset>
