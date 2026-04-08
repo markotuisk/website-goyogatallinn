@@ -129,7 +129,9 @@ const corporateData = {
                 "Meditatsioonid ja Yoga Nidra",
                 "Qigong ja meridiaanivõimlemine",
                 "Helirännakud",
-                "Kakaorituaalid"
+                "Kakaorituaalid",
+                "Yin jooga ja müofastsiaalne vabastamine (MFR)",
+                "Heaolu töötoad ja loengud (stress, uni jne)"
             ]
         },
         "packagesSection": {
@@ -293,7 +295,9 @@ const corporateData = {
                 "Meditations and Yoga Nidra",
                 "Qigong and meridian gymnastics",
                 "Sound journeys",
-                "Cacao rituals"
+                "Cacao rituals",
+                "Yin Yoga & Myofascial Release (MFR)",
+                "Wellness Workshops & Lectures (stress, sleep, etc.)"
             ]
         },
         "packagesSection": {
@@ -450,7 +454,9 @@ const corporateData = {
                 "Meditaatiot ja Yoga Nidra",
                 "Qigong ja meridiaanivoimistelu",
                 "Äänimaljamatkat",
-                "Kaakaorituaalit"
+                "Kaakaorituaalit",
+                "Yin-jooga ja myofaskiaalinen rentoutus (MFR)",
+                "Hyvinvointityöpajat ja luennot (stressi, uni jne.)"
             ]
         },
         "packagesSection": {
@@ -614,7 +620,9 @@ const corporateData = {
                 "Медитации и Йога-нидра",
                 "Цигун и меридианная гимнастика",
                 "Звуковые путешествия",
-                "Церемонии какао"
+                "Церемонии какао",
+                "Инь-йога и миофасциальный релиз (МФР)",
+                "Велнес-воркшопы и лекции (стресс, сон и т. д.)"
             ]
         },
         "packagesSection": {

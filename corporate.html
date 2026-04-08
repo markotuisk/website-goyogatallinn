@@ -677,7 +677,7 @@
             const practicesList = document.getElementById('practices-list');
             if (practicesList) {
                 practicesList.innerHTML = '';
-                const practiceIcons = ['zap', 'wind', 'sun', 'moon', 'activity', 'music', 'heart'];
+                const practiceIcons = ['zap', 'wind', 'sun', 'moon', 'activity', 'music', 'heart', 'target', 'book-open'];
                 data.practices.items.forEach((item, index) => {
                     const pIcon = practiceIcons[index % practiceIcons.length];
                     const pCard = document.createElement('div');
