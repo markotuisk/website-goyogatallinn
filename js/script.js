@@ -186,7 +186,8 @@ function initModals() {
     // Pricing
     document.querySelectorAll('.pricing-button').forEach(btn => {
         btn.addEventListener('click', () => {
-            const data = pricingData[currentLanguage][btn.dataset.pricingGroup];
+            const langPricing = pricingData[currentLanguage] || pricingData['en'];
+            const data = langPricing[btn.dataset.pricingGroup];
             if (data) {
                 document.getElementById('pricing-modal-title').textContent = data.title;
                 const body = document.getElementById('pricing-modal-body');
