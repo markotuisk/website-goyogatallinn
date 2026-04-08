@@ -1380,8 +1380,8 @@ function initEventModal() {
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1" data-i18n="events.modal.email_label">Email Address *</label>
-                        <input type="email" id="event-reg-email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none transition-all">
+                        <label class="block text-sm font-medium text-gray-700 mb-1" data-i18n="events.modal.email_label">Email Address (Optional)</label>
+                        <input type="email" id="event-reg-email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none transition-all">
                     </div>
                     
                     <div>

@@ -146,6 +146,14 @@ export async function onRequestPost(context) {
         const ZOHO_KEY = env.ZOHO_API_KEY || "Zoho-enczapikey yA6KbHsIvQn3yz5TQxJp0pCOoY9krf9vj3jksyHhe5d0e4GyiqFs3xVudNO/IDuJ3YHY46ICatNCdIHv6twKe5diZoVYKJTGTuv4P2uV48xh8ciEYNYhjJirA7IUFqVIeRotCSw1Q/MoWA==";
 
         try {
+            const toRecipients = [
+                { "email_address": { "address": "info@goyoga.ee", "name": "Studio Inquiries" } }
+            ];
+
+            if (data.email) {
+                toRecipients.push({ "email_address": { "address": data.email, "name": data.name } });
+            }
+
             await fetch("https://api.zeptomail.com/v1.1/email", {
                 method: "POST",
                 headers: {
@@ -155,10 +163,7 @@ export async function onRequestPost(context) {
                 },
                 body: JSON.stringify({
                     "from": { "address": "online.services@goyoga-billing.cc", "name": "Goyoga Events" },
-                    "to": [
-                        { "email_address": { "address": data.email, "name": data.name } },
-                        { "email_address": { "address": "info@goyoga.ee", "name": "Studio Inquiries" } }
-                    ],
+                    "to": toRecipients,
                     "subject": t.subject,
                     "htmlbody": emailHtml
                 })
