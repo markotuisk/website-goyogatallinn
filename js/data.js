@@ -1771,7 +1771,7 @@ const pricingData = {
         single: {
             "title": "Ühekordsed külastused",
             "options": [
-                { "name": "1x Tund", "price": "18€", "link": "https://wise.com/pay/r/2Dj7X2o3OoaWcFQ", "qrCode": "/assets/qr/single-session-qr.png", "desc": "Kehtib ühele vabalt valitud tunnile. Oled esimest korda? Vaata Liikmepakettide alt Studio Explorer Passi – 3 tundi maksab kokku 29€, mis teeb ühe tunni hinnaks vaid 9.66€!" },
+                { "name": "1x Tund", "price": "18€", "desc": "Kehtib ühele vabalt valitud tunnile. Oled esimest korda? Vaata Liikmepakettide alt Studio Explorer Passi – 3 tundi maksab kokku 29€, mis teeb ühe tunni hinnaks vaid 9.66€!" },
                 { "name": "Õpilane", "price": "15€", "desc": "Soodushind õpilastele ja tudengitele. Vajalik kehtiv soodustust tõendav dokument." },
                 { "name": "Pensionär", "price": "10€", "desc": "Soodushind pensionäridele. Vajalik kehtiv dokument." }
             ],
@@ -1836,7 +1836,7 @@ const pricingData = {
         single: {
             "title": "Kertakäynnit",
             "options": [
-                { "name": "1x Tunti", "price": "18€", "link": "https://wise.com/pay/r/2Dj7X2o3OoaWcFQ", "qrCode": "/assets/qr/single-session-qr.png", "desc": "Voimassa yhteen vapaavalintaiseen tuntiin. Ensimmäistä kertaa studiolla? Jäsenyydet-osion lT Studio Explorer Pass maksaa 29€ / 3 käyntiä, eli vain 9.66€ per tunti!" },
+                { "name": "1x Tunti", "price": "18€", "desc": "Voimassa yhteen vapaavalintaiseen tuntiin. Ensimmäistä kertaa studiolla? Jäsenyydet-osion lT Studio Explorer Pass maksaa 29€ / 3 käyntiä, eli vain 9.66€ per tunti!" },
                 { "name": "Opiskelija", "price": "15€", "desc": "Alennettu hinta edellyttää voimassa olevaa opiskelijakorttia." },
                 { "name": "Eläkeläinen", "price": "10€", "desc": "Alennettu hinta edellyttää voimassa olevaa todistusta." }
             ],
@@ -1901,7 +1901,7 @@ const pricingData = {
         single: {
             "title": "Разовые посещения",
             "options": [
-                { "name": "1x Занятие", "price": "18€", "link": "https://wise.com/pay/r/2Dj7X2o3OoaWcFQ", "qrCode": "/assets/qr/single-session-qr.png", "desc": "Действует на любой класс по расписанию. Отлично подходит для разовых визитов. Вы у нас впервые? Абонемент Studio Explorer Pass (в разделе «Абонементы») стоит 29€ за 3 посещения — всего 9.66€ за занятие!" },
+                { "name": "1x Занятие", "price": "18€", "desc": "Действует на любой класс по расписанию. Отлично подходит для разовых визитов. Вы у нас впервые? Абонемент Studio Explorer Pass (в разделе «Абонементы») стоит 29€ за 3 посещения — всего 9.66€ за занятие!" },
                 { "name": "Студенческий", "price": "15€", "desc": "Особая цена для студентов. Требуется действительный студенческий билет." },
                 { "name": "Пенсионный", "price": "10€", "desc": "Особая цена для пенсионеров. Требуется действительное удостоверение." }
             ],
