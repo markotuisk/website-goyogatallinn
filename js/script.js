@@ -86,6 +86,22 @@ function setLanguage(lang) {
     }
 }
 
+function updateUI(lang) {
+    if (typeof translationsData !== 'undefined' && translationsData[lang]) {
+        const t = translationsData[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (t[key]) {
+                if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+                    if (el.hasAttribute('placeholder')) el.placeholder = t[key];
+                } else {
+                    el.innerHTML = t[key];
+                }
+            }
+        });
+    }
+}
+
 function updateUIDecorators(lang) {
     const flagMap = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png', 'ru': 'https://flagcdn.com/w20/ru.png' };
     const languageCodeMap = { 'en': 'EN', 'et': 'EE', 'fi': 'FI', 'ru': 'RU' };
