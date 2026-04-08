@@ -2,7 +2,7 @@ const corporateData = {
     "et": {
         "intro": {
             "p1": "Vaimne tervis ja liikumine moodustavad märkimisväärse osa töötaja üleüldisest heaolust töökohal. Ettevõtted otsivad oma töötajatele üha rohkem holistilisi teenuseid, stressi maandamisest kuni krooniliste haiguste vältimiseni, mis pakuvad nii füüsilisi kui ka psühholoogilisi kasutegureid.",
-            "p2": "Goyoga Tallinna aitab ettevõtetel tõsta oma töötajate heaolu ja üleüldist tervislikku seisundit, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, joogat ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
+            "p2": "Goyoga Tallinn aitab ettevõtetel tõsta oma töötajate heaolu ja üleüldist tervislikku seisundit, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, joogat ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
             "statNumber": "86 %",
             "statQuote": "Eesti töötajatest leiab, et nende heaolu töökohal on palgaga võrdselt oluline faktor.",
             "statSource": "Stebby Töökoha Heaolu Uuring 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Loe raportit</a>"
