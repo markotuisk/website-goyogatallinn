@@ -100,7 +100,7 @@ const corporateData = {
                 "desc": "Heaoluteenuste pakkumisel on meie partneriks Lõuna-Floridast pärit firma Casa Rituals, mille põhitegevuseks on tuua sisukad ja kvaliteetsed heaolu lahendused organisatsioonidesse, pakkudes programme, mis toetavad vastupidavust, selgust ja jätkusuutlikku töövõimet.",
                 "linkText": "Loe lähemalt",
                 "linkUrl": "https://www.casarituals.com/",
-                "logo": "assets/corporate/casa-rituals-logo.svg"
+                "logo": "/assets/corporate/casa-rituals-logo.svg"
             }
         },
         "practices": {
@@ -248,7 +248,7 @@ const corporateData = {
                 "desc": "When providing wellness services, our partner is Casa Rituals, a South Florida-based company. Their core mission is to bring meaningful and high-quality wellness solutions to organizations, offering programs that support resilience, clarity, and sustainable productivity.",
                 "linkText": "Read more",
                 "linkUrl": "https://www.casarituals.com/",
-                "logo": "assets/corporate/casa-rituals-logo.svg"
+                "logo": "/assets/corporate/casa-rituals-logo.svg"
             }
         },
         "practices": {
@@ -396,7 +396,7 @@ const corporateData = {
                 "desc": "Hyvinvointipalveluita tarjotessamme kumppanimme on Etelä-Floridasta kotoisin oleva Casa Rituals. Heidän perustehtävänsä on tuoda merkityksellisiä ja korkealaatuisia hyvinvointiratkaisuja organisaatioille tarjoamalla ohjelmia, jotka tukevat vastustuskykyä, selkeyttä ja kestävää tuottavuutta.",
                 "linkText": "Lue lisää",
                 "linkUrl": "https://www.casarituals.com/",
-                "logo": "assets/corporate/casa-rituals-logo.svg"
+                "logo": "/assets/corporate/casa-rituals-logo.svg"
             }
         },
         "practices": {
@@ -544,7 +544,7 @@ const corporateData = {
                 "desc": "Нашим партнером по предоставлению велнес-услуг является компания Casa Rituals из Южной Флориды. Их миссия — внедрять качественные велнес-решения в организациях, предлагая программы, поддерживающие продуктивность и ясность ума.",
                 "linkText": "Подробнее",
                 "linkUrl": "https://www.casarituals.com/",
-                "logo": "assets/corporate/casa-rituals-logo.svg"
+                "logo": "/assets/corporate/casa-rituals-logo.svg"
             }
         },
         "practices": {
