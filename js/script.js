@@ -1504,6 +1504,105 @@ async function submitEventRegistration(e) {
     }
 }
 
+// --- Corporate Inquiry Modal Logic ---
+
+function openCorporateModal() {
+    const modal = document.getElementById('corporate-inquiry-modal');
+    const content = document.getElementById('corporate-modal-content');
+
+    if (!modal || !content) return;
+
+    // Reset form state
+    const form = document.getElementById('corporate-inquiry-form');
+    if (form) form.reset();
+    if (form) form.classList.remove('hidden');
+    const success = document.getElementById('corporate-modal-success');
+    if (success) success.classList.add('hidden');
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+
+    // Setup click outside to close
+    if (!modal.dataset.listenerAdded) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeCorporateModal();
+            }
+        });
+        modal.dataset.listenerAdded = 'true';
+    }
+
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        content.classList.remove('scale-95');
+    }, 10);
+}
+
+function closeCorporateModal() {
+    const modal = document.getElementById('corporate-inquiry-modal');
+    const content = document.getElementById('corporate-modal-content');
+
+    if (!modal || !content) return;
+
+    modal.classList.add('opacity-0');
+    content.classList.add('scale-95');
+
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }, 300);
+}
+
+async function submitCorporateInquiry(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('corp-submit-btn');
+    const originalBtnHtml = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i data-lucide="loader-2" class="h-5 w-5 animate-spin mx-auto"></i> Sending...';
+    if (window.lucide) window.lucide.createIcons();
+    submitBtn.disabled = true;
+
+    const company = document.getElementById('corp-company').value;
+    const name = document.getElementById('corp-name').value;
+    const email = document.getElementById('corp-email').value;
+    const phone = document.getElementById('corp-phone').value;
+    const interest = document.getElementById('corp-interest').value;
+    const message = document.getElementById('corp-message').value;
+
+    const payload = {
+        formType: 'corporate',
+        company,
+        name,
+        email,
+        phone,
+        interest,
+        message,
+        sourceUrl: window.location.href,
+        language: typeof currentLanguage !== 'undefined' ? currentLanguage : (localStorage.getItem('goyoga_lang') || 'et')
+    };
+
+    try {
+        const response = await fetch('/api/submit', {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        const result = await response.json();
+        if (!response.ok || !result.success) throw new Error(result.error || 'Failed to submit');
+
+        document.getElementById('corporate-inquiry-form').classList.add('hidden');
+        document.getElementById('corporate-modal-success').classList.remove('hidden');
+    } catch (error) {
+        console.error("Error submitting inquiry:", error);
+        alert("Päringu saatmisel tekkis viga. Palun proovi uuesti või kirjuta meile info@goyoga.ee");
+    } finally {
+        submitBtn.innerHTML = originalBtnHtml;
+        submitBtn.disabled = false;
+        if (window.lucide) window.lucide.createIcons();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initEventModal();
 });
