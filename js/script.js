@@ -224,13 +224,20 @@ function initModals() {
                         }
                     }
 
+                    const langData = translationsData[currentLanguage] || translationsData['en'];
+                    let buyBtnText = langData['pricing.buy'] || 'Buy Now';
+                    if (currentLanguage === 'et') buyBtnText = 'Osta';
+                    if (currentLanguage === 'fi') buyBtnText = 'Osta';
+                    if (currentLanguage === 'ru') buyBtnText = 'Купить';
+                    
                     modalContentHTML += `
                         <div class="p-4 border rounded flex flex-col justify-center">
-                            <div class="flex justify-between items-center w-full group">
+                            <div class="flex justify-between items-center w-full group mb-2">
                                 <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
                                 ${displayPrice}
                             </div>
-                            ${opt.desc ? `<p class="text-xs text-gray-500 mt-2 leading-relaxed">${opt.desc}</p>` : ''}
+                            ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-xs font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider mb-2 select-none active:scale-[0.98]">${buyBtnText}</a>` : ''}
+                            ${opt.desc ? `<p class="text-xs text-gray-500 leading-relaxed">${opt.desc}</p>` : ''}
                         </div>
                     `;
                 });
