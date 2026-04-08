@@ -24,6 +24,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=latin,cyrillic&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 3D Flip Card Styles */
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 600px;
+            perspective: 1500px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flip-card-back {
+            background-color: #fff;
+            transform: rotateY(180deg);
+            padding: 3rem 2rem;
+            border: 1px solid #f3f4f6;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="assets/branding/logo-goyoga-tallinn-estonia.ico">
@@ -304,6 +346,13 @@
             'https://images.unsplash.com/photo-1552196563-55cd4e45efb3'  // Wellness Day
         ];
 
+        function toggleFlip(id) {
+            const card = document.getElementById(`flip-card-${id}`);
+            if (card) {
+                card.classList.toggle('flipped');
+            }
+        }
+
         function renderCorporatePage() {
             // Get current language from path if available, or local storage, default to 'et'
             let pathLang = window.location.pathname.split('/')[1];
@@ -318,147 +367,192 @@
             const data = corporateData[currentLang] || corporateData['et'];
 
             // 1. Hero & Intro
-            document.getElementById('corporate-hero-title').textContent = translationsData[currentLang]?.["corporate.title"] || data.packagesSection.title;
-            document.getElementById('corporate-intro-tag').textContent = data.intro.subtitle;
+            const heroTitleEl = document.getElementById('corporate-hero-title');
+            if (heroTitleEl) heroTitleEl.textContent = translationsData[currentLang]?.["corporate.title"] || data.packagesSection.title;
+            
+            const introTagEl = document.getElementById('corporate-intro-tag');
+            if (introTagEl) introTagEl.textContent = data.intro.subtitle;
             
             // Trusted By translation
-            document.getElementById('trusted-title').textContent = currentLang === 'et' ? "Meid on usaldanud" : (currentLang === 'fi' ? "Meihin luottavat" : (currentLang === 'ru' ? "Нам доверяют" : "Trusted By"));
+            const trustedTitleEl = document.getElementById('trusted-title');
+            if (trustedTitleEl) trustedTitleEl.textContent = currentLang === 'et' ? "Meid on usaldanud" : (currentLang === 'fi' ? "Meihin luottavat" : (currentLang === 'ru' ? "Нам доверяют" : "Trusted By"));
 
-            document.getElementById('corporate-intro-p1').textContent = data.intro.p1;
-            document.getElementById('corporate-intro-p2').textContent = data.intro.p2;
+            const p1El = document.getElementById('corporate-intro-p1');
+            if (p1El) p1El.textContent = data.intro.p1;
+            
+            const p2El = document.getElementById('corporate-intro-p2');
+            if (p2El) p2El.textContent = data.intro.p2;
             
             const numEl = document.getElementById('corporate-stat-num');
             if (numEl) numEl.textContent = data.intro.statNumber || '';
             
-            document.getElementById('corporate-stat-quote').innerHTML = data.intro.statQuote;
-            document.getElementById('corporate-stat-source').innerHTML = data.intro.statSource;
+            const quoteEl = document.getElementById('corporate-stat-quote');
+            if (quoteEl) quoteEl.innerHTML = data.intro.statQuote;
+            
+            const sourceEl = document.getElementById('corporate-stat-source');
+            if (sourceEl) sourceEl.innerHTML = data.intro.statSource;
 
             // 1.5 Collaboration
-            document.getElementById('collaboration-title').textContent = data.collaboration.title;
-            document.getElementById('collaboration-p1').innerHTML = data.collaboration.p1;
-            document.getElementById('collaboration-p2').innerHTML = data.collaboration.p2;
-            const p3El = document.getElementById('collaboration-p3');
-            if (p3El) p3El.innerHTML = data.collaboration.p3 || '';
+            const collabTitleEl = document.getElementById('collaboration-title');
+            if (collabTitleEl) collabTitleEl.textContent = data.collaboration.title;
+            
+            const collabP1El = document.getElementById('collaboration-p1');
+            if (collabP1El) collabP1El.innerHTML = data.collaboration.p1;
+            
+            const collabP2El = document.getElementById('collaboration-p2');
+            if (collabP2El) collabP2El.innerHTML = data.collaboration.p2;
+            
+            const collabP3El = document.getElementById('collaboration-p3');
+            if (collabP3El) collabP3El.innerHTML = data.collaboration.p3 || '';
 
             // 2. Benefits
-            document.getElementById('benefits-title').textContent = data.benefits.title;
-            document.getElementById('benefits-subtitle').textContent = data.benefits.subtitle;
+            const benefitsTitleEl = document.getElementById('benefits-title');
+            if (benefitsTitleEl) benefitsTitleEl.textContent = data.benefits.title;
+            
+            const benefitsSubtitleEl = document.getElementById('benefits-subtitle');
+            if (benefitsSubtitleEl) benefitsSubtitleEl.textContent = data.benefits.subtitle;
             
             const benefitsGrid = document.getElementById('benefits-grid');
-            benefitsGrid.innerHTML = '';
-            data.benefits.items.forEach((item, index) => {
-                const iconName = benefitIcons[index % benefitIcons.length];
-                const card = document.createElement('div');
-                card.className = "bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-white hover:bg-white/20 transition-colors";
-                card.innerHTML = `
-                    <div class="w-12 h-12 bg-pink-500/30 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="${iconName}" class="w-6 h-6 text-pink-200"></i>
-                    </div>
-                    <p class="font-medium text-lg">${item}</p>
-                `;
-                benefitsGrid.appendChild(card);
-            });
+            if (benefitsGrid) {
+                benefitsGrid.innerHTML = '';
+                data.benefits.items.forEach((item, index) => {
+                    const iconName = benefitIcons[index % benefitIcons.length];
+                    const card = document.createElement('div');
+                    card.className = "bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-white hover:bg-white/20 transition-colors";
+                    card.innerHTML = `
+                        <div class="w-12 h-12 bg-pink-500/30 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="${iconName}" class="w-6 h-6 text-pink-200"></i>
+                        </div>
+                        <p class="font-medium text-lg">${item}</p>
+                    `;
+                    benefitsGrid.appendChild(card);
+                });
+            }
 
             // 3. About
-            document.getElementById('about-title').textContent = data.about.title;
-            document.getElementById('about-description').textContent = data.about.description;
+            const aboutTitleEl = document.getElementById('about-title');
+            if (aboutTitleEl) aboutTitleEl.textContent = data.about.title;
+            
+            const aboutDescEl = document.getElementById('about-description');
+            if (aboutDescEl) aboutDescEl.textContent = data.about.description;
 
             // 4. Practices
-            document.getElementById('practices-title').textContent = data.practices.title;
-            document.getElementById('practices-intro').textContent = data.practices.intro;
+            const practicesTitleEl = document.getElementById('practices-title');
+            if (practicesTitleEl) practicesTitleEl.textContent = data.practices.title;
+            
+            const practicesIntroEl = document.getElementById('practices-intro');
+            if (practicesIntroEl) practicesIntroEl.textContent = data.practices.intro;
             
             const practicesList = document.getElementById('practices-list');
-            practicesList.innerHTML = '';
-            data.practices.items.forEach(item => {
-                const badge = document.createElement('span');
-                badge.className = "inline-block bg-white text-gray-800 border border-gray-200 px-5 py-3 rounded-full text-sm font-medium shadow-sm";
-                badge.textContent = item;
-                practicesList.appendChild(badge);
-            });
+            if (practicesList) {
+                practicesList.innerHTML = '';
+                data.practices.items.forEach(item => {
+                    const badge = document.createElement('span');
+                    badge.className = "inline-block bg-white text-gray-800 border border-gray-200 px-5 py-3 rounded-full text-sm font-medium shadow-sm";
+                    badge.textContent = item;
+                    practicesList.appendChild(badge);
+                });
+            }
 
             // 5. Packages
-            // 5. Packages
-            document.getElementById('packages-section-title').textContent = data.packagesSection.title;
-            const introEl = document.getElementById('packages-section-intro');
-            if (introEl) introEl.textContent = data.packagesSection.intro || '';
+            const pkgSectionTitleEl = document.getElementById('packages-section-title');
+            if (pkgSectionTitleEl) pkgSectionTitleEl.textContent = data.packagesSection.title;
+            
+            const pkgIntroEl = document.getElementById('packages-section-intro');
+            if (pkgIntroEl) pkgIntroEl.textContent = data.packagesSection.intro || '';
             
             const packagesContainer = document.getElementById('packages-container');
-            packagesContainer.innerHTML = '';
-            
-            data.packagesSection.items.forEach((pkg, index) => {
-                const img = packageImages[index % packageImages.length];
-                const isWellnessDay = index === 3;
+            if (packagesContainer) {
+                packagesContainer.innerHTML = '';
                 
-                // Create the items HTML
-                const detailsHtml = pkg.details.map(detail => `
-                    <div class="flex items-start gap-4">
-                        <div class="w-6 h-6 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-pink-600"></i>
-                        </div>
-                        <span class="text-gray-700 font-medium">${detail}</span>
-                    </div>
-                `).join('');
-
-                const readMoreText = currentLang === 'et' ? "Loe lähemalt" : (currentLang === 'fi' ? "Lue lisää" : (currentLang === 'ru' ? "Подробнее" : "Read More"));
-                const quoteText = currentLang === 'et' ? "Küsi pakkumist" : (currentLang === 'fi' ? "Pyydä tarjous" : (currentLang === 'ru' ? "Запросить" : "Request a Quote"));
-
-                const card = document.createElement('div');
-                
-                if (isWellnessDay) {
-                    card.className = "lg:col-span-3 bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col lg:flex-row hover:shadow-2xl transition-shadow duration-300 mt-4";
+                data.packagesSection.items.forEach((pkg, index) => {
+                    const img = packageImages[index % packageImages.length];
+                    const isWellnessDay = index === 3;
                     
-                    card.innerHTML = `
-                        <div class="w-full lg:w-2/5 relative h-[300px] lg:h-auto">
-                            <img src="${img}" alt="${pkg.title}" class="absolute inset-0 w-full h-full object-cover" title="${pkg.title}">
-                        </div>
-                        <div class="w-full lg:w-3/5 p-8 md:p-12 flex flex-col">
-                            <h3 class="text-3xl md:text-4xl font-serif font-medium mb-8">${pkg.title}</h3>
-                            <p class="text-gray-600 mb-8">${pkg.desc}</p>
-                            
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-8 flex-grow">
-                                ${detailsHtml}
+                    // Create the items HTML
+                    const detailsHtml = pkg.details.map(detail => `
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5 text-pink-600"></i>
                             </div>
-                            
-                            <div class="mt-auto pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
-                                <a href="package-${pkg.id}.html" class="inline-flex items-center justify-center bg-white text-gray-800 border-2 border-gray-200 rounded-full font-bold tracking-widest uppercase hover:bg-gray-50 transition-all py-3 px-6 text-sm w-full sm:w-auto">
-                                    ${readMoreText}
-                                </a>
-                                 <button onclick="openCorporateModal()" class="inline-flex items-center justify-center bg-pink-600 text-white rounded-full font-bold tracking-widest uppercase hover:bg-pink-500 transition-all shadow-md py-3 px-8 text-sm w-full sm:w-auto">
-                                    ${quoteText}
-                                </button>
-                            </div>
+                            <span class="text-gray-700 font-medium">${detail}</span>
                         </div>
-                    `;
-                } else {
-                    card.className = "bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col h-full hover:shadow-2xl transition-shadow duration-300";
-                    
-                    card.innerHTML = `
-                        <div class="w-full relative h-[250px] flex-shrink-0">
-                            <img src="${img}" alt="${pkg.title}" class="absolute inset-0 w-full h-full object-cover" title="${pkg.title}">
-                        </div>
-                        <div class="w-full p-8 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-serif font-medium mb-4">${pkg.title}</h3>
-                            <p class="text-gray-600 text-sm mb-6">${pkg.desc}</p>
-                            
-                            <div class="flex flex-col gap-y-3 mb-8 flex-grow">
-                                ${detailsHtml}
-                            </div>
-                            
-                            <div class="mt-auto pt-5 border-t border-gray-100 flex flex-col sm:flex-row gap-3">
-                                <a href="package-${pkg.id}.html" class="inline-flex items-center justify-center bg-white text-gray-800 border-2 border-gray-200 rounded-full font-bold tracking-widest uppercase hover:bg-gray-50 transition-all py-2.5 px-4 text-xs w-full sm:w-1/2">
-                                    ${readMoreText}
-                                </a>
-                                <button onclick="openCorporateModal()" class="inline-flex items-center justify-center bg-pink-600 text-white rounded-full font-bold tracking-widest uppercase hover:bg-pink-500 transition-all shadow-md py-2.5 px-4 text-xs w-full sm:w-1/2">
-                                    ${quoteText}
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                }
-                
-                packagesContainer.appendChild(card);
-            });
+                    `).join('');
 
+                    const readMoreText = currentLang === 'et' ? "Loe lähemalt" : (currentLang === 'fi' ? "Lue lisää" : (currentLang === 'ru' ? "Подробнее" : "Read More"));
+                    const backText = currentLang === 'et' ? "Tagasi" : (currentLang === 'fi' ? "Takaisin" : (currentLang === 'ru' ? "Назад" : "Back"));
+                    const quoteText = currentLang === 'et' ? "Küsi pakkumist" : (currentLang === 'fi' ? "Pyydä tarjous" : (currentLang === 'ru' ? "Запросить" : "Request a Quote"));
+
+                    const cardBlock = document.createElement('div');
+                    
+                    if (isWellnessDay) {
+                        cardBlock.className = "lg:col-span-3 bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col lg:flex-row hover:shadow-2xl transition-shadow duration-300 mt-4";
+                        cardBlock.innerHTML = `
+                            <div class="w-full lg:w-2/5 relative h-[300px] lg:h-auto">
+                                <img src="${img}" alt="${pkg.title}" class="absolute inset-0 w-full h-full object-cover" title="${pkg.title}">
+                            </div>
+                            <div class="w-full lg:w-3/5 p-8 md:p-12 flex flex-col">
+                                <h3 class="text-3xl md:text-4xl font-serif font-medium mb-8">${pkg.title}</h3>
+                                <p class="text-gray-600 mb-8">${pkg.desc}</p>
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-8 flex-grow">
+                                    ${detailsHtml}
+                                </div>
+                                
+                                <div class="mt-auto pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
+                                    <a href="package-${pkg.id}.html" class="inline-flex items-center justify-center bg-white text-gray-800 border-2 border-gray-200 rounded-full font-bold tracking-widest uppercase hover:bg-gray-50 transition-all py-3 px-6 text-sm w-full sm:w-auto">
+                                        ${readMoreText}
+                                    </a>
+                                     <button onclick="openCorporateModal()" class="inline-flex items-center justify-center bg-pink-600 text-white rounded-full font-bold tracking-widest uppercase hover:bg-pink-500 transition-all shadow-md py-3 px-8 text-sm w-full sm:w-auto">
+                                        ${quoteText}
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        cardBlock.className = "flip-card";
+                        cardBlock.id = `flip-card-${index}`;
+                        
+                        cardBlock.innerHTML = `
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="flip-card-front bg-white shadow-xl border border-gray-100">
+                                    <div class="w-full relative h-[250px] flex-shrink-0">
+                                        <img src="${img}" alt="${pkg.title}" class="absolute inset-0 w-full h-full object-cover" title="${pkg.title}">
+                                    </div>
+                                    <div class="w-full p-8 flex flex-col flex-grow">
+                                        <h3 class="text-2xl font-serif font-medium mb-6">${pkg.title}</h3>
+                                        <div class="flex flex-col gap-y-3 mb-8 flex-grow">
+                                            ${detailsHtml}
+                                        </div>
+                                        <div class="mt-auto pt-5 border-t border-gray-100">
+                                            <button onclick="toggleFlip(${index})" class="inline-flex items-center justify-center bg-white text-gray-800 border-2 border-gray-200 rounded-full font-bold tracking-widest uppercase hover:bg-gray-50 transition-all py-2.5 px-6 text-xs w-full">
+                                                ${readMoreText}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Back -->
+                                <div class="flip-card-back flex flex-col">
+                                    <div class="text-pink-600 text-xs font-bold tracking-widest uppercase mb-4">${pkg.title}</div>
+                                    <h3 class="text-2xl font-serif font-medium mb-6">${pkg.title}</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-auto">${pkg.desc}</p>
+                                    
+                                    <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col gap-3">
+                                        <button onclick="openCorporateModal()" class="inline-flex items-center justify-center bg-pink-600 text-white rounded-full font-bold tracking-widest uppercase hover:bg-pink-500 transition-all shadow-md py-3 px-6 text-xs w-full">
+                                            ${quoteText}
+                                        </button>
+                                        <button onclick="toggleFlip(${index})" class="inline-flex items-center justify-center bg-stone-100 text-gray-500 rounded-full font-bold tracking-widest uppercase hover:bg-stone-200 transition-all py-3 px-6 text-[10px] w-full">
+                                            ${backText}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    packagesContainer.appendChild(cardBlock);
+                });
+            }
 
             // Reinitialize lucide icons for newly injected content
             if (window.lucide) {
