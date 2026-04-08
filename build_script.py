@@ -168,7 +168,9 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
             if base_filename == 'index.html':
                  tag['href'] = f'/{lang}/{query_part}{hash_part}'
             elif '.html' in base_filename:
-                 tag['href'] = f'/{lang}/{base_filename}{query_part}{hash_part}'
+                 # Beautiful URLs: Strip .html for cleaner links
+                 pretty_slug = base_filename.replace('.html', '')
+                 tag['href'] = f'/{lang}/{pretty_slug}{query_part}{hash_part}'
 
     # Update html lang attribute
     html_tag = soup.find('html')
@@ -506,7 +508,9 @@ for lang in LANGUAGES:
             continue
             
         translated_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get(filename, filename)
-        url = f"https://www.goyoga.ee/{lang}/" if translated_slug == 'index.html' else f"https://www.goyoga.ee/{lang}/{translated_slug}"
+        # Beautiful URLs: Strip .html extension from sitemap locations
+        pretty_slug = translated_slug.replace('.html', '')
+        url = f"https://www.goyoga.ee/{lang}/" if translated_slug == 'index.html' else f"https://www.goyoga.ee/{lang}/{pretty_slug}"
         priority = "1.0" if translated_slug == 'index.html' else "0.8"
         sitemap_urls.append(f'''   <url>
       <loc>{url}</loc>
@@ -518,7 +522,9 @@ for lang in LANGUAGES:
     translated_event_slug = seo_data_dict.get('urlRoutes', {}).get(lang, {}).get('event.html', 'event.html')
     for ev in events_data_list:
         if ev.get('active', True):
-            ev_url = f"https://www.goyoga.ee/{lang}/{translated_event_slug}?id={ev['id']}"
+            # Beautiful URLs: Strip .html from event details pages too
+            pretty_event_slug = translated_event_slug.replace('.html', '')
+            ev_url = f"https://www.goyoga.ee/{lang}/{pretty_event_slug}?id={ev['id']}"
             sitemap_urls.append(f'''   <url>
       <loc>{ev_url}</loc>
       <changefreq>weekly</changefreq>
