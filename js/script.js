@@ -230,6 +230,11 @@ function initModals() {
                     if (currentLanguage === 'et') buyBtnText = 'Osta';
                     if (currentLanguage === 'fi') buyBtnText = 'Osta';
                     if (currentLanguage === 'ru') buyBtnText = 'Купить';
+
+                    let qrBtnText = 'Scan QR to Pay';
+                    if (currentLanguage === 'et') qrBtnText = 'Skaneeri QR-kood';
+                    if (currentLanguage === 'fi') qrBtnText = 'Maksa QR-koodilla';
+                    if (currentLanguage === 'ru') qrBtnText = 'Оплатить по QR';
                     
                     modalContentHTML += `
                         <div class="p-4 border rounded flex flex-col justify-center">
@@ -237,7 +242,21 @@ function initModals() {
                                 <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
                                 ${displayPrice}
                             </div>
-                            ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-xs font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider mb-2 select-none active:scale-[0.98]">${buyBtnText}</a>` : ''}
+                            <div class="flex flex-col gap-2 mb-2">
+                                ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-xs font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider select-none active:scale-[0.98]">${buyBtnText}</a>` : ''}
+                                ${opt.qrCode ? `
+                                    <details class="group/qr w-full">
+                                        <summary class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 border border-gray-200 text-gray-600 text-[10px] font-bold rounded-md hover:bg-gray-50 transition-colors uppercase tracking-widest cursor-pointer list-none outline-none select-none">
+                                            <i data-lucide="qr-code" class="h-3 w-3"></i>
+                                            ${qrBtnText}
+                                        </summary>
+                                        <div class="mt-3 p-4 bg-gray-50 rounded-lg flex flex-col items-center">
+                                            <img src="${opt.qrCode}" class="w-32 h-32 object-contain bg-white p-2 rounded shadow-sm mb-2" alt="Payment QR Code">
+                                            <p class="text-[9px] text-gray-400 uppercase tracking-widest text-center">${qrBtnText}</p>
+                                        </div>
+                                    </details>
+                                ` : ''}
+                            </div>
                             ${opt.desc ? `<p class="text-xs text-gray-500 leading-relaxed">${opt.desc}</p>` : ''}
                         </div>
                     `;
