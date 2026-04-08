@@ -5,7 +5,7 @@ const corporateData = {
             "p2": "Goyoga Tallinn aitab ettevõtetel tõsta oma töötajate heaolu ja üleüldist tervislikku seisundit, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, joogat ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
             "subtitle": "Ettevõtte Töötajate Heaolu",
             "statNumber": "86 %",
-            "statQuote": "Eesti töötajatest leiab, et their heaolu töökohal on palgaga võrdselt oluline faktor.",
+            "statQuote": "Eesti töötajatest leiab, et nende heaolu töökohal on palgaga võrdselt oluline faktor.",
             "statSource": "Stebby Töökoha Heaolu Uuring 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Loe raportit</a>"
         },
         "stat2": {
@@ -45,16 +45,19 @@ const corporateData = {
                 {
                     "title": "Personaaltunnid",
                     "desc": "Personaalne jooga- ja/või heaolupraktika töötajatele nt tippjuhid, spetsialistid jne kelle kalender vajab isiklikku lähenemist.",
+                    "duration": "45-75min",
                     "icon": "user"
                 },
                 {
-                    "title": "Rühmatunnid | Eratunnid gruppidele",
+                    "title": "Eratunnid gruppidele",
                     "desc": "Personaalne jooga- ja/või heaolupraktika grupile, mis sobib ideaalselt ka kollektiivi tiimiürituseks.",
+                    "duration": "45-75 min",
                     "icon": "users-2"
                 },
                 {
                     "title": "Online tunnid",
                     "desc": "Virtuaalne jooga- ja/või heaolupraktika eelkõige grupile, mis sobib hästi kodukontorites töötavatele ettevõtetele.",
+                    "duration": "20-60min",
                     "icon": "video"
                 },
                 {
@@ -111,14 +114,37 @@ const corporateData = {
             ]
         },
         "about": {
-            "title": "Meist | Goyoga Tallinn",
+            "sectionTitle": "Meie Ettevõttest",
+            "title": "Goyogast",
             "description": "Goyoga Tallinn on eesti turul jooga- ja heaoluteenuseid pakkunud juba alates 2016.aastast. Oleme Tallinna kesklinnas tegutsevast joogastuudiost oma teenustega laienenud ettevõtetesse nii Eestis kui ka välisriikides. Meie praktikud ja terapeudid on kogenud professionaalid, kes juhendavad tunde ja töötubasid nii eesti kui ka ladusas inglise keeles. Meie praktikute kogukond on rahvusvaheline, tuues heaolu kogemused Eestisse nii Ameerikast, Inglismaalt kui ka Aasiast.",
             "partner": {
                 "title": "Goyoga Heaolu Partner",
-                "desc": "Heaoluteenuste pakkumisel on meie partneriks Lõuna-Floridast pärit firma Casa Rituals, mille põhitegevuseks on tuua sisukad ja kvaliteetsed heaolu lahendused organisatsioonidesse, pakkudes programme, mis toetavad vastupidavust, selgust ja jätkusuutlikku töövõimet.",
+                "desc": "Lõuna-Floridast pärit firma Casa Rituals põhitegevuseks on tuua sisukad ja kvaliteetsed heaolu lahendused organisatsioonidesse, pakkudes programme, mis toetavad vastupidavust, selgust ja jätkusuutlikku töövõimet.",
                 "linkText": "Loe lähemalt",
                 "linkUrl": "https://www.casarituals.com/",
                 "logo": "/assets/corporate/casa-rituals-logo.svg"
+            }
+        },
+        "modal": {
+            "title": "Küsi Pakkumist",
+            "subtitle": "Täitke allolev vorm ja võtame teiega ühendust.",
+            "companyLabel": "Ettevõtte Nimi *",
+            "nameLabel": "Kontaktisik *",
+            "phoneLabel": "Telefon",
+            "emailLabel": "E-posti Aadress *",
+            "interestLabel": "Huvi pakkuv pakett või teenus",
+            "messageLabel": "Sõnum / Lisainfo",
+            "submitButton": "Saada Päring",
+            "successTitle": "Täname huvi eest!",
+            "successMessage": "Võtame teiega peagi ühendust.",
+            "closeButton": "Sulge",
+            "interests": {
+                "general": "Üldine huvi",
+                "mindhealth": "MindHealth",
+                "bodyhealth": "BodyHealth",
+                "mindbody": "Mind & Body Health",
+                "wellnessday": "Wellness Day",
+                "custom": "Eritellimus / Tiimiüritus"
             }
         },
         "practices": {
@@ -155,14 +181,14 @@ const corporateData = {
                 {
                     "id": "mindbody",
                     "title": "Jooga & Vaimse Tervise Töötoad",
-                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
+                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, mis ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
                     "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Loeng (x1 kuni 30min)", "Tervislik jook ja snack", "Kuni 4 tundi", "2 õpetajat", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 15+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
                 {
                     "id": "wellnessday",
                     "title": "Heaolu Päev",
                     "desc": "Wellness Day on terve päev või mitu päeva kestev Heaolu Päev, mille jooksul on ettevõtte töötajatel võimalik tutvuda ja kogeda erinevate tervise, jooga- ja heaolupraktikatega. Päeva sisu loome koostöös teie organisatsiooniga, et tagada teie töökultuurile kõige lähedasem ja huvitavam heaolu kogemus. Päeva fookuses on töötajate keha-meele tasakaal, närvisüsteemi reguleerimine, stressi maandamine ning teadlikkus oma tervisest, proovides erinevaid heaolupraktikaid, kuulates loenguid ja teraapiaid.",
-                    "details": ["Meditatsioon", "Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Heaolu loengud (2x)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Tervislik lõuna", "Kuni 8hrs", "2-4 õpetajat", "Sisaldab kõiki vahendeid", "Eesti või inglise keeles", "Grupid alates 30+ töötajast", "Küsi pakkumist suurematele gruppidele"]
+                    "details": ["Meditatsioon", "Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Heaolu loengud", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Tervislik lõuna", "Kuni 8 tundi", "2-4 õpetajat", "Sisaldab kõiki vahendeid", "Eesti või inglise keeles", "Grupid alates 30+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 }
             ]
         }
@@ -213,16 +239,19 @@ const corporateData = {
                 {
                     "title": "Personal Training",
                     "desc": "Personalized yoga and/or wellness practice for employees e.g. executives, specialists whose calendar needs a personal approach.",
+                    "duration": "45-75min",
                     "icon": "user"
                 },
                 {
-                    "title": "Group Sessions | Private Events",
+                    "title": "Private Events for Groups",
                     "desc": "Personalized yoga and/or wellness practice for groups, ideal for collective team events.",
+                    "duration": "45-75 min",
                     "icon": "users-2"
                 },
                 {
                     "title": "Online Classes",
                     "desc": "Virtual yoga and/or wellness practice primarily for groups, well-suited for companies with home offices.",
+                    "duration": "20-60min",
                     "icon": "video"
                 },
                 {
@@ -279,14 +308,37 @@ const corporateData = {
             ]
         },
         "about": {
-            "title": "About us | Goyoga Tallinn",
+            "sectionTitle": "Our Company",
+            "title": "About Goyoga",
             "description": "Goyoga Tallinn has been offering yoga and wellness services on the Estonian market since 2016. From a yoga studio operating in the center of Tallinn, we have expanded our services to companies in both Estonia and abroad. Our practitioners and therapists are experienced professionals who guide classes and workshops fluently in both Estonian and English. Our community of practitioners is international, bringing wellness experiences to Estonia from America, England, and Asia.",
             "partner": {
                 "title": "Goyoga Wellness Partner",
-                "desc": "When providing wellness services, our partner is Casa Rituals, a South Florida-based company. Their core mission is to bring meaningful and high-quality wellness solutions to organizations, offering programs that support resilience, clarity, and sustainable productivity.",
+                "desc": "Casa Rituals, a South Florida-based company. Their core mission is to bring meaningful and high-quality wellness solutions to organizations, offering programs that support resilience, clarity, and sustainable productivity.",
                 "linkText": "Read more",
                 "linkUrl": "https://www.casarituals.com/",
                 "logo": "/assets/corporate/casa-rituals-logo.svg"
+            }
+        },
+        "modal": {
+            "title": "Request a Quote",
+            "subtitle": "Fill out the form below and we will get in touch.",
+            "companyLabel": "Company Name *",
+            "nameLabel": "Contact Person *",
+            "phoneLabel": "Phone",
+            "emailLabel": "Email Address *",
+            "interestLabel": "Interested Package or Service",
+            "messageLabel": "Message / Additional Info",
+            "submitButton": "Send Inquiry",
+            "successTitle": "Thank you for your interest!",
+            "successMessage": "We will contact you shortly.",
+            "closeButton": "Close",
+            "interests": {
+                "general": "General Interest",
+                "mindhealth": "MindHealth",
+                "bodyhealth": "BodyHealth",
+                "mindbody": "Mind & Body Health",
+                "wellnessday": "Wellness Day",
+                "custom": "Custom Event / Team Event"
             }
         },
         "practices": {
@@ -330,7 +382,7 @@ const corporateData = {
                     "id": "wellnessday",
                     "title": "Wellness Day",
                     "desc": "Wellness Day is a full-day or multi-day Wellness Day during which employees can experience various health, yoga, and wellness practices. We create the content in cooperation with your organization to ensure the most interesting experience for your work culture. The focus is on body-mind balance, nervous system regulation, stress management, and health awareness.",
-                    "details": ["Meditation", "Conscious breathing", "Yoga (dynamic or calm)", "Wellness lectures (2x)", "Deep relaxation (yoga nidra)", "Sound journey", "Healthy lunch", "Up to 8hrs", "2-4 teachers", "All equipment included", "Estonian or English", "Groups from 30+ employees", "Request quote for larger groups"]
+                    "details": ["Meditation", "Conscious breathing", "Yoga (dynamic or calm)", "Wellness lectures", "Deep relaxation (yoga nidra)", "Sound journey", "Healthy lunch", "Up to 8 hours", "2-4 teachers", "All equipment included", "Estonian or English", "Groups from 30+ employees", "Request quote for larger groups"]
                 }
             ]
         }
@@ -381,16 +433,19 @@ const corporateData = {
                 {
                     "title": "Yksityistunnit",
                     "desc": "Yksilöllinen jooga- ja hyvinvointiharjoitus työntekijöille, esim. johto ja asiantuntijat, joiden aikataulu vaatii henkilökohtaista lähestymistapaa.",
+                    "duration": "45-75min",
                     "icon": "user"
                 },
                 {
-                    "title": "Ryhmätunnit | Yksityistilaisuudet",
+                    "title": "Yksityistunnit ryhmille",
                     "desc": "Yksilöllinen jooga- ja hyvinvointiharjoitus ryhmille, sopii erinomaisesti tiimitapahtumiin.",
+                    "duration": "45-75 min",
                     "icon": "users-2"
                 },
                 {
                     "title": "Online-tunnit",
                     "desc": "Virtuaalinen jooga- ja hyvinvointiharjoitus ensisijaisesti ryhmille, sopii hyvin kotitoimistolla työskenteleville yrityksille.",
+                    "duration": "20-60min",
                     "icon": "video"
                 }
             ]
@@ -440,14 +495,37 @@ const corporateData = {
             ]
         },
         "about": {
-            "title": "Meistä | Goyoga Tallinn",
+            "sectionTitle": "Yrityksemme",
+            "title": "Goyogasta",
             "description": "Goyoga Tallinn on tarjonnut jooga- ja hyvinvointipalveluita Viron markkinoilla jo vuodesta 2016. Tallinnan keskustassa toimivasta joogastudiostamme olemme laajentaneet palveluitamme yrityksille sekä Virossa että ulkomailla. Harjoittajamme ja terapeuttimme ovat kogenuja ammattilaisia, jotka ohjaavat tunteja ja työpajoja sujuvasti viroksi ja englanniksi. Yhteisömme on kansainvälinen, tuoden hyvinvointikokemuksia Viroon muun muassa Yhdysvalloista, Englannista ja Aasiasta.",
             "partner": {
                 "title": "Goyoga Hyvinvointikumppani",
-                "desc": "Hyvinvointipalveluita tarjotessamme kumppanimme on Etelä-Floridasta kotoisin oleva Casa Rituals. Heidän perustehtävänsä on tuoda merkityksellisiä ja korkealaatuisia hyvinvointiratkaisuja organisaatioille tarjoamalla ohjelmia, jotka tukevat vastustuskykyä, selkeyttä ja kestävää tuottavuutta.",
+                "desc": "Casa Rituals Etelä-Floridasta. Heidän perustehtävänsä on tuoda merkityksellisiä ja korkealaatuisia hyvinvointiratkaisuja organisaatioille tarjoamalla ohjelmia, jotka tukevat vastustuskykyä, selkeyttä ja kestävää tuottavuutta.",
                 "linkText": "Lue lisää",
                 "linkUrl": "https://www.casarituals.com/",
                 "logo": "/assets/corporate/casa-rituals-logo.svg"
+            }
+        },
+        "modal": {
+            "title": "Pyydä Tarjous",
+            "subtitle": "Täytä alla oleva lomake ja otamme sinuun yhteyttä.",
+            "companyLabel": "Yrityksen Nimi *",
+            "nameLabel": "Yhteyshenkilö *",
+            "phoneLabel": "Puhelin",
+            "emailLabel": "Sähköpostiosoite *",
+            "interestLabel": "Kiinnostava paketti tai palvelu",
+            "messageLabel": "Viesti / Lisätiedot",
+            "submitButton": "Lähetä Kysely",
+            "successTitle": "Kiitos mielenkiinnostasi!",
+            "successMessage": "Otamme sinuun yhteyttä pian.",
+            "closeButton": "Sulje",
+            "interests": {
+                "general": "Yleinen kiinnostus",
+                "mindhealth": "MindHealth",
+                "bodyhealth": "BodyHealth",
+                "mindbody": "Mind & Body Health",
+                "wellnessday": "Wellness Day",
+                "custom": "Räätälöity tapahtuma"
             }
         },
         "practices": {
@@ -491,7 +569,7 @@ const corporateData = {
                     "id": "wellnessday",
                     "title": "Hyvinvointipäivä",
                     "desc": "Wellness Day on koko päivän tai useita päiviä kestävä hyvinvointipäivä, jonka aikana työntekijät voivat kokea erilaisia terveys-, jooga- ja hyvinvointikäytäntöjä. Luomme sisällön yhteistyössä organisaationne kanssa varmistaaksemme parhaan kokemuksen työkulttuurillenne. Painopiste on kehon ja mielen tasapainossa, hermoston säätelyssä, stressinhallinnassa ja terveystietoisuudessa.",
-                    "details": ["Meditaatio", "Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Hyvinvointiluennot (2x)", "Syvä rentoutuminen (yoga nidra)", "Äänimaljamatka", "Terveellinen lounas", "Jopa 8 tuntia", "2-4 opettajaa", "Sisältää kaikki varusteet", "Viroksi tai englanniksi", "Ryhmät alkaen 30+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
+                    "details": ["Meditaatio", "Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Hyvinvointiluennot", "Syvä rentoutuminen (yoga nidra)", "Äänimaljamatka", "Terveellinen lounas", "Jopa 8 tuntia", "2-4 opettajaa", "Sisältää kaikki varusteet", "Viroksi tai englanniksi", "Ryhmät alkaen 30+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
                 }
             ]
         }
@@ -542,16 +620,19 @@ const corporateData = {
                 {
                     "title": "Персональные занятия",
                     "desc": "Индивидуальная практика йоги и/или велнеса для сотрудников, напр. руководителей и специалистов, чей график требует личного подхода.",
+                    "duration": "45-75 мин",
                     "icon": "user"
                 },
                 {
-                    "title": "Групповые занятия | Тимбилдинг",
-                    "desc": "Индивидуальная практика йоги и/v/или велнеса для групп, идеально подходит для корпоративных мероприятий.",
+                    "title": "Частные занятия для групп",
+                    "desc": "Индивидуальная практика йоги и/или велнеса для групп, идеально подходит для корпоративных мероприятий.",
+                    "duration": "45-75 мин",
                     "icon": "users-2"
                 },
                 {
                     "title": "Онлайн занятия",
-                    "desc": "Виртуальная практика йоги и/v/или велнеса прежде всего для групп, хорошо подходит для компаний с удаленным режимом работы.",
+                    "desc": "Виртуальная практика йоги и/или велнеса прежде всего для групп, хорошо подходит для компаний с удаленным режимом работы.",
+                    "duration": "20-60 мин",
                     "icon": "video"
                 },
                 {
@@ -608,14 +689,37 @@ const corporateData = {
             ]
         },
         "about": {
-            "title": "О нас | Goyoga Tallinn",
+            "sectionTitle": "Наша компания",
+            "title": "О Goyoga",
             "description": "Goyoga Tallinn работает на эстонском рынке йоги и велнес-услуг с 2016 года. Зародившись как студия йоги в самом центре Таллина, мы расширили наши услуги для компаний как в Эстонии, так и за рубежом. Наши специалисты и терапевты — это опытные профессионалы, которые свободно проводят занятия и мастер-классы как на эстонском, так и на английском языках. Наше сообщество практиков интернационально и привносит велнес-опыт в Эстонию из Америки, Англии и Азии.",
             "partner": {
                 "title": "Велнес-партнер Goyoga",
-                "desc": "Нашим партнером по предоставлению велнес-услуг является компания Casa Rituals из Южной Флориды. Их миссия — внедрять качественные велнес-решения в организациях, предлагая программы, поддерживающие продуктивность и ясность ума.",
+                "desc": "Casa Rituals из Южной Флориды. Их миссия — внедрять качественные велнес-решения в организациях, предлагая программы, поддерживающие продуктивность и ясность ума.",
                 "linkText": "Подробнее",
                 "linkUrl": "https://www.casarituals.com/",
                 "logo": "/assets/corporate/casa-rituals-logo.svg"
+            }
+        },
+        "modal": {
+            "title": "Запросить Предложение",
+            "subtitle": "Заполните форму ниже, и мы свяжемся с вами.",
+            "companyLabel": "Название компании *",
+            "nameLabel": "Контактное лицо *",
+            "phoneLabel": "Телефон",
+            "emailLabel": "Электронная почта *",
+            "interestLabel": "Интересующий пакет или услуга",
+            "messageLabel": "Сообщение / Доп. инфо",
+            "submitButton": "Отправить Запрос",
+            "successTitle": "Спасибо за интерес!",
+            "successMessage": "Мы свяжемся с вами в ближайшее время.",
+            "closeButton": "Закрыть",
+            "interests": {
+                "general": "Общий интерес",
+                "mindhealth": "MindHealth",
+                "bodyhealth": "BodyHealth",
+                "mindbody": "Mind & Body Health",
+                "wellnessday": "Wellness Day",
+                "custom": "Индивидуальное мероприятие"
             }
         },
         "practices": {
@@ -659,7 +763,7 @@ const corporateData = {
                     "id": "wellnessday",
                     "title": "День здоровья",
                     "desc": "Wellness Day — это однодневный или многодневный День здоровья, в течение которого сотрудники могут познакомиться с различными практиками. Мы создаем программу совместно с вашей организацией. В центре внимания — баланс тела и духа, регуляция нервной системы и снятие стресса.",
-                    "details": ["Медитация", "Осознанное дыхание", "Йога (динамичная или спокойная)", "Лекции о здоровье (2x)", "Глубокое расслабление (йога-нидра)", "Звуковое путешествие", "Здоровый обед", "До 8 часов", "2-4 преподавателя", "Все оборудование включено", "На эстонском или английском", "Группы от 30+ сотрудников", "Запросите цену для больших групп"]
+                    "details": ["Медитация", "Осознанное дыхание", "Йога (динамичная или спокойная)", "Лекции о здоровье", "Глубокое расслабление (йога-нидра)", "Звуковое путешествие", "Здоровый обед", "До 8 часов", "2-4 преподавателя", "Все оборудование включено", "На эстонском или английском", "Группы от 30+ сотрудников", "Запросите цену для больших групп"]
                 }
             ]
         }

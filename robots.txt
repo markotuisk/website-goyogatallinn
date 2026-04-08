@@ -1,9 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
-Disallow: /corporate.html
-Disallow: /en/corporate.html
-Disallow: /et/ettevotetele.html
-Disallow: /fi/yrityksille.html
-Disallow: /ru/korporativnym.html
+# Corporate wellness pages are now allowed for indexing
+Allow: /corporate.html
+Allow: /en/corporate.html
+Allow: /et/ettevotetele.html
+Allow: /fi/yrityksille.html
+Allow: /ru/korporativnym.html
 Sitemap: https://www.goyoga.ee/sitemap.xml
