@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #374151; margin: 0; padding: 0; background-color: #f9fafb; }
+        .container { max-width: 600px; margin: 40px auto; background: white; border-radius: 16px; overflow: hidden; border: 1px solid #f3f4f6; }
+        .header { background: #db2777; padding: 40px 20px; text-align: center; color: white; }
+        .content { padding: 40px; }
+        .event-card { background: #fdf2f8; border: 1px solid #fce7f3; border-radius: 12px; padding: 24px; margin-bottom: 32px; }
+        .event-title { font-size: 18px; font-weight: bold; color: #111827; margin-bottom: 16px; }
+        .detail-row { display: flex; justify-content: space-between; border-bottom: 1px solid #fce7f3; padding: 8px 0; }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #db2777; font-weight: bold; }
+        .detail-value { font-weight: 500; font-size: 14px; }
+        .footer { padding: 40px; background: #f9fafb; text-align: center; font-size: 11px; color: #9ca3af; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>GOYOGA TALLINN</h1></div>
+        <div class="content">
+            <h2>Registration Confirmed</h2>
+            <p>Hi {{name}},</p>
+            <p>Thank you for submitting your interest! We have received your registration details for our upcoming event.</p>
+            
+            <div class="event-card">
+                <div class="detail-label">Event</div>
+                <div class="event-title">{{event_title}}</div>
+                
+                <div class="detail-row">
+                    <span class="detail-label">Name</span>
+                    <span class="detail-value">{{name}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Email</span>
+                    <span class="detail-value">{{email}}</span>
+                </div>
+                {{phone_row}}
+            </div>
+
+            <p style="text-align: center;">We will receive this information and get back to you shortly with next steps or confirmation details if required. If you left a message, our team will review it.</p>
+        </div>
+        <div class="footer">
+            <p>GoYoga Tallinn | Narva mnt 7D, Tallinn</p>
+            <p>Need help? Reply to this email or contact <a href="mailto:events@goyoga.ee" style="color: #db2777;">events@goyoga.ee</a></p>
+        </div>
+    </div>
+</body>
+</html>

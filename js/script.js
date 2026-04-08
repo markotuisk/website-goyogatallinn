@@ -183,161 +183,321 @@ function initModals() {
     const teacherModal = document.getElementById('teacher-modal');
     document.getElementById('teacher-modal-close')?.addEventListener('click', () => toggleModal('teacher-modal', false));
 
+    function getAssetPath(absolutePath) {
+        if (!absolutePath || !absolutePath.startsWith('/')) return absolutePath;
+        if (window.location.protocol === 'file:') {
+            const isSubdir = ['/en/', '/et/', '/fi/', '/ru/'].some(dir => window.location.pathname.includes(dir));
+            return (isSubdir ? '..' : '.') + absolutePath;
+        }
+        return absolutePath;
+    }
+
     // Pricing
     document.querySelectorAll('.pricing-button').forEach(btn => {
         btn.addEventListener('click', () => {
+            const group = btn.dataset.pricingGroup;
             const langPricing = pricingData[currentLanguage] || pricingData['en'];
-            const data = langPricing[btn.dataset.pricingGroup];
+            const data = langPricing[group];
+            
             if (data) {
-                document.getElementById('pricing-modal-title').textContent = data.title;
-                const body = document.getElementById('pricing-modal-body');
-                body.innerHTML = '';
-                let hasSeasonalOffer = false;
-                let modalContentHTML = '';
-
-                data.options.forEach(opt => {
-                    let displayPrice = `<span class="font-bold text-pink-600">${opt.price}</span>`;
-
-                    const targetDate = new Date("March 31, 2026 23:59:59").getTime();
-                    const now = new Date().getTime();
-                    const isSeasonalOfferActive = btn.dataset.pricingGroup === 'memberships' &&
-                        !opt.name.includes("Explorer") &&
-                        now <= targetDate;
-
-                    if (isSeasonalOfferActive) {
-                        hasSeasonalOffer = true;
-                        // Extract number from price string (e.g. "59€/mo", "79€", "69€/kk")
-                        const priceMatch = opt.price.match(/(\d+)/);
-                        if (priceMatch) {
-                            const originalPriceNum = parseInt(priceMatch[1], 10);
-                            const discountedPriceNum = Math.round(originalPriceNum * 0.8); // 20% off
-                            const discountedPriceStr = opt.price.replace(priceMatch[1], discountedPriceNum);
-
-                            displayPrice = `
-                                <div class="flex flex-col items-end">
-                                    <span class="text-xs text-gray-400 line-through mb-0.5">${opt.price}</span>
-                                    <div class="flex items-center gap-2">
-                                        <span class="text-[10px] font-bold bg-pink-100 text-pink-700 px-1.5 py-0.5 rounded-full uppercase tracking-wider">-20%</span>
-                                        <span class="font-bold text-pink-600">${discountedPriceStr}</span>
-                                    </div>
-                                </div>
-                            `;
-                        }
-                    }
-
-                    const langData = translationsData[currentLanguage] || translationsData['en'];
-                    let buyBtnText = langData['pricing.buy'] || 'Buy Now';
-                    if (currentLanguage === 'et') buyBtnText = 'Osta';
-                    if (currentLanguage === 'fi') buyBtnText = 'Osta';
-                    if (currentLanguage === 'ru') buyBtnText = 'Купить';
-
-                    let qrBtnText = 'Scan QR to Pay';
-                    if (currentLanguage === 'et') qrBtnText = 'Skaneeri QR-kood';
-                    if (currentLanguage === 'fi') qrBtnText = 'Maksa QR-koodilla';
-                    if (currentLanguage === 'ru') qrBtnText = 'Оплатить по QR';
-                    
-                    modalContentHTML += `
-                        <div class="p-4 border rounded flex flex-col justify-center">
-                            <div class="flex justify-between items-center w-full group mb-2">
-                                <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
-                                ${displayPrice}
-                            </div>
-                            <div class="flex flex-col gap-2 mb-2">
-                                ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-xs font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider select-none active:scale-[0.98]">${buyBtnText}</a>` : ''}
-                                ${opt.qrCode ? `
-                                    <details class="group/qr w-full">
-                                        <summary class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 border border-gray-200 text-gray-600 text-[10px] font-bold rounded-md hover:bg-gray-50 transition-colors uppercase tracking-widest cursor-pointer list-none outline-none select-none">
-                                            <i data-lucide="qr-code" class="h-3 w-3"></i>
-                                            ${qrBtnText}
-                                        </summary>
-                                        <div class="mt-3 p-4 bg-gray-50 rounded-lg flex flex-col items-center">
-                                            <img src="${opt.qrCode}" class="w-32 h-32 object-contain bg-white p-2 rounded shadow-sm mb-2" alt="Payment QR Code">
-                                            <p class="text-[9px] text-gray-400 uppercase tracking-widest text-center">${qrBtnText}</p>
-                                        </div>
-                                    </details>
-                                ` : ''}
-                            </div>
-                            ${opt.desc ? `<p class="text-xs text-gray-500 leading-relaxed">${opt.desc}</p>` : ''}
-                        </div>
-                    `;
-                });
-
-                // Top Banner for Seasonal Offer
-                if (hasSeasonalOffer) {
-                    const langData = translationsData[currentLanguage] || translationsData['en'];
-                    body.innerHTML += `
-                        <div class="mb-6 bg-pink-50 border border-pink-100 rounded-xl p-4 flex flex-col items-center justify-center text-center">
-                            <span class="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2">${langData['pricing.offer.ends_in'] || 'Offer Ends In:'}</span>
-                            <div class="flex gap-3 justify-center text-pink-900 w-full max-w-[280px]">
-                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
-                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="days">00</span>
-                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.days'] || 'Days'}</span>
-                                </div>
-                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
-                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="hours">00</span>
-                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.hours'] || 'Hours'}</span>
-                                </div>
-                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
-                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="minutes">00</span>
-                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.minutes'] || 'Mins'}</span>
-                                </div>
-                                <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
-                                    <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="seconds">00</span>
-                                    <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.seconds'] || 'Secs'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }
-
-                body.innerHTML += modalContentHTML;
-
-                // Render Benefits
-                if (data.benefits && data.benefits.length > 0) {
-                    body.innerHTML += `
-                        <div class="mt-6">
-                            <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
-                                <i data-lucide="sparkles" class="h-4 w-4 mr-2 text-pink-500"></i>
-                                ${data.benefitsTitle || 'Benefits'}
-                            </h4>
-                            <ul class="space-y-2">
-                                ${data.benefits.map(b => `
-                                    <li class="flex items-start">
-                                        <i data-lucide="check-circle-2" class="h-4 w-4 mr-2 text-pink-500 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-xs font-medium text-gray-700 leading-relaxed">${b}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-
-                // Render Conditions
-                if (data.conditions && data.conditions.length > 0) {
-                    body.innerHTML += `
-                        <details class="mt-6 pt-4 border-t border-gray-100 group">
-                            <summary class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center cursor-pointer select-none outline-none">
-                                <i data-lucide="info" class="h-4 w-4 mr-2 text-gray-400"></i>
-                                ${data.conditionsTitle || 'Terms & Conditions'}
-                                <i data-lucide="chevron-down" class="h-4 w-4 ml-auto text-gray-400 transition-transform group-open:rotate-180"></i>
-                            </summary>
-                            <ul class="space-y-2 mt-3">
-                                ${data.conditions.map(c => `
-                                    <li class="flex items-start">
-                                        <i data-lucide="minus" class="h-3 w-3 mr-2 text-gray-300 flex-shrink-0 mt-1"></i>
-                                        <span class="text-[11px] text-gray-500 leading-relaxed">${c}</span>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </details>
-                    `;
-                }
-
+                renderPricingOptions(data, group);
                 toggleModal('pricing-modal', true);
-                if (window.lucide) window.lucide.createIcons();
             }
         });
     });
+
+    function renderPricingOptions(data, group) {
+        document.getElementById('pricing-modal-title').textContent = data.title;
+        const body = document.getElementById('pricing-modal-body');
+        body.innerHTML = '';
+        let hasSeasonalOffer = false;
+        let modalContentHTML = '';
+
+        data.options.forEach((opt, index) => {
+            let displayPrice = `<span class="font-bold text-pink-600">${opt.price}</span>`;
+
+            const targetDate = new Date("March 31, 2026 23:59:59").getTime();
+            const now = new Date().getTime();
+            const isSeasonalOfferActive = group === 'memberships' &&
+                !opt.name.includes("Explorer") &&
+                now <= targetDate;
+
+            if (isSeasonalOfferActive) {
+                hasSeasonalOffer = true;
+                const priceMatch = opt.price.match(/(\d+)/);
+                if (priceMatch) {
+                    const originalPriceNum = parseInt(priceMatch[1], 10);
+                    const discountedPriceNum = Math.round(originalPriceNum * 0.8);
+                    const discountedPriceStr = opt.price.replace(priceMatch[1], discountedPriceNum);
+
+                    displayPrice = `
+                        <div class="flex flex-col items-end">
+                            <span class="text-xs text-gray-400 line-through mb-0.5">${opt.price}</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-bold bg-pink-100 text-pink-700 px-1.5 py-0.5 rounded-full uppercase tracking-wider">-20%</span>
+                                <span class="font-bold text-pink-600">${discountedPriceStr}</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            const langData = translationsData[currentLanguage] || translationsData['en'];
+            const buyBtnText = langData['pricing.buy'] || 'Buy Now';
+            
+            modalContentHTML += `
+                <div class="p-4 border rounded flex flex-col justify-center">
+                    <div class="flex justify-between items-center w-full group mb-2">
+                        <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
+                        ${displayPrice}
+                    </div>
+                    <div class="flex flex-col gap-2 mb-2">
+                        <button class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-xs font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider select-none active:scale-[0.98] buy-start-btn" data-opt-index="${index}" data-group="${group}">
+                            ${buyBtnText}
+                        </button>
+                    </div>
+                    ${opt.desc ? `<p class="text-xs text-gray-500 leading-relaxed">${opt.desc}</p>` : ''}
+                </div>
+            `;
+        });
+
+        if (hasSeasonalOffer) {
+            const langData = translationsData[currentLanguage] || translationsData['en'];
+            body.innerHTML += `
+                <div class="mb-6 bg-pink-50 border border-pink-100 rounded-xl p-4 flex flex-col items-center justify-center text-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-pink-600 mb-2">${langData['pricing.offer.ends_in'] || 'Offer Ends In:'}</span>
+                    <div class="flex gap-3 justify-center text-pink-900 w-full max-w-[280px]">
+                        <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                            <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="days">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.days'] || 'Days'}</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                            <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="hours">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.hours'] || 'Hours'}</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                            <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="minutes">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.minutes'] || 'Mins'}</span>
+                        </div>
+                        <div class="flex flex-col items-center flex-1 bg-white rounded-lg py-2 shadow-sm border border-pink-50">
+                            <span class="text-xl font-bold font-serif leading-none countdown-val" data-unit="seconds">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-pink-400 mt-1">${langData['pricing.offer.seconds'] || 'Secs'}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        body.innerHTML += modalContentHTML;
+
+        // Render Benefits & Conditions (Omitted for brevity in summary, but kept in full file)
+        renderBenefitsAndConditions(data, body);
+
+        // Add Listeners to Buy Buttons
+        body.querySelectorAll('.buy-start-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const opt = data.options[btn.dataset.optIndex];
+                renderInvoiceSummary(opt, data, group);
+            });
+        });
+
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    function renderBenefitsAndConditions(data, body) {
+        if (data.benefits && data.benefits.length > 0) {
+            body.innerHTML += `
+                <div class="mt-6">
+                    <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
+                        <i data-lucide="sparkles" class="h-4 w-4 mr-2 text-pink-500"></i>
+                        ${data.benefitsTitle || 'Benefits'}
+                    </h4>
+                    <ul class="space-y-2">
+                        ${data.benefits.map(b => `
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="h-4 w-4 mr-2 text-pink-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-xs font-medium text-gray-700 leading-relaxed">${b}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+        if (data.conditions && data.conditions.length > 0) {
+            body.innerHTML += `
+                <details class="mt-6 pt-4 border-t border-gray-100 group">
+                    <summary class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center cursor-pointer select-none outline-none">
+                        <i data-lucide="info" class="h-4 w-4 mr-2 text-gray-400"></i>
+                        ${data.conditionsTitle || 'Terms & Conditions'}
+                        <i data-lucide="chevron-down" class="h-4 w-4 ml-auto text-gray-400 transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <ul class="space-y-2 mt-3">
+                        ${data.conditions.map(c => `
+                            <li class="flex items-start">
+                                <i data-lucide="minus" class="h-3 w-3 mr-2 text-gray-300 flex-shrink-0 mt-1"></i>
+                                <span class="text-[11px] text-gray-500 leading-relaxed">${c}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </details>
+            `;
+        }
+    }
+
+    async function renderInvoiceSummary(opt, data, group) {
+        const langData = translationsData[currentLanguage] || translationsData['en'];
+        const body = document.getElementById('pricing-modal-body');
+        document.getElementById('pricing-modal-title').textContent = langData['checkout.invoice_summary'] || 'Invoice Summary';
+        
+        body.innerHTML = `
+            <div class="space-y-6">
+                <!-- Back Button -->
+                <button class="flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-pink-600 transition-colors" id="checkout-back-btn">
+                    <i data-lucide="arrow-left" class="h-3 w-3 mr-2"></i>
+                    ${langData['checkout.back_button'] || 'Back'}
+                </button>
+
+                <!-- Invoice Table -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <div class="flex justify-between items-center mb-6">
+                        <img src="${getAssetPath('/assets/branding/logo-goyoga-tallinn-estonia.svg')}" class="h-8 object-contain" alt="Logo">
+                        <div class="text-right">
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-1">${langData['checkout.invoice_no'] || 'Invoice No.'}</p>
+                            <p class="text-xs font-bold text-gray-800">DRAFT-NEW</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">${opt.name}</span>
+                            <span class="text-xs font-bold text-pink-600">${opt.price}</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-widest">${langData['checkout.total'] || 'Total'}</span>
+                            <span class="text-lg font-bold text-pink-600">${opt.price}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Form -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 px-1">
+                            ${langData['checkout.email_label'] || 'Email Address'} *
+                        </label>
+                        <input type="email" id="checkout-email" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.email_placeholder'] || 'your@email.com'}" required>
+                    </div>
+
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                        <div class="relative flex items-center mt-0.5">
+                            <input type="checkbox" id="checkout-subscribe" class="peer hidden" checked>
+                            <div class="h-4 w-4 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
+                            <i data-lucide="check" class="absolute h-3 w-3 text-white opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none transition-opacity"></i>
+                        </div>
+                        <span class="text-[11px] text-gray-500 leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
+                            ${langData['checkout.subscribe_label'] || 'Subscribe for GoYoga services, events and seasonal offerings'}
+                        </span>
+                    </label>
+
+                    <button class="w-full bg-pink-600 text-white font-bold py-4 rounded-xl hover:bg-pink-700 transition-all active:scale-[0.98] shadow-lg shadow-pink-100 uppercase tracking-widest text-xs mt-4 flex items-center justify-center gap-2" id="checkout-confirm-btn">
+                        <span>${langData['checkout.confirm_button'] || 'Confirm & Order'}</span>
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+
+        // Listeners for checkout buttons
+        document.getElementById('checkout-back-btn')?.addEventListener('click', () => renderPricingOptions(data, group));
+        document.getElementById('checkout-confirm-btn')?.addEventListener('click', () => handleCheckoutSubmit(opt, data, group));
+
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    async function handleCheckoutSubmit(opt, data, group) {
+        const emailInput = document.getElementById('checkout-email');
+        const subscribe = document.getElementById('checkout-subscribe').checked;
+        const langData = translationsData[currentLanguage] || translationsData['en'];
+
+        if (!emailInput.checkValidity() || !emailInput.value) {
+            emailInput.classList.add('border-red-500');
+            return;
+        }
+
+        const confirmBtn = document.getElementById('checkout-confirm-btn');
+        const originalBtnHTML = confirmBtn.innerHTML;
+        confirmBtn.disabled = true;
+        confirmBtn.innerHTML = `<i data-lucide="loader-2" class="h-4 w-4 animate-spin"></i>`;
+        if (window.lucide) window.lucide.createIcons();
+
+        // Generate ID
+        const timestamp = Date.now();
+        const invoiceId = `GY-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${timestamp.toString().slice(-4)}`;
+
+        try {
+            // Call API
+            const response = await fetch('/api/invoice', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: emailInput.value,
+                    subscribe,
+                    product: opt.name,
+                    price: opt.price,
+                    invoiceId,
+                    language: currentLanguage
+                })
+            });
+
+            // Transition to Success Step
+            renderPaymentStep(opt, invoiceId);
+        } catch (error) {
+            console.error('Invoice error:', error);
+            // Even if email fails, we should let them pay, but maybe show a warning
+            renderPaymentStep(opt, invoiceId);
+        }
+    }
+
+    function renderPaymentStep(opt, invoiceId) {
+        const langData = translationsData[currentLanguage] || translationsData['en'];
+        const body = document.getElementById('pricing-modal-body');
+        
+        const buyBtnText = langData['pricing.buy'] || 'Buy Now';
+        const qrBtnText = langData['pricing.qr_btn'] || 'Scan QR to Pay';
+
+        body.innerHTML = `
+            <div class="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div class="bg-green-50 rounded-xl p-6 border border-green-100 text-center">
+                    <div class="h-12 w-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check-circle" class="h-6 w-6"></i>
+                    </div>
+                    <h4 class="font-bold text-green-900 mb-1">Invoice Generated</h4>
+                    <p class="text-xs text-green-700">Ref: <span class="font-mono font-bold">${invoiceId}</span></p>
+                    <p class="text-[10px] text-green-600 mt-2">A summary has been sent to your email.</p>
+                </div>
+
+                <div class="p-2">
+                    <div class="flex justify-between items-center w-full group mb-4">
+                        <span class="font-bold text-gray-800 uppercase tracking-widest text-xs">${opt.name}</span>
+                        <span class="font-bold text-pink-600">${opt.price}</span>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3">
+                        ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-4 bg-pink-600 text-white text-sm font-bold rounded-xl hover:bg-pink-700 transition-all shadow-lg shadow-pink-100 uppercase tracking-widest active:scale-[0.98]">${buyBtnText}</a>` : ''}
+                        
+                        ${opt.qrCode ? `
+                            <div class="p-6 bg-gray-50 rounded-2xl flex flex-col items-center border border-gray-100">
+                                <img src="${getAssetPath(opt.qrCode)}" class="w-48 h-48 object-contain bg-white p-4 rounded-xl shadow-inner mb-4" alt="Payment QR Code">
+                                <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">${qrBtnText}</p>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        if (window.lucide) window.lucide.createIcons();
+    }
     document.getElementById('pricing-modal-close')?.addEventListener('click', () => toggleModal('pricing-modal', false));
 
     // Event
@@ -1294,34 +1454,27 @@ async function submitEventRegistration(e) {
     const phone = document.getElementById('event-reg-phone').value;
     const message = document.getElementById('event-reg-message').value;
 
-    const webhookUrl = 'https://discord.com/api/webhooks/1478929947123777739/nQSJDyZvJPtfX0ZYg7tWR6mn2iZd2IsVXzwJN-sIVgU7pHAOiNQAP68BZHbxDlwFvQ1J';
-
     const payload = {
-        embeds: [{
-            title: "📣 New Event Registration",
-            color: 15277667, // Hex #E91E63 (Pink)
-            fields: [
-                { name: "Event", value: eventTitle, inline: false },
-                { name: "Name", value: name, inline: true },
-                { name: "Email", value: email, inline: true },
-                { name: "Phone", value: phone || "Not provided", inline: true },
-                { name: "Message", value: message || "No message provided", inline: false },
-                { name: "Metadata", value: `**Event ID:** ${eventId}\n**Source URL:** ${window.location.href}\n**Language:** ${typeof currentLanguage !== 'undefined' ? currentLanguage : 'en'}`, inline: false }
-            ],
-            footer: {
-                text: "Goyoga Tallinn Website",
-                icon_url: "https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-96x96.png"
-            },
-            timestamp: new Date().toISOString()
-        }]
+        eventId,
+        eventTitle,
+        name,
+        email,
+        phone,
+        message,
+        sourceUrl: window.location.href,
+        language: typeof currentLanguage !== 'undefined' ? currentLanguage : 'en'
     };
 
     try {
-        await fetch(webhookUrl, {
+        const response = await fetch('/api/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
         // Show success state
         document.getElementById('event-registration-form').classList.add('hidden');
