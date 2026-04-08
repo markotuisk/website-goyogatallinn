@@ -56,6 +56,13 @@ const corporateData = {
                     "title": "Online tunnid",
                     "desc": "Virtuaalne jooga- ja/või heaolupraktika eelkõige grupile, mis sobib hästi kodukontorites töötavatele ettevõtetele.",
                     "icon": "video"
+                },
+                {
+                    "title": "Avasta meie praktikad",
+                    "desc": "Tutvu lähemalt kõigi Goyoga pakutavate joogastiilide ja heaolupraktikatega meie pealislehel.",
+                    "icon": "arrow-up-right",
+                    "link": "index.html#practices",
+                    "linkText": "Vaata lähemalt"
                 }
             ]
         },
@@ -90,6 +97,15 @@ const corporateData = {
                 "Miami Beach Botanical Garden",
                 "Tammy Fender Holistic Spa",
                 "IIN Health Coaching Community"
+            ],
+            "logos": [
+                "Four Seasons",
+                "THE BREAKERS",
+                "TAMMY FENDER",
+                "Reading Festival",
+                "Science Museum of PB",
+                "Mounts Botanical",
+                "Miami Beach Botanical"
             ]
         },
         "about": {
@@ -204,6 +220,13 @@ const corporateData = {
                     "title": "Online Classes",
                     "desc": "Virtual yoga and/or wellness practice primarily for groups, well-suited for companies with home offices.",
                     "icon": "video"
+                },
+                {
+                    "title": "Explore Our Practices",
+                    "desc": "Learn more about all the yoga styles and wellness practices Goyoga offers on our main page.",
+                    "icon": "arrow-up-right",
+                    "link": "index.html#practices",
+                    "linkText": "View All"
                 }
             ]
         },
@@ -238,6 +261,15 @@ const corporateData = {
                 "Miami Beach Botanical Garden",
                 "Tammy Fender Holistic Spa",
                 "IIN Health Coaching Community"
+            ],
+            "logos": [
+                "Four Seasons",
+                "THE BREAKERS",
+                "TAMMY FENDER",
+                "Reading Festival",
+                "Science Museum of PB",
+                "Mounts Botanical",
+                "Miami Beach Botanical"
             ]
         },
         "about": {
@@ -386,6 +418,15 @@ const corporateData = {
                 "Miami Beach Botanical Garden",
                 "Tammy Fender Holistic Spa",
                 "IIN Health Coaching Community"
+            ],
+            "logos": [
+                "Four Seasons",
+                "THE BREAKERS",
+                "TAMMY FENDER",
+                "Reading Festival",
+                "Science Museum of PB",
+                "Mounts Botanical",
+                "Miami Beach Botanical"
             ]
         },
         "about": {
@@ -500,6 +541,13 @@ const corporateData = {
                     "title": "Онлайн занятия",
                     "desc": "Виртуальная практика йоги и/v/или велнеса прежде всего для групп, хорошо подходит для компаний с удаленным режимом работы.",
                     "icon": "video"
+                },
+                {
+                    "title": "Наши практики",
+                    "desc": "Узнайте больше обо всех стилях йоги и оздоровительных практиках, которые Goyoga предлагает на главной странице.",
+                    "icon": "arrow-up-right",
+                    "link": "index.html#practices",
+                    "linkText": "Смотреть все"
                 }
             ]
         },
@@ -534,6 +582,15 @@ const corporateData = {
                 "Miami Beach Botanical Garden",
                 "Tammy Fender Holistic Spa",
                 "IIN Health Coaching Community"
+            ],
+            "logos": [
+                "Four Seasons",
+                "THE BREAKERS",
+                "TAMMY FENDER",
+                "Reading Festival",
+                "PB Science Museum",
+                "Mounts Botanical",
+                "Miami Botanical"
             ]
         },
         "about": {
