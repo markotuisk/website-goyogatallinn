@@ -81,7 +81,7 @@ export async function onRequestPost(context) {
         const ZOHO_KEY = env.ZOHO_API_KEY || "Zoho-enczapikey yA6KbHsIvQn3yz5TQxJp0pCOoY9krf9vj3jksyHhe5d0e4GyiqFs3xVudNO/IDuJ3YHY46ICatNCdIHv6twKe5diZoVYKJTGTuv4P2uV48xh8ciEYNYhjJirA7IUFqVIeRotCSw1Q/MoWA==";
 
         try {
-            const zeptoResponse = await fetch("https://api.zeptomail.com/v1.1/email", {
+            const zeptoResponse = await fetch("https://api.zeptomail.eu/v1.1/email", {
                 method: "POST",
                 headers: {
                     "accept": "application/json",
@@ -102,6 +102,9 @@ export async function onRequestPost(context) {
             
             const zeptoData = await zeptoResponse.json();
             console.log("ZeptoMail Response:", zeptoData);
+            if (!zeptoResponse.ok) {
+                console.error("ZeptoMail error details:", zeptoData);
+            }
         } catch (e) {
             console.error("ZeptoMail Error:", e);
         }

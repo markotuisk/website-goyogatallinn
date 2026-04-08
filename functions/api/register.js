@@ -154,7 +154,7 @@ export async function onRequestPost(context) {
                 toRecipients.push({ "email_address": { "address": data.email, "name": data.name } });
             }
 
-            await fetch("https://api.zeptomail.com/v1.1/email", {
+            const zeptoResponse = await fetch("https://api.zeptomail.eu/v1.1/email", {
                 method: "POST",
                 headers: {
                     "accept": "application/json",
@@ -168,6 +168,11 @@ export async function onRequestPost(context) {
                     "htmlbody": emailHtml
                 })
             });
+
+            const zeptoResult = await zeptoResponse.json();
+            if (!zeptoResponse.ok) {
+                console.error("ZeptoMail error details:", zeptoResult);
+            }
         } catch (e) {
             console.error("ZeptoMail Error:", e);
             // Non-fatal error, we still want to tell the user success since discord worked
