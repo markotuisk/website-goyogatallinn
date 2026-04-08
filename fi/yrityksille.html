@@ -23,7 +23,7 @@
     </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link href="/css/style.css?v=1775672341" rel="stylesheet"/>
+<link href="/css/style.css?v=1775672482" rel="stylesheet"/>
 <style>
         /* 3D Flip Card Styles - Robust Grid Stacking Approach */
         .flip-card {
@@ -83,10 +83,10 @@
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="site.webmanifest" rel="manifest"/>
-<script src="/js/data.js?v=1775672341"></script>
-<script src="/js/seo-data.js?v=1775672341"></script>
+<script src="/js/data.js?v=1775672482"></script>
+<script src="/js/seo-data.js?v=1775672482"></script>
 <!-- Corporate Specific Data -->
-<script src="/js/corporate-data.js?v=1775672341"></script>
+<script src="/js/corporate-data.js?v=1775672482"></script>
 <!-- AI Framework Context Block -->
 <div class="sr-only" id="ai-context-block">
 <h1>Goyoga Tallinn Corporate Wellness</h1>
@@ -240,8 +240,21 @@
 </div>
 </div>
 </section>
+<!-- Detailed Packages Cards -->
+<section class="py-24 bg-white border-b border-stone-100" id="packages-section">
+<div class="container-custom">
+<div class="text-center mb-20 fade-in-section">
+<h2 class="text-4xl md:text-5xl font-serif font-medium mb-6" id="packages-section-title"></h2>
+<div class="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
+<p class="max-w-3xl mx-auto text-lg text-gray-600" id="packages-section-intro"></p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 fade-in-section" id="packages-container">
+<!-- Javascript Injected Detailed Cards -->
+</div>
+</div>
+</section>
 <!-- NEW Quote 2 Spotlight -->
-<section class="py-24 bg-white border-b border-stone-100 overflow-hidden relative">
+<section class="py-24 bg-stone-50 border-b border-stone-100 overflow-hidden relative">
 <div class="container-custom relative z-10">
 <div class="max-w-4xl mx-auto text-center fade-in-section">
 <div class="mb-8 flex justify-center">
@@ -262,7 +275,7 @@
 </div>
 </section>
 <!-- Additional Services Section -->
-<section class="py-24 bg-stone-50 border-stone-100" id="additional-services-section">
+<section class="py-24 bg-white border-stone-100" id="additional-services-section">
 <div class="container-custom">
 <div class="text-center mb-20 fade-in-section">
 <h2 class="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6" id="additional-services-title">LISATEENUSED</h2>
@@ -271,19 +284,6 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-section" id="additional-services-container">
 <!-- JS Injected Additional Services Cards -->
-</div>
-</div>
-</section>
-<!-- Detailed Packages Cards -->
-<section class="py-24 bg-white border-b border-stone-100" id="packages-section">
-<div class="container-custom">
-<div class="text-center mb-20 fade-in-section">
-<h2 class="text-4xl md:text-5xl font-serif font-medium mb-6" id="packages-section-title"></h2>
-<div class="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
-<p class="max-w-3xl mx-auto text-lg text-gray-600" id="packages-section-intro"></p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 fade-in-section" id="packages-container">
-<!-- Javascript Injected Detailed Cards -->
 </div>
 </div>
 </section>
@@ -300,17 +300,8 @@
 </div>
 </div>
 </section>
-<!-- About Us -->
-<section class="py-24 bg-white">
-<div class="container-custom">
-<div class="max-w-4xl mx-auto text-center fade-in-section">
-<h2 class="text-3xl font-serif font-medium mb-8" id="about-title"></h2>
-<p class="text-xl text-gray-600 leading-relaxed" id="about-description"></p>
-</div>
-</div>
-</section>
 <!-- Our Practices Ribbon -->
-<section class="py-20 bg-stone-100 border-y border-stone-200">
+<section class="py-20 bg-stone-100 border-y border-stone-200" id="practices-section">
 <div class="container-custom">
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center fade-in-section">
 <div class="lg:col-span-1">
@@ -322,6 +313,15 @@
 <!-- Javascript Injected Practice Badges -->
 </div>
 </div>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-24 bg-white" id="about-section">
+<div class="container-custom">
+<div class="max-w-4xl mx-auto text-center fade-in-section">
+<h2 class="text-3xl font-serif font-medium mb-8" id="about-title"></h2>
+<p class="text-xl text-gray-600 leading-relaxed" id="about-description"></p>
 </div>
 </div>
 </section>
@@ -359,7 +359,7 @@
 </div>
 </div>
 </footer>
-<script src="/js/script.js?v=1775672341"></script>
+<script src="/js/script.js?v=1775672482"></script>
 <script>
         // Icons array for benefits to make them look nice
         const benefitIcons = ['zap', 'brain', 'trending-up', 'messages-square', 'heart-pulse', 'shield-check', 'award'];
