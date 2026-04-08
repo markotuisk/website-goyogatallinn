@@ -10,7 +10,8 @@ const corporateData = {
         "collaboration": {
             "title": "KOOSTÖÖ",
             "p1": "Goyoga ärikliendiks on vähemalt 5-liikmeline ettevõte. Lisaks ettevõtte tiimiüritustele pakume kõikidele äriklientide töötajatele meie tavahinnakirjast soodsamaid treeningtingimusi.",
-            "p2": "Ettevõtetele, kes võimaldavad oma töötajatele spordikompensatsiooni, pakume võimalust otse meiega arveldada."
+            "p2": "Ettevõtetele, kes võimaldavad oma töötajatele spordikompensatsiooni, pakume võimalust otse meiega arveldada läbi meie maksesüsteemi.",
+            "p3": "Oleme liitunud ka suuremate Eesti spordiportaalidega nagu <strong>Stebby</strong>, võimaldades mugavat arveldust ja tundide broneerimist otse platvormilt."
         },
         "benefits": {
             "title": "KASUTEGURID",
@@ -83,7 +84,8 @@ const corporateData = {
         "collaboration": {
             "title": "COLLABORATION",
             "p1": "Goyoga corporate clients are companies with at least 5 employees. In addition to team events, we offer all corporate employees more favorable training terms than our standard price list.",
-            "p2": "For companies that provide sports compensation to their employees, we offer the possibility of direct billing with us."
+            "p2": "For companies that provide sports compensation to their employees, we offer the possibility of direct billing through our payment system.",
+            "p3": "We are also integrated with major Estonian sports platforms like <strong>Stebby</strong>, allowing for convenient billing and class bookings directly from the platform."
         },
         "benefits": {
             "title": "BENEFITS",
@@ -156,7 +158,8 @@ const corporateData = {
         "collaboration": {
             "title": "YHTEISTYÖ",
             "p1": "Goyoga-yritysasiakkaita ovat vähintään 5 työntekijän yritykset. Tiimitapahtumien lisäksi tarjoamme kaikille yritysasiakkaiden työntekijöille edullisemmat harjoitteluehdot kuin tavallinen hinnastomme.",
-            "p2": "Yrityksille, jotka tarjoavat työntekijöilleen liikuntakorvauksia, tarjoamme mahdollisuuden suoraan laskutukseen kanssamme."
+            "p2": "Yrityksille, jotka tarjoavat työntekijöilleen liikuntakorvauksia, tarjoamme mahdollisuuden suoraan laskutukseen oman maksujärjestelmämme kautta.",
+            "p3": "Olemme liittyneet myös suuriin virolaisiin liikuntaportaaleihin kuten <strong>Stebby</strong>, mikä mahdollistaa kätevän laskutuksen ja tuntivaraukset suoraan alustalta."
         },
         "benefits": {
             "title": "HYÖDYT",
@@ -228,8 +231,9 @@ const corporateData = {
         },
         "collaboration": {
             "title": "СОТРУДНИЧЕСТВО",
-            "p1": "Корпоративными клиентами Goyoga являются компании с штатом не менее 5 человек. Помимо командных мероприятий, мы предлагаем всем сотрудникам корпоративных клиентов более выгодные условия тренировок, чем в нашем обычном прейскуранте.",
-            "p2": "Для компаний, предоставляющих своим сотрудникам спортивную компенсацию, мы предлагаем возможность прямого расчета с нами."
+            "p1": "Корпоративными клиентами Goyoga являются компании с штатом не менее 5 человек. Помимо командных мероприятий, мы предлагаем всем сотрудникам более выгодные условия тренировок.",
+            "p2": "Для компаний, предоставляющих спортивную компенсацию, мы предлагаем возможность прямого расчета через нашу платежную систему.",
+            "p3": "Мы также интегрированы с крупнейшими спортивными порталами Эстонии, такими как <strong>Stebby</strong>, что позволяет удобно бронировать занятия и вести расчеты прямо через платформу."
         },
         "benefits": {
             "title": "ПРЕИМУЩЕСТВА",
