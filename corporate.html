@@ -25,12 +25,14 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* 3D Flip Card Styles */
+        /* 3D Flip Card Styles - Improved for Dynamic Content */
         .flip-card {
             background-color: transparent;
             width: 100%;
-            height: 600px;
-            perspective: 1500px;
+            min-height: 550px; /* Base minimum */
+            perspective: 2000px;
+            margin-bottom: 2rem;
+            will-change: transform;
         }
 
         .flip-card-inner {
@@ -56,14 +58,29 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transform: rotateX(0deg); /* Safari fix */
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            border: 1px solid #f3f4f6;
         }
 
         .flip-card-back {
             background-color: #fff;
             transform: rotateY(180deg);
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
             border: 1px solid #f3f4f6;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* Flex helpers for internal content */
+        .card-content-scroll {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 2rem;
+            text-align: left;
         }
     </style>
 
@@ -342,7 +359,7 @@
         const packageImages = [
             'https://images.unsplash.com/photo-1545205597-3d9d02c29597', // Mind
             'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b', // Body
-            'https://images.unsplash.com/photo-1593179449458-e45a112c3cc2', // Mind & Body
+            'https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539', // Mind & Body (Fixed broken link)
             'https://images.unsplash.com/photo-1552196563-55cd4e45efb3'  // Wellness Day
         ];
 
@@ -350,7 +367,34 @@
             const card = document.getElementById(`flip-card-${id}`);
             if (card) {
                 card.classList.toggle('flipped');
+                // Re-sync height in case of dynamic content changes
+                syncCardHeights();
             }
+        }
+
+        // New function to synchronize front and back face heights
+        function syncCardHeights() {
+            const cards = document.querySelectorAll('.flip-card');
+            cards.forEach(card => {
+                const front = card.querySelector('.flip-card-front');
+                const back = card.querySelector('.flip-card-back');
+                
+                if (front && back) {
+                    // Reset heights first to measure natural content height
+                    front.style.height = 'auto';
+                    back.style.height = 'auto';
+                    card.style.height = 'auto';
+                    
+                    // Measure
+                    const maxHeight = Math.max(front.scrollHeight, back.scrollHeight, 550);
+                    
+                    // Apply
+                    const heightPx = `${maxHeight}px`;
+                    card.style.height = heightPx;
+                    front.style.height = '100%'; // Stretch to parent
+                    back.style.height = '100%';
+                }
+            });
         }
 
         function renderCorporatePage() {
@@ -516,11 +560,11 @@
                         cardBlock.innerHTML = `
                             <div class="flip-card-inner">
                                 <!-- Card Front -->
-                                <div class="flip-card-front bg-white shadow-xl border border-gray-100">
-                                    <div class="w-full relative h-[250px] flex-shrink-0">
+                                <div class="flip-card-front">
+                                    <div class="w-full relative h-[220px] flex-shrink-0">
                                         <img src="${img}" alt="${pkg.title}" class="absolute inset-0 w-full h-full object-cover" title="${pkg.title}">
                                     </div>
-                                    <div class="w-full p-8 flex flex-col flex-grow">
+                                    <div class="card-content-scroll">
                                         <h3 class="text-2xl font-serif font-medium mb-6">${pkg.title}</h3>
                                         <div class="flex flex-col gap-y-3 mb-8 flex-grow">
                                             ${detailsHtml}
@@ -533,8 +577,8 @@
                                     </div>
                                 </div>
                                 <!-- Card Back -->
-                                <div class="flip-card-back flex flex-col">
-                                    <div class="text-pink-600 text-xs font-bold tracking-widest uppercase mb-4">${pkg.title}</div>
+                                <div class="flip-card-back">
+                                    <div class="text-pink-600 text-[10px] font-bold tracking-widest uppercase mb-2">${pkg.title}</div>
                                     <h3 class="text-2xl font-serif font-medium mb-6">${pkg.title}</h3>
                                     <p class="text-gray-600 leading-relaxed mb-auto">${pkg.desc}</p>
                                     
@@ -554,6 +598,9 @@
                 });
             }
 
+            // Set dynamic heights after layout completes
+            setTimeout(syncCardHeights, 100);
+
             // Reinitialize lucide icons for newly injected content
             if (window.lucide) {
                 window.lucide.createIcons();
@@ -563,6 +610,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderCorporatePage();
             
+            // Re-sync heights on window resize
+            window.addEventListener('resize', () => {
+                // Debounce slightly for performance
+                clearTimeout(window.resizeTimer);
+                window.resizeTimer = setTimeout(syncCardHeights, 150);
+            });
+
             // Listen for language changes triggered by custom events (from script.js)
             window.addEventListener('languageChanged', (e) => {
                 if(e.detail && e.detail.lang) {
