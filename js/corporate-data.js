@@ -11,7 +11,14 @@ const corporateData = {
         "stat2": {
             "num": "89 %",
             "quote": "organisatsioonidest korraldab vähemalt kord aastas töötajate ühisüritusi.",
+            "tag": "Ühisüritused",
             "source": "Tervise Arengu Instituudi 2019. aasta Töökoha Tervisedenduse Uuring: <a href='https://www.tai.ee/et/valjaanded/tookoha-tervisedenduse-uuring-2019' class='underline' target='_blank'>Loe uuringut</a>"
+        },
+        "stat3": {
+            "num": "82 %",
+            "quote": "Rootsi ettevõtetest väärtustavad holistiliste praktikate kasutamist töötajate heaolu tõstmiseks.",
+            "tag": "Rahvusvaheline Kogemus",
+            "source": ""
         },
         "collaboration": {
             "title": "Koostöö",
@@ -54,7 +61,7 @@ const corporateData = {
         },
         "benefits": {
             "title": "Kasutegurid",
-            "subtitle": "Jooga ja vaimse tervise heaolupraktikatel on mitmeid kasutegureid",
+            "subtitle": "Jooga ja heaolupraktikatel on mitmeid kasutegureid",
             "items": [
                 "Stressi maandamine",
                 "Keskendumisvõime ja loovuse kasvamine",
@@ -65,9 +72,36 @@ const corporateData = {
                 "Tõstab üleüldist töökultuuri"
             ]
         },
+        "clients": {
+            "title": "Meie kliendid & tagasiside",
+            "intro": "Meie kliendid on ettevõtted, kes väärtustavad oma töötajate tervist ja ühtset tiimi vaimu.",
+            "local": [
+                "Hype-Lab",
+                "Nobel Digital",
+                "Sorainen",
+                "Kristi firma"
+            ],
+            "internationalTitle": "Rahvusvaheline portfell",
+            "international": [
+                "Four Seasons Resort Palm Beach",
+                "Palm Beach County Government",
+                "Science Museum of Palm Beach",
+                "Mounts Botanical Garden",
+                "Miami Beach Botanical Garden",
+                "Tammy Fender Holistic Spa",
+                "IIN Health Coaching Community"
+            ]
+        },
         "about": {
             "title": "Meist | Goyoga Tallinn",
-            "description": "Goyoga Tallinn on eesti turul jooga- ja heaoluteenuseid pakkunud juba alates 2016.aastast. Oleme Tallinna kesklinnas tegutsevast joogastuudiost oma teenustega laienenud ettevõtetesse nii Eestis kui ka välisriikides. Meie praktikud ja terapeudid on kogenud professionaalid, kes juhendavad tunde ja töötubasid nii eesti kui ka ladusas inglise keeles. Meie praktikute kogukond on rahvusvaheline, tuues heaolu kogemused Eestisse nii Ameerikast, Inglismaalt kui ka Aasiast."
+            "description": "Goyoga Tallinn on eesti turul jooga- ja heaoluteenuseid pakkunud juba alates 2016.aastast. Oleme Tallinna kesklinnas tegutsevast joogastuudiost oma teenustega laienenud ettevõtetesse nii Eestis kui ka välisriikides. Meie praktikud ja terapeudid on kogenud professionaalid, kes juhendavad tunde ja töötubasid nii eesti kui ka ladusas inglise keeles. Meie praktikute kogukond on rahvusvaheline, tuues heaolu kogemused Eestisse nii Ameerikast, Inglismaalt kui ka Aasiast.",
+            "partner": {
+                "title": "Goyoga Heaolu Partner",
+                "desc": "Heaoluteenuste pakkumisel on meie partneriks Lõuna-Floridast pärit firma Casa Rituals, mille põhitegevuseks on tuua sisukad ja kvaliteetsed heaolu lahendused organisatsioonidesse, pakkudes programme, mis toetavad vastupidavust, selgust ja jätkusuutlikku töövõimet.",
+                "linkText": "Loe lähemalt",
+                "linkUrl": "https://www.casarituals.com/",
+                "logo": "assets/corporate/casa-rituals-logo.svg"
+            }
         },
         "practices": {
             "title": "Meie praktikate valik",
@@ -101,7 +135,7 @@ const corporateData = {
                 {
                     "id": "mindbody",
                     "title": "Jooga & Vaimse Tervise Töötoad",
-                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks meant heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
+                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
                     "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Loeng (x1 kuni 30min)", "Tervislik jook ja snack", "Kuni 4 tundi", "2 õpetajat", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 15+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
                 {
@@ -125,7 +159,14 @@ const corporateData = {
         "stat2": {
             "num": "89 %",
             "quote": "of organizations organize joint employee events at least once a year.",
+            "tag": "Social Events",
             "source": "NIHD 2019 Workplace Health Promotion Study: <a href='https://www.tai.ee/en/publications/workplace-health-promotion-study-2019' class='underline' target='_blank'>Read the study</a>"
+        },
+        "stat3": {
+            "num": "82 %",
+            "quote": "of Swedish companies value the use of holistic practices to enhance employee well-being.",
+            "tag": "International Experience",
+            "source": ""
         },
         "collaboration": {
             "title": "Collaboration",
@@ -179,9 +220,36 @@ const corporateData = {
                 "Elevates overall work culture"
             ]
         },
+        "clients": {
+            "title": "Our Clients & Feedback",
+            "intro": "Our clients are companies that value their employees' health and a unified team spirit.",
+            "local": [
+                "Hype-Lab",
+                "Nobel Digital",
+                "Sorainen",
+                "Kristi firma"
+            ],
+            "internationalTitle": "International Portfolio",
+            "international": [
+                "Four Seasons Resort Palm Beach",
+                "Palm Beach County Government",
+                "Science Museum of Palm Beach",
+                "Mounts Botanical Garden",
+                "Miami Beach Botanical Garden",
+                "Tammy Fender Holistic Spa",
+                "IIN Health Coaching Community"
+            ]
+        },
         "about": {
             "title": "About us | Goyoga Tallinn",
-            "description": "Goyoga Tallinn has been offering yoga and wellness services on the Estonian market since 2016. From a yoga studio operating in the center of Tallinn, we have expanded our services to companies in both Estonia and abroad. Our practitioners and therapists are experienced professionals who guide classes and workshops fluently in both Estonian and English. Our community of practitioners is international, bringing wellness experiences to Estonia from America, England, and Asia."
+            "description": "Goyoga Tallinn has been offering yoga and wellness services on the Estonian market since 2016. From a yoga studio operating in the center of Tallinn, we have expanded our services to companies in both Estonia and abroad. Our practitioners and therapists are experienced professionals who guide classes and workshops fluently in both Estonian and English. Our community of practitioners is international, bringing wellness experiences to Estonia from America, England, and Asia.",
+            "partner": {
+                "title": "Goyoga Wellness Partner",
+                "desc": "When providing wellness services, our partner is Casa Rituals, a South Florida-based company. Their core mission is to bring meaningful and high-quality wellness solutions to organizations, offering programs that support resilience, clarity, and sustainable productivity.",
+                "linkText": "Read more",
+                "linkUrl": "https://www.casarituals.com/",
+                "logo": "assets/corporate/casa-rituals-logo.svg"
+            }
         },
         "practices": {
             "title": "Our practices selection",
@@ -230,7 +298,7 @@ const corporateData = {
     "fi": {
         "intro": {
             "p1": "Mielenterveys ja liikunta muodostavat merkittävän osan työntekijän yleisestä hyvinvoinnista työssä. Vähintään 25 % virolaisista työnantajista tukee työntekijöidensä osallistumista harjoituksiin tai liikuntatapahtumiin.",
-            "p2": "Goyoga Tallinn auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja terveyttä, mikä puolestaan takaa työntekijöiden tuottavuuden ja pysyvyyden. Holistiset hyvinvointikäytännöt, kuten meditaatio, jooga ja tietoinen hengitys, lievittävät työntekijöiden stressiä ja säätelevät hermostoa, auttaen keskittymään, kommunikoimaan selkeästi ja ehkäisemään työuupumusta.",
+            "p2": "Goyoga Tallinn auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja terveyttä, mikä puolestaan takaa työntekijöiden tuottavuuden ja pysyvyyden. Holistiset hyvinvointikäytännöt lievittävät työntekijöiden stressiä ja säätelevät hermostoa, auttaen keskittymään ja ehkäisemään työuupumusta.",
             "subtitle": "Yrityksen työntekijöiden hyvinvointi",
             "statNumber": "86 %",
             "statQuote": "virolaisista työntekijöistä kokee hyvinvoinnin työpaikalla yhtä tärkeäksi tekijäksi kuin palkan.",
@@ -239,7 +307,14 @@ const corporateData = {
         "stat2": {
             "num": "89 %",
             "quote": "organisaatioista järjestää työntekijöiden yhteisiä tapahtumia vähintään kerran vuodessa.",
+            "tag": "Tiimitapahtumat",
             "source": "TAI 2019 Työpaikan terveydenedistämistutkimus: <a href='https://www.tai.ee/et/valjaanded/tookoha-tervisedenduse-uuring-2019' class='underline' target='_blank'>Lue tutkimus</a>"
+        },
+        "stat3": {
+            "num": "82 %",
+            "quote": "ruotsalaisista yrityksistä arvostaa holististen käytäntöjen käyttöä työntekijöiden hyvinvoinnin edistämiseksi.",
+            "tag": "Kansainvälinen Kokemus",
+            "source": ""
         },
         "collaboration": {
             "title": "Yhteistyö",
@@ -282,7 +357,7 @@ const corporateData = {
         },
         "benefits": {
             "title": "Hyödyt",
-            "subtitle": "Jooga- ja hyvinvointikäytännöillä on several etuja",
+            "subtitle": "Jooga- ja hyvinvointikäytännöillä on useita etuja",
             "items": [
                 "Stressinhallinta",
                 "Keskittymisen ja luovuuden lisääntyminen",
@@ -293,9 +368,36 @@ const corporateData = {
                 "Kohottaa yleistä työkulttuuria"
             ]
         },
+        "clients": {
+            "title": "Asiakkaamme & Palaute",
+            "intro": "Asiakkaamme ovat yrityksiä, jotka arvostavat työntekijöidensä terveyttä ja yhtenäistä tiimihenkeä.",
+            "local": [
+                "Hype-Lab",
+                "Nobel Digital",
+                "Sorainen",
+                "Kristi firma"
+            ],
+            "internationalTitle": "Kansainvälinen Portfolio",
+            "international": [
+                "Four Seasons Resort Palm Beach",
+                "Palm Beach County Government",
+                "Science Museum of Palm Beach",
+                "Mounts Botanical Garden",
+                "Miami Beach Botanical Garden",
+                "Tammy Fender Holistic Spa",
+                "IIN Health Coaching Community"
+            ]
+        },
         "about": {
             "title": "Meistä | Goyoga Tallinn",
-            "description": "Goyoga Tallinn on tarjonnut jooga- ja hyvinvointipalveluita Viron markkinoilla jo vuodesta 2016. Tallinnan keskustassa toimivasta joogastudiostamme olemme laajentaneet palveluitamme yrityksille sekä Virossa että ulkomailla. Harjoittajamme ja terapeuttimme ovat kogenuja ammattilaisia, jotka ohjaavat tunteja ja työpajoja sujuvasti viroksi ja englanniksi. Yhteisömme on kansainvälinen, tuoden hyvinvointikokemuksia Viroon muun muassa Yhdysvalloista, Englannista ja Aasiasta."
+            "description": "Goyoga Tallinn on tarjonnut jooga- ja hyvinvointipalveluita Viron markkinoilla jo vuodesta 2016. Tallinnan keskustassa toimivasta joogastudiostamme olemme laajentaneet palveluitamme yrityksille sekä Virossa että ulkomailla. Harjoittajamme ja terapeuttimme ovat kogenuja ammattilaisia, jotka ohjaavat tunteja ja työpajoja sujuvasti viroksi ja englanniksi. Yhteisömme on kansainvälinen, tuoden hyvinvointikokemuksia Viroon muun muassa Yhdysvalloista, Englannista ja Aasiasta.",
+            "partner": {
+                "title": "Goyoga Hyvinvointikumppani",
+                "desc": "Hyvinvointipalveluita tarjotessamme kumppanimme on Etelä-Floridasta kotoisin oleva Casa Rituals. Heidän perustehtävänsä on tuoda merkityksellisiä ja korkealaatuisia hyvinvointiratkaisuja organisaatioille tarjoamalla ohjelmia, jotka tukevat vastustuskykyä, selkeyttä ja kestävää tuottavuutta.",
+                "linkText": "Lue lisää",
+                "linkUrl": "https://www.casarituals.com/",
+                "logo": "assets/corporate/casa-rituals-logo.svg"
+            }
         },
         "practices": {
             "title": "Käytäntöjemme valikoima",
@@ -353,7 +455,14 @@ const corporateData = {
         "stat2": {
             "num": "89 %",
             "quote": "организаций организуют совместные мероприятия для сотрудников не реже одного раза в год.",
+            "tag": "Социальные события",
             "source": "TAI 2019 Исследование укрепления здоровья: <a href='https://www.tai.ee/et/valjaanded/tookoha-tervisedenduse-uuring-2019' class='underline' target='_blank'>Читать отчет</a>"
+        },
+        "stat3": {
+            "num": "82 %",
+            "quote": "шведских компаний ценят использование холистических практик для повышения благополучия сотрудников.",
+            "tag": "Международный Опыт",
+            "source": ""
         },
         "collaboration": {
             "title": "Сотрудничество",
@@ -384,12 +493,12 @@ const corporateData = {
                 },
                 {
                     "title": "Групповые занятия | Тимбилдинг",
-                    "desc": "Индивидуальная практика йоги и/или велнеса для групп, идеально подходит для корпоративных мероприятий.",
+                    "desc": "Индивидуальная практика йоги и/v/или велнеса для групп, идеально подходит для корпоративных мероприятий.",
                     "icon": "users-2"
                 },
                 {
                     "title": "Онлайн занятия",
-                    "desc": "Виртуальная практика йоги и/или велнеса прежде всего для групп, хорошо подходит для компаний с удаленным режимом работы.",
+                    "desc": "Виртуальная практика йоги и/v/или велнеса прежде всего для групп, хорошо подходит для компаний с удаленным режимом работы.",
                     "icon": "video"
                 }
             ]
@@ -407,9 +516,36 @@ const corporateData = {
                 "Повышение общей культуры труда и корпоративного духа"
             ]
         },
+        "clients": {
+            "title": "Наши клиенты и отзывы",
+            "intro": "Наши клиенты — это компании, которые ценят здоровье своих сотрудников и единый командный дух.",
+            "local": [
+                "Hype-Lab",
+                "Nobel Digital",
+                "Sorainen",
+                "Kristi firma"
+            ],
+            "internationalTitle": "Международное портфолио",
+            "international": [
+                "Four Seasons Resort Palm Beach",
+                "Palm Beach County Government",
+                "Science Museum of Palm Beach",
+                "Mounts Botanical Garden",
+                "Miami Beach Botanical Garden",
+                "Tammy Fender Holistic Spa",
+                "IIN Health Coaching Community"
+            ]
+        },
         "about": {
             "title": "О нас | Goyoga Tallinn",
-            "description": "Goyoga Tallinn работает на эстонском рынке йоги и велнес-услуг с 2016 года. Зародившись как студия йоги в самом центре Таллина, мы расширили наши услуги для компаний как в Эстонии, так и за рубежом. Наши специалисты и терапевты — это опытные профессионалы, которые свободно проводят занятия и мастер-классы как на эстонском, так и на английском языках. Наше сообщество практиков интернационально и привносит велнес-опыт в Эстонию из Америки, Англии и Азии."
+            "description": "Goyoga Tallinn работает на эстонском рынке йоги и велнес-услуг с 2016 года. Зародившись как студия йоги в самом центре Таллина, мы расширили наши услуги для компаний как в Эстонии, так и за рубежом. Наши специалисты и терапевты — это опытные профессионалы, которые свободно проводят занятия и мастер-классы как на эстонском, так и на английском языках. Наше сообщество практиков интернационально и привносит велнес-опыт в Эстонию из Америки, Англии и Азии.",
+            "partner": {
+                "title": "Велнес-партнер Goyoga",
+                "desc": "Нашим партнером по предоставлению велнес-услуг является компания Casa Rituals из Южной Флориды. Их миссия — внедрять качественные велнес-решения в организациях, предлагая программы, поддерживающие продуктивность и ясность ума.",
+                "linkText": "Подробнее",
+                "linkUrl": "https://www.casarituals.com/",
+                "logo": "assets/corporate/casa-rituals-logo.svg"
+            }
         },
         "practices": {
             "title": "Наш выбор практик",
@@ -432,7 +568,7 @@ const corporateData = {
                     "id": "mindhealth",
                     "title": "Пакет психического здоровья",
                     "desc": "Пакет MindHealth разработан для поддержки психического здоровья сотрудников, снятия напряжения и балансировки состояния. Это глубоко расслабляющая 90-минутная сессия, которая начинается с медитации сидя. За этим следует глубокое расслабление лежа (йога-нидра) в сочетании со звуковым путешествием. При необходимости можно добавить осознанное дыхание или церемонию какао. Проводится у клиента или в студии Goyoga.",
-                    "details": ["Медитация", "Звуковое путешествие", "Глубокое расслабление (йога-нидра)", "До 90 мин", "1 преподаватель", "На эстонском и/или английском", "У клиента или в студии Goyoga", "Группы от 5+ сотрудников", "Запросите цену для больших групп"]
+                    "details": ["Медитация", "Звуковое путешествие", "Глубокое расслабление (йога-нидра)", "До 90 мин", "1 преподаватель", "На эстонском и/v/или английском", "У клиента или в студии Goyoga", "Группы от 5+ сотрудников", "Запросите цену для больших групп"]
                 },
                 {
                     "id": "bodyhealth",

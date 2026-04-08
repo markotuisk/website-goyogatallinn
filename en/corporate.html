@@ -23,7 +23,7 @@
     </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link href="/css/style.css?v=1775672482" rel="stylesheet"/>
+<link href="/css/style.css?v=1775673177" rel="stylesheet"/>
 <style>
         /* 3D Flip Card Styles - Robust Grid Stacking Approach */
         .flip-card {
@@ -83,10 +83,10 @@
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="site.webmanifest" rel="manifest"/>
-<script src="/js/data.js?v=1775672482"></script>
-<script src="/js/seo-data.js?v=1775672482"></script>
+<script src="/js/data.js?v=1775673177"></script>
+<script src="/js/seo-data.js?v=1775673177"></script>
 <!-- Corporate Specific Data -->
-<script src="/js/corporate-data.js?v=1775672482"></script>
+<script src="/js/corporate-data.js?v=1775673177"></script>
 <!-- AI Framework Context Block -->
 <div class="sr-only" id="ai-context-block">
 <h1>Goyoga Tallinn Corporate Wellness</h1>
@@ -288,15 +288,60 @@
 </div>
 </section>
 <!-- Benefits Grid -->
-<section class="py-24 bg-pink-900 relative overflow-hidden">
+<section class="py-24 bg-pink-900 relative overflow-hidden" id="benefits-section">
 <div class="container-custom relative z-10">
 <div class="text-center mb-16 fade-in-section">
-<h2 class="text-pink-200 text-sm font-bold tracking-widest uppercase mb-4" id="benefits-title"></h2>
-<h3 class="text-3xl md:text-5xl font-serif text-white font-medium mb-6" id="benefits-subtitle"></h3>
+<h2 class="text-pink-200 text-sm font-bold tracking-widest uppercase mb-4" id="benefits-title">KASUTEGURID</h2>
+<h3 class="text-3xl md:text-5xl font-serif text-white font-medium mb-6" id="benefits-subtitle">Jooga ja heaolupraktikatel on mitmeid kasutegureid</h3>
 <div class="w-24 h-1 bg-pink-500 mx-auto"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-section" id="benefits-grid">
 <!-- Javascript Injected Benefits -->
+</div>
+</div>
+</section>
+<!-- Quote 3 Spotlight (Sweden 82%) -->
+<section class="py-24 bg-stone-50 border-b border-stone-100 overflow-hidden relative">
+<div class="container-custom relative z-10">
+<div class="max-w-4xl mx-auto text-center fade-in-section">
+<div class="mb-8 flex justify-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-200 text-stone-600 text-[10px] font-bold tracking-widest uppercase">
+<i class="w-4 h-4" data-lucide="globe"></i>
+<span id="stat3-tag">Rahvusvaheline kogemus</span>
+</div>
+</div>
+<div class="mb-6">
+<span class="text-7xl md:text-9xl font-serif font-medium text-pink-600 opacity-20 absolute -top-10 left-1/2 -translate-x-1/2 select-none">“</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium text-gray-900 leading-tight mb-8 relative">
+                            „<span class="text-pink-600" id="stat3-num">82%</span> <span id="stat3-quote">Rootsi ettevõtetest väärtustavad holistiliste praktikate kasutamist töötajate heaolu tõstmiseks.</span>“
+                        </h2>
+</div>
+</div>
+</div>
+</section>
+<!-- Clients & Feedback Section -->
+<section class="py-24 bg-white" id="clients-section">
+<div class="container-custom">
+<div class="text-center mb-16 fade-in-section">
+<h2 class="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6" id="clients-title">Meie kliendid</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-orange-400 mx-auto mb-8"></div>
+<p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed" id="clients-intro"></p>
+</div>
+<!-- Local Clients -->
+<div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-20 fade-in-section">
+<div class="flex flex-wrap justify-center gap-6" id="local-clients-list">
+<!-- JS Injected local clients -->
+</div>
+</div>
+<!-- International Portfolio -->
+<div class="bg-stone-50 rounded-[3rem] p-12 lg:p-20 shadow-sm border border-stone-100 fade-in-section">
+<div class="text-center mb-12">
+<h3 class="text-2xl font-serif font-medium text-gray-900 mb-4" id="clients-international-title">Rahvusvaheline portfell</h3>
+<div class="w-12 h-0.5 bg-pink-300 mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12 text-center md:text-left" id="international-clients-list">
+<!-- JS Injected international clients -->
+</div>
 </div>
 </div>
 </section>
@@ -316,12 +361,27 @@
 </div>
 </div>
 </section>
-<!-- About Us -->
+<!-- About Us & Partner Section -->
 <section class="py-24 bg-white" id="about-section">
 <div class="container-custom">
-<div class="max-w-4xl mx-auto text-center fade-in-section">
-<h2 class="text-3xl font-serif font-medium mb-8" id="about-title"></h2>
-<p class="text-xl text-gray-600 leading-relaxed" id="about-description"></p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+<!-- Goyoga Info -->
+<div class="fade-in-section">
+<h2 class="text-3xl md:text-4xl font-serif font-medium mb-8" id="about-title">Meist | Goyoga Tallinn</h2>
+<p class="text-xl text-gray-600 leading-relaxed mb-8" id="about-description"></p>
+</div>
+<!-- Partner Info -->
+<div class="bg-stone-50 rounded-[2.5rem] p-10 lg:p-12 border border-stone-100 shadow-sm fade-in-section" style="transition-delay: 100ms;">
+<div class="mb-8">
+<img alt="Casa Rituals" class="h-12 w-auto mb-8" id="partner-logo" src="/assets/corporate/casa-rituals-logo.svg"/>
+<h3 class="text-2xl font-serif font-medium text-gray-900 mb-6" id="partner-title">Goyoga Heaolu Partner</h3>
+<p class="text-gray-600 leading-relaxed mb-8" id="partner-description"></p>
+<a class="inline-flex items-center gap-2 text-pink-600 font-bold uppercase tracking-widest text-xs hover:gap-3 transition-all group" href="https://www.casarituals.com/" id="partner-link" target="_blank">
+<span id="partner-link-text">Loe lähemalt</span>
+<i class="w-4 h-4" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -359,7 +419,7 @@
 </div>
 </div>
 </footer>
-<script src="/js/script.js?v=1775672482"></script>
+<script src="/js/script.js?v=1775673177"></script>
 <script>
         // Icons array for benefits to make them look nice
         const benefitIcons = ['zap', 'brain', 'trending-up', 'messages-square', 'heart-pulse', 'shield-check', 'award'];
@@ -456,7 +516,71 @@
                 });
             }
 
-            // 1.5 Collaboration
+            // 1.5 NEW Quote 3 Spotlight
+            const stat3NumEl = document.getElementById('stat3-num');
+            if (stat3NumEl) stat3NumEl.textContent = data.stat3.num;
+            
+            const stat3QuoteEl = document.getElementById('stat3-quote');
+            if (stat3QuoteEl) stat3QuoteEl.textContent = data.stat3.quote;
+            
+            const stat3TagEl = document.getElementById('stat3-tag');
+            if (stat3TagEl) stat3TagEl.textContent = data.stat3.tag;
+
+            // 1.6 Clients & Feedback
+            const clientsTitleEl = document.getElementById('clients-title');
+            if (clientsTitleEl) clientsTitleEl.textContent = data.clients.title;
+            
+            const clientsIntroEl = document.getElementById('clients-intro');
+            if (clientsIntroEl) clientsIntroEl.textContent = data.clients.intro;
+            
+            const localClientsContainer = document.getElementById('local-clients-list');
+            if (localClientsContainer) {
+                localClientsContainer.innerHTML = '';
+                data.clients.local.forEach(client => {
+                    const badge = document.createElement('div');
+                    badge.className = "px-6 py-3 bg-stone-50 rounded-full text-stone-600 font-medium border border-stone-100 hover:border-pink-200 hover:bg-white hover:shadow-sm transition-all cursor-default text-sm";
+                    badge.textContent = client;
+                    localClientsContainer.appendChild(badge);
+                });
+            }
+
+            const intTitleEl = document.getElementById('clients-international-title');
+            if (intTitleEl) intTitleEl.textContent = data.clients.internationalTitle;
+
+            const internationalClientsContainer = document.getElementById('international-clients-list');
+            if (internationalClientsContainer) {
+                internationalClientsContainer.innerHTML = '';
+                data.clients.international.forEach(client => {
+                    const item = document.createElement('div');
+                    item.className = "flex items-center gap-3 text-stone-500 font-medium text-sm";
+                    item.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-pink-400 shrink-0"></i> ${client}`;
+                    internationalClientsContainer.appendChild(item);
+                });
+            }
+
+            // 1.7 About & Partner
+            const aboutTitleEl = document.getElementById('about-title');
+            if (aboutTitleEl) aboutTitleEl.textContent = data.about.title;
+            
+            const aboutDescEl = document.getElementById('about-description');
+            if (aboutDescEl) aboutDescEl.textContent = data.about.description;
+
+            const partnerTitleEl = document.getElementById('partner-title');
+            if (partnerTitleEl) partnerTitleEl.textContent = data.about.partner.title;
+
+            const partnerDescEl = document.getElementById('partner-description');
+            if (partnerDescEl) partnerDescEl.textContent = data.about.partner.desc;
+
+            const partnerLinkTextEl = document.getElementById('partner-link-text');
+            if (partnerLinkTextEl) partnerLinkTextEl.textContent = data.about.partner.linkText;
+
+            const partnerLinkEl = document.getElementById('partner-link');
+            if (partnerLinkEl) partnerLinkEl.href = data.about.partner.linkUrl;
+
+            const partnerLogoEl = document.getElementById('partner-logo');
+            if (partnerLogoEl) partnerLogoEl.src = data.about.partner.logo;
+
+            // 1.8 Collaboration
             const collabTitleEl = document.getElementById('collaboration-title');
             if (collabTitleEl) collabTitleEl.textContent = data.collaboration.title;
             
@@ -492,13 +616,6 @@
                     benefitsGrid.appendChild(card);
                 });
             }
-
-            // 3. About
-            const aboutTitleEl = document.getElementById('about-title');
-            if (aboutTitleEl) aboutTitleEl.textContent = data.about.title;
-            
-            const aboutDescEl = document.getElementById('about-description');
-            if (aboutDescEl) aboutDescEl.textContent = data.about.description;
 
             // 4. Practices
             const practicesTitleEl = document.getElementById('practices-title');
