@@ -25,11 +25,10 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* 3D Flip Card Styles - Improved for Dynamic Content */
+        /* 3D Flip Card Styles - Robust Grid Stacking Approach */
         .flip-card {
             background-color: transparent;
             width: 100%;
-            min-height: 550px; /* Base minimum */
             perspective: 2000px;
             margin-bottom: 2rem;
             will-change: transform;
@@ -38,10 +37,11 @@
         .flip-card-inner {
             position: relative;
             width: 100%;
-            height: 100%;
-            text-align: center;
             transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
         }
 
         .flip-card.flipped .flip-card-inner {
@@ -49,33 +49,28 @@
         }
 
         .flip-card-front, .flip-card-back {
-            position: absolute;
+            grid-area: 1 / 1; /* Stack directly on top of each other */
             width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
             border-radius: 1.5rem;
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            min-height: 520px;
+            background-color: #fff;
+            border: 1px solid #f3f4f6;
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             transform: rotateX(0deg); /* Safari fix */
         }
 
-        .flip-card-front {
-            background-color: #fff;
-            border: 1px solid #f3f4f6;
-        }
-
         .flip-card-back {
-            background-color: #fff;
             transform: rotateY(180deg);
             padding: 2.5rem 2rem;
-            border: 1px solid #f3f4f6;
         }
 
-        /* Flex helpers for internal content */
-        .card-content-scroll {
+        /* Content containers with flex-grow to push buttons to the bottom */
+        .card-content-wrapper {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -367,34 +362,7 @@
             const card = document.getElementById(`flip-card-${id}`);
             if (card) {
                 card.classList.toggle('flipped');
-                // Re-sync height in case of dynamic content changes
-                syncCardHeights();
             }
-        }
-
-        // New function to synchronize front and back face heights
-        function syncCardHeights() {
-            const cards = document.querySelectorAll('.flip-card');
-            cards.forEach(card => {
-                const front = card.querySelector('.flip-card-front');
-                const back = card.querySelector('.flip-card-back');
-                
-                if (front && back) {
-                    // Reset heights first to measure natural content height
-                    front.style.height = 'auto';
-                    back.style.height = 'auto';
-                    card.style.height = 'auto';
-                    
-                    // Measure
-                    const maxHeight = Math.max(front.scrollHeight, back.scrollHeight, 550);
-                    
-                    // Apply
-                    const heightPx = `${maxHeight}px`;
-                    card.style.height = heightPx;
-                    front.style.height = '100%'; // Stretch to parent
-                    back.style.height = '100%';
-                }
-            });
         }
 
         function renderCorporatePage() {
@@ -564,7 +532,7 @@
                                     <div class="w-full relative h-[220px] flex-shrink-0">
                                         <img src="${img}" alt="${pkg.title}" class="absolute inset-0 w-full h-full object-cover" title="${pkg.title}">
                                     </div>
-                                    <div class="card-content-scroll">
+                                    <div class="card-content-wrapper">
                                         <h3 class="text-2xl font-serif font-medium mb-6">${pkg.title}</h3>
                                         <div class="flex flex-col gap-y-3 mb-8 flex-grow">
                                             ${detailsHtml}
@@ -598,9 +566,6 @@
                 });
             }
 
-            // Set dynamic heights after layout completes
-            setTimeout(syncCardHeights, 100);
-
             // Reinitialize lucide icons for newly injected content
             if (window.lucide) {
                 window.lucide.createIcons();
@@ -610,13 +575,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderCorporatePage();
             
-            // Re-sync heights on window resize
-            window.addEventListener('resize', () => {
-                // Debounce slightly for performance
-                clearTimeout(window.resizeTimer);
-                window.resizeTimer = setTimeout(syncCardHeights, 150);
-            });
-
             // Listen for language changes triggered by custom events (from script.js)
             window.addEventListener('languageChanged', (e) => {
                 if(e.detail && e.detail.lang) {
