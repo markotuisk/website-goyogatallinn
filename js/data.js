@@ -1771,7 +1771,7 @@ const pricingData = {
         single: {
             "title": "Ühekordsed külastused",
             "options": [
-                { "name": "1x Tund", "price": "18€", "desc": "Kehtib ühele vabalt valitud tunnile. Oled esimest korda? Vaata Liikmepakettide alt Studio Explorer Passi – 3 tundi maksab kokku 29€, mis teeb ühe tunni hinnaks vaid 9.66€!" },
+                { "name": "1x Tund", "price": "18€", "link": "https://wise.com/pay/r/im7haPMPHiOGGt0", "qrCode": "/assets/qr/1x-session-et-qr.png", "desc": "Kehtib ühele vabalt valitud tunnile. Oled esimest korda? Vaata Liikmepakettide alt Studio Explorer Passi – 3 tundi maksab kokku 29€, mis teeb ühe tunni hinnaks vaid 9.66€!" },
                 { "name": "Õpilane", "price": "15€", "link": "https://wise.com/pay/r/KR6vh5TdQJeMvX0", "qrCode": "/assets/qr/student-et-qr.png", "desc": "Soodushind õpilastele ja tudengitele. Vajalik kehtiv soodustust tõendav dokument." },
                 { "name": "Pensionär", "price": "10€", "desc": "Soodushind pensionäridele. Vajalik kehtiv dokument." }
             ],
