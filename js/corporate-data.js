@@ -62,7 +62,7 @@ const corporateData = {
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Jooga & Vaimse Tervise Töötuba",
+                    "title": "Jooga & Vaimse Tervise Töötoad",
                     "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
                     "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Loeng (x1 kuni 30min)", "Tervislik jook ja snack", "Kuni 4hrs", "2 õpetajat", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 15+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
@@ -138,7 +138,7 @@ const corporateData = {
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Yoga & Mental Health Workshop",
+                    "title": "Yoga & Mental Health Workshops",
                     "desc": "The Mind & Body Health package is an up to half-day workshop that combines wellness practices designed to improve mental health and mobility. It begins with breathing techniques or meditation (up to 30min), followed by an hour-long yoga class. After yoga, we perform a thorough hour-long lying relaxation (yoga nidra) with a sound journey.\n\nThe workshop ends with a short wellness lecture on a selected topic (e.g. nutrition), during which we provide healthy snacks and drinks. The workshop is guided by 2 teachers/practitioners and is ideal for team events. Can be held at client's location or Goyoga studio.",
                     "details": ["Conscious breathing", "Yoga (dynamic or calm)", "Deep relaxation (yoga nidra)", "Sound journey", "Lecture (x1 up to 30min)", "Healthy drink and snack", "Up to 4hrs", "2 teachers", "All equipment included", "Estonian and/or English", "At client's location or Goyoga studio", "Groups from 15+ employees", "Request quote for larger groups"]
                 },
@@ -214,7 +214,7 @@ const corporateData = {
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Jooga- ja mielenterveystyöpaja",
+                    "title": "Jooga- ja mielenterveystyöpajat",
                     "desc": "Mind & Body Health on jopa puolipäiväinen työpaja, joka yhdistää mielenterveyttä ja liikkuvuutta edistävät hyvinvointikäytännöt. Se alkaa joko hengitysharjoituksilla tai meditaatiolla, jota seuraa tunnin pituinen joogatunti. Joogan jälkeen teemme perusteellisen tunnin mittaisen makuurentoutuksen äänimaljojen kera.\n\nTyöpaja päättyy lyhyeen hyvinvointiluennon valitusta aiheesta (esim. ravitsemus), jonka aikana tarjoamme terveellisiä välipaloja ja juomia. Työpajan ohjaa 2 opettajaa ja se sopii erinomaisesti tiimitapahtumaksi. Voidaan toteuttaa asiakkaan luona tai Goyoga-studiolla.",
                     "details": ["Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Syvä rentoutuminen (yoga nidra)", "Äänimaljamatka", "Luento (1x jopa 30 min)", "Terveellinen juoma ja välipala", "Jopa 4 tuntia", "2 opettajaa", "Sisältää kaikki varusteet", "Viroksi ja/tai englanniksi", "Asiakkaan luona tai Goyoga-studiolla", "Ryhmät alkaen 15+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
                 },
@@ -290,7 +290,7 @@ const corporateData = {
                 },
                 {
                     "id": "mindbody",
-                    "title": "Йога и Мастер-класс по психическому здоровью",
+                    "title": "Йога и Мастер-классы по психическому здоровью",
                     "desc": " Mind & Body Health — это семинар на полдня, объединяющий велнес-практики. Начинается с дыхания или медитации, затем часовой класс йоги. После — глубокое расслабление с звуковым путешествием.\n\nЗавершается короткой лекцией на выбранную тему с полезными закусками и напитками. Занятие проводят 2 преподавателя. Идеально для тимбилдинга. Проводится у клиента или в Goyoga.",
                     "details": ["Осознанное дыхание", "Йога (динамичная или спокойная)", "Глубокое расслабление (йога-нидра)", "Звуковое путешествие", "Лекция (x1 до 30 мин)", "Полезные закуски и напитки", "До 4 часов", "2 преподавателя", "Все оборудование включено", "На эстонском и/v/или английском", "У клиента или в студии Goyoga", "Группы от 15+ сотрудников", "Запросите цену для больших групп"]
                 },
