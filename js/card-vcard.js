@@ -3,7 +3,7 @@
  * Generates and downloads a .vcf (vCard) file for a teacher.
  */
 
-function downloadVCard(teacherId, data) {
+async function downloadVCard(teacherId, data) {
     if (!data) return;
 
     const name = data.name || 'Yoga Teacher';
@@ -19,6 +19,12 @@ function downloadVCard(teacherId, data) {
     const nameParts = name.split(' ');
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
+
+    // Convert Image to Base64
+    let photoBase64 = "";
+    if (data.image) {
+        photoBase64 = await imageToBase64(data.image);
+    }
 
     // vCard content construction
     let vcard = [
@@ -42,6 +48,10 @@ function downloadVCard(teacherId, data) {
         vcard.push(`X-SOCIALPROFILE;TYPE=instagram:${instagram}`);
     }
 
+    if (photoBase64) {
+        vcard.push(`PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}`);
+    }
+
     // Add studio address
     vcard.push("ADR;TYPE=WORK,PREF:;;Narva mnt 7D;Tallinn;;10117;Estonia");
     
@@ -60,6 +70,27 @@ function downloadVCard(teacherId, data) {
     document.body.removeChild(link);
     
     window.URL.revokeObjectURL(url);
+}
+
+/**
+ * Helper to convert image to base64
+ */
+async function imageToBase64(url) {
+    try {
+        const response = await fetch(url);
+        const blob = await response.blob();
+        return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                // Return just the base64 part
+                resolve(reader.result.split(',')[1]);
+            };
+            reader.readAsDataURL(blob);
+        });
+    } catch (e) {
+        console.error("Could not convert image to base64", e);
+        return null;
+    }
 }
 
 window.downloadVCard = downloadVCard;

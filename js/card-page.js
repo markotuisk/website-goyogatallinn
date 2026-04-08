@@ -12,9 +12,12 @@ function initCard() {
     const urlParams = new URLSearchParams(window.location.search);
     const teacherId = urlParams.get('id');
     
-    // Support either clean URLs (/en/card/raili) or query params
+    // Support either clean URLs (/en/card/raili) or query params or .html files
     const pathParts = window.location.pathname.split('/');
-    const slugFromPath = pathParts[pathParts.length - 1];
+    let slugFromPath = pathParts[pathParts.length - 1];
+    if (slugFromPath.endsWith('.html')) {
+        slugFromPath = slugFromPath.replace('.html', '');
+    }
     
     const id = teacherId || slugFromPath;
     
@@ -42,32 +45,58 @@ function renderCardData(id, data) {
         imageEl.alt = data.name;
     }
 
-    // Social & Contact Buttons
-    const emailBtn = document.getElementById('btn-email');
-    if (emailBtn) {
-        const email = data.socials?.email || 'info@goyoga.ee';
-        emailBtn.href = `mailto:${email}?subject=Enquiry from Digital Card`;
+    // Detailed Values
+    const email = data.socials?.email || "info@goyoga.ee";
+    const phone = data.socials?.phone || "+372 513 2433";
+    const website = data.socials?.website || "";
+    const instagram = data.socials?.instagram || "";
+
+    // Email
+    const emailVal = document.getElementById('val-email');
+    const emailItem = document.getElementById('item-email');
+    if (emailVal) emailVal.textContent = email;
+    if (emailItem) emailItem.href = `mailto:${email}`;
+
+    // Phone
+    const phoneVal = document.getElementById('val-phone');
+    const phoneItem = document.getElementById('item-phone');
+    if (phoneVal) phoneVal.textContent = phone;
+    if (phoneItem) phoneItem.href = `tel:${phone.replace(/\s+/g, '')}`;
+
+    // Website
+    const webVal = document.getElementById('val-website');
+    const webItem = document.getElementById('item-website');
+    if (webVal && website) {
+        webVal.textContent = website.replace(/^https?:\/\//, '').replace(/\/$/, '');
+        webItem.href = website;
+    } else if (webItem) {
+        webItem.style.display = 'none';
     }
 
-    const phoneBtn = document.getElementById('btn-phone');
-    if (phoneBtn) {
-        const phone = data.socials?.phone || '+3725132433';
-        phoneBtn.href = `tel:${phone.replace(/\s+/g, '')}`;
+    // Instagram
+    const instaVal = document.getElementById('val-instagram');
+    const instaItem = document.getElementById('item-instagram');
+    if (instaVal && instagram && instagram !== '#') {
+        const handle = instagram.split('/').filter(Boolean).pop() || "Instagram";
+        instaVal.textContent = handle.startsWith('@') ? handle : `@${handle}`;
+        instaItem.href = instagram;
+    } else if (instaItem) {
+        instaItem.style.display = 'none';
     }
 
-    const instagramBtn = document.getElementById('btn-instagram');
-    if (instagramBtn) {
-        if (data.socials?.instagram && data.socials.instagram !== '#') {
-            instagramBtn.href = data.socials.instagram;
-        } else {
-            instagramBtn.classList.add('opacity-30', 'pointer-events-none');
-        }
+    // QR Code Generation
+    const qrImg = document.getElementById('qr-code-img');
+    if (qrImg) {
+        const currentUrl = window.location.href;
+        // Using qrserver.com as it's more robust against ORB/CORS blocking than Google Charts
+        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(currentUrl)}`;
     }
 
-    // Profile Link
+    // Profile Link (Localized)
+    const lang = window.location.pathname.split('/')[1] || 'en';
     const profileLink = document.getElementById('teacher-profile-link');
     if (profileLink) {
-        profileLink.href = `/teacher.html?id=${id}`;
+        profileLink.href = `/${lang}/teacher?id=${id}`;
     }
 }
 
@@ -78,35 +107,6 @@ function setupInteractions(id, data) {
         saveBtn.addEventListener('click', () => {
             if (window.downloadVCard) {
                 window.downloadVCard(id, data);
-            }
-        });
-    }
-
-    // QR Share
-    const shareBtn = document.getElementById('share-card-btn');
-    const qrOverlay = document.getElementById('qr-overlay');
-    const closeQrBtn = document.getElementById('close-qr-btn');
-    const qrImg = document.getElementById('qr-code-img');
-
-    if (shareBtn && qrOverlay && qrImg) {
-        shareBtn.addEventListener('click', () => {
-            // Generate QR Code via Google Chart API
-            const currentUrl = window.location.href;
-            const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=${encodeURIComponent(currentUrl)}&choe=UTF-8&chld=L|1`;
-            qrImg.src = qrUrl;
-            
-            qrOverlay.style.display = 'flex';
-            qrOverlay.classList.add('fade-in');
-        });
-
-        closeQrBtn.addEventListener('click', () => {
-            qrOverlay.style.display = 'none';
-        });
-
-        // Close on backdrop click
-        qrOverlay.addEventListener('click', (e) => {
-            if (e.target === qrOverlay) {
-                qrOverlay.style.display = 'none';
             }
         });
     }

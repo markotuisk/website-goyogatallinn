@@ -13,124 +13,141 @@
 <!-- Favicons -->
 <link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
 <style>
+        :root {
+            --brand-pink: #ec4899;
+            --brand-dark: #282420;
+            --bg-light: #FAF9F6;
+        }
+
         body {
-            background: linear-gradient(135deg, #FAF9F6 0%, #F2EFE9 100%);
+            background-color: var(--bg-light);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.05) 0px, transparent 50%);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-dark);
+            -webkit-font-smoothing: antialiased;
         }
 
         .card-container {
             width: 100%;
             max-width: 480px;
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            margin: 0 auto;
+            padding: 0 0 100px 0; /* Space for sticky button */
         }
 
-        .profile-ring {
-            position: relative;
-            padding: 4px;
-            background: linear-gradient(45deg, #ec4899, #f472b6);
-            border-radius: 50%;
-            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.3);
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-        }
-
-        .action-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            width: 100%;
-            padding: 1rem;
+        .main-card {
             background: white;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: all 0.2s ease;
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            border-radius: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            margin-top: 80px;
+            position: relative;
+            z-index: 10;
         }
 
-        .action-button:active {
-            transform: scale(0.95);
-            background: #f9fafb;
+        .profile-header {
+            height: 120px;
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            border-radius: 2rem 2rem 0 0;
+            position: relative;
         }
 
-        .save-contact-btn {
-            background: #282420;
-            color: white;
-            padding: 1.25rem;
-            border-radius: 1rem;
-            width: 100%;
-            font-weight: 600;
-            font-size: 1.125rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 2rem;
-            transition: all 0.2s ease;
+        .profile-img-container {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px;
+            background: white;
+            border-radius: 50%;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
-        .save-contact-btn:active {
-            transform: scale(0.98);
-            opacity: 0.9;
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 1.5rem;
-            width: 100%;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+            transition: background-color 0.2s;
         }
 
-        #qr-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            display: none;
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-item:active {
+            background-color: #f9fafb;
+        }
+
+        .icon-box {
+            width: 42px;
+            height: 42px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            background: #F05A5A; /* Warm reddish-pink from Blinq reference */
+            border-radius: 50%;
+            color: white;
+            flex-shrink: 0;
+            margin-right: 1rem;
         }
 
-        .qr-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 2rem;
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, var(--bg-light) 80%, transparent);
+            z-index: 50;
+            display: flex;
+            justify-content: center;
+        }
+
+        .save-button {
+            background: #F05A5A;
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 10px 15px -3px rgba(240, 90, 90, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             width: 100%;
             max-width: 320px;
+            justify-content: center;
+        }
+
+        .save-button:active {
+            transform: scale(0.96);
+        }
+
+        .qr-section {
+            padding: 2.5rem 1.5rem;
+            border-top: 8px solid var(--bg-light);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.5rem;
         }
 
         /* Animation */
-        .slide-up {
-            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        .fade-in-up {
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
     </style>
@@ -142,85 +159,94 @@
 </script><link href="https://www.goyoga.ee/en/card.html" hreflang="en" rel="alternate"/><link href="https://www.goyoga.ee/et/kaart.html" hreflang="et" rel="alternate"/><link href="https://www.goyoga.ee/fi/kortti.html" hreflang="fi" rel="alternate"/><link href="https://www.goyoga.ee/ru/karta.html" hreflang="ru" rel="alternate"/><link href="https://www.goyoga.ee/card.html" hreflang="x-default" rel="alternate"/></head>
 <body>
 <main class="card-container">
-<!-- Profile Section -->
-<div class="profile-ring slide-up">
-<img alt="Teacher" class="profile-img" id="teacher-image" src="/assets/raili-maripuu/profile-goyoga-tallinn-jooga-estonia-profile-raili-maripuu-ashtanga.webp"/>
-</div>
-<div class="mt-6 slide-up" style="animation-delay: 100ms;">
-<h1 class="text-3xl font-medium text-gray-900" id="teacher-name">Teacher Name</h1>
-<p class="text-pink-600 font-medium tracking-wide uppercase text-sm mt-1" id="teacher-role">Role / Specialization</p>
-<div class="flex items-center justify-center gap-2 mt-4">
-<img alt="GoYoga" class="h-6 w-auto grayscale opacity-60" src="/assets/branding/logo-goyoga-tallinn-estonia.svg"/>
-<span class="text-gray-400 font-medium text-sm">Goyoga Tallinn</span>
+<!-- Main Card Decoration -->
+<div class="main-card fade-in-up">
+<div class="profile-header">
+<div class="profile-img-container">
+<img alt="Teacher" class="profile-img" id="teacher-image" src=""/>
 </div>
 </div>
-<!-- Call to Actions -->
-<div class="w-full mt-10 grid grid-cols-3 gap-4 slide-up" style="animation-delay: 200ms;">
-<a class="action-button" href="mailto:info@goyoga.ee" id="btn-email">
-<div class="p-2 bg-rose-50 rounded-full text-rose-500">
-<i class="h-6 w-6" data-lucide="mail"></i>
+<!-- Identity Section -->
+<div class="pt-16 pb-8 text-center px-6">
+<h1 class="text-3xl font-bold text-gray-900 tracking-tight" id="teacher-name">Teacher Name</h1>
+<p class="text-gray-500 font-medium text-lg mt-1" id="teacher-role">Role / Specialization</p>
+<div class="flex items-center justify-center gap-2 mt-4 opacity-70">
+<img alt="GoYoga" class="h-5 w-auto grayscale" src="/assets/branding/logo-goyoga-tallinn-estonia.svg"/>
+<span class="text-gray-500 font-semibold text-xs tracking-widest uppercase">Goyoga Tallinn</span>
 </div>
-<span class="text-xs font-semibold text-gray-500 uppercase tracking-tighter" data-i18n="card.email">Email</span>
+</div>
+<!-- Contact List Section -->
+<div class="mt-4">
+<a class="info-item" href="#" id="item-phone">
+<div class="icon-box">
+<i class="w-5 h-5" data-lucide="phone"></i>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-gray-900 leading-tight" id="val-phone">...</span>
+<span class="text-xs text-gray-400 font-medium mt-0.5" data-i18n="card.label.work">Work</span>
+</div>
 </a>
-<a class="action-button" href="tel:+3725132433" id="btn-phone">
-<div class="p-2 bg-sky-50 rounded-full text-sky-500">
-<i class="h-6 w-6" data-lucide="phone"></i>
+<a class="info-item" href="#" id="item-email">
+<div class="icon-box">
+<i class="w-5 h-5" data-lucide="mail"></i>
 </div>
-<span class="text-xs font-semibold text-gray-500 uppercase tracking-tighter" data-i18n="card.call">Call</span>
+<div class="flex flex-col">
+<span class="font-bold text-gray-900 leading-tight" id="val-email">...</span>
+<span class="text-xs text-gray-400 font-medium mt-0.5" data-i18n="card.label.work">Work</span>
+</div>
 </a>
-<a class="action-button" href="#" id="btn-instagram" target="_blank">
-<div class="p-2 bg-purple-50 rounded-full text-purple-500">
-<i class="h-6 w-6" data-lucide="instagram"></i>
+<div class="info-item">
+<div class="icon-box">
+<i class="w-5 h-5" data-lucide="map-pin"></i>
 </div>
-<span class="text-xs font-semibold text-gray-500 uppercase tracking-tighter" data-i18n="card.social">Social</span>
+<div class="flex flex-col">
+<span class="font-bold text-gray-900 leading-tight" data-i18n="card.location">Narva mnt 7D, Tallinn</span>
+<span class="text-xs text-gray-400 font-medium mt-0.5" data-i18n="card.label.studio">Studio</span>
+</div>
+</div>
+<a class="info-item" href="#" id="item-website">
+<div class="icon-box">
+<i class="w-5 h-5" data-lucide="globe"></i>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-gray-900 leading-tight" id="val-website">...</span>
+<span class="text-xs text-gray-400 font-medium mt-0.5" data-i18n="card.label.website">Official Site</span>
+</div>
+</a>
+<a class="info-item" href="#" id="item-instagram">
+<div class="icon-box">
+<i class="w-5 h-5" data-lucide="instagram"></i>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-gray-900 leading-tight" id="val-instagram">...</span>
+<span class="text-xs text-gray-400 font-medium mt-0.5" data-i18n="card.label.instagram">Instagram</span>
+</div>
 </a>
 </div>
-<button class="save-contact-btn slide-up" id="save-contact-btn" style="animation-delay: 300ms;">
-<i class="h-6 w-6" data-lucide="user-plus"></i>
-<span data-i18n="card.save_contact">Save Contact</span>
-</button>
-<div class="glass-panel slide-up" style="animation-delay: 400ms;">
-<div class="flex flex-col gap-4">
-<a class="flex items-center justify-between text-gray-700 hover:text-pink-600 transition-colors group" href="/index.html#schedule">
-<div class="flex items-center gap-3">
-<i class="h-5 w-5 text-gray-400 group-hover:text-pink-500" data-lucide="calendar"></i>
-<span class="font-medium" data-i18n="card.class_schedule">Class Schedule</span>
+<!-- QR Code Section -->
+<div class="qr-section">
+<div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 shadow-inner">
+<img alt="Scan Me" class="w-40 h-40" id="qr-code-img" src=""/>
 </div>
-<i class="h-4 w-4" data-lucide="chevron-right"></i>
+<p class="text-sm text-gray-400 font-medium mt-6 text-center px-8" data-i18n="card.qr_instructions">Point your camera at the screen to instantly open this digital business card on your phone.</p>
+</div>
+<div class="py-8 border-t border-gray-50 text-center">
+<a class="inline-flex items-center text-gray-400 hover:text-pink-500 font-medium text-sm transition-colors group" href="#" id="teacher-profile-link">
+<span data-i18n="card.view_biography">Full Biography</span>
+<i class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" data-lucide="chevron-right"></i>
 </a>
-<div class="h-px bg-gray-200/50 w-full"></div>
-<a class="flex items-center justify-between text-gray-700 hover:text-pink-600 transition-colors group" href="#" id="teacher-profile-link">
-<div class="flex items-center gap-3">
-<i class="h-5 w-5 text-gray-400 group-hover:text-pink-500" data-lucide="user"></i>
-<span class="font-medium" data-i18n="card.view_biography">Full Biography</span>
-</div>
-<i class="h-4 w-4" data-lucide="chevron-right"></i>
-</a>
-<div class="h-px bg-gray-200/50 w-full"></div>
-<button class="flex items-center justify-between text-gray-700 hover:text-pink-600 transition-colors group w-full text-left" id="share-card-btn">
-<div class="flex items-center gap-3">
-<i class="h-5 w-5 text-gray-400 group-hover:text-pink-500" data-lucide="share-2"></i>
-<span class="font-medium" data-i18n="card.share_qr">Share QR Code</span>
-</div>
-<i class="h-4 w-4" data-lucide="chevron-right"></i>
-</button>
 </div>
 </div>
-<footer class="mt-12 opacity-40 text-xs font-medium tracking-widest uppercase text-gray-500 mb-8 slide-up" style="animation-delay: 500ms;">
+<footer class="mt-8 opacity-20 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-800 text-center mb-12">
             © 2026 Goyoga Estonia OÜ
         </footer>
 </main>
-<!-- QR Overlay -->
-<div id="qr-overlay">
-<div class="qr-card">
-<h3 class="text-xl font-medium text-gray-900" data-i18n="card.scan_to_save">Scan to Save My Card</h3>
-<div class="bg-gray-50 p-4 rounded-xl" id="qr-container">
-<!-- QR Code injected here -->
-<img alt="QR Code" class="w-48 h-48" id="qr-code-img" src=""/>
-</div>
-<p class="text-sm text-gray-500 px-4" data-i18n="card.qr_instructions">Point your camera at the screen to instantly open this digital business card on your phone.</p>
-<button class="w-full py-3 bg-gray-100 text-gray-700 rounded-xl font-bold hover:bg-gray-200 transition-colors" data-i18n="card.close" id="close-qr-btn">Close</button>
-</div>
+<!-- Sticky Footer CTA -->
+<div class="sticky-footer fade-in-up" style="animation-delay: 400ms;">
+<button class="save-button" id="save-contact-btn">
+<i class="w-6 h-6" data-lucide="user-plus"></i>
+<span data-i18n="card.save_contact">Save Contact</span>
+</button>
 </div>
 <!-- Scripts -->
 <script src="/js/data.js"></script>
