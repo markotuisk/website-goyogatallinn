@@ -3,6 +3,7 @@ const corporateData = {
         "intro": {
             "p1": "Vaimne tervis ja liikumine moodustavad märkimisväärse osa töötaja üleüldisest heaolust töökohal. Ettevõtted otsivad oma töötajatele üha rohkem holistilisi teenuseid, stressi maandamisest kuni krooniliste haiguste vältimiseni, mis pakuvad nii füüsilisi kui ka psühholoogilisi kasutegureid.",
             "p2": "Goyoga Tallinn aitab ettevõtetel tõsta oma töötajate heaolu ja üleüldist tervislikku seisundit, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, joogat ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
+            "subtitle": "Ettevõtte Töötajate Heaolu",
             "statNumber": "86 %",
             "statQuote": "Eesti töötajatest leiab, et nende heaolu töökohal on palgaga võrdselt oluline faktor.",
             "statSource": "Stebby Töökoha Heaolu Uuring 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Loe raportit</a>"
@@ -77,6 +78,7 @@ const corporateData = {
         "intro": {
             "p1": "Mental health and movement form a significant part of an employee's overall well-being at work. At least 25% of Estonian employers support their employees' participation in training or sports events. While mental health support in Estonian organizations is growing, it is currently mostly limited to training or supervision. More statistics can be found in the National Institute for Health Development's 2019 Workplace Health Promotion study.",
             "p2": "Few Estonian employers use meditation, yoga, and conscious breathing as effective tools for managing employee stress and regulating the nervous system. Among European countries, the use of holistic practices to enhance employee well-being is most valued in France (84%), Sweden (82%), and the Netherlands (72%). In the United States, the same figure is 60%, where integrating yoga and wellness practices into corporate culture and healthcare has become the norm. Organizations are increasingly looking for holistic services, from stress management to preventing chronic diseases, which offer both physical and psychological benefits.",
+            "subtitle": "Corporate Employee Well-being",
             "statNumber": "86 %",
             "statQuote": "of Estonian employees find that their well-being at work is as important a factor as salary.",
             "statSource": "Stebby Workplace Wellness Study 2025: <a href='https://business.stebby.ee/en/wellness-report-2025/' class='underline hover:text-white transition-colors' target='_blank'>Read the report</a>"
@@ -151,6 +153,7 @@ const corporateData = {
         "intro": {
             "p1": "Mielenterveys ja liikunta muodostavat merkittävän osan työntekijän yleisestä hyvinvoinnista työssä. Vähintään 25 % virolaisista työnantajista tukee työntekijöidensä osallistumista harjoituksiin tai liikuntatapahtumiin. Vaikka mielenterveyden tuki virolaisissa organisaatioissa on kasvussa, se rajoittuu tällä hetkellä pääasiassa koulutukseen tai työnohjaukseen. Lisää tilastoja löytyy Terveyden kehittämisinstituutin (TAI) vuoden 2019 työpaikkaa koskevasta tutkimuksesta.",
             "p2": "Harvat virolaiset työnantajat käyttävät meditaatiota, joogaa ja tietoista hengitystä tehokkaina välineinä työntekijöiden stressin hallintaan ja hermoston säätelyyn. Euroopan maista holististen käytäntöjen hyödyntämistä työntekijöiden hyvinvoinnin edistämiseen arvostetaan eniten Ranskassa (84 %), Ruotsissa (82 %) ja Alankomaissa (72 %). Yhdysvalloissa vastaava luku on 60 %, missä joogan ja hyvinvointikäytäntöjen integroiminen yrityskulttuuriin ja työterveydenhuoltoon on tullut normiksi.",
+            "subtitle": "Yrityksen työntekijöiden hyvinvointi",
             "statNumber": "86 %",
             "statQuote": "virolaisista työntekijöistä kokee hyvinvoinnin työpaikalla yhtä tärkeäksi tekijäksi kuin palkan.",
             "statSource": "Stebby Työpaikan Hyvinvointitutkimus 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Lue raportti</a>"
@@ -225,6 +228,7 @@ const corporateData = {
         "intro": {
             "p1": "Психическое здоровье и движение составляют значительную часть общего благополучия сотрудника на рабочем месте. По меньшей мере 25% эстонских работодателей поддерживают участие своих сотрудников в тренировках или спортивных мероприятиях. Хотя поддержка психического здоровья в эстонских организациях растет, в настоящее время она в основном ограничивается обучением или супервизией. Больше статистики можно найти в исследовании Института развития здоровья за 2019 год.",
             "p2": "Немногие эстонские работодатели используют медитацию, йогу и осознанное дыхание как эффективные инструменты для снятия стресса сотрудников и регулирования нервной системы. Среди европейских стран использование холистических практик для повышения благополучия сотрудников наиболее ценится во Франции (84%), Швеции (82%) и Нидерландах (72%). В США этот показатель составляет 60%, где интеграция йоги и велнес-практик в корпоративную культуру и здравоохранение стала нормой. Организации все чаще ищут комплексные услуги, от управления стрессом до профилактики хронических заболеваний, которые предлагают как физические, так и психологические преимущества.",
+            "subtitle": "Благополучие сотрудников компании",
             "statNumber": "86 %",
             "statQuote": "эстонских работников считают благополучие на рабочем месте столь же важным фактором, как и зарплата.",
             "statSource": "Исследование благополучия Stebby 2025: <a href='https://business.stebby.ee/en/wellness-report-2025/' class='underline hover:text-white transition-colors' target='_blank'>Читать отчет</a>"

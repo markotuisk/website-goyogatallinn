@@ -318,7 +318,7 @@
 
             // 1. Hero & Intro
             document.getElementById('corporate-hero-title').textContent = translationsData[currentLang]?.["corporate.title"] || data.packagesSection.title;
-            document.getElementById('corporate-intro-tag').textContent = currentLang === 'et' ? "Ettevõtte vaimne tervis" : (currentLang === 'fi' ? "Yrityksen Mielenterveys" : (currentLang === 'ru' ? "Корпоративное здоровье" : "Corporate Mental Health"));
+            document.getElementById('corporate-intro-tag').textContent = data.intro.subtitle;
             
             // Trusted By translation
             document.getElementById('trusted-title').textContent = currentLang === 'et' ? "Meid on usaldanud" : (currentLang === 'fi' ? "Meihin luottavat" : (currentLang === 'ru' ? "Нам доверяют" : "Trusted By"));
