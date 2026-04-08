@@ -76,7 +76,9 @@ const corporateData = {
                 "Emotsionaalse intelligentsuse ja kommunikatsiooni suurenemine",
                 "Üleüldine tervise toetamine nt vererõhu ja südamehaiguste vähendamine",
                 "Toetab tervise edendamist töökohal",
-                "Tõstab üleüldist töökultuuri"
+                "Tõstab üleüldist töökultuuri",
+                "Vähendab sundasenditest tingitud füüsilisi pingeid",
+                "Soodustab paremat unekvaliteeti ja tõstab energiataset"
             ]
         },
         "clients": {
@@ -242,7 +244,9 @@ const corporateData = {
                 "Enhanced emotional intelligence and communication",
                 "Overall health support (e.g., reducing blood pressure and heart disease)",
                 "Supports workplace health promotion",
-                "Elevates overall work culture"
+                "Elevates overall work culture",
+                "Reduces physical tension caused by sedentary work postures",
+                "Promotes better sleep quality and increases energy levels"
             ]
         },
         "clients": {
@@ -401,7 +405,9 @@ const corporateData = {
                 "Tunneälyn ja viestinnän paraneminen",
                 "Yleisen terveyden tuki (esim. verenpaineen alentaminen)",
                 "Tukee terveyden edistämistä työpaikalla",
-                "Kohottaa yleistä työkulttuuria"
+                "Kohottaa yleistä työkulttuuria",
+                "Vähentää istumatyöstä johtuvia fyysisiä jännityksiä",
+                "Edistää parempaa unen laatua ja nostaa energiatasoa"
             ]
         },
         "clients": {
@@ -567,7 +573,9 @@ const corporateData = {
                 "Развитие эмоционального интеллекта и улучшение коммуникации",
                 "Поддержка общего здоровья (например, снижение артериального давления)",
                 "Поддержка укрепления здоровья на рабочем месте",
-                "Повышение общей культуры труда и корпоративного духа"
+                "Повышение общей культуры труда и корпоративного дух",
+                "Снимает физическое напряжение, вызванное сидячей работой",
+                "Улучшает качество сна и повышает уровень энергии"
             ]
         },
         "clients": {
