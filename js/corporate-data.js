@@ -5,7 +5,7 @@ const corporateData = {
             "p2": "Goyoga Tallinn aitab ettevõtetel tõsta oma töötajate heaolu ja üleüldist tervislikku seisundit, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, joogat ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
             "subtitle": "Ettevõtte Töötajate Heaolu",
             "statNumber": "86 %",
-            "statQuote": "Eesti töötajatest leiab, et nende heaolu töökohal on palgaga võrdselt oluline faktor.",
+            "statQuote": "Eesti töötajatest leiab, et their heaolu töökohal on palgaga võrdselt oluline faktor.",
             "statSource": "Stebby Töökoha Heaolu Uuring 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Loe raportit</a>"
         },
         "collaboration": {
@@ -33,7 +33,7 @@ const corporateData = {
         },
         "practices": {
             "title": "MEIE PRAKTIKAD",
-            "intro": "Goyoga Tallinna eesmärgiks on aidata ettevõtetel kaasa oma töötajate heaolu ja üleüldist tervislikku seisundi kasvule, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, jooga ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist. Oleme organisatsioonidele inspiratsiooniks ja lihtsustamiseks kokku pannud erinevad heaolu paketid. Lisaks saab kõiki meie tunniplaanis olevaid praktikaid tellida nii tundidena, töötubadena, nii eraldiseisva kogemusürituse kui ka firmasündmuste osana.",
+            "intro": "Goyoga Tallinna eesmärgiks on aidata ettevõtetel kaasa oma töötajate heaolu ja üleüldist tervislikku seisundi kasvule, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, jooga ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
             "items": [
                 "Dünaamiline jooga (Ashtanga, Vinyasa, Strength & Flow)",
                 "Rahulik jooga (Hatha, Slow Flow, 60+ jooga)",
@@ -45,31 +45,32 @@ const corporateData = {
             ]
         },
         "packagesSection": {
-            "title": "PAKETID",
+            "title": "HEAOLU PAKETID",
+            "intro": "Oleme organisatsioonidele inspiratsiooniks ja lihtsustamiseks kokku pannud erinevad heaolu paketid. Lisaks saab kõiki meie tunniplaanis olevaid praktikaid tellida nii tundidena, töötubadena, eraldiseisva kogemusürituse kui ka firmasündmuste osana.",
             "items": [
                 {
                     "id": "mindhealth",
-                    "title": "MindHealth | Vaimse Tervise Pakett",
+                    "title": "Vaimse Tervise Pakett",
                     "desc": "MindHealth pakett on mõeldud töötajate vaimse tervise toetamiseks, pingete vabastamiseks ja heaolu tasakaalustamiseks. Tegemist on sügavalt lõdvestava 90-minutilise sessiooniga, mis algab istuva meditatsiooniga. Sellele järgneb lamav põhjalik juhendatud lõdvestus (jooga nidra) koos helirännakuga. Vajadusel võib sessioonile lisada teadliku hingamise või kakaorituaali. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
-                    "details": ["Meditatsioon", "Helirännak", "Sügav lõdvestus (Jooga nidra)", "Kuni 10 inimesele", "Kuni 90mins", "1 õpetaja", "Eesti ja/või inglise keeles", "Alates 350€"]
+                    "details": ["Meditatsioon", "Helirännak", "Sügav lõdvestus (jooga nidra)", "Kuni 90mins", "1 õpetaja", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 5+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
                 {
                     "id": "bodyhealth",
-                    "title": "BodyHealth | Jooga & Liikuvuse Pakett",
+                    "title": "Jooga & Liikuvuse Pakett",
                     "desc": "BodyHealth pakett on mõeldud töötajate liikuvuse parandamiseks ja ergutamiseks ning keha ja meele tasakaalustamiseks. Tegemist on keha ja meelt tasakaalustava kuni 2-tunnise sessiooniga, mis algab hingamistehnikatega (ca 20min). Sellele järgneb kuni tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku lõdvestuse (jooga nidra). Vajadusel võib hingamistehnikad asendada näiteks meditatsiooniga. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
-                    "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Kuni 10 inimesele", "Kuni 2hrs", "1 õpetaja", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Alates 350€"]
+                    "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Kuni 2hrs", "1 õpetaja", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 5+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Jooga & Meelerahu Töötuba",
-                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, mis ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
-                    "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus", "Helirännak", "Loeng (1x kuni 30min)", "Tervislik jook ja snack", "Kuni 15 inimesele", "Kuni 4hrs", "2 õpetajat", "Sisaldab vahendeid", "Eesti ja/või inglise keeles", "Alates 850€"]
+                    "title": "Mind & Body Health | Jooga & Vaimse Tervise Töötuba",
+                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
+                    "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Loeng (x1 kuni 30min)", "Tervislik jook ja snack", "Kuni 4hrs", "2 õpetajat", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 15+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
                 {
                     "id": "wellnessday",
-                    "title": "Wellness Day",
-                    "desc": "Terviklik heaolu päev teie meeskonnale. Pakume täispikka programmi, mis ühendab kõik meie parimad praktikad tuues täieliku füüsilise ja vaimse taastumise.",
-                    "details": ["Meditatsioon", "Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Heaolu loengud (2x)", "Sügav lõdvestus", "Helirännak", "Tervislik lõuna", "Kuni 30 inimesele", "Kuni 8hrs", "2-4 õpetajat", "Sisaldab vahendeid", "Eesti või inglise keeles", "Alates 2,500€"]
+                    "title": "Heaolu Päev",
+                    "desc": "Wellness Day on terve päev või mitu päeva kestev Heaolu Päev, mille jooksul on ettevõtte töötajatel võimalik tutvuda ja kogeda erinevate tervise, jooga- ja heaolupraktikatega. Päeva sisu loome koostöös teie organisatsiooniga, et tagada teie töökultuurile kõige lähedasem ja huvitavam heaolu kogemus. Päeva fookuses on töötajate keha-meele tasakaal, närvisüsteemi reguleerimine, stressi maandamine ning teadlikkus oma tervisest, proovides erinevaid heaolupraktikaid, kuulates loenguid ja teraapiaid.",
+                    "details": ["Meditatsioon", "Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Heaolu loengud (2x)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Tervislik lõuna", "Kuni 8hrs", "2-4 õpetajat", "Sisaldab kõiki vahendeid", "Eesti või inglise keeles", "Grupid alates 30+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 }
             ]
         }
@@ -108,7 +109,7 @@ const corporateData = {
         },
         "practices": {
             "title": "OUR PRACTICES",
-            "intro": "The goal of Goyoga Tallinn is to help companies increase their employees' well-being and overall health, which in turn ensures employee productivity and retention. Holistic wellness practices such as meditation, yoga, and conscious breathing relieve employee stress and regulate the nervous system, helping to focus, communicate clearly, and prevent burnout. To inspire and simplify this for organizations, we have put together various wellness packages. Additionally, all practices in our schedule can be ordered as classes, workshops, solo experience events, or as part of company events.",
+            "intro": "The goal of Goyoga Tallinn is to help companies increase their employees' well-being and overall health, which in turn ensures employee productivity and retention. Holistic wellness practices such as meditation, yoga, and conscious breathing relieve employee stress and regulate the nervous system, helping to focus, communicate clearly, and prevent burnout.",
             "items": [
                 "Dynamic yoga (Ashtanga, Vinyasa, Strength & Flow)",
                 "Calm yoga (Hatha, Slow Flow, 60+ yoga)",
@@ -120,31 +121,32 @@ const corporateData = {
             ]
         },
         "packagesSection": {
-            "title": "PACKAGES",
+            "title": "WELLNESS PACKAGES",
+            "intro": "We have put together various wellness packages to inspire and simplify things for organizations. Additionally, all practices in our schedule can be ordered as classes, workshops, standalone experience events, or as part of company events.",
             "items": [
                 {
                     "id": "mindhealth",
-                    "title": "MindHealth | Mental Health Package",
+                    "title": "Mental Health Package",
                     "desc": "The MindHealth package is designed to support employees' mental health, release tension, and balance well-being. It is a deeply relaxing 90-minute session that begins with sitting meditation. This is followed by lying deep guided relaxation (yoga nidra) along with a sound journey. If needed, conscious breathing or a cacao ritual can be added to the session. The session can be held either at the client's location or at the Goyoga studio.",
-                    "details": ["Meditation", "Sound Journey", "Deep relaxation (Yoga nidra)", "Up to 10 people", "Up to 90mins", "1 teacher", "Estonian and/or English", "From 350€"]
+                    "details": ["Meditation", "Sound Journey", "Deep relaxation (Yoga nidra)", "Up to 90mins", "1 teacher", "Estonian and/or English", "At client's location or Goyoga studio", "Groups from 5+ employees", "Request quote for larger groups"]
                 },
                 {
                     "id": "bodyhealth",
-                    "title": "BodyHealth | Yoga & Mobility Package",
-                    "desc": "The BodyHealth package is designed to improve and stimulate employees' mobility and balance the body and mind. It is an up to 2-hour session that starts with breathing techniques (approx. 20min). This is followed by up to an hour-long yoga class, the style of which is chosen by the client (dynamic or calm). After yoga, we do a thorough lying relaxation (yoga nidra). If necessary, breathing techniques can be replaced by meditation, for example. The session can be held at the client's location or Goyoga studio.",
-                    "details": ["Conscious breathing", "Yoga (dynamic or calm)", "Deep relaxation (Yoga nidra)", "Up to 10 people", "Up to 2hrs", "1 teacher", "Includes all equipment", "Estonian and/or English", "From 350€"]
+                    "title": "Yoga & Mobility Package",
+                    "desc": "The BodyHealth package is designed to improve and stimulate employees' mobility and balance the body and mind. It is a session of up to 2 hours that starts with breathing techniques (approx. 20min). This is followed by an hour-long yoga class, style of which is chosen by the client. After yoga, we perform a thorough lying relaxation (yoga nidra). If necessary, breathing techniques can be replaced by meditation. Can be held at client's location or Goyoga studio.",
+                    "details": ["Conscious breathing", "Yoga (dynamic or calm)", "Deep relaxation (yoga nidra)", "Up to 2hrs", "1 teacher", "All equipment included", "Estonian and/or English", "At client's location or Goyoga studio", "Groups from 5+ employees", "Request quote for larger groups"]
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Yoga & Mindfulness Workshop",
-                    "desc": "The Mind & Body Health package is an up to half-day workshop that combines wellness practices designed to improve mental health and mobility. It begins with either breathing techniques or meditation (up to 30min). This is followed by an hour-long yoga class chosen by the client. After yoga, we do a thorough lying relaxation (yoga nidra) with a sound journey. The workshop ends with a short wellness lecture on a relevant topic (e.g., nutrition), during which we provide healthy snacks and drinks. The workshop is guided by 2 teachers/practitioners and is ideal for team events. Can be held at the client's location or Goyoga studio.",
-                    "details": ["Conscious breathing", "Yoga (dynamic or calm)", "Deep relaxation", "Sound journey", "Lecture (1x up to 30min)", "Healthy drink and snack", "Up to 15 people", "Up to 4hrs", "2 teachers", "Includes equipment", "Estonian and/or English", "From 850€"]
+                    "title": "Mind & Body Health | Yoga & Mental Health Workshop",
+                    "desc": "The Mind & Body Health package is an up to half-day workshop that combines wellness practices designed to improve mental health and mobility. It begins with breathing techniques or meditation (up to 30min), followed by an hour-long yoga class. After yoga, we perform a thorough hour-long lying relaxation (yoga nidra) with a sound journey.\n\nThe workshop ends with a short wellness lecture on a selected topic (e.g. nutrition), during which we provide healthy snacks and drinks. The workshop is guided by 2 teachers/practitioners and is ideal for team events. Can be held at client's location or Goyoga studio.",
+                    "details": ["Conscious breathing", "Yoga (dynamic or calm)", "Deep relaxation (yoga nidra)", "Sound journey", "Lecture (x1 up to 30min)", "Healthy drink and snack", "Up to 4hrs", "2 teachers", "All equipment included", "Estonian and/or English", "At client's location or Goyoga studio", "Groups from 15+ employees", "Request quote for larger groups"]
                 },
                 {
                     "id": "wellnessday",
                     "title": "Wellness Day",
-                    "desc": "Comprehensive wellness day for your team. We offer a full-length program combining all our best practices bringing complete physical and mental recovery.",
-                    "details": ["Meditation", "Conscious breathing", "Yoga (dynamic or calm)", "Wellness lectures (2x)", "Deep relaxation", "Sound journey", "Healthy lunch", "Up to 30 people", "Up to 8hrs", "2-4 teachers", "Includes equipment", "Estonian or English", "From 2,500€"]
+                    "desc": "Wellness Day is a full-day or multi-day Wellness Day during which employees can experience various health, yoga, and wellness practices. We create the content in cooperation with your organization to ensure the most interesting experience for your work culture. The focus is on body-mind balance, nervous system regulation, stress management, and health awareness.",
+                    "details": ["Meditation", "Conscious breathing", "Yoga (dynamic or calm)", "Wellness lectures (2x)", "Deep relaxation (yoga nidra)", "Sound journey", "Healthy lunch", "Up to 8hrs", "2-4 teachers", "All equipment included", "Estonian or English", "Groups from 30+ employees", "Request quote for larger groups"]
                 }
             ]
         }
@@ -179,11 +181,11 @@ const corporateData = {
         },
         "about": {
             "title": "MEISTÄ | GOYOGA TALLINN",
-            "description": "Goyoga Tallinn on tarjonnut jooga- ja hyvinvointipalveluita Viron markkinoilla jo vuodesta 2016. Tallinnan keskustassa toimivasta joogastudiostamme olemme laajentaneet palveluitamme yrityksille sekä Virossa että ulkomailla. Harjoittajamme ja terapeuttimme ovat kokeneita ammattilaisia, jotka ohjaavat tunteja ja työpajoja sujuvasti viroksi ja englanniksi. Yhteisömme on kansainvälinen, tuoden hyvinvointikokemuksia Viroon muun muassa Yhdysvalloista, Englannista ja Aasiasta."
+            "description": "Goyoga Tallinn on tarjonnut jooga- ja hyvinvointipalveluita Viron markkinoilla jo vuodesta 2016. Tallinnan keskustassa toimivasta joogastudiostamme olemme laajentaneet palveluitamme yrityksille sekä Virossa että ulkomailla. Harjoittajamme ja terapeuttimme ovat kogenuja ammattilaisia, jotka ohjaavat tunteja ja työpajoja sujuvasti viroksi ja englanniksi. Yhteisömme on kansainvälinen, tuoden hyvinvointikokemuksia Viroon muun muassa Yhdysvalloista, Englannista ja Aasiasta."
         },
         "practices": {
             "title": "KÄYTÄNTÖMME",
-            "intro": "Goyoga Tallinnan tavoitteena on auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja terveyttä, mikä vuorostaan takaa työntekijöiden tuottavuuden ja pysyvyyden. Holistiset hyvinvointikäytännöt, kuten meditaatio, jooga ja tietoinen hengitys, lievittävät työntekijöiden stressiä ja säätelevät hermostoa, auttaen keskittymään, kommunikoimaan selkeästi ja ehkäisemään työuupumusta. Inspiraatioksi organisaatioille olemme koonneet erilaisia hyvinvointipaketteja. Lisäksi kaikkia tunneillamme olevia käytäntöjä voi tilata yksittäisinä tunteina, työpajoina tai osana yritystapahtumia.",
+            "intro": "Goyoga Tallinnan tavoitteena on auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja terveyttä, mikä vuorostaan takaa työntekijöiden tuottavuuden ja pysyvyyden. Holistiset hyvinvointikäytännöt, kuten meditaatio, jooga ja tietoinen hengitys, lievittävät työntekijöiden stressiä ja säätelevät hermostoa, auttaen keskittymään, kommunikoimaan selkeästi ja ehkäisemään työuupumusta.",
             "items": [
                 "Dynaaminen jooga (Ashtanga, Vinyasa, Strength & Flow)",
                 "Rauhallinen jooga (Hatha, Slow Flow, 60+ jooga)",
@@ -195,31 +197,32 @@ const corporateData = {
             ]
         },
         "packagesSection": {
-            "title": "PAKETIT",
+            "title": "HYVINVOINTIPAKETIT",
+            "intro": "Olemme koonneet organisaatioille erilaisia hyvinvointipaketteja inspiraatioksi ja helpotukseksi. Lisäksi kaikkia tunneillamme olevia käytäntöjä voi tilata tunteina, työpajoina, erillisinä kokemustapahtumina tai osana yritystapahtumia.",
             "items": [
                 {
                     "id": "mindhealth",
-                    "title": "MindHealth | Mielenterveyspaketti",
-                    "desc": "MindHealth -paketti on suunniteltu tukemaan työntekijöiden mielenterveyttä, vapauttamaan jännitystä ja tasapainottamaan hyvinvointia. Se on syvästi rentouttava 90 minuutin istunto, joka alkaa istumameditaatiolla. Sitä seuraa ohjattu makuurentoutus (yoga nidra) ja äänimaljamatka. Tarvittaessa istuntoon voidaan lisätä tietoista hengitystä tai kaakaorituaali. Istunto voidaan pitää asiakkaan tiloissa tai Goyoga-studiolla.",
-                    "details": ["Meditaatio", "Äänimaljamatka", "Syvä rentoutuminen (Yoga nidra)", "Jopa 10 hengelle", "Jopa 90 min", "1 opettaja", "Viroksi tai englanniksi", "Alkaen 350€"]
+                    "title": "Mielenterveyspaketti",
+                    "desc": "MindHealth-paketti on suunniteltu tukemaan työntekijöiden mielenterveyttä, vapauttamaan jännitystä ja tasapainottamaan hyvinvointia. Se on syvästi rentouttava 90 minuutin istunto, joka alkaa istumameditaatiolla. Sitä seuraa ohjattu makuurentoutus (yoga nidra) ja äänimaljamatka. Tarvittaessa istuntoon voidaan lisätä tietoista hengitystä tai kaakaorituaali. Voidaan toteuttaa asiakkaan luona tai Goyoga-studiolla.",
+                    "details": ["Meditaatio", "Äänimaljamatka", "Syvä rentoutuminen (yoga nidra)", "Jopa 90 min", "1 opettaja", "Viroksi ja/tai englanniksi", "Asiakkaan luona tai Goyoga-studiolla", "Ryhmät alkaen 5+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
                 },
                 {
                     "id": "bodyhealth",
-                    "title": "BodyHealth | Jooga- ja liikkuvuuspaketti",
-                    "desc": "BodyHealth -paketti on suunniteltu edistämään työntekijöiden liikkuvuutta ja tasapainottamaan kehoa ja mieltä. Tämä jopa 2 tunnin istunto alkaa hengitystekniikoilla. Tätä seuraa jopa tunnin pituinen joogatunti (dynaaminen tai rauhallinen). Joogan jälkeen teemme perusteellisen makuurentoutuksen. Istunto voidaan pitää asiakkaan tiloissa tai studiollamme.",
-                    "details": ["Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Syvä rentoutuminen", "Jopa 10 hengelle", "Jopa 2 tuntia", "1 opettaja", "Sisältää varusteet", "Viroksi tai englanniksi", "Alkaen 350€"]
+                    "title": "Jooga- ja liikkuvuuspaketti",
+                    "desc": "BodyHealth-paketti on suunniteltu edistämään työntekijöiden liikkuvuutta ja tasapainottamaan kehoa ja mieltä. Istunto kestää jopa 2 tuntia ja alkaa hengitystekniikoilla. Tätä seuraa jopa tunnin pituinen joogatunti asiakkaan valitsemalla tyylillä. Joogan jälkeen teemme perusteellisen makuurentoutuksen. Voidaan toteuttaa asiakkaan luona tai Goyoga-studiolla.",
+                    "details": ["Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Syvä rentoutuminen (yoga nidra)", "Jopa 2 tuntia", "1 opettaja", "Sisältää kaikki varusteet", "Viroksi ja/tai englanniksi", "Asiakkaan luona tai Goyoga-studiolla", "Ryhmät alkaen 5+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Jooga- ja Mielenrauha-työpaja",
-                    "desc": "Mind & Body Health on jopa puolipäiväinen työpaja, joka yhdistää mielenterveyttä ja liikkuvuutta edistävät hyvinvointikäytännöt. Aloitamme hengityksellä tai meditaatiolla (30min), minkä jälkeen pidetään valitsemanne joogatunti. Sen jälkeen seuraa syvä rentoutuminen ja äänimaljamatka. Työpaja päättyy terveysluennoksi ja terveellisillä välipaloilla. Sopii erinomaisesti tiimitapahtumaksi.",
-                    "details": ["Tietoinen hengitys", "Jooga", "Syvä rentoutuminen", "Äänimaljamatka", "Luento (1x kork. 30min)", "Terveellinen juoma ja välipala", "Jopa 15 hengelle", "Jopa 4 tuntia", "2 opettajaa", "Sisältää varusteet", "Viroksi tai englanniksi", "Alkaen 850€"]
+                    "title": "Mind & Body Health | Jooga- ja mielenterveystyöpaja",
+                    "desc": "Mind & Body Health on jopa puolipäiväinen työpaja, joka yhdistää mielenterveyttä ja liikkuvuutta edistävät hyvinvointikäytännöt. Se alkaa joko hengitysharjoituksilla tai meditaatiolla, jota seuraa tunnin pituinen joogatunti. Joogan jälkeen teemme perusteellisen tunnin mittaisen makuurentoutuksen äänimaljojen kera.\n\nTyöpaja päättyy lyhyeen hyvinvointiluennon valitusta aiheesta (esim. ravitsemus), jonka aikana tarjoamme terveellisiä välipaloja ja juomia. Työpajan ohjaa 2 opettajaa ja se sopii erinomaisesti tiimitapahtumaksi. Voidaan toteuttaa asiakkaan luona tai Goyoga-studiolla.",
+                    "details": ["Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Syvä rentoutuminen (yoga nidra)", "Äänimaljamatka", "Luento (1x jopa 30 min)", "Terveellinen juoma ja välipala", "Jopa 4 tuntia", "2 opettajaa", "Sisältää kaikki varusteet", "Viroksi ja/tai englanniksi", "Asiakkaan luona tai Goyoga-studiolla", "Ryhmät alkaen 15+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
                 },
                 {
                     "id": "wellnessday",
-                    "title": "Wellness Day | Hyvinvointipäivä",
-                    "desc": "Kattava hyvinvointipäivä tiimillesi. Tarjoamme täysimittaisen ohjelman, joka tuo täydellisen fyysisen ja henkisen palautumisen yhdistämällä parhaat käytäntömme.",
-                    "details": ["Meditaatio", "Tietoinen hengitys", "Jooga", "Terveysluennot (2x)", "Syvä rentoutuminen", "Äänimaljamatka", "Terveellinen lounas", "Jopa 30 hengelle", "Jopa 8 tuntia", "2-4 opettajaa", "Sisältää varusteet", "Viroksi tai englanniksi", "Alkaen 2,500€"]
+                    "title": "Hyvinvointipäivä",
+                    "desc": "Wellness Day on koko päivän tai useita päiviä kestävä hyvinvointipäivä, jonka aikana työntekijät voivat kokea erilaisia terveys-, jooga- ja hyvinvointikäytäntöjä. Luomme sisällön yhteistyössä organisaationne kanssa varmistaaksemme parhaan kokemuksen työkulttuurillenne. Painopiste on kehon ja mielen tasapainossa, hermoston säätelyssä, stressinhallinnassa ja terveystietoisuudessa.",
+                    "details": ["Meditaatio", "Tietoinen hengitys", "Jooga (dynaaminen tai rauhallinen)", "Hyvinvointiluennot (2x)", "Syvä rentoutuminen (yoga nidra)", "Äänimaljamatka", "Terveellinen lounas", "Jopa 8 tuntia", "2-4 opettajaa", "Sisältää kaikki varusteet", "Viroksi tai englanniksi", "Ryhmät alkaen 30+ työntekijää", "Pyydä tarjous suuremmille ryhmille"]
                 }
             ]
         }
@@ -258,7 +261,7 @@ const corporateData = {
         },
         "practices": {
             "title": "НАШИ ПРАКТИКИ",
-            "intro": "Главная цель Goyoga Tallinn — помочь компаниям улучшить самочувствие и здоровье своих сотрудников, что, в свою очередь, обеспечивает их продуктивность и лояльность. Холистические велнес-практики, такие как медитация, йога и осознанное дыхание, снимают стресс и регулируют нервную систему, помогая сотрудникам сосредоточиться, ясно общаться и избегать выгорания. Для вдохновения организаций мы собрали различные велнес-пакеты. Кроме того, все наши регулярные практики можно заказать как отдельные мастер-классы или как часть корпоративных мероприятий.",
+            "intro": "Главная цель Goyoga Tallinn — помочь компаниям улучшить самочувствие и здоровье своих сотрудников, что, в свою очередь, обеспечивает их продуктивность и лояльность. Холистические велнес-практики, такие как медитация, йога и осознанное дыхание, снимают стресс и регулируют нервную систему, помогая сотрудникам сосредоточиться, ясно общаться и избегать выгорания.",
             "items": [
                 "Динамичная йога (Аштанга, Виньяса, Strength & Flow)",
                 "Успокаивающая йога (Хатха, Slow Flow, Йога 60+)",
@@ -270,33 +273,38 @@ const corporateData = {
             ]
         },
         "packagesSection": {
-            "title": "КОРПОРАТИВНЫЕ ПАКЕТЫ",
+            "title": "ПАКЕТЫ ЗДОРОВЬЯ",
+            "intro": "Мы подготовили различные велнес-пакеты, чтобы вдохновить и упростить задачу для организаций. Кроме того, все наши регулярные практики можно заказать как отдельные занятия, мастер-классы или как часть корпоративных мероприятий.",
             "items": [
                 {
                     "id": "mindhealth",
-                    "title": "MindHealth | Пакет психического здоровья",
-                    "desc": "Пакет MindHealth разработан специально для поддержки психического здоровья сотрудников, снятия напряжения и балансировки их состояния. Это глубоко расслабляющая 90-минутная сессия, которая начинается с медитации сидя. За этим следует глубокое расслабление лежа под руководством инструктора (йога-нидра) в сочетании со звуковым путешествием. При необходимости в сессию можно добавить осознанное дыхание или церемонию какао. Сессию можно провести как у клиента, так и в нашей студии Goyoga.",
-                    "details": ["Медитация", "Звуковое путешествие", "Глубокое расслабление (йога-нидра)", "До 10 человек", "До 90 мин", "1 преподаватель", "На эстонском и/или английском", "От 350€"]
+                    "title": "Пакет психического здоровья",
+                    "desc": "Пакет MindHealth разработан для поддержки психического здоровья сотрудников, снятия напряжения и балансировки состояния. Это глубоко расслабляющая 90-минутная сессия, которая начинается с медитации сидя. За этим следует глубокое расслабление лежа (йога-нидра) в сочетании со звуковым путешествием. При необходимости можно добавить осознанное дыхание или церемонию какао. Проводится у клиента или в студии Goyoga.",
+                    "details": ["Медитация", "Звуковое путешествие", "Глубокое расслабление (йога-нидра)", "До 90 мин", "1 преподаватель", "На эстонском и/или английском", "У клиента или в студии Goyoga", "Группы от 5+ сотрудников", "Запросите цену для больших групп"]
                 },
                 {
                     "id": "bodyhealth",
-                    "title": "BodyHealth | Пакет Йога и Подвижность",
-                    "desc": "Пакет BodyHealth разработан для улучшения подвижности сотрудников, их бодрости, а также баланса тела и духа. Это сессия до 2 часов, которая начинается с техник дыхания (около 20 минут). Затем следует часовой класс йоги, стиль которого выбирает клиент (динамичный или спокойный). После йоги мы проводим глубокое расслабление (йога-нидра). Сессию можно провести как у клиента, так и в студии Goyoga.",
-                    "details": ["Осознанное дыхание", "Йога (динамичная или спокойная)", "Глубокое расслабление (йога-нидра)", "До 10 человек", "До 2 часов", "1 преподаватель", "Оборудование включено", "На эстонском и/или английском", "От 350€"]
+                    "title": "Пакет Йога и Подвижность",
+                    "desc": "Пакет BodyHealth направлен на улучшение подвижности сотрудников и баланс тела и духа. Сессия до 2 часов начинается с техник дыхания. Затем следует часовой класс йоги в выбранном стиле. После йоги — глубокое расслабление (йога-нидра). При необходимости дыхательные техники можно заменить медитацией. Проводится у клиента или в студии Goyoga.",
+                    "details": ["Осознанное дыхание", "Йога (динамичная или спокойная)", "Глубокое расслабление (йога-нидра)", "До 2 часов", "1 преподаватель", "Все оборудование включено", "На эстонском и/v/или английском", "У клиента или в студии Goyoga", "Группы от 5+ сотрудников", "Запросите цену для больших групп"]
                 },
                 {
                     "id": "mindbody",
-                    "title": "Mind & Body Health | Мастер-класс",
-                    "desc": "Пакет Mind & Body Health — это семинар на полдня, который объединяет велнес-практики для улучшения психического здоровья и подвижности. Занятие начинается с дыхания или медитации (до 30 мин). Затем следует часовой класс йоги, выбранный клиентом. После йоги мы проводим глубокое расслабление со звуковым путешествием. Семинар завершается короткой лекцией о здоровье на выбранную тему (например, питание) с полезными закусками и напитками. Идеально подходит для тимбилдинга. Занятие проводят 2 преподавателя.",
-                    "details": ["Осознанное дыхание", "Йога (динамичная или спокойная)", "Глубокое расслабление", "Звуковое путешествие", "Лекция (1x до 30 мин)", "Полезные закуски и напитки", "До 15 человек", "До 4 часов", "2 преподавателя", "Оборудование включено", "На эстонском и/или английском", "От 850€"]
+                    "title": "Йога и Мастер-класс по психическому здоровью",
+                    "desc": " Mind & Body Health — это семинар на полдня, объединяющий велнес-практики. Начинается с дыхания или медитации, затем часовой класс йоги. После — глубокое расслабление с звуковым путешествием.\n\nЗавершается короткой лекцией на выбранную тему с полезными закусками и напитками. Занятие проводят 2 преподавателя. Идеально для тимбилдинга. Проводится у клиента или в Goyoga.",
+                    "details": ["Осознанное дыхание", "Йога (динамичная или спокойная)", "Глубокое расслабление (йога-нидра)", "Звуковое путешествие", "Лекция (x1 до 30 мин)", "Полезные закуски и напитки", "До 4 часов", "2 преподавателя", "Все оборудование включено", "На эстонском и/v/или английском", "У клиента или в студии Goyoga", "Группы от 15+ сотрудников", "Запросите цену для больших групп"]
                 },
                 {
                     "id": "wellnessday",
-                    "title": "Wellness Day | День здоровья",
-                    "desc": "Комплексный день здоровья для вашей команды. Мы предлагаем полную программу, объединяющую все наши лучшие практики, чтобы принести участникам полное физическое и душевное восстановление.",
-                    "details": ["Медитация", "Осознанное дыхание", "Йога (динамичная или спокойная)", "Велнес-лекции (2x)", "Глубокое расслабление", "Звуковое путешествие", "Здоровый обед", "До 30 человек", "До 8 часов", "2-4 преподавателя", "Оборудование включено", "На эстонском или английском", "От 2,500€"]
+                    "title": "День здоровья",
+                    "desc": "Wellness Day — это однодневный или многодневный День здоровья, в течение которого сотрудники могут познакомиться с различными практиками. Мы создаем программу совместно с вашей организацией. В центре внимания — баланс тела и духа, регуляция нервной системы и снятие стресса.",
+                    "details": ["Медитация", "Осознанное дыхание", "Йога (динамичная или спокойная)", "Лекции о здоровье (2x)", "Глубокое расслабление (йога-нидра)", "Звуковое путешествие", "Здоровый обед", "До 8 часов", "2-4 преподавателя", "Все оборудование включено", "На эстонском или английском", "Группы от 30+ сотрудников", "Запросите цену для больших групп"]
                 }
             ]
         }
     }
 };
+
+if (typeof window !== 'undefined') {
+    window.corporateData = corporateData;
+}
