@@ -8,11 +8,49 @@ const corporateData = {
             "statQuote": "Eesti töötajatest leiab, et their heaolu töökohal on palgaga võrdselt oluline faktor.",
             "statSource": "Stebby Töökoha Heaolu Uuring 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Loe raportit</a>"
         },
+        "stat2": {
+            "num": "89 %",
+            "quote": "organisatsioonidest korraldab vähemalt kord aastas töötajate ühisüritusi.",
+            "source": "Tervise Arengu Instituudi 2019. aasta Töökoha Tervisedenduse Uuring: <a href='https://www.tai.ee/et/valjaanded/tookoha-tervisedenduse-uuring-2019' class='underline' target='_blank'>Loe uuringut</a>"
+        },
         "collaboration": {
             "title": "Koostöö",
             "p1": "Goyoga ärikliendiks on vähemalt 5-liikmeline ettevõte. Lisaks ettevõtte tiimiüritustele pakume kõikidele äriklientide töötajatele meie tavahinnakirjast soodsamaid treeningtingimusi.",
             "p2": "Ettevõtetele, kes võimaldavad oma töötajatele spordikompensatsiooni, pakume võimalust otse meiega arveldada läbi meie maksesüsteemi.",
             "p3": "Oleme liitunud ka suuremate Eesti spordiportaalidega nagu <strong>Stebby</strong>, võimaldades mugavat arveldust ja tundide broneerimist otse platvormilt."
+        },
+        "additionalServices": {
+            "title": "Lisateenused",
+            "subtitle": "Kõiki meil pakutavaid jooga- ja heaolutunde on võimalik tellida kliendi kontorisse või Goyoga stuudiosse.",
+            "items": [
+                {
+                    "title": "Kontorijooga",
+                    "desc": "Juba 20-minutiline joogapraktika tõstab oluliselt töötajate produktiivsust ja loovat mõtlemist.",
+                    "duration": "20-60min",
+                    "icon": "monitor"
+                },
+                {
+                    "title": "Jooga nidra kontoris",
+                    "desc": "Teadlik ja sügav lõdvestus („jooga uni“) lülitab keskkonnast välja ja värskendab ajurakke.",
+                    "duration": "30-45min",
+                    "icon": "moon"
+                },
+                {
+                    "title": "Personaaltunnid",
+                    "desc": "Personaalne jooga- ja/või heaolupraktika töötajatele nt tippjuhid, spetsialistid jne kelle kalender vajab isiklikku lähenemist.",
+                    "icon": "user"
+                },
+                {
+                    "title": "Rühmatunnid | Eratunnid gruppidele",
+                    "desc": "Personaalne jooga- ja/või heaolupraktika grupile, mis sobib ideaalselt ka kollektiivi tiimiürituseks.",
+                    "icon": "users-2"
+                },
+                {
+                    "title": "Online tunnid",
+                    "desc": "Virtuaalne jooga- ja/või heaolupraktika eelkõige grupile, mis sobib hästi kodukontorites töötavatele ettevõtetele.",
+                    "icon": "video"
+                }
+            ]
         },
         "benefits": {
             "title": "Kasutegurid",
@@ -32,13 +70,13 @@ const corporateData = {
             "description": "Goyoga Tallinn on eesti turul jooga- ja heaoluteenuseid pakkunud juba alates 2016.aastast. Oleme Tallinna kesklinnas tegutsevast joogastuudiost oma teenustega laienenud ettevõtetesse nii Eestis kui ka välisriikides. Meie praktikud ja terapeudid on kogenud professionaalid, kes juhendavad tunde ja töötubasid nii eesti kui ka ladusas inglise keeles. Meie praktikute kogukond on rahvusvaheline, tuues heaolu kogemused Eestisse nii Ameerikast, Inglismaalt kui ka Aasiast."
         },
         "practices": {
-            "title": "Meie praktikad",
-            "intro": "Goyoga Tallinna eesmärgiks on aidata ettevõtetel kaasa oma töötajate heaolu ja üleüldist tervislikku seisundi kasvule, mis omakorda tagab töötajate tootlikkuse ja püsimise. Holistilised heaolu praktikad nagu meditatsioon, jooga ja teadlik hingamine maandavad töötajate stressi ja reguleerivad närvisüsteemi, aidates keskenduda, selgelt kommunikeerida ja vältida läbipõlemist.",
+            "title": "Meie praktikate valik",
+            "intro": "Goyoga Tallinna eesmärgiks on aidata ettevõtetel kaasa oma töötajate heaolu ja üleüldist tervislikku seisundi kasvule, mis omakorda tagab töötajate tootlikkuse ja püsimise.",
             "items": [
                 "Dünaamiline jooga (Ashtanga, Vinyasa, Strength & Flow)",
                 "Rahulik jooga (Hatha, Slow Flow, 60+ jooga)",
                 "Teadliku hingamise praktikad",
-                "Meditatsioonid ja yoga nidra",
+                "Meditatsioonid ja Yoga Nidra",
                 "Qigong ja meridiaanivõimlemine",
                 "Helirännakud",
                 "Kakaorituaalid"
@@ -63,7 +101,7 @@ const corporateData = {
                 {
                     "id": "mindbody",
                     "title": "Jooga & Vaimse Tervise Töötoad",
-                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks mõeldud heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
+                    "desc": "Mind & Body Health pakett on kuni poolepäevane töötuba, whisp ühendab endas vaimse tervise ja liikuvuse parandamiseks meant heaolu praktikad. Tegemist on põhjaliku töötajat tasakaalustava sessiooniga, mis algab kas hingamistehnikate praktikaga või meditatsiooniga (kuni 30min). Sellele järgneb tunniajane joogatund, mille stiili valib klient (kas dünaamiline või rahulik stiil). Pärast joogat teeme lamades põhjaliku tunniajalise lõdvestuse (jooga nidra) koos helirännakuga. Töötuba lõpeb lühikese heaolu loenguga kliendi poolt valitud seotud teemal (nt toitumine), mille käigus pakume tervislikke snäkke ja jooke. Töötuba viivad läbi 2 õpetajat/praktikut ning see sobib ideaalselt tiimiürituseks. Sessiooni saab läbi viia nii kliendi juures kui ka Goyoga stuudios.",
                     "details": ["Teadlik hingamine", "Jooga (dünaamiline v rahulik stiil)", "Sügav lõdvestus (jooga nidra)", "Helirännak", "Loeng (x1 kuni 30min)", "Tervislik jook ja snack", "Kuni 4 tundi", "2 õpetajat", "Sisaldab kõiki vahendeid", "Eesti ja/või inglise keeles", "Toimub kliendi juures või Goyoga stuudios", "Grupid alates 15+ töötajast", "Küsi pakkumist suurematele gruppidele"]
                 },
                 {
@@ -77,18 +115,56 @@ const corporateData = {
     },
     "en": {
         "intro": {
-            "p1": "Mental health and movement form a significant part of an employee's overall well-being at work. At least 25% of Estonian employers support their employees' participation in training or sports events. While mental health support in Estonian organizations is growing, it is currently mostly limited to training or supervision. More statistics can be found in the National Institute for Health Development's 2019 Workplace Health Promotion study.",
-            "p2": "Few Estonian employers use meditation, yoga, and conscious breathing as effective tools for managing employee stress and regulating the nervous system. Among European countries, the use of holistic practices to enhance employee well-being is most valued in France (84%), Sweden (82%), and the Netherlands (72%). In the United States, the same figure is 60%, where integrating yoga and wellness practices into corporate culture and healthcare has become the norm. Organizations are increasingly looking for holistic services, from stress management to preventing chronic diseases, which offer both physical and psychological benefits.",
+            "p1": "Mental health and movement form a significant part of an employee's overall well-being at work. Organizations are increasingly looking for holistic services, from stress management to preventing chronic diseases, which offer both physical and psychological benefits.",
+            "p2": "Goyoga Tallinn helps companies increase their employees' well-being and overall health, which in turn ensures employee productivity and retention. Holistic wellness practices such as meditation, yoga, and conscious breathing relieve employee stress and regulate the nervous system, helping to focus, communicate clearly, and prevent burnout.",
             "subtitle": "Corporate Employee Well-being",
             "statNumber": "86 %",
             "statQuote": "of Estonian employees find that their well-being at work is as important a factor as salary.",
             "statSource": "Stebby Workplace Wellness Study 2025: <a href='https://business.stebby.ee/en/wellness-report-2025/' class='underline hover:text-white transition-colors' target='_blank'>Read the report</a>"
+        },
+        "stat2": {
+            "num": "89 %",
+            "quote": "of organizations organize joint employee events at least once a year.",
+            "source": "NIHD 2019 Workplace Health Promotion Study: <a href='https://www.tai.ee/en/publications/workplace-health-promotion-study-2019' class='underline' target='_blank'>Read the study</a>"
         },
         "collaboration": {
             "title": "Collaboration",
             "p1": "Goyoga corporate clients are companies with at least 5 employees. In addition to team events, we offer all corporate employees more favorable training terms than our standard price list.",
             "p2": "For companies that provide sports compensation to their employees, we offer the possibility of direct billing through our payment system.",
             "p3": "We are also integrated with major Estonian sports platforms like <strong>Stebby</strong>, allowing for convenient billing and class bookings directly from the platform."
+        },
+        "additionalServices": {
+            "title": "Additional Services",
+            "subtitle": "All our yoga and wellness sessions can be ordered to the client's office or Goyoga studio.",
+            "items": [
+                {
+                    "title": "Office Yoga",
+                    "desc": "Even a 20-minute yoga practice significantly boosts employee productivity and creative thinking.",
+                    "duration": "20-60min",
+                    "icon": "monitor"
+                },
+                {
+                    "title": "Office Yoga Nidra",
+                    "desc": "Conscious and deep relaxation (\"yoga sleep\") switches off from the environment and refreshes brain cells.",
+                    "duration": "30-45min",
+                    "icon": "moon"
+                },
+                {
+                    "title": "Personal Training",
+                    "desc": "Personalized yoga and/or wellness practice for employees e.g. executives, specialists whose calendar needs a personal approach.",
+                    "icon": "user"
+                },
+                {
+                    "title": "Group Sessions | Private Events",
+                    "desc": "Personalized yoga and/or wellness practice for groups, ideal for collective team events.",
+                    "icon": "users-2"
+                },
+                {
+                    "title": "Online Classes",
+                    "desc": "Virtual yoga and/or wellness practice primarily for groups, well-suited for companies with home offices.",
+                    "icon": "video"
+                }
+            ]
         },
         "benefits": {
             "title": "Benefits",
@@ -108,13 +184,13 @@ const corporateData = {
             "description": "Goyoga Tallinn has been offering yoga and wellness services on the Estonian market since 2016. From a yoga studio operating in the center of Tallinn, we have expanded our services to companies in both Estonia and abroad. Our practitioners and therapists are experienced professionals who guide classes and workshops fluently in both Estonian and English. Our community of practitioners is international, bringing wellness experiences to Estonia from America, England, and Asia."
         },
         "practices": {
-            "title": "Our practices",
-            "intro": "The goal of Goyoga Tallinn is to help companies increase their employees' well-being and overall health, which in turn ensures employee productivity and retention. Holistic wellness practices such as meditation, yoga, and conscious breathing relieve employee stress and regulate the nervous system, helping to focus, communicate clearly, and prevent burnout.",
+            "title": "Our practices selection",
+            "intro": "Goyoga Tallinn aims to help companies contribute to the growth of their employees' well-being and overall health.",
             "items": [
                 "Dynamic yoga (Ashtanga, Vinyasa, Strength & Flow)",
                 "Calm yoga (Hatha, Slow Flow, 60+ yoga)",
                 "Conscious breathing practices",
-                "Meditations and yoga nidra",
+                "Meditations and Yoga Nidra",
                 "Qigong and meridian gymnastics",
                 "Sound journeys",
                 "Cacao rituals"
@@ -153,12 +229,17 @@ const corporateData = {
     },
     "fi": {
         "intro": {
-            "p1": "Mielenterveys ja liikunta muodostavat merkittävän osan työntekijän yleisestä hyvinvoinnista työssä. Vähintään 25 % virolaisista työnantajista tukee työntekijöidensä osallistumista harjoituksiin tai liikuntatapahtumiin. Vaikka mielenterveyden tuki virolaisissa organisaatioissa on kasvussa, se rajoittuu tällä hetkellä pääasiassa koulutukseen tai työnohjaukseen. Lisää tilastoja löytyy Terveyden kehittämisinstituutin (TAI) vuoden 2019 työpaikkaa koskevasta tutkimuksesta.",
-            "p2": "Harvat virolaiset työnantajat käyttävät meditaatiota, joogaa ja tietoista hengitystä tehokkaina välineinä työntekijöiden stressin hallintaan ja hermoston säätelyyn. Euroopan maista holististen käytäntöjen hyödyntämistä työntekijöiden hyvinvoinnin edistämiseen arvostetaan eniten Ranskassa (84 %), Ruotsissa (82 %) ja Alankomaissa (72 %). Yhdysvalloissa vastaava luku on 60 %, missä joogan ja hyvinvointikäytäntöjen integroiminen yrityskulttuuriin ja työterveydenhuoltoon on tullut normiksi.",
+            "p1": "Mielenterveys ja liikunta muodostavat merkittävän osan työntekijän yleisestä hyvinvoinnista työssä. Vähintään 25 % virolaisista työnantajista tukee työntekijöidensä osallistumista harjoituksiin tai liikuntatapahtumiin.",
+            "p2": "Goyoga Tallinn auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja terveyttä, mikä puolestaan takaa työntekijöiden tuottavuuden ja pysyvyyden. Holistiset hyvinvointikäytännöt, kuten meditaatio, jooga ja tietoinen hengitys, lievittävät työntekijöiden stressiä ja säätelevät hermostoa, auttaen keskittymään, kommunikoimaan selkeästi ja ehkäisemään työuupumusta.",
             "subtitle": "Yrityksen työntekijöiden hyvinvointi",
             "statNumber": "86 %",
             "statQuote": "virolaisista työntekijöistä kokee hyvinvoinnin työpaikalla yhtä tärkeäksi tekijäksi kuin palkan.",
             "statSource": "Stebby Työpaikan Hyvinvointitutkimus 2025: <a href='https://business.stebby.ee/heaolu-uuring-2025/' class='underline hover:text-white transition-colors' target='_blank'>Lue raportti</a>"
+        },
+        "stat2": {
+            "num": "89 %",
+            "quote": "organisaatioista järjestää työntekijöiden yhteisiä tapahtumia vähintään kerran vuodessa.",
+            "source": "TAI 2019 Työpaikan terveydenedistämistutkimus: <a href='https://www.tai.ee/et/valjaanded/tookoha-tervisedenduse-uuring-2019' class='underline' target='_blank'>Lue tutkimus</a>"
         },
         "collaboration": {
             "title": "Yhteistyö",
@@ -166,9 +247,42 @@ const corporateData = {
             "p2": "Yrityksille, jotka tarjoavat työntekijöilleen liikuntakorvauksia, tarjoamme mahdollisuuden suoraan laskutukseen oman maksujärjestelmämme kautta.",
             "p3": "Olemme liittyneet myös suuriin virolaisiin liikuntaportaaleihin kuten <strong>Stebby</strong>, mikä mahdollistaa kätevän laskutuksen ja tuntivaraukset suoraan alustalta."
         },
+        "additionalServices": {
+            "title": "Lisäpalvelut",
+            "subtitle": "Kaikki jooga- ja hyvinvointituntimme voidaan tilata asiakkaan toimistolle tai Goyoga-studiolle.",
+            "items": [
+                {
+                    "title": "Toimistojooga",
+                    "desc": "Jo 20 minuutin joogaharjoitus parantaa merkittävästi työntekijöiden tuottavuutta ja luovaa ajattelua.",
+                    "duration": "20-60min",
+                    "icon": "monitor"
+                },
+                {
+                    "title": "Toimisto Yoga Nidra",
+                    "desc": "Tietoinen ja syvä rentoutuminen (\"joogauni\") katkaisee ympäristön vaikutuksen ja virkistää aivosoluja.",
+                    "duration": "30-45min",
+                    "icon": "moon"
+                },
+                {
+                    "title": "Yksityistunnit",
+                    "desc": "Yksilöllinen jooga- ja hyvinvointiharjoitus työntekijöille, esim. johto ja asiantuntijat, joiden aikataulu vaatii henkilökohtaista lähestymistapaa.",
+                    "icon": "user"
+                },
+                {
+                    "title": "Ryhmätunnit | Yksityistilaisuudet",
+                    "desc": "Yksilöllinen jooga- ja hyvinvointiharjoitus ryhmille, sopii erinomaisesti tiimitapahtumiin.",
+                    "icon": "users-2"
+                },
+                {
+                    "title": "Online-tunnit",
+                    "desc": "Virtuaalinen jooga- ja hyvinvointiharjoitus ensisijaisesti ryhmille, sopii hyvin kotitoimistolla työskenteleville yrityksille.",
+                    "icon": "video"
+                }
+            ]
+        },
         "benefits": {
             "title": "Hyödyt",
-            "subtitle": "Jooga- ja hyvinvointikäytännöillä on useita etuja",
+            "subtitle": "Jooga- ja hyvinvointikäytännöillä on several etuja",
             "items": [
                 "Stressinhallinta",
                 "Keskittymisen ja luovuuden lisääntyminen",
@@ -184,13 +298,13 @@ const corporateData = {
             "description": "Goyoga Tallinn on tarjonnut jooga- ja hyvinvointipalveluita Viron markkinoilla jo vuodesta 2016. Tallinnan keskustassa toimivasta joogastudiostamme olemme laajentaneet palveluitamme yrityksille sekä Virossa että ulkomailla. Harjoittajamme ja terapeuttimme ovat kogenuja ammattilaisia, jotka ohjaavat tunteja ja työpajoja sujuvasti viroksi ja englanniksi. Yhteisömme on kansainvälinen, tuoden hyvinvointikokemuksia Viroon muun muassa Yhdysvalloista, Englannista ja Aasiasta."
         },
         "practices": {
-            "title": "Käytäntömme",
-            "intro": "Goyoga Tallinnan tavoitteena on auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja terveyttä, mikä vuorostaan takaa työntekijöiden tuottavuuden ja pysyvyyden. Holistiset hyvinvointikäytännöt, kuten meditaatio, jooga ja tietoinen hengitys, lievittävät työntekijöiden stressiä ja säätelevät hermostoa, auttaen keskittymään, kommunikoimaan selkeästi ja ehkäisemään työuupumusta.",
+            "title": "Käytäntöjemme valikoima",
+            "intro": "Goyoga Tallinnan tavoitteena on auttaa yrityksiä edistämään työntekijöidensä hyvinvointia ja yleistä terveydentilaa.",
             "items": [
                 "Dynaaminen jooga (Ashtanga, Vinyasa, Strength & Flow)",
                 "Rauhallinen jooga (Hatha, Slow Flow, 60+ jooga)",
                 "Tietoisen hengityksen harjoitukset",
-                "Meditaatiot ja yoga nidra",
+                "Meditaatiot ja Yoga Nidra",
                 "Qigong ja meridiaanivoimistelu",
                 "Äänimaljamatkat",
                 "Kaakaorituaalit"
@@ -229,18 +343,56 @@ const corporateData = {
     },
     "ru": {
         "intro": {
-            "p1": "Психическое здоровье и движение составляют значительную часть общего благополучия сотрудника на рабочем месте. По меньшей мере 25% эстонских работодателей поддерживают участие своих сотрудников в тренировках или спортивных мероприятиях. Хотя поддержка психического здоровья в эстонских организациях растет, в настоящее время она в основном ограничивается обучением или супервизией. Больше статистики можно найти в исследовании Института развития здоровья за 2019 год.",
-            "p2": "Немногие эстонские работодатели используют медитацию, йогу и осознанное дыхание как эффективные инструменты для снятия стресса сотрудников и регулирования нервной системы. Среди европейских стран использование холистических практик для повышения благополучия сотрудников наиболее ценится во Франции (84%), Швеции (82%) и Нидерландах (72%). В США этот показатель составляет 60%, где интеграция йоги и велнес-практик в корпоративную культуру и здравоохранение стала нормой. Организации все чаще ищут комплексные услуги, от управления стрессом до профилактики хронических заболеваний, которые предлагают как физические, так и психологические преимущества.",
+            "p1": "Психическое здоровье и движение составляют значительную часть общего благополучия сотрудника на рабочем месте.",
+            "p2": "Goyoga Tallinn помогает компаниям улучшить самочувствие и здоровье своих сотрудников, что, в свою очередь, обеспечивает их продуктивность и лояльность. Холистические велнес-практики снимают стресс и регулируют нервную систему, помогая сосредоточиться и избегать выгорания.",
             "subtitle": "Благополучие сотрудников компании",
             "statNumber": "86 %",
             "statQuote": "эстонских работников считают благополучие на рабочем месте столь же важным фактором, как и зарплата.",
             "statSource": "Исследование благополучия Stebby 2025: <a href='https://business.stebby.ee/en/wellness-report-2025/' class='underline hover:text-white transition-colors' target='_blank'>Читать отчет</a>"
+        },
+        "stat2": {
+            "num": "89 %",
+            "quote": "организаций организуют совместные мероприятия для сотрудников не реже одного раза в год.",
+            "source": "TAI 2019 Исследование укрепления здоровья: <a href='https://www.tai.ee/et/valjaanded/tookoha-tervisedenduse-uuring-2019' class='underline' target='_blank'>Читать отчет</a>"
         },
         "collaboration": {
             "title": "Сотрудничество",
             "p1": "Корпоративными клиентами Goyoga являются компании с штатом не менее 5 человек. Помимо командных мероприятий, мы предлагаем всем сотрудникам более выгодные условия тренировок.",
             "p2": "Для компаний, предоставляющих спортивную компенсацию, мы предлагаем возможность прямого расчета через нашу платежную систему.",
             "p3": "Мы также интегрированы с крупнейшими спортивными порталами Эстонии, такими как <strong>Stebby</strong>, что позволяет удобно бронировать занятия и вести расчеты прямо через платформу."
+        },
+        "additionalServices": {
+            "title": "Дополнительные услуги",
+            "subtitle": "Все наши занятия йогой и велнесом можно заказать в офис клиента или в студию Goyoga.",
+            "items": [
+                {
+                    "title": "Йога в офисе",
+                    "desc": "Даже 20-минутная практика йоги значительно повышает продуктивность сотрудников и творческое мышление.",
+                    "duration": "20-60 мин",
+                    "icon": "monitor"
+                },
+                {
+                    "title": "Офисная Йога-нидра",
+                    "desc": "Осознанное и глубокое расслабление («йога-сон») отключает от внешней среды и освежает клетки мозга.",
+                    "duration": "30-45 мин",
+                    "icon": "moon"
+                },
+                {
+                    "title": "Персональные занятия",
+                    "desc": "Индивидуальная практика йоги и/или велнеса для сотрудников, напр. руководителей и специалистов, чей график требует личного подхода.",
+                    "icon": "user"
+                },
+                {
+                    "title": "Групповые занятия | Тимбилдинг",
+                    "desc": "Индивидуальная практика йоги и/или велнеса для групп, идеально подходит для корпоративных мероприятий.",
+                    "icon": "users-2"
+                },
+                {
+                    "title": "Онлайн занятия",
+                    "desc": "Виртуальная практика йоги и/или велнеса прежде всего для групп, хорошо подходит для компаний с удаленным режимом работы.",
+                    "icon": "video"
+                }
+            ]
         },
         "benefits": {
             "title": "Преимущества",
@@ -260,15 +412,15 @@ const corporateData = {
             "description": "Goyoga Tallinn работает на эстонском рынке йоги и велнес-услуг с 2016 года. Зародившись как студия йоги в самом центре Таллина, мы расширили наши услуги для компаний как в Эстонии, так и за рубежом. Наши специалисты и терапевты — это опытные профессионалы, которые свободно проводят занятия и мастер-классы как на эстонском, так и на английском языках. Наше сообщество практиков интернационально и привносит велнес-опыт в Эстонию из Америки, Англии и Азии."
         },
         "practices": {
-            "title": "Наши практики",
-            "intro": "Главная цель Goyoga Tallinn — помочь компаниям улучшить самочувствие и здоровье своих сотрудников, что, в свою очередь, обеспечивает их продуктивность и лояльность. Холистические велнес-практики, такие как медитация, йога и осознанное дыхание, снимают стресс и регулируют нервную систему, помогая сотрудникам сосредоточиться, ясно общаться и избегать выгорания.",
+            "title": "Наш выбор практик",
+            "intro": "Цель Goyoga Tallinn — помочь компаниям внести вклад в рост благополучия своих сотрудников и общего состояния их здоровья.",
             "items": [
                 "Динамичная йога (Аштанга, Виньяса, Strength & Flow)",
                 "Успокаивающая йога (Хатха, Slow Flow, Йога 60+)",
                 "Практики осознанного дыхания",
-                "Медитации и йога-нидра (глубокое расслабление)",
+                "Медитации и Йога-нидра",
                 "Цигун и меридианная гимнастика",
-                "Звуковые путешествия (Sound Baths)",
+                "Звуковые путешествия",
                 "Церемонии какао"
             ]
         },

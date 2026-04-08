@@ -23,7 +23,7 @@
     </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link href="/css/style.css?v=1775671980" rel="stylesheet"/>
+<link href="/css/style.css?v=1775672341" rel="stylesheet"/>
 <style>
         /* 3D Flip Card Styles - Robust Grid Stacking Approach */
         .flip-card {
@@ -83,10 +83,10 @@
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="site.webmanifest" rel="manifest"/>
-<script src="/js/data.js?v=1775671980"></script>
-<script src="/js/seo-data.js?v=1775671980"></script>
+<script src="/js/data.js?v=1775672341"></script>
+<script src="/js/seo-data.js?v=1775672341"></script>
 <!-- Corporate Specific Data -->
-<script src="/js/corporate-data.js?v=1775671980"></script>
+<script src="/js/corporate-data.js?v=1775672341"></script>
 <!-- AI Framework Context Block -->
 <div class="sr-only" id="ai-context-block">
 <h1>Goyoga Tallinn Corporate Wellness</h1>
@@ -212,7 +212,7 @@
 <section class="py-24 bg-stone-50 border-b border-stone-100" id="collaboration-section">
 <div class="container-custom">
 <div class="text-center mb-16 fade-in-section">
-<h2 class="text-4xl md:text-5xl font-serif font-medium text-pink-900 mb-4" id="collaboration-title">KOOSTÖÖ</h2>
+<h2 class="text-4xl md:text-5xl font-serif font-medium text-pink-900 mb-4" id="collaboration-title">Koostöö</h2>
 <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-orange-400 mx-auto"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -237,6 +237,40 @@
 </div>
 <p class="text-lg text-gray-700 leading-relaxed font-medium" id="collaboration-p3"></p>
 </div>
+</div>
+</div>
+</section>
+<!-- NEW Quote 2 Spotlight -->
+<section class="py-24 bg-white border-b border-stone-100 overflow-hidden relative">
+<div class="container-custom relative z-10">
+<div class="max-w-4xl mx-auto text-center fade-in-section">
+<div class="mb-8 flex justify-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-100 text-stone-600 text-[10px] font-bold tracking-widest uppercase">
+<i class="w-4 h-4" data-lucide="bar-chart-3"></i>
+<span id="stat2-tag">Ühisüritused</span>
+</div>
+</div>
+<div class="mb-6">
+<span class="text-7xl md:text-9xl font-serif font-medium text-pink-600 opacity-20 absolute -top-10 left-1/2 -translate-x-1/2 select-none">“</span>
+<h2 class="text-4xl md:text-5xl font-serif font-medium text-gray-900 leading-tight mb-8 relative">
+                            „<span class="text-pink-600" id="stat2-num">89%</span> <span id="stat2-quote">organisatsioonidest korraldab vähemalt kord aastas töötajate ühisüritusi.</span>“
+                        </h2>
+</div>
+<div class="w-24 h-0.5 bg-pink-200 mx-auto mb-6"></div>
+<p class="text-xs text-gray-400 uppercase tracking-widest" id="stat2-source"></p>
+</div>
+</div>
+</section>
+<!-- Additional Services Section -->
+<section class="py-24 bg-stone-50 border-stone-100" id="additional-services-section">
+<div class="container-custom">
+<div class="text-center mb-20 fade-in-section">
+<h2 class="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6" id="additional-services-title">LISATEENUSED</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-orange-400 mx-auto mb-8"></div>
+<p class="max-w-3xl mx-auto text-lg text-gray-600" id="additional-services-subtitle"></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-section" id="additional-services-container">
+<!-- JS Injected Additional Services Cards -->
 </div>
 </div>
 </section>
@@ -325,7 +359,7 @@
 </div>
 </div>
 </footer>
-<script src="/js/script.js?v=1775671980"></script>
+<script src="/js/script.js?v=1775672341"></script>
 <script>
         // Icons array for benefits to make them look nice
         const benefitIcons = ['zap', 'brain', 'trending-up', 'messages-square', 'heart-pulse', 'shield-check', 'award'];
@@ -381,6 +415,46 @@
             
             const sourceEl = document.getElementById('corporate-stat-source');
             if (sourceEl) sourceEl.innerHTML = data.intro.statSource;
+
+            // 1.2 NEW Quote 2 Spotlight
+            const stat2NumEl = document.getElementById('stat2-num');
+            if (stat2NumEl) stat2NumEl.textContent = data.stat2.num;
+            
+            const stat2QuoteEl = document.getElementById('stat2-quote');
+            if (stat2QuoteEl) stat2QuoteEl.textContent = data.stat2.quote;
+            
+            const stat2SourceEl = document.getElementById('stat2-source');
+            if (stat2SourceEl) stat2SourceEl.innerHTML = data.stat2.source;
+
+            // 1.3 Additional Services
+            const addTitleEl = document.getElementById('additional-services-title');
+            if (addTitleEl) addTitleEl.textContent = data.additionalServices.title;
+            
+            const addSubtitleEl = document.getElementById('additional-services-subtitle');
+            if (addSubtitleEl) addSubtitleEl.textContent = data.additionalServices.subtitle;
+            
+            const addContainer = document.getElementById('additional-services-container');
+            if (addContainer) {
+                addContainer.innerHTML = '';
+                const queryText = currentLang === 'et' ? "Küsi pakkumist" : (currentLang === 'fi' ? "Pyydä tarjous" : (currentLang === 'ru' ? "Запросить" : "Request a Quote"));
+                
+                data.additionalServices.items.forEach(service => {
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-3xl p-8 shadow-sm border border-stone-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group";
+                    card.innerHTML = `
+                        <div class="w-16 h-16 rounded-2xl bg-pink-50 flex items-center justify-center mb-6 group-hover:bg-pink-100 transition-colors">
+                            <i data-lucide="${service.icon}" class="w-8 h-8 text-pink-600"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-medium mb-4 text-gray-900">${service.title}</h3>
+                        <p class="text-gray-600 mb-6 flex-grow leading-relaxed">${service.desc}</p>
+                        ${service.duration ? `<div class="mb-6 px-4 py-1.5 rounded-full bg-stone-50 text-xs font-bold text-stone-500 uppercase tracking-widest">${service.duration}</div>` : ''}
+                        <button onclick="openCorporateModal()" class="w-full py-3 px-6 bg-white text-pink-600 border-2 border-pink-100 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all">
+                            ${queryText}
+                        </button>
+                    `;
+                    addContainer.appendChild(card);
+                });
+            }
 
             // 1.5 Collaboration
             const collabTitleEl = document.getElementById('collaboration-title');
