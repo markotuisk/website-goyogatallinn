@@ -424,7 +424,7 @@ function initModals() {
                     </div>
 
                     <button class="w-full bg-pink-600 text-white font-bold py-4 rounded-xl hover:bg-pink-700 transition-all active:scale-[0.98] shadow-lg shadow-pink-100 uppercase tracking-widest text-xs mt-4 flex items-center justify-center gap-2" id="checkout-confirm-btn">
-                        <span>${langData['checkout.confirm_button'] || 'Confirm & Order'}</span>
+                        <span>${langData['checkout.confirm_button'] || 'Confirm & Pay'}</span>
                         <i data-lucide="arrow-right" class="h-4 w-4"></i>
                     </button>
                     
