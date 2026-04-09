@@ -232,32 +232,6 @@ function initModals() {
         data.options.forEach((opt, index) => {
             let displayPrice = `<span class="font-bold text-pink-600">${opt.price}</span>`;
 
-            const targetDate = new Date("March 31, 2026 23:59:59").getTime();
-            const now = new Date().getTime();
-            const isSeasonalOfferActive = group === 'memberships' &&
-                !opt.name.includes("Explorer") &&
-                now <= targetDate;
-
-            if (isSeasonalOfferActive) {
-                hasSeasonalOffer = true;
-                const priceMatch = opt.price.match(/(\d+)/);
-                if (priceMatch) {
-                    const originalPriceNum = parseInt(priceMatch[1], 10);
-                    const discountedPriceNum = Math.round(originalPriceNum * 0.8);
-                    const discountedPriceStr = opt.price.replace(priceMatch[1], discountedPriceNum);
-
-                    displayPrice = `
-                        <div class="flex flex-col items-end">
-                            <span class="text-xs text-gray-400 line-through mb-0.5">${opt.price}</span>
-                            <div class="flex items-center gap-2">
-                                <span class="text-[10px] font-bold bg-pink-100 text-pink-700 px-1.5 py-0.5 rounded-full uppercase tracking-wider">-20%</span>
-                                <span class="font-bold text-pink-600">${discountedPriceStr}</span>
-                            </div>
-                        </div>
-                    `;
-                }
-            }
-
             const langData = translationsData[currentLanguage] || translationsData['en'];
             const buyBtnText = langData['pricing.buy'] || 'Buy Now';
             
@@ -1095,25 +1069,7 @@ function initCountdown() {
             let sEl = document.getElementById('seconds'); if (sEl) sEl.innerText = seconds.toString().padStart(2, '0');
         }
 
-        // --- 2. Pricing Modal Countdown ---
-        const modalTargetDate = new Date("March 31, 2026 23:59:59").getTime();
-        const modalDistance = modalTargetDate - now;
-        const modalCountdownEls = document.querySelectorAll('#pricing-modal .countdown-val');
-
-        if (modalCountdownEls.length > 0 && modalDistance >= 0) {
-            const days = Math.floor(modalDistance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((modalDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((modalDistance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((modalDistance % (1000 * 60)) / 1000);
-
-            modalCountdownEls.forEach(el => {
-                const unit = el.getAttribute('data-unit');
-                if (unit === 'days') el.innerText = days.toString().padStart(2, '0');
-                if (unit === 'hours') el.innerText = hours.toString().padStart(2, '0');
-                if (unit === 'minutes') el.innerText = minutes.toString().padStart(2, '0');
-                if (unit === 'seconds') el.innerText = seconds.toString().padStart(2, '0');
-            });
-        }
+        // The Pricing Modal Countdown has been removed as the Seasonal Offer (-20% discount) is no longer active.
     }
 
     updateTimer();

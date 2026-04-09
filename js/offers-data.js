@@ -25,24 +25,8 @@ const offersData = {
                         "Generous 30-day validity to help you find your rhythm",
                         "Valid only as a one-time standalone purchase"
                     ],
-                    expires: "March 8, 2026",
-                    targetDate: "March 8, 2026 23:59:59",
-                    claimBtn: "Claim Offer"
-                },
-                {
-                    name: "Annual Memberships",
-                    desc: "Throughout March, enjoy a 20% discount on our membership cards. Use the promo code LAUNCH when purchasing online. Note: This discount applies to all membership cards, except the Studio Explorer pass.",
-                    price: "-20%",
-                    originalPrice: "",
-                    savings: "DISCOUNT CAMPAIGN",
-                    benefitsTitle: "Campaign Details:",
-                    benefits: [
-                        "Promo code: LAUNCH",
-                        "Valid throughout the entire month of March",
-                        "An investment in your well-being for the whole year"
-                    ],
-                    expires: "March 31, 2026",
-                    targetDate: "March 31, 2026 23:59:59",
+                    expires: "April 30, 2026",
+                    targetDate: "April 30, 2026 23:59:59",
                     claimBtn: "Claim Offer"
                 }
             ]
@@ -77,24 +61,8 @@ const offersData = {
                         "Kehtib tervelt 30 päeva – piisavalt aega regulaarse rütmi leidmiseks",
                         "Kehtib vaid iseseisva ühekordse ostuna"
                     ],
-                    expires: "8. märts 2026",
-                    targetDate: "March 8, 2026 23:59:59",
-                    claimBtn: "Osta Kohe"
-                },
-                {
-                    name: "Aastased Liikmekaardid",
-                    desc: "Kogu märtsikuu jooksul kehtib meie liikmekaartidele 20% soodustus. Kaardi ostmisel veebis kasuta sooduskoodi LAUNCH. NB: See soodustus kehtib kõigile liikmekaartidele, välja arvatud Studio Explorer passile.",
-                    price: "-20%",
-                    originalPrice: "",
-                    savings: "SOODUSKAMPAANIA",
-                    benefitsTitle: "Kampaania detailid:",
-                    benefits: [
-                        "Sooduskood: LAUNCH",
-                        "Kehtib kogu märtsikuu vältel",
-                        "Investeering sinu heaolusse terveks aastaks"
-                    ],
-                    expires: "31. märts 2026",
-                    targetDate: "March 31, 2026 23:59:59",
+                    expires: "30. aprill 2026",
+                    targetDate: "April 30, 2026 23:59:59",
                     claimBtn: "Osta Kohe"
                 }
             ]
@@ -129,24 +97,8 @@ const offersData = {
                         "Reilu 30 päivän voimassaoloaika auttaa rutiinin löytämisessä",
                         "Voimassa vain itsenäisenä kertaostoksena"
                     ],
-                    expires: "8. maaliskuuta 2026",
-                    targetDate: "March 8, 2026 23:59:59",
-                    claimBtn: "Osta Nyt"
-                },
-                {
-                    name: "Vuosijäsenyydet",
-                    desc: "Koko maaliskuun ajan saat 20 % alennuksen jäsenyyksistämme. Käytä alennuskoodia LAUNCH ostaessasi verkossa. Huomio: Tämä alennus koskee kaikkia jäsenyyksiä, paitsi Studio Explorer pass -korttia.",
-                    price: "-20%",
-                    originalPrice: "",
-                    savings: "ALENNUSKAMPANJA",
-                    benefitsTitle: "Kampanjan tiedot:",
-                    benefits: [
-                        "Alennuskoodi: LAUNCH",
-                        "Voimassa koko maaliskuun ajan",
-                        "Sijoitus hyvinvointiisi koko vuodeksi"
-                    ],
-                    expires: "31. maaliskuuta 2026",
-                    targetDate: "March 31, 2026 23:59:59",
+                    expires: "30. huhtikuuta 2026",
+                    targetDate: "April 30, 2026 23:59:59",
                     claimBtn: "Osta Nyt"
                 }
             ]
@@ -181,24 +133,8 @@ const offersData = {
                         "Целых 30 дней на использование, чтобы найти свой ритм",
                         "Действует только как разовая самостоятельная покупка"
                     ],
-                    expires: "8 марта 2026",
-                    targetDate: "March 8, 2026 23:59:59",
-                    claimBtn: "Купить сейчас"
-                },
-                {
-                    name: "Годовые абонементы",
-                    desc: "Покупайте наши абонементы со скидкой 20% в течение всего марта. Для онлайн-покупки используйте промокод LAUNCH. Обратите внимание: скидка действует на все виды абонементов, кроме пробного Studio Explorer.",
-                    price: "-20%",
-                    originalPrice: "",
-                    savings: "ВЕСЕННЯЯ СКИДКА",
-                    benefitsTitle: "Детали акции:",
-                    benefits: [
-                        "Промокод: LAUNCH",
-                        "Действует весь март",
-                        "Выгодная инвестиция в ваше самочувствие на весь год"
-                    ],
-                    expires: "31 марта 2026",
-                    targetDate: "March 31, 2026 23:59:59",
+                    expires: "30 апреля 2026",
+                    targetDate: "April 30, 2026 23:59:59",
                     claimBtn: "Купить сейчас"
                 }
             ]
