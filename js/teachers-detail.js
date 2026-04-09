@@ -302,7 +302,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
     },
     "dian-jarvenkyla": {
         en: {
-            name: "Dian Jarvenkyla",
+            name: "Dian Aikani",
             role: "Vinyasa & Hatha Yoga",
             quote: "I guide students to move with awareness, building strength, mobility, and balance while respecting the body’s limits.",
             bio: "Dian (formerly Dian Suhartati) is a Vinyasa and Hatha yoga teacher certified in 2023. She originally began her yoga journey in Jakarta in 2018, discovering how it fostered strength, confidence, and self-awareness. Since relocating to Tallinn in 2025, she has been inspired to share this journey, helping others connect with their bodies and find balance through mindful Vinyasa flows.\nWith a diverse background that includes working as an accredited Indonesian classical dance assessor and a Digital Marketing specialist, Dian brings a unique, multifaceted perspective to her teaching. Her classes are dynamic and supportive, focusing on safe arm balances, core stability, and joint-friendly modifications, enabling both beginners and advanced students to progress at their own pace.",
@@ -317,7 +317,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             testimonials: []
         },
         et: {
-            name: "Dian Jarvenkyla",
+            name: "Dian Aikani",
             role: "Vinyasa ja Hatha jooga",
             quote: "Juhendan õpilasi liikuma teadlikult, kasvatades jõudu, liikuvust ja tasakaalu, austades samal ajal keha piire.",
             bio: "Dian (endise nimega Dian Suhartati) on 2023. aastal sertifitseeritud Vinyasa ja Hatha jooga õpetaja. Oma joogateekonda alustas ta algselt 2018. aastal Jakartas, avastades, kuidas see edendab jõudu, enesekindlust ja eneseteadlikkust. Pärast Tallinna kolimist 2025. aastal on ta saanud inspiratsiooni selle teekonna jagamiseks, aidates teistel oma kehaga ühendust luua ja leida tasakaalu läbi teadliku Vinyasa voolamise.\nOmades mitmekülgset tausta, mis hõlmab töötamist akrediteeritud Indoneesia klassikalise tantsu hindajana ja digitaalturunduse spetsialistina, toob Dian oma õpetamisse ainulaadse ja mitmetahulise vaatenurga. Tema tunnid on dünaamilised ja toetavad, keskendudes turvalisele käte tasakaalule, kerelihaste stabiilsusele ja liigesesõbralikele modifikatsioonidele, võimaldades nii algajatel kui ka edasijõudnud õpilastel areneda omas tempos.",
@@ -332,7 +332,7 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             testimonials: []
         },
         fi: {
-            name: "Dian Jarvenkyla",
+            name: "Dian Aikani",
             role: "Vinyasa & Hatha Jooga",
             quote: "Ohjaan oppilaita liikkumaan tietoisesti, kehittämään voimaa, liikkuvuutta ja tasapainoa kunnioittaen samalla kehon rajoja.",
             bio: "Dian (entiseltä nimeltään Dian Suhartati) on vuonna 2023 sertifioitu Vinyasa- ja Hatha-joogan opettaja. Hän aloitti joogapolkunsa alun perin Jakartassa vuonna 2018 ja huomasi, kuinka se edisti voimaa, itseluottamusta ja itsetuntemusta. Muutettuaan Tallinnaan vuonna 2025 hän on saanut inspiraation jakaa tätä matkaa, auttaen muita luomaan yhteyden kehoonsa ja löytämään tasapainon tietoisen Vinyasa-virtauksen kautta.\nMonipuolisen taustansa ansiosta, johon kuuluu työskentely akkreditoituna indonesialaisen klassisen tanssin arvioijana ja digitaalisen markkinoinnin asiantuntijana, Dian tuo opetukseensa ainutlaatuisen ja moniulotteisen näkökulman. Hänen tunnit ovat dynaamisia ja tukevia, keskittyen turvallisiin käsilläseisontoihin, keskivartalon tukeen ja nivelystävällisiin muunnelmiin, mahdollistaen sekä aloittelijoiden että edistyneiden oppilaiden kehittymisen omaan tahtiinsa.",
