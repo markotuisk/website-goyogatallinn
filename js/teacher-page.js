@@ -179,7 +179,8 @@ function renderTeacherData(id, lang) {
     const emailEl = document.getElementById('social-email');
     if (emailEl) {
         const enquirySubject = encodeURIComponent(`Enquiry for ${name}`);
-        emailEl.href = `mailto:info@goyoga.ee?subject=${enquirySubject}`;
+        const mailToEmail = socials.email || 'info@goyoga.ee';
+        emailEl.href = `mailto:${mailToEmail}?subject=${enquirySubject}`;
         emailEl.classList.remove('hidden');
     }
 
@@ -242,7 +243,8 @@ function renderTeacherData(id, lang) {
     const bookPrivateBtn = document.getElementById('book-private-btn');
     if (bookPrivateBtn) {
         const subject = encodeURIComponent(`Private Class Enquiry for ${name}`);
-        bookPrivateBtn.href = `mailto:info@goyoga.ee?subject=${subject}`;
+        const mailToEmail = socials.email || 'info@goyoga.ee';
+        bookPrivateBtn.href = `mailto:${mailToEmail}?subject=${subject}`;
     }
 
     // Custom Backgrounds for Specific Teachers
