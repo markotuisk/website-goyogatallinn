@@ -34,14 +34,14 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link href="/css/style.css?v=1775708350" rel="stylesheet"/>
+<link href="/css/style.css?v=1775708469" rel="stylesheet"/>
 <!-- Favicons -->
 <link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="site.webmanifest" rel="manifest"/>
 <!-- SEO Config -->
-<script src="/js/seo-data.js?v=1775708350"></script>
+<script src="/js/seo-data.js?v=1775708469"></script>
 <!-- AI SEO Structured Data (LocalBusiness) -->
 <script type="application/ld+json">
     {
@@ -805,7 +805,7 @@
 <p class="text-gray-600 mb-6" data-i18n="studio.description2">При естественном свете и заземляющей эстетике мы предоставляем премиальную среду, включая высококачественные коврики, реквизит и уютный уголок с чаем.</p>
 <div class="flex flex-wrap gap-4 mt-2">
 <a class="inline-flex items-center px-8 py-3 bg-gray-800 text-white font-medium rounded-md hover:bg-gray-700 transition-colors" data-i18n="studio.rent_button" href="/rent.html" id="rent-studio-button">Войти Внутрь</a>
-<a class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-medium rounded-md hover:bg-gray-50 border border-gray-200 transition-colors shadow-sm" data-i18n="studio.photos_button" href="/rent.html#gallery">Фотографии Студии</a>
+<button class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-medium rounded-md hover:bg-gray-50 border border-gray-200 transition-colors shadow-sm" data-i18n="studio.photos_button" onclick="openStudioGalleryModal()">Фотографии Студии</button>
 </div>
 </div>
 <div class="grid grid-cols-2 gap-4">
@@ -1073,9 +1073,70 @@
 </footer>
 <!-- Main JavaScript Logic -->
 <script src="/js/data.js?v=1775707269"></script>
-<script src="/js/events.js?v=1775708350"></script>
-<script src="/js/stories.js?v=1775708350"></script>
+<script src="/js/events.js?v=1775708469"></script>
+<script src="/js/stories.js?v=1775708469"></script>
 <script src="/js/script.js?v=5"></script>
+<!-- Studio Photos Premium Modal -->
+<div class="fixed inset-0 z-[100] hidden items-start justify-center bg-black/95 backdrop-blur-md overflow-y-auto transition-opacity duration-300 opacity-0 px-4 py-12 md:py-20 cursor-pointer" id="studio-gallery-modal" onclick="closeStudioGalleryModal()">
+<button class="fixed top-6 right-6 md:top-10 md:right-10 p-3 bg-white/10 hover:bg-pink-600 text-white rounded-full backdrop-blur-md transition-all z-[110] transform hover:rotate-90 shadow-2xl border border-white/20" onclick="closeStudioGalleryModal()">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+<div class="relative w-full max-w-7xl mx-auto cursor-default" onclick="event.stopPropagation()">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-serif font-medium text-white tracking-wide mb-6">Goyoga Tallinn Studio Gallery</h2>
+<div class="w-24 h-1 bg-pink-500 mx-auto rounded-full"></div>
+</div>
+<div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/5-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/6-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/7-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/8-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/9-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/10-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/11-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/12-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/13-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/14-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/15-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/16-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/17-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/18-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/19-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/20-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/21-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/22-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+<img alt="Studio Gallery" class="w-full h-auto object-cover rounded-xl shadow-2xl mb-4 hover:scale-[1.02] transition-transform duration-500 border border-white/10" loading="lazy" src="/assets/studio/23-goyoga-tallinn-stuudio-estonia-jooga-meditatsioon-rendi-ruumid-narvamnt7Dkorrus3-raili-maripuuu-raili-yoga-ashtanga-600w.webp"/>
+</div>
+<!-- Global JS to control modal display directly inline -->
+<script>
+                function openStudioGalleryModal() {
+                    const modal = document.getElementById('studio-gallery-modal');
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                    }, 10);
+                }
+                function closeStudioGalleryModal() {
+                    const modal = document.getElementById('studio-gallery-modal');
+                    modal.classList.add('opacity-0');
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }, 300);
+                }
+                // allow hitting Escape
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === "Escape") {
+                        const m = document.getElementById('studio-gallery-modal');
+                        if (m && !m.classList.contains('hidden')) {
+                            closeStudioGalleryModal();
+                        }
+                    }
+                });
+            </script>
+</div>
+</div>
 <noscript>
 <div class="seo-fallback" style="padding: 20px; text-align: center; color: #282420;">
         Welcome to Goyoga Tallinn, Estonia's premier yoga and wellness destination. Providing the widest variety of authentic wellness practices, including Vinyasa, Yin Yoga, Sound Baths, and Cacao Ceremonies in the heart of Tallinn. Discover expert yoga teachers, community retreats, and beautiful studio space rentals designed for everyone.
