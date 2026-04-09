@@ -76,12 +76,36 @@ function renderCardData(id, data) {
     // Instagram
     const instaVal = document.getElementById('val-instagram');
     const instaItem = document.getElementById('item-instagram');
-    if (instaVal && instagram && instagram !== '#') {
-        const handle = instagram.split('/').filter(Boolean).pop() || "Instagram";
-        instaVal.textContent = handle.startsWith('@') ? handle : `@${handle}`;
-        instaItem.href = instagram;
-    } else if (instaItem) {
-        instaItem.style.display = 'none';
+    const instaIcon = document.getElementById('icon-instagram');
+    if (instagram && instagram !== '#') {
+        if (instaVal) {
+            const handle = instagram.split('/').filter(Boolean).pop() || "Instagram";
+            instaVal.textContent = handle.startsWith('@') ? handle : `@${handle}`;
+        }
+        if (instaItem) {
+            instaItem.href = instagram;
+            instaItem.style.display = 'flex';
+        }
+        if (instaIcon) {
+            instaIcon.href = instagram;
+            instaIcon.classList.remove('hidden');
+        }
+    } else {
+        if (instaItem) instaItem.style.display = 'none';
+        if (instaIcon) instaIcon.classList.add('hidden');
+    }
+
+    // Quick Row Website/Email
+    const iconWeb = document.getElementById('icon-website');
+    if (iconWeb && website) {
+        iconWeb.href = website;
+        iconWeb.classList.remove('hidden');
+    }
+
+    const iconEmail = document.getElementById('icon-email');
+    if (iconEmail) {
+        iconEmail.href = `mailto:${email}`;
+        iconEmail.classList.remove('hidden');
     }
 
     // QR Code Generation
