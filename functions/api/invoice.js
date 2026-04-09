@@ -18,6 +18,7 @@ export async function onRequestPost(context) {
                     { name: "Product", value: data.product || "N/A", inline: true },
                     { name: "Price", value: data.price || "N/A", inline: true },
                     { name: "Email", value: data.email || "N/A", inline: false },
+                    { name: "Organisation", value: data.organisation || "N/A", inline: false },
                     { name: "Language", value: data.language || "N/A", inline: true },
                     { name: "Subscribed", value: data.subscribe ? "✅ Yes" : "❌ No", inline: true }
                 ],
@@ -39,28 +40,29 @@ export async function onRequestPost(context) {
             <head>
                 <meta charset="UTF-8">
                 <style>
-                    body { font-family: sans-serif; line-height: 1.6; color: #374151; margin: 0; padding: 0; background-color: #f9fafb; }
+                    body { font-family: sans-serif; font-size: 16px; line-height: 1.6; color: #374151; margin: 0; padding: 0; background-color: #f9fafb; }
                     .container { max-width: 600px; margin: 40px auto; background: white; border-radius: 16px; overflow: hidden; border: 1px solid #f3f4f6; }
                     .header { background: #db2777; padding: 40px 20px; text-align: center; color: white; }
                     .content { padding: 40px; }
                     .invoice-card { background: #fdf2f8; border: 1px solid #fce7f3; border-radius: 12px; padding: 24px; margin-bottom: 32px; }
-                    .invoice-no { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #be185d; font-weight: bold; }
-                    .invoice-id { font-size: 14px; font-weight: bold; margin-bottom: 20px; }
+                    .invoice-no { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: #be185d; font-weight: bold; }
+                    .invoice-id { font-size: 16px; font-weight: bold; margin-bottom: 20px; }
                     .item-row { display: flex; justify-content: space-between; border-bottom: 1px solid #fce7f3; padding: 12px 0; }
                     .total-row { display: flex; justify-content: space-between; padding: 16px 0 0; font-weight: bold; }
                     .button { display: block; text-align: center; background: #db2777; color: white !important; text-decoration: none; padding: 16px; border-radius: 12px; font-weight: bold; text-transform: uppercase; }
-                    .footer { padding: 40px; background: #f9fafb; text-align: center; font-size: 11px; color: #9ca3af; }
+                    .footer { padding: 40px; background: #f9fafb; text-align: center; font-size: 14px; color: #9ca3af; }
                 </style>
             </head>
             <body>
                 <div class="container">
-                    <div class="header"><h1>GOYOGA TALLINN</h1></div>
+                    <div class="header"><h1>GOYOGA ESTONIA</h1></div>
                     <div class="content">
                         <h2>Order Summary</h2>
-                        <p>Thank you for choosing GoYoga. Below is your purchase summary.</p>
+                        <p><strong>Thank you for your purchase with Goyoga Estonia!</strong> Below is your purchase summary.</p>
                         <div class="invoice-card">
                             <div class="invoice-no">Invoice No.</div>
                             <div class="invoice-id">${invoiceId}</div>
+                            ${data.organisation ? `<div class="item-row"><span>Organisation</span><span style="text-align: right; word-break: break-all;">${data.organisation}</span></div>` : ''}
                             <div class="item-row"><span>${data.product}</span><span>${data.price}</span></div>
                             <div class="total-row"><span>Total</span><span style="color: #db2777; font-size: 20px;">${data.price}</span></div>
                         </div>
@@ -74,10 +76,17 @@ export async function onRequestPost(context) {
                         
                         <p style="font-size: 12px; text-align: center; margin-bottom: 24px;">Complete your transaction on the website or via the link in your account.</p>
                         <p style="text-align: center;"><em>This is an automated summary. Final receipt will be issued upon payment.</em></p>
+                        ${data.subscribe ? `
+                        <p style="text-align: center; font-size: 14px; font-weight: bold; margin-top: 32px; color: #db2777;">
+                            Thank you for subscribing to our community!
+                        </p>
+                        ` : ''}
                     </div>
                     <div class="footer">
-                        <p>GoYoga Tallinn | Narva mnt 7D, Tallinn</p>
-                        <p>Contact: online.services@goyoga-billing.cc</p>
+                        <p><strong>Goyoga Estonia</strong><br/>Narva mnt 7D, Tallinn</p>
+                        <p>Website: <a href="https://www.goyoga.ee" style="color: #db2777; text-decoration: none;">www.goyoga.ee</a></p>
+                        <p>Contact: <a href="mailto:info@goyoga.ee" style="color: #db2777; text-decoration: none;">info@goyoga.ee</a></p>
+                        ${data.subscribe ? `<p style="margin-top: 24px;"><a href="mailto:info@goyoga.ee?subject=Unsubscribe" style="color: #9ca3af; text-decoration: underline;">Click here to unsubscribe</a></p>` : ''}
                     </div>
                 </div>
             </body>
@@ -97,14 +106,14 @@ export async function onRequestPost(context) {
                     "authorization": ZOHO_KEY
                 },
                 body: JSON.stringify({
-                    "from": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Billing" },
+                    "from": { "address": "online.services@goyoga-billing.cc", "name": "Goyoga Services" },
                     "to": [
                         { "email_address": { "address": data.email, "name": "Customer" } },
                         { "email_address": { "address": "info@goyoga.ee", "name": "GoYoga Tracker" } },
                         { "email_address": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Billing Archive" } },
                         { "email_address": { "address": "arved@goyoga.ee", "name": "GoYoga Accounting" } }
                     ],
-                    "subject": `GoYoga Purchase Summary - ${invoiceId}`,
+                    "subject": `Goyoga Estonia Purchase Summary - ${invoiceId}`,
                     "htmlbody": emailHtml
                 })
             });
