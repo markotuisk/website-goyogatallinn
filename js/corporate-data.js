@@ -140,10 +140,10 @@ const corporateData = {
             "closeButton": "Sulge",
             "interests": {
                 "general": "Üldine huvi",
-                "mindhealth": "MindHealth",
-                "bodyhealth": "BodyHealth",
-                "mindbody": "Mind & Body Health",
-                "wellnessday": "Wellness Day",
+                "mindhealth": "Vaimse Tervise Pakett",
+                "bodyhealth": "Jooga & Liikuvuse Pakett",
+                "mindbody": "Jooga & Vaimse Tervise Töötoad",
+                "wellnessday": "Heaolu Päev",
                 "custom": "Eritellimus / Tiimiüritus"
             }
         },
@@ -334,9 +334,9 @@ const corporateData = {
             "closeButton": "Close",
             "interests": {
                 "general": "General Interest",
-                "mindhealth": "MindHealth",
-                "bodyhealth": "BodyHealth",
-                "mindbody": "Mind & Body Health",
+                "mindhealth": "Mental Health Package",
+                "bodyhealth": "Yoga & Mobility Package",
+                "mindbody": "Yoga & Mental Health Workshops",
                 "wellnessday": "Wellness Day",
                 "custom": "Custom Event / Team Event"
             }
@@ -521,10 +521,10 @@ const corporateData = {
             "closeButton": "Sulje",
             "interests": {
                 "general": "Yleinen kiinnostus",
-                "mindhealth": "MindHealth",
-                "bodyhealth": "BodyHealth",
-                "mindbody": "Mind & Body Health",
-                "wellnessday": "Wellness Day",
+                "mindhealth": "Mielenterveyspaketti",
+                "bodyhealth": "Jooga- ja liikkuvuuspaketti",
+                "mindbody": "Jooga- ja mielenterveystyöpajat",
+                "wellnessday": "Hyvinvointipäivä",
                 "custom": "Räätälöity tapahtuma"
             }
         },
@@ -715,10 +715,10 @@ const corporateData = {
             "closeButton": "Закрыть",
             "interests": {
                 "general": "Общий интерес",
-                "mindhealth": "MindHealth",
-                "bodyhealth": "BodyHealth",
-                "mindbody": "Mind & Body Health",
-                "wellnessday": "Wellness Day",
+                "mindhealth": "Пакет психического здоровья",
+                "bodyhealth": "Пакет Йога и Подвижность",
+                "mindbody": "Йога и Мастер-классы по психическому здоровью",
+                "wellnessday": "День здоровья",
                 "custom": "Индивидуальное мероприятие"
             }
         },
