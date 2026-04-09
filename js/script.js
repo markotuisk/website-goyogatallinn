@@ -1046,30 +1046,23 @@ function initFadeIn() {
 }
 function initCountdown() {
     // Determine header countdown existence safely
-    const countdownEl = document.getElementById('countdown');
+    const countdownEl = document.getElementById('hero-countdown');
 
-    // Set the date we're counting down to: March 10, current year 23:59:59 (for header)
-    const currentYear = new Date().getFullYear();
-    const targetDate = new Date(`March 10, ${currentYear} 23:59:59`).getTime();
+    // Set the date we're counting down to: April 30, 2026 23:59:59
+    const targetDate = new Date("April 30, 2026 23:59:59").getTime();
 
     function updateTimer() {
         const now = new Date().getTime();
 
-        // --- 1. Main Header Countdown ---
-        const mainDistance = targetDate - now;
-        if (countdownEl && mainDistance >= 0) {
-            const days = Math.floor(mainDistance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((mainDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((mainDistance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((mainDistance % (1000 * 60)) / 1000);
-
-            let dEl = document.getElementById('days'); if (dEl) dEl.innerText = days.toString().padStart(2, '0');
-            let hEl = document.getElementById('hours'); if (hEl) hEl.innerText = hours.toString().padStart(2, '0');
-            let mEl = document.getElementById('minutes'); if (mEl) mEl.innerText = minutes.toString().padStart(2, '0');
-            let sEl = document.getElementById('seconds'); if (sEl) sEl.innerText = seconds.toString().padStart(2, '0');
+        const distance = targetDate - now;
+        if (countdownEl && distance >= 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            // Just inject it directly as before
+            countdownEl.innerHTML = `<span class="bg-stone-800 text-pink-300 px-1.5 py-0.5 rounded">${days.toString().padStart(2, '0')}d</span><span class="opacity-50">:</span><span class="bg-stone-800 text-pink-300 px-1.5 py-0.5 rounded">${hours.toString().padStart(2, '0')}h</span>`;
+        } else if (countdownEl) {
+            countdownEl.innerHTML = '';
         }
-
-        // The Pricing Modal Countdown has been removed as the Seasonal Offer (-20% discount) is no longer active.
     }
 
     updateTimer();
