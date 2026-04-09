@@ -576,6 +576,24 @@ function initModals() {
             }
         });
     });
+
+    window.openEventInvoiceSummary = function(eventId) {
+        const event = (typeof eventsData !== 'undefined' ? eventsData : []).find(e => e.id === eventId);
+        if (!event) return;
+        const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'en';
+        const data = event[lang] || event['en'];
+        
+        const opt = {
+            name: data.title,
+            price: (event.price || 0) + '€',
+            link: event.registerLink,
+            qrCode: event.qrCode || '',
+            desc: data.description
+        };
+        
+        toggleModal('pricing-modal', true);
+        renderInvoiceSummary(opt, { title: data.title }, 'event');
+    };
 }
 
 function toggleModal(id, show) {
@@ -1265,7 +1283,11 @@ function renderEvents(container, featuredOnly = false) {
                     <p class="text-sm text-gray-500 mb-4 italic">${data.organizer}</p>
                     <p class="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed">${data.description}</p>
                     <div class="mt-auto flex gap-3">
-                        ${(event.registerLink && event.registerLink.startsWith('http')) ? `
+                        ${(event.registerLink && event.registerLink.includes('wise.com')) ? `
+                        <button onclick="openEventInvoiceSummary('${event.id}')" class="flex-1 text-center py-3 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
+                            ${translationsData[lang]['events.register_button']}
+                        </button>`
+                        : (event.registerLink && event.registerLink.startsWith('http')) ? `
                         <a href="${event.registerLink}" target="_blank" rel="noopener noreferrer" class="flex-1 flex justify-center items-center py-3 bg-gray-900 text-white text-[11px] font-bold uppercase tracking-widest rounded-lg hover:bg-pink-600 transition-all duration-300">
                             ${translationsData[lang]['events.register_button']}
                         </a>` : `
