@@ -1497,7 +1497,7 @@ const classesData = {
     },
     "vinyasa-flow": {
         icon: "waves",
-        image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5",
+        image: "assets/dian-jarvenkyla/gallery1-goyoga-tallinn-jooga-estonia-dian-jarvenkyla-aikani-vinyasa-hata.webp",
         teacherIds: ["dian-jarvenkyla"],
         translations: {
             en: {
