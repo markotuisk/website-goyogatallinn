@@ -33,6 +33,14 @@ export async function onRequestPost(context) {
             body: JSON.stringify(discordPayload)
         });
 
+        const taglines = {
+            'en': "Estonia's leading yoga and wellness studio",
+            'et': "Eesti juhtiv jooga- ja heaolustuudio",
+            'fi': "Viron johtava jooga- ja hyvinvointistudio",
+            'ru': "Ведущая студия йоги и велнеса в Эстонии"
+        };
+        const tagline = taglines[data.language] || taglines['en'];
+
         // 2. Prepare Email HTML
         const emailHtml = `
             <!DOCTYPE html>
@@ -40,22 +48,25 @@ export async function onRequestPost(context) {
             <head>
                 <meta charset="UTF-8">
                 <style>
-                    body { font-family: sans-serif; font-size: 16px; line-height: 1.6; color: #374151; margin: 0; padding: 0; background-color: #f9fafb; }
+                    body { font-family: sans-serif; font-size: 18px; line-height: 1.6; color: #374151; margin: 0; padding: 0; background-color: #f9fafb; }
                     .container { max-width: 600px; margin: 40px auto; background: white; border-radius: 16px; overflow: hidden; border: 1px solid #f3f4f6; }
                     .header { background: #db2777; padding: 40px 20px; text-align: center; color: white; }
                     .content { padding: 40px; }
-                    .invoice-card { background: #fdf2f8; border: 1px solid #fce7f3; border-radius: 12px; padding: 24px; margin-bottom: 32px; }
-                    .invoice-no { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: #be185d; font-weight: bold; }
-                    .invoice-id { font-size: 16px; font-weight: bold; margin-bottom: 20px; }
-                    .item-row { display: flex; justify-content: space-between; border-bottom: 1px solid #fce7f3; padding: 12px 0; }
-                    .total-row { display: flex; justify-content: space-between; padding: 16px 0 0; font-weight: bold; }
+                    .invoice-card { background: #fdf2f8; border: 1px solid #fce7f3; border-radius: 12px; padding: 24px; margin-bottom: 32px; font-size: 18px; }
+                    .invoice-no { font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: #be185d; font-weight: bold; }
+                    .invoice-id { font-size: 18px; font-weight: bold; margin-bottom: 20px; }
+                    .item-row { display: flex; justify-content: space-between; border-bottom: 1px solid #fce7f3; padding: 16px 0; }
+                    .total-row { display: flex; justify-content: space-between; padding: 20px 0 0; font-weight: bold; font-size: 20px; }
                     .button { display: block; text-align: center; background: #db2777; color: white !important; text-decoration: none; padding: 16px; border-radius: 12px; font-weight: bold; text-transform: uppercase; }
-                    .footer { padding: 40px; background: #f9fafb; text-align: center; font-size: 14px; color: #9ca3af; }
+                    .footer { padding: 40px; background: #f9fafb; text-align: center; font-size: 16px; color: #9ca3af; }
                 </style>
             </head>
             <body>
                 <div class="container">
-                    <div class="header"><h1>GOYOGA ESTONIA</h1></div>
+                    <div class="header">
+                        <h1 style="margin-bottom: 8px;">GOYOGA ESTONIA</h1>
+                        <p style="margin: 0; font-size: 16px; color: #fce7f3;">${tagline}</p>
+                    </div>
                     <div class="content">
                         <h2>Order Summary</h2>
                         <p><strong>Thank you for your purchase with Goyoga Estonia!</strong> Below is your purchase summary.</p>
@@ -68,22 +79,22 @@ export async function onRequestPost(context) {
                         </div>
                         
                         ${data.desc ? `
-                        <div style="background: #fdf8fa; border: 1px solid #fce7f3; border-radius: 8px; padding: 16px; margin-bottom: 24px; font-size: 11px; color: #db2777;">
+                        <div style="background: #fdf8fa; border: 1px solid #fce7f3; border-radius: 8px; padding: 20px; margin-bottom: 24px; font-size: 14px; color: #db2777;">
                             <strong style="display: block; margin-bottom: 8px; text-transform: uppercase;">Terms & Validity:</strong>
                             ${data.desc}
                         </div>
                         ` : ''}
                         
-                        <p style="font-size: 12px; text-align: center; margin-bottom: 24px;">Complete your transaction on the website or via the link in your account.</p>
-                        <p style="text-align: center;"><em>This is an automated summary. Final receipt will be issued upon payment.</em></p>
+                        <p style="font-size: 14px; text-align: center; margin-bottom: 24px;">Complete your transaction on the website or via the link in your account.</p>
+                        <p style="text-align: center; font-size: 14px;"><em>This is an automated summary. Final receipt will be issued upon payment.</em></p>
                         ${data.subscribe ? `
-                        <p style="text-align: center; font-size: 14px; font-weight: bold; margin-top: 32px; color: #db2777;">
+                        <p style="text-align: center; font-size: 16px; font-weight: bold; margin-top: 32px; color: #db2777;">
                             Thank you for subscribing to our community!
                         </p>
                         ` : ''}
                     </div>
                     <div class="footer">
-                        <p><strong>Goyoga Estonia</strong><br/>Narva mnt 7D, Tallinn</p>
+                        <p><strong>Goyoga Estonia OU</strong><br/>Narva mnt 7D, Tallinn</p>
                         <p>Website: <a href="https://www.goyoga.ee" style="color: #db2777; text-decoration: none;">www.goyoga.ee</a></p>
                         <p>Contact: <a href="mailto:info@goyoga.ee" style="color: #db2777; text-decoration: none;">info@goyoga.ee</a></p>
                         ${data.subscribe ? `<p style="margin-top: 24px;"><a href="mailto:info@goyoga.ee?subject=Unsubscribe" style="color: #9ca3af; text-decoration: underline;">Click here to unsubscribe</a></p>` : ''}
