@@ -411,16 +411,16 @@ function initModals() {
                             <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
                         </div>
                         <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
-                            Purchase is by organisation
+                            ${langData['checkout.org_checkbox'] || 'Purchase is by organisation'}
                         </span>
                     </label>
 
                     <div id="checkout-org-wrapper" class="hidden mt-3 space-y-3 p-4 bg-gray-50 border border-gray-100 rounded-xl">
-                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Organisation Details</p>
-                        <input type="text" id="checkout-org-country" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" value="Estonia" placeholder="Country">
-                        <input type="text" id="checkout-org-name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="Organisation Name">
-                        <input type="text" id="checkout-org-reg" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="Registration Number">
-                        <input type="url" id="checkout-org-web" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="Website (Optional)">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">${langData['checkout.org_details'] || 'Organisation Details'}</p>
+                        <input type="text" id="checkout-org-country" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" value="Estonia" placeholder="${langData['checkout.org_country'] || 'Country'}">
+                        <input type="text" id="checkout-org-name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_name'] || 'Organisation Name'}">
+                        <input type="text" id="checkout-org-reg" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_reg'] || 'Registration Number'}">
+                        <input type="url" id="checkout-org-web" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_web'] || 'Website (Optional)'}">
                     </div>
 
                     <button class="w-full bg-pink-600 text-white font-bold py-4 rounded-xl hover:bg-pink-700 transition-all active:scale-[0.98] shadow-lg shadow-pink-100 uppercase tracking-widest text-xs mt-4 flex items-center justify-center gap-2" id="checkout-confirm-btn">
@@ -428,8 +428,8 @@ function initModals() {
                         <i data-lucide="arrow-right" class="h-4 w-4"></i>
                     </button>
                     
-                    <p class="text-center text-xs text-gray-500 font-medium">
-                        * Note: Services do not include VAT.
+                    <p class="text-center text-xs text-gray-500 font-medium mt-4 mb-2">
+                        ${langData['checkout.vat_note'] || '* Note: Services do not include VAT.'}
                     </p>
                 </div>
             </div>
