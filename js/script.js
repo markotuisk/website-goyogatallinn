@@ -234,19 +234,23 @@ function initModals() {
 
             const langData = translationsData[currentLanguage] || translationsData['en'];
             const buyBtnText = langData['pricing.buy'] || 'Buy Now';
+            const termsBtnText = currentLanguage === 'et' ? 'Tingimused' : currentLanguage === 'fi' ? 'Ehdot' : currentLanguage === 'ru' ? 'Условия' : 'Terms';
             
             modalContentHTML += `
                 <div class="p-4 border rounded flex flex-col justify-center">
-                    <div class="flex justify-between items-center w-full group mb-2">
+                    <div class="flex justify-between items-center w-full group mb-3">
                         <span class="font-medium group-hover:text-pink-600 transition-colors">${opt.name}</span>
                         ${displayPrice}
                     </div>
-                    <div class="flex flex-col gap-2 mb-2">
-                        <button class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-xs font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider select-none active:scale-[0.98] buy-start-btn" data-opt-index="${index}" data-group="${group}">
+                    <div class="grid grid-cols-2 gap-2 mb-2">
+                        <button class="w-full inline-block text-center px-4 py-2 bg-pink-600 text-white text-[11px] font-bold rounded-md hover:bg-pink-700 transition-colors uppercase tracking-wider select-none active:scale-[0.98] buy-start-btn" data-opt-index="${index}" data-group="${group}">
                             ${buyBtnText}
                         </button>
+                        <button class="w-full inline-block text-center px-4 py-2 bg-pink-50 border border-pink-100 text-pink-600 text-[11px] font-bold rounded-md hover:bg-pink-100 transition-colors uppercase tracking-wider select-none active:scale-[0.98] terms-toggle-btn" data-opt-index="${index}">
+                            ${termsBtnText}
+                        </button>
                     </div>
-                    ${opt.desc ? `<p class="text-xs text-gray-500 leading-relaxed">${opt.desc}</p>` : ''}
+                    ${opt.desc ? `<div class="hidden pt-3 border-t border-pink-100 mt-2 text-xs text-gray-500 leading-relaxed terms-box-${index}">${opt.desc}</div>` : ''}
                 </div>
             `;
         });
@@ -288,6 +292,17 @@ function initModals() {
             btn.addEventListener('click', () => {
                 const opt = data.options[btn.dataset.optIndex];
                 renderInvoiceSummary(opt, data, group);
+            });
+        });
+
+        // Add Listeners to Terms Buttons
+        body.querySelectorAll('.terms-toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const i = btn.dataset.optIndex;
+                const box = body.querySelector('.terms-box-' + i);
+                if (box) {
+                    box.classList.toggle('hidden');
+                }
             });
         });
 
