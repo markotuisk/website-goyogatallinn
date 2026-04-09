@@ -21,6 +21,11 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/en/shop</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/en/events</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -157,6 +162,11 @@
    </url>
    <url>
       <loc>https://www.goyoga.ee/et/ettevotetele</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/shop</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -301,6 +311,11 @@
       <priority>0.8</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/fi/shop</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/fi/tapahtumat</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -437,6 +452,11 @@
    </url>
    <url>
       <loc>https://www.goyoga.ee/ru/korporativnym</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/shop</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
