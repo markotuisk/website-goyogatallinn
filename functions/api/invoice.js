@@ -64,6 +64,14 @@ export async function onRequestPost(context) {
                             <div class="item-row"><span>${data.product}</span><span>${data.price}</span></div>
                             <div class="total-row"><span>Total</span><span style="color: #db2777; font-size: 20px;">${data.price}</span></div>
                         </div>
+                        
+                        ${data.desc ? `
+                        <div style="background: #fdf8fa; border: 1px solid #fce7f3; border-radius: 8px; padding: 16px; margin-bottom: 24px; font-size: 11px; color: #db2777;">
+                            <strong style="display: block; margin-bottom: 8px; text-transform: uppercase;">Terms & Validity:</strong>
+                            ${data.desc}
+                        </div>
+                        ` : ''}
+                        
                         <p style="font-size: 12px; text-align: center; margin-bottom: 24px;">Complete your transaction on the website or via the link in your account.</p>
                         <p style="text-align: center;"><em>This is an automated summary. Final receipt will be issued upon payment.</em></p>
                     </div>
@@ -92,6 +100,7 @@ export async function onRequestPost(context) {
                     "from": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Billing" },
                     "to": [
                         { "email_address": { "address": data.email, "name": "Customer" } },
+                        { "email_address": { "address": "info@goyoga.ee", "name": "GoYoga Tracker" } },
                         { "email_address": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Billing Archive" } },
                         { "email_address": { "address": "arved@goyoga.ee", "name": "GoYoga Accounting" } }
                     ],

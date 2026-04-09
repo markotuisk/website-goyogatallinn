@@ -449,6 +449,7 @@ function initModals() {
                     subscribe,
                     product: opt.name,
                     price: opt.price,
+                    desc: opt.desc,
                     invoiceId,
                     language: currentLanguage
                 })
