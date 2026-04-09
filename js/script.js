@@ -393,30 +393,34 @@ function initModals() {
                         <input type="email" id="checkout-email" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.email_placeholder'] || 'your@email.com'}" required>
                     </div>
 
-                    <label class="flex items-start gap-3 cursor-pointer group">
+                    <label class="flex items-start gap-4 cursor-pointer group">
                         <div class="relative flex items-center mt-0.5">
                             <input type="checkbox" id="checkout-subscribe" class="peer hidden" checked>
-                            <div class="h-4 w-4 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
-                            <i data-lucide="check" class="absolute h-3 w-3 text-white opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none transition-opacity"></i>
+                            <div class="h-5 w-5 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
+                            <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
                         </div>
-                        <span class="text-[11px] text-gray-500 leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
+                        <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
                             ${langData['checkout.subscribe_label'] || 'Subscribe for GoYoga services, events and seasonal offerings'}
                         </span>
                     </label>
 
-                    <label class="flex items-start gap-3 cursor-pointer group mt-2">
+                    <label class="flex items-start gap-4 cursor-pointer group mt-3">
                         <div class="relative flex items-center mt-0.5">
                             <input type="checkbox" id="checkout-is-org" class="peer hidden" onchange="document.getElementById('checkout-org-wrapper').classList.toggle('hidden', !this.checked)">
-                            <div class="h-4 w-4 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
-                            <i data-lucide="check" class="absolute h-3 w-3 text-white opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none transition-opacity"></i>
+                            <div class="h-5 w-5 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
+                            <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
                         </div>
-                        <span class="text-[11px] text-gray-500 leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
+                        <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
                             Purchase is by organisation
                         </span>
                     </label>
 
-                    <div id="checkout-org-wrapper" class="hidden mt-2">
+                    <div id="checkout-org-wrapper" class="hidden mt-3 space-y-3 p-4 bg-gray-50 border border-gray-100 rounded-xl">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Organisation Details</p>
+                        <input type="text" id="checkout-org-country" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" value="Estonia" placeholder="Country">
                         <input type="text" id="checkout-org-name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="Organisation Name">
+                        <input type="text" id="checkout-org-reg" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="Registration Number">
+                        <input type="url" id="checkout-org-web" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="Website (Optional)">
                     </div>
 
                     <button class="w-full bg-pink-600 text-white font-bold py-4 rounded-xl hover:bg-pink-700 transition-all active:scale-[0.98] shadow-lg shadow-pink-100 uppercase tracking-widest text-xs mt-4 flex items-center justify-center gap-2" id="checkout-confirm-btn">
@@ -424,7 +428,7 @@ function initModals() {
                         <i data-lucide="arrow-right" class="h-4 w-4"></i>
                     </button>
                     
-                    <p class="text-center text-[10px] text-gray-400 font-medium">
+                    <p class="text-center text-xs text-gray-500 font-medium">
                         * Note: Services do not include VAT.
                     </p>
                 </div>
@@ -442,8 +446,12 @@ function initModals() {
         const emailInput = document.getElementById('checkout-email');
         const subscribe = document.getElementById('checkout-subscribe').checked;
         const isOrg = document.getElementById('checkout-is-org')?.checked;
-        const orgName = document.getElementById('checkout-org-name')?.value;
-        const finalOrgName = (isOrg && orgName) ? orgName.trim() : null;
+        const finalOrg = isOrg ? {
+            name: document.getElementById('checkout-org-name')?.value?.trim() || '',
+            country: document.getElementById('checkout-org-country')?.value?.trim() || 'Estonia',
+            reg: document.getElementById('checkout-org-reg')?.value?.trim() || '',
+            web: document.getElementById('checkout-org-web')?.value?.trim() || ''
+        } : null;
         const langData = translationsData[currentLanguage] || translationsData['en'];
 
         if (!emailInput.checkValidity() || !emailInput.value) {
@@ -472,7 +480,7 @@ function initModals() {
                     product: opt.name,
                     price: opt.price,
                     desc: opt.desc,
-                    organisation: finalOrgName,
+                    organisation: finalOrg,
                     invoiceId,
                     language: currentLanguage
                 })

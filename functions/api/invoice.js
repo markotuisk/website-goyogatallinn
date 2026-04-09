@@ -18,7 +18,7 @@ export async function onRequestPost(context) {
                     { name: "Product", value: data.product || "N/A", inline: true },
                     { name: "Price", value: data.price || "N/A", inline: true },
                     { name: "Email", value: data.email || "N/A", inline: false },
-                    { name: "Organisation", value: data.organisation || "N/A", inline: false },
+                    { name: "Organisation", value: data.organisation ? `${data.organisation.name || 'N/A'}\nReg: ${data.organisation.reg || 'N/A'}\nCountry: ${data.organisation.country || 'N/A'}\nWeb: ${data.organisation.web || 'N/A'}` : "N/A", inline: false },
                     { name: "Language", value: data.language || "N/A", inline: true },
                     { name: "Subscribed", value: data.subscribe ? "✅ Yes" : "❌ No", inline: true }
                 ],
@@ -73,7 +73,11 @@ export async function onRequestPost(context) {
                         <div class="invoice-card">
                             <div class="invoice-no">Invoice No.</div>
                             <div class="invoice-id">${invoiceId}</div>
-                            ${data.organisation ? `<div class="item-row"><span>Organisation</span><span style="text-align: right; word-break: break-all;">${data.organisation}</span></div>` : ''}
+                            ${data.organisation ? `<div class="item-row"><span>Organisation</span><span style="text-align: right; word-break: break-all;">
+                                <strong>${data.organisation.name || ''}</strong><br/>
+                                ${data.organisation.reg ? 'Reg: ' + data.organisation.reg + '<br/>' : ''}
+                                ${data.organisation.country || ''}
+                            </span></div>` : ''}
                             <div class="item-row"><span>${data.product}</span><span>${data.price}</span></div>
                             <div class="total-row"><span>Total</span><span style="color: #db2777; font-size: 20px;">${data.price}</span></div>
                         </div>
