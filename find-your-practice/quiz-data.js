@@ -69,7 +69,7 @@ const UI_LANG = {
     },
     et: {
         navLabel: 'Leia oma praktika', navBack: '← Tagasi', loading: 'Analüüsime vastuseid...',
-        introH1: 'Leia oma<br/><em>Jooga Praktika</em>', introSub: '13 küsimust · 5 minutit · isikupärastatud just sulle.<br/>Avasta Goyoga tunnid, sündmused ja laagrid.', btnBegin: 'Alusta →', t1: 'Füüsiline', t2: 'Vaimne', t3: 'Vaimne', t4: 'Astroloogiline',
+        introH1: 'Jooga Tallinn | Leia oma<br/><em>Jooga Praktika</em>', introSub: '13 küsimust · 5 minutit · isikupärastatud just sulle.<br/>Avasta Goyoga Tallinnas: parimad tunnid, sündmused ja laagrid.', btnBegin: 'Alusta →', t1: 'Füüsiline', t2: 'Vaimne', t3: 'Vaimne', t4: 'Astroloogiline',
         qLabel: 'Küsimus ', qOf: ' / ', hintBtnTitle: 'Miks me seda küsime?', multiHint: 'Vali kõik sobivad',
         btnBack: '← Tagasi', btnNext: 'Jätka →',
         nameH2: 'Veel üks asi...', nameSub: 'Mis on sinu nimi? Me isikupärastame sinu raporti.', namePlaceholder: 'Sinu eesnimi...', nameBtn: 'Vaata minu profiili →',
@@ -116,7 +116,7 @@ const UI_LANG = {
     },
     fi: {
         navLabel: 'Löydä harjoituksesi', navBack: '← Takaisin', loading: 'Analysoidaan vastauksia...',
-        introH1: 'Löydä oma<br/><em>Täydellinen harjoitus</em>', introSub: '13 kysymystä · 5 minuuttia · sinulle räätälöity.<br/>Löydä Goyogan tunnit, tapahtumat ja retriitit.', btnBegin: 'Aloita →', t1: 'Fyysinen', t2: 'Mentaalinen', t3: 'Henkinen', t4: 'Astrologinen',
+        introH1: 'Jooga Tallinna | Löydä oma<br/><em>Täydellinen harjoitus</em>', introSub: '13 kysymystä · 5 minuuttia · sinulle räätälöity.<br/>Löydä Goyogan parhaat tunnit, tapahtumat ja retriitit Tallinnassa.', btnBegin: 'Aloita →', t1: 'Fyysinen', t2: 'Mentaalinen', t3: 'Henkinen', t4: 'Astrologinen',
         qLabel: 'Kysymys ', qOf: ' / ', hintBtnTitle: 'Miksi kysymme tätä?', multiHint: 'Valitse kaikki sopivat',
         btnBack: '← Takaisin', btnNext: 'Jatka →',
         nameH2: 'Vielä yksi juttu...', nameSub: 'Mikä on nimesi? Teemme raportistasi henkilökohtaisen.', namePlaceholder: 'Etunimesi...', nameBtn: 'Näytä profiilini →',
@@ -165,8 +165,8 @@ const UI_LANG = {
         navLabel: 'Найдите свою практику',
         navBack: '← Назад',
         loading: 'Анализируем ваши ответы...',
-        introH1: 'Найдите свою<br/><em>Идеальную практику</em>',
-        introSub: '13 вопросов · 5 минут · индивидуально для вас.<br/>Узнайте, какие занятия и ретриты Goyoga подходят именно вам.',
+        introH1: 'Йога в Таллине | Найдите свою<br/><em>Идеальную практику</em>',
+        introSub: '13 вопросов · 5 минут · индивидуально для вас.<br/>Узнайте, какие занятия и ретриты Goyoga в центре Таллина подходят именно вам.',
         btnBegin: 'Начать →',
         t1: 'Физическая', t2: 'Ментальная', t3: 'Духовная', t4: 'Астрологическая',
         qLabel: 'Вопрос ',

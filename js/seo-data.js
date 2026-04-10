@@ -63,32 +63,32 @@ const seoData = {
     // Basic Meta Tags by Language
     meta: {
         en: {
-            title: "The Best Yoga & Wellness Studio in Tallinn | Goyoga | Estonia's Premier Shala",
-            description: "Tallinn's leading yoga & wellness destination. Experience the widest variety of classes in Estonia, from dynamic Vinyasa to restorative Sound Baths. Premium studio, expert teachers.",
-            keywords: "Yoga Tallinn, Wellness Tallinn, Vinyasa, Yin Yoga, Sound Bath Tallinn, Cacao Ceremony Estonia, Pilates Tallinn, Qigong, Yoga Nidra, Ashtanga",
+            title: "Yoga in Tallinn | Best Yoga & Wellness Studio | Goyoga",
+            description: "Tallinn's leading yoga & wellness destination. Widest variety of classes in Estonia: Ashtanga, Vinyasa, Yin, Hatha, Sound Baths & Cacao Ceremonies. Expert teachers in the heart of Tallinn.",
+            keywords: "Yoga Tallinn, Yoga in Tallinn, Wellness Tallinn, Vinyasa, Yin Yoga, Sound Bath Tallinn, Cacao Ceremony Estonia, Pilates Tallinn, Qigong, Yoga Nidra, Ashtanga",
             ogTitle: "Yoga & Wellness Sanctuary in Tallinn | goyoga.ee",
-            ogDescription: "Discover an authentic space for yoga and wellness in the heart of Tallinn. Classes for all levels and ages."
+            ogDescription: "Discover an authentic space for yoga and wellness in the heart of Tallinn. Widest variety of classes for all levels and ages."
         },
         et: {
-            title: "Parim Joogastuudio ja Heaolu Keskus Tallinnas | Goyoga | Eesti Suurim Valik",
-            description: "Tallinna juhtiv jooga- ja heaolu oaas. Eesti suurim valik treeninguid ja esmaklassiline stuudiokogemust Tallinna südalinnas. Sinu joogamaailma MyFitness.",
-            keywords: "Jooga Tallinn, heaolu, Vinyasa, Yin jooga, helirännak Tallinn, kakaotseremoonia, Pilates Tallinn, Qigong, Yoga Nidra, Ashtanga",
+            title: "Jooga Tallinnas | Parim joogastuudio ja heaolu keskus | Goyoga",
+            description: "Tallinna juhtiv jooga- ja heaolu oaas. Eesti suurim valik treeninguid: Ashtanga, Vinyasa, Yin, Hatha jooga ja helirännakud Tallinna südalinnas. Sinu joogamaailm kesklinnas.",
+            keywords: "Jooga Tallinn, joogastuudio Tallinn, heaolu, Vinyasa, Yin jooga, helirännak Tallinn, kakaotseremoonia, Pilates Tallinn, Qigong, Yoga Nidra, Ashtanga",
             ogTitle: "Jooga ja heaolu oaas Tallinnas | goyoga.ee",
-            ogDescription: "Avasta autentne ruum jooga ja heaolu jaoks Tallinna südames. Tunnid igale tasemele ja vanusele."
+            ogDescription: "Avasta autentne ruum jooga ja heaolu jaoks Tallinna südames. Eesti suurim valik tunde igale tasemele ja vanusele."
         },
         fi: {
-            title: "Tallinnan ja Viron Paras Jooga- ja Hyvinvointistudio | Goyoga",
-            description: "Viron paras jooga- ja hyvinvointistudio. Löydä ainutlaatuinen valikoima harjoituksia ja ensiluokkainen studioympäristö goyoga.ee:ssä. Vinyasa, Yin-jooga, Pilates, äänimaljakylvyt ja paljon muuta.",
-            keywords: "Jooga Tallinna, hyvinvointi, Vinyasa, Yin jooga, äänimaljakylpy Tallinna, kaakaoseremonia, Pilates Tallinna, Qigong, Yoga Nidra, Ashtanga",
+            title: "Jooga Tallinna | Hyvinvointistudio ja parhaat tunnit | Goyoga",
+            description: "Viron monipuolisin jooga- ja hyvinvointistudio Tallinnan keskustassa. Ashtanga, Vinyasa, Yin-jooga, Pilates ja äänimaljakylvyt. Tervetuloa kokeilemaan!",
+            keywords: "Jooga Tallinna, jooga Tallinnassa, hyvinvointi, Vinyasa, Yin jooga, äänimaljakylpy Tallinna, kaakaoseremonia, Pilates Tallinna, Qigong, Yoga Nidra, Ashtanga",
             ogTitle: "Joogan ja hyvinvoinnin keidas Tallinnassa | goyoga.ee",
-            ogDescription: "Löydä aito tila joogalle ja hyvinvoinnille Tallinnan sydämessä. Tunteja kaikille tasoille ja ikäryhmille."
+            ogDescription: "Löydä aito tila joogalle ja hyvinvoinnille Tallinnan südämessä. Viron suurin valikoima tundeja."
         },
         ru: {
-            title: "Лучшая Студия Йоги и Велнеса в Таллине и Эстонии | Goyoga",
-            description: "Лидер в мире йоги Эстонии. Откройте для себя уникальное разнообразие тренировок и первоклассную студийную атмосферу. Аштанга, Виньяса, Инь-йога, Пилатес и звуковые ванны.",
-            keywords: "Йога Таллин, велнес, Аштанга, Виньяса, Инь йога, звуковые ванны Таллин, церемонии какао, Пилатес Таллин, Цигун, Йога Нидра",
+            title: "Йога в Таллине | Лучшая студия йоги и велнеса | Goyoga",
+            description: "Лидер йоги в Эстонии. Самый широкий выбор практик: Аштанга, Виньяса, Инь-йога, Пилатес и звуковые ванны в центре Таллина. Мы предлагаем больше, чем просто йогу.",
+            keywords: "Йога Таллин, йога в Таллине, велнес, Аштанга, Виньяса, Инь йога, звуковые ванны Таллин, церемонии какао, Пилатес Таллин, Цигун",
             ogTitle: "Йога и велнес-оазис в Таллине | goyoga.ee",
-            ogDescription: "Найдите аутентичное пространство для йоги и велнеса в сердце Таллина. Занятия для всех уровней и возрастов."
+            ogDescription: "Аутентичное пространство для йоги и велнеса в сердце Таллина. Широкий выбор классов для всех уровней."
         },
         rent: {
             en: {
@@ -300,7 +300,7 @@ const seoData = {
         "url": "https://www.goyoga.ee",
         "logo": "https://www.goyoga.ee/logo.png",
         "image": "https://www.goyoga.ee/assets/studio/2-goyoga-tallinn-stuudio-estonia.webp",
-        "description": "The Ultimate Yoga & Wellness Destination in Estonia. Offering the widest variety of practices including Vinyasa, Yin Yoga, Pilates, Ashtanga, and unique wellness events.",
+        "description": "Tallinn's leading yoga & wellness destination. Offering Estonia's widest variety of practices including Ashtanga, Hatha, Vinyasa, Yin Yoga, Yoga Nidra, Sound Baths, and Cacao Ceremonies.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Narva mnt 7D",
