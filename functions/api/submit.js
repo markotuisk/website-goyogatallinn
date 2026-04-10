@@ -126,37 +126,37 @@ export async function onRequestPost(context) {
             const ZOHO_KEY = env.ZOHO_API_KEY || "Zoho-enczapikey yA6KbHsIvQn3yz5TQxJp0pCOoY9krf9vj3jksyHhe5d0e4GyiqFs3xVudNO/IDuJ3YHY46ICatNCdIHv6twKe5diZoVYKJTGTuv4P2uV48xh8ciEYNYhjJirA7IUFqVIeRotCSw1Q/MoWA==";
             
             // Reusable wrapper template
-            const generateEmailHtml = (headline, subText, footerNotes) => \`
+            const generateEmailHtml = (headline, subText, footerNotes) => `
                 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #eee; border-radius: 10px; overflow: hidden;">
                     <div style="background: #db2777; color: white; padding: 20px; text-align: center;">
-                        <h1 style="margin:0;">\${headline}</h1>
+                        <h1 style="margin:0;">${headline}</h1>
                     </div>
                     <div style="padding: 30px; line-height: 1.6; color: #333;">
-                        <p>\${subText}</p>
-                        <p style="font-weight: 600; color: #db2777;">Tracking Ticket: \${ticketId}</p>
+                        <p>${subText}</p>
+                        <p style="font-weight: 600; color: #db2777;">Tracking Ticket: ${ticketId}</p>
                         <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
                         <h3 style="margin-top: 0;">Submitted Details:</h3>
                         <table style="width: 100%; border-collapse: collapse; text-align: left;">
-                            \${emailFieldsHtml}
+                            ${emailFieldsHtml}
                         </table>
                     </div>
                     <div style="background: #f4f4f4; padding: 15px; text-align: center; font-size: 12px; color: #666;">
-                        \${footerNotes}
+                        ${footerNotes}
                     </div>
                 </div>
-            \`;
+            `;
 
             const adminHtml = generateEmailHtml(
-                \`New \${inquiryType}\`,
-                \`A new inquiry has been received from the website.\`,
-                \`Goyoga Tallinn | Internal Notification System\`
+                `New ${inquiryType}`,
+                `A new inquiry has been received from the website.`,
+                `Goyoga Tallinn | Internal Notification System`
             );
 
             const customerName = data.name ? data.name.split(' ')[0] : 'there';
             const customerHtml = generateEmailHtml(
-                \`We Received Your Message\`,
-                \`Hello \${customerName},<br><br>Thank you for reaching out to GoYoga Tallinn! This is an automated message to let you know we have successfully received your inquiry and will get back to you shortly.\`,
-                \`GoYoga Tallinn Support &bull; info@goyoga.ee &bull; We aim to respond within 24-48 hours.\`
+                `We Received Your Message`,
+                `Hello ${customerName},<br><br>Thank you for reaching out to GoYoga Tallinn! This is an automated message to let you know we have successfully received your inquiry and will get back to you shortly.`,
+                `GoYoga Tallinn Support &bull; info@goyoga.ee &bull; We aim to respond within 24-48 hours.`
             );
 
             try {
@@ -171,7 +171,7 @@ export async function onRequestPost(context) {
                     body: JSON.stringify({
                         "from": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Website Forms" },
                         "to": [{ "email_address": { "address": "info@goyoga.ee", "name": "GoYoga Tallinn" } }],
-                        "subject": \`[\${ticketId}] New \${inquiryType}\`,
+                        "subject": `[${ticketId}] New ${inquiryType}`,
                         "htmlbody": adminHtml
                     })
                 });
@@ -187,7 +187,7 @@ export async function onRequestPost(context) {
                     body: JSON.stringify({
                         "from": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Tallinn Support" },
                         "to": [{ "email_address": { "address": data.email, "name": data.name || "Customer" } }],
-                        "subject": \`Request Received: \${inquiryType} [\${ticketId}]\`,
+                        "subject": `Request Received: ${inquiryType} [${ticketId}]`,
                         "htmlbody": customerHtml
                     })
                 });
