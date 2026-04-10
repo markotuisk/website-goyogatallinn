@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="canonical" href="https://www.goyoga.ee/compare" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="seo-title">Compare Yoga Passes & Memberships | Goyoga Tallinn</title>
+    <meta name="description" content="Compare Goyoga Tallinn's single sessions, multiple-visit passes, and memberships. Find the perfect pricing option for your yoga journey.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=latin,cyrillic&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/branding/logo-goyoga-tallinn-estonia.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logo-goyoga-tallinn-estonia-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/logo-goyoga-tallinn-estonia-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="/js/data.js?v=1775707269"></script>
+    <script src="js/compare-data.js"></script>
+    <script src="js/seo-data.js"></script>
+    <!-- Brand Identity Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.goyoga.ee/#brand",
+      "name": "GoYoga Tallinn",
+      "alternateName": ["Goyoga Tallinn", "GoYoga", "goyoga.ee"],
+      "url": "https://www.goyoga.ee",
+      "logo": "https://www.goyoga.ee/assets/branding/logo-goyoga-tallinn-estonia-512x512.png",
+      "slogan": "Yoga & Wellness Sanctuary"
+    }
+    </script>
+</head>
+
+<body class="bg-stone-50 text-gray-800">
+    <!-- Navbar -->
+    <header id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container-custom py-4 md:py-5">
+            <div class="flex items-center justify-between">
+                <a href="index.html#home" class="flex items-center">
+                    <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn" class="h-10 w-auto" title="Goyoga Tallinn">
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="index.html#home" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.home">Home</a></li>
+                        
+                        <li><a href="index.html#pricing" class="text-sm font-medium link-underline transition-colors"
+                                data-i18n="nav.pricing">Pricing</a></li>
+
+                        <!-- Language Switcher -->
+                        <li class="language-switcher ml-4">
+                            <button id="language-toggle" class="flex items-center gap-2 text-sm font-medium">
+                                <span class="language-flag-container">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag"
+                                        id="current-flag" title="English">
+                                </span>
+                                <span id="current-language">EN</span>
+                                <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                            </button>
+                            <div class="language-dropdown" id="language-dropdown">
+                                <div class="language-option" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag" title="English">
+                                    <span>English</span>
+                                </div>
+                                <div class="language-option" data-lang="et">
+                                    <img src="https://flagcdn.com/w20/ee.png" alt="Eesti" class="language-flag" title="Eesti">
+                                    <span>Eesti</span>
+                                </div>
+                                <div class="language-option" data-lang="fi">
+                                    <img src="https://flagcdn.com/w20/fi.png" alt="Suomi" class="language-flag" title="Suomi">
+                                    <span>Suomi</span>
+                                </div>
+                        <div class="language-option" data-lang="ru">
+                            <img alt="Русский" class="language-flag" src="https://flagcdn.com/w20/ru.png" title="Русский" />
+                            <span>Русский</span>
+                        </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button id="menu-toggle" class="block md:hidden focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="flex justify-end p-4">
+                <button id="menu-close" class="focus:outline-none">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col h-full justify-center items-center space-y-8 p-8">
+                <a href="index.html#home" class="mobile-link text-xl font-medium" data-i18n="nav.home">Home</a>
+                <a href="index.html#pricing" class="mobile-link text-xl font-medium" data-i18n="nav.pricing">Pricing</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Mysterious Hero -->
+        <section class="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-stone-900 text-stone-100">
+            <div class="absolute inset-0 opacity-40">
+                <img src="https://images.unsplash.com/photo-1599901860904-17e08c3d0cb8" alt="Aura"
+                    class="w-full h-full object-cover" title="Aura">
+                <div class="absolute inset-0 bg-stone-900/60"></div>
+            </div>
+            <div class="container-custom relative z-10 text-center animate-fade-in-slow">
+                <span id="compare-hero-tagline"
+                    class="inline-block px-4 py-1.5 text-xs font-medium tracking-[0.2em] uppercase border border-stone-500 rounded-full mb-6"></span>
+                <h1 id="compare-hero-title" class="text-4xl md:text-6xl font-serif italic mb-6"></h1>
+                <p id="compare-hero-description" class="max-w-xl mx-auto text-lg text-stone-300 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- Dynamic Content -->
+        <section class="section-padding bg-stone-50">
+            <div class="container-custom max-w-6xl">
+                <div class="bg-white rounded-3xl shadow-lg border border-stone-100 overflow-hidden">
+                    <div id="compare-container" class="overflow-x-auto">
+                        <!-- Injected by JS: Responsive Table -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="index.html#pricing" class="inline-flex items-center text-pink-600 font-medium hover:text-pink-700 transition-colors border border-pink-200 hover:border-pink-300 bg-white px-6 py-3 rounded-full shadow-sm hover:shadow">
+                    <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i>
+                    <span data-i18n="pricing.view_options">Back to Pricing</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 border-t border-stone-800">
+        <div class="container-custom text-center">
+            <div class="mb-6 flex justify-center">
+                <img src="assets/branding/logo-goyoga-tallinn-estonia.svg" alt="Goyoga Tallinn"
+                    class="h-10 w-auto brightness-0 invert" title="Goyoga Tallinn">
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="index.html#home" class="hover:text-stone-100 transition-colors" data-i18n="nav.home">Home</a>
+                <a href="corporate.html" class="mobile-link text-xl font-medium transition-colors hover:text-gray-600" data-i18n="nav.corporate">Corporate</a>
+                <a href="index.html#contact" class="hover:text-stone-100 transition-colors"
+                    data-i18n="nav.contact">Contact</a>
+                <a href="faq.html" class="hover:text-stone-100 transition-colors" data-i18n="footer.faq">FAQ</a>
+            </div>
+            <p class="mt-12 text-xs uppercase tracking-widest opacity-50">© 2026 Goyoga Estonia OÜ</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=5"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderComparePage();
+            document.addEventListener('languageChanged', renderComparePage);
+        });
+
+        function renderComparePage() {
+            const lang = currentLanguage || 'en';
+            const data = (window.compareData && window.compareData[lang]) ? window.compareData[lang] : (window.compareData['en'] || {});
+
+            // Hero
+            if (data.hero) {
+                const elTag = document.getElementById('compare-hero-tagline');
+                const elTitle = document.getElementById('compare-hero-title');
+                const elDesc = document.getElementById('compare-hero-description');
+                
+                if(elTag) elTag.textContent = data.hero.tagline;
+                if(elTitle) elTitle.textContent = data.hero.title;
+                if(elDesc) elDesc.textContent = data.hero.description;
+            }
+
+            const container = document.getElementById('compare-container');
+            if(!container || !data.table) return;
+            
+            container.innerHTML = '';
+
+            const table = document.createElement('table');
+            table.className = "w-full text-left border-collapse min-w-[800px]";
+
+            // Render Headers
+            const thead = document.createElement('thead');
+            thead.className = "bg-stone-100 border-b border-stone-200 text-stone-600 font-medium text-sm tracking-wider uppercase";
+            const trHead = document.createElement('tr');
+            
+            data.table.headers.forEach((headerText, index) => {
+                const th = document.createElement('th');
+                th.className = "px-6 py-4";
+                if(index === 0) th.classList.add('rounded-tl-2xl');
+                if(index === data.table.headers.length - 1) th.classList.add('rounded-tr-2xl');
+                th.textContent = headerText;
+                trHead.appendChild(th);
+            });
+            thead.appendChild(trHead);
+            table.appendChild(thead);
+
+            // Render Body
+            const tbody = document.createElement('tbody');
+            tbody.className = "divide-y divide-stone-100 bg-white";
+
+            data.table.sections.forEach((section, secIndex) => {
+                // Section Title Row
+                const trTitle = document.createElement('tr');
+                trTitle.className = "bg-stone-50/50";
+                const tdTitle = document.createElement('td');
+                tdTitle.colSpan = data.table.headers.length;
+                tdTitle.className = "px-6 py-4 font-serif text-lg font-semibold text-stone-800 text-center";
+                tdTitle.textContent = section.title;
+                trTitle.appendChild(tdTitle);
+                tbody.appendChild(trTitle);
+
+                // Section Data Rows
+                section.rows.forEach((row, rowIndex) => {
+                    const tr = document.createElement('tr');
+                    tr.className = "transition-colors hover:bg-stone-50 group";
+                    
+                    row.forEach((cellText, cellIndex) => {
+                        const td = document.createElement('td');
+                        td.className = "px-6 py-4 text-sm text-stone-600 group-hover:text-stone-900";
+                        
+                        if (cellIndex === 0) {
+                            td.className = "px-6 py-4 text-base font-medium text-stone-900";
+                        }
+                        else if (cellIndex === 1) {
+                            td.className = "px-6 py-4 text-base font-bold text-pink-600";
+                        }
+                        else if (cellIndex === 2) {
+                            td.className = "px-6 py-4 text-sm text-stone-500 italic";
+                        }
+
+                        td.textContent = cellText;
+                        tr.appendChild(td);
+                    });
+                    
+                    tbody.appendChild(tr);
+                });
+            });
+
+            table.appendChild(tbody);
+            container.appendChild(table);
+
+            if (window.lucide) window.lucide.createIcons();
+        }
+    </script>
+</body>
+
+</html>

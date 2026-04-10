@@ -12,7 +12,8 @@ const seoData = {
             "rent.html": "rent.html",
             "teacher.html": "teacher.html",
             "corporate.html": "corporate.html",
-            "card.html": "card.html"
+            "card.html": "card.html",
+            "compare.html": "compare.html"
         },
         et: {
             "index.html": "index.html",
@@ -24,7 +25,8 @@ const seoData = {
             "rent.html": "rendi-ruumid.html",
             "teacher.html": "opetajad.html",
             "corporate.html": "ettevotetele.html",
-            "card.html": "kaart.html"
+            "card.html": "kaart.html",
+            "compare.html": "vordle-pakette.html"
         },
         fi: {
             "index.html": "index.html",
@@ -36,7 +38,8 @@ const seoData = {
             "rent.html": "tilojen-vuokraus.html",
             "teacher.html": "opettajat.html",
             "corporate.html": "yrityksille.html",
-            "card.html": "kortti.html"
+            "card.html": "kortti.html",
+            "compare.html": "vertaa-paketteja.html"
         },
         ru: {
             "index.html": "index.html",
@@ -48,7 +51,8 @@ const seoData = {
             "rent.html": "arenda.html",
             "teacher.html": "uchitelya.html",
             "corporate.html": "korporativnym.html",
-            "card.html": "karta.html"
+            "card.html": "karta.html",
+            "compare.html": "sravnit-pakety.html"
         }
     },
 
@@ -168,6 +172,28 @@ const seoData = {
                 title: "{name} | Цифровая визитка | Goyoga Tallinn",
                 description: "Цифровая визитка {name}, {role} в Goyoga Tallinn. Сохраните контакт и запишитесь на занятие.",
                 keywords: "{name}, {role}, визитка учителя йоги, цифровая карта, Goyoga Tallinn"
+            }
+        },
+        compare: {
+            en: {
+                title: "Compare Yoga Passes & Memberships | Goyoga Tallinn",
+                description: "Compare Goyoga Tallinn's single sessions, multiple-visit passes, and memberships. Find the perfect pricing option for your yoga journey.",
+                keywords: "Compare yoga prices, Tallinn yoga pass, Ashtanga membership cost, Goyoga pricing, Support pass"
+            },
+            et: {
+                title: "Võrdle Joogapakette ja Hinnakirja | Goyoga Tallinn",
+                description: "Võrdle Goyoga Tallinna üksikpääsmeid, kuukaarte ja lepinguid. Leia endale sobivaim pakett oma joogateekonna toetamiseks.",
+                keywords: "Joogahinnad Tallinn, Goyoga paketid, Ashtanga kuukaart, jooga hinnakiri, toetuspass"
+            },
+            fi: {
+                title: "Vertaile Joogapaketteja | Goyoga Tallinna",
+                description: "Vertaile Goyoga Tallinnan kertamaksuja, sarjakortteja ja jäsenyyksiä. Löydä sopivin vaihtoehto joogaharjoitteluusi.",
+                keywords: "Joogahinnat Tallinna, Goyoga jäsenyys, Ashtanga kausikortti, jooga hinnasto, tukikortti"
+            },
+            ru: {
+                title: "Сравнение абонементов | Goyoga Tallinn",
+                description: "Сравните цены на разовые занятия, абонементы и членство в Goyoga Tallinn. Найдите идеальный вариант для вашей практики.",
+                keywords: "Цены на йогу Таллин, абонемент на йогу, стоимость членства Аштанга, Goyoga цены"
             }
         },
         offers: {

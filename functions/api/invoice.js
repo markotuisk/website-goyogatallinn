@@ -7,8 +7,10 @@ export async function onRequestPost(context) {
         const invoiceId = data.invoiceId || `GY-${Date.now()}`;
 
         // Discord Webhook for Transaction Logging
-        const INVOICE_WEBHOOK = env.DISCORD_INVOICE_WEBHOOK || "https://discordapp.com/api/webhooks/1478382833251913821/KT2rKdgAndFhmGFdSrasbhUI1Ada49UVIa7kLB2ONlOg08f3HSXMk9SjHJ3pAu6Aox-G";
-
+        const INVOICE_WEBHOOK = env.DISCORD_INVOICE_WEBHOOK;
+        if (!INVOICE_WEBHOOK) {
+            console.error("DISCORD_INVOICE_WEBHOOK is not defined in environment variables");
+        }
         const discordPayload = {
             embeds: [{
                 title: "🧾 New Invoice Summary Request",
@@ -27,11 +29,13 @@ export async function onRequestPost(context) {
         };
 
         // 1. Log to Discord
-        await fetch(INVOICE_WEBHOOK, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(discordPayload)
-        });
+        if (INVOICE_WEBHOOK) {
+            await fetch(INVOICE_WEBHOOK, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(discordPayload)
+            });
+        }
 
         const taglines = {
             'en': "Estonia's leading yoga and wellness studio",
@@ -109,9 +113,11 @@ export async function onRequestPost(context) {
         `;
 
         // 3. Send via Zoho ZeptoMail
-        // NOTE: It is recommended to move this token to Cloudflare Environment Variables (ZOHO_API_KEY) for better security.
-        const ZOHO_KEY = env.ZOHO_API_KEY || "Zoho-enczapikey yA6KbHsIvQn3yz5TQxJp0pCOoY9krf9vj3jksyHhe5d0e4GyiqFs3xVudNO/IDuJ3YHY46ICatNCdIHv6twKe5diZoVYKJTGTuv4P2uV48xh8ciEYNYhjJirA7IUFqVIeRotCSw1Q/MoWA==";
-
+        const ZOHO_KEY = env.ZOHO_API_KEY;
+        if (!ZOHO_KEY) {
+            console.error("ZOHO_API_KEY is not defined in environment variables");
+            return new Response(JSON.stringify({ success: false, error: "Missing Email Configuration" }), { status: 500 });
+        }
         try {
             const zeptoResponse = await fetch("https://api.zeptomail.eu/v1.1/email", {
                 method: "POST",

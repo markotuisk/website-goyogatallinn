@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
+      <loc>https://www.goyoga.ee/en/compare</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/en/rent</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -144,6 +149,11 @@
       <loc>https://www.goyoga.ee/en/card/victoria-palusaar</loc>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/et/vordle-pakette</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.goyoga.ee/et/rendi-ruumid</loc>
@@ -291,6 +301,11 @@
       <priority>0.6</priority>
    </url>
    <url>
+      <loc>https://www.goyoga.ee/fi/vertaa-paketteja</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
       <loc>https://www.goyoga.ee/fi/tilojen-vuokraus</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -434,6 +449,11 @@
       <loc>https://www.goyoga.ee/fi/kortti/victoria-palusaar</loc>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.goyoga.ee/ru/sravnit-pakety</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.goyoga.ee/ru/arenda</loc>
