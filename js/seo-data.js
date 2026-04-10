@@ -65,21 +65,21 @@ const seoData = {
         en: {
             title: "The Best Yoga & Wellness Studio in Tallinn | Goyoga | Estonia's Premier Shala",
             description: "Tallinn's leading yoga & wellness destination. Experience the widest variety of classes in Estonia, from dynamic Vinyasa to restorative Sound Baths. Premium studio, expert teachers.",
-            keywords: "Yoga Tallinn, Wellness Tallinn, Ashtanga, Vinyasa, Yin Yoga, Sound Bath Tallinn, Cacao Ceremony Estonia, Pilates Tallinn, Qigong, Yoga Nidra",
+            keywords: "Yoga Tallinn, Wellness Tallinn, Vinyasa, Yin Yoga, Sound Bath Tallinn, Cacao Ceremony Estonia, Pilates Tallinn, Qigong, Yoga Nidra, Ashtanga",
             ogTitle: "Yoga & Wellness Sanctuary in Tallinn | goyoga.ee",
             ogDescription: "Discover an authentic space for yoga and wellness in the heart of Tallinn. Classes for all levels and ages."
         },
         et: {
             title: "Parim Joogastuudio ja Heaolu Keskus Tallinnas | Goyoga | Eesti Suurim Valik",
             description: "Tallinna juhtiv jooga- ja heaolu oaas. Eesti suurim valik treeninguid ja esmaklassiline stuudiokogemust Tallinna südalinnas. Sinu joogamaailma MyFitness.",
-            keywords: "Jooga Tallinn, heaolu, Ashtanga, Vinyasa, Yin jooga, helirännak Tallinn, kakaotseremoonia, Pilates Tallinn, Qigong, Yoga Nidra",
+            keywords: "Jooga Tallinn, heaolu, Vinyasa, Yin jooga, helirännak Tallinn, kakaotseremoonia, Pilates Tallinn, Qigong, Yoga Nidra, Ashtanga",
             ogTitle: "Jooga ja heaolu oaas Tallinnas | goyoga.ee",
             ogDescription: "Avasta autentne ruum jooga ja heaolu jaoks Tallinna südames. Tunnid igale tasemele ja vanusele."
         },
         fi: {
             title: "Tallinnan ja Viron Paras Jooga- ja Hyvinvointistudio | Goyoga",
-            description: "Viron paras jooga- ja hyvinvointistudio. Löydä ainutlaatuinen valikoima harjoituksia ja ensiluokkainen studioympäristö goyoga.ee:ssä. Ashtanga, Vinyasa, Yin-jooga, Pilates ja äänimaljakylvyt.",
-            keywords: "Jooga Tallinna, hyvinvointi, Ashtanga, Vinyasa, Yin jooga, äänimaljakylpy Tallinna, kaakaoseremonia, Pilates Tallinna, Qigong, Yoga Nidra",
+            description: "Viron paras jooga- ja hyvinvointistudio. Löydä ainutlaatuinen valikoima harjoituksia ja ensiluokkainen studioympäristö goyoga.ee:ssä. Vinyasa, Yin-jooga, Pilates, äänimaljakylvyt ja paljon muuta.",
+            keywords: "Jooga Tallinna, hyvinvointi, Vinyasa, Yin jooga, äänimaljakylpy Tallinna, kaakaoseremonia, Pilates Tallinna, Qigong, Yoga Nidra, Ashtanga",
             ogTitle: "Joogan ja hyvinvoinnin keidas Tallinnassa | goyoga.ee",
             ogDescription: "Löydä aito tila joogalle ja hyvinvoinnille Tallinnan sydämessä. Tunteja kaikille tasoille ja ikäryhmille."
         },
@@ -137,23 +137,23 @@ const seoData = {
         faq: {
             en: {
                 title: "Yoga FAQ | Beginner Guide & Studio Etiquette | Goyoga",
-                description: "Find answers to common questions about practicing Ashtanga yoga at Goyoga Tallinn. New students, pricing, etiquette, and more.",
-                keywords: "yoga FAQ Tallinn, start yoga Tallinn, Ashtanga yoga guide, yoga etiquette, beginner yoga Tallinn"
+                description: "Find answers to common questions about practicing yoga and wellness at Goyoga Tallinn. New students, pricing, etiquette, and more.",
+                keywords: "yoga FAQ Tallinn, start yoga Tallinn, yoga guide, yoga etiquette, beginner yoga Tallinn"
             },
             et: {
                 title: "Jooga KKK | Alustajale & Stuudio Etikett | Goyoga Tallinn",
-                description: "Leia vastused korduma kippuvatele küsimustele Ashtanga jooga praktikate kohta Goyoga Tallinnas. Uued õpilased, hinnad, etikett ja muu.",
-                keywords: "jooga KKK, joogaga alustamine Tallinnas, Ashtanga jooga juhend, jooga etikett"
+                description: "Leia vastused korduma kippuvatele küsimustele jooga ja heaolu kohta Goyoga Tallinnas. Uued õpilased, hinnad, etikett ja muu.",
+                keywords: "jooga KKK, joogaga alustamine Tallinnas, jooga juhend, jooga etikett"
             },
             fi: {
                 title: "Jooga UKK | Aloittelijanopas & Ohjeet | Goyoga Tallinna",
-                description: "Löydät vastauksia usein kysyttyihin kysymyksiin Ashtanga-joogasta Goyoga Tallinnassa. Uudet oppilaat, hinnat, etiketti ja muuta.",
-                keywords: "jooga UKK, joogan aloittaminen Tallinna, Ashtanga joogaopas, joogaetiketti"
+                description: "Löydät vastauksia usein kysyttyihin kysymyksiin joogasta ja hyvinvoinnista Goyoga Tallinnassa. Uudet oppilaat, hinnat, etiketti ja muuta.",
+                keywords: "jooga UKK, joogan aloittaminen Tallinna, jooga-opas, joogaetiketti"
             },
             ru: {
                 title: "Йога ЧАВО | Гид для начинающих и этикет | Goyoga Tallinn",
-                description: "Найдите ответы на частые вопросы о практике Аштанга-йоги в Goyoga Tallinn. Новые студенты, цены, этикет и многое другое.",
-                keywords: "йога ЧАВО, начать йогу Таллин, руководство Аштанга йога, этикет йоги, йога для начинающих Таллин"
+                description: "Найдите ответы на частые вопросы о практике йоги и велнеса в Goyoga Tallinn. Новые студенты, цены, этикет и многое другое.",
+                keywords: "йога ЧАВО, начать йогу Таллин, руководство по йоге, этикет йоги, йога для начинающих Таллин"
             }
         },
         card: {
@@ -182,17 +182,17 @@ const seoData = {
             en: {
                 title: "Compare Yoga Passes & Memberships | Goyoga Tallinn",
                 description: "Compare Goyoga Tallinn's single sessions, multiple-visit passes, and memberships. Find the perfect pricing option for your yoga journey.",
-                keywords: "Compare yoga prices, Tallinn yoga pass, Ashtanga membership cost, Goyoga pricing, Support pass"
+                keywords: "Compare yoga prices, Tallinn yoga pass, yoga membership cost, Goyoga pricing, wellness pass"
             },
             et: {
                 title: "Võrdle Joogapakette ja Hinnakirja | Goyoga Tallinn",
                 description: "Võrdle Goyoga Tallinna üksikpääsmeid, kuukaarte ja lepinguid. Leia endale sobivaim pakett oma joogateekonna toetamiseks.",
-                keywords: "Joogahinnad Tallinn, Goyoga paketid, Ashtanga kuukaart, jooga hinnakiri, toetuspass"
+                keywords: "Joogahinnad Tallinn, Goyoga paketid, jooga kuukaart, jooga hinnakiri, toetuspass"
             },
             fi: {
                 title: "Vertaile Joogapaketteja | Goyoga Tallinna",
                 description: "Vertaile Goyoga Tallinnan kertamaksuja, sarjakortteja ja jäsenyyksiä. Löydä sopivin vaihtoehto joogaharjoitteluusi.",
-                keywords: "Joogahinnat Tallinna, Goyoga jäsenyys, Ashtanga kausikortti, jooga hinnasto, tukikortti"
+                keywords: "Joogahinnat Tallinna, Goyoga jäsenyys, jooga kausikortti, jooga hinnasto, tukikortti"
             },
             ru: {
                 title: "Сравнение абонементов | Goyoga Tallinn",
@@ -203,17 +203,17 @@ const seoData = {
         offers: {
             en: {
                 title: "Yoga Offers | Seasonal Deals | Goyoga Tallinn",
-                description: "Discover limited-time offerings, workshops, and exclusive seasonal deals at goyoga.ee. Traditional Ashtanga yoga in Tallinn city center.",
-                keywords: "yoga offers Tallinn, seasonal yoga deals, workshop discounts, Goyoga Tallinn exclusive, Ashtanga deals"
+                description: "Discover limited-time offerings, workshops, and exclusive seasonal deals at goyoga.ee. Yoga & wellness in Tallinn city center.",
+                keywords: "yoga offers Tallinn, seasonal yoga deals, workshop discounts, Goyoga Tallinn exclusive, wellness deals"
             },
             et: {
                 title: "Jooga ja Teenuste Hinnakiri | Goyoga Tallinn",
-                description: "Avasta piiratud ajaga pakkumised, töötoad ja eksklusiivsed soodustused goyoga.ee-s. Traditsiooniline Ashtanga jooga Tallinna kesklinnas.",
+                description: "Avasta piiratud ajaga pakkumised, töötoad ja eksklusiivsed soodustused goyoga.ee-s. Jooga ja heaolu Tallinna kesklinnas.",
                 keywords: "jooga pakkumised, sügisene jooga soodustus, töötubade soodustused, Goyoga Tallinn sooduspakkumised"
             },
             fi: {
                 title: "Joogatarjoukset | Kausitarjoukset | Goyoga Tallinna",
-                description: "Tutustu rajoitetun ajan tarjouksiin, työpajoihin ja eksklusiivisiin kausitarjouksiin osoitteessa goyoga.ee. Perinteistä Ashtanga-joogaa Tallinnan keskustassa.",
+                description: "Tutustu rajoitetun ajan tarjouksiin, työpajoihin ja eksklusiivisiin kausitarjouksiin osoitteessa goyoga.ee. Joogaa ja hyvinvointia Tallinnan keskustassa.",
                 keywords: "joogatarjoukset Tallinna, kausitarjoukset jooga, työpaja-alennukset, Goyoga Tallinn-tarjous"
             },
             ru: {
@@ -226,17 +226,17 @@ const seoData = {
             en: {
                 title: "Goyoga Shop | Digital Gift Cards & Wellness Products",
                 description: "Purchase premium digital gift cards and wellness products from Goyoga Tallinn. The perfect gift for yoga practitioners.",
-                keywords: "yoga gift card Tallinn, yoga shop, wellness products, Goyoga merchandise, Ashtanga gifts"
+                keywords: "yoga gift card Tallinn, yoga shop, wellness products, Goyoga merchandise, wellness gifts"
             },
             et: {
                 title: "Goyoga Pood | Kinkekaardid ja Heaolutooted",
                 description: "Osta preemium digitaalseid kinkekaarte ja heaolu tooteid Goyoga Tallinnast. Ideaalne kingitus joogapraktikule.",
-                keywords: "jooga kinkekaart Tallinn, joogapood, heaolutooted, Goyoga meened, Ashtanga kingitus"
+                keywords: "jooga kinkekaart Tallinn, joogapood, heaolutooted, Goyoga meened, heaolu kingitus"
             },
             fi: {
                 title: "Goyoga Kauppa | Digitaaliset Lahjakortit ja Hyvinvointituotteet",
                 description: "Osta korkealaatuisia digitaalisia lahjakortteja ja hyvinvointituotteita Goyoga Tallinnasta. Täydellinen lahja joogaajalle.",
-                keywords: "jooga lahjakortti Tallinna, joogakauppa, hyvinvointituotteet, Goyoga tuotteet, Ashtanga lahja"
+                keywords: "jooga lahjakortti Tallinna, joogakauppa, hyvinvointituotteet, Goyoga tuotteet, hyvinvointilahja"
             },
             ru: {
                 title: "Магазин Goyoga | Подарочные Карты и Товары для Велнеса",
@@ -300,7 +300,7 @@ const seoData = {
         "url": "https://www.goyoga.ee",
         "logo": "https://www.goyoga.ee/logo.png",
         "image": "https://www.goyoga.ee/assets/studio/2-goyoga-tallinn-stuudio-estonia.webp",
-        "description": "The Ultimate Yoga & Wellness Destination in Estonia. Offering the widest variety of practices including Ashtanga, Vinyasa, Yin Yoga, Pilates, and unique wellness events.",
+        "description": "The Ultimate Yoga & Wellness Destination in Estonia. Offering the widest variety of practices including Vinyasa, Yin Yoga, Pilates, Ashtanga, and unique wellness events.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Narva mnt 7D",
