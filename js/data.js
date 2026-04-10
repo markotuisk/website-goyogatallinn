@@ -1884,7 +1884,7 @@ const pricingData = {
         passes: {
             "title": "Multi-Visit Passes",
             "options": [
-                { "name": "5-Visit Pass | 45 Days", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Valid for 5 classes within 45 days. Only 10€ per class. Save 40€ compared to single tickets." },
+                { "name": "5-Visit Pass | 45 Days", "price": "50€", "link": "https://wise.com/pay/r/e95Y8j-4Y0l7vMk", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Valid for 5 classes within 45 days. Only 10€ per class. Save 40€ compared to single tickets." },
                 { "name": "10-Visit Pass | 3 Months", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Valid for 10 classes within 3 months. Only 9.00€ per class. Save 90€ compared to single tickets." },
                 { "name": "20-Visit Pass | 6 Months", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Valid for 20 classes within 6 months. Only 8.00€ per class. Save 200€ compared to single tickets." }
             ],
@@ -1950,7 +1950,7 @@ const pricingData = {
         passes: {
             "title": "Korrakaardid",
             "options": [
-                { "name": "5-korra kaart | 45 päeva", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Kehtib 5 tunnile 45 päeva jooksul. Vaid 10€ ühe tunni kohta. Säästad 40€ võrreldes üksikpiletitega." },
+                { "name": "5-korra kaart | 45 päeva", "price": "50€", "link": "https://wise.com/pay/r/e95Y8j-4Y0l7vMk", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Kehtib 5 tunnile 45 päeva jooksul. Vaid 10€ ühe tunni kohta. Säästad 40€ võrreldes üksikpiletitega." },
                 { "name": "10-korra kaart | 3 kuud", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Kehtib 10 tunnile 3 kuu jooksul. Vaid 9.00€ ühe tunni kohta. Säästad 90€ võrreldes üksikpiletitega." },
                 { "name": "20-korra kaart | 6 kuud", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Kehtib 20 tunnile 6 kuu jooksul. Vaid 8.00€ ühe tunni kohta. Säästad 200€ võrreldes üksikpiletitega." }
             ],
@@ -2016,7 +2016,7 @@ const pricingData = {
         passes: {
             "title": "Sarjakortit",
             "options": [
-                { "name": "5-kerran kortti | 45 päivää", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Voimassa 5 tuntiin 45 päivän ajan. Vain 10€ per tunti. Säästä 40€ verrattuna kertalippuihin." },
+                { "name": "5-kerran kortti | 45 päivää", "price": "50€", "link": "https://wise.com/pay/r/e95Y8j-4Y0l7vMk", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Voimassa 5 tuntiin 45 päivän ajan. Vain 10€ per tunti. Säästä 40€ verrattuna kertalippuihin." },
                 { "name": "10-kerran kortti | 3 kuukautta", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Voimassa 10 tuntiin 3 kuukauden ajan. Vain 9.00€ per tunti. Säästä 90€ verrattuna kertalippuihin." },
                 { "name": "20-kerran kortti | 6 kuukautta", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Voimassa 20 tuntiin 6 kuukauden ajan. Vain 8.00€ per tunti. Säästä 200€ verrattuna kertalippuihin." }
             ],
@@ -2082,7 +2082,7 @@ const pricingData = {
         passes: {
             "title": "Многоразовые абонементы",
             "options": [
-                { "name": "5 занятий | 45 дней", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Действителен для 5 занятий в течение 45 дней. Всего 10€ за класс. Выгода 40€ по сравнению с разовыми билетами." },
+                { "name": "5 занятий | 45 дней", "price": "50€", "link": "https://wise.com/pay/r/e95Y8j-4Y0l7vMk", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Действителен для 5 занятий в течение 45 дней. Всего 10€ за класс. Выгода 40€ по сравнению с разовыми билетами." },
                 { "name": "10 занятий | 3 месяца", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Действителен для 10 занятий в течение 3 месяцев. Всего 9.00€ за класс. Выгода 90€ по сравнению с разовыми билетами." },
                 { "name": "20 занятий | 6 месяцев", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Действителен для 20 занятий в течение 6 месяцев. Всего 8.00€ за класс. Выгода 200€ по сравнению с разовыми билетами." }
             ],

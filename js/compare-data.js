@@ -22,7 +22,7 @@ const compareData = {
                     title: "Multi-Visit Passes",
                     description: "Offers flexibility with minimum commitment. Great value for a varied schedule.",
                     rows: [
-                        ["5-Visit Pass", "50€", "10.00€", "45 Days", "Any Scheduled Class", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["5-Visit Pass", "50€", "10.00€", "45 Days", "Any Scheduled Class", "https://wise.com/pay/r/e95Y8j-4Y0l7vMk"],
                         ["10-Visit Pass", "90€", "9.00€", "3 Months", "Any Scheduled Class", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
                         ["20-Visit Pass", "160€", "8.00€", "6 Months", "Any Scheduled Class", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
@@ -63,7 +63,7 @@ const compareData = {
                     title: "Mitmikkorrakaardid",
                     description: "Pakub paindlikkust minimaalse siduvusega. Suurepärane väärtus muutuva graafikuga harjutajale.",
                     rows: [
-                        ["5-Korra Pass", "50€", "10.00€", "45 Päeva", "Mistahes Tund", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["5-Korra Pass", "50€", "10.00€", "45 Päeva", "Mistahes Tund", "https://wise.com/pay/r/e95Y8j-4Y0l7vMk"],
                         ["10-Korra Pass", "90€", "9.00€", "3 Kuud", "Mistahes Tund", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
                         ["20-Korra Pass", "160€", "8.00€", "6 Kuud", "Mistahes Tund", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
@@ -104,7 +104,7 @@ const compareData = {
                     title: "Useamman kerran liput",
                     description: "Tarjoaa joustavuutta pienellä sitoutumisella. Erinomainen vaihtoehto vaihtelevalla aikataululla harjoittelevalle.",
                     rows: [
-                        ["5-Kerran Lippu", "50€", "10.00€", "45 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["5-Kerran Lippu", "50€", "10.00€", "45 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/e95Y8j-4Y0l7vMk"],
                         ["10-Kerran Lippu", "90€", "9.00€", "3 Kuukautta", "Kaikki Tunnit", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
                         ["20-Kerran Lippu", "160€", "8.00€", "6 Kuukautta", "Kaikki Tunnit", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
@@ -145,7 +145,7 @@ const compareData = {
                     title: "Многоразовые абонементы",
                     description: "Обеспечивают гибкость с минимальными обязательствами. Отличная выгода при нестабильном графике.",
                     rows: [
-                        ["5 Занятий", "50€", "10.00€", "45 Дней", "Любое занятие", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["5 Занятий", "50€", "10.00€", "45 Дней", "Любое занятие", "https://wise.com/pay/r/e95Y8j-4Y0l7vMk"],
                         ["10 Занятий", "90€", "9.00€", "3 Месяца", "Любое занятие", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
                         ["20 Занятий", "160€", "8.00€", "6 Месяцев", "Любое занятие", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
