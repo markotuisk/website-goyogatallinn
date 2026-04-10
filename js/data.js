@@ -2122,7 +2122,7 @@ const shopData = {
                 { name: "29€ Gift Card", price: "29€", link: "https://wise.com/pay/r/RF2M_iIDVmpLYPs", qrCode: "/assets/qr/gift-card-29-qr.png", image: "/assets/shop/gift-card.png", desc: "Perfect for a Studio Explorer Pass." },
                 { name: "50€ Gift Card", price: "50€", link: "https://wise.com/pay/r/DF76LdhTK7cRzN0", qrCode: "/assets/qr/gift-card-50-qr.png", image: "/assets/shop/gift-card.png", desc: "Covers a 5-Visit Pass." },
                 { name: "79€ Gift Card", price: "79€", link: "https://wise.com/pay/r/a1-PvEUEZRSeIeo", qrCode: "/assets/qr/gift-card-79-qr.png", image: "/assets/shop/gift-card.png", desc: "Valid for a 1-Month Unlimited Pass." },
-                { name: "160€ Gift Card", price: "160€", link: "#", image: "/assets/shop/gift-card.png", desc: "Our ultimate 20-Visit Pass offering." }
+                { name: "160€ Gift Card", price: "160€", link: "https://wise.com/pay/r/UUOmkj2LL8LlME4", qrCode: "/assets/qr/gift-card-160-qr.png", image: "/assets/shop/gift-card.png", desc: "Our ultimate 20-Visit Pass offering." }
             ]
         }
     },
@@ -2134,7 +2134,7 @@ const shopData = {
                 { name: "29€ Kinkekaart", price: "29€", link: "https://wise.com/pay/r/RF2M_iIDVmpLYPs", qrCode: "/assets/qr/gift-card-29-qr.png", image: "/assets/shop/gift-card.png", desc: "Aitab soetada Studio Explorer Passi." },
                 { name: "50€ Kinkekaart", price: "50€", link: "https://wise.com/pay/r/DF76LdhTK7cRzN0", qrCode: "/assets/qr/gift-card-50-qr.png", image: "/assets/shop/gift-card.png", desc: "Katab 5-Korra Kaardi maksumuse." },
                 { name: "79€ Kinkekaart", price: "79€", link: "https://wise.com/pay/r/a1-PvEUEZRSeIeo", qrCode: "/assets/qr/gift-card-79-qr.png", image: "/assets/shop/gift-card.png", desc: "Kehtib 1-Kuu Piiramatule paketile." },
-                { name: "160€ Kinkekaart", price: "160€", link: "#", image: "/assets/shop/gift-card.png", desc: "Ideaalne 20-Korra Kaardi valik." }
+                { name: "160€ Kinkekaart", price: "160€", link: "https://wise.com/pay/r/UUOmkj2LL8LlME4", qrCode: "/assets/qr/gift-card-160-qr.png", image: "/assets/shop/gift-card.png", desc: "Ideaalne 20-Korra Kaardi valik." }
             ]
         }
     },
@@ -2146,7 +2146,7 @@ const shopData = {
                 { name: "29€ Lahjakortti", price: "29€", link: "https://wise.com/pay/r/RF2M_iIDVmpLYPs", qrCode: "/assets/qr/gift-card-29-qr.png", image: "/assets/shop/gift-card.png", desc: "Täydellinen Studio Explorer Passia varten." },
                 { name: "50€ Lahjakortti", price: "50€", link: "https://wise.com/pay/r/DF76LdhTK7cRzN0", qrCode: "/assets/qr/gift-card-50-qr.png", image: "/assets/shop/gift-card.png", desc: "Kattaa 5-kerran kortin hinnan." },
                 { name: "79€ Lahjakortti", price: "79€", link: "https://wise.com/pay/r/a1-PvEUEZRSeIeo", qrCode: "/assets/qr/gift-card-79-qr.png", image: "/assets/shop/gift-card.png", desc: "Kattaa 1 Kuukauden rajattoman passin." },
-                { name: "160€ Lahjakortti", price: "160€", link: "#", image: "/assets/shop/gift-card.png", desc: "Upea lahja - 20-kerran kortti." }
+                { name: "160€ Lahjakortti", price: "160€", link: "https://wise.com/pay/r/UUOmkj2LL8LlME4", qrCode: "/assets/qr/gift-card-160-qr.png", image: "/assets/shop/gift-card.png", desc: "Upea lahja - 20-kerran kortti." }
             ]
         }
     },
@@ -2158,7 +2158,7 @@ const shopData = {
                 { name: "Подарочная карта 29€", price: "29€", link: "https://wise.com/pay/r/RF2M_iIDVmpLYPs", qrCode: "/assets/qr/gift-card-29-qr.png", image: "/assets/shop/gift-card.png", desc: "Идеально для Studio Explorer Pass." },
                 { name: "Подарочная карта 50€", price: "50€", link: "https://wise.com/pay/r/DF76LdhTK7cRzN0", qrCode: "/assets/qr/gift-card-50-qr.png", image: "/assets/shop/gift-card.png", desc: "Покрывает абонемент на 5 занятий." },
                 { name: "Подарочная карта 79€", price: "79€", link: "https://wise.com/pay/r/a1-PvEUEZRSeIeo", qrCode: "/assets/qr/gift-card-79-qr.png", image: "/assets/shop/gift-card.png", desc: "Действительна для безлимитного абонемента на 1 месяц." },
-                { name: "Подарочная карта 160€", price: "160€", link: "#", image: "/assets/shop/gift-card.png", desc: "Отличный вариант для абонемента на 20 занятий." }
+                { name: "Подарочная карта 160€", price: "160€", link: "https://wise.com/pay/r/UUOmkj2LL8LlME4", qrCode: "/assets/qr/gift-card-160-qr.png", image: "/assets/shop/gift-card.png", desc: "Отличный вариант для абонемента на 20 занятий." }
             ]
         }
     }
