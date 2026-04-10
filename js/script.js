@@ -54,33 +54,55 @@ function setLanguage(lang) {
     const searchStr = window.location.search || '';
     const hashStr = window.location.hash || '';
 
-    // Robust Hub Detection & Redirect (Hardcoded for maximum reliability)
-    const journalRoutes = { 
-        'en': '/journal/', 
-        'et': '/et/ajakiri/', 
-        'fi': '/fi/arkisto/', 
-        'ru': '/ru/zhurnal/' 
+    // Robust Hub Detection (Journal, etc.)
+    const hubRoutes = {
+        'journal': { 
+            'en': '/journal/', 
+            'et': '/et/ajakiri/', 
+            'fi': '/fi/arkisto/', 
+            'ru': '/ru/zhurnal/' 
+        }
     };
 
-    const isJournalHub = Object.values(journalRoutes).some(p => 
-        path === p || 
-        path === p.replace(/\/$/, '') || 
-        path.startsWith(p)
-    );
+    // Normalize path for matching: handle trailing slashes and index.html
+    let cleanPath = path;
+    if (cleanPath.endsWith('index.html')) cleanPath = cleanPath.replace('index.html', '');
+    if (!cleanPath.endsWith('/')) cleanPath += '/';
 
-    if (isJournalHub) {
-        window.location.href = `${journalRoutes[lang]}${searchStr}${hashStr}`;
+    // Find the current hub context
+    let hubMatch = null;
+    for (const [hubKey, routes] of Object.entries(hubRoutes)) {
+        if (Object.values(routes).some(p => cleanPath.startsWith(p))) {
+            hubMatch = hubKey;
+            break;
+        }
+    }
+
+    if (hubMatch) {
+        window.location.href = `${hubRoutes[hubMatch][lang]}${searchStr}${hashStr}`;
         return;
     }
 
     // Default Page Redirect logic for standard pages
-    let currentFilename = path.split('/').pop() || 'index.html';
-    if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
-    if (currentFilename !== 'index.html' && !currentFilename.includes('.')) currentFilename += '.html';
+    let baseFilename = path.split('/').pop() || 'index.html';
+    if (!baseFilename || path.endsWith('/')) baseFilename = 'index.html';
+    if (baseFilename !== 'index.html' && !baseFilename.includes('.')) baseFilename += '.html';
 
-    let targetFilename = currentFilename;
+    // Reverse lookup to find the English (base) filename
+    if (typeof seoData !== 'undefined' && seoData.urlRoutes) {
+        const activeLangDict = seoData.urlRoutes[currentLanguage] || seoData.urlRoutes['en'];
+        for (const [enKey, locName] of Object.entries(activeLangDict)) {
+            if (locName === baseFilename) {
+                baseFilename = enKey;
+                break;
+            }
+        }
+    }
+
+    // Forward lookup to get the target language filename
+    let targetFilename = baseFilename;
     if (typeof seoData !== 'undefined' && seoData.urlRoutes && seoData.urlRoutes[lang]) {
-        targetFilename = seoData.urlRoutes[lang][currentFilename] || currentFilename;
+        targetFilename = seoData.urlRoutes[lang][baseFilename] || baseFilename;
     }
 
     if (targetFilename === 'index.html') {
