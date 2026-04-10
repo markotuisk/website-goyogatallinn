@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initLikeButtons();
     initEvents();
-    initTeacherLanguages();
-    initSEO(); // Aggressive SEO Init
+    // Final localization sweep once DOM is fully interactive
+    initLanguage();
 
     // Initialize Lucide Icons
     if (window.lucide) window.lucide.createIcons();
@@ -54,51 +54,39 @@ function setLanguage(lang) {
     const searchStr = window.location.search || '';
     const hashStr = window.location.hash || '';
 
-    // Special handling for localized journal hubs to preserve article context (ID)
-    const journalPaths = {
-        'en': '/journal/',
-        'et': '/et/ajakiri/',
-        'fi': '/fi/arkisto/',
-        'ru': '/ru/zhurnal/'
+    // Robust Hub Detection & Redirect (Hardcoded for maximum reliability)
+    const journalRoutes = { 
+        'en': '/journal/', 
+        'et': '/et/ajakiri/', 
+        'fi': '/fi/arkisto/', 
+        'ru': '/ru/zhurnal/' 
     };
-    
-    const currentJournalEntry = Object.entries(journalPaths).find(([l, p]) => path.includes(p));
-    if (currentJournalEntry) {
-        window.location.href = `${journalPaths[lang]}${searchStr}${hashStr}`;
+
+    const isJournalHub = Object.values(journalRoutes).some(p => 
+        path === p || 
+        path === p.replace(/\/$/, '') || 
+        path.startsWith(p)
+    );
+
+    if (isJournalHub) {
+        window.location.href = `${journalRoutes[lang]}${searchStr}${hashStr}`;
         return;
     }
 
-    // Extract current filename and normalize Cloudflare extensionless paths
+    // Default Page Redirect logic for standard pages
     let currentFilename = path.split('/').pop() || 'index.html';
     if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
     if (currentFilename !== 'index.html' && !currentFilename.includes('.')) currentFilename += '.html';
 
-    // Reverse lookup to find the English (base) filename
-    let baseFilename = currentFilename;
-    if (typeof seoData !== 'undefined' && seoData.urlRoutes) {
-        const activeLangDict = seoData.urlRoutes[currentLanguage] || seoData.urlRoutes['en'];
-        for (const [enKey, locName] of Object.entries(activeLangDict)) {
-            if (locName === currentFilename) {
-                baseFilename = enKey;
-                break;
-            }
-        }
-    }
-
-    // Forward lookup to get the target language filename
-    let targetFilename = baseFilename;
+    let targetFilename = currentFilename;
     if (typeof seoData !== 'undefined' && seoData.urlRoutes && seoData.urlRoutes[lang]) {
-        targetFilename = seoData.urlRoutes[lang][baseFilename] || baseFilename;
+        targetFilename = seoData.urlRoutes[lang][currentFilename] || currentFilename;
     }
-
-
-    // Keep .html for clean Cloudflare aesthetics when assigning location
-    const targetUrl = targetFilename;
 
     if (targetFilename === 'index.html') {
         window.location.href = `/${lang === 'en' ? '' : lang + '/'}${searchStr}${hashStr}`;
     } else {
-        window.location.href = `/${lang}/${targetUrl}${searchStr}${hashStr}`;
+        window.location.href = `/${lang}/${targetFilename}${searchStr}${hashStr}`;
     }
 }
 
@@ -110,8 +98,10 @@ function updateUI(lang) {
             if (t[key]) {
                 if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
                     if (el.hasAttribute('placeholder')) el.placeholder = t[key];
+                } else if (el.tagName.toLowerCase() === 'meta') {
+                   // Skip meta tags for now
                 } else {
-                    el.innerHTML = t[key];
+                    el.textContent = t[key]; // Safer and faster
                 }
             }
         });
