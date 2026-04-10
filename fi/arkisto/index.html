@@ -298,9 +298,9 @@
                         <span>${article.date.split('-').reverse().join('.')}</span>
                     </div>
                 `;
-                grid.appendChild(card); }
-            if (window.updateUI) window.updateUI();
+                grid.appendChild(card);
             });
+            if (window.updateUI) window.updateUI();
         }
 
         async function shareArticle(title, id) {
