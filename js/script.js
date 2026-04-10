@@ -28,8 +28,10 @@ function initLanguage() {
     // Rely on the server/build to set the HTML lang correctly.
     const htmlLang = document.documentElement.lang || 'en';
     currentLanguage = htmlLang;
+    window.currentLanguage = currentLanguage;
 
     updateUIDecorators(currentLanguage);
+    updateUI(currentLanguage);
 }
 
 // Call immediately to set currentLanguage before other scripts load
