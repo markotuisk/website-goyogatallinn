@@ -229,17 +229,28 @@
                         const td = document.createElement('td');
                         td.className = "px-6 py-4 text-sm text-stone-600 group-hover:text-stone-900";
                         
-                        if (cellIndex === 0) {
-                            td.className = "px-6 py-4 text-base font-medium text-stone-900";
-                        }
-                        else if (cellIndex === 1) {
-                            td.className = "px-6 py-4 text-base font-bold text-pink-600";
-                        }
-                        else if (cellIndex === 2) {
-                            td.className = "px-6 py-4 text-sm text-stone-500 italic";
-                        }
+                        if (cellIndex === 5) {
+                            td.className = "px-6 py-4 text-right";
+                            if (cellText) {
+                                const btn = document.createElement('a');
+                                btn.href = cellText;
+                                btn.className = "inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow focus:outline-none focus:ring-2 focus:ring-pink-500 whitespace-nowrap hover:-translate-y-0.5";
+                                btn.textContent = data.buyBtn || "Buy";
+                                td.appendChild(btn);
+                            }
+                        } else {
+                            if (cellIndex === 0) {
+                                td.className = "px-6 py-4 text-base font-medium text-stone-900";
+                            }
+                            else if (cellIndex === 1) {
+                                td.className = "px-6 py-4 text-base font-bold text-pink-600 whitespace-nowrap";
+                            }
+                            else if (cellIndex === 2) {
+                                td.className = "px-6 py-4 text-sm text-stone-500 italic whitespace-nowrap";
+                            }
 
-                        td.textContent = cellText;
+                            td.textContent = cellText;
+                        }
                         tr.appendChild(td);
                     });
                     
