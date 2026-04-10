@@ -10,7 +10,7 @@ const journalData = {
             id: 'ashtanga-not-for-everyone',
             date: '2025-09-24',
             category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
-            image: '/assets/journal/ashtanga-yoga-raili-allas.jpg',
+            image: '/assets/journal/%231%20goyoga%20ashtanga%20yoga%20jooga%20tallinn%20estonia%20rail%20maripuu%20Andri%20Allas.webp',
             author: 'Raili Maripuu',
             photographer: {
                 name: 'Andri Allas',
@@ -23,8 +23,8 @@ const journalData = {
             translations: {
                 en: {
                     isOriginal: true,
-                    title: 'Ashtanga yoga is not for everyone?',
-                    excerpt: 'Ashtanga yoga is the most wonderful and transformative yoga practise, but it is not for everyone. Discover why discipline is the path to true strength.',
+                    title: 'Ashtanga Yoga for Everyone? | The Goyoga Tallinn Journal',
+                    excerpt: 'Discover why Ashtanga Yoga is a transformative practice for all. Learn traditional primary series in Tallinn with Raili Maripuu. Join our yoga school today.',
                     content: `
                         <p class="mb-8">Not the best opening statement to promote ashtanga yoga just at the start of the new season. But I’m going to say this again – ashtanga yoga is the most wonderful and transformative yoga practise but it’s not for everyone.</p>
                         
@@ -68,8 +68,8 @@ const journalData = {
                 },
                 et: {
                     isOriginal: true,
-                    title: 'Ashtanga jooga ei sobi kõigile?',
-                    excerpt: 'Ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, kuid see ei sobi kõigi jaoks. Avasta, miks regulaarne praktika on elumuutev.',
+                    title: 'Ashtanga jooga ei sobi kõigile? | Goyoga Tallinn Ajakiri',
+                    excerpt: 'Avasta, miks ashtanga jooga on elumuutev praktika kõigile. Õpi traditsioonilist esimesse seeriat Tallinnas Raili Maripuu juhendamisel. Liitu meie joogakooliga.',
                     content: `
                         <p class="mb-8">Pole just kõige targem mõte alustada uut hooaega ashtanga jooga mahategemisega. Sellest hoolimata ütlen veelkord, et kuigi ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, ei sobi ta kõigi jaoks.</p>
                         
@@ -114,16 +114,16 @@ const journalData = {
                 },
                 fi: {
                     isOriginal: false,
-                    title: 'Ashtangajooga ei sovi kaikille?',
-                    excerpt: 'Ashtangajooga on vaikuttavinta ja muuttavinta joogaa, mutta se haastaa jokaisen solusi. Selvitä, miksi kurinalaisuus on avain sisäiseen voimaan.',
+                    title: 'Ashtangajooga sopii kaikille? | Goyoga Journal Tallinn',
+                    excerpt: 'Löydä syy, miksi ashtangajooga on mullistava harjoitus kaikille. Opi perinteinen ashtanga Tallinnassa Goyoga-koulussa. Aloita matkasi kohti sisäistä voimaa.',
                     content: `
                         <p>Ashtangajooga on upeaa ja mullistavaa, mutta se vaatii sitoutumista. Sri K Pattabhi Jois sanoi: "Kaikki voivat harjoitella, paitsi laiskat."</p>
                     `
                 },
                 ru: {
                     isOriginal: false,
-                    title: 'Аштанга-йога не для всех?',
-                    excerpt: 'Аштанга-йога — самая чудесная и трансформирующая практика, но она бросает вызов каждой клетке вашего тела. Узнайте, почему дисциплина — это путь к истинной силе.',
+                    title: 'Аштанга-йога для каждого? | Журнал Goyoga Tallinn',
+                    excerpt: 'Узнайте, почему аштанга-йога — это трансформирующая практика для всех. Изучите традиционную первую серию в Таллине с Райли Марипуу. Присоединяйтесь к нам.',
                     content: `
                         <p>Аштанга-йога — это не просто упражнения, это дисциплина на всю жизнь. Как говорил Паттабхи Джойс: "Практиковать может каждый, кроме ленивых".</p>
                     `
@@ -141,8 +141,8 @@ const journalData = {
             translations: {
                 en: {
                     isOriginal: true,
-                    title: 'Why Ashtanga? The Power of Discipline',
-                    excerpt: 'Discover why the traditional Mysore method is the ultimate mental and physical anchor for modern life.',
+                    title: 'Why Ashtanga? The Power of Discipline | Goyoga Tallinn',
+                    excerpt: 'Discover why the traditional Mysore method is the ultimate mental and physical anchor for modern life. Learn the discipline of daily yoga practice.',
                     content: `
                         <p>In the noise of modern life, we often look for shortcuts. But some paths are meant to be walked one step at a time. Ashtanga Yoga is one of those paths.</p>
                         <h3>The Anchor of Mysore</h3>
@@ -153,8 +153,8 @@ const journalData = {
                 },
                 et: {
                     isOriginal: true,
-                    title: 'Miks Ashtanga? Distsipliini vägi',
-                    excerpt: 'Avasta, miks traditsiooniline Mysore-meetod on moodsa elu parim vaimne ja füüsiline ankur.',
+                    title: 'Miks Ashtanga? Distsipliini vägi | Goyoga Tallinn',
+                    excerpt: 'Avasta, miks traditsiooniline Mysore-meetod on moodsa elu parim vaimne ja füüsiline ankur. Õpi igapäevase joogapraktika distsipliini Tallinnas.',
                     content: `
                         <p>Kaasaegse elu müras otsime me tihti otseteid. Kuid mõned teed on mõeldud käimiseks samm-sammult. Ashtanga jooga on üks neist teedest.</p>
                         <h3>Mysore-meetodi ankur</h3>
@@ -164,18 +164,18 @@ const journalData = {
                 },
                 fi: {
                     isOriginal: false,
-                    title: 'Miksi Ashtanga? Kurinalaisuuden voima',
-                    excerpt: 'Tutustu, miksi perinteinen Mysore-menetelmä on nykyajan elämän paras henkinen ja fyysinen ankkuri.',
+                    title: 'Miksi Ashtanga? Kurinalaisuuden voima | Goyoga Tallinn',
+                    excerpt: 'Tutustu, miksi perinteinen Mysore-menetelmä on nykyajan elämän paras henkinen ja fyysinen ankkuri. Opi päivittäisen harjoituksen voima.',
                     content: `
                         <p>Nykypäivän hälinässä etsimme usein oikopolkuja. Mutta jotkut polut on tarkoitettu kuljettaviksi askel kerrallaan. Ashtanga-jooga on yksi näistä poluista.</p>
                         <h3>Mysore-menetelmän ankkuri</h3>
-                        <p>Mysore-menetelmässä ei ole kyse vain hiestä, vaan itsensä vastuullisuudesta. Kun astut Goyogan matolle, et vain seuraa opettajaa – kuuntelet omaa hengitystäsi.</p>
+                        <p>Mysore-menetelmässä nie kyse vain hiestä, vaan itsensä vastuullisuudesta. Kun astut Goyogan matolle, et vain seuraa opettajaa – kuuntelet omaa hengitystäsi.</p>
                     `
                 },
                 ru: {
                     isOriginal: false,
-                    title: 'Почему Аштанга? Сила дисциплины',
-                    excerpt: 'Узнайте, почему традиционный метод Майсор является лучшим ментальным и физическим якорем в современной жизни.',
+                    title: 'Почему Аштанга? Сила дисциплины | Goyoga Tallinn',
+                    excerpt: 'Узнайте, почему традиционный метод Майсор является лучшим ментальным и физическим якорем в современной жизни. Изучите силу йоги.',
                     content: `
                         <p>В шуме современной жизни мы часто ищем короткие пути. Но некоторые пути предназначены для того, чтобы идти по ним шаг за шагом. Аштанга-йога — один из таких путей.</p>
                         <h3>Якорь метода Майсор</h3>
@@ -195,8 +195,8 @@ const journalData = {
             translations: {
                 en: {
                     isOriginal: true,
-                    title: 'The Science of Sound: How Gongs Heal',
-                    excerpt: 'Explore how high-frequency vibrations reset your nervous system and clear mental blockages.',
+                    title: 'The Science of Sound: How Gongs Heal | Goyoga Tallinn',
+                    excerpt: 'Explore how high-frequency vibrations reset your nervous system and clear mental blockages. Learn the power of sound baths in Tallinn.',
                     content: `
                         <p>Sound isn't just something we hear; it's something we feel in our very cells. At Goyoga, our Sound Baths are more than just relaxation—they are a form of quantum restoration.</p>
                         <p>Guided by the resonance of gongs and crystal bowls, your brain waves shift from active 'Beta' states to restorative 'Theta' states.</p>
@@ -204,24 +204,24 @@ const journalData = {
                 },
                 et: {
                     isOriginal: true,
-                    title: 'Heli teadus: Kuidas helid tervendavad',
-                    excerpt: 'Uuri, kuidas kõrgsageduslikud vibratsioonid lähtestavad sinu närvisüsteemi ja puhastavad vaimseid blokeeringuid.',
+                    title: 'Heli teadus: Kuidas helid tervendavad | Goyoga Tallinn',
+                    excerpt: 'Uuri, kuidas kõrgsageduslikud vibratsioonid lähtestavad sinu närvisüsteemi ja puhastavad vaimseid blokeeringuid. Heli tervendav vägi.',
                     content: `
                         <p>Heli ei ole lihtsalt midagi, mida me kuuleme; see on midagi, mida me tunneme oma rakkudes. Goyogas on helirännakud enamat kui lihtsalt lõõgastus.</p>
                     `
                 },
                 fi: {
                     isOriginal: false,
-                    title: 'Äänihoidon tiede: Miten gongit parantavat',
-                    excerpt: 'Tutustu siihen, miten korkeataajuuksiset värähtelyt nollaavat hermostosi ja poistavat vaimisia tukoksia.',
+                    title: 'Äänihoidon tiede: Miten gongit parantavat | Goyoga Tallinn',
+                    excerpt: 'Tutustu siihen, miten korkeataajuuksiset värähtelyt nollaavat hermostosi ja poistavat vaimisia tukoksia. Koe äänen nollaava voima.',
                     content: `
                         <p>Ääni ei ole vain jotain, mitä kuulemme; see is jotain, mitä tunnemme soluissamme asti. Goyogassa äänikylvyt ovat enemmän kuin vain rentoutumista.</p>
                     `
                 },
                 ru: {
                     isOriginal: false,
-                    title: 'Наука звука: Как гонги исцеляют',
-                    excerpt: 'Узнайте, как высокочастотные вибрации перезагружают вашу нервную систему и очищают ментальные блоки.',
+                    title: 'Наука звука: Как гонги исцеляют | Goyoga Tallinn',
+                    excerpt: 'Узнайте, как высокочастотные вибрации перезагружают вашу нервную систему и очищают ментальные блоки. Сила звука в Таллине.',
                     content: `
                         <p>Звук — это не просто то, что мы слышим; это то, что мы чувствуем каждой клеткой своего тела. В Goyoga наши звуковые ванны — это больше, чем просто расслабление.</p>
                     `

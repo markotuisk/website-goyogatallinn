@@ -44,10 +44,13 @@ Add a new object to the `articles` array. Use the following schema:
 
 ## Phase 2: SEO & Content Optimization
 
-1.  **Keyword Density**: Weave at least 5 of the `hashtags` into the actual `content` HTML (using `<strong>` for prominence).
-2.  **Location Tagging**: Always include "Tallinn" once in the intro or author bio section for local SEO.
-3.  **Images**: Ensure the featured image is visually "premium" and matches the sanctuary aesthetic.
-4.  **Blockquotes**: Wrap key wisdom or teacher quotes in `<blockquote>` tags to trigger the Journal's styled typography.
+1.  **Titles**: Must be **50-60 characters**. Include the primary keyword and brand name (e.g., "Ashtanga Yoga | Goyoga Journal").
+2.  **Excerpts (Meta Descriptions)**: Must be **150-160 characters**. This text is used for Google snippets and Social previews.
+3.  **Keywords**: Embed localized keywords naturally in the first 200 words.
+4.  **Internal Linking**: Link to at least one Teacher Profile and one Class Page.
+5.  **Location Tagging**: Always include "Tallinn" once in the intro or author bio section for local SEO.
+6.  **Images**: Ensure the featured image is visually "premium" and matches the sanctuary aesthetic.
+7.  **Blockquotes**: Wrap key wisdom or teacher quotes in `<blockquote>` tags to trigger the Journal's styled typography.
 
 ---
 
