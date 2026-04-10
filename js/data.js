@@ -1863,7 +1863,7 @@ const pricingData = {
                 { "name": "Full Pass | 1st Year", "price": "69€/mo", "link": "https://wise.com/pay/r/J9rTL7DdhfCBY-4", "qrCode": "/assets/qr/full-pass-qr.png", "desc": "Unlimited access to all scheduled yoga and wellness classes. Annual commitment paid monthly. Save 120€ a year compared to the 1-Month Pass." },
                 { "name": "Ashtanga Pass | 1st Year", "price": "59€/mo", "link": "https://wise.com/pay/r/K_ZxBCWaBgjSo8s", "qrCode": "/assets/qr/ashtanga-pass-qr.png", "desc": "Unlimited access to all Ashtanga classes. Annual commitment paid monthly. Save 240€ a year compared to the 1-Month Pass." },
                 { "name": "Studio Explorer Pass", "price": "29€", "link": "https://wise.com/pay/r/NCq9M-ysazpAf3Q", "qrCode": "/assets/qr/explorer-pass-qr.png", "desc": "For first-time studio visitors ONLY. Experience 3 Yoga & Wellness classes of your choice. Valid for 30 days. One-time purchase. Only 9.66€ per class (regular price 18€). Save 25€ compared to single tickets." },
-                { "name": "Community Support Pass (Transitions)", "price": "45€/mo", "link": "#", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Special subsidized pass for people currently transitioning between jobs. Valid for 1 month (can be renewed up to 3 times). Grants access to off-peak daytime classes only. Contact us to apply." }
+                { "name": "Community Support Pass (Transitions)", "price": "45€/mo", "link": "https://wise.com/pay/r/nWbsLarzr1kxyKw", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Special subsidized pass for people currently transitioning between jobs. Valid for 1 month (can be renewed up to 3 times). Grants access to off-peak daytime classes only. Contact us to apply." }
             ],
             "benefitsTitle": "Membership Benefits",
             "benefits": [
@@ -1884,9 +1884,9 @@ const pricingData = {
         passes: {
             "title": "Multi-Visit Passes",
             "options": [
-                { "name": "5-Visit Pass | 20 Days", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Valid for 5 classes within 20 days. Only 10€ per class. Save 40€ compared to single tickets." },
-                { "name": "12-Visit Pass | 60 Days", "price": "115€", "link": "https://wise.com/pay/r/egeNSp3ei2aOjMM", "qrCode": "/assets/qr/12-visit-pass-qr.png", "desc": "Valid for 12 classes within 60 days. Only 9.58€ per class. Save 101€ compared to single tickets." },
-                { "name": "20-Visit Pass | 6 Months", "price": "199€", "link": "https://wise.com/pay/r/Q18rtNWwIVnKIKI", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Valid for 20 classes within 6 months. Only 9.95€ per class. Save 161€ compared to single tickets." }
+                { "name": "5-Visit Pass | 45 Days", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Valid for 5 classes within 45 days. Only 10€ per class. Save 40€ compared to single tickets." },
+                { "name": "10-Visit Pass | 3 Months", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Valid for 10 classes within 3 months. Only 9.00€ per class. Save 90€ compared to single tickets." },
+                { "name": "20-Visit Pass | 6 Months", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Valid for 20 classes within 6 months. Only 8.00€ per class. Save 200€ compared to single tickets." }
             ],
             "benefitsTitle": "Benefits",
             "benefits": [
@@ -1929,7 +1929,7 @@ const pricingData = {
                 { "name": "Täispakett | 1. aasta", "price": "69€", "link": "https://wise.com/pay/r/J9rTL7DdhfCBY-4", "qrCode": "/assets/qr/full-pass-qr.png", "desc": "Piiramatu ligipääs kõikidele tunniplaanis olevatele jooga- ja heaolutundidele. Aastase siduvusega, tasumine igakuiselt. Säästa 120€ aastas võrreldes 1-kuu paketiga." },
                 { "name": "Ashtanga pakett | 1. aasta", "price": "59€", "link": "https://wise.com/pay/r/K_ZxBCWaBgjSo8s", "qrCode": "/assets/qr/ashtanga-pass-qr.png", "desc": "Piiramatu ligipääs kõikidele Ashtanga tundidele. Aastase siduvusega, tasumine igakuiselt. Säästa 240€ aastas võrreldes 1-kuu paketiga." },
                 { "name": "Studio Explorer Pass", "price": "29€", "link": "https://wise.com/pay/r/NCq9M-ysazpAf3Q", "qrCode": "/assets/qr/explorer-pass-qr.png", "desc": "AINULT esmakordsetele stuudio külastajatele. Osale vabal valikul 3 tunnis. Kehtib 30 päeva. Ühekordne ost. Vaid 9.66€ ühe tunni kohta (tavahind 18€). Säästad 25€ võrreldes üksikpiletitega." },
-                { "name": "Kogukonna Toetuspass", "price": "45€/kuu", "link": "#", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Spetsiaalne sooduspass inimestele, kes on hetkel tööotsingutel. Kehtib 1 kuu (võimalik pikendada 3 kuuni). Tagab sissepääsu ainult päevastele tundidele. Kandideerimiseks võta meiega ühendust." }
+                { "name": "Kogukonna Toetuspass", "price": "45€/kuu", "link": "https://wise.com/pay/r/nWbsLarzr1kxyKw", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Spetsiaalne sooduspass inimestele, kes on hetkel tööotsingutel. Kehtib 1 kuu (võimalik pikendada 3 kuuni). Tagab sissepääsu ainult päevastele tundidele. Kandideerimiseks võta meiega ühendust." }
             ],
             "benefitsTitle": "Liikmepaketi Hüved",
             "benefits": [
@@ -1950,9 +1950,9 @@ const pricingData = {
         passes: {
             "title": "Korrakaardid",
             "options": [
-                { "name": "5-korra kaart | 20 päeva", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Kehtib 5 tunnile 20 päeva jooksul. Vaid 10€ ühe tunni kohta. Säästad 40€ võrreldes üksikpiletitega." },
-                { "name": "12-korra kaart | 60 päeva", "price": "115€", "link": "https://wise.com/pay/r/egeNSp3ei2aOjMM", "qrCode": "/assets/qr/12-visit-pass-qr.png", "desc": "Kehtib 12 tunnile 60 päeva jooksul. Vaid 9.58€ ühe tunni kohta. Säästad 101€ võrreldes üksikpiletitega." },
-                { "name": "20-korra kaart | 6 kuud", "price": "199€", "link": "https://wise.com/pay/r/Q18rtNWwIVnKIKI", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Kehtib 20 tunnile 6 kuu jooksul. Vaid 9.95€ ühe tunni kohta. Säästad 161€ võrreldes üksikpiletitega." }
+                { "name": "5-korra kaart | 45 päeva", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Kehtib 5 tunnile 45 päeva jooksul. Vaid 10€ ühe tunni kohta. Säästad 40€ võrreldes üksikpiletitega." },
+                { "name": "10-korra kaart | 3 kuud", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Kehtib 10 tunnile 3 kuu jooksul. Vaid 9.00€ ühe tunni kohta. Säästad 90€ võrreldes üksikpiletitega." },
+                { "name": "20-korra kaart | 6 kuud", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Kehtib 20 tunnile 6 kuu jooksul. Vaid 8.00€ ühe tunni kohta. Säästad 200€ võrreldes üksikpiletitega." }
             ],
             "benefitsTitle": "Hüved",
             "benefits": [
@@ -1995,7 +1995,7 @@ const pricingData = {
                 { "name": "Täyspaketti | 1. vuosi", "price": "69€/kk", "link": "https://wise.com/pay/r/J9rTL7DdhfCBY-4", "qrCode": "/assets/qr/full-pass-qr.png", "desc": "Rajaton pääsy kaikille lukujärjestyksen jooga- ja hyvinvointitunneille. Vuosijäsenyys kuukausilaskutuksella. Säästä 120€ vuodessa verrattuna 1 kuukauden pakettiin." },
                 { "name": "Ashtanga-paketti | 1. vuosi", "price": "59€/kk", "link": "https://wise.com/pay/r/K_ZxBCWaBgjSo8s", "qrCode": "/assets/qr/ashtanga-pass-qr.png", "desc": "Rajaton pääsy kaikille ashtangatunneille. Vuosijäsenyys kuukausilaskutuksella. Säästä 240€ vuodessa verrattuna 1 kuukauden pakettiin." },
                 { "name": "Studio Explorer Pass", "price": "29€", "link": "https://wise.com/pay/r/NCq9M-ysazpAf3Q", "qrCode": "/assets/qr/explorer-pass-qr.png", "desc": "VAIN ENSIMMÄISTÄ kertaa studiolla vieraileville. Kokeile 3 valitsemaasi tuntia. Voimassa 30 päivää ostopäivästä. Kertaostos. Vain 9.66€ per tunti (normaalihinta 18€). Säästä 25€ verrattuna kertalippuihin." },
-                { "name": "Yhteisön Tukipassi", "price": "45€/kk", "link": "#", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Erityinen tuettu passi ihmisille, jotka etsivät parhaillaan uutta työtä. Voimassa 1 kuukauden (voidaan uusia jopa 3 kertaa). Antaa pääsyn vain päiväaikaisiin tunteihin. Ota yhteyttä hakeaksesi." }
+                { "name": "Yhteisön Tukipassi", "price": "45€/kk", "link": "https://wise.com/pay/r/nWbsLarzr1kxyKw", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Erityinen tuettu passi ihmisille, jotka etsivät parhaillaan uutta työtä. Voimassa 1 kuukauden (voidaan uusia jopa 3 kertaa). Antaa pääsyn vain päiväaikaisiin tunteihin. Ota yhteyttä hakeaksesi." }
             ],
             "benefitsTitle": "Jäsenyysedut",
             "benefits": [
@@ -2016,9 +2016,9 @@ const pricingData = {
         passes: {
             "title": "Sarjakortit",
             "options": [
-                { "name": "5-kerran kortti | 20 päivää", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Voimassa 5 tuntiin 20 päivän ajan. Vain 10€ per tunti. Säästä 40€ verrattuna kertalippuihin." },
-                { "name": "12-kerran kortti | 60 päivää", "price": "115€", "link": "https://wise.com/pay/r/egeNSp3ei2aOjMM", "qrCode": "/assets/qr/12-visit-pass-qr.png", "desc": "Voimassa 12 tuntiin 60 päivän ajan. Vain 9.58€ per tunti. Säästä 101€ verrattuna kertalippuihin." },
-                { "name": "20-kerran kortti | 6 kuukautta", "price": "199€", "link": "https://wise.com/pay/r/Q18rtNWwIVnKIKI", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Voimassa 20 tuntiin 6 kuukauden ajan. Vain 9.95€ per tunti. Säästä 161€ verrattuna kertalippuihin." }
+                { "name": "5-kerran kortti | 45 päivää", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Voimassa 5 tuntiin 45 päivän ajan. Vain 10€ per tunti. Säästä 40€ verrattuna kertalippuihin." },
+                { "name": "10-kerran kortti | 3 kuukautta", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Voimassa 10 tuntiin 3 kuukauden ajan. Vain 9.00€ per tunti. Säästä 90€ verrattuna kertalippuihin." },
+                { "name": "20-kerran kortti | 6 kuukautta", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Voimassa 20 tuntiin 6 kuukauden ajan. Vain 8.00€ per tunti. Säästä 200€ verrattuna kertalippuihin." }
             ],
             "benefitsTitle": "Edut",
             "benefits": [
@@ -2061,7 +2061,7 @@ const pricingData = {
                 { "name": "Полный Абонемент | 1й Год", "price": "69€/мес", "link": "https://wise.com/pay/r/J9rTL7DdhfCBY-4", "qrCode": "/assets/qr/full-pass-qr.png", "desc": "Безлимитный доступ ко всем занятиям йогой и велнесом. Годовое обязательство с ежемесячной оплатой. Экономьте 120€ в год по сравнению с абонементом на 1 месяц." },
                 { "name": "Аштанга Абонемент | 1й Год", "price": "59€/мес", "link": "https://wise.com/pay/r/K_ZxBCWaBgjSo8s", "qrCode": "/assets/qr/ashtanga-pass-qr.png", "desc": "Безлимитный доступ ко всем занятиям Аштангой. Годовое обязательство с ежемесячной оплатой. Экономьте 240€ в год по сравнению с абонементом на 1 месяц." },
                 { "name": "Studio Explorer Pass", "price": "29€", "link": "https://wise.com/pay/r/NCq9M-ysazpAf3Q", "qrCode": "/assets/qr/explorer-pass-qr.png", "desc": "ТОЛЬКО для посетителей, впервые пришедших в студию. Посетите 3 любых занятия. Действителен 30 дней. Одноразовая покупка. Всего 9.66€ за занятие (обычная цена 18€). Выгода 25€ по сравнению с разовыми билетами." },
-                { "name": "Поддерживающий Абонемент", "price": "45€/мес", "link": "#", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Специальный абонемент для людей, находящихся в поиске работы. Действует 1 месяц (можно продлить до 3 раз). Дает доступ только к дневным занятиям. Свяжитесь со студией для получения." }
+                { "name": "Поддерживающий Абонемент", "price": "45€/мес", "link": "https://wise.com/pay/r/nWbsLarzr1kxyKw", "qrCode": "/assets/qr/support-pass-qr.png", "desc": "Специальный абонемент для людей, находящихся в поиске работы. Действует 1 месяц (можно продлить до 3 раз). Дает доступ только к дневным занятиям. Свяжитесь со студией для получения." }
             ],
             "benefitsTitle": "Преимущества Абонемента",
             "benefits": [
@@ -2082,9 +2082,9 @@ const pricingData = {
         passes: {
             "title": "Многоразовые абонементы",
             "options": [
-                { "name": "5 занятий | 20 дней", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Действителен для 5 занятий в течение 20 дней. Всего 10€ за класс. Выгода 40€ по сравнению с разовыми билетами." },
-                { "name": "12 занятий | 60 дней", "price": "115€", "link": "https://wise.com/pay/r/egeNSp3ei2aOjMM", "qrCode": "/assets/qr/12-visit-pass-qr.png", "desc": "Действителен для 12 занятий в течение 60 дней. Всего 9.58€ за класс. Выгода 101€ по сравнению с разовыми билетами." },
-                { "name": "20 занятий | 6 месяцев", "price": "199€", "link": "https://wise.com/pay/r/Q18rtNWwIVnKIKI", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Действителен для 20 занятий в течение 6 месяцев. Всего 9.95€ за класс. Выгода 161€ по сравнению с разовыми билетами." }
+                { "name": "5 занятий | 45 дней", "price": "50€", "link": "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA", "qrCode": "/assets/qr/5-visit-pass-qr.png", "desc": "Действителен для 5 занятий в течение 45 дней. Всего 10€ за класс. Выгода 40€ по сравнению с разовыми билетами." },
+                { "name": "10 занятий | 3 месяца", "price": "90€", "link": "https://wise.com/pay/r/aJbTM3mYKFs2p3c", "qrCode": "/assets/qr/10-visit-pass-qr.png", "desc": "Действителен для 10 занятий в течение 3 месяцев. Всего 9.00€ за класс. Выгода 90€ по сравнению с разовыми билетами." },
+                { "name": "20 занятий | 6 месяцев", "price": "160€", "link": "https://wise.com/pay/r/h9aLxWW9cvICy8A", "qrCode": "/assets/qr/20-visit-pass-qr.png", "desc": "Действителен для 20 занятий в течение 6 месяцев. Всего 8.00€ за класс. Выгода 200€ по сравнению с разовыми билетами." }
             ],
             "benefitsTitle": "Преимущества",
             "benefits": [

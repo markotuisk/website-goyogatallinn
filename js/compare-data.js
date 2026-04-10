@@ -22,9 +22,9 @@ const compareData = {
                     title: "Multi-Visit Passes",
                     description: "Offers flexibility with minimum commitment. Great value for a varied schedule.",
                     rows: [
-                        ["5-Visit Pass", "50€", "10.00€", "20 Days", "Any Scheduled Class", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
-                        ["12-Visit Pass", "115€", "9.58€", "60 Days", "Any Scheduled Class", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
-                        ["20-Visit Pass", "199€", "9.95€", "6 Months", "Any Scheduled Class", "https://wise.com/pay/r/Q18rtNWwIVnKIKI"]
+                        ["5-Visit Pass", "50€", "10.00€", "45 Days", "Any Scheduled Class", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["10-Visit Pass", "90€", "9.00€", "3 Months", "Any Scheduled Class", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
+                        ["20-Visit Pass", "160€", "8.00€", "6 Months", "Any Scheduled Class", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
                 },
                 {
@@ -34,7 +34,7 @@ const compareData = {
                         ["1-Month Pass", "79€", "~9.87€ (2x/wk)", "30 Days (No lock-in)", "All Classes", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Full Pass | 1st Year", "69€/mo", "~8.60€ (2x/wk)", "12-Month Contract", "All Classes", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
                         ["Ashtanga Pass | 1st Year", "59€/mo", "~7.35€ (2x/wk)", "12-Month Contract", "Ashtanga Only", "https://wise.com/pay/r/K_ZxBCWaBgjSo8s"],
-                        ["Community Support Pass", "45€/mo", "~5.60€ (2x/wk)", "1 Month (Renewable)", "Daytime Only (Unemployed/Transitions)", "index.html#contact"]
+                        ["Community Support Pass", "45€/mo", "~5.60€ (2x/wk)", "1 Month (Renewable)", "Daytime Only (Unemployed/Transitions)", "https://wise.com/pay/r/nWbsLarzr1kxyKw"]
                     ]
                 }
             ]
@@ -63,9 +63,9 @@ const compareData = {
                     title: "Mitmikkorrakaardid",
                     description: "Pakub paindlikkust minimaalse siduvusega. Suurepärane väärtus muutuva graafikuga harjutajale.",
                     rows: [
-                        ["5-Korra Pass", "50€", "10.00€", "20 Päeva", "Mistahes Tund", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
-                        ["12-Korra Pass", "115€", "9.58€", "60 Päeva", "Mistahes Tund", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
-                        ["20-Korra Pass", "199€", "9.95€", "6 Kuud", "Mistahes Tund", "https://wise.com/pay/r/Q18rtNWwIVnKIKI"]
+                        ["5-Korra Pass", "50€", "10.00€", "45 Päeva", "Mistahes Tund", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["10-Korra Pass", "90€", "9.00€", "3 Kuud", "Mistahes Tund", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
+                        ["20-Korra Pass", "160€", "8.00€", "6 Kuud", "Mistahes Tund", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
                 },
                 {
@@ -75,7 +75,7 @@ const compareData = {
                         ["1-Kuu Pass", "79€", "~9.87€ (2x ndls)", "30 Päeva (Ei ole seotud)", "Kõik Tunnid", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Täispakett | 1. Aasta", "69€/kuu", "~8.60€ (2x ndls)", "12-Kuu Leping", "Kõik Tunnid", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
                         ["Ashtanga Pakett | 1. Aasta", "59€/kuu", "~7.35€ (2x ndls)", "12-Kuu Leping", "Ainult Ashtanga", "https://wise.com/pay/r/K_ZxBCWaBgjSo8s"],
-                        ["Kogukonna Toetuspass", "45€/kuu", "~5.60€ (2x ndls)", "1 Kuu (Pikendatav)", "Ainult Päevased Tunnid (Tööotsijatele)", "index.html#contact"]
+                        ["Kogukonna Toetuspass", "45€/kuu", "~5.60€ (2x ndls)", "1 Kuu (Pikendatav)", "Ainult Päevased Tunnid (Tööotsijatele)", "https://wise.com/pay/r/nWbsLarzr1kxyKw"]
                     ]
                 }
             ]
@@ -104,9 +104,9 @@ const compareData = {
                     title: "Useamman kerran liput",
                     description: "Tarjoaa joustavuutta pienellä sitoutumisella. Erinomainen vaihtoehto vaihtelevalla aikataululla harjoittelevalle.",
                     rows: [
-                        ["5-Kerran Lippu", "50€", "10.00€", "20 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
-                        ["12-Kerran Lippu", "115€", "9.58€", "60 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
-                        ["20-Kerran Lippu", "199€", "9.95€", "6 Kuukautta", "Kaikki Tunnit", "https://wise.com/pay/r/Q18rtNWwIVnKIKI"]
+                        ["5-Kerran Lippu", "50€", "10.00€", "45 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["10-Kerran Lippu", "90€", "9.00€", "3 Kuukautta", "Kaikki Tunnit", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
+                        ["20-Kerran Lippu", "160€", "8.00€", "6 Kuukautta", "Kaikki Tunnit", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
                 },
                 {
@@ -116,7 +116,7 @@ const compareData = {
                         ["1 Kuukauden Paketti", "79€", "~9.87€ (2x vkossa)", "30 Päivää (Ei sitoumusta)", "Kaikki Tunnit", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Täyspaketti | 1. Vuosi", "69€/kk", "~8.60€ (2x vkossa)", "12 Kuukauden Sopimus", "Kaikki Tunnit", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
                         ["Ashtanga-Paketti | 1. Vuosi", "59€/kk", "~7.35€ (2x vkossa)", "12 Kuukauden Sopimus", "Vain Ashtanga", "https://wise.com/pay/r/K_ZxBCWaBgjSo8s"],
-                        ["Yhteisön Tukipassi", "45€/kk", "~5.60€ (2x vkossa)", "1 Kuukausi (Uusittava)", "Vain Päivätunnit (Työnhakijoille)", "index.html#contact"]
+                        ["Yhteisön Tukipassi", "45€/kk", "~5.60€ (2x vkossa)", "1 Kuukausi (Uusittava)", "Vain Päivätunnit (Työnhakijoille)", "https://wise.com/pay/r/nWbsLarzr1kxyKw"]
                     ]
                 }
             ]
@@ -145,9 +145,9 @@ const compareData = {
                     title: "Многоразовые абонементы",
                     description: "Обеспечивают гибкость с минимальными обязательствами. Отличная выгода при нестабильном графике.",
                     rows: [
-                        ["5 Занятий", "50€", "10.00€", "20 Дней", "Любое занятие", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
-                        ["12 Занятий", "115€", "9.58€", "60 Дней", "Любое занятие", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
-                        ["20 Занятий", "199€", "9.95€", "6 Месяцев", "Любое занятие", "https://wise.com/pay/r/Q18rtNWwIVnKIKI"]
+                        ["5 Занятий", "50€", "10.00€", "45 Дней", "Любое занятие", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
+                        ["10 Занятий", "90€", "9.00€", "3 Месяца", "Любое занятие", "https://wise.com/pay/r/aJbTM3mYKFs2p3c"],
+                        ["20 Занятий", "160€", "8.00€", "6 Месяцев", "Любое занятие", "https://wise.com/pay/r/h9aLxWW9cvICy8A"]
                     ]
                 },
                 {
@@ -157,7 +157,7 @@ const compareData = {
                         ["Абонемент на 1 месяц", "79€", "~9.87€ (2x неделю)", "30 Дней (Без обязательств)", "Все занятия", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Полный Абонемент | 1й Год", "69€/мес", "~8.60€ (2x неделю)", "Контракт на 12 месяцев", "Все занятия", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
                         ["Аштанга Абонемент | 1й Год", "59€/мес", "~7.35€ (2x неделю)", "Контракт на 12 месяцев", "Только Аштанга", "https://wise.com/pay/r/K_ZxBCWaBgjSo8s"],
-                        ["Поддерживающий Абонемент", "45€/мес", "~5.60€ (2x неделю)", "1 Месяц (Продлеваемый)", "Только дневные (В поиске работы)", "index.html#contact"]
+                        ["Поддерживающий Абонемент", "45€/мес", "~5.60€ (2x неделю)", "1 Месяц (Продлеваемый)", "Только дневные (В поиске работы)", "https://wise.com/pay/r/nWbsLarzr1kxyKw"]
                     ]
                 }
             ]
