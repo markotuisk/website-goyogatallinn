@@ -14,7 +14,8 @@ const journalData = {
             author: 'Raili Maripuu',
             photographer: {
                 name: 'Andri Allas',
-                instagram: 'https://www.instagram.com/andriallas'
+                instagram: 'https://www.instagram.com/andriallas',
+                date: 'December 2025'
             },
             teacherId: 'raili-maripuu',
             practiceId: 'ashtanga',

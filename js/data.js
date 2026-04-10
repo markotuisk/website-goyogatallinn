@@ -60,6 +60,10 @@ const translationsData = {
         "checkout.org_reg": "Registration Number",
         "checkout.org_web": "Website (Optional)",
         "checkout.vat_note": "* Note: Services do not include VAT.",
+        "journal.share": "Share",
+        "journal.text_by": "Text:",
+        "journal.photo_by": "Photo:",
+        "footer.address": "Address",
 
         "nav.shop": "Shop",
         "shop.badge": "Opening Soon",
@@ -200,6 +204,10 @@ const translationsData = {
         "checkout.org_reg": "Registrikood",
         "checkout.org_web": "Koduleht (valikuline)",
         "checkout.vat_note": "* Märkus: Teenustele ei lisandu käibemaksu.",
+        "journal.share": "Jaga",
+        "journal.text_by": "Tekst:",
+        "journal.photo_by": "Foto:",
+        "footer.address": "Aadress",
 
         "nav.shop": "Pood",
         "shop.badge": "Varsti Avame",
