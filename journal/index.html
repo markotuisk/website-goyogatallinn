@@ -270,12 +270,12 @@
                                     <span>•</span>
                                     <span>${first.date.split('-').reverse().join('.')}</span>
                                 </div>
-                                ${first.photographer ? `<div class="text-white/60 text-[10px] italic tracking-wide">PHOTO: ${first.photographer.name.toUpperCase()} ${first.photographer.date?.toUpperCase() || ''}</div>` : ''}
-                            </div>
-                            <div class="text-white/30 text-[9px] font-bold tracking-[0.3em] uppercase pb-1">The Goyoga Tallinn Journal</div>
+                            ${first.photographer ? `<div class="text-white/60 text-[10px] italic tracking-wide">PHOTO: ${first.photographer.name.toUpperCase()} ${first.photographer.date?.toUpperCase() || ''}</div>` : ''}
                         </div>
+                        <div class="text-white/20 text-[7px] font-medium tracking-[0.4em] uppercase pb-1">The Goyoga Tallinn Journal</div>
                     </div>
                 </div>
+            </div>
             `;
 
             // 2. Grid
@@ -338,10 +338,8 @@
 
                     <!-- Article Header -->
                     <header class="mb-12">
-                        <div class="flex items-center gap-4 mb-6">
+                        <div class="mb-6">
                             <span class="inline-block px-4 py-1.5 bg-pink-100 text-pink-600 text-[10px] font-bold tracking-[0.2em] uppercase rounded-full">${article.category[currentLang] || article.category['en']}</span>
-                            <div class="h-[1px] w-8 bg-stone-200"></div>
-                            <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-stone-500" data-i18n="journal.publisher">${translationsData[currentLang]?.['journal.publisher'] || 'The Goyoga Tallinn Journal'}</span>
                         </div>
                         <h1 class="text-4xl md:text-6xl font-serif font-medium mb-8 leading-tight text-stone-900">${trans.title}</h1>
                         <div class="flex flex-wrap items-center justify-between gap-6 border-y border-stone-200 py-6">
@@ -381,7 +379,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                         <div class="absolute bottom-8 left-8 right-8 flex justify-between items-end">
                             <div class="text-white/80 text-[10px] italic tracking-wide">PHOTO: ${article.photographer?.name.toUpperCase() || ''} ${article.photographer?.date?.toUpperCase() || ''}</div>
-                            <div class="text-white/30 text-[9px] font-bold tracking-[0.3em] uppercase">The Goyoga Tallinn Journal</div>
+                            <div class="text-white/20 text-[7px] font-medium tracking-[0.4em] uppercase">The Goyoga Tallinn Journal</div>
                         </div>
                     </div>
 
