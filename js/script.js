@@ -52,13 +52,16 @@ function setLanguage(lang) {
         'ru': '/ru/zhurnal/' 
     };
 
-    const isJournalHub = Object.values(journalRoutes).some(p => 
-        path === p || 
-        path === p.replace(/\/$/, '') || 
-        path.startsWith(p)
-    );
+    // Use a robust check that handles various path formats
+    const currentPath = window.location.pathname.toLowerCase();
+    let currentHub = null;
+    
+    if (currentPath.includes('/journal/') || currentPath.endsWith('/journal')) currentHub = 'journal';
+    else if (currentPath.includes('/ajakiri/') || currentPath.endsWith('/ajakiri')) currentHub = 'journal';
+    else if (currentPath.includes('/arkisto/') || currentPath.endsWith('/arkisto')) currentHub = 'journal';
+    else if (currentPath.includes('/zhurnal/') || currentPath.endsWith('/zhurnal')) currentHub = 'journal';
 
-    if (isJournalHub) {
+    if (currentHub === 'journal') {
         window.location.href = `${journalRoutes[lang]}${searchStr}${hashStr}`;
         return;
     }
