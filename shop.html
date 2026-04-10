@@ -130,9 +130,9 @@
         });
 
         function renderShop() {
-            const lang = window.currentLanguage || 'en';
-            if (!window.shopData) return;
-            const shopLangData = window.shopData[lang] || window.shopData['en'];
+            const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'en';
+            if (typeof shopData === 'undefined') return;
+            const shopLangData = shopData[lang] || shopData['en'];
             const container = document.getElementById('shop-container');
             if(!container) return;
             

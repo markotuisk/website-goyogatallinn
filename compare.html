@@ -251,8 +251,8 @@
                                 btn.addEventListener('click', (e) => {
                                     e.preventDefault();
                                     
-                                    if (window.pricingData) {
-                                        const langPricing = window.pricingData[lang] || window.pricingData['en'];
+                                    if (typeof pricingData !== 'undefined') {
+                                        const langPricing = pricingData[lang] || pricingData['en'];
                                         let foundOpt = null, foundData = null, foundGroup = null;
                                         
                                         for (const [gKey, gVal] of Object.entries(langPricing)) {
