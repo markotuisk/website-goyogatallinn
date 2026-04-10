@@ -339,7 +339,14 @@
                                 </div>
                                 <div>
                                     <div class="font-medium text-stone-900">${article.author}</div>
-                                    <div class="text-xs text-stone-400 italic">${article.date.split('-').reverse().join('.')} • ${article.readTime[currentLang] || article.readTime['en']}</div>
+                                    <div class="text-xs text-stone-400 italic">
+                                        ${article.date.split('-').reverse().join('.')} • ${article.readTime[currentLang] || article.readTime['en']}
+                                        ${article.photographer ? `
+                                            <span class="mx-2">|</span>
+                                            <span data-i18n="journal.photo">Photo:</span> 
+                                            <a href="${article.photographer.instagram}" target="_blank" class="hover:text-pink-600 transition-colors underline decoration-stone-200 underline-offset-4">${article.photographer.name}</a>
+                                        ` : ''}
+                                    </div>
                                 </div>
                             </div>
                             <button onclick="shareArticle('${trans.title}', '${article.id}')" class="flex items-center gap-2 px-6 py-2 rounded-full border border-stone-200 hover:bg-stone-50 transition-colors text-sm font-medium">

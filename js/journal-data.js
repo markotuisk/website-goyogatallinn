@@ -10,8 +10,12 @@ const journalData = {
             id: 'ashtanga-not-for-everyone',
             date: '2025-09-24',
             category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
-            image: 'https://images.unsplash.com/photo-1506126279646-a697353d3166',
+            image: '/assets/journal/ashtanga-yoga-raili-allas.jpg',
             author: 'Raili Maripuu',
+            photographer: {
+                name: 'Andri Allas',
+                instagram: 'https://www.instagram.com/andriallas'
+            },
             teacherId: 'raili-maripuu',
             practiceId: 'ashtanga',
             hashtags: ['ashtanga', 'practice', 'beginners', 'tallinn', 'learn', 'series', 'school', 'complete', 'traditional', 'ashtanga yoga', 'primary series', 'yoga school', 'traditional ashtanga yoga', 'ashtanga yoga school'],
@@ -24,12 +28,27 @@ const journalData = {
                         <p>Not the best opening statement to promote ashtanga yoga just at the start of the new season. But I’m going to say this again – ashtanga yoga is the most wonderful and transformative yoga practise but it’s not for everyone.</p>
                         <blockquote>"Anyone can practise. Except lazy people; lazy people can’t practise ashtanga yoga." - Sri K Pattabhi Jois</blockquote>
                         <p>Whilst this quote has a lot of simple truth in it, many people nowadays face many other challenges that keep them from having a daily yoga practice. At our <strong>ashtanga yoga school</strong> in <strong>Tallinn</strong>, we see students navigating these challenges every day to <strong>learn</strong> the <strong>traditional ashtanga yoga</strong> method.</p>
+                        
                         <h3>Ashtanga is demanding</h3>
-                        <p>It’s never any easy option. Ashtanga yoga tests your body, mind and soul in any which way from all different directions. It’s the early mornings. It’s the daily discipline. It’s the showing up.</p>
-                        <p>For <strong>beginners</strong>, starting the <strong>primary series</strong> can feel like a steep climb, but this <strong>complete</strong> system is designed for steady progress. It's about more than just a workout; it's a <strong>traditional</strong> lineage that requires dedication.</p>
+                        <p>It’s never any easy option. Ashtanga yoga tests your body, mind and soul in any which way from all different directions. It’s the early mornings. It’s the daily discipline. It’s the showing up. It’s everything else in your life that you must navigate. Daily ashtanga <strong>practice</strong> is one of the biggest and purest tests you are ever going to take as it lasts for a lifetime.</p>
+                        
+                        <h3>Ashtanga is a daily discipline</h3>
+                        <p>Let’s face it most people prefer living a comfortable life as opposed to a daily early morning yoga practise that challenges you physically, mentally and emotionally. The only competition is with yourself, and you can’t escape yourself. Period. The only way out is through all of it. For a significant transformation in your life, you should practise ashtanga at least 4x per week. Think of it as adding to your daily cleansing routine much like your daily shower.</p>
+
+                        <h3>When the mind takes over</h3>
+                        <p>As it mostly does. There are and will be days when you don’t want to practise at all. When practise feels horrible. When the mind wanders throughout the entire practise. When you are faced with the restless ego, anxiety and exhaustion. On those days, I remind to myself that ashtanga is just a super useful tool to check-in how you feel in your body and in your head. In this beautiful practise we have all the tools to overcome all of the above. If you want.</p>
+
                         <h3>It's a long-term game</h3>
-                        <p>Ashtanga is a yoga <strong>practice</strong> for life. It most definitely is not a seasonal quick fix. Today’s practise is a preparation for tomorrow. Having practised daily for over 16 years, I 100% vouch for this.</p>
-                        <p>Ashtanga yoga in fact is for everyone. The feeling you get through ashtanga yoga practise cannot be described. It needs to be experienced.</p>
+                        <p>Ashtanga is a yoga <strong>practice</strong> for life. It most definitely is not a seasonal quick fix. Although at the start of their ashtanga journey most people progress and experience positive changes in their lives relatively quickly, this transformation slows down the longer you practise. For <strong>beginners</strong>, starting the <strong>primary series</strong> can feel like a steep climb, but this <strong>complete</strong> system is designed for steady progress.</p>
+                        <p>The beauty of this practise is that you show up daily (on your mat) and do what you can do. And that’s more than enough for that day. On challenging days, I always think of a saying by a fellow ashtanga teacher on the other side of the world “Today’s practise is a preparation for tomorrow.” Having practised daily for over 16 years, I 100% vouch for this.</p>
+
+                        <h3>So why do people keep practising?</h3>
+                        <p>Ashtanga yoga in fact is for everyone. The feeling you get through ashtanga yoga practise cannot be described. It needs to be experienced. Even if you try ashtanga once, the feeling after just the one practise is a state of bliss that we are all always subconsciously searching for as human beings. It’s the sense of being cleansed and purified in your body and cleared in your mind. With ashtanga you become light and full of energy.</p>
+                        <p>The systemised structure and the relative strictness of <strong>ashtanga yoga</strong> is what makes it beautiful and a life-changing practise. With regular practise, ashtanga yoga becomes a steady thing to hold on to through difficult and challenging times. It also keeps you grounded when things are going incredibly well. The <strong>traditional</strong> teaching method is what protects the integrity and value of ashtanga yoga, keeps it niche, and makes it so transformative.</p>
+
+                        <h3>How to (re)start with ashtanga yoga?</h3>
+                        <p>Ashtanga starts with the physical yoga practise and foremost with turning up. Find yourself a good <strong>yoga school</strong> and a good teacher. Create a daily or weekly routine that works for you and doesn’t stress you. Create a space at home where you can practise with no interference. Even if it’s for 10 minutes a day. Use simple incentives to make the practise enjoyable, such as a good yoga mat, lovely eye pillow for savasana etc.</p>
+                        <p>There are and always will be people who quit their daily yoga practise for whatever reason. But there are even more people who continue and make ashtanga yoga their lifetime practise. I am proud to be one of those latter people. Join us at our <strong>traditional ashtanga yoga school</strong> to begin your own <strong>primary series</strong> journey.</p>
                     `
                 },
                 et: {
@@ -139,7 +158,7 @@ const journalData = {
                     title: 'Äänihoidon tiede: Miten gongit parantavat',
                     excerpt: 'Tutustu siihen, miten korkeataajuuksiset värähtelyt nollaavat hermostosi ja poistavat vaimisia tukoksia.',
                     content: `
-                        <p>Ääni ei ole vain jotain, mitä kuulemme; se on jotain, mitä tunnemme soluissamme asti. Goyogassa äänikylvyt ovat enemmän kuin vain rentoutumista.</p>
+                        <p>Ääni ei ole vain jotain, mitä kuulemme; see is jotain, mitä tunnemme soluissamme asti. Goyogassa äänikylvyt ovat enemmän kuin vain rentoutumista.</p>
                     `
                 },
                 ru: {
