@@ -24,7 +24,7 @@ const journalData = {
             translations: {
                 en: {
                     isOriginal: true,
-                    title: 'Ashtanga Yoga for Everyone? | The Goyoga Tallinn Journal',
+                    title: 'Ashtanga yoga is not for everyone?',
                     excerpt: 'Discover why Ashtanga Yoga is a transformative practice for all. Learn traditional primary series in Tallinn with Raili Maripuu. Join our yoga school today.',
                     content: `
                         <p class="mb-8">Not the best opening statement to promote ashtanga yoga just at the start of the new season. But I’m going to say this again – ashtanga yoga is the most wonderful and transformative yoga practise but it’s not for everyone.</p>
@@ -69,7 +69,7 @@ const journalData = {
                 },
                 et: {
                     isOriginal: true,
-                    title: 'Ashtanga jooga ei sobi kõigile? | Goyoga Tallinn Ajakiri',
+                    title: 'Ashtanga jooga ei sobi kõigile?',
                     excerpt: 'Avasta, miks ashtanga jooga on elumuutev praktika kõigile. Õpi traditsioonilist esimesse seeriat Tallinnas Raili Maripuu juhendamisel. Liitu meie joogakooliga.',
                     content: `
                         <p class="mb-8">Pole just kõige targem mõte alustada uut hooaega ashtanga jooga mahategemisega. Sellest hoolimata ütlen veelkord, et kuigi ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, ei sobi ta kõigi jaoks.</p>
@@ -115,7 +115,7 @@ const journalData = {
                 },
                 fi: {
                     isOriginal: false,
-                    title: 'Sopiiko ashtanga kaikille? | Goyoga Tallinn Journal',
+                    title: 'Sopiiko ashtanga-jooga kaikille?',
                     excerpt: 'Ashtangajooga on upeaa, mutta se ei sovi kaikille. Lue, miksi kurinalaisuus on avain sisäiseen voimaan ja miten aloittaa harjoitus Tallinnan joogakoulussamme.',
                     content: `
                         <p class="mb-8">Ei ehkä se paras mainoslause uuden kauden kynnyksellä. Mutta sanon tämän silti: ashtangajooga on maailman upein ja mullistavin harjoitus, mutta se ei sovi kaikille.</p>
