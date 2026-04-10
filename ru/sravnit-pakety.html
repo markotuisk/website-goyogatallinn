@@ -10,15 +10,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link href="/css/style.css?v=1775784707" rel="stylesheet"/>
+<link href="/css/style.css?v=1775784836" rel="stylesheet"/>
 <!-- Favicons -->
 <link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="site.webmanifest" rel="manifest"/>
 <script src="/js/data.js?v=1775707269"></script>
-<script src="/js/compare-data.js?v=1775784707"></script>
-<script src="/js/seo-data.js?v=1775784707"></script>
+<script src="/js/compare-data.js?v=1775784836"></script>
+<script src="/js/seo-data.js?v=1775784836"></script>
 <!-- Brand Identity Schema -->
 <script type="application/ld+json">
     {
@@ -229,9 +229,39 @@
                             td.className = "px-6 py-4 text-right";
                             if (cellText) {
                                 const btn = document.createElement('a');
-                                btn.href = cellText;
-                                btn.className = "inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow focus:outline-none focus:ring-2 focus:ring-pink-500 whitespace-nowrap hover:-translate-y-0.5";
+                                btn.href = '#';
+                                btn.className = "inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow focus:outline-none focus:ring-2 focus:ring-pink-500 whitespace-nowrap hover:-translate-y-0.5 cursor-pointer";
                                 btn.textContent = data.buyBtn || "Buy";
+                                
+                                btn.addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    
+                                    if (window.pricingData) {
+                                        const langPricing = window.pricingData[lang] || window.pricingData['en'];
+                                        let foundOpt = null, foundData = null, foundGroup = null;
+                                        
+                                        for (const [gKey, gVal] of Object.entries(langPricing)) {
+                                            if (gVal.options) {
+                                                const match = gVal.options.find(o => o.link === cellText);
+                                                if (match) {
+                                                    foundOpt = match;
+                                                    foundData = gVal;
+                                                    foundGroup = gKey;
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        
+                                        if (foundOpt && window.renderInvoiceSummary && window.toggleModal) {
+                                            window.renderInvoiceSummary(foundOpt, foundData, foundGroup);
+                                            window.toggleModal('pricing-modal', true);
+                                            return;
+                                        }
+                                    }
+                                    // Fallback if modal system fails
+                                    window.open(cellText, '_blank');
+                                });
+                                
                                 td.appendChild(btn);
                             }
                         } else {

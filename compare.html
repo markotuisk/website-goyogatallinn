@@ -244,9 +244,39 @@
                             td.className = "px-6 py-4 text-right";
                             if (cellText) {
                                 const btn = document.createElement('a');
-                                btn.href = cellText;
-                                btn.className = "inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow focus:outline-none focus:ring-2 focus:ring-pink-500 whitespace-nowrap hover:-translate-y-0.5";
+                                btn.href = '#';
+                                btn.className = "inline-flex items-center justify-center px-5 py-2.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow focus:outline-none focus:ring-2 focus:ring-pink-500 whitespace-nowrap hover:-translate-y-0.5 cursor-pointer";
                                 btn.textContent = data.buyBtn || "Buy";
+                                
+                                btn.addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    
+                                    if (window.pricingData) {
+                                        const langPricing = window.pricingData[lang] || window.pricingData['en'];
+                                        let foundOpt = null, foundData = null, foundGroup = null;
+                                        
+                                        for (const [gKey, gVal] of Object.entries(langPricing)) {
+                                            if (gVal.options) {
+                                                const match = gVal.options.find(o => o.link === cellText);
+                                                if (match) {
+                                                    foundOpt = match;
+                                                    foundData = gVal;
+                                                    foundGroup = gKey;
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        
+                                        if (foundOpt && window.renderInvoiceSummary && window.toggleModal) {
+                                            window.renderInvoiceSummary(foundOpt, foundData, foundGroup);
+                                            window.toggleModal('pricing-modal', true);
+                                            return;
+                                        }
+                                    }
+                                    // Fallback if modal system fails
+                                    window.open(cellText, '_blank');
+                                });
+                                
                                 td.appendChild(btn);
                             }
                         } else {
