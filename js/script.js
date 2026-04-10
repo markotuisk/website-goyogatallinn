@@ -50,6 +50,21 @@ function setLanguage(lang) {
 
     const path = window.location.pathname;
 
+    // Special handling for localized journal hubs to prevent kick-back to root
+    const journalPaths = {
+        'en': '/journal/',
+        'et': '/et/ajakiri/',
+        'fi': '/fi/arkisto/',
+        'ru': '/ru/zhurnal/'
+    };
+    
+    for (const [l, p] of Object.entries(journalPaths)) {
+        if (path.includes(p)) {
+            window.location.href = `${journalPaths[lang]}${searchStr}${hashStr}`;
+            return;
+        }
+    }
+
     // Extract current filename and normalize Cloudflare extensionless paths
     let currentFilename = path.split('/').pop() || 'index.html';
     if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
