@@ -6,7 +6,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.goyoga.ee/en/rent</loc>
+      <loc>https://www.goyoga.ee/en/studio</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -156,7 +156,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.goyoga.ee/et/rendi-ruumid</loc>
+      <loc>https://www.goyoga.ee/et/stuudio</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -306,7 +306,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.goyoga.ee/fi/tilojen-vuokraus</loc>
+      <loc>https://www.goyoga.ee/fi/studio</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
@@ -456,7 +456,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.goyoga.ee/ru/arenda</loc>
+      <loc>https://www.goyoga.ee/ru/studiya</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
