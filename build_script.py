@@ -138,12 +138,21 @@ def translate_html(soup, lang, translations, filename, faq_data=None, seo_data=N
     # Fix relative paths to absolute paths so they work in subdirectories
     for tag in soup.find_all(['link', 'script', 'img', 'video', 'source']):
         for attr in ['src', 'href']:
-            if tag.has_attr(attr) and tag[attr].startswith(('css/', 'js/', 'assets/')):
-                base_path = '/' + tag[attr]
-                if base_path.endswith(('.css', '.js')):
-                    tag[attr] = f"{base_path}?v={CACHE_BUSTER}"
-                else:
-                    tag[attr] = base_path
+            if tag.has_attr(attr):
+                val = tag[attr]
+                # Handle relative paths (css/, js/, assets/)
+                if val.startswith(('css/', 'js/', 'assets/')):
+                    base_path = '/' + val
+                    if base_path.endswith(('.css', '.js')):
+                        tag[attr] = f"{base_path}?v={CACHE_BUSTER}"
+                    else:
+                        tag[attr] = base_path
+                # Handle already-absolute paths with stale cache busters
+                elif val.startswith(('/css/', '/js/', '/assets/')):
+                    # Strip old query string
+                    base_path = val.split('?')[0]
+                    if base_path.endswith(('.css', '.js')):
+                        tag[attr] = f"{base_path}?v={CACHE_BUSTER}"
 
 
     # Ensure local navigation links retain the correct language context and localized filenames

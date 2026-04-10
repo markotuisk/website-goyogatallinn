@@ -349,7 +349,7 @@ function initModals() {
         }
     }
 
-    window.renderInvoiceSummary = async function renderInvoiceSummary(opt, data, group) {
+    async function renderInvoiceSummary(opt, data, group) {
         const langData = translationsData[currentLanguage] || translationsData['en'];
         const body = document.getElementById('pricing-modal-body');
         document.getElementById('pricing-modal-title').textContent = langData['checkout.invoice_summary'] || 'Invoice Summary';

@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/logo-goyoga-tallinn-estonia-96x96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/logo-goyoga-tallinn-estonia-512x512.png">
     <link rel="manifest" href="site.webmanifest">
-    <script src="/js/data.js?v=1775707269"></script>
+    <script src="js/data.js"></script>
     <script src="js/compare-data.js"></script>
     <script src="js/seo-data.js"></script>
     <!-- Brand Identity Schema -->
@@ -159,7 +159,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=5"></script>
+    <script src="js/script.js?v=10"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             renderComparePage();
@@ -264,17 +264,16 @@
                                                     foundGroup = gKey;
                                                     break;
                                                 }
-                                                }
                                             }
                                         }
                                         
                                         if (foundOpt && window.renderInvoiceSummary && window.toggleModal) {
-                                            window.renderInvoiceSummary(foundOpt, foundData, foundGroup);
                                             window.toggleModal('pricing-modal', true);
+                                            window.renderInvoiceSummary(foundOpt, foundData, foundGroup);
                                             return;
                                         }
                                     }
-                                    // Fallback if modal system fails
+                                    // Fallback: open Wise directly
                                     window.open(cellText, '_blank');
                                 });
                                 
@@ -306,7 +305,6 @@
             if (window.lucide) window.lucide.createIcons();
         }
     </script>
-    <script src="js/script.js?v=9"></script>
 </body>
 
 </html>
