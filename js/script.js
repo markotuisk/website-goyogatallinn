@@ -51,6 +51,8 @@ function setLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
 
     const path = window.location.pathname;
+    const searchStr = window.location.search || '';
+    const hashStr = window.location.hash || '';
 
     // Special handling for localized journal hubs to prevent kick-back to root
     const journalPaths = {
@@ -90,8 +92,6 @@ function setLanguage(lang) {
         targetFilename = seoData.urlRoutes[lang][baseFilename] || baseFilename;
     }
 
-    const searchStr = window.location.search || '';
-    const hashStr = window.location.hash || '';
 
     // Keep .html for clean Cloudflare aesthetics when assigning location
     const targetUrl = targetFilename;
