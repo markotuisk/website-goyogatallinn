@@ -10,7 +10,7 @@ const journalData = {
             id: 'ashtanga-not-for-everyone',
             date: '2025-09-24',
             category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
-            image: '/assets/journal/%231%20goyoga%20ashtanga%20yoga%20jooga%20tallinn%20estonia%20rail%20maripuu%20Andri%20Allas.webp',
+            image: '/assets/journal/raili-ashtanga-01.webp',
             author: 'Raili Maripuu',
             photographer: {
                 name: 'Andri Allas',
@@ -81,7 +81,7 @@ const journalData = {
                             <h3 class="text-2xl font-serif mt-12 mb-6">Miks inimesed lõpetavad ashtanga praktiseerimise?</h3>
                             
                             <h4 class="text-xl font-medium mb-4">Ashtanga on nõudlik</h4>
-                            <p>See ei ole kunagi olnud kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges ja igas mõttes. Varajased hommikud. Igapäevane distsipliin. Matile kohale tulemine. See lisaks kõigele muule, mida Sa iga päev asjatama pead. Regulaarne ashtanga praktika on üks suurimaid ja raskemaid teste, sest see ei lõpe kunagi ja kestab terve elu.</p>
+                            <p>See ei ole kunagi ollut kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges ja igas mõttes. Varajased hommikud. Igapäevane distsipliin. Matile kohale tulemine. See lisaks kõigele muule, mida Sa iga päev asjatama pead. Regulaarne ashtanga praktika on üks suurimaid ja raskemaid teste, sest see ei lõpe kunagi ja kestab terve elu.</p>
                         </div>
                         
                         <div class="space-y-8 mb-16">
@@ -231,7 +231,7 @@ const journalData = {
                         <p>Kaasaegse elu müras otsime me tihti otseteid. Kuid mõned teed on mõeldud käimiseks samm-sammult. Ashtanga jooga on üks neist teedest.</p>
                         <h3>Mysore-meetodi ankur</h3>
                         <p>Mysore-meetod ei tähenda ainult higi; see tähendab eneseasutust. Kui astud Goyoga matile, ei järgi sa lihtsalt õpetajat – sa kuulad oma hingamist.</p>
-                        <p>Liitu meiega ja uuri, kuidas see iidne distsipliin loob kaasaegset vastupidavust.</p>
+                        <p>Liitu meiega ja uuri, kuidas see iidne distsipliin loob kaasegset vastupidavust.</p>
                     `
                 },
                 fi: {
