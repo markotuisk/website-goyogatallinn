@@ -1,7 +1,7 @@
 // Data Definitions
 const translationsData = {
     en: {
-        "nav.home": "Home", "nav.about": "About", "nav.classes": "Classes", "nav.studio": "Studio", "nav.schedule": "Schedule", "nav.pricing": "Pricing", "nav.teachers": "Teachers", "nav.events": "Events", "nav.community": "Community", "nav.corporate": "Corporate", "nav.contact": "Contact", "nav.language": "Language",
+        "nav.home": "Home", "nav.about": "About", "nav.classes": "Classes", "nav.studio": "Studio", "nav.schedule": "Schedule", "nav.pricing": "Pricing", "nav.teachers": "Teachers", "nav.events": "Events", "nav.community": "Community", "nav.corporate": "Corporate", "nav.journal": "Journal", "nav.contact": "Contact", "nav.language": "Language",
         "corporate.tagline": "Employee Well-being",
         "corporate.hero.title": "Wellness Packages for Companies",
         "corporate.intro.tag": "Corporate Mental Health",
@@ -38,7 +38,7 @@ const translationsData = {
         "community.tagline": "Community", "community.title": "Words from Our Community", "community.description": "Hear what our students and teachers have to say.", "community.leave_review_button": "Leave a Review",
         "instagram.tagline": "Community", "instagram.title": "Follow Our Journey", "instagram.description": "See snapshots of our daily practice. Follow us on Instagram <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
         "contact.tagline": "Contact Us", "contact.title": "Get In Touch", "contact.description": "We are here to help.", "contact.form.title": "Send Us a Message", "contact.form.name": "Your Name", "contact.form.email": "Email Address", "contact.form.message": "Your Message", "contact.form.send_button": "Send Message", "contact.info.title": "Studio Information", "contact.info.location": "Location", "contact.info.parking": "Parking", "contact.info.transport": "Transport", "contact.info.directions": "Directions", "contact.info.hours": "Opening Hours", "contact.info.phone": "Phone", "contact.info.email": "Email", "contact.info.call_whatsapp": "Call or WhatsApp",
-        "footer.description": "Estonia's leading yoga and wellness studio.", "footer.quick_links": "Quick Links", "footer.resources": "Resources", "footer.blog": "Blog", "footer.workshops": "Workshops", "footer.faq": "FAQ", "footer.newsletter": "Newsletter", "footer.newsletter_description": "Join our newsletter.", "footer.email_placeholder": "Your email", "footer.subscribe_button": "Subscribe", "footer.copyright": "© 2026 Goyoga Estonia OÜ. All rights reserved.",
+        "footer.description": "Estonia's leading yoga and wellness studio.", "footer.quick_links": "Quick Links", "footer.resources": "Resources", "footer.blog": "The Journal", "footer.workshops": "Workshops", "footer.faq": "FAQ", "footer.newsletter": "Newsletter", "footer.newsletter_description": "Join our newsletter.", "footer.email_placeholder": "Your email", "footer.subscribe_button": "Subscribe", "footer.copyright": "© 2026 Goyoga Estonia OÜ. All rights reserved.",
         "footer.rent": "Studio Rental",
         "footer.location_floor": "3rd floor",
         "footer.hours_mon_fri": "Mon-Fri",
@@ -141,7 +141,7 @@ const translationsData = {
         "card.label.work": "Work", "card.label.studio": "Studio", "card.label.website": "Official Site", "card.label.instagram": "Instagram", "card.location": "Narva mnt 7D, Tallinn"
     },
     et: {
-        "nav.home": "Kodu", "nav.about": "Meist", "nav.classes": "Tunnid", "nav.studio": "Stuudio", "nav.schedule": "Tunniplaan", "nav.pricing": "Hinnad", "nav.teachers": "Õpetajad", "nav.events": "Sündmused", "nav.community": "Kogukond", "nav.corporate": "Ettevõtetele", "nav.contact": "Kontakt", "nav.language": "Keel",
+        "nav.home": "Kodu", "nav.about": "Meist", "nav.classes": "Tunnid", "nav.studio": "Stuudio", "nav.schedule": "Tunniplaan", "nav.pricing": "Hinnad", "nav.teachers": "Õpetajad", "nav.events": "Sündmused", "nav.community": "Kogukond", "nav.corporate": "Ettevõttele", "nav.journal": "Ajakiri", "nav.contact": "Kontakt", "nav.language": "Keel",
         "corporate.tagline": "Ettevõtte Töötajate Heaolu",
         "corporate.hero.title": "Heaolu paketid ettevõtetele",
         "corporate.intro.tag": "Vaimne Tervis Töökohal",
@@ -178,7 +178,7 @@ const translationsData = {
         "community.tagline": "Kogukond", "community.title": "Sõnad meie kogukonnast", "community.description": "Kuula, mida meie õpilased ja õpetajad räägivad.", "community.leave_review_button": "Jäta Tagasisidet",
         "instagram.tagline": "Kogukond", "instagram.title": "Jälgi meie teekonda", "instagram.description": "Jälgi meid Instagramis <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
         "contact.tagline": "Võta ühendust", "contact.title": "Kontakt", "contact.description": "Oleme siin, et aidata.", "contact.form.title": "Saada meile sõnum", "contact.form.name": "Sinu nimi", "contact.form.email": "E-posti aadress", "contact.form.message": "Sinu sõnum", "contact.form.send_button": "Saada sõnum", "contact.info.title": "Stuudio informatsioon", "contact.info.location": "Asukoht", "contact.info.parking": "Parkimine", "contact.info.transport": "Transport", "contact.info.directions": "Juhised", "contact.info.hours": "Lahtiolekuajad", "contact.info.phone": "Telefon", "contact.info.email": "E-post", "contact.info.call_whatsapp": "Helista või WhatsApp",
-        "footer.description": "Eesti suurim ja parim jooga- ning heaolu oaas.", "footer.quick_links": "Kiirlingid", "footer.resources": "Ressursid", "footer.blog": "Blogi", "footer.workshops": "Töötoad", "footer.faq": "KKK", "footer.newsletter": "Uudiskiri", "footer.newsletter_description": "Liitu uudiskirjaga.", "footer.email_placeholder": "Sinu e-post", "footer.subscribe_button": "Liitu", "footer.copyright": "© 2026 Goyoga Estonia OÜ. Kõik õigused kaitstud.",
+        "footer.description": "Eesti suurim ja parim jooga- ning heaolu oaas.", "footer.quick_links": "Kiirlingid", "footer.resources": "Ressursid", "footer.blog": "Ajakiri", "footer.workshops": "Töötoad", "footer.faq": "KKK", "footer.newsletter": "Uudiskiri", "footer.newsletter_description": "Liitu uudiskirjaga.", "footer.email_placeholder": "Sinu e-post", "footer.subscribe_button": "Liitu", "footer.copyright": "© 2026 Goyoga Estonia OÜ. Kõik õigused kaitstud.",
         "footer.rent": "Rendi ruumid",
         "footer.location_floor": "3. korrus",
         "footer.hours_mon_fri": "E-R",
@@ -281,7 +281,7 @@ const translationsData = {
         "card.label.work": "Töö", "card.label.studio": "Stuudio", "card.label.website": "Ametlik koduleht", "card.label.instagram": "Instagram", "card.location": "Narva mnt 7D, Tallinn"
     },
     fi: {
-        "nav.home": "Koti", "nav.about": "Meistä", "nav.classes": "Tunnit", "nav.studio": "Studio", "nav.schedule": "Aikataulu", "nav.pricing": "Hinnat", "nav.teachers": "Opettajat", "nav.events": "Tapahtumat", "nav.community": "Yhteisö", "nav.corporate": "Yrityksille", "nav.contact": "Yhteystiedot", "nav.language": "Kieli",
+        "nav.home": "Koti", "nav.about": "Meistä", "nav.classes": "Tunnit", "nav.studio": "Studio", "nav.schedule": "Aikataulu", "nav.pricing": "Hinnat", "nav.teachers": "Opettajat", "nav.events": "Tapahtumat", "nav.community": "Yhteisö", "nav.corporate": "Yrityksille", "nav.journal": "Arkisto", "nav.contact": "Ota yhteyttä", "nav.language": "Kieli",
         "corporate.tagline": "Yrityksen työntekijöiden hyvinvointi",
         "corporate.hero.title": "Hyvinvointipaketit yrityksille",
         "corporate.intro.tag": "Mielenterveys työpaikalla",
@@ -412,7 +412,7 @@ const translationsData = {
         "card.email": "Sähköposti", "card.call": "Soita", "card.social": "Social", "card.save_contact": "Tallenna yhteystiedot", "card.class_schedule": "Aikataulu", "card.view_biography": "Koko elämäkerta", "card.share_qr": "Jaa QR-koodi", "card.scan_to_save": "Skannaa tallentaaksesi", "card.qr_instructions": "Osu kameralla näyttöön avataksesi tämän digitaalisen käyntikortin välittömästi puhelimessasi.", "card.close": "Sulje"
     },
     ru: {
-        "nav.home": "Главная", "nav.about": "О нас", "nav.classes": "Занятия", "nav.studio": "Студия", "nav.schedule": "Расписание", "nav.pricing": "Цены", "nav.teachers": "Учителя", "nav.events": "События", "nav.community": "Сообщество", "nav.corporate": "Корпоративным", "nav.contact": "Контакты", "nav.language": "Язык",
+        "nav.home": "Главная", "nav.about": "О нас", "nav.classes": "Занятия", "nav.studio": "Студия", "nav.schedule": "Расписание", "nav.pricing": "Цены", "nav.teachers": "Учителя", "nav.events": "События", "nav.community": "Сообщество", "nav.corporate": "Корпоративным", "nav.journal": "Журнал", "nav.contact": "Контакты", "nav.language": "Язык",
         "corporate.tagline": "Благополучие сотрудников",
         "corporate.hero.title": "Велнес-пакеты для компаний",
         "corporate.intro.tag": "Психическое здоровье в офисе",
@@ -449,7 +449,7 @@ const translationsData = {
         "community.tagline": "Сообщество", "community.title": "Слова от нашего сообщества", "community.description": "Послушайте, что говорят наши студенты и учителя.", "community.leave_review_button": "Оставить отзыв",
         "instagram.tagline": "Сообщество", "instagram.title": "Следите за нашим путём", "instagram.description": "Смотрите снимки нашей ежедневной практики. Подписывайтесь на нас в Instagram <a href='#' class='text-pink-600 font-semibold hover:underline'>@goyoga.ee</a>.",
         "contact.tagline": "Связаться с нами", "contact.title": "Контакты", "contact.description": "Мы здесь, чтобы помочь.", "contact.form.title": "Отправить нам сообщение", "contact.form.name": "Ваше имя", "contact.form.email": "Электронная почта", "contact.form.message": "Ваше сообщение", "contact.form.send_button": "Отправить сообщение", "contact.info.title": "Информация о студии", "contact.info.location": "Расположение", "contact.info.parking": "Парковка", "contact.info.transport": "Транспорт", "contact.info.directions": "Как добраться", "contact.info.hours": "Часы работы", "contact.info.phone": "Телефон", "contact.info.email": "Электронная почта", "contact.info.call_whatsapp": "Позвонить или WhatsApp",
-        "footer.description": "Ведущий центр йоги и велнеса в Эстонии.", "footer.quick_links": "Быстрые ссылки", "footer.resources": "Ресурсы", "footer.blog": "Блог", "footer.workshops": "Мастер-классы", "footer.faq": "ЧАВО", "footer.newsletter": "Рассылка", "footer.newsletter_description": "Подписаться на рассылку.", "footer.email_placeholder": "Ваша почта", "footer.subscribe_button": "Подписаться", "footer.copyright": "© 2026 Goyoga Estonia OÜ. Все права защищены.",
+        "footer.description": "Ведущий центр йоги и велнеса в Эстонии.", "footer.quick_links": "Быстрые ссылки", "footer.resources": "Ресурсы", "footer.blog": "Журнал", "footer.workshops": "Мастер-классы", "footer.faq": "ЧАВО", "footer.newsletter": "Рассылка", "footer.newsletter_description": "Подписаться на рассылку.", "footer.email_placeholder": "Ваша почта", "footer.subscribe_button": "Подписаться", "footer.copyright": "© 2026 Goyoga Estonia OÜ. Все права защищены.",
         "footer.rent": "Аренда студии",
         "footer.location_floor": "3-й этаж",
         "footer.hours_mon_fri": "Пн-Пт",

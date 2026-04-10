@@ -14,7 +14,8 @@ const seoData = {
             "corporate.html": "corporate.html",
             "card.html": "card.html",
             "compare.html": "compare.html",
-            "shop.html": "shop.html"
+            "shop.html": "shop.html",
+            "journal/": "journal/index.html"
         },
         et: {
             "index.html": "index.html",
@@ -28,7 +29,8 @@ const seoData = {
             "corporate.html": "ettevotetele.html",
             "card.html": "kaart.html",
             "compare.html": "vordle-pakette.html",
-            "shop.html": "shop.html"
+            "shop.html": "shop.html",
+            "journal/": "ajakiri/"
         },
         fi: {
             "index.html": "index.html",
@@ -42,7 +44,8 @@ const seoData = {
             "corporate.html": "yrityksille.html",
             "card.html": "kortti.html",
             "compare.html": "vertaa-paketteja.html",
-            "shop.html": "shop.html"
+            "shop.html": "shop.html",
+            "journal/": "arkisto/"
         },
         ru: {
             "index.html": "index.html",
@@ -56,7 +59,8 @@ const seoData = {
             "corporate.html": "korporativnym.html",
             "card.html": "karta.html",
             "compare.html": "sravnit-pakety.html",
-            "shop.html": "shop.html"
+            "shop.html": "shop.html",
+            "journal/": "zhurnal/"
         }
     },
 
@@ -132,6 +136,28 @@ const seoData = {
                 title: "Йога для компаний | Тимбилдинг и Велнес в Таллине | Goyoga",
                 description: "Повысьте продуктивность и здоровье вашей команды. Индивидуальная корпоративная йога, медитация и управление стрессом в нашей студии или в вашем офисе в Таллине.",
                 keywords: "корпоративный велнес Таллин, корпоративная йога Таллин, тимбилдинг Таллин, благополучие сотрудников, медитация для компаний"
+            }
+        },
+        journal: {
+            en: {
+                title: "The Journal | Wellness Insights & Yoga Wisdom | Goyoga",
+                description: "Explore deep insights into yoga, meditation, and holistic health. The Goyoga Journal: your guide to authentic wellness and presence in Tallinn.",
+                keywords: "yoga journal Tallinn, wellness blog Estonia, meditation insights, yoga philosophy, Goyoga Tallinn journal"
+            },
+            et: {
+                title: "Ajakiri | Jooga ja Heaolu Teadmised | Goyoga Tallinn",
+                description: "Loe sügavamaid teadmisi joogast, meditatsioonist ja terviklikust heaolust. Goyoga Ajakiri on sinu teejuht teadlikkuse ja kohaloluni.",
+                keywords: "jooga ajakiri Tallinn, heaolu blogi, meditatsiooni teadmised, jooga filosoofia, Goyoga Tallinn"
+            },
+            fi: {
+                title: "Arkisto | Jooga ja Hyvinvointi | Goyoga Tallinna",
+                description: "Tutustu joogan, meditaation ja holistisen terveyden syvällisiin oivalluksiin. Goyoga Arkisto: oppaasi aitoon hyvinvointiin Tallinnassa.",
+                keywords: "jooga-lehti Tallinna, hyvinvointiblogi, meditaatiovinkit, joogafilosofia, Goyoga Tallinna"
+            },
+            ru: {
+                title: "Журнал | О йоге и велнесе | Goyoga Таллин",
+                description: "Глубокие инсайты о йоге, медитации и комплексном здоровье. Журнал Goyoga: ваш путь к осознанности и спокойствию в Таллине.",
+                keywords: "журнал о йоге Таллин, велнес блог Эстония, инсайты медитации, философия йоги"
             }
         },
         faq: {
