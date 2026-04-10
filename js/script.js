@@ -626,6 +626,10 @@ function initModals() {
         toggleModal('pricing-modal', true);
         renderInvoiceSummary(opt, { title: data.title }, 'event');
     };
+
+    // Expose needed modal functions to global scope so standalone pages can use them
+    window.renderInvoiceSummary = renderInvoiceSummary;
+    window.getAssetPath = getAssetPath;
 }
 
 function toggleModal(id, show) {

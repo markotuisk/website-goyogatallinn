@@ -167,8 +167,8 @@
         });
 
         function renderComparePage() {
-            const lang = currentLanguage || 'en';
-            const data = (window.compareData && window.compareData[lang]) ? window.compareData[lang] : (window.compareData['en'] || {});
+            const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'en';
+            const data = (typeof compareData !== 'undefined' && compareData[lang]) ? compareData[lang] : (typeof compareData !== 'undefined' && compareData['en'] ? compareData['en'] : {});
 
             // Hero
             if (data.hero) {
