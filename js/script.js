@@ -1,7 +1,9 @@
-// Main Logic (Non-Module)
-let currentLanguage = 'en';
-
 // --- Initialization ---
+// Determine current language immediately from HTML tag
+const htmlLang = document.documentElement.lang || 'en';
+let currentLanguage = htmlLang;
+window.currentLanguage = currentLanguage;
+
 document.addEventListener('DOMContentLoaded', () => {
     initModals();
     initReviewsCarousel();
@@ -16,26 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initLikeButtons();
     initEvents();
-    // Final localization sweep once DOM is fully interactive
-    initLanguage();
-
+    
+    // Final localization sweep
+    updateUIDecorators(currentLanguage);
+    updateUI(currentLanguage);
+    
     // Initialize Lucide Icons
     if (window.lucide) window.lucide.createIcons();
 });
-
-// --- Internationalization (i18n) ---
-function initLanguage() {
-    // Rely on the server/build to set the HTML lang correctly.
-    const htmlLang = document.documentElement.lang || 'en';
-    currentLanguage = htmlLang;
-    window.currentLanguage = currentLanguage;
-
-    updateUIDecorators(currentLanguage);
-    updateUI(currentLanguage);
-}
-
-// Call immediately to set currentLanguage before other scripts load
-initLanguage();
 
 // Utility to resolve the correct URL slug based on seoData translation maps
 function getTranslatedUrl(filename) {
