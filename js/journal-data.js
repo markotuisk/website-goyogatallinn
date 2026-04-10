@@ -14,7 +14,7 @@ const journalData = {
             author: 'Raili Maripuu',
             teacherId: 'raili-maripuu',
             practiceId: 'ashtanga',
-            hashtags: ['#ashtanga', '#yoga', '#discipline', '#wellness'],
+            hashtags: ['ashtanga', 'practice', 'beginners', 'tallinn', 'learn', 'series', 'school', 'complete', 'traditional', 'ashtanga yoga', 'primary series', 'yoga school', 'traditional ashtanga yoga', 'ashtanga yoga school'],
             readTime: { en: '6 min read', et: '6 min lugemist', fi: '6 min lukuaika', ru: '6 мин чтения' },
             translations: {
                 en: {
@@ -23,11 +23,12 @@ const journalData = {
                     content: `
                         <p>Not the best opening statement to promote ashtanga yoga just at the start of the new season. But I’m going to say this again – ashtanga yoga is the most wonderful and transformative yoga practise but it’s not for everyone.</p>
                         <blockquote>"Anyone can practise. Except lazy people; lazy people can’t practise ashtanga yoga." - Sri K Pattabhi Jois</blockquote>
-                        <p>Whilst this quote has a lot of simple truth in it, many people nowadays face many other challenges that keep them from having a daily yoga practise.</p>
+                        <p>Whilst this quote has a lot of simple truth in it, many people nowadays face many other challenges that keep them from having a daily yoga practice. At our <strong>ashtanga yoga school</strong> in <strong>Tallinn</strong>, we see students navigating these challenges every day to <strong>learn</strong> the <strong>traditional ashtanga yoga</strong> method.</p>
                         <h3>Ashtanga is demanding</h3>
                         <p>It’s never any easy option. Ashtanga yoga tests your body, mind and soul in any which way from all different directions. It’s the early mornings. It’s the daily discipline. It’s the showing up.</p>
+                        <p>For <strong>beginners</strong>, starting the <strong>primary series</strong> can feel like a steep climb, but this <strong>complete</strong> system is designed for steady progress. It's about more than just a workout; it's a <strong>traditional</strong> lineage that requires dedication.</p>
                         <h3>It's a long-term game</h3>
-                        <p>Ashtanga is a yoga practise for life. It most definitely is not a seasonal quick fix. Today’s practise is a preparation for tomorrow. Having practised daily for over 16 years, I 100% vouch for this.</p>
+                        <p>Ashtanga is a yoga <strong>practice</strong> for life. It most definitely is not a seasonal quick fix. Today’s practise is a preparation for tomorrow. Having practised daily for over 16 years, I 100% vouch for this.</p>
                         <p>Ashtanga yoga in fact is for everyone. The feeling you get through ashtanga yoga practise cannot be described. It needs to be experienced.</p>
                     `
                 },
@@ -37,9 +38,9 @@ const journalData = {
                     content: `
                         <p>Pole just kõige targem mõte alustada uut hooaega ashtanga jooga mahategemisega. Sellest hoolimata ütlen veelkord, et kuigi ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, ei sobi ta kõigi jaoks.</p>
                         <blockquote>"Joogaga saavad tegeleda kõik. Välja arvatud laisad inimesed." - Sri K Pattabhi Jois</blockquote>
-                        <p>Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase joogapraktika tekkimist.</p>
+                        <p>Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase joogapraktika tekkimist. Meie <strong>ashtanga jooga koolis Tallinnas</strong> aitame õpilastel nendest väljakutsetest üle saada, et õppida selgeks <strong>traditsiooniline ashtanga jooga</strong>.</p>
                         <h3>Ashtanga on nõudlik</h3>
-                        <p>See ei ole kunagi olnud kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges. Varajased hommikud. Igapäevane distsipliin. Matile kohale tulemine.</p>
+                        <p>See ei ole kunagi olnud kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges. <strong>Algajatele</strong> võib <strong>esimese seeria</strong> (primary series) omandamine tunduda raske, kuid see <strong>täielik</strong> süsteem on loodud järjepidevaks arenguks.</p>
                         <h3>Ashtanga on pikk mäng</h3>
                         <p>See joogapraktika on terveks eluks. Kindlasti ei ole ashtanga hooajaline kiire lahendus. Tänane praktika valmistab Sind ette homseks.</p>
                     `
@@ -95,7 +96,7 @@ const journalData = {
                     excerpt: 'Tutustu, miksi perinteinen Mysore-menetelmä on nykyajan elämän paras henkinen ja fyysinen ankkuri.',
                     content: `
                         <p>Nykypäivän hälinässä etsimme usein oikopolkuja. Mutta jotkut polut on tarkoitettu kuljettaviksi askel kerrallaan. Ashtanga-jooga on yksi näistä poluista.</p>
-                        <h3>Mysore-menetelmän ankkuri</h3>
+                        <h3>Mirore-menetelmän ankkuri</h3>
                         <p>Mysore-menetelmässä ei ole kyse vain hiestä, vaan itsensä vastuullisuudesta. Kun astut Goyogan matolle, et vain seuraa opettajaa – kuuntelet omaa hengitystäsi.</p>
                     `
                 },
