@@ -9,10 +9,10 @@ const journalData = {
         {
             id: 'why-ashtanga',
             date: '2026-04-10',
-            category: 'Practice',
+            category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
             image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b',
             author: 'Raili Maripuu',
-            readTime: { en: '5 min read', et: '5 min lugemist' },
+            readTime: { en: '5 min read', et: '5 min lugemist', fi: '5 min lukuaika', ru: '5 мин чтения' },
             translations: {
                 en: {
                     title: 'Why Ashtanga? The Power of Discipline',
@@ -34,16 +34,34 @@ const journalData = {
                         <p>Mysore-meetod ei tähenda ainult higi; see tähendab eneseasutust. Kui astud Goyoga matile, ei järgi sa lihtsalt õpetajat – sa kuulad oma hingamist.</p>
                         <p>Liitu meiega ja uuri, kuidas see iidne distsipliin loob kaasaegset vastupidavust.</p>
                     `
+                },
+                fi: {
+                    title: 'Miksi Ashtanga? Kurinalaisuuden voima',
+                    excerpt: 'Tutustu, miksi perinteinen Mysore-menetelmä on nykyajan elämän paras henkinen ja fyysinen ankkuri.',
+                    content: `
+                        <p>Nykypäivän hälinässä etsimme usein oikopolkuja. Mutta jotkut polut on tarkoitettu kuljettaviksi askel kerrallaan. Ashtanga-jooga on yksi näistä poluista.</p>
+                        <h3>Mysore-menetelmän ankkuri</h3>
+                        <p>Mysore-menetelmässä ei ole kyse vain hiestä, vaan itsensä vastuullisuudesta. Kun astut Goyogan matolle, et vain seuraa opettajaa – kuuntelet omaa hengitystäsi.</p>
+                    `
+                },
+                ru: {
+                    title: 'Почему Аштанга? Сила дисциплины',
+                    excerpt: 'Узнайте, почему традиционный метод Майсор является лучшим ментальным и физическим якорем в современной жизни.',
+                    content: `
+                        <p>В шуме современной жизни мы часто ищем короткие пути. Но некоторые пути предназначены для того, чтобы идти по ним шаг за шагом. Аштанга-йога — один из таких путей.</p>
+                        <h3>Якорь метода Майсор</h3>
+                        <p>Метод Майсор — это не только пот; это самоответственность. Когда вы ступаете на коврик в Goyoga, вы не просто следуете за учителем — вы слушаете собственное дыхание.</p>
+                    `
                 }
             }
         },
         {
             id: 'sound-bath-science',
             date: '2026-04-05',
-            category: 'Wellness',
+            category: { en: 'Wellness', et: 'Heaolu', fi: 'Hyvinvointi', ru: 'Велнес' },
             image: 'https://images.unsplash.com/photo-1545389336-cf090694435e',
             author: 'David Lepp',
-            readTime: { en: '4 min read', et: '4 min lugemist' },
+            readTime: { en: '4 min read', et: '4 min lugemist', fi: '4 min lukuaika', ru: '4 мин чтения' },
             translations: {
                 en: {
                     title: 'The Science of Sound: How Gongs Heal',
@@ -58,6 +76,20 @@ const journalData = {
                     excerpt: 'Uuri, kuidas kõrgsageduslikud vibratsioonid lähtestavad sinu närvisüsteemi ja puhastavad vaimseid blokeeringuid.',
                     content: `
                         <p>Heli ei ole lihtsalt midagi, mida me kuuleme; see on midagi, mida me tunneme oma rakkudes. Goyogas on helirännakud enamat kui lihtsalt lõõgastus.</p>
+                    `
+                },
+                fi: {
+                    title: 'Äänihoidon tiede: Miten gongit parantavat',
+                    excerpt: 'Tutustu siihen, miten korkeataajuuksiset värähtelyt nollaavat hermostosi ja poistavat vaimisia tukoksia.',
+                    content: `
+                        <p>Ääni ei ole vain jotain, mitä kuulemme; se on jotain, mitä tunnemme soluissamme asti. Goyogassa äänikylvyt ovat enemmän kuin vain rentoutumista.</p>
+                    `
+                },
+                ru: {
+                    title: 'Наука звука: Как гонги исцеляют',
+                    excerpt: 'Узнайте, как высокочастотные вибрации перезагружают вашу нервную систему и очищают ментальные блоки.',
+                    content: `
+                        <p>Звук — это не просто то, что мы слышим; это то, что мы чувствуем каждой клеткой своего тела. В Goyoga наши звуковые ванны — это больше, чем просто расслабление.</p>
                     `
                 }
             }
