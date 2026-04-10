@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="seo-title">The Journal | Wellness Insights | Goyoga Tallinn</title>
-    <meta name="description" content="Explore deep insights on yoga, meditation, and holistic health. The Goyoga Journal is your guide to authentic wellness in Tallinn." name="description"/>
+    <meta name="description" content="Explore deep insights on yoga, meditation, and holistic health. The Goyoga Journal is your guide to authentic wellness in Tallinn." id="meta-description"/>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" id="og-title" content="The Journal | Wellness Insights | Goyoga Tallinn" />
+    <meta property="og:description" id="og-description" content="Explore deep insights on yoga, meditation, and holistic health. The Goyoga Journal is your guide to authentic wellness in Tallinn." />
+    <meta property="og:image" id="og-image" content="https://www.goyoga.ee/assets/branding/og-journal.jpg" />
+    <meta property="og:url" id="og-url" content="https://www.goyoga.ee/journal/" />
+    <meta name="twitter:card" content="summary_large_image" />
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -231,6 +239,14 @@
             const grid = document.getElementById('article-grid');
             const featured = document.getElementById('featured-article-container');
             
+            // Reset SEO to Hub defaults
+            document.title = "The Journal | Wellness Insights | Goyoga Tallinn";
+            document.getElementById('meta-description').setAttribute('content', "Explore deep insights on yoga, meditation, and holistic health. The Goyoga Journal is your guide to authentic wellness in Tallinn.");
+            document.getElementById('og-title').setAttribute('content', "The Journal | Wellness Insights | Goyoga Tallinn");
+            document.getElementById('og-description').setAttribute('content', "Explore deep insights on yoga, meditation, and holistic health. The Goyoga Journal is your guide to authentic wellness in Tallinn.");
+            document.getElementById('og-image').setAttribute('content', "https://www.goyoga.ee/assets/branding/og-journal.jpg");
+            document.getElementById('og-url').setAttribute('content', window.location.origin + window.location.pathname);
+
             if (!window.journalData) return;
             const articles = window.journalData.articles;
             
@@ -295,10 +311,14 @@
             const trans = article.translations[currentLang] || article.translations['en'];
             const container = document.getElementById('article-detail');
 
-            // Update SEO
+            // Update SEO Metadata for Details
+            const canonicalUrl = `${window.location.origin}${window.location.pathname}?id=${article.id}`;
             document.title = `${trans.title} | Goyoga Journal`;
-            const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) metaDesc.setAttribute('content', trans.excerpt);
+            document.getElementById('meta-description').setAttribute('content', trans.excerpt);
+            document.getElementById('og-title').setAttribute('content', trans.title);
+            document.getElementById('og-description').setAttribute('content', trans.excerpt);
+            document.getElementById('og-image').setAttribute('content', article.image);
+            document.getElementById('og-url').setAttribute('content', canonicalUrl);
 
             container.innerHTML = `
                 <div class="container-custom max-w-4xl mx-auto">
