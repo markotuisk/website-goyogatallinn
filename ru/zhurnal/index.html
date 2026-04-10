@@ -38,7 +38,7 @@
     <!-- Data Files -->
     <script src="/js/data.js"></script>
     <script src="/js/seo-data.js"></script>
-    <script src="/js/journal-data.js?v=20260410_v9_9_final"></script>
+    <script src="/js/journal-data.js?v=20260410_v20240411_final_STABLE"></script>
 </head>
 
 <body class="bg-stone-50 text-gray-800 antialiased font-sans">
@@ -298,7 +298,8 @@
                         <span>${article.date.split('-').reverse().join('.')}</span>
                     </div>
                 `;
-                grid.appendChild(card);
+                grid.appendChild(card); }
+            if (window.updateUI) window.updateUI();
             });
         }
 
@@ -422,10 +423,12 @@
                 </div>
             `;
             lucide.createIcons();
+            if (window.updateUI) window.updateUI();
         }
 
         // Initialize lucide
         lucide.createIcons();
+            if (window.updateUI) window.updateUI();
         
         // Initial route check
         handleRouting();

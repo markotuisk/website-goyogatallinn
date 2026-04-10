@@ -430,6 +430,34 @@ const seoData = {
         }
     },
 
+    // Localized Journal Hub Metadata
+    journal: {
+        en: {
+            title: "The Journal | Wellness Insights | Goyoga Tallinn",
+            description: "Deep insights on yoga, meditation, and holistic health. Goyoga Journal is your guide to authentic wellness in Tallinn.",
+            ogTitle: "Goyoga Journal | Authentic Wellness",
+            ogDescription: "Discover traditional wisdom and modern wellness insights from Tallinn's leading yoga sanctuary."
+        },
+        et: {
+            title: "Ajakiri | Jooga ja Heaolu | Goyoga Tallinn",
+            description: "Süvitsi minevad teadmised joogast, mediteerimisest ja holistilisest tervisest. Goyoga Ajakiri on sinu teejuht Tallinnas.",
+            ogTitle: "Goyoga Ajakiri | Autentne Heaolu",
+            ogDescription: "Avasta traditsioonilist tarkust ja kaasaegseid heaolu teadmisi Tallinna juhtivalt joogastuudiolt."
+        },
+        fi: {
+            title: "Arkisto | Syvemmät Hyvinvousnäkemykset | Goyoga Tallinn",
+            description: "Syvällisiä näkemyksiä joogasta, meditaatiosta ja kokonaisvaltaisesta terveydenhoidosta. Goyoga Arkisto opastaa sinua Tallinnassa.",
+            ogTitle: "Goyoga Arkisto | Autenttinen Hyvinvointi",
+            ogDescription: "Löydä perinteistä viisautta ja moderneja hyvinvointivinkkejä Tallinnan johtavalta joogakeskukselta."
+        },
+        ru: {
+            title: "Журнал | Оздоровление и Йога | Goyoga Tallinn",
+            description: "Глубокие знания о йоге, медитации и холистическом здоровье. Журнал Goyoga — ваш путеводитель по аутентичному благополучию в Таллине.",
+            ogTitle: "Журнал Goyoga | Аутентичное оздоровление",
+            ogDescription: "Откройте для себя традиционную мудрость и современные практики оздоровления от ведущей студии йоги в Таллине."
+        }
+    },
+
     // Cheeky / Dynamic SEO Settings
     config: {
         canonical: "https://www.goyoga.ee",

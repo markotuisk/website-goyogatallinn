@@ -54,55 +54,33 @@ function setLanguage(lang) {
     const searchStr = window.location.search || '';
     const hashStr = window.location.hash || '';
 
-    // Robust Hub Detection (Journal, etc.)
-    const hubRoutes = {
-        'journal': { 
-            'en': '/journal/', 
-            'et': '/et/ajakiri/', 
-            'fi': '/fi/arkisto/', 
-            'ru': '/ru/zhurnal/' 
-        }
+    // Absolute Hub Mapping
+    const journalRoutes = { 
+        'en': '/journal/', 
+        'et': '/et/ajakiri/', 
+        'fi': '/fi/arkisto/', 
+        'ru': '/ru/zhurnal/' 
     };
 
-    // Normalize path for matching: handle trailing slashes and index.html
-    let cleanPath = path;
-    if (cleanPath.endsWith('index.html')) cleanPath = cleanPath.replace('index.html', '');
-    if (!cleanPath.endsWith('/')) cleanPath += '/';
+    const isJournalHub = Object.values(journalRoutes).some(p => 
+        path === p || 
+        path === p.replace(/\/$/, '') || 
+        path.startsWith(p)
+    );
 
-    // Find the current hub context
-    let hubMatch = null;
-    for (const [hubKey, routes] of Object.entries(hubRoutes)) {
-        if (Object.values(routes).some(p => cleanPath.startsWith(p))) {
-            hubMatch = hubKey;
-            break;
-        }
-    }
-
-    if (hubMatch) {
-        window.location.href = `${hubRoutes[hubMatch][lang]}${searchStr}${hashStr}`;
+    if (isJournalHub) {
+        window.location.href = `${journalRoutes[lang]}${searchStr}${hashStr}`;
         return;
     }
 
-    // Default Page Redirect logic for standard pages
-    let baseFilename = path.split('/').pop() || 'index.html';
-    if (!baseFilename || path.endsWith('/')) baseFilename = 'index.html';
-    if (baseFilename !== 'index.html' && !baseFilename.includes('.')) baseFilename += '.html';
+    // Default Redirect
+    let currentFilename = path.split('/').pop() || 'index.html';
+    if (!currentFilename || path.endsWith('/')) currentFilename = 'index.html';
+    if (currentFilename !== 'index.html' && !currentFilename.includes('.')) currentFilename += '.html';
 
-    // Reverse lookup to find the English (base) filename
-    if (typeof seoData !== 'undefined' && seoData.urlRoutes) {
-        const activeLangDict = seoData.urlRoutes[currentLanguage] || seoData.urlRoutes['en'];
-        for (const [enKey, locName] of Object.entries(activeLangDict)) {
-            if (locName === baseFilename) {
-                baseFilename = enKey;
-                break;
-            }
-        }
-    }
-
-    // Forward lookup to get the target language filename
-    let targetFilename = baseFilename;
+    let targetFilename = currentFilename;
     if (typeof seoData !== 'undefined' && seoData.urlRoutes && seoData.urlRoutes[lang]) {
-        targetFilename = seoData.urlRoutes[lang][baseFilename] || baseFilename;
+        targetFilename = seoData.urlRoutes[lang][currentFilename] || currentFilename;
     }
 
     if (targetFilename === 'index.html') {
@@ -112,23 +90,25 @@ function setLanguage(lang) {
     }
 }
 
-function updateUI(lang) {
-    if (typeof translationsData !== 'undefined' && translationsData[lang]) {
-        const t = translationsData[lang];
+// Make globally accessible for Hub scripts
+window.updateUI = function updateUI(lang) {
+    const activeLang = lang || window.currentLanguage || 'en';
+    if (typeof translationsData !== 'undefined' && translationsData[activeLang]) {
+        const t = translationsData[activeLang];
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (t[key]) {
                 if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
                     if (el.hasAttribute('placeholder')) el.placeholder = t[key];
                 } else if (el.tagName.toLowerCase() === 'meta') {
-                   // Skip meta tags for now
+                    // Skip
                 } else {
-                    el.textContent = t[key]; // Safer and faster
+                    el.textContent = t[key];
                 }
             }
         });
     }
-}
+};
 
 function updateUIDecorators(lang) {
     const flagMap = { 'en': 'https://flagcdn.com/w20/gb.png', 'et': 'https://flagcdn.com/w20/ee.png', 'fi': 'https://flagcdn.com/w20/fi.png', 'ru': 'https://flagcdn.com/w20/ru.png' };
