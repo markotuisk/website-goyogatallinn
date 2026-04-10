@@ -210,15 +210,26 @@
             tbody.className = "divide-y divide-stone-100 bg-white";
 
             data.table.sections.forEach((section, secIndex) => {
-                // Section Title Row
                 const trTitle = document.createElement('tr');
                 trTitle.className = "bg-stone-50/50";
                 const tdTitle = document.createElement('td');
                 tdTitle.colSpan = data.table.headers.length;
-                tdTitle.className = "px-6 py-4 font-serif text-lg font-semibold text-stone-800 text-center";
+                tdTitle.className = "px-6 py-4 pt-6 font-serif text-lg font-semibold text-stone-800 text-center border-t border-stone-200";
                 tdTitle.textContent = section.title;
                 trTitle.appendChild(tdTitle);
                 tbody.appendChild(trTitle);
+
+                // Section Description Row (Soft UI)
+                if (section.description) {
+                    const trDesc = document.createElement('tr');
+                    trDesc.className = "bg-stone-50/50";
+                    const tdDesc = document.createElement('td');
+                    tdDesc.colSpan = data.table.headers.length;
+                    tdDesc.className = "px-6 pb-6 text-sm text-stone-500 italic text-center mx-auto max-w-2xl text-wrap leading-relaxed";
+                    tdDesc.textContent = section.description;
+                    trDesc.appendChild(tdDesc);
+                    tbody.appendChild(trDesc);
+                }
 
                 // Section Data Rows
                 section.rows.forEach((row, rowIndex) => {

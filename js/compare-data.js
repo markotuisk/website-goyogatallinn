@@ -11,6 +11,7 @@ const compareData = {
             sections: [
                 {
                     title: "Single Sessions",
+                    description: "Perfect for getting acquainted with the studio or jumping into a class with a friend or family member.",
                     rows: [
                         ["1x Session", "18€", "18.00€", "1 Class", "Any Scheduled Class", "https://wise.com/pay/r/2hM7S5mTqlnTOOQ"],
                         ["Student", "15€", "15.00€", "1 Class", "Any Scheduled Class", "https://wise.com/pay/r/DTgbhcrnONWQ1-Y"],
@@ -19,6 +20,7 @@ const compareData = {
                 },
                 {
                     title: "Multi-Visit Passes",
+                    description: "Offers flexibility with minimum commitment. Great value for a varied schedule.",
                     rows: [
                         ["5-Visit Pass", "50€", "10.00€", "20 Days", "Any Scheduled Class", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
                         ["12-Visit Pass", "115€", "9.58€", "60 Days", "Any Scheduled Class", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
@@ -27,6 +29,7 @@ const compareData = {
                 },
                 {
                     title: "Memberships (Monthly Payments)",
+                    description: "Maximum value. Includes unlimited classes plus exclusive discounts on shop purchases, events, and retreats.",
                     rows: [
                         ["1-Month Pass", "79€", "~9.87€ (2x/wk)", "30 Days (No lock-in)", "All Classes", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Full Pass | 1st Year", "69€/mo", "~8.60€ (2x/wk)", "12-Month Contract", "All Classes", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
@@ -49,6 +52,7 @@ const compareData = {
             sections: [
                 {
                     title: "Üksikkord",
+                    description: "Ideaalne stuudioga tutvumiseks või sõbra ja pereliikmega tundi kaasa tulemiseks.",
                     rows: [
                         ["1x Kord", "18€", "18.00€", "1 Tund", "Mistahes Tund", "https://wise.com/pay/r/2hM7S5mTqlnTOOQ"],
                         ["Tudeng", "15€", "15.00€", "1 Tund", "Mistahes Tund", "https://wise.com/pay/r/DTgbhcrnONWQ1-Y"],
@@ -57,6 +61,7 @@ const compareData = {
                 },
                 {
                     title: "Mitmikkorrakaardid",
+                    description: "Pakub paindlikkust minimaalse siduvusega. Suurepärane väärtus muutuva graafikuga harjutajale.",
                     rows: [
                         ["5-Korra Pass", "50€", "10.00€", "20 Päeva", "Mistahes Tund", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
                         ["12-Korra Pass", "115€", "9.58€", "60 Päeva", "Mistahes Tund", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
@@ -65,6 +70,7 @@ const compareData = {
                 },
                 {
                     title: "Liikmelisus (Kuutasud)",
+                    description: "Parim väärtus. Sisaldab piiramatut osalemist ning lisaks soodustusi e-poes, sündmustel ja retriitidel.",
                     rows: [
                         ["1-Kuu Pass", "79€", "~9.87€ (2x ndls)", "30 Päeva (Ei ole seotud)", "Kõik Tunnid", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Täispakett | 1. Aasta", "69€/kuu", "~8.60€ (2x ndls)", "12-Kuu Leping", "Kõik Tunnid", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
@@ -87,6 +93,7 @@ const compareData = {
             sections: [
                 {
                     title: "Yksittäiskerta",
+                    description: "Täydellinen studioon tutustumiseen tai ystävän ja perheenjäsenen mukaan ottamiseen.",
                     rows: [
                         ["1x Kerta", "18€", "18.00€", "1 Tunti", "Kaikki Tunnit", "https://wise.com/pay/r/2hM7S5mTqlnTOOQ"],
                         ["Opiskelija", "15€", "15.00€", "1 Tunti", "Kaikki Tunnit", "https://wise.com/pay/r/DTgbhcrnONWQ1-Y"],
@@ -95,6 +102,7 @@ const compareData = {
                 },
                 {
                     title: "Useamman kerran liput",
+                    description: "Tarjoaa joustavuutta pienellä sitoutumisella. Erinomainen vaihtoehto vaihtelevalla aikataululla harjoittelevalle.",
                     rows: [
                         ["5-Kerran Lippu", "50€", "10.00€", "20 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
                         ["12-Kerran Lippu", "115€", "9.58€", "60 Päivää", "Kaikki Tunnit", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
@@ -103,6 +111,7 @@ const compareData = {
                 },
                 {
                     title: "Jäsenyydet (Kuukausimaksut)",
+                    description: "Paras arvo. Sisältää rajattoman osallistumisen sekä alennuksia kaupan tuotteista, tapahtumista ja retriiteistä.",
                     rows: [
                         ["1 Kuukauden Paketti", "79€", "~9.87€ (2x vkossa)", "30 Päivää (Ei sitoumusta)", "Kaikki Tunnit", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Täyspaketti | 1. Vuosi", "69€/kk", "~8.60€ (2x vkossa)", "12 Kuukauden Sopimus", "Kaikki Tunnit", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
@@ -125,6 +134,7 @@ const compareData = {
             sections: [
                 {
                     title: "Разовые занятия",
+                    description: "Идеально для знакомства со студией или посещения занятия с другом или членом семьи.",
                     rows: [
                         ["1x Занятие", "18€", "18.00€", "1 Занятие", "Любое занятие", "https://wise.com/pay/r/2hM7S5mTqlnTOOQ"],
                         ["Студент", "15€", "15.00€", "1 Занятие", "Любое занятие", "https://wise.com/pay/r/DTgbhcrnONWQ1-Y"],
@@ -133,6 +143,7 @@ const compareData = {
                 },
                 {
                     title: "Многоразовые абонементы",
+                    description: "Обеспечивают гибкость с минимальными обязательствами. Отличная выгода при нестабильном графике.",
                     rows: [
                         ["5 Занятий", "50€", "10.00€", "20 Дней", "Любое занятие", "https://wise.com/pay/r/_iQ-VGdf_jJJ9YA"],
                         ["12 Занятий", "115€", "9.58€", "60 Дней", "Любое занятие", "https://wise.com/pay/r/egeNSp3ei2aOjMM"],
@@ -141,6 +152,7 @@ const compareData = {
                 },
                 {
                     title: "Членство (Ежемесячные платежи)",
+                    description: "Лучшая выгода. Включает безлимитный доступ, а также скидки на товары в магазине, мероприятия и ретриты.",
                     rows: [
                         ["Абонемент на 1 месяц", "79€", "~9.87€ (2x неделю)", "30 Дней (Без обязательств)", "Все занятия", "https://wise.com/pay/r/Tsr9WxhmPimPtOc"],
                         ["Полный Абонемент | 1й Год", "69€/мес", "~8.60€ (2x неделю)", "Контракт на 12 месяцев", "Все занятия", "https://wise.com/pay/r/J9rTL7DdhfCBY-4"],
