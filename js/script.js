@@ -400,7 +400,7 @@ function initModals() {
                             <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
                         </div>
                         <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
-                            ${langData['checkout.subscribe_label'] || 'Subscribe for GoYoga services, events and seasonal offerings'}
+                            ${langData['checkout.subscribe_label'] || 'Subscribe for Goyoga services, events and seasonal offerings'}
                         </span>
                     </label>
 

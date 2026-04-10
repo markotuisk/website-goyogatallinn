@@ -155,8 +155,8 @@ export async function onRequestPost(context) {
             const customerName = data.name ? data.name.split(' ')[0] : 'there';
             const customerHtml = generateEmailHtml(
                 `We Received Your Message`,
-                `Hello ${customerName},<br><br>Thank you for reaching out to GoYoga Tallinn! This is an automated message to let you know we have successfully received your inquiry and will get back to you shortly.`,
-                `GoYoga Tallinn Support &bull; info@goyoga.ee &bull; We aim to respond within 24-48 hours.`
+                `Hello ${customerName},<br><br>Thank you for reaching out to Goyoga Tallinn! This is an automated message to let you know we have successfully received your inquiry and will get back to you shortly.`,
+                `Goyoga Tallinn Support &bull; info@goyoga.ee &bull; We aim to respond within 24-48 hours.`
             );
 
             try {
@@ -169,8 +169,8 @@ export async function onRequestPost(context) {
                         "authorization": ZOHO_KEY
                     },
                     body: JSON.stringify({
-                        "from": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Website Forms" },
-                        "to": [{ "email_address": { "address": "info@goyoga.ee", "name": "GoYoga Tallinn" } }],
+                        "from": { "address": "online.services@goyoga-billing.cc", "name": "Goyoga Website Forms" },
+                        "to": [{ "email_address": { "address": "info@goyoga.ee", "name": "Goyoga Tallinn" } }],
                         "subject": `[${ticketId}] New ${inquiryType}`,
                         "htmlbody": adminHtml
                     })
@@ -185,7 +185,7 @@ export async function onRequestPost(context) {
                         "authorization": ZOHO_KEY
                     },
                     body: JSON.stringify({
-                        "from": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Tallinn Support" },
+                        "from": { "address": "online.services@goyoga-billing.cc", "name": "Goyoga Tallinn Support" },
                         "to": [{ "email_address": { "address": data.email, "name": data.name || "Customer" } }],
                         "subject": `Request Received: ${inquiryType} [${ticketId}]`,
                         "htmlbody": customerHtml

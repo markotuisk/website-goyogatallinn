@@ -134,7 +134,7 @@ export async function onRequestPost(context) {
                         <p>${t.outro}</p>
                     </div>
                     <div class="footer">
-                        <p>GoYoga Tallinn | Narva mnt 7D, Tallinn</p>
+                        <p>Goyoga Tallinn | Narva mnt 7D, Tallinn</p>
                         <p>${t.footerHelp}</p>
                     </div>
                 </div>

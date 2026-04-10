@@ -130,9 +130,9 @@ export async function onRequestPost(context) {
                     "from": { "address": "online.services@goyoga-billing.cc", "name": "Goyoga Services" },
                     "to": [
                         { "email_address": { "address": data.email, "name": "Customer" } },
-                        { "email_address": { "address": "info@goyoga.ee", "name": "GoYoga Tracker" } },
-                        { "email_address": { "address": "online.services@goyoga-billing.cc", "name": "GoYoga Billing Archive" } },
-                        { "email_address": { "address": "arved@goyoga.ee", "name": "GoYoga Accounting" } }
+                        { "email_address": { "address": "info@goyoga.ee", "name": "Goyoga Tracker" } },
+                        { "email_address": { "address": "online.services@goyoga-billing.cc", "name": "Goyoga Billing Archive" } },
+                        { "email_address": { "address": "arved@goyoga.ee", "name": "Goyoga Accounting" } }
                     ],
                     "subject": `Goyoga Estonia Purchase Summary - ${invoiceId}`,
                     "htmlbody": emailHtml
