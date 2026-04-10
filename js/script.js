@@ -309,6 +309,325 @@ function initModals() {
         if (window.lucide) window.lucide.createIcons();
     }
 
+    function renderBenefitsAndConditions(data, body) {
+        if (data.benefits && data.benefits.length > 0) {
+            body.innerHTML += `
+                <div class="mt-6">
+                    <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
+                        <i data-lucide="sparkles" class="h-4 w-4 mr-2 text-pink-500"></i>
+                        ${data.benefitsTitle || 'Benefits'}
+                    </h4>
+                    <ul class="space-y-2">
+                        ${data.benefits.map(b => `
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="h-4 w-4 mr-2 text-pink-500 flex-shrink-0 mt-0.5"></i>
+                                <span class="text-xs font-medium text-gray-700 leading-relaxed">${b}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+        if (data.conditions && data.conditions.length > 0) {
+            body.innerHTML += `
+                <details class="mt-6 pt-4 border-t border-gray-100 group">
+                    <summary class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center cursor-pointer select-none outline-none">
+                        <i data-lucide="info" class="h-4 w-4 mr-2 text-gray-400"></i>
+                        ${data.conditionsTitle || 'Terms & Conditions'}
+                        <i data-lucide="chevron-down" class="h-4 w-4 ml-auto text-gray-400 transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <ul class="space-y-2 mt-3">
+                        ${data.conditions.map(c => `
+                            <li class="flex items-start">
+                                <i data-lucide="minus" class="h-3 w-3 mr-2 text-gray-300 flex-shrink-0 mt-1"></i>
+                                <span class="text-[11px] text-gray-500 leading-relaxed">${c}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </details>
+            `;
+        }
+    }
+
+    window.renderInvoiceSummary = async function renderInvoiceSummary(opt, data, group) {
+        const langData = translationsData[currentLanguage] || translationsData['en'];
+        const body = document.getElementById('pricing-modal-body');
+        document.getElementById('pricing-modal-title').textContent = langData['checkout.invoice_summary'] || 'Invoice Summary';
+        
+        body.innerHTML = `
+            <div class="space-y-6">
+                <!-- Back Button -->
+                <button class="flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-pink-600 transition-colors" id="checkout-back-btn">
+                    <i data-lucide="arrow-left" class="h-3 w-3 mr-2"></i>
+                    ${langData['checkout.back_button'] || 'Back'}
+                </button>
+
+                <!-- Invoice Table -->
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <div class="flex justify-between items-center mb-6">
+                        <img src="${getAssetPath('/assets/branding/logo-goyoga-tallinn-estonia.svg')}" class="h-8 object-contain" alt="Logo">
+                        <div class="text-right">
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-1">${langData['checkout.invoice_no'] || 'Invoice No.'}</p>
+                            <p class="text-xs font-bold text-gray-800">DRAFT-NEW</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">${opt.name}</span>
+                            <span class="text-xs font-bold text-pink-600">${opt.price}</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-gray-800 uppercase tracking-widest">${langData['checkout.total'] || 'Total'}</span>
+                            <span class="text-lg font-bold text-pink-600">${opt.price}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Form -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 px-1">
+                            ${langData['checkout.email_label'] || 'Email Address'} *
+                        </label>
+                        <input type="email" id="checkout-email" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.email_placeholder'] || 'your@email.com'}" required>
+                    </div>
+
+                    <label class="flex items-start gap-4 cursor-pointer group">
+                        <div class="relative flex items-center mt-0.5">
+                            <input type="checkbox" id="checkout-subscribe" class="peer hidden" checked>
+                            <div class="h-5 w-5 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
+                            <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
+                            ${langData['checkout.subscribe_label'] || 'Subscribe for GoYoga services, events and seasonal offerings'}
+                        </span>
+                    </label>
+
+                    <label class="flex items-start gap-4 cursor-pointer group mt-3">
+                        <div class="relative flex items-center mt-0.5">
+                            <input type="checkbox" id="checkout-is-org" class="peer hidden" onchange="document.getElementById('checkout-org-wrapper').classList.toggle('hidden', !this.checked)">
+                            <div class="h-5 w-5 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
+                            <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
+                        </div>
+                        <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
+                            ${langData['checkout.org_checkbox'] || 'Purchase is by organisation'}
+                        </span>
+                    </label>
+
+                    <div id="checkout-org-wrapper" class="hidden mt-3 space-y-3 p-4 bg-gray-50 border border-gray-100 rounded-xl">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">${langData['checkout.org_details'] || 'Organisation Details'}</p>
+                        <input type="text" id="checkout-org-country" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" value="Estonia" placeholder="${langData['checkout.org_country'] || 'Country'}">
+                        <input type="text" id="checkout-org-name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_name'] || 'Organisation Name'}">
+                        <input type="text" id="checkout-org-reg" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_reg'] || 'Registration Number'}">
+                        <input type="url" id="checkout-org-web" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_web'] || 'Website (Optional)'}">
+                    </div>
+
+                    <button class="w-full bg-pink-600 text-white font-bold py-4 rounded-xl hover:bg-pink-700 transition-all active:scale-[0.98] shadow-lg shadow-pink-100 uppercase tracking-widest text-xs mt-4 flex items-center justify-center gap-2" id="checkout-confirm-btn">
+                        <span>${langData['checkout.confirm_button'] || 'Confirm & Pay'}</span>
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </button>
+                    
+                    <p class="text-center text-xs text-gray-500 font-medium mt-4 mb-2">
+                        ${langData['checkout.vat_note'] || '* Note: Services do not include VAT.'}
+                    </p>
+                </div>
+            </div>
+        `;
+
+        // Listeners for checkout buttons
+        document.getElementById('checkout-back-btn')?.addEventListener('click', () => renderPricingOptions(data, group));
+        document.getElementById('checkout-confirm-btn')?.addEventListener('click', () => handleCheckoutSubmit(opt, data, group));
+
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    async function handleCheckoutSubmit(opt, data, group) {
+        const emailInput = document.getElementById('checkout-email');
+        const subscribe = document.getElementById('checkout-subscribe').checked;
+        const isOrg = document.getElementById('checkout-is-org')?.checked;
+        const finalOrg = isOrg ? {
+            name: document.getElementById('checkout-org-name')?.value?.trim() || '',
+            country: document.getElementById('checkout-org-country')?.value?.trim() || 'Estonia',
+            reg: document.getElementById('checkout-org-reg')?.value?.trim() || '',
+            web: document.getElementById('checkout-org-web')?.value?.trim() || ''
+        } : null;
+        const langData = translationsData[currentLanguage] || translationsData['en'];
+
+        if (!emailInput.checkValidity() || !emailInput.value) {
+            emailInput.classList.add('border-red-500');
+            return;
+        }
+
+        const confirmBtn = document.getElementById('checkout-confirm-btn');
+        const originalBtnHTML = confirmBtn.innerHTML;
+        confirmBtn.disabled = true;
+        confirmBtn.innerHTML = `<i data-lucide="loader-2" class="h-4 w-4 animate-spin"></i>`;
+        if (window.lucide) window.lucide.createIcons();
+
+        // Generate ID
+        const timestamp = Date.now();
+        const invoiceId = `GY-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${timestamp.toString().slice(-4)}`;
+
+        try {
+            // Call API
+            const response = await fetch('/api/invoice', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: emailInput.value,
+                    subscribe,
+                    product: opt.name,
+                    price: opt.price,
+                    desc: opt.desc,
+                    organisation: finalOrg,
+                    invoiceId,
+                    language: currentLanguage
+                })
+            });
+
+            // Transition to Success Step
+            renderPaymentStep(opt, invoiceId);
+        } catch (error) {
+            console.error('Invoice error:', error);
+            // Even if email fails, we should let them pay, but maybe show a warning
+            renderPaymentStep(opt, invoiceId);
+        }
+    }
+
+    function renderPaymentStep(opt, invoiceId) {
+        const langData = translationsData[currentLanguage] || translationsData['en'];
+        const body = document.getElementById('pricing-modal-body');
+        
+        const buyBtnText = langData['pricing.buy'] || 'Buy Now';
+        const qrBtnText = langData['pricing.qr_btn'] || 'Scan QR to Pay';
+
+        body.innerHTML = `
+            <div class="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div class="bg-green-50 rounded-xl p-6 border border-green-100 text-center">
+                    <div class="h-12 w-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check-circle" class="h-6 w-6"></i>
+                    </div>
+                    <h4 class="font-bold text-green-900 mb-1">Invoice Generated</h4>
+                    <p class="text-xs text-green-700">Ref: <span class="font-mono font-bold">${invoiceId}</span></p>
+                    <p class="text-[10px] text-green-600 mt-2">A summary has been sent to your email.</p>
+                </div>
+
+                <div class="p-2">
+                    <div class="flex justify-between items-center w-full group mb-4">
+                        <span class="font-bold text-gray-800 uppercase tracking-widest text-xs">${opt.name}</span>
+                        <span class="font-bold text-pink-600">${opt.price}</span>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3">
+                        ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-4 bg-pink-600 text-white text-sm font-bold rounded-xl hover:bg-pink-700 transition-all shadow-lg shadow-pink-100 uppercase tracking-widest active:scale-[0.98]">${buyBtnText}</a>` : ''}
+                        
+                        ${opt.qrCode ? `
+                            <div class="p-6 bg-gray-50 rounded-2xl flex flex-col items-center border border-gray-100">
+                                <img src="${getAssetPath(opt.qrCode)}" class="w-48 h-48 object-contain bg-white p-4 rounded-xl shadow-inner mb-4" alt="Payment QR Code">
+                                <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">${qrBtnText}</p>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        if (window.lucide) window.lucide.createIcons();
+    }
+    document.getElementById('pricing-modal-close')?.addEventListener('click', () => toggleModal('pricing-modal', false));
+
+    // Event
+    document.querySelectorAll('.event-details-button').forEach(btn => btn.addEventListener('click', () => toggleModal('event-modal', true)));
+    document.getElementById('modal-understand')?.addEventListener('click', () => toggleModal('event-modal', false));
+
+    // Contact Info Modals
+    const infoModal = document.getElementById('info-modal');
+    const infoClose = document.getElementById('info-modal-close');
+    const infoTitle = document.getElementById('info-modal-title');
+    const infoBody = document.getElementById('info-modal-body');
+
+    infoClose?.addEventListener('click', () => toggleModal('info-modal', false));
+
+    const showInfo = (type) => {
+        const t = translationsData[currentLanguage] || translationsData['en'];
+        infoTitle.textContent = t[`contact.modal.title.${type} `] || t[`contact.info.${type} `];
+
+        if (type === 'gallery') {
+            infoBody.innerHTML = `
+                        < div class="grid grid-cols-2 gap-4 mt-2" >
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Building Entrance" title="Building Entrance">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.entrance']}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1514533212735-5df27d970db0" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Main Door" title="Main Door">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.door']}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1552072805-2a9039d00e57" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Floor Map" title="Floor Map">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.hallway']}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Studio Entrance" title="Studio Entrance">
+                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.studio']}</p>
+                    </div>
+                </div >
+                        <p class="text-sm text-gray-500 mt-4 italic">${t['contact.modal.gallery.note']}</p>
+                    `;
+        } else {
+            infoBody.innerHTML = `< p > ${t[`contact.modal.content.${type}`] || 'Coming soon...'}</p > `;
+        }
+
+        toggleModal('info-modal', true);
+        if (window.lucide) window.lucide.createIcons();
+    };
+
+    // Deep Linking Handling
+    const handleHash = () => {
+        const hash = window.location.hash.replace('#', '');
+        const validHashes = ['parking', 'transport', 'walking', 'gallery'];
+        if (validHashes.includes(hash)) {
+            showInfo(hash);
+        }
+    };
+
+    // Listen for hash changes and initial load
+    window.addEventListener('hashchange', handleHash);
+    handleHash();
+
+    // Prevent default anchor behavior while maintaining hash for deep links
+    document.querySelectorAll('#parking-button, #transport-button, #walking-button, #gallery-button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const type = btn.getAttribute('href').replace('#', '');
+            if (window.location.hash !== btn.getAttribute('href')) {
+                // Let browser handle hash update if it's different
+            } else {
+                // If hash is same, manually trigger showing info
+                showInfo(type);
+            }
+        });
+    });
+
+    window.openEventInvoiceSummary = function(eventId) {
+        const event = (typeof eventsData !== 'undefined' ? eventsData : []).find(e => e.id === eventId);
+        if (!event) return;
+        const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'en';
+        const data = event[lang] || event['en'];
+        
+        const opt = {
+            name: data.title,
+            price: (event.price || 0) + '€',
+            link: event.registerLink,
+            qrCode: event.qrCode || '',
+            desc: data.description
+        };
+        
+        toggleModal('pricing-modal', true);
+        renderInvoiceSummary(opt, { title: data.title }, 'event');
+    };
+}
+
 function toggleModal(id, show) {
     const el = document.getElementById(id);
     const content = el.querySelector('.modal-content');
@@ -1305,324 +1624,3 @@ async function submitCorporateInquiry(e) {
 document.addEventListener('DOMContentLoaded', () => {
     initEventModal();
 });
-
-// --- Globally Exported Modal Logic ---
-    function renderBenefitsAndConditions(data, body) {
-        if (data.benefits && data.benefits.length > 0) {
-            body.innerHTML += `
-                <div class="mt-6">
-                    <h4 class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center">
-                        <i data-lucide="sparkles" class="h-4 w-4 mr-2 text-pink-500"></i>
-                        ${data.benefitsTitle || 'Benefits'}
-                    </h4>
-                    <ul class="space-y-2">
-                        ${data.benefits.map(b => `
-                            <li class="flex items-start">
-                                <i data-lucide="check-circle-2" class="h-4 w-4 mr-2 text-pink-500 flex-shrink-0 mt-0.5"></i>
-                                <span class="text-xs font-medium text-gray-700 leading-relaxed">${b}</span>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-            `;
-        }
-        if (data.conditions && data.conditions.length > 0) {
-            body.innerHTML += `
-                <details class="mt-6 pt-4 border-t border-gray-100 group">
-                    <summary class="text-sm font-bold text-gray-800 uppercase tracking-wide mb-3 flex items-center cursor-pointer select-none outline-none">
-                        <i data-lucide="info" class="h-4 w-4 mr-2 text-gray-400"></i>
-                        ${data.conditionsTitle || 'Terms & Conditions'}
-                        <i data-lucide="chevron-down" class="h-4 w-4 ml-auto text-gray-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <ul class="space-y-2 mt-3">
-                        ${data.conditions.map(c => `
-                            <li class="flex items-start">
-                                <i data-lucide="minus" class="h-3 w-3 mr-2 text-gray-300 flex-shrink-0 mt-1"></i>
-                                <span class="text-[11px] text-gray-500 leading-relaxed">${c}</span>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </details>
-            `;
-        }
-    }
-
-    window.renderInvoiceSummary = async function renderInvoiceSummary(opt, data, group) {
-        const langData = translationsData[currentLanguage] || translationsData['en'];
-        const body = document.getElementById('pricing-modal-body');
-        document.getElementById('pricing-modal-title').textContent = langData['checkout.invoice_summary'] || 'Invoice Summary';
-        
-        body.innerHTML = `
-            <div class="space-y-6">
-                <!-- Back Button -->
-                <button class="flex items-center text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-pink-600 transition-colors" id="checkout-back-btn">
-                    <i data-lucide="arrow-left" class="h-3 w-3 mr-2"></i>
-                    ${langData['checkout.back_button'] || 'Back'}
-                </button>
-
-                <!-- Invoice Table -->
-                <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                    <div class="flex justify-between items-center mb-6">
-                        <img src="${getAssetPath('/assets/branding/logo-goyoga-tallinn-estonia.svg')}" class="h-8 object-contain" alt="Logo">
-                        <div class="text-right">
-                            <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-1">${langData['checkout.invoice_no'] || 'Invoice No.'}</p>
-                            <p class="text-xs font-bold text-gray-800">DRAFT-NEW</p>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center pb-3 border-b border-gray-200">
-                            <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">${opt.name}</span>
-                            <span class="text-xs font-bold text-pink-600">${opt.price}</span>
-                        </div>
-                        <div class="flex justify-between items-center pt-2">
-                            <span class="text-xs font-bold text-gray-800 uppercase tracking-widest">${langData['checkout.total'] || 'Total'}</span>
-                            <span class="text-lg font-bold text-pink-600">${opt.price}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Email Form -->
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 px-1">
-                            ${langData['checkout.email_label'] || 'Email Address'} *
-                        </label>
-                        <input type="email" id="checkout-email" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.email_placeholder'] || 'your@email.com'}" required>
-                    </div>
-
-                    <label class="flex items-start gap-4 cursor-pointer group">
-                        <div class="relative flex items-center mt-0.5">
-                            <input type="checkbox" id="checkout-subscribe" class="peer hidden" checked>
-                            <div class="h-5 w-5 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
-                            <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
-                        </div>
-                        <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
-                            ${langData['checkout.subscribe_label'] || 'Subscribe for GoYoga services, events and seasonal offerings'}
-                        </span>
-                    </label>
-
-                    <label class="flex items-start gap-4 cursor-pointer group mt-3">
-                        <div class="relative flex items-center mt-0.5">
-                            <input type="checkbox" id="checkout-is-org" class="peer hidden" onchange="document.getElementById('checkout-org-wrapper').classList.toggle('hidden', !this.checked)">
-                            <div class="h-5 w-5 border-2 border-gray-300 rounded peer-checked:bg-pink-600 peer-checked:border-pink-600 transition-all"></div>
-                            <i data-lucide="check" class="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-[3px] pointer-events-none transition-opacity"></i>
-                        </div>
-                        <span class="text-sm text-gray-600 leading-relaxed font-medium group-hover:text-gray-800 transition-colors">
-                            ${langData['checkout.org_checkbox'] || 'Purchase is by organisation'}
-                        </span>
-                    </label>
-
-                    <div id="checkout-org-wrapper" class="hidden mt-3 space-y-3 p-4 bg-gray-50 border border-gray-100 rounded-xl">
-                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">${langData['checkout.org_details'] || 'Organisation Details'}</p>
-                        <input type="text" id="checkout-org-country" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" value="Estonia" placeholder="${langData['checkout.org_country'] || 'Country'}">
-                        <input type="text" id="checkout-org-name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_name'] || 'Organisation Name'}">
-                        <input type="text" id="checkout-org-reg" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_reg'] || 'Registration Number'}">
-                        <input type="url" id="checkout-org-web" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-sm focus:border-pink-500 outline-none transition-colors shadow-sm" placeholder="${langData['checkout.org_web'] || 'Website (Optional)'}">
-                    </div>
-
-                    <button class="w-full bg-pink-600 text-white font-bold py-4 rounded-xl hover:bg-pink-700 transition-all active:scale-[0.98] shadow-lg shadow-pink-100 uppercase tracking-widest text-xs mt-4 flex items-center justify-center gap-2" id="checkout-confirm-btn">
-                        <span>${langData['checkout.confirm_button'] || 'Confirm & Pay'}</span>
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
-                    </button>
-                    
-                    <p class="text-center text-xs text-gray-500 font-medium mt-4 mb-2">
-                        ${langData['checkout.vat_note'] || '* Note: Services do not include VAT.'}
-                    </p>
-                </div>
-            </div>
-        `;
-
-        // Listeners for checkout buttons
-        document.getElementById('checkout-back-btn')?.addEventListener('click', () => renderPricingOptions(data, group));
-        document.getElementById('checkout-confirm-btn')?.addEventListener('click', () => handleCheckoutSubmit(opt, data, group));
-
-        if (window.lucide) window.lucide.createIcons();
-    }
-
-    async function handleCheckoutSubmit(opt, data, group) {
-        const emailInput = document.getElementById('checkout-email');
-        const subscribe = document.getElementById('checkout-subscribe').checked;
-        const isOrg = document.getElementById('checkout-is-org')?.checked;
-        const finalOrg = isOrg ? {
-            name: document.getElementById('checkout-org-name')?.value?.trim() || '',
-            country: document.getElementById('checkout-org-country')?.value?.trim() || 'Estonia',
-            reg: document.getElementById('checkout-org-reg')?.value?.trim() || '',
-            web: document.getElementById('checkout-org-web')?.value?.trim() || ''
-        } : null;
-        const langData = translationsData[currentLanguage] || translationsData['en'];
-
-        if (!emailInput.checkValidity() || !emailInput.value) {
-            emailInput.classList.add('border-red-500');
-            return;
-        }
-
-        const confirmBtn = document.getElementById('checkout-confirm-btn');
-        const originalBtnHTML = confirmBtn.innerHTML;
-        confirmBtn.disabled = true;
-        confirmBtn.innerHTML = `<i data-lucide="loader-2" class="h-4 w-4 animate-spin"></i>`;
-        if (window.lucide) window.lucide.createIcons();
-
-        // Generate ID
-        const timestamp = Date.now();
-        const invoiceId = `GY-${new Date().toISOString().slice(0, 10).replace(/-/g, '')}-${timestamp.toString().slice(-4)}`;
-
-        try {
-            // Call API
-            const response = await fetch('/api/invoice', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email: emailInput.value,
-                    subscribe,
-                    product: opt.name,
-                    price: opt.price,
-                    desc: opt.desc,
-                    organisation: finalOrg,
-                    invoiceId,
-                    language: currentLanguage
-                })
-            });
-
-            // Transition to Success Step
-            renderPaymentStep(opt, invoiceId);
-        } catch (error) {
-            console.error('Invoice error:', error);
-            // Even if email fails, we should let them pay, but maybe show a warning
-            renderPaymentStep(opt, invoiceId);
-        }
-    }
-
-    function renderPaymentStep(opt, invoiceId) {
-        const langData = translationsData[currentLanguage] || translationsData['en'];
-        const body = document.getElementById('pricing-modal-body');
-        
-        const buyBtnText = langData['pricing.buy'] || 'Buy Now';
-        const qrBtnText = langData['pricing.qr_btn'] || 'Scan QR to Pay';
-
-        body.innerHTML = `
-            <div class="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div class="bg-green-50 rounded-xl p-6 border border-green-100 text-center">
-                    <div class="h-12 w-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="check-circle" class="h-6 w-6"></i>
-                    </div>
-                    <h4 class="font-bold text-green-900 mb-1">Invoice Generated</h4>
-                    <p class="text-xs text-green-700">Ref: <span class="font-mono font-bold">${invoiceId}</span></p>
-                    <p class="text-[10px] text-green-600 mt-2">A summary has been sent to your email.</p>
-                </div>
-
-                <div class="p-2">
-                    <div class="flex justify-between items-center w-full group mb-4">
-                        <span class="font-bold text-gray-800 uppercase tracking-widest text-xs">${opt.name}</span>
-                        <span class="font-bold text-pink-600">${opt.price}</span>
-                    </div>
-                    
-                    <div class="flex flex-col gap-3">
-                        ${opt.link ? `<a href="${opt.link}" target="_blank" class="w-full inline-block text-center px-4 py-4 bg-pink-600 text-white text-sm font-bold rounded-xl hover:bg-pink-700 transition-all shadow-lg shadow-pink-100 uppercase tracking-widest active:scale-[0.98]">${buyBtnText}</a>` : ''}
-                        
-                        ${opt.qrCode ? `
-                            <div class="p-6 bg-gray-50 rounded-2xl flex flex-col items-center border border-gray-100">
-                                <img src="${getAssetPath(opt.qrCode)}" class="w-48 h-48 object-contain bg-white p-4 rounded-xl shadow-inner mb-4" alt="Payment QR Code">
-                                <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">${qrBtnText}</p>
-                            </div>
-                        ` : ''}
-                    </div>
-                </div>
-            </div>
-        `;
-
-        if (window.lucide) window.lucide.createIcons();
-    }
-    document.getElementById('pricing-modal-close')?.addEventListener('click', () => toggleModal('pricing-modal', false));
-
-    // Event
-    document.querySelectorAll('.event-details-button').forEach(btn => btn.addEventListener('click', () => toggleModal('event-modal', true)));
-    document.getElementById('modal-understand')?.addEventListener('click', () => toggleModal('event-modal', false));
-
-    // Contact Info Modals
-    const infoModal = document.getElementById('info-modal');
-    const infoClose = document.getElementById('info-modal-close');
-    const infoTitle = document.getElementById('info-modal-title');
-    const infoBody = document.getElementById('info-modal-body');
-
-    infoClose?.addEventListener('click', () => toggleModal('info-modal', false));
-
-    const showInfo = (type) => {
-        const t = translationsData[currentLanguage] || translationsData['en'];
-        infoTitle.textContent = t[`contact.modal.title.${type} `] || t[`contact.info.${type} `];
-
-        if (type === 'gallery') {
-            infoBody.innerHTML = `
-                        < div class="grid grid-cols-2 gap-4 mt-2" >
-                    <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Building Entrance" title="Building Entrance">
-                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.entrance']}</p>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1514533212735-5df27d970db0" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Main Door" title="Main Door">
-                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.door']}</p>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1552072805-2a9039d00e57" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Floor Map" title="Floor Map">
-                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.hallway']}</p>
-                    </div>
-                    <div class="space-y-2">
-                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5" class="rounded-lg object-cover h-32 w-full hover:opacity-90 transition-opacity cursor-zoom-in" alt="Studio Entrance" title="Studio Entrance">
-                        <p class="text-[10px] text-center uppercase tracking-widest text-gray-400">${t['contact.modal.gallery.studio']}</p>
-                    </div>
-                </div >
-                        <p class="text-sm text-gray-500 mt-4 italic">${t['contact.modal.gallery.note']}</p>
-                    `;
-        } else {
-            infoBody.innerHTML = `< p > ${t[`contact.modal.content.${type}`] || 'Coming soon...'}</p > `;
-        }
-
-        toggleModal('info-modal', true);
-        if (window.lucide) window.lucide.createIcons();
-    };
-
-    // Deep Linking Handling
-    const handleHash = () => {
-        const hash = window.location.hash.replace('#', '');
-        const validHashes = ['parking', 'transport', 'walking', 'gallery'];
-        if (validHashes.includes(hash)) {
-            showInfo(hash);
-        }
-    };
-
-    // Listen for hash changes and initial load
-    window.addEventListener('hashchange', handleHash);
-    handleHash();
-
-    // Prevent default anchor behavior while maintaining hash for deep links
-    document.querySelectorAll('#parking-button, #transport-button, #walking-button, #gallery-button').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const type = btn.getAttribute('href').replace('#', '');
-            if (window.location.hash !== btn.getAttribute('href')) {
-                // Let browser handle hash update if it's different
-            } else {
-                // If hash is same, manually trigger showing info
-                showInfo(type);
-            }
-        });
-    });
-
-    window.openEventInvoiceSummary = function(eventId) {
-        const event = (typeof eventsData !== 'undefined' ? eventsData : []).find(e => e.id === eventId);
-        if (!event) return;
-        const lang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'en';
-        const data = event[lang] || event['en'];
-        
-        const opt = {
-            name: data.title,
-            price: (event.price || 0) + '€',
-            link: event.registerLink,
-            qrCode: event.qrCode || '',
-            desc: data.description
-        };
-        
-        toggleModal('pricing-modal', true);
-        renderInvoiceSummary(opt, { title: data.title }, 'event');
-    };
-}
-
