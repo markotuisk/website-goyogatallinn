@@ -339,10 +339,17 @@
                                 </div>
                                 <div>
                                     <div class="font-medium text-stone-900">${article.author}</div>
-                                    <div class="text-xs text-stone-400 italic">
-                                        ${article.date.split('-').reverse().join('.')} • ${article.readTime[currentLang] || article.readTime['en']}
+                                    <div class="text-xs text-stone-400 italic flex items-center gap-2">
+                                        <span>${article.date.split('-').reverse().join('.')} • ${article.readTime[currentLang] || article.readTime['en']}</span>
+                                        <span class="text-stone-300">|</span>
+                                        <span class="opacity-70">
+                                            ${trans.isOriginal 
+                                                ? (currentLang === 'et' ? '(Originaaltekst)' : '(Original Author Text)') 
+                                                : (currentLang === 'et' ? '(Tõlge)' : '(Translation)')
+                                            }
+                                        </span>
                                         ${article.photographer ? `
-                                            <span class="mx-2">|</span>
+                                            <span class="text-stone-300">|</span>
                                             <span data-i18n="journal.photo">Photo:</span> 
                                             <a href="${article.photographer.instagram}" target="_blank" class="hover:text-pink-600 transition-colors underline decoration-stone-200 underline-offset-4">${article.photographer.name}</a>
                                         ` : ''}

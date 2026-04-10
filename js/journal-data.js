@@ -22,6 +22,7 @@ const journalData = {
             readTime: { en: '6 min read', et: '6 min lugemist', fi: '6 min lukuaika', ru: '6 мин чтения' },
             translations: {
                 en: {
+                    isOriginal: true,
                     title: 'Ashtanga yoga is not for everyone?',
                     excerpt: 'Ashtanga yoga is the most wonderful and transformative yoga practise, but it is not for everyone. Discover why discipline is the path to true strength.',
                     content: `
@@ -29,7 +30,7 @@ const journalData = {
                         
                         <blockquote class="mb-12">"Anyone can practise. Except lazy people; lazy people can’t practise ashtanga yoga." - <a href="https://en.wikipedia.org/wiki/K._Pattabhi_Jois" target="_blank" class="text-pink-600 hover:underline">Sri K Pattabhi Jois</a></blockquote>
                         
-                        <p class="mb-12">Whilst this quote has a lot of simple truth in it, many people nowadays face many other challenges that keep them from having a daily yoga practice. At our <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">ashtanga yoga school</a></strong> in <strong>Tallinn</strong>, we see students navigating these challenges every day to <strong>learn</strong> the <strong><a href="/class.html?id=ashtanga" class="text-pink-600 hover:underline">traditional ashtanga yoga</a></strong> method.</p>
+                        <p class="mb-12">Whilst this quote has a lot of simple truth in it, many people nowadays face many other challenges that keep them from having a daily yoga practice. At our <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">ashtanga yoga school</a></strong> in <strong>Tallinn</strong>, we see students navigating these challenges every day to <strong>learn</strong> the <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">traditional ashtanga yoga</a></strong> method.</p>
                         
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Ashtanga is demanding</h3>
@@ -48,45 +49,71 @@ const journalData = {
 
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">It's a long-term game</h3>
-                            <p>Ashtanga is a yoga <strong>practice</strong> for life. It most definitely is not a seasonal quick fix. Although at the start of their ashtanga journey most people progress and experience positive changes in their lives relatively quickly, this transformation slows down the longer you practise. For <strong>beginners</strong>, starting the <strong><a href="/class.html?id=ashtanga" class="text-pink-600 hover:underline">primary series</a></strong> can feel like a steep climb, but this <strong>complete</strong> system is designed for steady progress.</p>
+                            <p>Ashtanga is a yoga <strong>practice</strong> for life. It most definitely is not a seasonal quick fix. Although at the start of their ashtanga journey most people progress and experience positive changes in their lives relatively quickly, this transformation slows down the longer you practise. For <strong>beginners</strong>, starting the <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">primary series</a></strong> can feel like a steep climb, but this <strong>complete</strong> system is designed for steady progress.</p>
                             <p>The beauty of this practise is that you show up daily (on your mat) and do what you can do. And that’s more than enough for that day. On challenging days, I always think of a saying by a fellow ashtanga teacher on the other side of the world “Today’s practise is a preparation for tomorrow.” Having practised daily for over 16 years, I 100% vouch for this.</p>
                         </div>
 
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">So why do people keep practising?</h3>
                             <p>Ashtanga yoga in fact is for everyone. The feeling you get through ashtanga yoga practise cannot be described. It needs to be experienced. Even if you try ashtanga once, the feeling after just the one practise is a state of bliss that we are all always subconsciously searching for as human beings. It’s the sense of being cleansed and purified in your body and cleared in your mind. With ashtanga you become light and full of energy.</p>
-                            <p>The systemised structure and the relative strictness of <strong><a href="/class.html?id=ashtanga" class="text-pink-600 hover:underline">ashtanga yoga</a></strong> is what makes it beautiful and a life-changing practise. With regular practise, ashtanga yoga becomes a steady thing to hold on to through difficult and challenging times. It also keeps you grounded when things are going incredibly well. The <strong>traditional</strong> teaching method is what protects the integrity and value of ashtanga yoga, keeps it niche, and makes it so transformative.</p>
+                            <p>The systemised structure and the relative strictness of <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">ashtanga yoga</a></strong> is what makes it beautiful and a life-changing practise. With regular practise, ashtanga yoga becomes a steady thing to hold on to through difficult and challenging times. It also keeps you grounded when things are going incredibly well. The <strong>traditional</strong> teaching method is what protects the integrity and value of ashtanga yoga, keeps it niche, and makes it so transformative.</p>
                         </div>
 
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">How to (re)start with ashtanga yoga?</h3>
                             <p>Ashtanga starts with the physical yoga practise and foremost with turning up. Find yourself a good <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">yoga school</a></strong> and a good teacher. Create a daily or weekly routine that works for you and doesn’t stress you. Create a space at home where you can practise with no interference. Even if it’s for 10 minutes a day. Use simple incentives to make the practise enjoyable, such as a good yoga mat, lovely eye pillow for savasana etc.</p>
-                            <p>There are and always will be people who quit their daily yoga practise for whatever reason. But there are even more people who continue and make ashtanga yoga their lifetime practise. I am proud to be one of those latter people. Join us at our <strong><a href="/class.html?id=ashtanga" class="text-pink-600 hover:underline">traditional ashtanga yoga school</a></strong> to begin your own <strong>primary series</strong> journey.</p>
+                            <p>There are and always will be people who quit their daily yoga practise for whatever reason. But there are even more people who continue and make ashtanga yoga their lifetime practise. I am proud to be one of those latter people. Join us at our <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">traditional ashtanga yoga school</a></strong> to begin your own <strong>primary series</strong> journey.</p>
                         </div>
                     `
                 },
                 et: {
+                    isOriginal: true,
                     title: 'Ashtanga jooga ei sobi kõigile?',
                     excerpt: 'Ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, kuid see ei sobi kõigi jaoks. Avasta, miks regulaarne praktika on elumuutev.',
                     content: `
                         <p class="mb-8">Pole just kõige targem mõte alustada uut hooaega ashtanga jooga mahategemisega. Sellest hoolimata ütlen veelkord, et kuigi ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, ei sobi ta kõigi jaoks.</p>
                         
-                        <blockquote class="mb-12">"Joogaga saavad tegeleda kõik. Välja arvatud laisad inimesed." - Sri K Pattabhi Jois</blockquote>
+                        <blockquote class="mb-12">"Joogaga saavad tegeleda kõik. Välja arvatud laisad inimesed." - <strong>Sri K Pattabhi Jois</strong></blockquote>
                         
-                        <p class="mb-12">Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase joogapraktika tekkimist. Meie <strong>ashtanga jooga koolis Tallinnas</strong> aitame õpilastel nendest väljakutsetest üle saada, et õppida selgeks <strong>traditsiooniline ashtanga jooga</strong>.</p>
+                        <p class="mb-12">Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase <strong>joogapraktika</strong> tekkimist. Meie <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">ashtanga jooga koolis</a></strong> <strong>Tallinnas</strong> aitame õpilastel nendest väljakutsetest üle saada, et õppida selgeks <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">traditsiooniline ashtanga jooga</a></strong>.</p>
                         
                         <div class="space-y-8 mb-16">
-                            <h3 class="text-2xl font-serif mt-12 mb-6">Ashtanga on nõudlik</h3>
-                            <p>See ei ole kunagi olnud kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges. <strong>Algajatele</strong> võib <strong>esimese seeria</strong> (primary series) omandamine tunduda raske, kuid see <strong>täielik</strong> süsteem on loodud järjepidevaks arenguks.</p>
+                            <h3 class="text-2xl font-serif mt-12 mb-6">Miks inimesed lõpetavad ashtanga praktiseerimise?</h3>
+                            
+                            <h4 class="text-xl font-medium mb-4">Ashtanga on nõudlik</h4>
+                            <p>See ei ole kunagi olnud kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges ja igas mõttes. Varajased hommikud. Igapäevane distsipliin. Matile kohale tulemine. See lisaks kõigele muule, mida Sa iga päev asjatama pead. Regulaarne ashtanga praktika on üks suurimaid ja raskemaid teste, sest see ei lõpe kunagi ja kestab terve elu.</p>
                         </div>
                         
                         <div class="space-y-8 mb-16">
+                            <h4 class="text-xl font-medium mb-4">Ashtanga on distsipliin</h4>
+                            <p>Olgem ausad, enamus inimestest valivad pigem mugavuse kui igahommikuse varajase joogapraktika, mis paneb Sind proovile füüsiliselt, vaimselt ja emotsionaalselt. Ashtangas võistled ainult iseendaga ja enese eest ei põgene. Ainuke viis tasakaal saavutada, on kõikidest nendest väljakutsetest läbi minna. Olulisi muutusi hakkad oma elus märkama siis, kui praktiseerid ashtangat vähemalt 4x nädalas. Ashtangat tuleb võtta nagu igapäevast puhastusrutiini, sarnaselt hammaste pesule vms.</p>
+                        </div>
+
+                        <div class="space-y-8 mb-16">
+                            <h4 class="text-xl font-medium mb-4">Kui pea karjub „ei taha“!</h4>
+                            <p>Ja meie pea karjub meie sees rohkem kui me tahame. On päevi, kus sa üldse ei taha praktiseerida. On päevi, kui kehas on nii vastik tunne, et paljas mõte joogamatist hakkab vastu. On praktikaid, kus aju ketrab omasoodu nii, et Sa ei pane praktikat tähelegi. On päevi, kus ego, närvilisus ja väsimus võtavad üle. Nendel päevadel tuletan endale meelde, ashtanga on lihtsalt väga hea vahend nn checkin-iks, et kuidas Sa end sees tunned. Ashtangas on olemas absoluutselt kõik vahendid, et need väljakutsed rahulikult ära korraldada.</p>
+                        </div>
+
+                        <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Ashtanga on pikk mäng</h3>
-                            <p>See joogapraktika on terveks eluks. Kindlasti ei ole ashtanga hooajaline kiire lahendus. Tänane praktika valmistab Sind ette homseks.</p>
+                            <p>See joogapraktika on terveks eluks. Kindlasti ei ole ashtanga hooajaline kiire lahendus. Kuigi oma ashtanga teekonna alguses enamus joogatajaid progresseeruvad kiirelt, kauaaegne praktika aeglustab need muutused. Ashtanga võlu on (matile) kohale tulemine ja teed nii palju kui Sa teed ning täna sellest piisab. Rasketel päevadel mõtlen alati ühe kaasõpetaja ütlusele: „Tänane praktika valmistab Sind ette homseks.“ Oma 16-aastase praktikakogemuse juures olen sellega 100% nõus.</p>
+                        </div>
+
+                        <div class="space-y-8 mb-16">
+                            <h3 class="text-2xl font-serif mt-12 mb-6">Miks inimesed praktiseerivad ashtangat?</h3>
+                            <p>Ashtanga jooga sobib tegelikult kõigile. Seda tunnet, mida ashtanga jooga praktiseerimine annab, ei saa sõnades edasi anda. Seda tuleb ise lihtsalt proovida. Isegi kui teed vaid ühe ashtanga tunni, see tunne pärast on nagu keha- ja peasisene suurpuhastus, ehk väike mini-õndsus, mida inimestena alateadlikult pidevalt otsivad. <strong>Ashtanga</strong> toob kehasse kerguse ja palju energiat.</p>
+                            <p>Ashtanga jooga süsteemne struktuur ja suhteline rangus teebki sellest elumuuteva praktika. Tehes ashtangat regulaarselt, muutub see Sinu elus konstantseks muutujaks, millest rasketel päevadel kinni hoida. Headel aegadel vastupidi hoiab ashtanga Su jalad nn maas. Ashtangas kasutatakse erilisi ja traditsioonilisi õpetamismeetodeid, mis hoiavad selle joogastiili väärtusliku ja ühtsena, tagades ashtanga elumuutvad omadused.</p>
+                        </div>
+
+                        <div class="space-y-8 mb-16">
+                            <h3 class="text-2xl font-serif mt-12 mb-6">Kuidas ashtangaga (taas)alustada?</h3>
+                            <p>Ashtanga algab kohale tulemisest ja füüsilisest joogapraktikast. Leia enda jaoks sobiv <strong>joogakool</strong> ja hea õpetaja. Loo enda jaoks rutiin, mis Su igapäevaellu ilma suurema stressita sisse mahub. Tee enda jaoks kodus väike nurgake, kus saad segamatult praktiseerida. Kasvõi 10 minutit päevas. Muuda praktika lihtsate vahenditega enda jaoks mõnusaks, nagu näiteks hea joogamatt, lõhnav silmapadi jne.</p>
+                            <p>Alati leidub inimesi, kes ühel või teisel põhjusel lõpetavad joogaga tegelemise. Samamoodi nagu leidub inimesi, kelle jaoks muutub ashtanga elukestvaks praktikaks. Ma olen ääretult tänulik, et kuulun viimaste hulka. Liitu meie <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">ashtanga jooga kooliga</a></strong>, et alustada oma <strong>esimese seeriaga</strong>.</p>
                         </div>
                     `
                 },
                 fi: {
+                    isOriginal: false,
                     title: 'Ashtangajooga ei sovi kaikille?',
                     excerpt: 'Ashtangajooga on vaikuttavinta ja muuttavinta joogaa, mutta se haastaa jokaisen solusi. Selvitä, miksi kurinalaisuus on avain sisäiseen voimaan.',
                     content: `
@@ -94,6 +121,7 @@ const journalData = {
                     `
                 },
                 ru: {
+                    isOriginal: false,
                     title: 'Аштанга-йога не для всех?',
                     excerpt: 'Аштанга-йога — самая чудесная и трансформирующая практика, но она бросает вызов каждой клетке вашего тела. Узнайте, почему дисциплина — это путь к истинной силе.',
                     content: `
@@ -112,6 +140,7 @@ const journalData = {
             readTime: { en: '5 min read', et: '5 min lugemist', fi: '5 min lukuaika', ru: '5 мин чтения' },
             translations: {
                 en: {
+                    isOriginal: true,
                     title: 'Why Ashtanga? The Power of Discipline',
                     excerpt: 'Discover why the traditional Mysore method is the ultimate mental and physical anchor for modern life.',
                     content: `
@@ -123,6 +152,7 @@ const journalData = {
                     `
                 },
                 et: {
+                    isOriginal: true,
                     title: 'Miks Ashtanga? Distsipliini vägi',
                     excerpt: 'Avasta, miks traditsiooniline Mysore-meetod on moodsa elu parim vaimne ja füüsiline ankur.',
                     content: `
@@ -133,6 +163,7 @@ const journalData = {
                     `
                 },
                 fi: {
+                    isOriginal: false,
                     title: 'Miksi Ashtanga? Kurinalaisuuden voima',
                     excerpt: 'Tutustu, miksi perinteinen Mysore-menetelmä on nykyajan elämän paras henkinen ja fyysinen ankkuri.',
                     content: `
@@ -142,6 +173,7 @@ const journalData = {
                     `
                 },
                 ru: {
+                    isOriginal: false,
                     title: 'Почему Аштанга? Сила дисциплины',
                     excerpt: 'Узнайте, почему традиционный метод Майсор является лучшим ментальным и физическим якорем в современной жизни.',
                     content: `
@@ -162,6 +194,7 @@ const journalData = {
             readTime: { en: '4 min read', et: '4 min lugemist', fi: '4 min lukuaika', ru: '4 мин чтения' },
             translations: {
                 en: {
+                    isOriginal: true,
                     title: 'The Science of Sound: How Gongs Heal',
                     excerpt: 'Explore how high-frequency vibrations reset your nervous system and clear mental blockages.',
                     content: `
@@ -170,6 +203,7 @@ const journalData = {
                     `
                 },
                 et: {
+                    isOriginal: true,
                     title: 'Heli teadus: Kuidas helid tervendavad',
                     excerpt: 'Uuri, kuidas kõrgsageduslikud vibratsioonid lähtestavad sinu närvisüsteemi ja puhastavad vaimseid blokeeringuid.',
                     content: `
@@ -177,6 +211,7 @@ const journalData = {
                     `
                 },
                 fi: {
+                    isOriginal: false,
                     title: 'Äänihoidon tiede: Miten gongit parantavat',
                     excerpt: 'Tutustu siihen, miten korkeataajuuksiset värähtelyt nollaavat hermostosi ja poistavat vaimisia tukoksia.',
                     content: `
@@ -184,6 +219,7 @@ const journalData = {
                     `
                 },
                 ru: {
+                    isOriginal: false,
                     title: 'Наука звука: Как гонги исцеляют',
                     excerpt: 'Узнайте, как высокочастотные вибрации перезагружают вашу нервную систему и очищают ментальные блоки.',
                     content: `

@@ -24,13 +24,21 @@ Add a new object to the `articles` array. Use the following schema:
         en: 'X min read', et: 'X min lugemist', fi: 'X min lukuaika', ru: 'X мин чтения' 
     },
     translations: {
-        en: { title: '', excerpt: '', content: '' },
-        et: { title: '', excerpt: '', content: '' },
-        fi: { title: '', excerpt: '', content: '' },
-        ru: { title: '', excerpt: '', content: '' }
+        en: { 
+            isOriginal: true, // TRUE for text written by the author, FALSE for translations
+            title: '', 
+            excerpt: '', 
+            content: '' 
+        },
+        et: { isOriginal: true, title: '', excerpt: '', content: '' },
+        fi: { isOriginal: false, title: '', excerpt: '', content: '' },
+        ru: { isOriginal: false, title: '', excerpt: '', content: '' }
     }
 }
 ```
+
+> [!NOTE]
+> Setting `isOriginal: true` will automatically display "(Original Author Text)" or "(Originaaltekst)" next to the author's name in the UI.
 
 ---
 
