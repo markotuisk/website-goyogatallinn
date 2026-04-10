@@ -54,7 +54,7 @@ function setLanguage(lang) {
     const searchStr = window.location.search || '';
     const hashStr = window.location.hash || '';
 
-    // Special handling for localized journal hubs to prevent kick-back to root
+    // Special handling for localized journal hubs to preserve article context (ID)
     const journalPaths = {
         'en': '/journal/',
         'et': '/et/ajakiri/',
@@ -62,11 +62,10 @@ function setLanguage(lang) {
         'ru': '/ru/zhurnal/'
     };
     
-    for (const [l, p] of Object.entries(journalPaths)) {
-        if (path.includes(p)) {
-            window.location.href = `${journalPaths[lang]}${searchStr}${hashStr}`;
-            return;
-        }
+    const currentJournalEntry = Object.entries(journalPaths).find(([l, p]) => path.includes(p));
+    if (currentJournalEntry) {
+        window.location.href = `${journalPaths[lang]}${searchStr}${hashStr}`;
+        return;
     }
 
     // Extract current filename and normalize Cloudflare extensionless paths

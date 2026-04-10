@@ -61,6 +61,9 @@ const translationsData = {
         "checkout.org_web": "Website (Optional)",
         "checkout.vat_note": "* Note: Services do not include VAT.",
         "journal.share": "Share",
+        "journal.back": "Back to Journal",
+        "journal.photo": "Photo:",
+        "journal.read_time": "min read",
         "journal.text_by": "Text:",
         "journal.photo_by": "Photo:",
         "journal.publisher": "The Goyoga Tallinn Journal",
@@ -206,6 +209,9 @@ const translationsData = {
         "checkout.org_web": "Koduleht (valikuline)",
         "checkout.vat_note": "* Märkus: Teenustele ei lisandu käibemaksu.",
         "journal.share": "Jaga",
+        "journal.back": "Tagasi",
+        "journal.photo": "Foto:",
+        "journal.read_time": "min lugemist",
         "journal.text_by": "Tekst:",
         "journal.photo_by": "Foto:",
         "journal.publisher": "Goyoga Tallinna Ajakiri",
@@ -419,7 +425,7 @@ const translationsData = {
         "corporate.package.wellness_day.description": "Tiimin hyvinvointipäivä. Räätälöity ohjelma tiimillesi autenttisessa shalassamme keskustassa tai toimistollanne. Voi sisältää harjoituksia, terveellisiä välipaloja ja työpajoja.",
         "corporate.cta.title": "Investoi tiimisi hyvinvointiin",
         "corporate.cta.button": "Pyydä tarjous",
-        "card.email": "Sähköposti", "card.call": "Soita", "card.social": "Social", "card.save_contact": "Tallenna yhteystiedot", "card.class_schedule": "Aikataulu", "card.view_biography": "Koko elämäkerta", "card.share_qr": "Jaa QR-koodi", "card.scan_to_save": "Skannaa tallentaaksesi", "card.qr_instructions": "Osu kameralla näyttöön avataksesi tämän digitaalisen käyntikortin välittömästi puhelimessasi.", "card.close": "Sulje"
+        "card.email": "Sähköposti", "card.call": "Soita", "card.social": "Social", "card.save_contact": "Tallenna yhteystiedot", "card.class_schedule": "Aikataulu", "card.view_biography": "Koko elämäkerta", "card.share_qr": "Jaa QR-koodi", "card.scan_to_save": "Skannaa tallentaaksesi", "card.qr_instructions": "Osu kameralla näyttöön avataksesi tämän digitaalisen käyntikortin välittömästi puhelimessasi.", "card.close": "Sulje", "journal.share": "Jaa", "journal.back": "Takaisin", "journal.photo": "Kuva:", "journal.read_time": "min lukuaika", "journal.text_by": "Teksti:", "journal.photo_by": "Kuva:"
     },
     ru: {
         "nav.home": "Главная", "nav.about": "О нас", "nav.classes": "Занятия", "nav.studio": "Студия", "nav.schedule": "Расписание", "nav.pricing": "Цены", "nav.teachers": "Учителя", "nav.events": "События", "nav.community": "Сообщество", "nav.corporate": "Корпоративным", "nav.journal": "Журнал", "nav.contact": "Контакты", "nav.language": "Язык",
@@ -558,7 +564,7 @@ const translationsData = {
         "corporate.package.wellness_day.description": "День велнеса для команды. Индивидуальная программа для вашей команды в нашей аутентичной шале в центре города или в вашем офисе. Может включать практики, полезные перекусы и мастер-классы.",
         "corporate.cta.title": "Инвестируйте в благополучие вашей команды",
         "corporate.cta.button": "Запросить предложение",
-        "card.email": "Email", "card.call": "Позвонить", "card.social": "Соцсети", "card.save_contact": "Сохранить контакт", "card.class_schedule": "Расписание занятий", "card.view_biography": "Полная биография", "card.share_qr": "Поделиться QR-кодом", "card.scan_to_save": "Сканируйте, чтобы сохранить", "card.qr_instructions": "Направьте камеру на экран, чтобы мгновенно открыть эту цифровую визитку на своем телефоне.", "card.close": "Закрыть"
+        "card.email": "Email", "card.call": "Позвонить", "card.social": "Соцсети", "card.save_contact": "Сохранить контакт", "card.class_schedule": "Расписание занятий", "card.view_biography": "Полная биография", "card.share_qr": "Поделиться QR-кодом", "card.scan_to_save": "Сканируйте, чтобы сохранить", "card.qr_instructions": "Направьте камеру на экран, чтобы мгновенно открыть эту цифровую визитку на своем телефоне.", "card.close": "Закрыть", "journal.share": "Поделиться", "journal.back": "Назад", "journal.photo": "Фото:", "journal.read_time": "мин чтения", "journal.text_by": "Текст:", "journal.photo_by": "Фото:", "journal.publisher": "Журнал Goyoga Tallinn"
 
     }
 
