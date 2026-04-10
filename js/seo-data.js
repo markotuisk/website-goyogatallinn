@@ -13,7 +13,8 @@ const seoData = {
             "teacher.html": "teacher.html",
             "corporate.html": "corporate.html",
             "card.html": "card.html",
-            "compare.html": "compare.html"
+            "compare.html": "compare.html",
+            "shop.html": "shop.html"
         },
         et: {
             "index.html": "index.html",
@@ -26,7 +27,8 @@ const seoData = {
             "teacher.html": "opetajad.html",
             "corporate.html": "ettevotetele.html",
             "card.html": "kaart.html",
-            "compare.html": "vordle-pakette.html"
+            "compare.html": "vordle-pakette.html",
+            "shop.html": "shop.html"
         },
         fi: {
             "index.html": "index.html",
@@ -39,7 +41,8 @@ const seoData = {
             "teacher.html": "opettajat.html",
             "corporate.html": "yrityksille.html",
             "card.html": "kortti.html",
-            "compare.html": "vertaa-paketteja.html"
+            "compare.html": "vertaa-paketteja.html",
+            "shop.html": "shop.html"
         },
         ru: {
             "index.html": "index.html",
@@ -52,7 +55,8 @@ const seoData = {
             "teacher.html": "uchitelya.html",
             "corporate.html": "korporativnym.html",
             "card.html": "karta.html",
-            "compare.html": "sravnit-pakety.html"
+            "compare.html": "sravnit-pakety.html",
+            "shop.html": "shop.html"
         }
     },
 
@@ -217,6 +221,28 @@ const seoData = {
                 description: "Откройте для себя предложения с ограниченным сроком действия, мастер-классы и эксклюзивные сезонные скидки на goyoga.ee. Традиционная Аштанга-йога в центре Таллина.",
                 keywords: "предложения йога Таллин, сезонные скидки йога, скидки на мастер-классы, Goyoga Tallinn эксклюзив, Аштанга скидки"
             },
+        },
+        shop: {
+            en: {
+                title: "Goyoga Shop | Digital Gift Cards & Wellness Products",
+                description: "Purchase premium digital gift cards and wellness products from Goyoga Tallinn. The perfect gift for yoga practitioners.",
+                keywords: "yoga gift card Tallinn, yoga shop, wellness products, Goyoga merchandise, Ashtanga gifts"
+            },
+            et: {
+                title: "Goyoga Pood | Kinkekaardid ja Heaolutooted",
+                description: "Osta preemium digitaalseid kinkekaarte ja heaolu tooteid Goyoga Tallinnast. Ideaalne kingitus joogapraktikule.",
+                keywords: "jooga kinkekaart Tallinn, joogapood, heaolutooted, Goyoga meened, Ashtanga kingitus"
+            },
+            fi: {
+                title: "Goyoga Kauppa | Digitaaliset Lahjakortit ja Hyvinvointituotteet",
+                description: "Osta korkealaatuisia digitaalisia lahjakortteja ja hyvinvointituotteita Goyoga Tallinnasta. Täydellinen lahja joogaajalle.",
+                keywords: "jooga lahjakortti Tallinna, joogakauppa, hyvinvointituotteet, Goyoga tuotteet, Ashtanga lahja"
+            },
+            ru: {
+                title: "Магазин Goyoga | Подарочные Карты и Товары для Велнеса",
+                description: "Приобретайте премиальные цифровые подарочные карты и товары для велнеса в Goyoga Tallinn. Идеальный подарок для йога-практиков.",
+                keywords: "подарочная карта йога Таллин, магазин йоги, товары для велнеса, мерч Goyoga, подарок Аштанга"
+            }
         },
         teachers: {
             en: {

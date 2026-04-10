@@ -5,8 +5,8 @@
 <link href="https://www.goyoga.ee/fi/shop.html" rel="canonical"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title id="seo-title">Shop | Goyoga Tallinn</title>
-<meta content="Goyoga Tallinn Shop. High-quality yoga mats, accessories, and wellness products coming soon." id="seo-description" name="description"/>
+<title id="seo-title">Goyoga Kauppa | Digitaaliset Lahjakortit ja Hyvinvointituotteet</title>
+<meta content="Osta korkealaatuisia digitaalisia lahjakortteja ja hyvinvointituotteita Goyoga Tallinnasta. Täydellinen lahja joogaajalle." id="seo-description" name="description"/>
 <meta content="yoga shop, ashtanga mats, goyoga store" id="seo-keywords" name="keywords"/>
 <meta content="goyoga.ee" name="author">
 <!-- Open Graph -->
@@ -17,14 +17,14 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;subset=latin,cyrillic&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
 <script src="https://unpkg.com/lucide@latest"></script>
-<link href="/css/style.css?v=1775784836" rel="stylesheet"/>
+<link href="/css/style.css?v=1775785644" rel="stylesheet"/>
 <!-- Favicons -->
 <link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-96x96.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/branding/logo-goyoga-tallinn-estonia-512x512.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="site.webmanifest" rel="manifest"/>
 <script src="/js/data.js?v=1775707269"></script>
-<script src="/js/seo-data.js?v=1775784836"></script>
+<script src="/js/seo-data.js?v=1775785644"></script>
 <!-- Google Analytics 4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0X5B7NG6N"></script>
 <script>
@@ -73,40 +73,120 @@
 </div>
 </div>
 </header>
-<main class="flex-grow flex items-center pt-32 pb-20 mt-10">
-<section class="container-custom text-center mx-auto">
-<div class="max-w-2xl mx-auto flex flex-col items-center justify-center p-8 bg-white border border-pink-100 rounded-3xl shadow-xl shadow-pink-50/50 relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-transparent pointer-events-none"></div>
-<div class="relative z-10">
-<div class="h-20 w-20 bg-pink-50 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
-<i class="h-10 w-10" data-lucide="shopping-bag"></i>
+<main class="flex-grow pt-24 pb-20">
+<!-- Shop Hero -->
+<section class="relative h-[35vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-stone-900 text-stone-100 mb-16">
+<div class="absolute inset-0 opacity-30">
+<img alt="Boutique Shop" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"/>
+<div class="absolute inset-0 bg-gradient-to-t from-stone-900 to-transparent"></div>
 </div>
-<span class="inline-block px-4 py-1.5 rounded-full bg-stone-100 text-stone-600 text-xs font-bold uppercase tracking-widest mb-6" data-i18n="shop.badge">Aukeaa Pian</span>
-<h1 class="text-4xl md:text-5xl font-serif font-medium mb-6 text-gray-900" data-i18n="shop.title">Goyoga Kauppa</h1>
-<p class="text-lg text-gray-500 mb-8 px-4" data-i18n="shop.subtitle">Kokoamme ensiluokkaista valikoimaa joogamatoista, tarvikkeista ja hyvinvointituotteista erityisesti Ashtangan harjoittajille. Pysy kuulolla!</p>
-<a class="inline-flex items-center gap-2 bg-pink-600 text-white px-8 py-3.5 rounded-xl font-medium hover:bg-pink-700 hover:scale-[1.02] hover:shadow-lg transition-all active:scale-95" data-i18n="shop.back_home" href="/fi/#home">Takaisin etusivulle</a>
+<div class="container-custom relative z-10 text-center animate-fade-in-slow">
+<i class="h-10 w-10 mx-auto mb-6 text-pink-400" data-lucide="shopping-bag"></i>
+<h1 class="text-4xl md:text-5xl font-serif font-medium mb-4" data-i18n="shop.title">Goyoga Kauppa</h1>
+<p class="max-w-xl mx-auto text-lg text-stone-300" data-i18n="shop.subtitle">Kokoamme ensiluokkaista valikoimaa joogamatoista, tarvikkeista ja hyvinvointituotteista erityisesti Ashtangan harjoittajille. Pysy kuulolla!</p>
 </div>
+</section>
+<!-- Dynamic Shop Container -->
+<section class="container-custom">
+<!-- Categories Nav (Visual Only for now) -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="px-6 py-2 rounded-full border border-pink-500 bg-pink-50 text-pink-700 text-sm font-medium transition-colors hover:bg-pink-100 uppercase tracking-widest">
+                    Gift Cards
+                </button>
+<button class="px-6 py-2 rounded-full border border-gray-200 text-gray-500 text-sm font-medium transition-colors hover:bg-gray-50 uppercase tracking-widest cursor-not-allowed hidden" disabled="">
+                    Apparel (Coming Soon)
+                </button>
+<button class="px-6 py-2 rounded-full border border-gray-200 text-gray-500 text-sm font-medium transition-colors hover:bg-gray-50 uppercase tracking-widest cursor-not-allowed hidden" disabled="">
+                    Equipment (Coming Soon)
+                </button>
+</div>
+<div class="space-y-20" id="shop-container">
+<!-- Javascript will inject categories and grids here -->
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-16 mt-auto border-t border-gray-800 relative z-10 text-center">
-<div class="container-custom">
-<div class="flex flex-col items-center justify-center space-y-6">
-<img alt="Goyoga Tallinn Joogastudio" class="h-12 w-auto brightness-0 invert" src="/assets/branding/logo-goyoga-tallinn-estonia.svg" title="Goyoga Tallinn"/>
-<p class="text-gray-400 text-sm max-w-sm">Elevating your practice through dedication and community in the heart of Tallinn.</p>
-<div class="pt-8 border-t border-gray-800 w-full flex flex-col items-center gap-2">
-<p class="text-gray-500 text-sm tracking-widest uppercase" data-i18n="footer.copyright">© 2026 Goyoga Estonia OÜ. Kaikki oikeudet pidätetään.</p>
-</div>
-</div>
-</div>
-</footer>
 <!-- Unified Script -->
-<script src="/js/script.js?v=7"></script>
+<script src="/js/script.js?v=8"></script>
 <script>
         document.addEventListener('DOMContentLoaded', () => {
+            renderShop();
+            document.addEventListener('languageChanged', renderShop);
             if (window.lucide) window.lucide.createIcons();
         });
+
+        function renderShop() {
+            const lang = window.currentLanguage || 'en';
+            if (!window.shopData) return;
+            const shopLangData = window.shopData[lang] || window.shopData['en'];
+            const container = document.getElementById('shop-container');
+            if(!container) return;
+            
+            container.innerHTML = '';
+            
+            for (const [categoryKey, categoryData] of Object.entries(shopLangData)) {
+                const section = document.createElement('div');
+                section.className = 'shop-category-section';
+                
+                // Header
+                const header = document.createElement('div');
+                header.className = 'text-center mb-10';
+                header.innerHTML = `
+                    <h2 class="text-3xl font-serif font-medium text-gray-800 mb-4">${categoryData.title}</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto">${categoryData.description}</p>
+                `;
+                section.appendChild(header);
+                
+                // Grid
+                const grid = document.createElement('div');
+                grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8';
+                
+                categoryData.options.forEach((opt, idx) => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100 hover:-translate-y-1';
+                    
+                    card.innerHTML = `
+                        <div class="relative w-full pt-[65%] overflow-hidden bg-stone-50">
+                            <img src="${opt.image}" alt="${opt.name}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-gray-800 text-lg leading-tight pr-4">${opt.name}</h3>
+                                <div class="text-pink-600 font-bold bg-pink-50 px-2 py-1 rounded-md text-sm whitespace-nowrap">${opt.price}</div>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-6 flex-grow leading-relaxed">${opt.desc}</p>
+                            
+                            <button class="w-full mt-auto inline-flex justify-center items-center gap-2 bg-gray-900 text-white px-4 py-3 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-colors shadow-md active:scale-95 js-shop-buy-btn" data-cat="${categoryKey}" data-idx="${idx}">
+                                <i data-lucide="shopping-cart" class="h-4 w-4"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+                
+                section.appendChild(grid);
+                container.appendChild(section);
+            }
+            
+            if (window.lucide) window.lucide.createIcons();
+            
+            // Re-attach buy button listeners to trigger the checkout modal
+            document.querySelectorAll('.js-shop-buy-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const cat = btn.dataset.cat;
+                    const idx = btn.dataset.idx;
+                    const dataObj = shopLangData[cat];
+                    const optObj = dataObj.options[idx];
+                    
+                    if (window.renderInvoiceSummary && window.toggleModal) {
+                        window.renderInvoiceSummary(optObj, dataObj, 'shop_' + cat);
+                        window.toggleModal('pricing-modal', true);
+                    } else if (optObj.link && optObj.link !== '#') {
+                        window.open(optObj.link, '_blank');
+                    }
+                });
+            });
+        }
     </script>
 </body>
 </html>
