@@ -7,11 +7,66 @@
 const journalData = {
     articles: [
         {
+            id: 'ashtanga-not-for-everyone',
+            date: '2025-09-24',
+            category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
+            image: 'https://images.unsplash.com/photo-1506126279646-a697353d3166',
+            author: 'Raili Maripuu',
+            teacherId: 'raili-maripuu',
+            practiceId: 'ashtanga',
+            hashtags: ['#ashtanga', '#yoga', '#discipline', '#wellness'],
+            readTime: { en: '6 min read', et: '6 min lugemist', fi: '6 min lukuaika', ru: '6 мин чтения' },
+            translations: {
+                en: {
+                    title: 'Ashtanga yoga is not for everyone?',
+                    excerpt: 'Ashtanga yoga is the most wonderful and transformative yoga practise, but it is not for everyone. Discover why discipline is the path to true strength.',
+                    content: `
+                        <p>Not the best opening statement to promote ashtanga yoga just at the start of the new season. But I’m going to say this again – ashtanga yoga is the most wonderful and transformative yoga practise but it’s not for everyone.</p>
+                        <blockquote>"Anyone can practise. Except lazy people; lazy people can’t practise ashtanga yoga." - Sri K Pattabhi Jois</blockquote>
+                        <p>Whilst this quote has a lot of simple truth in it, many people nowadays face many other challenges that keep them from having a daily yoga practise.</p>
+                        <h3>Ashtanga is demanding</h3>
+                        <p>It’s never any easy option. Ashtanga yoga tests your body, mind and soul in any which way from all different directions. It’s the early mornings. It’s the daily discipline. It’s the showing up.</p>
+                        <h3>It's a long-term game</h3>
+                        <p>Ashtanga is a yoga practise for life. It most definitely is not a seasonal quick fix. Today’s practise is a preparation for tomorrow. Having practised daily for over 16 years, I 100% vouch for this.</p>
+                        <p>Ashtanga yoga in fact is for everyone. The feeling you get through ashtanga yoga practise cannot be described. It needs to be experienced.</p>
+                    `
+                },
+                et: {
+                    title: 'Ashtanga jooga ei sobi kõigile?',
+                    excerpt: 'Ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, kuid see ei sobi kõigi jaoks. Avasta, miks regulaarne praktika on elumuutev.',
+                    content: `
+                        <p>Pole just kõige targem mõte alustada uut hooaega ashtanga jooga mahategemisega. Sellest hoolimata ütlen veelkord, et kuigi ashtanga jooga on üks efektiivsemaid ja ilusamaid joogapraktikaid, ei sobi ta kõigi jaoks.</p>
+                        <blockquote>"Joogaga saavad tegeleda kõik. Välja arvatud laisad inimesed." - Sri K Pattabhi Jois</blockquote>
+                        <p>Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase joogapraktika tekkimist.</p>
+                        <h3>Ashtanga on nõudlik</h3>
+                        <p>See ei ole kunagi olnud kerge valik. Ashtanga paneb Su keha, meele ja emotsioonid proovile absoluutselt kõiges. Varajased hommikud. Igapäevane distsipliin. Matile kohale tulemine.</p>
+                        <h3>Ashtanga on pikk mäng</h3>
+                        <p>See joogapraktika on terveks eluks. Kindlasti ei ole ashtanga hooajaline kiire lahendus. Tänane praktika valmistab Sind ette homseks.</p>
+                    `
+                },
+                fi: {
+                    title: 'Ashtangajooga ei sovi kaikille?',
+                    excerpt: 'Ashtangajooga on vaikuttavinta ja muuttavinta joogaa, mutta se haastaa jokaisen solusi. Selvitä, miksi kurinalaisuus on avain sisäiseen voimaan.',
+                    content: `
+                        <p>Ashtangajooga on upeaa ja mullistavaa, mutta se vaatii sitoutumista. Sri K Pattabhi Jois sanoi: "Kaikki voivat harjoitella, paitsi laiskat."</p>
+                    `
+                },
+                ru: {
+                    title: 'Аштанга-йога не для всех?',
+                    excerpt: 'Аштанга-йога — самая чудесная и трансформирующая практика, но она бросает вызов каждой клетке вашего тела. Узнайте, почему дисциплина — это путь к истинной силе.',
+                    content: `
+                        <p>Аштанга-йога — это не просто упражнения, это дисциплина на всю жизнь. Как говорил Паттабхи Джойс: "Практиковать может каждый, кроме ленивых".</p>
+                    `
+                }
+            }
+        },
+        {
             id: 'why-ashtanga',
             date: '2026-04-10',
             category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
             image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b',
             author: 'Raili Maripuu',
+            hashtags: ['#ashtanga', '#yoga', '#mysore', '#discipline'],
             readTime: { en: '5 min read', et: '5 min lugemist', fi: '5 min lukuaika', ru: '5 мин чтения' },
             translations: {
                 en: {
@@ -61,6 +116,7 @@ const journalData = {
             category: { en: 'Wellness', et: 'Heaolu', fi: 'Hyvinvointi', ru: 'Велнес' },
             image: 'https://images.unsplash.com/photo-1545389336-cf090694435e',
             author: 'David Lepp',
+            hashtags: ['#soundbath', '#wellness', '#meditation', '#gong'],
             readTime: { en: '4 min read', et: '4 min lugemist', fi: '4 min lukuaika', ru: '4 мин чтения' },
             translations: {
                 en: {
