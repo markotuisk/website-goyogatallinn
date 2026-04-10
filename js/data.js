@@ -63,6 +63,7 @@ const translationsData = {
         "journal.share": "Share",
         "journal.text_by": "Text:",
         "journal.photo_by": "Photo:",
+        "journal.publisher": "The Goyoga Tallinn Journal",
         "footer.address": "Address",
 
         "nav.shop": "Shop",
@@ -207,6 +208,7 @@ const translationsData = {
         "journal.share": "Jaga",
         "journal.text_by": "Tekst:",
         "journal.photo_by": "Foto:",
+        "journal.publisher": "Goyoga Tallinna Ajakiri",
         "footer.address": "Aadress",
 
         "nav.shop": "Pood",
