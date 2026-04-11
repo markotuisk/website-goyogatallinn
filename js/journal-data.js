@@ -7,6 +7,125 @@
 const journalData = {
     articles: [
         {
+            id: 'ashtanga-vs-vinyasa',
+            date: '2025-10-17',
+            category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
+            image: '/assets/journal/ashtanga-vinyasa.png',
+            author: 'Goyoga Community',
+            hashtags: ['ashtanga', 'vinyasa', 'practice', 'comparison', 'tallinn', 'yoga style'],
+            readTime: { en: '4 min read', et: '4 min lugemist', fi: '4 min lukuaika', ru: '4 мин чтения' },
+            translations: {
+                en: {
+                    isOriginal: true,
+                    title: 'A Comparison of Ashtanga and Vinyasa Yoga',
+                    excerpt: 'Explore the key structural differences and physiological benefits between Ashtanga and Vinyasa yoga.',
+                    content: `
+                        <p class="mb-8 font-medium">Observe your body as you stand. You are choosing between Ashtanga and Vinyasa yoga. Both methods connect breath with physical movement. Both methods raise your internal body temperature. However, the anatomical demands and the effects on the nervous system are completely different.</p>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga yoga and structural stability</h3>
+                            <p>Ashtanga relies on a fixed sequence. You perform exactly the same postures every day. You observe your physical limits through repetition. This method trains the nervous system to find peace under physical stress. You develop deep structural stability.</p>
+                            <p>The sequence requires precise anatomical alignment. You hold postures for five complete breath cycles. You focus your gaze on a single physical point. You engage specific internal muscle contractions. The pelvic floor and lower abdomen pull inwards. These actions create core stability. You move using a specific breathing technique. The breath creates a clear sound at the back of the throat.</p>
+                            <p>Notice your mental reaction to the strict routine. Ask yourself specific questions before practicing. Do I need external structure today? Does repetition calm my nervous system? Ashtanga serves students who need grounding and predictable movement patterns.</p>
+                        </div>
+                        
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Vinyasa yoga and flowing adaptability</h3>
+                            <p>Vinyasa means placing the body in a specific way. Teachers create new physical sequences every day. You move continuously from one posture to another. You move through multiple planes of motion. The practice challenges your proprioception and spatial awareness.</p>
+                            <p>You perform a transition sequence between seated postures. You place your hands on the mat. You step back to a plank position. You lower your body towards the floor. You extend your spine in upward-facing dog. You bend your hips back into downward-facing dog. This specific transition realigns the spine. The movement creates bilateral symmetry in the body.</p>
+                            <p>Constant movement requires immediate joint adaptation. Ask yourself questions about your current physical condition. Do I feel stiff in my daily movements? Do I need spontaneous physical expression? Vinyasa serves students who need fluidity and neuromuscular adaptability.</p>
+                        </div>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Integrating your choice</h3>
+                            <p>Assess your anatomical needs today. Choose the method that best serves your nervous system. Commit to the physical practice. Observe the physiological changes in your body.</p>
+                        </div>
+                    `
+                },
+                et: {
+                    isOriginal: true,
+                    title: 'Ashtanga ja Vinyasa Jooga võrdluses.',
+                    excerpt: 'Uuri Ashtanga ja Vinyasa jooga struktuurseid ja füsioloogilisi erinevusi, et leida endale sobivaim praktika.',
+                    content: `
+                        <p class="mb-8 font-medium">Jälgi seistes oma keha. Sa valid Ashtanga ja Vinyasa jooga vahel. Mõlemad meetodid seovad hingamise füüsilise liikumisega. Mõlemad meetodid tõstavad keha sisetemperatuuri. Anatoomilised nõudmised ja mõjud närvisüsteemile erinevad täielikult.</p>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga jooga ja struktuurne stabiilsus</h3>
+                            <p>Ashtanga tugineb kindlale järjestusele. Sa sooritad iga päev täpselt samu poose. Sa jälgid oma füüsilisi piire läbi korduste. See meetod treenib närvisüsteemi leidma rahu füüsilise pinge all. Sa arendad sügavat struktuurset stabiilsust.</p>
+                            <p>Järjestus nõuab kindlat anatoomilist joondust. Sa hoiad poose viis täielikku hingamistsüklit. Sa fookustad oma pilgu ühele füüsilisele punktile. Sa kaasad spetsiifilisi seesmisi lihaskontraktsioone. Vaagnapõhi ja alakõht tõmbuvad kokku. Need tegevused loovad keskme stabiilsuse. Sa liigud kasutades kindlat hingamistehnikat. Hingamine loob kurgu tagaosas selge heli.</p>
+                            <p>Pane tähele oma vaimset reageeringut rangele rutiinile. Küsi endalt enne harjutamist kindlaid küsimusi. Kas ma vajan täna välist struktuuri? Kas kordamine rahustab mu närvisüsteemi? Ashtanga teenib õpilasi, kes vajavad maandust ja ettearvatavaid liikumismustreid.</p>
+                        </div>
+                        
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Vinyasa jooga ja voolav kohanemisvõime</h3>
+                            <p>Vinyasa tähendab keha asetamist kindlal viisil. Õpetajad loovad iga päev uusi füüsilisi järjestusi. Sa liigud pidevalt ühest poosist teise. Sa liigud läbi mitme liikumistasandi. Harjutus esitab väljakutse sinu propriotseptsioonile ja ruumitajule.</p>
+                            <p>Sa sooritad üleminekujärjestust istuvate pooside vahel. Sa asetad käed matile. Sa astud tagasi toenglamangusse. Sa langetad keha põranda poole. Sa sirutad selgroogu ülesvaatavas koeras. Sa painutad puusad tagasi allavaatavasse koera. See kindel üleminek joondab selgroo uuesti. Liikumine loob kehas kahepoolse sümmeetria.</p>
+                            <p>Pidev liikumine nõuab kohest liigeste kohanemist. Küsi endalt küsimusi oma praeguse füüsilise seisundi kohta. Kas ma tunnen end igapäevases liikumises jäigalt? Kas ma vajan spontaanset füüsilist väljendust? Vinyasa teenib õpilasi, kes vajavad voolavust ja neuromuskulaarset kohanemisvõimet.</p>
+                        </div>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Oma valiku lõimimine</h3>
+                            <p>Hinda täna oma anatoomilisi vajadusi. Vali meetod, mis teenib sinu närvisüsteemi kõige paremini. Pühendu füüsilisele harjutusele. Jälgi füsioloogilisi muutusi oma kehas.</p>
+                        </div>
+                    `
+                },
+                fi: {
+                    isOriginal: false,
+                    title: 'Vertaileva katsaus Ashtanga- ja Vinyasa-joogaan',
+                    excerpt: 'Tutustu Ashtangan ja Vinyasan rakenteellisiin ja fysiologisiin eroihin löytääksesi sinulle sopivimman harjoituksen.',
+                    content: `
+                        <p class="mb-8 font-medium">Tarkkaile kehoasi seistessäsi. Olet valitsemassa Ashtanga- ja Vinyasa-joogan välillä. Molemmat menetelmät yhdistävät hengityksen fyysiseen liikkeeseen. Molemmat menetelmät nostavat kehon sisälämpötilaa. Anatomiset vaatimukset ja vaikutukset hermostoon ovat kuitenkin täysin erilaiset.</p>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga-jooga ja rakenteellinen vakaus</h3>
+                            <p>Ashtanga perustuu kiinteään liikesarjaan. Suoritat päivittäin täsmälleen samat asennot. Tarkkailet fyysisiä rajojasi toiston kautta. Tämä menetelmä opettaa hermostoa löytämään rauhan fyysisen rasituksen alaisena. Kehität syvää rakenteellista vakautta.</p>
+                            <p>Sarja edellyttää tarkkaa anatomista linjausta. Pidät asennot viiden kokonaisen hengityskierroksen ajan. Keskität katseesi yhteen fyysiseen pisteeseen. Otat käyttöön tietyt sisäiset lihassupistukset. Lantionpohja ja alavatsa vetäytyvät sisäänpäin. Nämä toiminnot luovat keskivartalon vakautta. Liikut käyttäen tiettyä hengitystekniikkaa. Hengitys luo selkeän äänen kurkun takaosaan.</p>
+                            <p>Huomioi henkinen reaktiosi tiukkaan rutiiniin. Kysy itseltäsi tiettyjä kysymyksiä ennen harjoitusta. Tarvitsenko ulkoista rakennetta tänään? Rauhoittaako toisto hermostoani? Ashtanga palvelee oppilaita, jotka kaipaavat maadoittumista ja ennakoitavia liikemalleja.</p>
+                        </div>
+                        
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Vinyasa-jooga ja virtaava mukautuvuus</h3>
+                            <p>Vinyasa tarkoittaa kehon asettamista tietyllä tavalla. Opettajat luovat uusia fyysisiä liikesarjoja joka päivä. Liikut jatkuvasti asennosta toiseen. Liikut useiden liikesuuntien kautta. Harjoitus haastaa asento- ja liikeaistiasi sekä avaruudellista hahmottamista.</p>
+                            <p>Suoritat siirtymäsarjan istuma-asentojen välillä. Asetat kätesi matolle. Astut taaksepäin lankkuasentoon. Lasket kehosi kohti lattiaa. Ojennat selkärankasi ylöspäin katsovassa koirassa. Taivutat lantiosi taaksepäin alaspäin katsovaan koiraan. Tämä nimenomainen siirtymä linjaa selkärangan uudelleen. Liike luo kehossa kahdenvälisen symmetrian.</p>
+                            <p>Jatkuva liike vaatii niveliltä välitöntä mukautumista. Kysy itseltäsi kysymyksiä nykyisestä fyysisestä tilastasi. Tuntuuko minusta jäykältä päivittäisissä liikkeissäni? Tarvitsenko spontaania fyysistä ilmaisua? Vinyasa palvelee oppilaita, jotka tarvitsevat sujuvuutta ja hermo-lihasjärjestelmän mukautuvuutta.</p>
+                        </div>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Valinnan integrointi</h3>
+                            <p>Arvioi anatomiset tarpeesi tänään. Valitse se menetelmä, joka palvelee parhaiten hermostoasi. Sitoudu fyysiseen harjoitukseen. Tarkkaile fysiologisia muutoksia kehossasi.</p>
+                        </div>
+                    `
+                },
+                ru: {
+                    isOriginal: false,
+                    title: 'Сравнение Аштанга- и Виньяса-йоги',
+                    excerpt: 'Изучите структурные и физиологические различия между Аштанга- и Виньяса-йогой, чтобы найти наиболее подходящую вам практику.',
+                    content: `
+                        <p class="mb-8 font-medium">Понаблюдайте за своим телом стоя. Вы выбираете между Аштанга и Виньяса-йогой. Оба метода связывают дыхание с физическим движением. Оба метода повышают внутреннюю температуру тела. Однако анатомические требования и влияние на нервную систему совершенно разные.</p>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Аштанга-йога и структурная стабильность</h3>
+                            <p>Аштанга опирается на фиксированную последовательность. Каждый день вы выполняете одни и те же позы. Вы наблюдаете за своими физическими пределами через повторения. Этот метод тренирует нервную систему находить покой в условиях физического напряжения. Вы развиваете глубокую структурную стабильность.</p>
+                            <p>Последовательность требует точного анатомического выравнивания. Вы удерживаете позы в течение пяти полных циклов дыхания. Вы фокусируете свой взгляд на одной физической точке. Вы вовлекаете специфические внутренние мышечные сокращения. Тазовое дно и нижняя часть живота втягиваются внутрь. Эти действия создают стабильность центра. Вы двигаетесь, используя особую технику дыхания. Дыхание создает отчетливый звук в задней части горла.</p>
+                            <p>Обратите внимание на свою ментальную реакцию на строгую рутину. Задайте себе конкретные вопросы перед практикой. Нужна ли мне сегодня внешняя структура? Успокаивает ли повторение мою нервную систему? Аштанга подходит студентам, которым необходимо заземление и предсказуемые паттерны движений.</p>
+                        </div>
+                        
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Виньяса-йога и плавная адаптивность</h3>
+                            <p>Виньяса означает размещение тела особым образом. Преподаватели каждый день создают новые физические последовательности. Вы непрерывно переходите из одной позы в другую. Вы двигаетесь в нескольких плоскостях. Практика бросает вызов вашей проприоцепции и пространственному восприятию.</p>
+                            <p>Вы выполняете последовательность переходов между позами сидя. Вы кладете руки на коврик. Отшагиваете назад в планку. Опускаете тело к полу. Вытягиваете позвоночник в собаке мордой вверх. Отводите бедра назад в собаку мордой вниз. Этот নির্দিষ্টный переход выравнивает позвоночник. Движение создает двустороннюю симметрию в теле.</p>
+                            <p>Постоянное движение требует немедленной адаптации суставов. Задайте себе вопросы о вашем текущем физическом состоянии. Чувствую ли я скованность в повседневных движениях? Нуждаюсь ли я в спонтанном физическом самовыражении? Виньяса подходит студентам, которым нужна плавность и нервно-мышечная адаптивность.</p>
+                        </div>
+
+                        <div class="space-y-6 mb-16">
+                            <h3 class="text-2xl font-serif mb-6 text-pink-600">Интеграция вашего выбора</h3>
+                            <p>Оцените свои анатомические потребности на сегодняшний день. Выберите метод, который лучше всего подходит для вашей нервной системы. Посвятите себя физической практике. Наблюдайте за физиологическими изменениями в вашем теле.</p>
+                        </div>
+                    `
+                }
+            }
+        },
+        {
             id: 'ashtanga-not-for-everyone',
             date: '2025-09-24',
             category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
