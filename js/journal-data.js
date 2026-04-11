@@ -24,7 +24,7 @@ const journalData = {
                     title: 'A Comparison of Ashtanga and Vinyasa Yoga',
                     excerpt: 'Explore the key structural differences and physiological benefits between Ashtanga and Vinyasa yoga.',
                     content: `
-                        <p class="mb-8 font-medium">Observe your body as you stand. You are choosing between Ashtanga and Vinyasa yoga. Both methods connect breath with physical movement. Both methods raise your internal body temperature. However, the anatomical demands and the effects on the nervous system are completely different.</p>
+                        <p class="mb-8 font-medium">Observe your body as you stand. You are choosing between <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga</a> and <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Vinyasa yoga</a>. Both methods connect breath with physical movement. Both methods raise your internal body temperature. However, the anatomical demands and the effects on the nervous system are completely different.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga yoga and structural stability</h3>
@@ -44,6 +44,14 @@ const journalData = {
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Integrating your choice</h3>
                             <p>Assess your anatomical needs today. Choose the method that best serves your nervous system. Commit to the physical practice. Observe the physiological changes in your body.</p>
                         </div>
+
+                        <div class="mt-12 pt-8 border-t border-stone-200">
+                            <p class="font-medium text-lg mb-6">Explore the practices:</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Yoga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                            </div>
+                        </div>
                     `
                 },
                 et: {
@@ -51,7 +59,7 @@ const journalData = {
                     title: 'Ashtanga ja Vinyasa Jooga võrdluses.',
                     excerpt: 'Uuri Ashtanga ja Vinyasa jooga struktuurseid ja füsioloogilisi erinevusi, et leida endale sobivaim praktika.',
                     content: `
-                        <p class="mb-8 font-medium">Jälgi seistes oma keha. Sa valid Ashtanga ja Vinyasa jooga vahel. Mõlemad meetodid seovad hingamise füüsilise liikumisega. Mõlemad meetodid tõstavad keha sisetemperatuuri. Anatoomilised nõudmised ja mõjud närvisüsteemile erinevad täielikult.</p>
+                        <p class="mb-8 font-medium">Jälgi seistes oma keha. Sa valid <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga</a> ja <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Vinyasa jooga</a> vahel. Mõlemad meetodid seovad hingamise füüsilise liikumisega. Mõlemad meetodid tõstavad keha sisetemperatuuri. Anatoomilised nõudmised ja mõjud närvisüsteemile erinevad täielikult.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga jooga ja struktuurne stabiilsus</h3>
@@ -71,6 +79,14 @@ const journalData = {
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Oma valiku lõimimine</h3>
                             <p>Hinda täna oma anatoomilisi vajadusi. Vali meetod, mis teenib sinu närvisüsteemi kõige paremini. Pühendu füüsilisele harjutusele. Jälgi füsioloogilisi muutusi oma kehas.</p>
                         </div>
+
+                        <div class="mt-12 pt-8 border-t border-stone-200">
+                            <p class="font-medium text-lg mb-6">Uuri lähemalt meie tunde:</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Jooga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                            </div>
+                        </div>
                     `
                 },
                 fi: {
@@ -78,7 +94,7 @@ const journalData = {
                     title: 'Vertaileva katsaus Ashtanga- ja Vinyasa-joogaan',
                     excerpt: 'Tutustu Ashtangan ja Vinyasan rakenteellisiin ja fysiologisiin eroihin löytääksesi sinulle sopivimman harjoituksen.',
                     content: `
-                        <p class="mb-8 font-medium">Tarkkaile kehoasi seistessäsi. Olet valitsemassa Ashtanga- ja Vinyasa-joogan välillä. Molemmat menetelmät yhdistävät hengityksen fyysiseen liikkeeseen. Molemmat menetelmät nostavat kehon sisälämpötilaa. Anatomiset vaatimukset ja vaikutukset hermostoon ovat kuitenkin täysin erilaiset.</p>
+                        <p class="mb-8 font-medium">Tarkkaile kehoasi seistessäsi. Olet valitsemassa <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga-</a> ja <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Vinyasa-joogan</a> välillä. Molemmat menetelmät yhdistävät hengityksen fyysiseen liikkeeseen. Molemmat menetelmät nostavat kehon sisälämpötilaa. Anatomiset vaatimukset ja vaikutukset hermostoon ovat kuitenkin täysin erilaiset.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga-jooga ja rakenteellinen vakaus</h3>
@@ -98,6 +114,14 @@ const journalData = {
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Valinnan integrointi</h3>
                             <p>Arvioi anatomiset tarpeesi tänään. Valitse se menetelmä, joka palvelee parhaiten hermostoasi. Sitoudu fyysiseen harjoitukseen. Tarkkaile fysiologisia muutoksia kehossasi.</p>
                         </div>
+
+                        <div class="mt-12 pt-8 border-t border-stone-200">
+                            <p class="font-medium text-lg mb-6">Tutustu tunteihin:</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Jooga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                            </div>
+                        </div>
                     `
                 },
                 ru: {
@@ -105,7 +129,7 @@ const journalData = {
                     title: 'Сравнение Аштанга- и Виньяса-йоги',
                     excerpt: 'Изучите структурные и физиологические различия между Аштанга- и Виньяса-йогой, чтобы найти наиболее подходящую вам практику.',
                     content: `
-                        <p class="mb-8 font-medium">Понаблюдайте за своим телом стоя. Вы выбираете между Аштанга и Виньяса-йогой. Оба метода связывают дыхание с физическим движением. Оба метода повышают внутреннюю температуру тела. Однако анатомические требования и влияние на нервную систему совершенно разные.</p>
+                        <p class="mb-8 font-medium">Понаблюдайте за своим телом стоя. Вы выбираете между <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Аштанга</a> и <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Виньяса-йогой</a>. Оба метода связывают дыхание с физическим движением. Оба метода повышают внутреннюю температуру тела. Однако анатомические требования и влияние на нервную систему совершенно разные.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Аштанга-йога и структурная стабильность</h3>
@@ -124,6 +148,14 @@ const journalData = {
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Интеграция вашего выбора</h3>
                             <p>Оцените свои анатомические потребности на сегодняшний день. Выберите метод, который лучше всего подходит для вашей нервной системы. Посвятите себя физической практике. Наблюдайте за физиологическими изменениями в вашем теле.</p>
+                        </div>
+
+                        <div class="mt-12 pt-8 border-t border-stone-200">
+                            <p class="font-medium text-lg mb-6">Изучите наши практики:</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Аштанга Йога <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Виньяса Флоу <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                            </div>
                         </div>
                     `
                 }
