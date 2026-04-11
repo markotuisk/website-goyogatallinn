@@ -30,15 +30,15 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="/css/style.css?v=v20240411_v30" rel="stylesheet"/>
+    <link href="/css/style.css?v=v20240411_v40" rel="stylesheet"/>
     
     <!-- Favicons -->
     <link href="/assets/branding/logo-goyoga-tallinn-estonia.ico" rel="icon" type="image/x-icon"/>
     
     <!-- Data Files -->
-    <script src="/js/data.js?v=v20240411_v30"></script>
-    <script src="/js/seo-data.js?v=v20240411_v30"></script>
-    <script src="/js/journal-data.js?v=v20240411_v30"></script>
+    <script src="/js/data.js?v=v20240411_v40"></script>
+    <script src="/js/seo-data.js?v=v20240411_v40"></script>
+    <script src="/js/journal-data.js?v=v20240411_v40"></script>
 </head>
 
 <body class="bg-stone-50 text-gray-800 antialiased font-sans">
@@ -195,7 +195,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/script.js?v=v20240411_v30"></script>
+    <script src="/js/script.js?v=v20240411_v40"></script>
     <script>
         // Router & High-Level State
         function handleRouting() {
@@ -259,20 +259,19 @@
                 <div onclick="navigateToArticle('${first.id}')" class="relative rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-2xl h-[500px] lg:h-[600px] bg-stone-900">
                     <img src="${first.image}" alt="${firstTrans.title}" class="absolute inset-0 w-full h-full object-cover ${first.imagePosition || 'object-center'} opacity-60 group-hover:scale-105 transition-transform duration-[2s]" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-8 md:p-16 max-w-4xl">
+                    <div class="absolute inset-x-0 bottom-6 md:bottom-16 p-8 md:p-16 mx-auto max-w-5xl flex flex-col items-center text-center">
                         <span class="inline-block px-4 py-1.5 bg-pink-600 text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-full mb-6">${first.category[currentLang] || first.category['en']}</span>
                         <h1 class="text-4xl md:text-5xl font-serif font-medium text-white mb-6 leading-tight">${firstTrans.title}</h1>
-                        <p class="text-xl text-gray-200 mb-8 line-clamp-2">${firstTrans.excerpt}</p>
-                        <div class="flex flex-wrap items-end justify-between gap-4">
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-4 text-white/80 text-sm italic">
-                                    <span>${first.author}</span>
-                                    <span>•</span>
-                                    <span>${first.date.split('-').reverse().join('.')}</span>
-                                </div>
+                        <p class="text-xl text-gray-200 mb-8 line-clamp-2 max-w-3xl">${firstTrans.excerpt}</p>
+                        <div class="flex flex-col items-center justify-center gap-3 w-full">
+                            <div class="flex items-center justify-center gap-4 text-white/80 text-sm italic">
+                                <span>${first.author}</span>
+                                <span>•</span>
+                                <span>${first.date.split('-').reverse().join('.')}</span>
+                            </div>
                             ${first.photographer ? `<div class="text-white/60 text-[10px] italic tracking-wide">PHOTO: ${first.photographer.name.toUpperCase()} ${first.photographer.date?.toUpperCase() || ''}</div>` : ''}
+                            <div class="text-white/20 text-[7px] font-medium tracking-[0.4em] uppercase pt-3">The Goyoga Tallinn Journal</div>
                         </div>
-                        <div class="text-white/20 text-[7px] font-medium tracking-[0.4em] uppercase pb-1">The Goyoga Tallinn Journal</div>
                     </div>
                 </div>
             </div>
