@@ -12,6 +12,8 @@ const journalData = {
             category: { en: 'Practice', et: 'Praktika', fi: 'Harjoitus', ru: 'Практика' },
             image: '/assets/journal/ashtanga-ja-vinyasa-goyoga-estonia-tallinn-raili-maripuu-02.webp',
             author: 'Goyoga Community',
+            teacherId: 'raili-maripuu',
+            practiceId: 'ashtanga',
             hashtags: ['ashtanga', 'vinyasa', 'practice', 'comparison', 'tallinn', 'yoga style'],
             readTime: { en: '4 min read', et: '4 min lugemist', fi: '4 min lukuaika', ru: '4 мин чтения' },
             translations: {
