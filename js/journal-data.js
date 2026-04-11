@@ -24,7 +24,7 @@ const journalData = {
                     title: 'A Comparison of Ashtanga and Vinyasa Yoga',
                     excerpt: 'Explore the key structural differences and physiological benefits between Ashtanga and Vinyasa yoga.',
                     content: `
-                        <p class="mb-8 font-medium">Observe your body as you stand. You are choosing between <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga</a> and <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Vinyasa yoga</a>. Both methods connect breath with physical movement. Both methods raise your internal body temperature. However, the anatomical demands and the effects on the nervous system are completely different.</p>
+                        <p class="mb-8 font-medium">Observe your body as you stand. You are choosing between <a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga</a> and <a href="/class?id=vinyasa-flow" class="text-pink-600 hover:underline">Vinyasa yoga</a>. Both methods connect breath with physical movement. Both methods raise your internal body temperature. However, the anatomical demands and the effects on the nervous system are completely different.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga yoga and structural stability</h3>
@@ -48,8 +48,8 @@ const journalData = {
                         <div class="mt-12 pt-8 border-t border-stone-200">
                             <p class="font-medium text-lg mb-6">Explore the practices:</p>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Yoga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
-                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Yoga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=vinyasa-flow" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
                             </div>
                         </div>
                     `
@@ -59,7 +59,7 @@ const journalData = {
                     title: 'Ashtanga ja Vinyasa Jooga võrdluses.',
                     excerpt: 'Uuri Ashtanga ja Vinyasa jooga struktuurseid ja füsioloogilisi erinevusi, et leida endale sobivaim praktika.',
                     content: `
-                        <p class="mb-8 font-medium">Jälgi seistes oma keha. Sa valid <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga</a> ja <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Vinyasa jooga</a> vahel. Mõlemad meetodid seovad hingamise füüsilise liikumisega. Mõlemad meetodid tõstavad keha sisetemperatuuri. Anatoomilised nõudmised ja mõjud närvisüsteemile erinevad täielikult.</p>
+                        <p class="mb-8 font-medium">Jälgi seistes oma keha. Sa valid <a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga</a> ja <a href="/class?id=vinyasa-flow" class="text-pink-600 hover:underline">Vinyasa jooga</a> vahel. Mõlemad meetodid seovad hingamise füüsilise liikumisega. Mõlemad meetodid tõstavad keha sisetemperatuuri. Anatoomilised nõudmised ja mõjud närvisüsteemile erinevad täielikult.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga jooga ja struktuurne stabiilsus</h3>
@@ -83,8 +83,8 @@ const journalData = {
                         <div class="mt-12 pt-8 border-t border-stone-200">
                             <p class="font-medium text-lg mb-6">Uuri lähemalt meie tunde:</p>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Jooga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
-                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Jooga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=vinyasa-flow" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
                             </div>
                         </div>
                     `
@@ -94,7 +94,7 @@ const journalData = {
                     title: 'Vertaileva katsaus Ashtanga- ja Vinyasa-joogaan',
                     excerpt: 'Tutustu Ashtangan ja Vinyasan rakenteellisiin ja fysiologisiin eroihin löytääksesi sinulle sopivimman harjoituksen.',
                     content: `
-                        <p class="mb-8 font-medium">Tarkkaile kehoasi seistessäsi. Olet valitsemassa <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga-</a> ja <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Vinyasa-joogan</a> välillä. Molemmat menetelmät yhdistävät hengityksen fyysiseen liikkeeseen. Molemmat menetelmät nostavat kehon sisälämpötilaa. Anatomiset vaatimukset ja vaikutukset hermostoon ovat kuitenkin täysin erilaiset.</p>
+                        <p class="mb-8 font-medium">Tarkkaile kehoasi seistessäsi. Olet valitsemassa <a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">Ashtanga-</a> ja <a href="/class?id=vinyasa-flow" class="text-pink-600 hover:underline">Vinyasa-joogan</a> välillä. Molemmat menetelmät yhdistävät hengityksen fyysiseen liikkeeseen. Molemmat menetelmät nostavat kehon sisälämpötilaa. Anatomiset vaatimukset ja vaikutukset hermostoon ovat kuitenkin täysin erilaiset.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Ashtanga-jooga ja rakenteellinen vakaus</h3>
@@ -118,8 +118,8 @@ const journalData = {
                         <div class="mt-12 pt-8 border-t border-stone-200">
                             <p class="font-medium text-lg mb-6">Tutustu tunteihin:</p>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Jooga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
-                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Ashtanga Jooga <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=vinyasa-flow" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Vinyasa Flow <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
                             </div>
                         </div>
                     `
@@ -129,7 +129,7 @@ const journalData = {
                     title: 'Сравнение Аштанга- и Виньяса-йоги',
                     excerpt: 'Изучите структурные и физиологические различия между Аштанга- и Виньяса-йогой, чтобы найти наиболее подходящую вам практику.',
                     content: `
-                        <p class="mb-8 font-medium">Понаблюдайте за своим телом стоя. Вы выбираете между <a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">Аштанга</a> и <a href="/class.html?id=vinyasa" class="text-pink-600 hover:underline">Виньяса-йогой</a>. Оба метода связывают дыхание с физическим движением. Оба метода повышают внутреннюю температуру тела. Однако анатомические требования и влияние на нервную систему совершенно разные.</p>
+                        <p class="mb-8 font-medium">Понаблюдайте за своим телом стоя. Вы выбираете между <a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">Аштанга</a> и <a href="/class?id=vinyasa-flow" class="text-pink-600 hover:underline">Виньяса-йогой</a>. Оба метода связывают дыхание с физическим движением. Оба метода повышают внутреннюю температуру тела. Однако анатомические требования и влияние на нервную систему совершенно разные.</p>
 
                         <div class="space-y-6 mb-16">
                             <h3 class="text-2xl font-serif mb-6 text-pink-600">Аштанга-йога и структурная стабильность</h3>
@@ -153,8 +153,8 @@ const journalData = {
                         <div class="mt-12 pt-8 border-t border-stone-200">
                             <p class="font-medium text-lg mb-6">Изучите наши практики:</p>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="/class.html?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Аштанга Йога <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
-                                <a href="/class.html?id=vinyasa" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Виньяса Флоу <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=ashtanga-yoga" class="inline-flex items-center justify-center px-6 py-3 bg-stone-900 text-white rounded-full hover:bg-pink-600 transition-colors font-medium">Аштанга Йога <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+                                <a href="/class?id=vinyasa-flow" class="inline-flex items-center justify-center px-6 py-3 border border-stone-200 text-stone-900 rounded-full hover:bg-stone-50 transition-colors font-medium">Виньяса Флоу <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
                             </div>
                         </div>
                     `
@@ -228,7 +228,7 @@ const journalData = {
                         
                         <blockquote class="mb-12">"Joogaga saavad tegeleda kõik. Välja arvatud laisad inimesed." - <strong>Sri K Pattabhi Jois</strong></blockquote>
                         
-                        <p class="mb-12">Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase <strong>joogapraktika</strong> tekkimist. Meie <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">ashtanga jooga koolis</a></strong> <strong>Tallinnas</strong> aitame õpilastel nendest väljakutsetest üle saada, et õppida selgeks <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">traditsiooniline ashtanga jooga</a></strong>.</p>
+                        <p class="mb-12">Kuigi selles tsitaadis on peidus palju lihtsat tõde, on enamus inimestel oma elu väljakutseid täis laotud, mis takistavad neil igapäevase <strong>joogapraktika</strong> tekkimist. Meie <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">ashtanga jooga koolis</a></strong> <strong>Tallinnas</strong> aitame õpilastel nendest väljakutsetest üle saada, et õppida selgeks <strong><a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">traditsiooniline ashtanga jooga</a></strong>.</p>
                         
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Miks inimesed lõpetavad ashtanga praktiseerimise?</h3>
@@ -261,7 +261,7 @@ const journalData = {
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Kuidas ashtangaga (taas)alustada?</h3>
                             <p>Ashtanga algab kohale tulemisest ja füüsilisest joogapraktikast. Leia enda jaoks sobiv <strong>joogakool</strong> ja hea õpetaja. Loo enda jaoks rutiin, mis Su igapäevaellu ilma suurema stressita sisse mahub. Tee enda jaoks kodus väike nurgake, kus saad segamatult praktiseerida. Kasvõi 10 minutit päevas. Muuda praktika lihtsate vahenditega enda jaoks mõnusaks, nagu näiteks hea joogamatt, lõhnav silmapadi jne.</p>
-                            <p>Alati leidub inimesi, kes ühel või teisel põhjusel lõpetavad joogaga tegelemise. Samamoodi nagu leidub inimesi, kelle jaoks muutub ashtanga elukestvaks praktikaks. Ma olen ääretult thankful, et kuulun viimaste hulka. Liitu meie <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">ashtanga jooga kooliga</a></strong>, et alustada oma <strong>esimese seeriaga</strong>.</p>
+                            <p>Alati leidub inimesi, kes ühel või teisel põhjusel lõpetavad joogaga tegelemise. Samamoodi nagu leidub inimesi, kelle jaoks muutub ashtanga elukestvaks praktikaks. Ma olen ääretult thankful, et kuulun viimaste hulka. Liitu meie <strong><a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">ashtanga jooga kooliga</a></strong>, et alustada oma <strong>esimese seeriaga</strong>.</p>
                         </div>
                     `
                 },
@@ -274,7 +274,7 @@ const journalData = {
                         
                         <blockquote class="mb-12">"Kuka tahansa voi harjoitella. Paitsi laiskat ihmiset; laiskat eivät voi harjoitella ashtangaa." - <strong>Sri K Pattabhi Jois</strong></blockquote>
                         
-                        <p class="mb-12">Vaikka tässä piileekin yksinkertainen totuus, monilla meistä on nykyään elämässään niin paljon haasteita, että päivittäinen joogaharjoitus jää haaveeksi. Meillä <strong>Goyogan <a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">joogakoulussa Tallinnassa</a></strong> oppilaat kohtaavat nämä haasteet päivittäin oppiakseen <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">perinteistä ashtangaa</a></strong>.</p>
+                        <p class="mb-12">Vaikka tässä piileekin yksinkertainen totuus, monilla meistä on nykyään elämässään niin paljon haasteita, että päivittäinen joogaharjoitus jää haaveeksi. Meillä <strong>Goyogan <a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">joogakoulussa Tallinnassa</a></strong> oppilaat kohtaavat nämä haasteet päivittäin oppiakseen <strong><a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">perinteistä ashtangaa</a></strong>.</p>
                         
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Ashtanga on vaativaa</h3>
@@ -305,7 +305,7 @@ const journalData = {
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Miten aloittaa (uudelleen)?</h3>
                             <p>Kaikki alkaa siitä, että saavut paikalle. Etsi hyvä <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">joogakoulu</a></strong> ja opettaja. Luo rutiini, joka istuu arkeesi ilman stressiä. Varaa kotiin paikka, jossa voit harjoitella rauhassa, vaikka vain 10 minuuttia. Pienet asiat, kuten hyvä matto tai silmätyyny, voivat tehdä harjoituksesta nautinnon.</p>
-                            <p>Aina on ihmisiä, jotka lopettavat, mutta vielä enemmän on niitä, jotka tekevät ashtangasta elämäntavan. Olen ylpeä kuuluessani jälkimmäisiin. Tule mukaan <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">perinteiseen ashtanga-kouluumme</a></strong> ja aloita oma matkasi.</p>
+                            <p>Aina on ihmisiä, jotka lopettavat, mutta vielä enemmän on niitä, jotka tekevät ashtangasta elämäntavan. Olen ylpeä kuuluessani jälkimmäisiin. Tule mukaan <strong><a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">perinteiseen ashtanga-kouluumme</a></strong> ja aloita oma matkasi.</p>
                         </div>
                     `
                 },
@@ -318,7 +318,7 @@ const journalData = {
                         
                         <blockquote class="mb-12">«Практиковать может каждый. Кроме ленивых; ленивые не могут заниматься аштангой». — <strong>Шри К. Паттабхи Джойс</strong></blockquote>
                         
-                        <p class="mb-12">В этой цитате много простой истины, но в наши дни люди сталкиваются с множеством других проблем, которые мешают им практиковать ежедневно. В нашей <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">школе йоги Goyoga в Таллине</a></strong> ученики каждый день преодолевают эти трудности, чтобы приобщиться к <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">традиционному методу аштанги</a></strong>.</p>
+                        <p class="mb-12">В этой цитате много простой истины, но в наши дни люди сталкиваются с множеством других проблем, которые мешают им практиковать ежедневно. В нашей <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">школе йоги Goyoga в Таллине</a></strong> ученики каждый день преодолевают эти трудности, чтобы приобщиться к <strong><a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">традиционному методу аштанги</a></strong>.</p>
                         
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">Аштанга требует отдачи</h3>
@@ -349,7 +349,7 @@ const journalData = {
                         <div class="space-y-8 mb-16">
                             <h3 class="text-2xl font-serif mt-12 mb-6">С чего начать (или начать заново)?</h3>
                             <p>Все начинается с того, что вы просто приходите. Найдите хорошую <strong><a href="https://www.goyoga.ee" class="text-pink-600 hover:underline">школу йоги</a></strong> и учителя. Создайте рутину, которая впишется в вашу жизнь без стресса. Оборудуйте место дома, где вам никто не помешает, хотя бы на 10 минут. Даже красивые мелочи, вроде хорошего коврика или подушечки для глаз, могут сделать практику приятнее.</p>
-                            <p>Всегда будут те, кто бросает, но еще больше тех, кто делает аштангу делом всей жизни. Я горжусь тем, что я одна из них. Приходите в нашу <strong><a href="/class.html?id=ashtanga-yoga" class="text-pink-600 hover:underline">школу традиционной аштанга-йоги</a></strong> и начните свой путь.</p>
+                            <p>Всегда будут те, кто бросает, но еще больше тех, кто делает аштангу делом всей жизни. Я горжусь тем, что я одна из них. Приходите в нашу <strong><a href="/class?id=ashtanga-yoga" class="text-pink-600 hover:underline">школу традиционной аштанга-йоги</a></strong> и начните свой путь.</p>
                         </div>
                     `
                 }
