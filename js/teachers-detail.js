@@ -256,7 +256,8 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             bio: [
                 "A conscious leadership mentor, ceremony creator, and co-founder of Casa Rituals. She is a certified ceremonialist, quantum dowsing practitioner, and healer who has lived and worked in the United States for the past 30 years.",
                 "In recent years, she has dedicated herself to energetic and conscious healing, supporting people on their inner journeys. Previously, she was the founder of a sustainable fashion brand and spent many years in the corporate sector, which built her strong understanding of structure, leadership, and patterns of human behavior.",
-                "Her work weaves together practical life experience and deep energetic space-holding, creating a clear and supportive environment that helps people find inner balance, clarity, and move more consciously through their life and leadership."
+                "Her work weaves together practical life experience and deep energetic space-holding, creating a clear and supportive environment that helps people find inner balance, clarity, and move more consciously through their life and leadership.",
+                "Marit is a certified ceremony creator and space holder with a Quantum Dowsing Mastery certification, combining ritual, energy perception, and conscious space creation in her work."
             ],
             philosophy: "Ritual is a bridge to the sacred. By bringing intention to our gatherings, we remind ourselves of the interconnectedness of all life.",
             highlights: ["Certified Cacao Facilitator", "Reiki Practitioner", "Sacred Ritual specialist"]
@@ -268,7 +269,8 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             bio: [
                 "Teadliku juhtimise mentor, tseremoniate looja ja Casa Ritualsi kaasasutaja. Ta on sertifitseeritud tseremonialist, quantum dowsing praktik ja tervendaja, kes on viimased 30 aastat elanud ning töötanud Ameerika Ühendriikides.",
                 "Viimastel aastatel on ta pühendunud energeetilisele ja teadlikule tervendamisele, toetades inimesi nende sisemistel rännakutel. Eelnevalt oli ta jätkusuutliku moebrändi asutaja ja veetis aastaid korporatiivsektoris, mis andis talle tugeva arusaama struktuurist, juhtimisest ja inimkäitumise mustritest.",
-                "Tema töö põimib endas praktilise elukogemuse ja sügava energeetilise ruumihoidmise, luues selge ja toetava keskkonna, mis aitab inimestel leida sisemist tasakaalu, selgust ning liikuda elus ja juhtimises teadlikumalt."
+                "Tema töö põimib endas praktilise elukogemuse ja sügava energeetilise ruumihoidmise, luues selge ja toetava keskkonna, mis aitab inimestel leida sisemist tasakaalu, selgust ning liikuda elus ja juhtimises teadlikumalt.",
+                "Marit on sertifitseeritud tseremoniate looja ja ruumihoidja, kellel on Quantum Dowsing Mastery sertifikaat. Oma töös ühendab ta rituaalid, energiataju ja teadliku ruumiloomise."
             ],
             philosophy: "Rituaal on sild püha juurde. Tuues meie kogunemistesse tahtlust, tuletame endale meelde kogu elu omavahelist seotust.",
             highlights: ["Sertifitseeritud kakaotseremoonia läbiviija", "Reiki praktik", "Pühade rituaalide spetsialist"]
@@ -280,7 +282,8 @@ Yrittäjä ja entinen tanssija, Raili harjoittaa Ashtanga joogaa 5–6 kertaa vi
             bio: [
                 "Tietoisen johtajuuden mentori, seremonioiden luoja ja Casa Ritualsin perustajajäsen. Hän on sertifioitu seremonialisti, kvantti-dowsing -harjoittaja ja parantaja, joka on asunut ja työskennellyt Yhdysvalloissa viimeiset 30 vuotta.",
                 "Viime vuosina hän on omistautunut energeettiselle ja tietoiselle parantamiselle tukien ihmisiä heidän sisäisillä matkoillaan. Aiemmin hän perusti kestävän muotibrändin ja toimi vuosia yritysmaailmassa, mikä loi hänelle vahvan ymmärryksen rakenteista, johtajuudesta ja ihmisen käyttäytymismalleista.",
-                "Hänen työnsä kutoo yhteen käytännön elämänkokemuksen ja syvän energeettisen tilan pitämisen. Se luo selkeän ja tukevan ympäristön, joka auttaa ihmisiä löytämään sisäisen tasapainon, selkeyden ja liikkumaan elämässään sekä johtajuudessaan tietoisemmin."
+                "Hänen työnsä kutoo yhteen käytännön elämänkokemuksen ja syvän energeettisen tilan pitämisen. Se luo selkeän ja tukevan ympäristön, joka auttaa ihmisiä löytämään sisäisen tasapainon, selkeyden ja liikkumaan elämässään sekä johtajuudessaan tietoisemmin.",
+                "Marit on sertifioitu seremonioiden luoja ja tilanpitäjä, jolla on Quantum Dowsing Mastery -sertifikaatti. Hän yhdistää työssään rituaalin, energian aistimisen ja tietoisen tilan luomisen."
             ],
             philosophy: "Rituaali on silta pyhään. Tuomalla aikomuksen kokoontumisiimme muistutamme itseämme kaiken elämän keskinäisestä yhteydestä.",
             highlights: ["Sertifioitu kaakaofasilitoija", "Reiki-harjoittaja", "Pyhien rituaalien asiantuntija"]
